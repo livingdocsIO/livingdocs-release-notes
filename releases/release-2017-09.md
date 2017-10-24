@@ -1,23 +1,66 @@
-# Release Notes
+# Release Notes: `September 2017 Release`
 
-## Involved Repositories
+## Repositories
 
-#### `livingdocs-editor`
+A release consists of new versions of the `livingdocs-server`, the `livingdocs-editor` and the `livingdocs-framework`.
 
-- from version `v20.7.1` -> `v20.10.4`
-- link to the release: https://github.com/upfrontIO/livingdocs-editor/tree/v20.10.4
-- livingdocs-framework version: `^7.12.0`
 
-#### `livingdocs-server`
+### Livingdocs Server
 
-- from version `v57.0.2` -> `v61.2.1`
-- link to the release: https://github.com/upfrontIO/livingdocs-server/tree/v61.2.1
-- livingdocs-framework version: `^7.12.0`
+How to require the server in your package.json:
 
-#### `livingdocs-framework` 
+```json
+"dependencies": {
+  "@livingdocs/server": "61.2.1",
+}
+```
 
-- from version `v7.9.0` -> `v7.12.0`
-- link to the release: https://github.com/upfrontIO/livingdocs-framework/tree/v7.12.0
+- Link to the release branch:
+  https://github.com/upfrontIO/livingdocs-server/tree/maintenance-v61.2.x
+
+
+#### Patches
+
+* [61.2.1](https://github.com/upfrontIO/livingdocs-server/releases/tag/v61.2.1) - **hooks**: Log errors instead of crashing on registration
+
+
+
+### Livingdocs Editor
+
+How to require the editor in your package.json:
+
+```json
+"dependencies": {
+  "@livingdocs/editor": "20.10.4",
+}
+```
+
+
+- Link to the release branch:
+  https://github.com/upfrontIO/livingdocs-editor/tree/maintenance-v20.10.x
+
+
+#### Patches
+
+* [20.10.1](https://github.com/upfrontIO/livingdocs-editor/releases/tag/v20.10.1) - add archived state to articles details pages
+* [20.10.2](https://github.com/upfrontIO/livingdocs-editor/releases/tag/v20.10.2) - spellchecker: unload editable when removing the main (interactive) view
+* [20.10.3](https://github.com/upfrontIO/livingdocs-editor/releases/tag/v20.10.3) - reinitialise componentTree events when removing the mainView
+* [20.10.4](https://github.com/upfrontIO/livingdocs-editor/releases/tag/v20.10.4) - guard resrc image service call via framework
+
+
+### Livingdocs Framework
+
+The framework is already integrated in the package.json of the upstream server and editor. It's **not** necessary to integrate the framework from your side.
+
+The framework does not have a release branch.
+
+How to require the framework in your package.json:
+
+```json
+dependencies: {
+  "@livingdocs/framework": "7.12.2"
+}
+```
 
 ## Component changes
 
@@ -191,7 +234,7 @@ componentModel.setContent({
 Allow to call `getContent` without passing a directive name:
 ```js
 componentModel.getContent()
-// returns 
+// returns
 // {
 //    title: 'Moby Dick'
 //    tagline: 'Whaling Weekly'
