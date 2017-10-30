@@ -16,6 +16,7 @@ How to require the server in your package.json:
 
 - Link to the release branch:
   https://github.com/upfrontIO/livingdocs-server/tree/maintenance-v63.2.x
+- Previous release: [61.2.1](https://github.com/upfrontIO/livingdocs-release-notes/blob/master/releases/release-2017-09.md#livingdocs-server)
 
 ### Livingdocs Editor
 
@@ -29,6 +30,7 @@ How to require the editor in your package.json:
 
 - Link to the release branch:
   https://github.com/upfrontIO/livingdocs-editor/tree/maintenance-v23.0.x
+- Previous release: [20.10.4](https://github.com/upfrontIO/livingdocs-release-notes/blob/master/releases/release-2017-09.md#livingdocs-editor)
 
 ### Livingdocs Framework
 
