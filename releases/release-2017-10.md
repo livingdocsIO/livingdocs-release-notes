@@ -55,17 +55,13 @@ Component | Type | Description | PRs | Issues
 Server | BREAKING CHANGE, Feature | Upgrade to node 8 and npm > 5.5. [Read more](#upgrade-to-node-8) | [80](https://github.com/upfrontIO/livingdocs-docker/pull/80), [#2f65dfb](https://github.com/upfrontIO/livingdocs-server/commit/2f65dfb), [#1660](https://github.com/upfrontIO/livingdocs-server/pull/1660) | -
 Server | BREAKING CHANGE | Remove deprecated methods. [Read more](#remove-deprecated-methods) | [#1659](https://github.com/upfrontIO/livingdocs-server/pull/1659) | -
 
-Component | Type | Description | Issue
---- | --- | --- | ---
-Server | Feature | Upgrade to node 8 and npm > 5.5 | 
-
 ## In detail
 
 ### Upgrade to node 8
 
-We upgraded to node 8, most likely it will not have a big impact on you if you already use docker. We can use newer features from now on. There are big changes in low level components like an improved debugger, async/await, n-api, async_hooks and v8. You can read more about it here: https://nodejs.org/en/blog/release/v8.0.0/
+- We upgraded to node 8, most likely it will not have a big impact on you if you already use docker. We can use newer features from now on. There are big changes in low level components like an improved debugger, async/await, n-api, async_hooks and v8. You can read more about it here: https://nodejs.org/en/blog/release/v8.0.0/
 
-There was one bigger issue we ran into. The behavior of the `Date` constructor changed in this node version. `new Date(isoString)` is now timezone agnostic. That behavior changed in ES2015 and node/chrome now respect that.
+- There was one bigger issue we ran into. The behavior of the `Date` constructor changed in this node version. `new Date(isoString)` is now timezone agnostic. That behavior changed in ES2015 and node/chrome now respect that.
 
 With node 6:
 ```
