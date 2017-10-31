@@ -45,6 +45,7 @@ dependencies: {
   "@livingdocs/framework": "7.14.0"
 }
 ```
+- Previous release: [7.12.2](https://github.com/upfrontIO/livingdocs-release-notes/blob/master/releases/release-2017-09.md#livingdocs-framework)
 
 ## Component changes
 
@@ -86,7 +87,9 @@ Editor | Bugfix | Fix `getAbsoluteBoundingRect() called on a detached node` | [#
 Editor | Bugfix | Guard resrc image service call via framework | [#1689](https://github.com/upfrontIO/livingdocs-editor/pull/1689) | [#1542](https://github.com/upfrontIO/livingdocs-planning/issues/1542)
 Editor | Bugfix | Fix embed teaser | [#1685](https://github.com/upfrontIO/livingdocs-editor/pull/1685) | -
 Editor | Feature | Introduce card-based design on the publishing screen [Read more](#introduce-card-based-design-on-the-publishing-screen) | [#1453](https://github.com/upfrontIO/livingdocs-editor/pull/1453) | [#118](https://github.com/upfrontIO/livingdocs-planning/issues/118)
-Editory | Bugfix | Fix spellchecker editable event bug | [#1678](https://github.com/upfrontIO/livingdocs-editor/pull/1678) | [#1516](https://github.com/upfrontIO/livingdocs-planning/issues/1516)
+Editor | Bugfix | Fix spellchecker editable event bug | [#1678](https://github.com/upfrontIO/livingdocs-editor/pull/1678) | [#1516](https://github.com/upfrontIO/livingdocs-planning/issues/1516)
+Framework | Feature | New imageService for ImageResizer | [#254](https://github.com/upfrontIO/livingdocs-framework/pull/254) | -
+Editory | Bugfix | Fields from header(catchline,text,lead,author) are not updated in metadata object in publication index if header was deleted in the editor | [#264](https://github.com/upfrontIO/livingdocs-framework/pull/264) | [#1475](https://github.com/upfrontIO/livingdocs-planning/issues/1475)
 
 ## In detail
 
@@ -319,4 +322,8 @@ The resulting markup has the full content object with all styles in `content` an
 
 ### Editor 
 
+- 
+
 ### Server
+
+- 
