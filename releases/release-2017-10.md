@@ -52,7 +52,7 @@ dependencies: {
 
 Component | Type | Description | PRs | Issues
 --- | --- | --- | --- | ---
-Server | BREAKING CHANGE, Feature | Upgrade to node 8 and npm > 5.5. [Read more](#upgrade-to-node-8) | [80](https://github.com/upfrontIO/livingdocs-docker/pull/80), [#2f65dfb](https://github.com/upfrontIO/livingdocs-server/commit/2f65dfb), [#1660](https://github.com/upfrontIO/livingdocs-server/pull/1660) | -
+Server | BREAKING CHANGE, Feature | Upgrade to node 8 and npm > 5.5. [Read more](#upgrade-to-node-8) | [80](https://github.com/upfrontIO/livingdocs-docker/pull/80), [#73](https://github.com/upfrontIO/livingdocs-docker/pull/73), [#2f65dfb](https://github.com/upfrontIO/livingdocs-server/commit/2f65dfb), [#1660](https://github.com/upfrontIO/livingdocs-server/pull/1660) | -
 Server | BREAKING CHANGE | Remove deprecated methods. [Read more](#remove-deprecated-methods) | [#1659](https://github.com/upfrontIO/livingdocs-server/pull/1659) | -
 Server | Bugfix | Content fixes for drag'n'drop huGO articles [Read more](#content-fixes-for-drag-n-drop-hugo-articles) | [#1652](https://github.com/upfrontIO/livingdocs-server/pull/1652) | [#1557](https://github.com/upfrontIO/livingdocs-planning/issues/1557)
 Server | Feature | Extract routing to top-level feature | [#1667](https://github.com/upfrontIO/livingdocs-server/pull/1667) | [#1564](https://github.com/upfrontIO/livingdocs-planning/issues/1564)
@@ -68,8 +68,25 @@ Server | Feature | Allow upload of SVG images (cropping is disabled in the edito
 Server | Bugfix | Migrate PrintController to object | [#1643](https://github.com/upfrontIO/livingdocs-server/pull/1643) | -
 Server | Bugfix | Upgrade to ajv@5.0.0 compatible schemas | [#1642](https://github.com/upfrontIO/livingdocs-server/pull/1642) | -
 Server | Bugfix | Log errors instead of crashing on registration | [#1632](https://github.com/upfrontIO/livingdocs-server/pull/1632) | [#](https://github.com/upfrontIO/livingdocs-planning/issues/1468)
-Server | Feature | New doc include api [Read more](#new-doc-include-api) | [#1623](https://github.com/upfrontIO/livingdocs-server/pull/1623) | [Epic, #1430](https://github.com/upfrontIO/livingdocs-planning/issues/1430), [#1423](https://github.com/upfrontIO/livingdocs-planning/issues/1423), [Documentation](https://github.com/upfrontIO/livingdocs/pull/138)
+Server, Editor | Feature | New doc include api [Read more](#new-doc-include-api) | [#1623](https://github.com/upfrontIO/livingdocs-server/pull/1623) | [Epic, #1430](https://github.com/upfrontIO/livingdocs-planning/issues/1430), [#1423](https://github.com/upfrontIO/livingdocs-planning/issues/1423), [Documentation](https://github.com/upfrontIO/livingdocs/pull/138), [#1655](https://github.com/upfrontIO/livingdocs-editor/pull/1655)
 Server | Bugfix | Routing fix (fixes "Key not found in database" error) | [#1609](https://github.com/upfrontIO/livingdocs-server/pull/1609) | [#1380](https://github.com/upfrontIO/livingdocs-planning/issues/1380)
+Editor | Bugfix | Update twitter embed code matcher | [#1673](https://github.com/upfrontIO/livingdocs-editor/pull/1673) | [#1515](https://github.com/upfrontIO/livingdocs-planning/issues/1515)
+Editor | Bugfix | As an editor I would like to see if I'm working on an archived article | [#1669](https://github.com/upfrontIO/livingdocs-editor/pull/1669) | [#1473](https://github.com/upfrontIO/livingdocs-planning/issues/1473)
+Editor | Bugfix | The controller with the name 'TasksController' is not registered. | [#1676](https://github.com/upfrontIO/livingdocs-editor/pull/1676) | [#1481](https://github.com/upfrontIO/livingdocs-planning/issues/1481)
+Editor | Feature | Limit dropdown items through configuration. [Read more](#limit-dropdown-items-through-configuration) | [#1667](https://github.com/upfrontIO/livingdocs-editor/pull/1667) | -
+Editor | BREAKING CHANGE, Feature | Upgrade to node 8 and npm > 5.5. | [80](https://github.com/upfrontIO/livingdocs-docker/pull/80), [#73](https://github.com/upfrontIO/livingdocs-docker/pull/73), [#1700](https://github.com/upfrontIO/livingdocs-editor/pull/1700) | -
+Editor | Bugfix | Image caption isn't imported from Hugo. [Read more](#image-caption-isn-t-imported-from-hugo) | [#1714](https://github.com/upfrontIO/livingdocs-editor/pull/1714) | [#1546](https://github.com/upfrontIO/livingdocs-planning/issues/1546)
+Editor | Bugfix | Fix embed code line break | [#1705](https://github.com/upfrontIO/livingdocs-editor/pull/1705) | -
+Editor | Bugfix | Image cropping on the publish panel takes 2 clicks to config | [#1702](https://github.com/upfrontIO/livingdocs-editor/pull/1702) | [#1533](https://github.com/upfrontIO/livingdocs-planning/issues/1533)
+Editor | Feature | Extend field extractor for doc-style. [Read more](#extend-field-extractor-for-doc-style) | [#1701](https://github.com/upfrontIO/livingdocs-editor/pull/1701), [#265](https://github.com/upfrontIO/livingdocs-framework/pull/265) | [#1531](https://github.com/upfrontIO/livingdocs-planning/issues/1531)
+Editor | BREAKING CHANGE | Remove Option to Configure the Publish Panel Metadata Forms in the Editor. [Read more](#remove-option-to-configure-the-publish-panel-metadata-forms-in-the-editor) | [#1696](https://github.com/upfrontIO/livingdocs-editor/pull/1696) | -
+Editor | Bugfix | Order print template and layout by name | [#1664](https://github.com/upfrontIO/livingdocs-editor/pull/1664) | -
+Editor | Bugfix | Get moment to work with webpack | [#1693](https://github.com/upfrontIO/livingdocs-editor/pull/1693) | -
+Editor | Bugfix | Fix `getAbsoluteBoundingRect() called on a detached node` | [#1690](https://github.com/upfrontIO/livingdocs-editor/pull/1690) | [#1137](https://github.com/upfrontIO/livingdocs-planning/issues/1137)
+Editor | Bugfix | Guard resrc image service call via framework | [#1689](https://github.com/upfrontIO/livingdocs-editor/pull/1689) | [#1542](https://github.com/upfrontIO/livingdocs-planning/issues/1542)
+Editor | Bugfix | Fix embed teaser | [#1685](https://github.com/upfrontIO/livingdocs-editor/pull/1685) | -
+Editor | Feature | Introduce card-based design on the publishing screen [Read more](#introduce-card-based-design-on-the-publishing-screen) | [#1453](https://github.com/upfrontIO/livingdocs-editor/pull/1453) | [#118](https://github.com/upfrontIO/livingdocs-planning/issues/118)
+Editory | Bugfix | Fix spellchecker editable event bug | [#1678](https://github.com/upfrontIO/livingdocs-editor/pull/1678) | [#1516](https://github.com/upfrontIO/livingdocs-planning/issues/1516)
 
 ## In detail
 
@@ -211,6 +228,92 @@ import ({importJob, rawDocument, shouldCreateNew, updateCondition, userId}, call
   // ...
 }
 ```
+
+### Limit dropdown items through configuration
+
+For dropdowns we're using `ui-select`. `ui-select` has issues handling big data. We implement the `limitTo` provided by ui-select to limit the amount of data displayed at once to a configurable value. If the configuration is missing or `undefined` this parameter will not apply.
+
+Example for config:
+
+```
+name: 'royaltyRecipientIds'
+  form: 'li-meta-multiselect-form'
+  config:
+    service: 'nzzRoyaltyRecipients'
+    halfWidth: false
+    label: 'Royalty Recipient'
+    placeholder: 'Select a royalty recipient...'
+    limitTo: 500
+```
+
+### Image caption isn't imported from Hugo
+
+After d'n'd-ing an image the response data looks like the following:
+
+``` json
+{
+    "url": "http://nzz-img-dev.s3.amazonaws.com/2017/10/25/d5ca8539-caa5-4cbf-ac82-4cb6de79a565.jpeg",
+    "width": 4800,
+    "height": 3200,
+    "size": 13422989,
+    "mime": "image/jpeg",
+    "hugoPicture": {
+        "id": "picture-1917895495",
+        "url": "https://hugo-fpro-prd.nzz.ch/file_provider/?group=BILD&entry=04FBC820_09EBFA0B670B&validTo=1509036448&consumer=hugoAPI&signature=850a5730697ca61d7cfddbc1460ec92c8f142568&mts=21102017160930",
+        "height": "3200",
+        "width": "4800",
+        "author": "ALEXANDRA WEY",
+        "credit": "KEYSTONE",
+        "agency": "NZZ – Agentur Keystone",
+        "source": "KEYSTONE",
+        "copyright": "© KEYSTONE /  ALEXANDRA WEY",
+        "caption": "ARCHIVBILD ZUM RUECKTRITT VON TENNISSPIELER MARCO CHIUDINELLI --- Marco Chiudinelli of Switzerland celebrates after defeating Yaraslav Shyla of Belarus during the fifth match of the Davis Cup world group playoffs between Switzerland and Belarus, Switzerland, Sunday, September 17, 2017. (KEYSTONE/Alexandra Wey)",
+        "note": "",
+        "hugoTimestamp": "2017-10-21T16:09:30",
+        "contentCreatedAt": "2017-09-17T00:00:00"
+    }
+}
+```
+
+- There's no more `hugoData` object and the caption is inside `hugoPicture`.
+- The test design's image component now accommodates a caption.
+
+### Extend field extractor for doc-style
+
+Extends the field extractor to also be able to extract style directives.
+
+The configuration of a style extraction looks like this:
+
+```
+	identifier: 'textColor'
+	type: 'style'
+	style: 'color'
+	matches: ['multiple-styled-component.background']
+```
+
+This will look in the component `multiple-styled-component` on the directive `background` and extract the style `color`.
+
+A serizalized component like this:
+
+```
+'multiple-styled-component': {
+  text: 'I am styled'
+  background: {'css-background-color': '#000', 'color': '#fff'}
+}
+```
+
+would lead to the field `textColor` to be extracted to `#fff`.
+
+The resulting markup has the full content object with all styles in `content` and the selected style in `style`. If no `style` is set, only the `content` is returned.
+
+### Remove Option to Configure the Publish Panel Metadata Forms in the Editor
+
+- Removed the option to configure the publish panel metadata forms in the editor (metadata in config/environments/all.coffee is now ignored).
+- Move the metadata form configuration to the server like described here: https://github.com/upfrontIO/livingdocs/blob/master/concepts/metadata/metadata-examples.md#server.
+
+### Introduce card-based design on the publishing screen
+
+![meta-data-cards](https://cloud.githubusercontent.com/assets/433821/23833874/af74e046-074c-11e7-87d7-01b5395b4f76.png)
 
 ## Patches
 
