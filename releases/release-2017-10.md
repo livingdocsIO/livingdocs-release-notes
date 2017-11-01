@@ -111,7 +111,7 @@ new Date('2015-05-04T00:00:00')  // 2015-05-03T22:00:00.000Z
 new Date('2015-05-04T00:00:00Z') // 2015-05-04T00:00:00.000Z
 ```
 
-- We use and advise you to use npm version > 5.5. `npm publish` had an issue where the `test` directory at the root of a project didn't get published in the final package tar file on npm. https://github.com/npm/npm/issues/18341
+- We use and advise you to use npm version > 5.5. `npm publish` had an issue where the `test` directory at the root of a project didn't get published in the final package tar file on npm. https://github.com/npm/npm/issues/18341. npm v5.1 version which gets shipped with node 8.9 fixes that issue.
 
 - When you switch to node 8 please also install all local modules from scratch (or npm rebuild):
   
