@@ -2,7 +2,13 @@
 
 ## Repositories
 
-A release consists of new versions of the `livingdocs-server`, the `livingdocs-editor` and the `livingdocs-framework`.
+This release consists of the following new versions of the `livingdocs-server`, the `livingdocs-editor` and the `livingdocs-framework`:
+
+Package | Version
+--- | ---
+`@livingdocs/server` | `63.2.1`
+`@livingdocs/editor` | `23.0.1`
+`@livingdocs/framework` | `7.14.0`
 
 ### Livingdocs Server
 
@@ -114,7 +120,7 @@ new Date('2015-05-04T00:00:00Z') // 2015-05-04T00:00:00.000Z
 - We use and advise you to use npm version > 5.5. `npm publish` had an issue where the `test` directory at the root of a project didn't get published in the final package tar file on npm. https://github.com/npm/npm/issues/18341. npm v5.1 version which gets shipped with node 8.9 fixes that issue.
 
 - When you switch to node 8 please also install all local modules from scratch (or npm rebuild):
-  
+
   ```
   nvm install 8 && nvm alias default 8
   rm -Rf ./node_modules && npm install
@@ -125,7 +131,7 @@ new Date('2015-05-04T00:00:00Z') // 2015-05-04T00:00:00.000Z
 ### Remove deprecated methods
 
 * `DocumentVersion.prototype.render` got removed. Please call `renderPipeline.renderDocumentVersion({documentVersion}, cb)` directly.
-* Removes transform methods from generic_document model. Downstreams might depend on this model in tests. 
+* Removes transform methods from generic_document model. Downstreams might depend on this model in tests.
 * Removes exported `renderDocument` and `renderDocumentVersion` on the render-pipeline file. Please use the renderPipeline instance using
 ```
 liServer.features.api('li-render-pipeline').renderDocumentVersion
@@ -173,7 +179,7 @@ after parsing the `body` property would contain:
 ]
 ```
 
-whereas the `text` property - which is kept - contains: 
+whereas the `text` property - which is kept - contains:
 
 ``` js
 [
@@ -320,10 +326,10 @@ The resulting markup has the full content object with all styles in `content` an
 
 ## Patches
 
-### Editor 
+### Editor
 
-- 
+-
 
 ### Server
 
-- 
+-
