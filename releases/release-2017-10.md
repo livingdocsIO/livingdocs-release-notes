@@ -89,7 +89,7 @@ Editor | Bugfix | Fix embed teaser | [#1685](https://github.com/upfrontIO/living
 Editor | Feature | Introduce card-based design on the publishing screen [Read more](#introduce-card-based-design-on-the-publishing-screen) | [#1453](https://github.com/upfrontIO/livingdocs-editor/pull/1453) | [#118](https://github.com/upfrontIO/livingdocs-planning/issues/118)
 Editor | Bugfix | Fix spellchecker editable event bug | [#1678](https://github.com/upfrontIO/livingdocs-editor/pull/1678) | [#1516](https://github.com/upfrontIO/livingdocs-planning/issues/1516)
 Framework | Feature | New imageService for ImageResizer | [#254](https://github.com/upfrontIO/livingdocs-framework/pull/254) | -
-Editory | Bugfix | Fields from header(catchline,text,lead,author) are not updated in metadata object in publication index if header was deleted in the editor | [#264](https://github.com/upfrontIO/livingdocs-framework/pull/264) | [#1475](https://github.com/upfrontIO/livingdocs-planning/issues/1475)
+Editor | Bugfix | Fields from header(catchline,text,lead,author) are not updated in metadata object in publication index if header was deleted in the editor | [#264](https://github.com/upfrontIO/livingdocs-framework/pull/264) | [#1475](https://github.com/upfrontIO/livingdocs-planning/issues/1475)
 
 ## In detail
 
