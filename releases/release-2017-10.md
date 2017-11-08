@@ -7,7 +7,7 @@ This release consists of the following new versions of the `livingdocs-server`, 
 Package | Version
 --- | ---
 `@livingdocs/server` | `63.2.1`
-`@livingdocs/editor` | `23.0.1`
+`@livingdocs/editor` | `23.0.3`
 `@livingdocs/framework` | `7.14.0`
 
 ### Livingdocs Server
@@ -21,7 +21,7 @@ How to require the server in your package.json:
 ```
 
 - Link to the release branch:
-  https://github.com/upfrontIO/livingdocs-server/compare/release-2017-10
+  https://github.com/upfrontIO/livingdocs-server/tree/release-2017-10
 - Previous release: [61.2.1](https://github.com/upfrontIO/livingdocs-release-notes/blob/master/releases/release-2017-09.md#livingdocs-server)
 
 ### Livingdocs Editor
@@ -30,12 +30,12 @@ How to require the editor in your package.json:
 
 ```json
 "dependencies": {
-  "@livingdocs/editor": "23.0.1",
+  "@livingdocs/editor": "23.0.3",
 }
 ```
 
 - Link to the release branch:
-  https://github.com/upfrontIO/livingdocs-editor/compare/release-2017-10
+  https://github.com/upfrontIO/livingdocs-editor/tree/release-2017-10
 - Previous release: [20.10.4](https://github.com/upfrontIO/livingdocs-release-notes/blob/master/releases/release-2017-09.md#livingdocs-editor)
 
 ### Livingdocs Framework
@@ -328,7 +328,7 @@ The resulting markup has the full content object with all styles in `content` an
 
 ### Editor
 
--
+* [23.0.3](https://github.com/upfrontIO/livingdocs-editor/releases/tag/v23.0.3) - addTask method invocation
 
 ### Server
 
