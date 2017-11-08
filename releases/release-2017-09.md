@@ -18,12 +18,9 @@ How to require the server in your package.json:
 - Link to the release branch:
   https://github.com/upfrontIO/livingdocs-server/tree/maintenance-v61.2.x
 
-
 #### Patches
 
 * [61.2.1](https://github.com/upfrontIO/livingdocs-server/releases/tag/v61.2.1) - **hooks**: Log errors instead of crashing on registration
-
-
 
 ### Livingdocs Editor
 
@@ -34,11 +31,8 @@ How to require the editor in your package.json:
   "@livingdocs/editor": "20.10.4",
 }
 ```
-
-
 - Link to the release branch:
   https://github.com/upfrontIO/livingdocs-editor/tree/maintenance-v20.10.x
-
 
 #### Patches
 
@@ -46,7 +40,6 @@ How to require the editor in your package.json:
 * [20.10.2](https://github.com/upfrontIO/livingdocs-editor/releases/tag/v20.10.2) - spellchecker: unload editable when removing the main (interactive) view
 * [20.10.3](https://github.com/upfrontIO/livingdocs-editor/releases/tag/v20.10.3) - reinitialise componentTree events when removing the mainView
 * [20.10.4](https://github.com/upfrontIO/livingdocs-editor/releases/tag/v20.10.4) - guard resrc image service call via framework
-
 
 ### Livingdocs Framework
 
