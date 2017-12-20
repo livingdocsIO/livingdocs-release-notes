@@ -61,35 +61,12 @@ Server | BREAKING CHANGE | Server-wide hook registration and new prepublishHook 
 Editor | BREAKING CHANGE | Remove metadataConfigService [Read more](#remove-metadataconfigservice) | [#1726](https://github.com/upfrontIO/livingdocs-editor/pull/1726) | -
 Application wide | BREAKING CHANGE | Move image service config to the server only [Read more](#move-image-service-config-to-the-server-only) | [#268](https://github.com/upfrontIO/livingdocs-framework/pull/268), [#1708](https://github.com/upfrontIO/livingdocs-server/pull/1708), [#1746](https://github.com/upfrontIO/livingdocs-editor/pull/1746) | [#1532](https://github.com/upfrontIO/livingdocs-planning/issues/1532)
 
-### Server-wide hook registration and new prepublishHook
+### Publication Hooks
 
-The behaviour of `registerPublicationHooks` changes. It allows registering a publishHook and unpublishHook on a channel. 
+The behaviour of `registerPublicationHooks` changes. It allowed registering one `publishHook` and one `unpublishHook` on a channel, it now allows registering many of each of these.
+
 - **Before:** any subsequent call to `registerPublicationHooks` for the same channel would simply override/replace the already registered hooks for this channel.
 - **From now on:** subsequent calls add the hooks to the list of hooks that are run during (un)publication. They are executed in the same order as they get registered.
-
-### New param `prepublishHook` to `registerPublicationHooks`
-
-```javascript
-liServer.features.api('li-documents').registerPublicationHooks({
-  projectHandle: 'your-awesome-project',
-  channelHandle: 'some-channel',
-  prepublishHook: (documentVersion, callback) => { callback(null, documentVersion) },
-  publishHook: ({documentType, payload}, callback) => { callback() },
-  unpublishHook: ({documentType, payload}, callback) => { callback() }
-}, done)
-```
-
-#### API changes
-
-```diff
- liServer.features.api('li-documents').registerPublicationHooks({
-   projectHandle: 'your-awesome-project',
-   channelHandle: 'some-channel',
-+  prepublishHook: (documentVersion, callback) => { callback(null, documentVersion) },
-   publishHook: ({documentType, payload}, callback) => { callback() },
-   unpublishHook: ({documentType, payload}, callback) => { callback() }
- }, done)
-```
 
 ### Remove metadataConfigService
 
@@ -243,7 +220,7 @@ We'd like users of the _Public API_ to not need to handle channels since there's
 
 The API token now holds the default channel id as well. E.g. in the public API controller we now can do:
 
-``` js
+```js
 getChannel (req, res) {
   const projectId = req.verifiedToken.projectId
   const channelId = req.verifiedToken.channelId
@@ -251,10 +228,40 @@ getChannel (req, res) {
 },
 ```
 
+#### Publication Hooks
+
+See [breaking changes](#publication-hooks).
+
+##### New param `prepublishHook` for `registerPublicationHooks.hooks`
+
+Prepublish hooks need to pass to their callback `{documentVersion}` as they received one.  
+This allows for subsequent prepublish hooks to modify the `{documentVersion}`.
+
+```diff
+ liServer.features.api('li-documents').registerPublicationHooks({
+   projectHandle: 'your-awesome-project',
+   channelHandle: 'some-channel',
++  prepublishHook: (documentVersion, callback) => { callback(null, documentVersion) },
++  //                                                              ^^^^^^^^^^^^^^^
++  //                          very important, you need to forward documentVersion
+   publishHook: ({documentType, payload}, callback) => { callback() },
+   unpublishHook: ({documentType, payload}, callback) => { callback() }
+ }, done)
+```
+
+##### Server-wide publication hooks
+
+There are now two ways of registering a publication hook:
+
+* `registerPublicationHooks`:
+  Hooks are tied to the project+channel passed as first argument.
+* `registerPublicationServerHooks`:
+  Hooks are executed on all projects. These hooks run before channel specific ones.
+
 #### Public API changes
 
 * `/channels/:channelHandle?` -> `publicApi.getChannelConfig ({projectId, channelId, channelHandle}, callback)`
-* `/publicationEvents/:channelHandle?` -> _see PublicationEventsRepository below_
+* `/publicationEvents/:channelHandle?` -> _see [PublicationEventsRepository](#publicationeventsrepository)_
 * `/routing/:channelHandle?` -> `publicApi.getRoutesForChannel ({projectId, channelId, channelHandle, path}, callback)`
 * `/menus/:channelHandle?'` -> `publicMenuApi.getMenus: ({projectId, channelId, channelHandle, menuHandle}, callback)`
 
@@ -270,11 +277,8 @@ There are no changes in the configuration.
 
 #### Notes
 
-***# 1**
-The Public API controller now makes one additional call to fetch the project configuration in case the channelHandle is missing, We don't know about performance impacts yet, but this is certainly a point of interest. One way to mitigate the impact on performance is to assign the default `channelHandle` to the users' tokens.
-
-**# 2**
-The default channel id is now kept in the user's API token. This saves us one roundtrip to the database.
+1. The Public API controller now makes one additional call to fetch the project configuration in case the channelHandle is missing, We don't know about performance impacts yet, but this is certainly a point of interest. One way to mitigate the impact on performance is to assign the default `channelHandle` to the users' tokens.
+1. The default channel id is now kept in the user's API token. This saves us one roundtrip to the database.
 
 
 ### Enable `publications` endpoint
