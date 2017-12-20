@@ -57,7 +57,7 @@ dependencies: {
 
 Component | Type | Description | PRs | Issues
 --- | --- | --- | --- | ---
-Server | BREAKING CHANGE | Server-wide hook registration and new prepublishHook [Read more](#server-wide-hook-registration-and-new-prepublishhook) | [#1740](https://github.com/upfrontIO/livingdocs-server/pull/1740) | [#1633](https://github.com/upfrontIO/livingdocs-planning/issues/1633)
+Server | BREAKING CHANGE | Publication hooks [Read more](#publication-hooks) | [#1740](https://github.com/upfrontIO/livingdocs-server/pull/1740) | [#1633](https://github.com/upfrontIO/livingdocs-planning/issues/1633)
 Editor | BREAKING CHANGE | Remove metadataConfigService [Read more](#remove-metadataconfigservice) | [#1726](https://github.com/upfrontIO/livingdocs-editor/pull/1726) | -
 Application wide | BREAKING CHANGE | Move image service config to the server only [Read more](#move-image-service-config-to-the-server-only) | [#268](https://github.com/upfrontIO/livingdocs-framework/pull/268), [#1708](https://github.com/upfrontIO/livingdocs-server/pull/1708), [#1746](https://github.com/upfrontIO/livingdocs-editor/pull/1746) | [#1532](https://github.com/upfrontIO/livingdocs-planning/issues/1532)
 
