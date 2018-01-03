@@ -2,7 +2,7 @@
 
 ## Repositories
 
-This release consists of the following new versions of the `livingdocs-server`, the `livingdocs-editor` and the `livingdocs-framework`:
+This release consists of the following new versions of the `livingdocs-server` and `livingdocs-editor`:
 
 Package | Version
 --- | ---
@@ -158,9 +158,6 @@ Editor | Feature | Allow linking to an external site in the main menu | [#1732](
 Editor | Feature | Inline error messages for metadata screen [Read more](#inline-error-messages-for-metadata-screen) | [#1753](https://github.com/upfrontIO/livingdocs-editor/pull/1753) | [#1491](https://github.com/upfrontIO/livingdocs-planning/issues/1491)
 Editor | Feature | As an editor I want to set an anchor link | [#1704](https://github.com/upfrontIO/livingdocs-editor/pull/1704) | [#1472](https://github.com/upfrontIO/livingdocs-planning/issues/1472)
 Editor | Bugfix | Only show active groups in "Add Member" screen on project | [#c2b89c3](https://github.com/upfrontIO/livingdocs-editor/commit/c2b89c3) | -
-Framework | Feature | New server side one-time rendering (without jQuery and jsdom) [Read more](#new-server-side-one-time-rendering-without-jQuery-and-jsdom) | [#161](https://github.com/upfrontIO/livingdocs-framework/pull/161) | -
-Framework | Bugfix | Webpack 3 upgrade | [#272](https://github.com/upfrontIO/livingdocs-framework/pull/272) | -
-Framework | Bugfix | Bump upfront-editable from 1.3.1 to 1.4.2 | [#275](https://github.com/upfrontIO/livingdocs-framework/pull/275) | -
 
 ## Changes
 
@@ -180,8 +177,6 @@ Editor | Bugfix | Use headless chrome for tests | [#1711](https://github.com/upf
 Editor | Bugfix | Configuration for the maximum amount of selectable items in multi-select | [#1736](https://github.com/upfrontIO/livingdocs-editor/pull/1736) | -
 Editor | Bugfix | Hide Metadata on Publish Panel When There is no FormArrangement Config | [#1713](https://github.com/upfrontIO/livingdocs-editor/pull/1713) | -
 Editor | Bugfix | addTask method invocation | [#1725](https://github.com/upfrontIO/livingdocs-editor/pull/1725) | -
-Framework | Bugfix | Revert usage of es2015 | [#271](https://github.com/upfrontIO/livingdocs-framework/pull/271) | -
-Framework | Bugfix | Remove unused semantic-release-verify-patch | [#274](https://github.com/upfrontIO/livingdocs-framework/pull/274) | -
 
 ## In detail
 
@@ -451,89 +446,6 @@ module.exports = function (feature, server, done) {
 
 <img width="633" alt="screen shot 2017-10-30 at 14 44 07" src="https://user-images.githubusercontent.com/47606/32174071-26e5e54a-bd81-11e7-81b1-2f70fb514324.png">
 
-### New server side one-time rendering (without jQuery and jsdom)
-
-```js
-const li = require('@livingdocs/framework')
-const livingdoc = li.createLivingdoc(...)
-// add some content to the livingdoc
-
-// The method render() is an addition so we can test if
-// it produces the same output as livingdoc.html()
-livingdoc.render()
-```
-
-#### Render Example with Includes
-
-```js
-const livingdocs = require('@livingdocs/framework')
-
-// ... create your livingdoc
-
-// resolve includes
-componentTree.each((component) => {
-  if (component.componentName === 'include') {
-    const includeDirective = component.directives.get('remote')
-    includeDirective.resolve(`
-      <article>
-        External Content
-      </article>
-    `)
-  }
-})
-
-// render the component tree with a wrapper
-const result = livingdocs.rendering.render({
-  wrapperHtml: '<section doc-container="content"></section>'
-  componentTree: componentTree
-})
-```
-
-## Performance Testing
-
-Performance tests can be setup in `test/performance/rendering_perf` and other files suffixed with `_perf`. What is being run should be required in `test/performance/runner.js`.
-
-Run the performance tests:
-```bash
-node test/performance/runner.js
-```
-
-## Include Directive
-
-`setParams()` was added to the include directive.
-
-```js
-includeDirective.setContent({
-  service: 'list',
-  params: {foo: 'bar'}
-})
-
-// Retrieve the params set on a directive (this includes defaultParams
-// specified in the component configuration if they have not been overwritten).
-includeDirective.getParams()
-
-
-// setParams overwrites all parameters of this include.
-includeDirective.setParams({foo: 'fighters'})
-
-// addParams merges the specified params with the existing ones
-// (including any default params that may have been set in the component
-// configuration).
-includeDirective.addParams({foo: 'bar'})
-```
-
-`resolve()` was added to the include directive.
-```js
-includeDirective.resolve('<div>string with arbitrary HTML</div>')
-
-// Check if an include was already resolved
-includeDirective.isResolved() // true
-```
-
-The `resolve()` method does only have an impact when a component tree is rendered with the one time rendering. It is not used by the dynamic renderer.
-
-Resolved values are not persisted. If you serialize a document with resolved includes the resolved values will not be included in the JSON you get.
-
 ## Print API
 
 Component | Type | Description | PRs | Issues
@@ -587,7 +499,7 @@ and replaces the previous config:
 
 * [25.3.2](https://github.com/upfrontIO/livingdocs-editor/releases/tag/v25.3.2) - **print**: set publicationDates period to 30 days.
 * [25.3.3](https://github.com/upfrontIO/livingdocs-editor/releases/tag/v25.3.3) - **print**: update publicationDates period in layout selector.
-* [25.3.4](https://github.com/upfrontIO/livingdocs-editor/releases/tag/v25.3.4) - update @livingdocs/framework to version 8.0.6, update karma to version 2.0.0, get headless chromium properly to work.
+* [25.3.4](https://github.com/upfrontIO/livingdocs-editor/releases/tag/v25.3.4) - **tests**: get headless chromium to work properly.
 
 ### Server
 
