@@ -169,7 +169,6 @@ Component | Type | Description | PRs | Issues
 Server | Bugfix | Don't unescape HTML entities on import | [#1742](https://github.com/upfrontIO/livingdocs-server/pull/1742) | -
 Server, Editor | Bugfix | Respect `^release-` instead of `^maintenance-` | [#1748](https://github.com/upfrontIO/livingdocs-server/pull/1748), [#1764](https://github.com/upfrontIO/livingdocs-editor/pull/1764) | -
 Editor | Bugfix | Avoid hiding of floated elements in Proofreading UI | [#1596](https://github.com/upfrontIO/livingdocs-editor/pull/1596) | -
-
 Server | Bugfix | The DocumentVersion passed to metadataApi.updateOnUpdate() has an old revision | [#1714](https://github.com/upfrontIO/livingdocs-server/pull/1714) | [#1617](https://github.com/upfrontIO/livingdocs-planning/issues/1617)
 Server | Bugfix | Escape all `&`s in text instead of just the first occurrence | [#1733](https://github.com/upfrontIO/livingdocs-server/pull/1733) | -
 Server | Bugfix | Properly parse `prometheusExporter__enabled` | [#1713](https://github.com/upfrontIO/livingdocs-server/pull/1713) | -
