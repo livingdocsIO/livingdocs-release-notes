@@ -5,9 +5,10 @@
 1. [Involved repositories](#repositories)
 2. [Breaking changes](#breaking-changes)
 3. [Public API](#public-api)
-4. [Changelog](#changelog)
-5. [Print API](#print-api)
-6. [Patches](#patches)
+4. [Configuration](#configuration)
+5. [Changelog](#changelog)
+6. [Print API](#print-api)
+7. [Patches](#patches)
 
 ## Repositories
 
@@ -340,6 +341,13 @@ process.on('SIGTERM', function (err) {
 })
 ```
 
+## Configuration
+
+Component | Type | Description | PRs | Issues
+--- | --- | --- | --- | ---
+Editor | Bugfix | Configuration for the maximum amount of selectable items in multi-select | [#1736](https://github.com/upfrontIO/livingdocs-editor/pull/1736) | -
+Editor | Feature | Handle the new Metadata Configuration Format in the editor | [#1718](https://github.com/upfrontIO/livingdocs-editor/pull/1718) | [#1583](https://github.com/upfrontIO/livingdocs-planning/issues/1583)
+
 ## Changelog
 
 Component | Type | Description | PRs | Issues
@@ -348,7 +356,6 @@ Server | Feature | Prometheus routes indexer metrics [Read more](#prometheus-rou
 Server | Bugfix | Fix group duplicated entries in group table | [#1725](https://github.com/upfrontIO/livingdocs-server/pull/1725) | [#1626](https://github.com/upfrontIO/livingdocs-planning/issues/1626)
 Server | Bugfix | Handle repeated drag-and-drop imports properly [Read more](#handle-repeated-drag-and-drop-imports-properly) | [#1723](https://github.com/upfrontIO/livingdocs-server/pull/1723) | [#1613](https://github.com/upfrontIO/livingdocs-planning/issues/1613), [#1614](https://github.com/upfrontIO/livingdocs-planning/issues/1614)
 Server | Bugfix | Escape HTML entities for non-body fields [Read more](#escape-html-entities-for-non-body-fields) | [#1744](https://github.com/upfrontIO/livingdocs-server/pull/1744) | -
-Editor | Feature | Handle the new Metadata Configuration Format in the editor | [#1718](https://github.com/upfrontIO/livingdocs-editor/pull/1718) | [#1583](https://github.com/upfrontIO/livingdocs-planning/issues/1583)
 Editor | Feature | Allow linking to an external site in the main menu | [#1732](https://github.com/upfrontIO/livingdocs-editor/pull/1732) | -
 Editor | Feature | Inline error messages for metadata screen [Read more](#inline-error-messages-for-metadata-screen) | [#1753](https://github.com/upfrontIO/livingdocs-editor/pull/1753) | [#1491](https://github.com/upfrontIO/livingdocs-planning/issues/1491)
 Editor | Feature | As an editor I want to set an anchor link | [#1704](https://github.com/upfrontIO/livingdocs-editor/pull/1704) | [#1472](https://github.com/upfrontIO/livingdocs-planning/issues/1472)
@@ -364,7 +371,6 @@ Server | Bugfix | Add fatal log level to the list of valid levels | [#1691](http
 Server | Bugfix | Escape ampersands from hugo sources | [#1677](https://github.com/upfrontIO/livingdocs-server/pull/1677) | [#1549](https://github.com/upfrontIO/livingdocs-planning/issues/1549)
 Server | Feature | Migrate render pipeline lib to js | [#1686](https://github.com/upfrontIO/livingdocs-server/pull/1686) | -
 Editor | Bugfix | Use headless chrome for tests | [#1711](https://github.com/upfrontIO/livingdocs-editor/pull/1711) | -
-Editor | Bugfix | Configuration for the maximum amount of selectable items in multi-select | [#1736](https://github.com/upfrontIO/livingdocs-editor/pull/1736) | -
 Editor | Bugfix | Hide Metadata on Publish Panel When There is no FormArrangement Config | [#1713](https://github.com/upfrontIO/livingdocs-editor/pull/1713) | -
 Editor | Bugfix | addTask method invocation | [#1725](https://github.com/upfrontIO/livingdocs-editor/pull/1725) | -
 
