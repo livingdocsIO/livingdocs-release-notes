@@ -5,10 +5,9 @@
 1. [Involved repositories](#repositories)
 2. [Breaking changes](#breaking-changes)
 3. [Public API](#public-api)
-4. [Configuration](#configuration)
-6. [Changelog](#changelog)
-7. [Print API](#print-api)
-8. [Patches](#patches)
+4. [Changelog](#changelog)
+5. [Print API](#print-api)
+6. [Patches](#patches)
 
 ## Repositories
 
@@ -341,7 +340,7 @@ process.on('SIGTERM', function (err) {
 })
 ```
 
-## Highlighted Changes
+## Changelog
 
 Component | Type | Description | PRs | Issues
 --- | --- | --- | --- | ---
@@ -354,11 +353,6 @@ Editor | Feature | Allow linking to an external site in the main menu | [#1732](
 Editor | Feature | Inline error messages for metadata screen [Read more](#inline-error-messages-for-metadata-screen) | [#1753](https://github.com/upfrontIO/livingdocs-editor/pull/1753) | [#1491](https://github.com/upfrontIO/livingdocs-planning/issues/1491)
 Editor | Feature | As an editor I want to set an anchor link | [#1704](https://github.com/upfrontIO/livingdocs-editor/pull/1704) | [#1472](https://github.com/upfrontIO/livingdocs-planning/issues/1472)
 Editor | Bugfix | Only show active groups in "Add Member" screen on project | [#c2b89c3](https://github.com/upfrontIO/livingdocs-editor/commit/c2b89c3) | -
-
-## Changes
-
-Component | Type | Description | PRs | Issues
---- | --- | --- | --- | ---
 Server | Bugfix | Don't unescape HTML entities on import | [#1742](https://github.com/upfrontIO/livingdocs-server/pull/1742) | -
 Server, Editor | Bugfix | Respect `^release-` instead of `^maintenance-` | [#1748](https://github.com/upfrontIO/livingdocs-server/pull/1748), [#1764](https://github.com/upfrontIO/livingdocs-editor/pull/1764) | -
 Editor | Bugfix | Avoid hiding of floated elements in Proofreading UI | [#1596](https://github.com/upfrontIO/livingdocs-editor/pull/1596) | -
