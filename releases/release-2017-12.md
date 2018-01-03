@@ -281,25 +281,6 @@ As opposed to other functions in the Public API, this one isn't aware of custom 
 | ----- | ----------- |
 | 400 - Specified Limit exceeds maximum. | Specifying a limit of more than 100 will return a HTTP 400 error | 
 
-### Add ServerApi method destroy()
-
-The `liServer` gets a new method `destroy()` that can be called before exiting the process. The goal of the `destroy()` method is to stop listening on ports and finish outstanding requests.
-
-`destroy()` will be called automatically if `registerShutdownHandlers: true` is passed when creating the `liServer`.
-
-Example of how to manually call `destroy()`:
-```js
-const Server = require('@livingdocs/server')
-const liServer = Server(require('../conf'))
-
-// New method
-process.on('SIGTERM', function (err) {
-  liServer.destroy((err) => {
-    process.exit()
-  })
-})
-```
-
 ### Make channelHandle optional in Public API 
 
 We'd like users of the _Public API_ to not need to handle channels since there's probably going to be one channel per project anyway. In this first step we're going to make the `channelHandle` optional, other than that, the API is going to behave as usual.
@@ -340,6 +321,25 @@ The Public API controller now makes one additional call to fetch the project con
 
 **# 2**
 The default channel id is now kept in the user's API token. This saves us one roundtrip to the database.
+
+### Add ServerApi method destroy()
+
+The `liServer` gets a new method `destroy()` that can be called before exiting the process. The goal of the `destroy()` method is to stop listening on ports and finish outstanding requests.
+
+`destroy()` will be called automatically if `registerShutdownHandlers: true` is passed when creating the `liServer`.
+
+Example of how to manually call `destroy()`:
+```js
+const Server = require('@livingdocs/server')
+const liServer = Server(require('../conf'))
+
+// New method
+process.on('SIGTERM', function (err) {
+  liServer.destroy((err) => {
+    process.exit()
+  })
+})
+```
 
 ## Highlighted Changes
 
