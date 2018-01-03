@@ -153,7 +153,6 @@ Server | Bugfix | Fix group duplicated entries in group table | [#1725](https://
 Server | Bugfix | Handle repeated drag-and-drop imports properly [Read more](#handle-repeated-drag-and-drop-imports-properly) | [#1723](https://github.com/upfrontIO/livingdocs-server/pull/1723) | [#1613](https://github.com/upfrontIO/livingdocs-planning/issues/1613), [#1614](https://github.com/upfrontIO/livingdocs-planning/issues/1614)
 Server | Bugfix | Escape HTML entities for non-body fields [Read more](#escape-html-entities-for-non-body-fields) | [#1744](https://github.com/upfrontIO/livingdocs-server/pull/1744) | -
 Server | Bugfix | Get default Channel Id from Project config if neither handle nor id available [Read more](#get-default-channel-id-from-project-config-if-neither-handle-nor-id-available) | [#1749](https://github.com/upfrontIO/livingdocs-server/pull/1749) | [#1641](https://github.com/upfrontIO/livingdocs-planning/issues/1641)
-Server | Feature | Map article design layout to layout engine [Read more](#map-article-design-layout-to-layout-engine) | [#1655](https://github.com/upfrontIO/livingdocs-server/pull/1655), [#1697](https://github.com/upfrontIO/livingdocs-editor/pull/1697) | [#1550](https://github.com/upfrontIO/livingdocs-planning/issues/1550)
 Editor | Feature | Handle the new Metadata Configuration Format in the editor | [#1718](https://github.com/upfrontIO/livingdocs-editor/pull/1718) | [#1583](https://github.com/upfrontIO/livingdocs-planning/issues/1583)
 Editor | Feature | Allow linking to an external site in the main menu | [#1732](https://github.com/upfrontIO/livingdocs-editor/pull/1732) | -
 Editor | Feature | Inline error messages for metadata screen [Read more](#inline-error-messages-for-metadata-screen) | [#1753](https://github.com/upfrontIO/livingdocs-editor/pull/1753) | [#1491](https://github.com/upfrontIO/livingdocs-planning/issues/1491)
@@ -170,7 +169,7 @@ Component | Type | Description | PRs | Issues
 Server | Bugfix | Don't unescape HTML entities on import | [#1742](https://github.com/upfrontIO/livingdocs-server/pull/1742) | -
 Server, Editor | Bugfix | Respect `^release-` instead of `^maintenance-` | [#1748](https://github.com/upfrontIO/livingdocs-server/pull/1748), [#1764](https://github.com/upfrontIO/livingdocs-editor/pull/1764) | -
 Editor | Bugfix | Avoid hiding of floated elements in Proofreading UI | [#1596](https://github.com/upfrontIO/livingdocs-editor/pull/1596) | -
-Server | Feature | Add `template-data` endpoint [Read more](#add-template-data-endpoint-to-improve-editor-code) | [#1737](https://github.com/upfrontIO/livingdocs-server/pull/1737), [#1756](https://github.com/upfrontIO/livingdocs-editor/pull/1756) | -
+
 Server | Bugfix | The DocumentVersion passed to metadataApi.updateOnUpdate() has an old revision | [#1714](https://github.com/upfrontIO/livingdocs-server/pull/1714) | [#1617](https://github.com/upfrontIO/livingdocs-planning/issues/1617)
 Server | Bugfix | Escape all `&`s in text instead of just the first occurrence | [#1733](https://github.com/upfrontIO/livingdocs-server/pull/1733) | -
 Server | Bugfix | Properly parse `prometheusExporter__enabled` | [#1713](https://github.com/upfrontIO/livingdocs-server/pull/1713) | -
@@ -181,10 +180,6 @@ Server | Feature | Migrate render pipeline lib to js | [#1686](https://github.co
 Editor | Bugfix | Use headless chrome for tests | [#1711](https://github.com/upfrontIO/livingdocs-editor/pull/1711) | -
 Editor | Bugfix | Configuration for the maximum amount of selectable items in multi-select | [#1736](https://github.com/upfrontIO/livingdocs-editor/pull/1736) | -
 Editor | Bugfix | Hide Metadata on Publish Panel When There is no FormArrangement Config | [#1713](https://github.com/upfrontIO/livingdocs-editor/pull/1713) | -
-Editor, Server | Bugfix | Add publication selection to print article create dialog | [#1740](https://github.com/upfrontIO/livingdocs-editor/pull/1740), [#1705](https://github.com/upfrontIO/livingdocs-server/pull/1705) | - 
-Editor | Bugfix | Fix export / publish label for print articles | [#1757](https://github.com/upfrontIO/livingdocs-editor/pull/1757) | -
-Editor | Bugfix | Removed hardcoded publication name | [#1760](https://github.com/upfrontIO/livingdocs-editor/pull/1760) | -
-Editor | Bugfix | Enable selection mode button for print | [#1721](https://github.com/upfrontIO/livingdocs-editor/pull/1721) | -
 Editor | Bugfix | addTask method invocation | [#1725](https://github.com/upfrontIO/livingdocs-editor/pull/1725) | -
 Framework | Bugfix | Revert usage of es2015 | [#271](https://github.com/upfrontIO/livingdocs-framework/pull/271) | -
 Framework | Bugfix | Remove unused semantic-release-verify-patch | [#274](https://github.com/upfrontIO/livingdocs-framework/pull/274) | -
@@ -194,12 +189,6 @@ Framework | Bugfix | Remove unused semantic-release-verify-patch | [#274](https:
 ### Inline error messages for metadata screen
 
 We've updated the documentation regarding the feature: https://docs.livingdocs.io/walkthroughs/metadata/metadata-examples.html and https://docs.livingdocs.io/reference-docs/editor-configuration/metadata.html.
-
-### Add `template-data` endpoint to improve editor code
-
-- Allows querying the layout engine for a "standing type" (German: Stehsatz) issue date that is specified in the config. Such an issue is used to store articles that are written beforehand for which the actual issue date is not yet known.
-
-- Currently the editor fires three requests for `publications`, `departments` and `templates`/`layouts` to populate the print template selection view. With this new endpoint all requests are combined and logic can be moved to the server cleaning up the editor code.
 
 ### Handle repeated drag-and-drop imports properly
 
@@ -259,7 +248,6 @@ The Public API controller now makes one additional call to fetch the project con
 
 **# 2**
 The default channel id is now kept in the user's API token. This saves us one roundtrip to the database.
-
 
 ### Enable `publications` endpoint
 
@@ -401,36 +389,6 @@ process.on('SIGTERM', function (err) {
     process.exit()
   })
 })
-```
-
-### Map article design layout to layout engine
-
-The print API will now receive the selected livingdocs design layout with every call and map it to the `layoutEngine` param used by huGO.
-
-It replaces the environment based `layoutEngine` config with a `layoutEngines` config that can list a number of layout engines supported by huGO. Each layout engine is associated with a design layout so a single LD instance can support multiple layout engines.
-
-The new config looks like this:
-```
-  layoutEngines: [
-    id: 'ww'  # used to inform print API about which layout engine to use
-    layouts: ['woodwing']  # which print design layout to associate with this setting
-    label: 'Woodwing'  # label for use in UI
-    stringifyLists: false  # send list components as strings or hierarchical structure
-  ,
-    id: 'nt'
-    layouts: ['print', 'newsnt']
-    label: 'NewsNT'
-    stringifyLists: true
-  ]
-```
-
-and replaces the previous config:
-
-```
-  layoutEngine:
-    id: 'nt'
-    label: 'NewsNT'
-  stringifyLists: true
 ```
 
 ### Prometheus routes indexer metrics
@@ -576,6 +534,53 @@ includeDirective.isResolved() // true
 The `resolve()` method does only have an impact when a component tree is rendered with the one time rendering. It is not used by the dynamic renderer.
 
 Resolved values are not persisted. If you serialize a document with resolved includes the resolved values will not be included in the JSON you get.
+
+## Print API
+
+Component | Type | Description | PRs | Issues
+--- | --- | --- | --- | ---
+Server | Feature | Add `template-data` endpoint [Read more](#add-template-data-endpoint-to-improve-editor-code) | [#1737](https://github.com/upfrontIO/livingdocs-server/pull/1737), [#1756](https://github.com/upfrontIO/livingdocs-editor/pull/1756) | -
+Editor, Server | Bugfix | Add publication selection to print article create dialog | [#1740](https://github.com/upfrontIO/livingdocs-editor/pull/1740), [#1705](https://github.com/upfrontIO/livingdocs-server/pull/1705) | - 
+Editor | Bugfix | Fix export / publish label for print articles | [#1757](https://github.com/upfrontIO/livingdocs-editor/pull/1757) | -
+Editor | Bugfix | Removed hardcoded publication name | [#1760](https://github.com/upfrontIO/livingdocs-editor/pull/1760) | -
+Editor | Bugfix | Enable selection mode button for print | [#1721](https://github.com/upfrontIO/livingdocs-editor/pull/1721) | -
+Server | Feature | Map article design layout to layout engine [Read more](#map-article-design-layout-to-layout-engine) | [#1655](https://github.com/upfrontIO/livingdocs-server/pull/1655), [#1697](https://github.com/upfrontIO/livingdocs-editor/pull/1697) | [#1550](https://github.com/upfrontIO/livingdocs-planning/issues/1550)
+
+### Add `template-data` endpoint to improve editor code
+
+- Allows querying the layout engine for a "standing type" (German: Stehsatz) issue date that is specified in the config. Such an issue is used to store articles that are written beforehand for which the actual issue date is not yet known.
+
+- Currently the editor fires three requests for `publications`, `departments` and `templates`/`layouts` to populate the print template selection view. With this new endpoint all requests are combined and logic can be moved to the server cleaning up the editor code.
+
+### Map article design layout to layout engine
+
+The print API will now receive the selected livingdocs design layout with every call and map it to the `layoutEngine` param used by huGO.
+
+It replaces the environment based `layoutEngine` config with a `layoutEngines` config that can list a number of layout engines supported by huGO. Each layout engine is associated with a design layout so a single LD instance can support multiple layout engines.
+
+The new config looks like this:
+```
+  layoutEngines: [
+    id: 'ww'  # used to inform print API about which layout engine to use
+    layouts: ['woodwing']  # which print design layout to associate with this setting
+    label: 'Woodwing'  # label for use in UI
+    stringifyLists: false  # send list components as strings or hierarchical structure
+  ,
+    id: 'nt'
+    layouts: ['print', 'newsnt']
+    label: 'NewsNT'
+    stringifyLists: true
+  ]
+```
+
+and replaces the previous config:
+
+```
+  layoutEngine:
+    id: 'nt'
+    label: 'NewsNT'
+  stringifyLists: true
+```
 
 ## Patches
 
