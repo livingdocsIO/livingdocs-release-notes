@@ -6,8 +6,8 @@ This release consists of the following new versions of the `livingdocs-server`, 
 
 Package | Version
 --- | ---
-`@livingdocs/server` | `64.0.1`
-`@livingdocs/editor` | `25.3.1`
+`@livingdocs/server` | `64.0.4`
+`@livingdocs/editor` | `25.3.4`
 
 ### Livingdocs Server
 
@@ -15,7 +15,7 @@ How to require the server in your package.json:
 
 ```json
 "dependencies": {
-  "@livingdocs/server": "64.0.1",
+  "@livingdocs/server": "64.0.4",
 }
 ```
 
@@ -29,7 +29,7 @@ How to require the editor in your package.json:
 
 ```json
 "dependencies": {
-  "@livingdocs/editor": "25.3.1",
+  "@livingdocs/editor": "25.3.4",
 }
 ```
 
@@ -87,7 +87,7 @@ You can replace:
 
 ### Move image service config to the server only
 
-We removed the default configuration `imageServices.sz.shaSecret`. Here is an example how to manually set the `shaSecret` should you need it:
+We removed the default configuration `imageServices.sz.shaSecret`. Here is an example how to manually set the `shaSecret` in the server should you need it:
 
 ```js
   documents: {
@@ -211,7 +211,7 @@ id | system_name | external_id | document_id | checksum | created_at | updated_a
 
 There's a unique-constraint on `external_id`. For Bluewin we need to make sure that each article is imported only once and in this case the log is append-only. 
 
-For NZZ it's different: A huGO article might be imported multiple times. In case of a repeated import the log entry is simply forgone. As a consequence the issue in the linked issues arrises: When re-importing an article, the first document that remains referenced in the log entry is returned to the editor (the re-imported document has been correctly created and is visible in the dashboard).
+For NZZ it's different: A huGO article might be imported multiple times. In case of a repeated import the log entry is simply forgone. As a consequence the issue in the linked issues arrises: When re-importing an article, the first document that remains referenced in the log entry is returned to the editor (the re-imported document has been correctly created and is visible in the dashboard). The issue is fixed for NZZ as well.
 
 #### ImportAPI approach: `import()` creates new ImportLogs when `shouldCreateNew` is true
 
@@ -581,4 +581,12 @@ Resolved values are not persisted. If you serialize a document with resolved inc
 
 ### Editor
 
+* [25.3.2](https://github.com/upfrontIO/livingdocs-editor/releases/tag/v25.3.2) - **print**: set publicationDates period to 30 days.
+* [25.3.3](https://github.com/upfrontIO/livingdocs-editor/releases/tag/v25.3.3) - **print**: update publicationDates period in layout selector.
+* [25.3.4](https://github.com/upfrontIO/livingdocs-editor/releases/tag/v25.3.4) - update @livingdocs/framework to version 8.0.6, update karma to version 2.0.0, get headless chromium properly to work.
+
 ### Server
+
+* [64.0.2](https://github.com/upfrontIO/livingdocs-server/releases/tag/v64.0.2) - **hooks**: properly handle resolveHandles errors.
+* [64.0.3](https://github.com/upfrontIO/livingdocs-server/releases/tag/v64.0.3) - **hooks**: publication hooks registration ignore project/channel failures.
+* [64.0.4](https://github.com/upfrontIO/livingdocs-server/releases/tag/v64.0.4) - **print**: Enables sending `<br>`s in print articles to print API.
