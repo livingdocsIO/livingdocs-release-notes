@@ -1,5 +1,15 @@
 # Release Notes: `November/December 2017 Release`
 
+## Content
+
+1. [Involved repositories](#repositories)
+2. [Breaking changes](#breaking-changes)
+3. [Public API](#public-api)
+4. [Configuration](#configuration)
+6. [Changelog](#changelog)
+7. [Print API](#print-api)
+8. [Patches](#patches)
+
 ## Repositories
 
 This release consists of the following new versions of the `livingdocs-server` and `livingdocs-editor`:
@@ -140,125 +150,29 @@ Make sure to replicate the configuration you removed from the editor in the serv
   }
 ```
 
-## Highlighted Changes
+## Public API
 
 Component | Type | Description | PRs | Issues
 --- | --- | --- | --- | ---
-Server | Feature | Prometheus routes indexer metrics [Read more](#prometheus-routes-indexer-metrics) | [#1678](https://github.com/upfrontIO/livingdocs-server/pull/1678), [#1689](https://github.com/upfrontIO/livingdocs-server/pull/1689) | [#1570](https://github.com/upfrontIO/livingdocs-planning/issues/1570)
-Server | Feature | Add ServerApi method destroy() [Read more](#add-serverapi-method-destroy) | [#1690](https://github.com/upfrontIO/livingdocs-server/pull/1690) | -
-Server | Feature | Return menus with document IDs when routing is disabled | [#1674](https://github.com/upfrontIO/livingdocs-server/pull/1674) | [#1580](https://github.com/upfrontIO/livingdocs-planning/issues/1580)
 Server | Feature | Add publications resource to public API [Read more](add-publications-resource-to-public-api) | [#1664](https://github.com/upfrontIO/livingdocs-server/pull/1664) | [#1552](https://github.com/upfrontIO/livingdocs-planning/issues/1552)
 Server | Feature | Make channelHandle optional in Public API [Read more](#make-channelhandle-optional-in-public-api) | [#1688](https://github.com/upfrontIO/livingdocs-server/pull/1688) | [#1599](https://github.com/upfrontIO/livingdocs-planning/issues/1599)
-Server | Bugfix | Fix group duplicated entries in group table | [#1725](https://github.com/upfrontIO/livingdocs-server/pull/1725) | [#1626](https://github.com/upfrontIO/livingdocs-planning/issues/1626)
-Server | Bugfix | Handle repeated drag-and-drop imports properly [Read more](#handle-repeated-drag-and-drop-imports-properly) | [#1723](https://github.com/upfrontIO/livingdocs-server/pull/1723) | [#1613](https://github.com/upfrontIO/livingdocs-planning/issues/1613), [#1614](https://github.com/upfrontIO/livingdocs-planning/issues/1614)
-Server | Bugfix | Escape HTML entities for non-body fields [Read more](#escape-html-entities-for-non-body-fields) | [#1744](https://github.com/upfrontIO/livingdocs-server/pull/1744) | -
-Server | Bugfix | Get default Channel Id from Project config if neither handle nor id available [Read more](#get-default-channel-id-from-project-config-if-neither-handle-nor-id-available) | [#1749](https://github.com/upfrontIO/livingdocs-server/pull/1749) | [#1641](https://github.com/upfrontIO/livingdocs-planning/issues/1641)
-Editor | Feature | Handle the new Metadata Configuration Format in the editor | [#1718](https://github.com/upfrontIO/livingdocs-editor/pull/1718) | [#1583](https://github.com/upfrontIO/livingdocs-planning/issues/1583)
-Editor | Feature | Allow linking to an external site in the main menu | [#1732](https://github.com/upfrontIO/livingdocs-editor/pull/1732) | -
-Editor | Feature | Inline error messages for metadata screen [Read more](#inline-error-messages-for-metadata-screen) | [#1753](https://github.com/upfrontIO/livingdocs-editor/pull/1753) | [#1491](https://github.com/upfrontIO/livingdocs-planning/issues/1491)
-Editor | Feature | As an editor I want to set an anchor link | [#1704](https://github.com/upfrontIO/livingdocs-editor/pull/1704) | [#1472](https://github.com/upfrontIO/livingdocs-planning/issues/1472)
-Editor | Bugfix | Only show active groups in "Add Member" screen on project | [#c2b89c3](https://github.com/upfrontIO/livingdocs-editor/commit/c2b89c3) | -
-
-## Changes
-
-Component | Type | Description | PRs | Issues
---- | --- | --- | --- | ---
-Server | Bugfix | Don't unescape HTML entities on import | [#1742](https://github.com/upfrontIO/livingdocs-server/pull/1742) | -
-Server, Editor | Bugfix | Respect `^release-` instead of `^maintenance-` | [#1748](https://github.com/upfrontIO/livingdocs-server/pull/1748), [#1764](https://github.com/upfrontIO/livingdocs-editor/pull/1764) | -
-Editor | Bugfix | Avoid hiding of floated elements in Proofreading UI | [#1596](https://github.com/upfrontIO/livingdocs-editor/pull/1596) | -
-Server | Bugfix | The DocumentVersion passed to metadataApi.updateOnUpdate() has an old revision | [#1714](https://github.com/upfrontIO/livingdocs-server/pull/1714) | [#1617](https://github.com/upfrontIO/livingdocs-planning/issues/1617)
-Server | Bugfix | Escape all `&`s in text instead of just the first occurrence | [#1733](https://github.com/upfrontIO/livingdocs-server/pull/1733) | -
-Server | Bugfix | Properly parse `prometheusExporter__enabled` | [#1713](https://github.com/upfrontIO/livingdocs-server/pull/1713) | -
-Server, Editor | Feature | Add codeship integration test configuration for downstreams | [#1706](https://github.com/upfrontIO/livingdocs-server/pull/1706), [#1745](https://github.com/upfrontIO/livingdocs-editor/pull/1745) | -
-Server | Bugfix | Add fatal log level to the list of valid levels | [#1691](https://github.com/upfrontIO/livingdocs-server/pull/1691) | -
-Server | Bugfix | Escape ampersands from hugo sources | [#1677](https://github.com/upfrontIO/livingdocs-server/pull/1677) | [#1549](https://github.com/upfrontIO/livingdocs-planning/issues/1549)
-Server | Feature | Migrate render pipeline lib to js | [#1686](https://github.com/upfrontIO/livingdocs-server/pull/1686) | -
-Editor | Bugfix | Use headless chrome for tests | [#1711](https://github.com/upfrontIO/livingdocs-editor/pull/1711) | -
-Editor | Bugfix | Configuration for the maximum amount of selectable items in multi-select | [#1736](https://github.com/upfrontIO/livingdocs-editor/pull/1736) | -
-Editor | Bugfix | Hide Metadata on Publish Panel When There is no FormArrangement Config | [#1713](https://github.com/upfrontIO/livingdocs-editor/pull/1713) | -
-Editor | Bugfix | addTask method invocation | [#1725](https://github.com/upfrontIO/livingdocs-editor/pull/1725) | -
-
-## In detail
-
-### Inline error messages for metadata screen
-
-We've updated the documentation regarding the feature: https://docs.livingdocs.io/walkthroughs/metadata/metadata-examples.html and https://docs.livingdocs.io/reference-docs/editor-configuration/metadata.html.
-
-### Handle repeated drag-and-drop imports properly
-
-Whether a document is imported automatically (Bluewin) or via huGO drag and drop (NZZ), it makes use of the Import API. This API creates (or in the case of Bluewin sometimes updates) a document and then stores it. A log entry is written to the `imports` table which looks like the following:
-
-id | system_name | external_id | document_id | checksum | created_at | updated_at | project_id | channel_id | revision_id | version
--- | -- | -- | -- | -- | -- | -- | -- | -- | -- | --
-2 | hugo-resource | articleAgency-236480311 | 5 | 2017-11-24T17:02:00.000+01:00 | 2017-11-24 16:16:32.477+00 | 2017-11-24 16:35:43.606+00 | 1 | 1 | 5 | 3
-
-There's a unique-constraint on `external_id`. For Bluewin we need to make sure that each article is imported only once and in this case the log is append-only. 
-
-For NZZ it's different: A huGO article might be imported multiple times. In case of a repeated import the log entry is simply forgone. As a consequence the issue in the linked issues arrises: When re-importing an article, the first document that remains referenced in the log entry is returned to the editor (the re-imported document has been correctly created and is visible in the dashboard). The issue is fixed for NZZ as well.
-
-#### ImportAPI approach: `import()` creates new ImportLogs when `shouldCreateNew` is true
-
-When `shouldCreateNew` is set to true then the ImportAPI creates separate ImportLogs for each Import. This solves all issues described above.
-The `system_name` is set to null in the drag-and-drop case so the unique constraint on the database doesn't apply and duplicate recognition still works for the automatic importer in the Bluewin project where the `system_name` is always set.
-The unique constraint also has been enhanced to include `channel_id` in addition to `system_name` and `external_id`.
-
-### Make channelHandle optional in Public API 
-
-We'd like users of the _Public API_ to not need to handle channels since there's probably going to be one channel per project anyway. In this first step we're going to make the `channelHandle` optional, other than that, the API is going to behave as usual.
-
-#### API Token changes
-
-The API token now holds the default channel id as well. E.g. in the public API controller we now can do:
-
-``` js
-getChannel (req, res) {
-  const projectId = req.verifiedToken.projectId
-  const channelId = req.verifiedToken.channelId
-  // ...
-},
-```
-
-#### Public API changes
-
-* `/channels/:channelHandle?` -> `publicApi.getChannelConfig ({projectId, channelId, channelHandle}, callback)`
-* `/publicationEvents/:channelHandle?` -> _see PublicationEventsRepository below_
-* `/routing/:channelHandle?` -> `publicApi.getRoutesForChannel ({projectId, channelId, channelHandle, path}, callback)`
-* `/menus/:channelHandle?'` -> `publicMenuApi.getMenus: ({projectId, channelId, channelHandle, menuHandle}, callback)`
-
-`/resource/` and `/resource` are now valid routes - i.e. `/channels/` and `/channels`.
-
-#### PublicationEventsRepository
-`getByChannelId({projectId, channelId, limit, after, documentType}, callback)`
-
-This new function works analogous to `getByChannelHandle`. It returns a list of publication events. It takes `channelId` as a parameter instead of `channelHandle`.
-
-#### Configuration changes
-There are no changes in the configuration.
-
-#### Notes
-
-***# 1**
-The Public API controller now makes one additional call to fetch the project configuration in case the channelHandle is missing, We don't know about performance impacts yet, but this is certainly a point of interest. One way to mitigate the impact on performance is to assign the default `channelHandle` to the users' tokens.
-
-**# 2**
-The default channel id is now kept in the user's API token. This saves us one roundtrip to the database.
-
-### Enable `publications` endpoint
-
-The new endpoint gets a list of publications supported by the layout engine for display and selection in the editor. Previously the publication for a print article was hardcoded in the editor.
+Server | Bugfix | Get default Channel Id from Project config if neither handle nor id available | [#1749](https://github.com/upfrontIO/livingdocs-server/pull/1749) | [#1641](https://github.com/upfrontIO/livingdocs-planning/issues/1641)
+Server | Feature | Return menus with document IDs when routing is disabled | [#1674](https://github.com/upfrontIO/livingdocs-server/pull/1674) | [#1580](https://github.com/upfrontIO/livingdocs-planning/issues/1580)
+Server | Feature | Add ServerApi method destroy() [Read more](#add-serverapi-method-destroy) | [#1690](https://github.com/upfrontIO/livingdocs-server/pull/1690) | -
 
 ### Add publications resource to public API
 
 We are adding a new `/documents/latestPublications` endpoint in Public API.
 
-### Parameters
+#### Parameters
+
 | Parameter | Type | Required | Description |
 | ---------- | ----- | --------- | ------------ |
 | ?fields | `string` | No | Comma-separated list of fields that each publication should represent in the response. _Default_: `systemdata,metadata,content` |
 | ?limit | `int` | No | Maximum number of publications to be returned. _Default_: `100` |
 | ?after | `int` | No | Return publications after this publication id (used for pagination). |
 
-### Response
+#### Response
 
 A response with the default parameters has the following structure:
 
@@ -357,11 +271,12 @@ A single publication might look like this:
 
 The structure of a single publication is analogous to the response of the `/documents/:documentId/latestPublication` endpoint without renditions.
 
-### Channels
+#### Channels
 
 As opposed to other functions in the Public API, this one isn't aware of custom channels and always returns publications from the default channel.
 
-### Errors
+#### Errors
+
 | Error | Description |
 | ----- | ----------- |
 | 400 - Specified Limit exceeds maximum. | Specifying a limit of more than 100 will return a HTTP 400 error | 
@@ -384,6 +299,108 @@ process.on('SIGTERM', function (err) {
   })
 })
 ```
+
+### Make channelHandle optional in Public API 
+
+We'd like users of the _Public API_ to not need to handle channels since there's probably going to be one channel per project anyway. In this first step we're going to make the `channelHandle` optional, other than that, the API is going to behave as usual.
+
+#### API Token changes
+
+The API token now holds the default channel id as well. E.g. in the public API controller we now can do:
+
+``` js
+getChannel (req, res) {
+  const projectId = req.verifiedToken.projectId
+  const channelId = req.verifiedToken.channelId
+  // ...
+},
+```
+
+#### Public API changes
+
+* `/channels/:channelHandle?` -> `publicApi.getChannelConfig ({projectId, channelId, channelHandle}, callback)`
+* `/publicationEvents/:channelHandle?` -> _see PublicationEventsRepository below_
+* `/routing/:channelHandle?` -> `publicApi.getRoutesForChannel ({projectId, channelId, channelHandle, path}, callback)`
+* `/menus/:channelHandle?'` -> `publicMenuApi.getMenus: ({projectId, channelId, channelHandle, menuHandle}, callback)`
+
+`/resource/` and `/resource` are now valid routes - i.e. `/channels/` and `/channels`.
+
+#### PublicationEventsRepository
+`getByChannelId({projectId, channelId, limit, after, documentType}, callback)`
+
+This new function works analogous to `getByChannelHandle`. It returns a list of publication events. It takes `channelId` as a parameter instead of `channelHandle`.
+
+#### Configuration changes
+There are no changes in the configuration.
+
+#### Notes
+
+***# 1**
+The Public API controller now makes one additional call to fetch the project configuration in case the channelHandle is missing, We don't know about performance impacts yet, but this is certainly a point of interest. One way to mitigate the impact on performance is to assign the default `channelHandle` to the users' tokens.
+
+**# 2**
+The default channel id is now kept in the user's API token. This saves us one roundtrip to the database.
+
+## Highlighted Changes
+
+Component | Type | Description | PRs | Issues
+--- | --- | --- | --- | ---
+Server | Feature | Prometheus routes indexer metrics [Read more](#prometheus-routes-indexer-metrics) | [#1678](https://github.com/upfrontIO/livingdocs-server/pull/1678), [#1689](https://github.com/upfrontIO/livingdocs-server/pull/1689) | [#1570](https://github.com/upfrontIO/livingdocs-planning/issues/1570)
+Server | Bugfix | Fix group duplicated entries in group table | [#1725](https://github.com/upfrontIO/livingdocs-server/pull/1725) | [#1626](https://github.com/upfrontIO/livingdocs-planning/issues/1626)
+Server | Bugfix | Handle repeated drag-and-drop imports properly [Read more](#handle-repeated-drag-and-drop-imports-properly) | [#1723](https://github.com/upfrontIO/livingdocs-server/pull/1723) | [#1613](https://github.com/upfrontIO/livingdocs-planning/issues/1613), [#1614](https://github.com/upfrontIO/livingdocs-planning/issues/1614)
+Server | Bugfix | Escape HTML entities for non-body fields [Read more](#escape-html-entities-for-non-body-fields) | [#1744](https://github.com/upfrontIO/livingdocs-server/pull/1744) | -
+Editor | Feature | Handle the new Metadata Configuration Format in the editor | [#1718](https://github.com/upfrontIO/livingdocs-editor/pull/1718) | [#1583](https://github.com/upfrontIO/livingdocs-planning/issues/1583)
+Editor | Feature | Allow linking to an external site in the main menu | [#1732](https://github.com/upfrontIO/livingdocs-editor/pull/1732) | -
+Editor | Feature | Inline error messages for metadata screen [Read more](#inline-error-messages-for-metadata-screen) | [#1753](https://github.com/upfrontIO/livingdocs-editor/pull/1753) | [#1491](https://github.com/upfrontIO/livingdocs-planning/issues/1491)
+Editor | Feature | As an editor I want to set an anchor link | [#1704](https://github.com/upfrontIO/livingdocs-editor/pull/1704) | [#1472](https://github.com/upfrontIO/livingdocs-planning/issues/1472)
+Editor | Bugfix | Only show active groups in "Add Member" screen on project | [#c2b89c3](https://github.com/upfrontIO/livingdocs-editor/commit/c2b89c3) | -
+
+## Changes
+
+Component | Type | Description | PRs | Issues
+--- | --- | --- | --- | ---
+Server | Bugfix | Don't unescape HTML entities on import | [#1742](https://github.com/upfrontIO/livingdocs-server/pull/1742) | -
+Server, Editor | Bugfix | Respect `^release-` instead of `^maintenance-` | [#1748](https://github.com/upfrontIO/livingdocs-server/pull/1748), [#1764](https://github.com/upfrontIO/livingdocs-editor/pull/1764) | -
+Editor | Bugfix | Avoid hiding of floated elements in Proofreading UI | [#1596](https://github.com/upfrontIO/livingdocs-editor/pull/1596) | -
+Server | Bugfix | The DocumentVersion passed to metadataApi.updateOnUpdate() has an old revision | [#1714](https://github.com/upfrontIO/livingdocs-server/pull/1714) | [#1617](https://github.com/upfrontIO/livingdocs-planning/issues/1617)
+Server | Bugfix | Escape all `&`s in text instead of just the first occurrence | [#1733](https://github.com/upfrontIO/livingdocs-server/pull/1733) | -
+Server | Bugfix | Properly parse `prometheusExporter__enabled` | [#1713](https://github.com/upfrontIO/livingdocs-server/pull/1713) | -
+Server, Editor | Feature | Add codeship integration test configuration for downstreams | [#1706](https://github.com/upfrontIO/livingdocs-server/pull/1706), [#1745](https://github.com/upfrontIO/livingdocs-editor/pull/1745) | -
+Server | Bugfix | Add fatal log level to the list of valid levels | [#1691](https://github.com/upfrontIO/livingdocs-server/pull/1691) | -
+Server | Bugfix | Escape ampersands from hugo sources | [#1677](https://github.com/upfrontIO/livingdocs-server/pull/1677) | [#1549](https://github.com/upfrontIO/livingdocs-planning/issues/1549)
+Server | Feature | Migrate render pipeline lib to js | [#1686](https://github.com/upfrontIO/livingdocs-server/pull/1686) | -
+Editor | Bugfix | Use headless chrome for tests | [#1711](https://github.com/upfrontIO/livingdocs-editor/pull/1711) | -
+Editor | Bugfix | Configuration for the maximum amount of selectable items in multi-select | [#1736](https://github.com/upfrontIO/livingdocs-editor/pull/1736) | -
+Editor | Bugfix | Hide Metadata on Publish Panel When There is no FormArrangement Config | [#1713](https://github.com/upfrontIO/livingdocs-editor/pull/1713) | -
+Editor | Bugfix | addTask method invocation | [#1725](https://github.com/upfrontIO/livingdocs-editor/pull/1725) | -
+
+## In detail
+
+### Inline error messages for metadata screen
+
+We've updated the documentation regarding the feature: https://docs.livingdocs.io/walkthroughs/metadata/metadata-examples.html and https://docs.livingdocs.io/reference-docs/editor-configuration/metadata.html.
+
+### Handle repeated drag-and-drop imports properly
+
+Whether a document is imported automatically (Bluewin) or via huGO drag and drop (NZZ), it makes use of the Import API. This API creates (or in the case of Bluewin sometimes updates) a document and then stores it. A log entry is written to the `imports` table which looks like the following:
+
+id | system_name | external_id | document_id | checksum | created_at | updated_at | project_id | channel_id | revision_id | version
+-- | -- | -- | -- | -- | -- | -- | -- | -- | -- | --
+2 | hugo-resource | articleAgency-236480311 | 5 | 2017-11-24T17:02:00.000+01:00 | 2017-11-24 16:16:32.477+00 | 2017-11-24 16:35:43.606+00 | 1 | 1 | 5 | 3
+
+There's a unique-constraint on `external_id`. For Bluewin we need to make sure that each article is imported only once and in this case the log is append-only. 
+
+For NZZ it's different: A huGO article might be imported multiple times. In case of a repeated import the log entry is simply forgone. As a consequence the issue in the linked issues arrises: When re-importing an article, the first document that remains referenced in the log entry is returned to the editor (the re-imported document has been correctly created and is visible in the dashboard). The issue is fixed for NZZ as well.
+
+#### ImportAPI approach: `import()` creates new ImportLogs when `shouldCreateNew` is true
+
+When `shouldCreateNew` is set to true then the ImportAPI creates separate ImportLogs for each Import. This solves all issues described above.
+The `system_name` is set to null in the drag-and-drop case so the unique constraint on the database doesn't apply and duplicate recognition still works for the automatic importer in the Bluewin project where the `system_name` is always set.
+The unique constraint also has been enhanced to include `channel_id` in addition to `system_name` and `external_id`.
+
+### Enable `publications` endpoint
+
+The new endpoint gets a list of publications supported by the layout engine for display and selection in the editor. Previously the publication for a print article was hardcoded in the editor.
 
 ### Prometheus routes indexer metrics
 
