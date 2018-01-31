@@ -41,7 +41,7 @@ How to require the editor in your package.json:
 
 ## Content Types - Server :fire: :gift:
 
-*Breaking Change* The channel configurations now is based on contentTypes.
+**Breaking Change** The channel configurations now is based on contentTypes.
 
 ### Required Actions
 
@@ -80,6 +80,7 @@ projects: {
       copy: [{
         source: {
           channelHandle: 'web',
+          // If a design contains a layout gallery the content type is 'gallery'
           contentType: 'gallery'
         },
         targets: [{
@@ -113,19 +114,25 @@ module.exports = {
 }
 ```
 
-New copy configuration with contentTypes instead of layouts (in `projects: channelConfigurations: []`):
+New copy configuration with contentTypes instead of layouts:
 ```js
-copy: [{
-  source: {
-    channelHandle: 'web',
-    contentType: 'regular'
-  },
-  targets: [
-    channelHandle: 'print',
-    contentType: 'regular'
-    // ...other properties remain the same
+projects:
+  channelConfigurations [
+    copy: [{
+      source: {
+        // 'channelHandle' instead of 'design'
+        channelHandle: 'web',
+        // 'contentType' instead of 'layout'
+        contentType: 'regular'
+      },
+      // 'targets' instead of 'target'
+      targets: [
+        channelHandle: 'print',
+        contentType: 'regular'
+        // ...other properties remain the same
+      ]
+    }]  
   ]
-}]
 ```
 
 
@@ -134,13 +141,13 @@ copy: [{
 #### GET public-api/v1/project
 
 Changed return value with the contentType in the response
--> See the pulic api docs for details
+-> See the public api docs for details
 
 #### GET public-api/v1/channels/:channelHandle
 
 Modified return value. This is exactly the same as one channel in the project response.
 (there is also a schema: `LivingdocsPublicChannel`)
--> See the pulic api docs for details
+-> See the public api docs for details
 
 #### GET public-api/v1/documents/... (is it public api)
 
@@ -229,10 +236,12 @@ New return value:
 }
 ```
 
-Removed: channels[0].config
-channel.config.articles.copy_source_channels
-channel.config.articles.available_versions
-channel.config.articles.disabled_versions
+Removed:
+
+* channels[0].config
+  * channel.config.articles.copy_source_channels
+  * channel.config.articles.available_versions
+  * channel.config.articles.disabled_versions
 
 Previous value for `copy_source_channels`:
 ```js
@@ -283,7 +292,7 @@ import({importJob, rawDocument, shouldCreateNew, updateCondition, userId}, callb
 
 ## Content Types - Editor :fire:
 
-**Breaking Change** The editor depends on the latest server. Make sure all users referesh their session after the new editor is deployed.
+**Breaking Change** The editor depends on the server >= 66.x.y. Make sure all users refresh their session after the new editor is deployed.
 
 The editor consumes contentTypes from the server through the channel configuration.
 The create new document Dialog shows the information from the contentType configuration.
@@ -341,8 +350,8 @@ For details see the detailed changelog in the [PR #1787](https://github.com/upfr
 
 ## Removed `designLoader` module in the editor :fire: :wrench:
 
-*Breaking Change*
-The module `designLoader` was removed. Use `desginProxy` instead. It offers the same api.
+**Breaking Change**
+The module `designLoader` was removed. Use `designProxy` instead. It offers the same api.
 
 [Editor PR #1803](https://github.com/upfrontIO/livingdocs-editor/pull/1803)
 
