@@ -353,6 +353,12 @@ For details see the detailed changelog in the [PR #1787](https://github.com/upfr
 **Breaking Change**
 The module `designLoader` was removed. Use `designProxy` instead. It offers the same api.
 
+From now on the editor always requests the design from the
+Livingdocs Server it points to. The design is proxied through the server
+in case the server is configured with a different design server.
+This solves a few inconsistencies as previously it was possible to
+load a different design than the one that was cached on the server.
+
 [Editor PR #1803](https://github.com/upfrontIO/livingdocs-editor/pull/1803)
 
 
