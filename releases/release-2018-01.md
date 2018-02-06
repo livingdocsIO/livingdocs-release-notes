@@ -5,8 +5,8 @@ This release consists of the following new versions of the `livingdocs-server` a
 
 Package | Version
 --- | ---
-`@livingdocs/server` | `66.0.x`
-`@livingdocs/editor` | `27.0.x`
+`@livingdocs/server` | `66.0.3`
+`@livingdocs/editor` | `27.0.5`
 
 ### Livingdocs Server
 
@@ -14,7 +14,7 @@ How to require the server in your package.json:
 
 ```json
 "dependencies": {
-  "@livingdocs/server": "66.0.x",
+  "@livingdocs/server": "66.0.3",
 }
 ```
 
@@ -28,7 +28,7 @@ How to require the editor in your package.json:
 
 ```json
 "dependencies": {
-  "@livingdocs/editor": "27.0.x",
+  "@livingdocs/editor": "27.0.5",
 }
 ```
 
@@ -149,10 +149,10 @@ Modified return value. This is exactly the same as one channel in the project re
 (there is also a schema: `LivingdocsPublicChannel`)
 -> See the public api docs for details
 
-#### GET public-api/v1/documents/... (is it public api)
+#### GET public-api/v1/documents/...
 
 `content_type` is now included in the response
--> See the pulic api docs for details
+-> See the public api docs for details
 
 
 ### Editing Api
@@ -386,12 +386,10 @@ In the server the `documentListApi` returns the inbox size of every list.
 
 ## Fix the behaviour of read-only mode during collaboration :beetle:
 
-*Needs Clarification*
-
 [Editor PR #1791](https://github.com/upfrontIO/livingdocs-editor/pull/1791)
 
 
-# Further Changes
+# Other Changes
 
 * Editor
   * add visibility config switch for the "transform component" in the side panel [#1793](https://github.com/upfrontIO/livingdocs-editor/pull/1793) :wrench:
