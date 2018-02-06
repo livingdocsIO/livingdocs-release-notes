@@ -292,7 +292,7 @@ import({importJob, rawDocument, shouldCreateNew, updateCondition, userId}, callb
 
 ## Content Types - Editor :fire:
 
-**Breaking Change** The editor depends on the server >= 66.x.y. Make sure all users refresh their session after the new editor is deployed.
+**Breaking Change** The editor depends on the server >= 66.0.0 Make sure all users refresh their session after the new editor is deployed.
 
 The editor consumes contentTypes from the server through the channel configuration.
 The create new document Dialog shows the information from the contentType configuration.
@@ -324,7 +324,19 @@ Mark on the revision (list) if a revision was created because a user published t
 
 The /revisions endpoint previously didn't require passing a `document_id`. This is now mandatory since the endpoint makes no sense without a `document_id`.
 
+### History UI
+
+The new document history aims at making the history faster and easier to navigate.
+
+We introduce a small section at the top that shows who has edited a document and a small activity section with a line graph of number of revisions over days and total revisions due to publish and edit changes.
+
+The main section of the history is still segmented by day. In addition each day is then also segmented by user, so if a user made many changes in a day (a common use case) you first see that this user made x changes in time a to b and then can open the entries section to drill deeper.
+
+We also introduced the restore functionality. You can now restore any old revision. The exception is revisions with an outdated design. Those can still be seen but due to the possibility of conflicts in the design versions, can not be restored.
+
 [Server PR #1762](https://github.com/upfrontIO/livingdocs-server/pull/1762)
+
+[Editor PR #1174](https://github.com/upfrontIO/livingdocs-editor/pull/1774)
 
 
 ## Extended design loader configurations :gift: :fire:
