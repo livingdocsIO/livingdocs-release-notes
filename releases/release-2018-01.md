@@ -399,8 +399,6 @@ In the server the `documentListApi` returns the inbox size of every list.
   * set publicationDates period to 30d [#1778](https://github.com/upfrontIO/livingdocs-editor/pull/1778) :wrench:
 * Redis
   * use ioredis instead of node-redis [#1773](https://github.com/upfrontIO/livingdocs-server/pull/1773) :wrench:
-* Design loader
-  * Fix assets.public_url camelization in design-loader [#1788](https://github.com/upfrontIO/livingdocs-server/pull/1788) :wrench:
 * Tests
   * Get headless chromium properly to work [#1784](https://github.com/upfrontIO/livingdocs-editor/pull/1784) :beetle:
 
