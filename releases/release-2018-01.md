@@ -45,12 +45,12 @@ How to require the editor in your package.json:
 
 ### Required Actions
 
-* Db Migration Needed: Make sure all entries in the `documents`table in postgres have a `contentType` set (see migration)
+* Postgres data migration needed: Make sure all entries in the `documents`table in postgres have a `contentType` set ([see migration](#postgres-data-migration))
 * Elasticsearch Mappings need to be updated.
 * Migrate channel configuration to the new format
 
 
-### Postgres migration
+### Postgres Data Migration
 
 For all existing documents a manual migration will have to be run before the server can be upgraded safely. We created a manual migration as this is a long running operation for databases with many documents. The migration can be found in the server in `db/manual-migrations/002-write-content-type.js`.
 
