@@ -52,7 +52,15 @@ How to require the editor in your package.json:
 
 ### Postgres Data Migration
 
-For all existing documents a manual migration will have to be run before the server can be upgraded safely. We created a manual migration as this is a long running operation for databases with many documents. The migration can be found in the server in `db/manual-migrations/002-write-content-type.js`.
+The content types feature depends on the introduced db field `documents.content_type`.
+
+Before you can deploy the January release, you have to run a manual database migration, which pre-fills the `documents.content_type`. We created a manual migration as this is a long running operation for databases with many documents.
+
+If you have installed the `October Release 2017` or `December Release 2017`, you can execute the manual migration with
+
+```bash
+`NODE_ENV=<env> ENVIRONMENT=<env> node node_modules/@livingdocs/server/db/manual-migrations/002-write-content-type.js`
+```
 
 
 ### Updated elasticsearch mapping
@@ -65,6 +73,8 @@ grunt search-index:document:update-mapping
 ```
 
 ### Server Configuration
+
+**Channel Configuration**
 
 Example Channel Configuration in the new format:
 ```js
@@ -101,7 +111,9 @@ projects: {
   },
 ```
 
-Rendition config (the format is exactly the same as before, it just must be in a different file as it contains code and is not really a configuration):
+**Rendition Configuration**
+
+The format is exactly the same as before, it just must be in a different file as it contains code and is not really a configuration:
 ```js
 const CheerioHtml = require('../../../lib/render-pipeline/output/cheerio_html')
 
@@ -114,7 +126,9 @@ module.exports = {
 }
 ```
 
-New copy configuration with contentTypes instead of layouts:
+**Copy Configuration**
+
+An example of the new copy configuration with contentTypes instead of layouts:
 ```js
 projects:
   channelConfigurations [
@@ -140,19 +154,19 @@ projects:
 
 #### GET public-api/v1/project
 
-Changed return value with the contentType in the response
--> See the public api docs for details
+Changed return value with the contentTypes (array of contentType which contains configuration e.g. metadata) in the response
+-> See the public api docs for details ( `<livingdocs-host>/public-api.html#/public-api.html`)
 
 #### GET public-api/v1/channels/:channelHandle
 
 Modified return value. This is exactly the same as one channel in the project response.
 (there is also a schema: `LivingdocsPublicChannel`)
--> See the public api docs for details
+-> See the public api docs for details ( `<livingdocs-host>/public-api.html#/public-api.html`)
 
 #### GET public-api/v1/documents/...
 
 `content_type` is now included in the response
--> See the public api docs for details
+-> See the public api docs for details ( `<livingdocs-host>/public-api.html#/public-api.html`)
 
 
 ### Editing Api
@@ -170,18 +184,18 @@ New channel configuration is included in the response
 
 ### Feature Apis
 
-#### documentApi.create()
+#### documentApi.create
 
 `content_type` is required. It will be verified, that the `content_type` exists.
 `revision.data.layout = content_type`
 `document_type` is set as before. It uses the `document_type` defined in the specified `content_type` config.
 
-#### documentCopyApi.copy()
+#### documentCopyApi.copy
 -> requires contentType param instead of layout
 
-#### documentCopyApi.getCopyTargets()
+#### documentCopyApi.getCopyTargets
 
-New Response:
+New return value:
 ```js
 [{
   channelHandle: 'web'
@@ -199,17 +213,17 @@ New Response:
 
 Changes in `features.api('li-projects').channel`:
 
-- Changed: channelApi.getRenderConfigForRenderWorker()
+- Changed: channelApi.getRenderConfigForRenderWorker
   -> new required param `contentType`
-- Removed: channelApi.getChannelsWithLayoutsByProject()
-- Removed: channelApi.getDocumentTypeConfig()
-- Removed: channelApi.getPageConfig()
-- Removed: channelApi.getArticleConfig()
-- Removed: channelApi.getChannelConfigByChannelName()
+- Removed: channelApi.getChannelsWithLayoutsByProject
+- Removed: channelApi.getDocumentTypeConfig
+- Removed: channelApi.getPageConfig
+- Removed: channelApi.getArticleConfig
+- Removed: channelApi.getChannelConfigByChannelName
 
 #### projectApi
 
-- projectsApi.getProject()
+- projectsApi.getProject
 
 New return value:
 ```js
@@ -281,11 +295,16 @@ copy_cource_channels = [
   }, done)
 ```
 
-#### importApi.import()
+#### importApi.import
 
-import({importJob, rawDocument, shouldCreateNew, updateCondition, userId}, callback)
-- pass `importJob.contentType` instead of `importJob.documentType`
-  the passed layout will be ignored (should we implement that backwards compatible?)
+```
+// pass `importJob.contentType` instead of `importJob.documentType` the passed layout
+// will be ignored (should we implement that backwards compatible?)
+
+import({
+  importJob, rawDocument, shouldCreateNew, updateCondition, userId
+}, callback)
+```
 
 [Server PR #1696](https://github.com/upfrontIO/livingdocs-server/pull/1696)
 
@@ -358,7 +377,7 @@ designLoader: {
 }
 ```
 
-For details see the detailed changelog in the [PR #1787](https://github.com/upfrontIO/livingdocs-server/pull/1787)
+For details see the detailed changelog in the [Server PR #1787](https://github.com/upfrontIO/livingdocs-server/pull/1787)
 
 ## Removed `designLoader` module in the editor :fire: :wrench:
 
