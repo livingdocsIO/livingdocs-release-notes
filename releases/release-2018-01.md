@@ -411,13 +411,14 @@ In the server the `documentListApi` returns the inbox size of every list.
 # Other Changes
 
 * Editor
-  * add visibility config switch for the "transform component" in the side panel [#1793](https://github.com/upfrontIO/livingdocs-editor/pull/1793) :wrench:
-  * disable copy button on saving [#1795](https://github.com/upfrontIO/livingdocs-editor/pull/1795) :beetle:
-  * keep image focus after cropping [#1769](https://github.com/upfrontIO/livingdocs-editor/pull/1769) :beetle:
+  * Add visibility config switch for the "transform component" in the side panel
+    [#1793](https://github.com/upfrontIO/livingdocs-editor/pull/1793) :wrench:
   * Show component name when no transformations are available
     [#1864](https://github.com/upfrontIO/livingdocs-editor/pull/1864) :beetle:
+  * Disable copy button on saving [#1795](https://github.com/upfrontIO/livingdocs-editor/pull/1795) :beetle:
+  * Keep image focus after cropping [#1769](https://github.com/upfrontIO/livingdocs-editor/pull/1769) :beetle:
   * Specify homepage in project settings
-  [#1767](https://github.com/upfrontIO/livingdocs-editor/pull/1767) [#1751](https://github.com/upfrontIO/livingdocs-server/pull/1751) :gift:
+    [#1767](https://github.com/upfrontIO/livingdocs-editor/pull/1767) [#1751](https://github.com/upfrontIO/livingdocs-server/pull/1751) :gift:
   * Show user profile in a separate page instead of a modal
     [#1843](https://github.com/upfrontIO/livingdocs-editor/pull/1843) :wrench:
   * Reduce image flashing when uploading an image
@@ -438,20 +439,28 @@ In the server the `documentListApi` returns the inbox size of every list.
     [#1858](https://github.com/upfrontIO/livingdocs-editor/pull/1858)
 
 * Elasticsearch
-  * make elasticsearch apiVersion configurable [#1754](https://github.com/upfrontIO/livingdocs-server/pull/1754) :gift:
-  * replace top-level filter parameter with post_filter [#1726](https://github.com/upfrontIO/livingdocs-server/pull/1726) :wrench:
+  * make elasticsearch apiVersion configurable
+    [#1754](https://github.com/upfrontIO/livingdocs-server/pull/1754) :gift:
+  * replace top-level filter parameter with post_filter
+    [#1726](https://github.com/upfrontIO/livingdocs-server/pull/1726) :wrench:
 * Hooks
-  * handle resolveHandle errors [#1766](https://github.com/upfrontIO/livingdocs-server/pull/1766) :beetle:
-  * publication hooks registration ignores missing projects/channels [#1771](https://github.com/upfrontIO/livingdocs-server/pull/1771) :gift:
+  * handle resolveHandle errors
+    [#1766](https://github.com/upfrontIO/livingdocs-server/pull/1766) :beetle:
+  * publication hooks registration ignores missing projects/channels
+    [#1771](https://github.com/upfrontIO/livingdocs-server/pull/1771) :gift:
 * Print
-  * advanced woodwing infobox [#1710](https://github.com/upfrontIO/livingdocs-server/pull/1710) :gift:
-  * send `<br>` to printAPI [#1746](https://github.com/upfrontIO/livingdocs-server/pull/1746) :wrench:
-  * set publicationDates period to 30d [#1778](https://github.com/upfrontIO/livingdocs-editor/pull/1778) :wrench:
+  * advanced woodwing infobox
+    [#1710](https://github.com/upfrontIO/livingdocs-server/pull/1710) :gift:
+  * send `<br>` to printAPI
+    [#1746](https://github.com/upfrontIO/livingdocs-server/pull/1746) :wrench:
+  * set publicationDates period to 30d
+    [#1778](https://github.com/upfrontIO/livingdocs-editor/pull/1778) :wrench:
 * Redis
-  * use ioredis instead of node-redis [#1773](https://github.com/upfrontIO/livingdocs-server/pull/1773) :wrench:
+  * use ioredis instead of node-redis
+    [#1773](https://github.com/upfrontIO/livingdocs-server/pull/1773) :wrench:
 * Tests
-  * Get headless chromium properly to work [#1784](https://github.com/upfrontIO/livingdocs-editor/pull/1784) :beetle:
-
+  * Get headless chromium properly to work
+    [#1784](https://github.com/upfrontIO/livingdocs-editor/pull/1784) :beetle:
 * Server
   * Silently skip indexing for publications that have no path
     [#1824](https://github.com/upfrontIO/livingdocs-server/pull/1824) :beetle:
