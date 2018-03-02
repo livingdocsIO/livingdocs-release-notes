@@ -5,8 +5,8 @@ This release consists of the following new versions of the `livingdocs-server` a
 
 Package | Version
 --- | ---
-`@livingdocs/server` | `66.0.5`
-`@livingdocs/editor` | `27.0.5`
+`@livingdocs/server` | `66.0.10`
+`@livingdocs/editor` | `27.0.15`
 
 ### Livingdocs Server
 
@@ -14,7 +14,7 @@ How to require the server in your package.json:
 
 ```json
 "dependencies": {
-  "@livingdocs/server": "66.0.5",
+  "@livingdocs/server": "66.0.10",
 }
 ```
 
@@ -28,7 +28,7 @@ How to require the editor in your package.json:
 
 ```json
 "dependencies": {
-  "@livingdocs/editor": "27.0.5",
+  "@livingdocs/editor": "27.0.15",
 }
 ```
 
@@ -414,8 +414,29 @@ In the server the `documentListApi` returns the inbox size of every list.
   * add visibility config switch for the "transform component" in the side panel [#1793](https://github.com/upfrontIO/livingdocs-editor/pull/1793) :wrench:
   * disable copy button on saving [#1795](https://github.com/upfrontIO/livingdocs-editor/pull/1795) :beetle:
   * keep image focus after cropping [#1769](https://github.com/upfrontIO/livingdocs-editor/pull/1769) :beetle:
+  * Show component name when no transformations are available
+    [#1864](https://github.com/upfrontIO/livingdocs-editor/pull/1864) :beetle:
   * Specify homepage in project settings
   [#1767](https://github.com/upfrontIO/livingdocs-editor/pull/1767) [#1751](https://github.com/upfrontIO/livingdocs-server/pull/1751) :gift:
+  * Show user profile in a separate page instead of a modal
+    [#1843](https://github.com/upfrontIO/livingdocs-editor/pull/1843) :wrench:
+  * Reduce image flashing when uploading an image
+    [#1829](https://github.com/upfrontIO/livingdocs-editor/pull/1829) :beetle:
+  * Provide a better login error message when the server is offline
+    [#1831](https://github.com/upfrontIO/livingdocs-editor/pull/1831) :beetle:
+  * Improve Positioning of the proofreading box for different designs
+    [#1820](https://github.com/upfrontIO/livingdocs-editor/pull/1820) :beetle:
+  * Hide toolbar when editing teaser image
+    [#1841](https://github.com/upfrontIO/livingdocs-editor/pull/1841) :beetle:
+  * Fix: anchor links are persisted
+    [#1845](https://github.com/upfrontIO/livingdocs-editor/pull/1845) :beetle:
+  * Fix: show unpublished inboxed docs in list screen
+    [#1848](https://github.com/upfrontIO/livingdocs-editor/pull/1848)
+  * Fix: missing list assignment in publish screen
+    [#1850](https://github.com/upfrontIO/livingdocs-editor/pull/1850)
+  * Fix: Drag and Drop in inbox list
+    [#1858](https://github.com/upfrontIO/livingdocs-editor/pull/1858)
+
 * Elasticsearch
   * make elasticsearch apiVersion configurable [#1754](https://github.com/upfrontIO/livingdocs-server/pull/1754) :gift:
   * replace top-level filter parameter with post_filter [#1726](https://github.com/upfrontIO/livingdocs-server/pull/1726) :wrench:
@@ -431,6 +452,13 @@ In the server the `documentListApi` returns the inbox size of every list.
 * Tests
   * Get headless chromium properly to work [#1784](https://github.com/upfrontIO/livingdocs-editor/pull/1784) :beetle:
 
+* Server
+  * Silently skip indexing for publications that have no path
+    [#1824](https://github.com/upfrontIO/livingdocs-server/pull/1824) :beetle:
+  * Validate image service config
+    [#1820](https://github.com/upfrontIO/livingdocs-server/pull/1820) :wrench:
+  * Deprecate 'resrc.it' image service
+    [#1820](https://github.com/upfrontIO/livingdocs-server/pull/1820) :wrench:
 ---
 
   **Icon Legend**
