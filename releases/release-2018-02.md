@@ -5,8 +5,8 @@ This release consists of the following new versions of the `livingdocs-server` a
 
 Package | Version
 --- | ---
-`@livingdocs/server` | `x.x.x`
-`@livingdocs/editor` | `x.x.x`
+`@livingdocs/server` | `66.3.0`
+`@livingdocs/editor` | `27.4.4`
 
 ### Livingdocs Server
 
@@ -36,6 +36,32 @@ How to require the editor in your package.json:
   https://github.com/upfrontIO/livingdocs-editor/tree/release-2018-02
 
 
+# Highlights
+
+## Routing
+
+The routing now supports contentType specific routing configuration. The
+configuration also offers more options and possibilities.
+
+Example contentType configuration:
+```js
+routing: {
+  enabled: true,
+  pathPatterns: {
+    // type 'article' needs to have an `:id` in the pathTemplate
+    type: 'article',
+    // used to build and parse paths
+    current: '/:YYYY/:MM/:DD/:slug--:id',
+    // previously used path patterns, used to parse paths if current` failed
+    legacy: '/article/:slug--:id'
+  }
+}
+```
+
+For details see:
+https://github.com/upfrontIO/livingdocs-server/pull/1673
+
+
 # Other Changes
 
 * Editor
@@ -53,6 +79,9 @@ How to require the editor in your package.json:
     [#1822](https://github.com/upfrontIO/livingdocs-editor/pull/1822) :wrench:
   * Disable version check locally
     [#1838](https://github.com/upfrontIO/livingdocs-editor/pull/1838) :wrench:
+  * Validate editor imageService config
+    [#1884](https://github.com/upfrontIO/livingdocs-editor/pull/1884) :wrench:
+
 
 * Server
   * Various bugfixes for server shutdown
@@ -61,6 +90,8 @@ How to require the editor in your package.json:
     [#1810](https://github.com/upfrontIO/livingdocs-server/pull/1810) :wrench:
   * Add a feature for running tasks
     [#1622](https://github.com/upfrontIO/livingdocs-server/pull/1622) :wrench:
+  * Provide a better error message when sending a mail fails
+    [#1803](https://github.com/upfrontIO/livingdocs-server/pull/1803) :wrench:
 
 
 ---
