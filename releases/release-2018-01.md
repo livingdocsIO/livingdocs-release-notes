@@ -437,7 +437,8 @@ In the server the `documentListApi` returns the inbox size of every list.
     [#1850](https://github.com/upfrontIO/livingdocs-editor/pull/1850)
   * Fix: Drag and Drop in inbox list
     [#1858](https://github.com/upfrontIO/livingdocs-editor/pull/1858)
-
+  * Bugfix: Show only a component transformation if there are valid transformations
+    [#1885](https://github.com/upfrontIO/livingdocs-editor/pull/1885) :beetle:
 * Elasticsearch
   * make elasticsearch apiVersion configurable
     [#1754](https://github.com/upfrontIO/livingdocs-server/pull/1754) :gift:
@@ -468,6 +469,9 @@ In the server the `documentListApi` returns the inbox size of every list.
     [#1820](https://github.com/upfrontIO/livingdocs-server/pull/1820) :wrench:
   * Deprecate 'resrc.it' image service
     [#1820](https://github.com/upfrontIO/livingdocs-server/pull/1820) :wrench:
+  * Expose origin array to the editor
+    [#1813](https://github.com/upfrontIO/livingdocs-server/pull/1813) :wrench:  
+    
 ---
 
   **Icon Legend**
