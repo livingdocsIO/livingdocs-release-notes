@@ -45,7 +45,7 @@ How to require the editor in your package.json:
 
 ### Required Actions
 
-* Postgres data migration needed: Make sure all entries in the `documents`table in postgres have a `contentType` set ([see migration](#postgres-data-migration))
+* Postgres data migration needed: Make sure all entries in the `documents`table in postgres have a `content_type` set ([see migration](#postgres-data-migration))
 * Elasticsearch Mappings need to be updated.
 * Migrate channel configuration to the new format
 
@@ -70,6 +70,7 @@ The `contentType` was added to the `documents` index.
 To update the mapping run:
 ```bash
 grunt search-index:document:update-mapping
+grunt search-index:document
 ```
 
 ### Server Configuration
