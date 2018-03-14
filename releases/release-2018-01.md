@@ -5,8 +5,8 @@ This release consists of the following new versions of the `livingdocs-server` a
 
 Package | Version
 --- | ---
-`@livingdocs/server` | `66.0.10`
-`@livingdocs/editor` | `27.0.15`
+`@livingdocs/server` | `66.0.15`
+`@livingdocs/editor` | `27.0.22`
 
 ### Livingdocs Server
 
@@ -14,7 +14,7 @@ How to require the server in your package.json:
 
 ```json
 "dependencies": {
-  "@livingdocs/server": "66.0.10",
+  "@livingdocs/server": "66.0.15",
 }
 ```
 
@@ -28,7 +28,7 @@ How to require the editor in your package.json:
 
 ```json
 "dependencies": {
-  "@livingdocs/editor": "27.0.15",
+  "@livingdocs/editor": "27.0.22",
 }
 ```
 
@@ -426,7 +426,7 @@ In the server the `documentListApi` returns the inbox size of every list.
     [#1829](https://github.com/upfrontIO/livingdocs-editor/pull/1829) :beetle:
   * Provide a better login error message when the server is offline
     [#1831](https://github.com/upfrontIO/livingdocs-editor/pull/1831) :beetle:
-  * Improve Positioning of the proofreading box for different designs
+  * Improve positioning of the proofreading box for different designs
     [#1820](https://github.com/upfrontIO/livingdocs-editor/pull/1820) :beetle:
   * Hide toolbar when editing teaser image
     [#1841](https://github.com/upfrontIO/livingdocs-editor/pull/1841) :beetle:
@@ -440,6 +440,8 @@ In the server the `documentListApi` returns the inbox size of every list.
     [#1858](https://github.com/upfrontIO/livingdocs-editor/pull/1858)
   * Bugfix: Show only a component transformation if there are valid transformations
     [#1885](https://github.com/upfrontIO/livingdocs-editor/pull/1885) :beetle:
+  * Consider `canReset: true` for a li-meta-slug-form :beetle: https://github.com/upfrontIO/livingdocs-editor/pull/1914
+  * Guard for undefined user in revision history :beetle: https://github.com/upfrontIO/livingdocs-editor/pull/1907
 * Elasticsearch
   * make elasticsearch apiVersion configurable
     [#1754](https://github.com/upfrontIO/livingdocs-server/pull/1754) :gift:
@@ -457,6 +459,9 @@ In the server the `documentListApi` returns the inbox size of every list.
     [#1746](https://github.com/upfrontIO/livingdocs-server/pull/1746) :wrench:
   * set publicationDates period to 30d
     [#1778](https://github.com/upfrontIO/livingdocs-editor/pull/1778) :wrench:
+  * Fixes print layout select for new release :beetle: https://github.com/upfrontIO/livingdocs-editor/pull/1910
+  * Fix print dialogs after refresh :beetle: https://github.com/upfrontIO/livingdocs-editor/pull/1901
+  
 * Redis
   * use ioredis instead of node-redis
     [#1773](https://github.com/upfrontIO/livingdocs-server/pull/1773) :wrench:
@@ -471,7 +476,10 @@ In the server the `documentListApi` returns the inbox size of every list.
   * Deprecate 'resrc.it' image service
     [#1820](https://github.com/upfrontIO/livingdocs-server/pull/1820) :wrench:
   * Expose origin array to the editor
-    [#1813](https://github.com/upfrontIO/livingdocs-server/pull/1813) :wrench:  
+    [#1813](https://github.com/upfrontIO/livingdocs-server/pull/1813) :wrench:
+  * /images/upload sets width and height on animated gifs :beetle: https://github.com/upfrontIO/livingdocs-server/pull/1860
+  * Support spaces in directory paths when running tests :wrench: https://github.com/upfrontIO/livingdocs-server/pull/1845
+  * fix: add missing logger object in document feature :beetle: https://github.com/upfrontIO/livingdocs-server/pull/1839
     
 ---
 
