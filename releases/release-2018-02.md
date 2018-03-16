@@ -390,7 +390,7 @@ In the current releases (january & february) the content_type column on the publ
 
 We won't do a blocking migration as that might cause downtime for big customers (we'll need to find good solutions for that in the future). Please run the regular migration and after that apply the manual one. A blocking migration that makes sure that all columns are `NOT NULLABLE` will follow in the february or march release.
 
-Run the script using 
+Run the script using
 ```bash
 ./node_modules/@livingdocs/server/db/manual-migrations/003-write-content-type-v2.js
 # and
@@ -400,22 +400,6 @@ Run the script using
 For details see:
 https://github.com/upfrontIO/livingdocs-server/pull/1857
 
-## Show blue dot for lists to review :beetle: :gift:
-
-- The feature now uses the new `published_in_inbox ` field of a document-list instead of `inbox_documents_count`. `inbox_documents_count` was the total number of documents in the inbox, now we just want the number of published documents in the inbox.
-- We do not show unpublished documents in the inbox column of the list view EVEN if they exist.
-
-![screen shot 2018-03-02 at 3 08 06 pm](https://user-images.githubusercontent.com/1951875/36902656-8b490534-1e2b-11e8-8999-befe4eef69e1.png)
-
-### Reverts
-
-It reverts the change introduced here:
-
-- https://github.com/upfrontIO/livingdocs-editor/pull/1848
-- https://github.com/upfrontIO/livingdocs-editor/pull/1860
-
-For details see:
-https://github.com/upfrontIO/livingdocs-server/pull/1827, https://github.com/upfrontIO/livingdocs-editor/pull/1858, https://github.com/upfrontIO/livingdocs-editor/pull/1848, https://github.com/upfrontIO/livingdocs-editor/pull/1883
 
 ## Silently skip indexing for publications that have no path :gift:
 
@@ -431,7 +415,7 @@ Before:
 ![screen shot 2018-02-20 at 12 18 56](https://user-images.githubusercontent.com/433821/36421379-7905d500-1638-11e8-9101-d0567127bcf1.jpg)
 
 After:
- 
+
 ![screen shot 2018-02-20 at 12 21 04](https://user-images.githubusercontent.com/433821/36421396-8ff98536-1638-11e8-84a1-28ea87b0f20a.jpg)
 
 For details see:
@@ -485,7 +469,7 @@ https://github.com/upfrontIO/livingdocs-editor/pull/1835
 ![error-message](https://user-images.githubusercontent.com/172394/35629332-a8133ba2-069e-11e8-9909-908623137de1.png)
 
 **Result after the fix:**
-Provide the error message "The server is not reachable" when the server is offline. 
+Provide the error message "The server is not reachable" when the server is offline.
 
 ![image](https://user-images.githubusercontent.com/172394/35879963-e0bfe6d4-0b7c-11e8-8197-496ad6d63830.png)
 
@@ -620,11 +604,11 @@ https://github.com/upfrontIO/livingdocs-editor/pull/1849
     [#1838](https://github.com/upfrontIO/livingdocs-editor/pull/1838) :wrench:
   * Validate editor imageService config
     [#1884](https://github.com/upfrontIO/livingdocs-editor/pull/1884) :wrench:
-  * Fix missing list assignment in publish screen 
+  * Fix missing list assignment in publish screen
     [#1850](https://github.com/upfrontIO/livingdocs-editor/pull/1850) :beetle:
   * Fix anchor links are persisted
     [#1845](https://github.com/upfrontIO/livingdocs-editor/pull/1845) :beetle:
-  * Hide toolbar when editing teaser image 
+  * Hide toolbar when editing teaser image
     [#1841](https://github.com/upfrontIO/livingdocs-editor/pull/1841) :beetle:
   * Disable version check locally
     [#1838](https://github.com/upfrontIO/livingdocs-editor/pull/1838) :beetle:
@@ -666,7 +650,7 @@ https://github.com/upfrontIO/livingdocs-editor/pull/1849
     [#1803](https://github.com/upfrontIO/livingdocs-server/pull/1803) :wrench:
   * Update livingdocs-framework to 8.1.0
     [#1832](https://github.com/upfrontIO/livingdocs-server/pull/1832) :beetle:
-  * Expose origin array to the editor 
+  * Expose origin array to the editor
     [#1813](https://github.com/upfrontIO/livingdocs-server/pull/1813) :beetle:
   * Validate image service config
     [#1820](https://github.com/upfrontIO/livingdocs-server/pull/1820), [#1884](https://github.com/upfrontIO/livingdocs-editor/pull/1884) :beetle:
