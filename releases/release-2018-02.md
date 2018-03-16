@@ -446,49 +446,52 @@ All document creation and document copy UI code was refactored to reduce code du
 # Other Changes
 
 * Editor
-  * Add contentType selection to page creation [#1849](https://github.com/upfrontIO/livingdocs-editor/pull/1849) :gift:
-  * Fix endless redirect loop with missing pusher config [#1833](https://github.com/upfrontIO/livingdocs-editor/pull/1833) :beetle:
-  * Improved error handling for session initialization errors [#1863](https://github.com/upfrontIO/livingdocs-editor/pull/1863) :wrench:
-  * Update material-design-icons-svg to version 2.0.0 [#1822](https://github.com/upfrontIO/livingdocs-editor/pull/1822) :wrench:
-  * Disable version check locally [#1838](https://github.com/upfrontIO/livingdocs-editor/pull/1838) :wrench:
-  * Validate editor imageService config [#1884](https://github.com/upfrontIO/livingdocs-editor/pull/1884) :wrench:
-  * Fix missing list assignment in publish screen [#1850](https://github.com/upfrontIO/livingdocs-editor/pull/1850) :beetle:
-  * Fix anchor links are persisted [#1845](https://github.com/upfrontIO/livingdocs-editor/pull/1845) :beetle:
-  * Hide toolbar when editing teaser image [#1841](https://github.com/upfrontIO/livingdocs-editor/pull/1841) :beetle:
-  * Disable version check locally [#1838](https://github.com/upfrontIO/livingdocs-editor/pull/1838) :beetle:
-  * Properly set home page title on selection [#1834](https://github.com/upfrontIO/livingdocs-editor/pull/1834) :beetle:
-  * Fix endless redirect loop with missing pusher config [#1833](https://github.com/upfrontIO/livingdocs-editor/pull/1833) :beetle:
-  * Use designProxy instead of removed designLoader [#1815](https://github.com/upfrontIO/livingdocs-editor/pull/1815) :beetle:
-  * Еmbed code should break across lines so that all is visible [#1878](https://github.com/upfrontIO/livingdocs-editor/pull/1878) :beetle:
-  * Show only a component transformation if there are valid transformations [#1885](https://github.com/upfrontIO/livingdocs-editor/pull/1885) :beetle:
-  * Fix print dialogs [#1902](https://github.com/upfrontIO/livingdocs-editor/pull/1902) :beetle:
-  * Fixes print layout select for new release [#1911](https://github.com/upfrontIO/livingdocs-editor/pull/1911) :beetle:
-  * The editor considers canReset: true for a li-meta-slug-form [#1917](https://github.com/upfrontIO/livingdocs-editor/pull/1917) :beetle:
-  * Missing list assignment in publish screen [#1873](https://github.com/upfrontIO/livingdocs-editor/pull/1873) :beetle:
-  * Update public api documentation [#1827](https://github.com/upfrontIO/livingdocs-editor/pull/1827) :gift:
-  * Position the proofreading box properly [#1820](https://github.com/upfrontIO/livingdocs-editor/pull/1820) :gift:
-  * Update a module to the latest version [roboto-fontface](https://github.com/upfrontIO/livingdocs-editor/pull/1832), [imports-loader](https://github.com/upfrontIO/livingdocs-editor/pull/1861), [file-loader](https://github.com/upfrontIO/livingdocs-editor/pull/1856), [autoprefixer](https://github.com/upfrontIO/livingdocs-editor/pull/1840), [coveralls](https://github.com/upfrontIO/livingdocs-editor/pull/1675), [exports-loader](https://github.com/upfrontIO/livingdocs-editor/pull/1830), [url-loader](https://github.com/upfrontIO/livingdocs-editor/pull/1684), [angular-legacy-sortablejs-maintained](https://github.com/upfrontIO/livingdocs-editor/pull/1852), [material-design-icons-svg](https://github.com/upfrontIO/livingdocs-editor/pull/1822), [cpy](https://github.com/upfrontIO/livingdocs-editor/pull/1662), [pusher-js](https://github.com/upfrontIO/livingdocs-editor/pull/1670), [human-format](https://github.com/upfrontIO/livingdocs-editor/pull/1728) :gift:
-  * Improve no results feedback [#1859](https://github.com/upfrontIO/livingdocs-editor/pull/1859) :wrench:
-  * Migrate profile modal onto separate page [#1843](https://github.com/upfrontIO/livingdocs-editor/pull/1843) :wrench:
-  * Increase padding on the left and right of text inputs [#1835](https://github.com/upfrontIO/livingdocs-editor/pull/1835) :wrench:
-  * Provide a better error message when the server is offline [#1831](https://github.com/upfrontIO/livingdocs-editor/pull/1831) :wrench:
-  * Prettify project settings form [#1836](https://github.com/upfrontIO/livingdocs-editor/pull/1836) :wrench:
-  * Prevent input selection for publication date [#1879](https://github.com/upfrontIO/livingdocs-editor/pull/1879) :beetle:
+  * UI Improvements
+    * Еmbed code should break across lines so that all is visible [#1878](https://github.com/upfrontIO/livingdocs-editor/pull/1878) :beetle:
+    * Position the proofreading box properly [#1820](https://github.com/upfrontIO/livingdocs-editor/pull/1820) :wrench:
+    * Increase padding on the left and right of text inputs [#1835](https://github.com/upfrontIO/livingdocs-editor/pull/1835) :wrench:
+    * Prettify project settings form [#1836](https://github.com/upfrontIO/livingdocs-editor/pull/1836) :wrench:
+  * UX Improvements
+    * Migrate profile modal onto separate page [#1843](https://github.com/upfrontIO/livingdocs-editor/pull/1843) :wrench:
+    * Add contentType selection to page creation [#1849](https://github.com/upfrontIO/livingdocs-editor/pull/1849) :gift:
+    * Show only a component transformation if there are valid transformations [#1885](https://github.com/upfrontIO/livingdocs-editor/pull/1885) :wrench:
+    * Improve no results feedback [#1859](https://github.com/upfrontIO/livingdocs-editor/pull/1859) :wrench:
+    * Provide a better error message when the server is offline [#1831](https://github.com/upfrontIO/livingdocs-editor/pull/1831) :wrench:
+  * Bugfix
+    * Fix endless redirect loop with missing pusher config [#1833](https://github.com/upfrontIO/livingdocs-editor/pull/1833) :beetle:
+    * Missing list assignment in publish screen [#1873](https://github.com/upfrontIO/livingdocs-editor/pull/1873) :beetle:
+    * Anchor links are persisted [#1845](https://github.com/upfrontIO/livingdocs-editor/pull/1845) :beetle:
+    * Hide toolbar when editing teaser image [#1841](https://github.com/upfrontIO/livingdocs-editor/pull/1841) :beetle:
+    * Properly set home page title on selection [#1834](https://github.com/upfrontIO/livingdocs-editor/pull/1834) :beetle:
+    * Use designProxy instead of removed designLoader [#1815](https://github.com/upfrontIO/livingdocs-editor/pull/1815) :beetle:
+    * The editor considers canReset: true for a li-meta-slug-form [#1917](https://github.com/upfrontIO/livingdocs-editor/pull/1917) :beetle:
+    * Prevent input selection for publication date [#1879](https://github.com/upfrontIO/livingdocs-editor/pull/1879) :beetle:
+  * Chore
+    * Improved error handling for session initialisation errors [#1863](https://github.com/upfrontIO/livingdocs-editor/pull/1863) :wrench:
+    * Update material-design-icons-svg to version 2.0.0 [#1822](https://github.com/upfrontIO/livingdocs-editor/pull/1822) :wrench:
+    * Disable version check locally [#1838](https://github.com/upfrontIO/livingdocs-editor/pull/1838) :wrench:
+    * Validate editor imageService config [#1884](https://github.com/upfrontIO/livingdocs-editor/pull/1884) :wrench:
+    * Update public api documentation [#1827](https://github.com/upfrontIO/livingdocs-editor/pull/1827) :wrench:
+  * Print
+    * Fix print dialogs [#1902](https://github.com/upfrontIO/livingdocs-editor/pull/1902) :beetle:
+    * Fixes print layout select for new release [#1911](https://github.com/upfrontIO/livingdocs-editor/pull/1911) :beetle:
 
 
 * Server
-  * Various bugfixes for server shutdown [#1795](https://github.com/upfrontIO/livingdocs-server/pull/1795) :beetle:
-  * Support spaces in directory paths when running tests [#1846](https://github.com/upfrontIO/livingdocs-server/pull/1846) :beetle:
-  * Allow to run tests while app-path contains spaces [#1810](https://github.com/upfrontIO/livingdocs-server/pull/1810) :wrench:
-  * Add a feature for running tasks [#1622](https://github.com/upfrontIO/livingdocs-server/pull/1622) :wrench:
-  * Provide a better error message when sending a mail fails [#1803](https://github.com/upfrontIO/livingdocs-server/pull/1803) :wrench:
-  * Update livingdocs-framework to 8.1.0 [#1832](https://github.com/upfrontIO/livingdocs-server/pull/1832) :beetle:
-  * Expose origin array to the editor [#1813](https://github.com/upfrontIO/livingdocs-server/pull/1813) :beetle:
-  * Validate image service config [#1820](https://github.com/upfrontIO/livingdocs-server/pull/1820), [#1884](https://github.com/upfrontIO/livingdocs-editor/pull/1884) :beetle:
-  * Upgrade to eslint@4.18.2 [#1829](https://github.com/upfrontIO/livingdocs-server/pull/1829) :beetle:
-  * Fix data-migration task [#1818](https://github.com/upfrontIO/livingdocs-server/pull/1818) :beetle:
-  * Allow `editor.images` config for contentTypes [#1799](https://github.com/upfrontIO/livingdocs-server/pull/1799) :beetle:
-  * Silently skip indexing for publications that have no path [#1824](https://github.com/upfrontIO/livingdocs-server/pull/1824) :wrench:
+  * Stability/Reliability
+    * Various bugfixes for server shutdown [#1795](https://github.com/upfrontIO/livingdocs-server/pull/1795) :beetle:
+    * Silently skip indexing for publications that have no path [#1824](https://github.com/upfrontIO/livingdocs-server/pull/1824) :wrench:
+    * Provide a better error message when sending a mail fails [#1803](https://github.com/upfrontIO/livingdocs-server/pull/1803) :wrench:
+    * Validate image service config [#1820](https://github.com/upfrontIO/livingdocs-server/pull/1820), [#1884](https://github.com/upfrontIO/livingdocs-editor/pull/1884) :beetle:
+  * Expose settings to the edtior
+    * Expose `editor.origin` to the editor [#1813](https://github.com/upfrontIO/livingdocs-server/pull/1813) :beetle:
+    * Expose `editor.images` to the editor [#1799](https://github.com/upfrontIO/livingdocs-server/pull/1799) :beetle:
+  * Bugfix
+    * Fix data-migration task [#1818](https://github.com/upfrontIO/livingdocs-server/pull/1818) :beetle:
+  * Feature
+    * Add a feature for running tasks [#1622](https://github.com/upfrontIO/livingdocs-server/pull/1622) :wrench:
+  * Test
+    * Support spaces in directory paths when running tests [#1846](https://github.com/upfrontIO/livingdocs-server/pull/1846) :wrench:
 ---
 
   **Icon Legend**
