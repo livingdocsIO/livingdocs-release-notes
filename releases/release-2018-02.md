@@ -61,19 +61,21 @@ Example contentType configuration:
 routing: {
   enabled: true,
   pathPatterns: {
-    // type 'article' needs to have an `:id` in the pathTemplate
+    // type 'article' needs to have an `:id` in the path pattern
     type: 'article',
-    // used to build and parse paths
+    // path pattern used to build and parse paths
     current: '/:YYYY/:MM/:DD/:slug--:id',
-    // previously used path patterns, used to parse paths if current` failed
-    legacy: '/article/:slug--:id'
+    // previously used path patterns, used to parse paths if current failed
+    legacy: [
+      '/article/:slug--:id'
+    ]
   }
 }
 ```
 
 For details see: [Server PR #1673](https://github.com/upfrontIO/livingdocs-server/pull/1673)
 
-For documentation see: [Documentation]( https://docs.livingdocs.io/reference-docs/server-public-api/routing-system.html)
+For documentation see: [Documentation](https://docs.livingdocs.io/reference-docs/server-public-api/routing-system.html)
 
 
 ## Support for Animated gifs in the Images Editing API :gift:
