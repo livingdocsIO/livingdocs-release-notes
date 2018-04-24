@@ -5,7 +5,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 
 Package | Version
 --- | ---
-`@livingdocs/server` | `68.0.4`
+`@livingdocs/server` | `68.0.6`
 `@livingdocs/editor` | `28.4.2`
 
 ### Livingdocs Server
@@ -14,7 +14,7 @@ How to require the server in your package.json:
 
 ```json
 "dependencies": {
-  "@livingdocs/server": "68.0.4",
+  "@livingdocs/server": "68.0.6",
 }
 ```
 
