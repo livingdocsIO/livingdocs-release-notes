@@ -44,9 +44,10 @@ Project-builders can be registered on the registration feature and then whitelis
 
 ## Seeding :gift: :fire:
 
-The seeding is a new API to seed documents for a given project and channel. It uses the import user as owner of the seeded documents.
+The seeding is a new API to seed documents for a given project and channel.
 
 A more detailed description and examples can be found in the [documentation TODO](https://docs.livingdocs.io/todo.html).
+
 [server PR #1905](https://github.com/upfrontIO/livingdocs-server/pull/1905)
 
 
@@ -55,10 +56,10 @@ A more detailed description and examples can be found in the [documentation TODO
 * UX Improvements
   * List all the projects for an `admin` user [server #1907](https://github.com/upfrontIO/livingdocs-server/pull/1907) [editor #1960](https://github.com/upfrontIO/livingdocs-editor/pull/1960) :gift:
   * Add magazine includes to the example server. [server #1910](https://github.com/upfrontIO/livingdocs-server/pull/1910) :gift:
-  * Implement custom workflow for `data-record` documents. [editor #1963](https://github.com/upfrontIO/livingdocs-server/pull/1963) :gift:
-  * Ensure consistency for `content-type` icons between the menu and the document creation modal. [editor #1979](https://github.com/upfrontIO/livingdocs-server/pull/1979) :gift:
-  * If the document creation fails an error will be shown in the console or in a notification. [editor #1956](https://github.com/upfrontIO/livingdocs-server/pull/1956) :gift:
-  * Improve undo `CMD+Z` and redo `CMD+SHIFT+Z` keyboard shortcuts. [editor #1977](https://github.com/upfrontIO/livingdocs-server/pull/1977) :gift:
+  * Implement custom workflow for `data-record` documents. [editor #1963](https://github.com/upfrontIO/livingdocs-editor/pull/1963) :gift:
+  * Ensure consistency for `content-type` icons between the menu and the document creation modal. [editor #1979](https://github.com/upfrontIO/livingdocs-editor/pull/1979) :gift:
+  * If the document creation fails an error will be shown in the console or in a notification. [editor #1956](https://github.com/upfrontIO/livingdocs-editor/pull/1956) :gift:
+  * Improve undo `CMD+Z` and redo `CMD+SHIFT+Z` keyboard shortcuts. [editor #1977](https://github.com/upfrontIO/livingdocs-editor/pull/1977) :gift:
 * Tooling
   * Use nyc in place of istanbul for test reporting. [Pull request link](https://github.com/upfrontIO/livingdocs-server/pull/1913) :gift:
 * Chore
