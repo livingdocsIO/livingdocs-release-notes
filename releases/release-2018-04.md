@@ -39,7 +39,7 @@ How to require the editor in your package.json:
 
 ## Project-builders :gift: :fire:
 
-Project-builders can be registered on the registration feature and then whitelisted in the configuration. These project builders provide downstreams the ability to register custom behavior on new user registration and their project creation, it allows to create multiple projects per user with full customization of related channels and even seed documents. A more detailed description and examples can be found in the [documentation TODO](https://docs.livingdocs.io/todo.html).
+Project-builders can be registered on the registration feature and then whitelisted in the configuration. These project builders provide downstreams the ability to register custom behavior on new user registration and their project creation, it allows to create multiple projects per user with full customization of related channels and even seed documents. A more detailed description and examples can be found in the [documentation](https://github.com/upfrontIO/livingdocs-server/pull/1897).
 
 [server PR #1897](https://github.com/upfrontIO/livingdocs-server/pull/1897)
 
@@ -47,7 +47,7 @@ Project-builders can be registered on the registration feature and then whitelis
 
 The seeding is a new API to seed documents for a given project and channel.
 
-A more detailed description and examples can be found in the [documentation TODO](https://docs.livingdocs.io/todo.html).
+A more detailed description and examples can be found in the [documentation](https://github.com/upfrontIO/livingdocs-server/pull/1905).
 
 [server PR #1905](https://github.com/upfrontIO/livingdocs-server/pull/1905)
 
