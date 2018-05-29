@@ -36,6 +36,7 @@ How to require the editor in your package.json:
 
 # Highlights
 
+
 ## Project-builders :gift: :fire:
 
 Project-builders can be registered on the registration feature and then whitelisted in the configuration. These project builders provide downstreams the ability to register custom behavior on new user registration and their project creation, it allows to create multiple projects per user with full customization of related channels and even seed documents. A more detailed description and examples can be found in the [documentation TODO](https://docs.livingdocs.io/todo.html).
@@ -49,6 +50,16 @@ The seeding is a new API to seed documents for a given project and channel.
 A more detailed description and examples can be found in the [documentation TODO](https://docs.livingdocs.io/todo.html).
 
 [server PR #1905](https://github.com/upfrontIO/livingdocs-server/pull/1905)
+
+
+## Postgres :wrench:
+
+We dropped the `plv8` extension. This will make deployment/maintenance easier for self-hosted databases and allows to easily upgrade to postgres v10.
+
+**This change won't affect you** unless you're using the extension by yourself in your custom code. The migration will require permission to drop the extension.
+
+See this [commit](https://github.com/upfrontIO/livingdocs-server/commit/dc8b2e4835f6eee460877378d28eb84eb0fe67e) for details.
+
 
 
 # Other Changes
@@ -67,6 +78,8 @@ A more detailed description and examples can be found in the [documentation TODO
   * Use the default `channelId` of a project if it can not be found in the token. [server #1908](https://github.com/upfrontIO/livingdocs-server/pull/1908) :wrench:
   * Remove redundant include registration. [editor #1965](https://github.com/upfrontIO/livingdocs-editor/pull/1965) :wrench:
   * Improve the error handling when parsing the metadata configuration. [editor #1959](https://github.com/upfrontIO/livingdocs-editor/pull/1959) :wrench:
+  * Aggregate all migrations into the least recent js migration file :wrench:
+  [server #1906](https://github.com/upfrontIO/livingdocs-server/pull/1906)
 * Bugfixes
   * Cast `import_user` to integer in Postgres. [server #1893](https://github.com/upfrontIO/livingdocs-server/pull/1893) :beetle:
   * Replace number parsing in config processor helper. [server #1895](https://github.com/upfrontIO/livingdocs-server/pull/1895) :beetle:
