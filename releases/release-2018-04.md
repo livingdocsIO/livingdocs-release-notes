@@ -6,7 +6,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `68.5.2`
-`@livingdocs/editor` | `28.9.1`
+`@livingdocs/editor` | `28.9.7`
 
 ### Livingdocs Server
 
@@ -27,7 +27,7 @@ How to require the editor in your package.json:
 
 ```json
 "dependencies": {
-  "@livingdocs/editor": "28.9.1",
+  "@livingdocs/editor": "28.9.7",
 }
 ```
 
@@ -52,7 +52,7 @@ A more detailed description and examples can be found in the [documentation TODO
 [server PR #1905](https://github.com/upfrontIO/livingdocs-server/pull/1905)
 
 
-## Postgres :wrench:
+## Postgres :wrench:
 
 We dropped the `plv8` extension. This will make deployment/maintenance easier for self-hosted databases and allows to easily upgrade to postgres v10.
 
