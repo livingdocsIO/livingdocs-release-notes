@@ -30,8 +30,8 @@ How to require the server in your package.json:
 ```
 
 - Link to the release branch:
-  https://github.com/upfrontIO/livingdocs-server/tree/release-2017-12
-- Previous release: [63.2.1](https://github.com/upfrontIO/livingdocs-release-notes/blob/master/releases/release-2017-10.md#livingdocs-server)
+  https://github.com/livingdocsIO/livingdocs-server/tree/release-2017-12
+- Previous release: [63.2.1](https://github.com/livingdocsIO/livingdocs-release-notes/blob/master/releases/release-2017-10.md#livingdocs-server)
 
 ### Livingdocs Editor
 
@@ -44,16 +44,16 @@ How to require the editor in your package.json:
 ```
 
 - Link to the release branch:
-  https://github.com/upfrontIO/livingdocs-editor/tree/release-2017-12
-- Previous release: [23.0.3](https://github.com/upfrontIO/livingdocs-release-notes/blob/master/releases/release-2017-10.md#livingdocs-editor)
+  https://github.com/livingdocsIO/livingdocs-editor/tree/release-2017-12
+- Previous release: [23.0.3](https://github.com/livingdocsIO/livingdocs-release-notes/blob/master/releases/release-2017-10.md#livingdocs-editor)
 
 ## Breaking Changes
 
 Component | Type | Description | PRs | Issues
 --- | --- | --- | --- | ---
-Server | BREAKING CHANGE | Server-wide hook registration and new prepublishHook [Read more](#server-wide-hook-registration-and-new-prepublishhook) | [#1740](https://github.com/upfrontIO/livingdocs-server/pull/1740) | [#1633](https://github.com/upfrontIO/livingdocs-planning/issues/1633)
-Editor | BREAKING CHANGE | Remove metadataConfigService [Read more](#remove-metadataconfigservice) | [#1726](https://github.com/upfrontIO/livingdocs-editor/pull/1726) | -
-Application wide | BREAKING CHANGE | Move image service config to the server only [Read more](#move-image-service-config-to-the-server-only) | [#268](https://github.com/upfrontIO/livingdocs-framework/pull/268), [#1708](https://github.com/upfrontIO/livingdocs-server/pull/1708), [#1746](https://github.com/upfrontIO/livingdocs-editor/pull/1746) | [#1532](https://github.com/upfrontIO/livingdocs-planning/issues/1532)
+Server | BREAKING CHANGE | Server-wide hook registration and new prepublishHook [Read more](#server-wide-hook-registration-and-new-prepublishhook) | [#1740](https://github.com/livingdocsIO/livingdocs-server/pull/1740) | [#1633](https://github.com/livingdocsIO/livingdocs-planning/issues/1633)
+Editor | BREAKING CHANGE | Remove metadataConfigService [Read more](#remove-metadataconfigservice) | [#1726](https://github.com/livingdocsIO/livingdocs-editor/pull/1726) | -
+Application wide | BREAKING CHANGE | Move image service config to the server only [Read more](#move-image-service-config-to-the-server-only) | [#268](https://github.com/livingdocsIO/livingdocs-framework/pull/268), [#1708](https://github.com/livingdocsIO/livingdocs-server/pull/1708), [#1746](https://github.com/livingdocsIO/livingdocs-editor/pull/1746) | [#1532](https://github.com/livingdocsIO/livingdocs-planning/issues/1532)
 
 ### Server-wide hook registration and new prepublishHook
 
@@ -154,11 +154,11 @@ Make sure to replicate the configuration you removed from the editor in the serv
 
 Component | Type | Description | PRs | Issues
 --- | --- | --- | --- | ---
-Server | Feature | Add publications resource to public API [Read more](add-publications-resource-to-public-api) | [#1664](https://github.com/upfrontIO/livingdocs-server/pull/1664) | [#1552](https://github.com/upfrontIO/livingdocs-planning/issues/1552)
-Server | Feature | Make channelHandle optional in Public API [Read more](#make-channelhandle-optional-in-public-api) | [#1688](https://github.com/upfrontIO/livingdocs-server/pull/1688) | [#1599](https://github.com/upfrontIO/livingdocs-planning/issues/1599)
-Server | Bugfix | Get default Channel Id from Project config if neither handle nor id available | [#1749](https://github.com/upfrontIO/livingdocs-server/pull/1749) | [#1641](https://github.com/upfrontIO/livingdocs-planning/issues/1641)
-Server | Feature | Return menus with document IDs when routing is disabled | [#1674](https://github.com/upfrontIO/livingdocs-server/pull/1674) | [#1580](https://github.com/upfrontIO/livingdocs-planning/issues/1580)
-Server | Feature | Add ServerApi method destroy() [Read more](#add-serverapi-method-destroy) | [#1690](https://github.com/upfrontIO/livingdocs-server/pull/1690) | -
+Server | Feature | Add publications resource to public API [Read more](add-publications-resource-to-public-api) | [#1664](https://github.com/livingdocsIO/livingdocs-server/pull/1664) | [#1552](https://github.com/livingdocsIO/livingdocs-planning/issues/1552)
+Server | Feature | Make channelHandle optional in Public API [Read more](#make-channelhandle-optional-in-public-api) | [#1688](https://github.com/livingdocsIO/livingdocs-server/pull/1688) | [#1599](https://github.com/livingdocsIO/livingdocs-planning/issues/1599)
+Server | Bugfix | Get default Channel Id from Project config if neither handle nor id available | [#1749](https://github.com/livingdocsIO/livingdocs-server/pull/1749) | [#1641](https://github.com/livingdocsIO/livingdocs-planning/issues/1641)
+Server | Feature | Return menus with document IDs when routing is disabled | [#1674](https://github.com/livingdocsIO/livingdocs-server/pull/1674) | [#1580](https://github.com/livingdocsIO/livingdocs-planning/issues/1580)
+Server | Feature | Add ServerApi method destroy() [Read more](#add-serverapi-method-destroy) | [#1690](https://github.com/livingdocsIO/livingdocs-server/pull/1690) | -
 
 ### Add publications resource to public API
 
@@ -345,34 +345,34 @@ process.on('SIGTERM', function (err) {
 
 Component | Type | Description | PRs | Issues
 --- | --- | --- | --- | ---
-Editor | Bugfix | Configuration for the maximum amount of selectable items in multi-select | [#1736](https://github.com/upfrontIO/livingdocs-editor/pull/1736) | -
-Editor | Feature | Handle the new Metadata Configuration Format in the editor | [#1718](https://github.com/upfrontIO/livingdocs-editor/pull/1718) | [#1583](https://github.com/upfrontIO/livingdocs-planning/issues/1583)
+Editor | Bugfix | Configuration for the maximum amount of selectable items in multi-select | [#1736](https://github.com/livingdocsIO/livingdocs-editor/pull/1736) | -
+Editor | Feature | Handle the new Metadata Configuration Format in the editor | [#1718](https://github.com/livingdocsIO/livingdocs-editor/pull/1718) | [#1583](https://github.com/livingdocsIO/livingdocs-planning/issues/1583)
 
 ## Changelog
 
 Component | Type | Description | PRs | Issues
 --- | --- | --- | --- | ---
-Server | Feature | Prometheus routes indexer metrics [Read more](#prometheus-routes-indexer-metrics) | [#1678](https://github.com/upfrontIO/livingdocs-server/pull/1678), [#1689](https://github.com/upfrontIO/livingdocs-server/pull/1689) | [#1570](https://github.com/upfrontIO/livingdocs-planning/issues/1570)
-Server | Bugfix | Fix group duplicated entries in group table | [#1725](https://github.com/upfrontIO/livingdocs-server/pull/1725) | [#1626](https://github.com/upfrontIO/livingdocs-planning/issues/1626)
-Server | Bugfix | Handle repeated drag-and-drop imports properly [Read more](#handle-repeated-drag-and-drop-imports-properly) | [#1723](https://github.com/upfrontIO/livingdocs-server/pull/1723) | [#1613](https://github.com/upfrontIO/livingdocs-planning/issues/1613), [#1614](https://github.com/upfrontIO/livingdocs-planning/issues/1614)
-Server | Bugfix | Escape HTML entities for non-body fields [Read more](#escape-html-entities-for-non-body-fields) | [#1744](https://github.com/upfrontIO/livingdocs-server/pull/1744) | -
-Editor | Feature | Allow linking to an external site in the main menu | [#1732](https://github.com/upfrontIO/livingdocs-editor/pull/1732) | -
-Editor | Feature | Inline error messages for metadata screen [Read more](#inline-error-messages-for-metadata-screen) | [#1753](https://github.com/upfrontIO/livingdocs-editor/pull/1753) | [#1491](https://github.com/upfrontIO/livingdocs-planning/issues/1491)
-Editor | Feature | As an editor I want to set an anchor link | [#1704](https://github.com/upfrontIO/livingdocs-editor/pull/1704) | [#1472](https://github.com/upfrontIO/livingdocs-planning/issues/1472)
-Editor | Bugfix | Only show active groups in "Add Member" screen on project | [#c2b89c3](https://github.com/upfrontIO/livingdocs-editor/commit/c2b89c3) | -
-Server | Bugfix | Don't unescape HTML entities on import | [#1742](https://github.com/upfrontIO/livingdocs-server/pull/1742) | -
-Server, Editor | Bugfix | Respect `^release-` instead of `^maintenance-` | [#1748](https://github.com/upfrontIO/livingdocs-server/pull/1748), [#1764](https://github.com/upfrontIO/livingdocs-editor/pull/1764) | -
-Editor | Bugfix | Avoid hiding of floated elements in Proofreading UI | [#1596](https://github.com/upfrontIO/livingdocs-editor/pull/1596) | -
-Server | Bugfix | The DocumentVersion passed to metadataApi.updateOnUpdate() has an old revision | [#1714](https://github.com/upfrontIO/livingdocs-server/pull/1714) | [#1617](https://github.com/upfrontIO/livingdocs-planning/issues/1617)
-Server | Bugfix | Escape all `&`s in text instead of just the first occurrence | [#1733](https://github.com/upfrontIO/livingdocs-server/pull/1733) | -
-Server | Bugfix | Properly parse `prometheusExporter__enabled` | [#1713](https://github.com/upfrontIO/livingdocs-server/pull/1713) | -
-Server, Editor | Feature | Add codeship integration test configuration for downstreams | [#1706](https://github.com/upfrontIO/livingdocs-server/pull/1706), [#1745](https://github.com/upfrontIO/livingdocs-editor/pull/1745) | -
-Server | Bugfix | Add fatal log level to the list of valid levels | [#1691](https://github.com/upfrontIO/livingdocs-server/pull/1691) | -
-Server | Bugfix | Escape ampersands from hugo sources | [#1677](https://github.com/upfrontIO/livingdocs-server/pull/1677) | [#1549](https://github.com/upfrontIO/livingdocs-planning/issues/1549)
-Server | Feature | Migrate render pipeline lib to js | [#1686](https://github.com/upfrontIO/livingdocs-server/pull/1686) | -
-Editor | Bugfix | Use headless chrome for tests | [#1711](https://github.com/upfrontIO/livingdocs-editor/pull/1711) | -
-Editor | Bugfix | Hide Metadata on Publish Panel When There is no FormArrangement Config | [#1713](https://github.com/upfrontIO/livingdocs-editor/pull/1713) | -
-Editor | Bugfix | addTask method invocation | [#1725](https://github.com/upfrontIO/livingdocs-editor/pull/1725) | -
+Server | Feature | Prometheus routes indexer metrics [Read more](#prometheus-routes-indexer-metrics) | [#1678](https://github.com/livingdocsIO/livingdocs-server/pull/1678), [#1689](https://github.com/livingdocsIO/livingdocs-server/pull/1689) | [#1570](https://github.com/livingdocsIO/livingdocs-planning/issues/1570)
+Server | Bugfix | Fix group duplicated entries in group table | [#1725](https://github.com/livingdocsIO/livingdocs-server/pull/1725) | [#1626](https://github.com/livingdocsIO/livingdocs-planning/issues/1626)
+Server | Bugfix | Handle repeated drag-and-drop imports properly [Read more](#handle-repeated-drag-and-drop-imports-properly) | [#1723](https://github.com/livingdocsIO/livingdocs-server/pull/1723) | [#1613](https://github.com/livingdocsIO/livingdocs-planning/issues/1613), [#1614](https://github.com/livingdocsIO/livingdocs-planning/issues/1614)
+Server | Bugfix | Escape HTML entities for non-body fields [Read more](#escape-html-entities-for-non-body-fields) | [#1744](https://github.com/livingdocsIO/livingdocs-server/pull/1744) | -
+Editor | Feature | Allow linking to an external site in the main menu | [#1732](https://github.com/livingdocsIO/livingdocs-editor/pull/1732) | -
+Editor | Feature | Inline error messages for metadata screen [Read more](#inline-error-messages-for-metadata-screen) | [#1753](https://github.com/livingdocsIO/livingdocs-editor/pull/1753) | [#1491](https://github.com/livingdocsIO/livingdocs-planning/issues/1491)
+Editor | Feature | As an editor I want to set an anchor link | [#1704](https://github.com/livingdocsIO/livingdocs-editor/pull/1704) | [#1472](https://github.com/livingdocsIO/livingdocs-planning/issues/1472)
+Editor | Bugfix | Only show active groups in "Add Member" screen on project | [#c2b89c3](https://github.com/livingdocsIO/livingdocs-editor/commit/c2b89c3) | -
+Server | Bugfix | Don't unescape HTML entities on import | [#1742](https://github.com/livingdocsIO/livingdocs-server/pull/1742) | -
+Server, Editor | Bugfix | Respect `^release-` instead of `^maintenance-` | [#1748](https://github.com/livingdocsIO/livingdocs-server/pull/1748), [#1764](https://github.com/livingdocsIO/livingdocs-editor/pull/1764) | -
+Editor | Bugfix | Avoid hiding of floated elements in Proofreading UI | [#1596](https://github.com/livingdocsIO/livingdocs-editor/pull/1596) | -
+Server | Bugfix | The DocumentVersion passed to metadataApi.updateOnUpdate() has an old revision | [#1714](https://github.com/livingdocsIO/livingdocs-server/pull/1714) | [#1617](https://github.com/livingdocsIO/livingdocs-planning/issues/1617)
+Server | Bugfix | Escape all `&`s in text instead of just the first occurrence | [#1733](https://github.com/livingdocsIO/livingdocs-server/pull/1733) | -
+Server | Bugfix | Properly parse `prometheusExporter__enabled` | [#1713](https://github.com/livingdocsIO/livingdocs-server/pull/1713) | -
+Server, Editor | Feature | Add codeship integration test configuration for downstreams | [#1706](https://github.com/livingdocsIO/livingdocs-server/pull/1706), [#1745](https://github.com/livingdocsIO/livingdocs-editor/pull/1745) | -
+Server | Bugfix | Add fatal log level to the list of valid levels | [#1691](https://github.com/livingdocsIO/livingdocs-server/pull/1691) | -
+Server | Bugfix | Escape ampersands from hugo sources | [#1677](https://github.com/livingdocsIO/livingdocs-server/pull/1677) | [#1549](https://github.com/livingdocsIO/livingdocs-planning/issues/1549)
+Server | Feature | Migrate render pipeline lib to js | [#1686](https://github.com/livingdocsIO/livingdocs-server/pull/1686) | -
+Editor | Bugfix | Use headless chrome for tests | [#1711](https://github.com/livingdocsIO/livingdocs-editor/pull/1711) | -
+Editor | Bugfix | Hide Metadata on Publish Panel When There is no FormArrangement Config | [#1713](https://github.com/livingdocsIO/livingdocs-editor/pull/1713) | -
+Editor | Bugfix | addTask method invocation | [#1725](https://github.com/livingdocsIO/livingdocs-editor/pull/1725) | -
 
 ## In detail
 
@@ -467,12 +467,12 @@ module.exports = function (feature, server, done) {
 
 Component | Type | Description | PRs | Issues
 --- | --- | --- | --- | ---
-Server | Feature | Add `template-data` endpoint [Read more](#add-template-data-endpoint-to-improve-editor-code) | [#1737](https://github.com/upfrontIO/livingdocs-server/pull/1737), [#1756](https://github.com/upfrontIO/livingdocs-editor/pull/1756) | -
-Editor, Server | Bugfix | Add publication selection to print article create dialog | [#1740](https://github.com/upfrontIO/livingdocs-editor/pull/1740), [#1705](https://github.com/upfrontIO/livingdocs-server/pull/1705) | - 
-Editor | Bugfix | Fix export / publish label for print articles | [#1757](https://github.com/upfrontIO/livingdocs-editor/pull/1757) | -
-Editor | Bugfix | Removed hardcoded publication name | [#1760](https://github.com/upfrontIO/livingdocs-editor/pull/1760) | -
-Editor | Bugfix | Enable selection mode button for print | [#1721](https://github.com/upfrontIO/livingdocs-editor/pull/1721) | -
-Server | Feature | Map article design layout to layout engine [Read more](#map-article-design-layout-to-layout-engine) | [#1655](https://github.com/upfrontIO/livingdocs-server/pull/1655), [#1697](https://github.com/upfrontIO/livingdocs-editor/pull/1697) | [#1550](https://github.com/upfrontIO/livingdocs-planning/issues/1550)
+Server | Feature | Add `template-data` endpoint [Read more](#add-template-data-endpoint-to-improve-editor-code) | [#1737](https://github.com/livingdocsIO/livingdocs-server/pull/1737), [#1756](https://github.com/livingdocsIO/livingdocs-editor/pull/1756) | -
+Editor, Server | Bugfix | Add publication selection to print article create dialog | [#1740](https://github.com/livingdocsIO/livingdocs-editor/pull/1740), [#1705](https://github.com/livingdocsIO/livingdocs-server/pull/1705) | - 
+Editor | Bugfix | Fix export / publish label for print articles | [#1757](https://github.com/livingdocsIO/livingdocs-editor/pull/1757) | -
+Editor | Bugfix | Removed hardcoded publication name | [#1760](https://github.com/livingdocsIO/livingdocs-editor/pull/1760) | -
+Editor | Bugfix | Enable selection mode button for print | [#1721](https://github.com/livingdocsIO/livingdocs-editor/pull/1721) | -
+Server | Feature | Map article design layout to layout engine [Read more](#map-article-design-layout-to-layout-engine) | [#1655](https://github.com/livingdocsIO/livingdocs-server/pull/1655), [#1697](https://github.com/livingdocsIO/livingdocs-editor/pull/1697) | [#1550](https://github.com/livingdocsIO/livingdocs-planning/issues/1550)
 
 ### Add `template-data` endpoint to improve editor code
 
@@ -514,12 +514,12 @@ and replaces the previous config:
 
 ### Editor
 
-* [25.3.2](https://github.com/upfrontIO/livingdocs-editor/releases/tag/v25.3.2) - **print**: set publicationDates period to 30 days.
-* [25.3.3](https://github.com/upfrontIO/livingdocs-editor/releases/tag/v25.3.3) - **print**: update publicationDates period in layout selector.
-* [25.3.4](https://github.com/upfrontIO/livingdocs-editor/releases/tag/v25.3.4) - **tests**: get headless chromium to work properly.
+* [25.3.2](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v25.3.2) - **print**: set publicationDates period to 30 days.
+* [25.3.3](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v25.3.3) - **print**: update publicationDates period in layout selector.
+* [25.3.4](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v25.3.4) - **tests**: get headless chromium to work properly.
 
 ### Server
 
-* [64.0.2](https://github.com/upfrontIO/livingdocs-server/releases/tag/v64.0.2) - **hooks**: properly handle resolveHandles errors.
-* [64.0.3](https://github.com/upfrontIO/livingdocs-server/releases/tag/v64.0.3) - **hooks**: publication hooks registration ignore project/channel failures.
-* [64.0.4](https://github.com/upfrontIO/livingdocs-server/releases/tag/v64.0.4) - **print**: Enables sending `<br>`s in print articles to print API.
+* [64.0.2](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v64.0.2) - **hooks**: properly handle resolveHandles errors.
+* [64.0.3](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v64.0.3) - **hooks**: publication hooks registration ignore project/channel failures.
+* [64.0.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v64.0.4) - **print**: Enables sending `<br>`s in print articles to print API.

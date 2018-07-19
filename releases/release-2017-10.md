@@ -21,8 +21,8 @@ How to require the server in your package.json:
 ```
 
 - Link to the release branch:
-  https://github.com/upfrontIO/livingdocs-server/tree/release-2017-10
-- Previous release: [61.2.1](https://github.com/upfrontIO/livingdocs-release-notes/blob/master/releases/release-2017-09.md#livingdocs-server)
+  https://github.com/livingdocsIO/livingdocs-server/tree/release-2017-10
+- Previous release: [61.2.1](https://github.com/livingdocsIO/livingdocs-release-notes/blob/master/releases/release-2017-09.md#livingdocs-server)
 
 ### Livingdocs Editor
 
@@ -35,8 +35,8 @@ How to require the editor in your package.json:
 ```
 
 - Link to the release branch:
-  https://github.com/upfrontIO/livingdocs-editor/tree/release-2017-10
-- Previous release: [20.10.4](https://github.com/upfrontIO/livingdocs-release-notes/blob/master/releases/release-2017-09.md#livingdocs-editor)
+  https://github.com/livingdocsIO/livingdocs-editor/tree/release-2017-10
+- Previous release: [20.10.4](https://github.com/livingdocsIO/livingdocs-release-notes/blob/master/releases/release-2017-09.md#livingdocs-editor)
 
 ### Livingdocs Framework
 
@@ -51,7 +51,7 @@ dependencies: {
   "@livingdocs/framework": "7.14.0"
 }
 ```
-- Previous release: [7.12.2](https://github.com/upfrontIO/livingdocs-release-notes/blob/master/releases/release-2017-09.md#livingdocs-framework)
+- Previous release: [7.12.2](https://github.com/livingdocsIO/livingdocs-release-notes/blob/master/releases/release-2017-09.md#livingdocs-framework)
 
 ## Component changes
 
@@ -59,43 +59,43 @@ dependencies: {
 
 Component | Type | Description | PRs | Issues
 --- | --- | --- | --- | ---
-Server | BREAKING CHANGE, Feature | Upgrade to node 8 and npm > 5.5. [Read more](#upgrade-to-node-8) | [80](https://github.com/upfrontIO/livingdocs-docker/pull/80), [#73](https://github.com/upfrontIO/livingdocs-docker/pull/73), [#2f65dfb](https://github.com/upfrontIO/livingdocs-server/commit/2f65dfb), [#1660](https://github.com/upfrontIO/livingdocs-server/pull/1660) | -
-Server | BREAKING CHANGE | Remove deprecated methods. [Read more](#remove-deprecated-methods) | [#1659](https://github.com/upfrontIO/livingdocs-server/pull/1659) | -
-Server | Bugfix | Content fixes for drag'n'drop huGO articles [Read more](#content-fixes-for-drag-n-drop-hugo-articles) | [#1652](https://github.com/upfrontIO/livingdocs-server/pull/1652) | [#1557](https://github.com/upfrontIO/livingdocs-planning/issues/1557)
-Server | Feature | Extract routing to top-level feature | [#1667](https://github.com/upfrontIO/livingdocs-server/pull/1667) | [#1564](https://github.com/upfrontIO/livingdocs-planning/issues/1564)
-Server | Bugfix | Move devDependencies used in colt helpers into dependencies | [#1671](https://github.com/upfrontIO/livingdocs-server/pull/1671) | -
-Server | Bugfix | Fix render pipeline api error handling [Read more](#fix-render-pipeline-api-error-handling) | [#1669](https://github.com/upfrontIO/livingdocs-server/pull/1669) | -
-Server | Feature | Expose `max_tasks_per_worker` config on worker strategy [Read more](#expose-max_tasks_per_worker-config-on-worker-strategy ) | [#4e6791c](https://github.com/upfrontIO/livingdocs-server/commit/4e6791c) | -
-Server | Improvement | Remove `disableHugoUpdates` check in favor of hugo `updateConditions` [Read more](#remove-disableHugoUpdates-check-in-favor-of-hugo-updateConditions) | [#1661](https://github.com/upfrontIO/livingdocs-server/pull/1661), [#1559](https://github.com/upfrontIO/livingdocs-server/pull/1559) | [1046](https://github.com/upfrontIO/livingdocs-planning/issues/1046)
-Server | Bugfix | Makes migrations 086-087 work again for older releases [Read more](#makes-migrations-086-087-work-again-for-older-releases) | [#4f334d2](https://github.com/upfrontIO/livingdocs-server/commit/4f334d2) | -
-Server | Bugfix | Allow sorting on keyword filtered ES searches | [#1648](https://github.com/upfrontIO/livingdocs-server/pull/1648) | [#1518](https://github.com/upfrontIO/livingdocs-planning/issues/1518)
-Server | BREAKING CHANGE | Remove newrelic support [Read more](remove-newrelic-support) | [#1651](https://github.com/upfrontIO/livingdocs-server/pull/1651) | -
-Server | Bugfix | Prevent crash on undefined Elasticsearch config | [#1637](https://github.com/upfrontIO/livingdocs-server/pull/1637) | -
-Server | Feature | Allow upload of SVG images (cropping is disabled in the editor) | [#1313](https://github.com/upfrontIO/livingdocs-server/pull/1313), [#1635](https://github.com/upfrontIO/livingdocs-server/pull/1635), [#1671](https://github.com/upfrontIO/livingdocs-editor/pull/1671) | [#302](https://github.com/upfrontIO/livingdocs-planning/issues/302)
-Server | Bugfix | Migrate PrintController to object | [#1643](https://github.com/upfrontIO/livingdocs-server/pull/1643) | -
-Server | Bugfix | Upgrade to ajv@5.0.0 compatible schemas | [#1642](https://github.com/upfrontIO/livingdocs-server/pull/1642) | -
-Server | Bugfix | Log errors instead of crashing on registration | [#1632](https://github.com/upfrontIO/livingdocs-server/pull/1632) | [#](https://github.com/upfrontIO/livingdocs-planning/issues/1468)
-Server, Editor | Feature | New doc include api [Read more](https://docs.livingdocs.io/videos/includes.html) | [#1623](https://github.com/upfrontIO/livingdocs-server/pull/1623) | [Epic, #1430](https://github.com/upfrontIO/livingdocs-planning/issues/1430), [#1423](https://github.com/upfrontIO/livingdocs-planning/issues/1423), [#1655](https://github.com/upfrontIO/livingdocs-editor/pull/1655)
-Server | Bugfix | Routing fix (fixes "Key not found in database" error) | [#1609](https://github.com/upfrontIO/livingdocs-server/pull/1609) | [#1380](https://github.com/upfrontIO/livingdocs-planning/issues/1380)
-Editor | Bugfix | Update twitter embed code matcher | [#1673](https://github.com/upfrontIO/livingdocs-editor/pull/1673) | [#1515](https://github.com/upfrontIO/livingdocs-planning/issues/1515)
-Editor | Bugfix | As an editor I would like to see if I'm working on an archived article | [#1669](https://github.com/upfrontIO/livingdocs-editor/pull/1669) | [#1473](https://github.com/upfrontIO/livingdocs-planning/issues/1473)
-Editor | Bugfix | The controller with the name 'TasksController' is not registered. | [#1676](https://github.com/upfrontIO/livingdocs-editor/pull/1676) | [#1481](https://github.com/upfrontIO/livingdocs-planning/issues/1481)
-Editor | Feature | Limit dropdown items through configuration. [Read more](#limit-dropdown-items-through-configuration) | [#1667](https://github.com/upfrontIO/livingdocs-editor/pull/1667) | -
-Editor | BREAKING CHANGE, Feature | Upgrade to node 8 and npm > 5.5. | [80](https://github.com/upfrontIO/livingdocs-docker/pull/80), [#73](https://github.com/upfrontIO/livingdocs-docker/pull/73), [#1700](https://github.com/upfrontIO/livingdocs-editor/pull/1700) | -
-Editor | Bugfix | Image caption isn't imported from Hugo. [Read more](#image-caption-isn-t-imported-from-hugo) | [#1714](https://github.com/upfrontIO/livingdocs-editor/pull/1714) | [#1546](https://github.com/upfrontIO/livingdocs-planning/issues/1546)
-Editor | Bugfix | Fix embed code line break | [#1705](https://github.com/upfrontIO/livingdocs-editor/pull/1705) | -
-Editor | Bugfix | Image cropping on the publish panel takes 2 clicks to config | [#1702](https://github.com/upfrontIO/livingdocs-editor/pull/1702) | [#1533](https://github.com/upfrontIO/livingdocs-planning/issues/1533)
-Editor | Feature | Extend field extractor for doc-style. [Read more](#extend-field-extractor-for-doc-style) | [#1701](https://github.com/upfrontIO/livingdocs-editor/pull/1701), [#265](https://github.com/upfrontIO/livingdocs-framework/pull/265) | [#1531](https://github.com/upfrontIO/livingdocs-planning/issues/1531)
-Editor | BREAKING CHANGE | Remove Option to Configure the Publish Panel Metadata Forms in the Editor. [Read more](#remove-option-to-configure-the-publish-panel-metadata-forms-in-the-editor) | [#1696](https://github.com/upfrontIO/livingdocs-editor/pull/1696) | -
-Editor | Bugfix | Order print template and layout by name | [#1664](https://github.com/upfrontIO/livingdocs-editor/pull/1664) | -
-Editor | Bugfix | Get moment to work with webpack | [#1693](https://github.com/upfrontIO/livingdocs-editor/pull/1693) | -
-Editor | Bugfix | Fix `getAbsoluteBoundingRect() called on a detached node` | [#1690](https://github.com/upfrontIO/livingdocs-editor/pull/1690) | [#1137](https://github.com/upfrontIO/livingdocs-planning/issues/1137)
-Editor | Bugfix | Guard resrc image service call via framework | [#1689](https://github.com/upfrontIO/livingdocs-editor/pull/1689) | [#1542](https://github.com/upfrontIO/livingdocs-planning/issues/1542)
-Editor | Bugfix | Fix embed teaser | [#1685](https://github.com/upfrontIO/livingdocs-editor/pull/1685) | -
-Editor | Feature | Introduce card-based design on the publishing screen [Read more](#introduce-card-based-design-on-the-publishing-screen) | [#1453](https://github.com/upfrontIO/livingdocs-editor/pull/1453) | [#118](https://github.com/upfrontIO/livingdocs-planning/issues/118)
-Editor | Bugfix | Fix spellchecker editable event bug | [#1678](https://github.com/upfrontIO/livingdocs-editor/pull/1678) | [#1516](https://github.com/upfrontIO/livingdocs-planning/issues/1516)
-Framework | Feature | New imageService for ImageResizer | [#254](https://github.com/upfrontIO/livingdocs-framework/pull/254) | -
-Editor | Bugfix | Fields from header(catchline,text,lead,author) are not updated in metadata object in publication index if header was deleted in the editor | [#264](https://github.com/upfrontIO/livingdocs-framework/pull/264) | [#1475](https://github.com/upfrontIO/livingdocs-planning/issues/1475)
+Server | BREAKING CHANGE, Feature | Upgrade to node 8 and npm > 5.5. [Read more](#upgrade-to-node-8) | [80](https://github.com/livingdocsIO/livingdocs-docker/pull/80), [#73](https://github.com/livingdocsIO/livingdocs-docker/pull/73), [#2f65dfb](https://github.com/livingdocsIO/livingdocs-server/commit/2f65dfb), [#1660](https://github.com/livingdocsIO/livingdocs-server/pull/1660) | -
+Server | BREAKING CHANGE | Remove deprecated methods. [Read more](#remove-deprecated-methods) | [#1659](https://github.com/livingdocsIO/livingdocs-server/pull/1659) | -
+Server | Bugfix | Content fixes for drag'n'drop huGO articles [Read more](#content-fixes-for-drag-n-drop-hugo-articles) | [#1652](https://github.com/livingdocsIO/livingdocs-server/pull/1652) | [#1557](https://github.com/livingdocsIO/livingdocs-planning/issues/1557)
+Server | Feature | Extract routing to top-level feature | [#1667](https://github.com/livingdocsIO/livingdocs-server/pull/1667) | [#1564](https://github.com/livingdocsIO/livingdocs-planning/issues/1564)
+Server | Bugfix | Move devDependencies used in colt helpers into dependencies | [#1671](https://github.com/livingdocsIO/livingdocs-server/pull/1671) | -
+Server | Bugfix | Fix render pipeline api error handling [Read more](#fix-render-pipeline-api-error-handling) | [#1669](https://github.com/livingdocsIO/livingdocs-server/pull/1669) | -
+Server | Feature | Expose `max_tasks_per_worker` config on worker strategy [Read more](#expose-max_tasks_per_worker-config-on-worker-strategy ) | [#4e6791c](https://github.com/livingdocsIO/livingdocs-server/commit/4e6791c) | -
+Server | Improvement | Remove `disableHugoUpdates` check in favor of hugo `updateConditions` [Read more](#remove-disableHugoUpdates-check-in-favor-of-hugo-updateConditions) | [#1661](https://github.com/livingdocsIO/livingdocs-server/pull/1661), [#1559](https://github.com/livingdocsIO/livingdocs-server/pull/1559) | [1046](https://github.com/livingdocsIO/livingdocs-planning/issues/1046)
+Server | Bugfix | Makes migrations 086-087 work again for older releases [Read more](#makes-migrations-086-087-work-again-for-older-releases) | [#4f334d2](https://github.com/livingdocsIO/livingdocs-server/commit/4f334d2) | -
+Server | Bugfix | Allow sorting on keyword filtered ES searches | [#1648](https://github.com/livingdocsIO/livingdocs-server/pull/1648) | [#1518](https://github.com/livingdocsIO/livingdocs-planning/issues/1518)
+Server | BREAKING CHANGE | Remove newrelic support [Read more](remove-newrelic-support) | [#1651](https://github.com/livingdocsIO/livingdocs-server/pull/1651) | -
+Server | Bugfix | Prevent crash on undefined Elasticsearch config | [#1637](https://github.com/livingdocsIO/livingdocs-server/pull/1637) | -
+Server | Feature | Allow upload of SVG images (cropping is disabled in the editor) | [#1313](https://github.com/livingdocsIO/livingdocs-server/pull/1313), [#1635](https://github.com/livingdocsIO/livingdocs-server/pull/1635), [#1671](https://github.com/livingdocsIO/livingdocs-editor/pull/1671) | [#302](https://github.com/livingdocsIO/livingdocs-planning/issues/302)
+Server | Bugfix | Migrate PrintController to object | [#1643](https://github.com/livingdocsIO/livingdocs-server/pull/1643) | -
+Server | Bugfix | Upgrade to ajv@5.0.0 compatible schemas | [#1642](https://github.com/livingdocsIO/livingdocs-server/pull/1642) | -
+Server | Bugfix | Log errors instead of crashing on registration | [#1632](https://github.com/livingdocsIO/livingdocs-server/pull/1632) | [#](https://github.com/livingdocsIO/livingdocs-planning/issues/1468)
+Server, Editor | Feature | New doc include api [Read more](https://docs.livingdocs.io/videos/includes.html) | [#1623](https://github.com/livingdocsIO/livingdocs-server/pull/1623) | [Epic, #1430](https://github.com/livingdocsIO/livingdocs-planning/issues/1430), [#1423](https://github.com/livingdocsIO/livingdocs-planning/issues/1423), [#1655](https://github.com/livingdocsIO/livingdocs-editor/pull/1655)
+Server | Bugfix | Routing fix (fixes "Key not found in database" error) | [#1609](https://github.com/livingdocsIO/livingdocs-server/pull/1609) | [#1380](https://github.com/livingdocsIO/livingdocs-planning/issues/1380)
+Editor | Bugfix | Update twitter embed code matcher | [#1673](https://github.com/livingdocsIO/livingdocs-editor/pull/1673) | [#1515](https://github.com/livingdocsIO/livingdocs-planning/issues/1515)
+Editor | Bugfix | As an editor I would like to see if I'm working on an archived article | [#1669](https://github.com/livingdocsIO/livingdocs-editor/pull/1669) | [#1473](https://github.com/livingdocsIO/livingdocs-planning/issues/1473)
+Editor | Bugfix | The controller with the name 'TasksController' is not registered. | [#1676](https://github.com/livingdocsIO/livingdocs-editor/pull/1676) | [#1481](https://github.com/livingdocsIO/livingdocs-planning/issues/1481)
+Editor | Feature | Limit dropdown items through configuration. [Read more](#limit-dropdown-items-through-configuration) | [#1667](https://github.com/livingdocsIO/livingdocs-editor/pull/1667) | -
+Editor | BREAKING CHANGE, Feature | Upgrade to node 8 and npm > 5.5. | [80](https://github.com/livingdocsIO/livingdocs-docker/pull/80), [#73](https://github.com/livingdocsIO/livingdocs-docker/pull/73), [#1700](https://github.com/livingdocsIO/livingdocs-editor/pull/1700) | -
+Editor | Bugfix | Image caption isn't imported from Hugo. [Read more](#image-caption-isn-t-imported-from-hugo) | [#1714](https://github.com/livingdocsIO/livingdocs-editor/pull/1714) | [#1546](https://github.com/livingdocsIO/livingdocs-planning/issues/1546)
+Editor | Bugfix | Fix embed code line break | [#1705](https://github.com/livingdocsIO/livingdocs-editor/pull/1705) | -
+Editor | Bugfix | Image cropping on the publish panel takes 2 clicks to config | [#1702](https://github.com/livingdocsIO/livingdocs-editor/pull/1702) | [#1533](https://github.com/livingdocsIO/livingdocs-planning/issues/1533)
+Editor | Feature | Extend field extractor for doc-style. [Read more](#extend-field-extractor-for-doc-style) | [#1701](https://github.com/livingdocsIO/livingdocs-editor/pull/1701), [#265](https://github.com/livingdocsIO/livingdocs-framework/pull/265) | [#1531](https://github.com/livingdocsIO/livingdocs-planning/issues/1531)
+Editor | BREAKING CHANGE | Remove Option to Configure the Publish Panel Metadata Forms in the Editor. [Read more](#remove-option-to-configure-the-publish-panel-metadata-forms-in-the-editor) | [#1696](https://github.com/livingdocsIO/livingdocs-editor/pull/1696) | -
+Editor | Bugfix | Order print template and layout by name | [#1664](https://github.com/livingdocsIO/livingdocs-editor/pull/1664) | -
+Editor | Bugfix | Get moment to work with webpack | [#1693](https://github.com/livingdocsIO/livingdocs-editor/pull/1693) | -
+Editor | Bugfix | Fix `getAbsoluteBoundingRect() called on a detached node` | [#1690](https://github.com/livingdocsIO/livingdocs-editor/pull/1690) | [#1137](https://github.com/livingdocsIO/livingdocs-planning/issues/1137)
+Editor | Bugfix | Guard resrc image service call via framework | [#1689](https://github.com/livingdocsIO/livingdocs-editor/pull/1689) | [#1542](https://github.com/livingdocsIO/livingdocs-planning/issues/1542)
+Editor | Bugfix | Fix embed teaser | [#1685](https://github.com/livingdocsIO/livingdocs-editor/pull/1685) | -
+Editor | Feature | Introduce card-based design on the publishing screen [Read more](#introduce-card-based-design-on-the-publishing-screen) | [#1453](https://github.com/livingdocsIO/livingdocs-editor/pull/1453) | [#118](https://github.com/livingdocsIO/livingdocs-planning/issues/118)
+Editor | Bugfix | Fix spellchecker editable event bug | [#1678](https://github.com/livingdocsIO/livingdocs-editor/pull/1678) | [#1516](https://github.com/livingdocsIO/livingdocs-planning/issues/1516)
+Framework | Feature | New imageService for ImageResizer | [#254](https://github.com/livingdocsIO/livingdocs-framework/pull/254) | -
+Editor | Bugfix | Fields from header(catchline,text,lead,author) are not updated in metadata object in publication index if header was deleted in the editor | [#264](https://github.com/livingdocsIO/livingdocs-framework/pull/264) | [#1475](https://github.com/livingdocsIO/livingdocs-planning/issues/1475)
 
 ## In detail
 
@@ -220,7 +220,7 @@ An asynchronous function of a render_pipeline_api should call the callback with 
 
 ### Makes migrations 086-087 work again for older releases
 
-Removes the deprecated `group_projection` and `group_member_projection` tables. They got replaced in migration [#085](https://github.com/upfrontIO/livingdocs-server/blob/master/db/migrations/085-improve-group-projections.js) about 8 months ago. If you're using the regular apis, this doesn't have an impact on your code.
+Removes the deprecated `group_projection` and `group_member_projection` tables. They got replaced in migration [#085](https://github.com/livingdocsIO/livingdocs-server/blob/master/db/migrations/085-improve-group-projections.js) about 8 months ago. If you're using the regular apis, this doesn't have an impact on your code.
 
 ### Remove newrelic support
 
@@ -318,7 +318,7 @@ The resulting markup has the full content object with all styles in `content` an
 ### Remove Option to Configure the Publish Panel Metadata Forms in the Editor
 
 - Removed the option to configure the publish panel metadata forms in the editor (metadata in config/environments/all.coffee is now ignored).
-- Move the metadata form configuration to the server like described here: https://github.com/upfrontIO/livingdocs/blob/master/concepts/metadata/metadata-examples.md#server.
+- Move the metadata form configuration to the server like described here: https://github.com/livingdocsIO/livingdocs/blob/master/concepts/metadata/metadata-examples.md#server.
 
 ### Introduce card-based design on the publishing screen
 
@@ -328,7 +328,7 @@ The resulting markup has the full content object with all styles in `content` an
 
 ### Editor
 
-* [23.0.3](https://github.com/upfrontIO/livingdocs-editor/releases/tag/v23.0.3) - addTask method invocation
+* [23.0.3](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v23.0.3) - addTask method invocation
 
 ### Server
 
