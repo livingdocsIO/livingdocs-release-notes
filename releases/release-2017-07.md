@@ -5,12 +5,12 @@
 
 #### `livingdocs-editor`
 
-- link to the release: https://github.com/upfrontIO/livingdocs-editor/tree/1.0.0-release-17-07
+- link to the release: https://github.com/livingdocsIO/livingdocs-editor/tree/1.0.0-release-17-07
 - livingdocs-framework version: `^7.8.0`
 
 #### `livingdocs-server`
 
-- link to the release: https://github.com/upfrontIO/livingdocs-server/tree/1.0.0-release-17-07
+- link to the release: https://github.com/livingdocsIO/livingdocs-server/tree/1.0.0-release-17-07
 - livingdocs-framework version: `^7.8.0`
 
 #### `livingdocs-framework` 
@@ -21,17 +21,17 @@ version: v7.8.0
 
 Component | Type | Description | PRs | Issues
 --- | --- | --- | --- | ---
-Editor | Bugfix | Server-side metadata changes will be shown in the publish screen | [#1588](https://github.com/upfrontIO/livingdocs-editor/pull/1588), [#1585](https://github.com/upfrontIO/livingdocs-editor/pull/1585) | [#1325](https://github.com/upfrontIO/livingdocs-planning/issues/1325), [#1261](https://github.com/upfrontIO/livingdocs-planning/issues/1261)
-Editor | Bugfix | Teaser image cropping is now applied in srcset definitions | [#1606](https://github.com/upfrontIO/livingdocs-editor/pull/1606) | [#1258](https://github.com/upfrontIO/livingdocs-planning/issues/1258)
-Editor | Improvement | Editor’s default font-size was changed to 14px | [#1587](https://github.com/upfrontIO/livingdocs-editor/pull/1587) | [#1029](https://github.com/upfrontIO/livingdocs-planning/issues/1029)
-Editor | BREAKING CHANGE | This pr removes `grunt` and therefore also `grunt deploy`. [Read more](#remove-grunt-from-editor) | [#1608](https://github.com/upfrontIO/livingdocs-editor/pull/1608) | -
-Editor | Bugfix | Link in List Tool should not be shown while dragging | [#1615](https://github.com/upfrontIO/livingdocs-editor/pull/1615) | [#1224](https://github.com/upfrontIO/livingdocs-planning/issues/1224)
-Editor, Server | Feature | Adapt Print API for WoodWing | [#1611](https://github.com/upfrontIO/livingdocs-editor/pull/1611), [#1567](https://github.com/upfrontIO/livingdocs-server/pull/1567) | -
-Server | Improvement | Redis retries on error | [#1534](https://github.com/upfrontIO/livingdocs-server/pull/1534), [#1530](https://github.com/upfrontIO/livingdocs-server/pull/1530), [#1552](https://github.com/upfrontIO/livingdocs-server/pull/1552) | [#1231](https://github.com/upfrontIO/livingdocs-planning/issues/1231)
-Server | BREAKING CHANGE | Configurable asset and image storage with asset delivery. [Read more](#configurable-asset-and-image-storage) | [#1546](https://github.com/upfrontIO/livingdocs-server/pull/1546) | [#1222](https://github.com/upfrontIO/livingdocs-planning/issues/1222)
-Server | BREAKING CHANGE | Add /designs/:name/:version/:file endpoint. [Read more](#add-designsnameversionfile-endpoint) | [1569](https://github.com/upfrontIO/livingdocs-server/pull/1569) | -
-Server | BREAKING CHANGE | Elasticsearch upgrade from 1.7 to 2.4 [Read more](#elasticsearch-upgrade-from-17-to-24) | [1547](https://github.com/upfrontIO/livingdocs-server/pull/1547) | [#1281](https://github.com/upfrontIO/livingdocs-planning/issues/1281)
-Framework | Bugfix | Image service configuration is correctly merged | [#238](https://github.com/upfrontIO/livingdocs-framework/pull/238) | [#1229](https://github.com/upfrontIO/livingdocs-planning/issues/1229), [#1216](https://github.com/upfrontIO/livingdocs-planning/issues/1216)
+Editor | Bugfix | Server-side metadata changes will be shown in the publish screen | [#1588](https://github.com/livingdocsIO/livingdocs-editor/pull/1588), [#1585](https://github.com/livingdocsIO/livingdocs-editor/pull/1585) | [#1325](https://github.com/livingdocsIO/livingdocs-planning/issues/1325), [#1261](https://github.com/livingdocsIO/livingdocs-planning/issues/1261)
+Editor | Bugfix | Teaser image cropping is now applied in srcset definitions | [#1606](https://github.com/livingdocsIO/livingdocs-editor/pull/1606) | [#1258](https://github.com/livingdocsIO/livingdocs-planning/issues/1258)
+Editor | Improvement | Editor’s default font-size was changed to 14px | [#1587](https://github.com/livingdocsIO/livingdocs-editor/pull/1587) | [#1029](https://github.com/livingdocsIO/livingdocs-planning/issues/1029)
+Editor | BREAKING CHANGE | This pr removes `grunt` and therefore also `grunt deploy`. [Read more](#remove-grunt-from-editor) | [#1608](https://github.com/livingdocsIO/livingdocs-editor/pull/1608) | -
+Editor | Bugfix | Link in List Tool should not be shown while dragging | [#1615](https://github.com/livingdocsIO/livingdocs-editor/pull/1615) | [#1224](https://github.com/livingdocsIO/livingdocs-planning/issues/1224)
+Editor, Server | Feature | Adapt Print API for WoodWing | [#1611](https://github.com/livingdocsIO/livingdocs-editor/pull/1611), [#1567](https://github.com/livingdocsIO/livingdocs-server/pull/1567) | -
+Server | Improvement | Redis retries on error | [#1534](https://github.com/livingdocsIO/livingdocs-server/pull/1534), [#1530](https://github.com/livingdocsIO/livingdocs-server/pull/1530), [#1552](https://github.com/livingdocsIO/livingdocs-server/pull/1552) | [#1231](https://github.com/livingdocsIO/livingdocs-planning/issues/1231)
+Server | BREAKING CHANGE | Configurable asset and image storage with asset delivery. [Read more](#configurable-asset-and-image-storage) | [#1546](https://github.com/livingdocsIO/livingdocs-server/pull/1546) | [#1222](https://github.com/livingdocsIO/livingdocs-planning/issues/1222)
+Server | BREAKING CHANGE | Add /designs/:name/:version/:file endpoint. [Read more](#add-designsnameversionfile-endpoint) | [1569](https://github.com/livingdocsIO/livingdocs-server/pull/1569) | -
+Server | BREAKING CHANGE | Elasticsearch upgrade from 1.7 to 2.4 [Read more](#elasticsearch-upgrade-from-17-to-24) | [1547](https://github.com/livingdocsIO/livingdocs-server/pull/1547) | [#1281](https://github.com/livingdocsIO/livingdocs-planning/issues/1281)
+Framework | Bugfix | Image service configuration is correctly merged | [#238](https://github.com/livingdocsIO/livingdocs-framework/pull/238) | [#1229](https://github.com/livingdocsIO/livingdocs-planning/issues/1229), [#1216](https://github.com/livingdocsIO/livingdocs-planning/issues/1216)
 
 
 ## In Detail
@@ -46,7 +46,7 @@ Framework | Bugfix | Image service configuration is correctly merged | [#238](ht
 ## Configurable asset and image storage
 
 ### Features
-  - We have a new [storage configuration](#user-content-storage-configuration) for files, images & designs. ([7f77fc8e](https://github.com/upfrontIO/livingdocs-server/commit/7f77fc8e))
+  - We have a new [storage configuration](#user-content-storage-configuration) for files, images & designs. ([7f77fc8e](https://github.com/livingdocsIO/livingdocs-server/commit/7f77fc8e))
   - Design Assets are served from the server itself, so you can just put a cdn in front of it and use one of the configured storage backends. To fetch a design asset you can use the url pattern `/designs/:name/:version/assets/:filepath`.
   - Design assets have a default expiration header of 1 year. That value is customizable with the config property `designs.assets.cacheExpiration`.
 
@@ -61,7 +61,7 @@ Framework | Bugfix | Image service configuration is correctly merged | [#238](ht
 ### Breaking Changes
   - Removed `GET /designs/:name/:version/assets` endpoint which listed assets
   - Removed the `lib/s3` file and therefore it's a breaking change for some of our customers which required this internal file. If you're not using `require('@livingdocs/server/lib/s3')`, this doesn't affect you. Please directly use [`aws-sdk`](https://npm.im/aws-sdk) or some [`abstract-blob-store`](https://npm.im/abstract-blob-store) implementation.
-  - Removed `DELETE /designs/:name/:version` because the current document server can't handle deletions of designs. In the near future we'll focus on the design workflow and introduce a new api with most likely a new api. ([5a56c011](https://github.com/upfrontIO/livingdocs-server/commit/5a56c011))
+  - Removed `DELETE /designs/:name/:version` because the current document server can't handle deletions of designs. In the near future we'll focus on the design workflow and introduce a new api with most likely a new api. ([5a56c011](https://github.com/livingdocsIO/livingdocs-server/commit/5a56c011))
   - The storage config change is backwards-compatible as long as the new `storage` property isn't present. So as soon as you update the `all.js` config file, you'll also need to update your secrets. Please have a look at the new storage config below.
 
 ### Storage configuration

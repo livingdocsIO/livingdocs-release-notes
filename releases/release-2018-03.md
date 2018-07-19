@@ -19,7 +19,7 @@ How to require the server in your package.json:
 ```
 
 - Link to the release branch:
-  https://github.com/upfrontIO/livingdocs-server/tree/release-2018-03
+  https://github.com/livingdocsIO/livingdocs-server/tree/release-2018-03
 
 ### Livingdocs Editor
 
@@ -32,7 +32,7 @@ How to require the editor in your package.json:
 ```
 
 - Link to the release branch:
-  https://github.com/upfrontIO/livingdocs-editor/tree/release-2018-03
+  https://github.com/livingdocsIO/livingdocs-editor/tree/release-2018-03
 
 # Highlights
 
@@ -42,7 +42,7 @@ This release introduce multi language support in the Livingdocs core. A more det
 
 The activation of the feature requires a re-index of elasticsearch (including the new mapping): `grunt search-index:document:reset`
 
-[server PR #1881](https://github.com/upfrontIO/livingdocs-server/pull/1881) / [editor PR #1929](https://github.com/upfrontIO/livingdocs-editor/pull/1929)
+[server PR #1881](https://github.com/livingdocsIO/livingdocs-server/pull/1881) / [editor PR #1929](https://github.com/livingdocsIO/livingdocs-editor/pull/1929)
 
 ## Configurable search filter for empty queries on the dashboard :gift: :fire:
 
@@ -71,7 +71,7 @@ filters: {
 This tells the editor to provide `sortBy` -> `-updated_at` in case there is no search query input available.
 
 
-For a more detailed description have a look at the [documentation](https://docs.livingdocs.io/reference-docs/editor-configuration/search-filters.html), the [server PR #1885](https://github.com/upfrontIO/livingdocs-server/pull/1885) and the [editor PR #1939](https://github.com/upfrontIO/livingdocs-editor/pull/1939)
+For a more detailed description have a look at the [documentation](https://docs.livingdocs.io/reference-docs/editor-configuration/search-filters.html), the [server PR #1885](https://github.com/livingdocsIO/livingdocs-server/pull/1885) and the [editor PR #1939](https://github.com/livingdocsIO/livingdocs-editor/pull/1939)
 
 
 ## Project toggle support (alpha) :gift: :fire:
@@ -92,27 +92,27 @@ A user can now switch between 2 or more projects in the Editor. This feature is 
   * `project.default_channel_id` has been renamed to `project.defaultChannelId`
   * `project.config.import_user` has been renamed to `project.importUserId`
 
-For a more detailed description (including deprecations) check the [server PR #1775](https://github.com/upfrontIO/livingdocs-server/pull/1775) and the [editor PR #1787](https://github.com/upfrontIO/livingdocs-editor/pull/1787)
+For a more detailed description (including deprecations) check the [server PR #1775](https://github.com/livingdocsIO/livingdocs-server/pull/1775) and the [editor PR #1787](https://github.com/livingdocsIO/livingdocs-editor/pull/1787)
 
 
 # Other Changes
 
 * UX Improvements
-  * Data dashboard (beta) [#1879](https://github.com/upfrontIO/livingdocs-server/pull/1879) [#1927](https://github.com/upfrontIO/livingdocs-editor/pull/1927) :gift:
-  * Allow image replacement for hugo image drop [#1915](https://github.com/upfrontIO/livingdocs-editor/pull/1915) :gift:
-  * Realtime Progress Bar Positioning [#1890](https://github.com/upfrontIO/livingdocs-editor/pull/1890) :wrench:
+  * Data dashboard (beta) [#1879](https://github.com/livingdocsIO/livingdocs-server/pull/1879) [#1927](https://github.com/livingdocsIO/livingdocs-editor/pull/1927) :gift:
+  * Allow image replacement for hugo image drop [#1915](https://github.com/livingdocsIO/livingdocs-editor/pull/1915) :gift:
+  * Realtime Progress Bar Positioning [#1890](https://github.com/livingdocsIO/livingdocs-editor/pull/1890) :wrench:
 * Chore
-  * Update angular to 1.6.9 [#1823](https://github.com/upfrontIO/livingdocs-editor/pull/1823) :wrench:
-  * Use pusher warnings instead of errors for expected failures [#1888](https://github.com/upfrontIO/livingdocs-editor/pull/1888) :wrench:
-  * Support spaces in directory paths when running tests [#1842](https://github.com/upfrontIO/livingdocs-server/pull/1842) :wrench:
-  * Automatically create the import user if it doesn't exist [#1902](https://github.com/upfrontIO/livingdocs-server/pull/1902) :wrench:
+  * Update angular to 1.6.9 [#1823](https://github.com/livingdocsIO/livingdocs-editor/pull/1823) :wrench:
+  * Use pusher warnings instead of errors for expected failures [#1888](https://github.com/livingdocsIO/livingdocs-editor/pull/1888) :wrench:
+  * Support spaces in directory paths when running tests [#1842](https://github.com/livingdocsIO/livingdocs-server/pull/1842) :wrench:
+  * Automatically create the import user if it doesn't exist [#1902](https://github.com/livingdocsIO/livingdocs-server/pull/1902) :wrench:
 * Bugfixes
-  * Prevent endless redirects  [#1924](https://github.com/upfrontIO/livingdocs-editor/pull/1924) :beetle:
-  * Fix events-publications migration [#1878](https://github.com/upfrontIO/livingdocs-server/pull/1878) :beetle:
-  * Guard for undefined user in revision-history [#1912](https://github.com/upfrontIO/livingdocs-editor/pull/1912) :beetle:
-  * Make content_type on documents and publication events `NOT NULLABLE` [#1855](https://github.com/upfrontIO/livingdocs-server/pull/1855) :beetle:
+  * Prevent endless redirects  [#1924](https://github.com/livingdocsIO/livingdocs-editor/pull/1924) :beetle:
+  * Fix events-publications migration [#1878](https://github.com/livingdocsIO/livingdocs-server/pull/1878) :beetle:
+  * Guard for undefined user in revision-history [#1912](https://github.com/livingdocsIO/livingdocs-editor/pull/1912) :beetle:
+  * Make content_type on documents and publication events `NOT NULLABLE` [#1855](https://github.com/livingdocsIO/livingdocs-server/pull/1855) :beetle:
 * Print
-  * Fixes print layout select for new release [#1909](https://github.com/upfrontIO/livingdocs-editor/pull/1909) :beetle:
+  * Fixes print layout select for new release [#1909](https://github.com/livingdocsIO/livingdocs-editor/pull/1909) :beetle:
 ---
 
   **Icon Legend**

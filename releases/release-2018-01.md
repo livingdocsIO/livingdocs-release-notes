@@ -19,7 +19,7 @@ How to require the server in your package.json:
 ```
 
 - Link to the release branch:
-  https://github.com/upfrontIO/livingdocs-server/tree/release-2018-01
+  https://github.com/livingdocsIO/livingdocs-server/tree/release-2018-01
 
 
 ### Livingdocs Editor
@@ -33,7 +33,7 @@ How to require the editor in your package.json:
 ```
 
 - Link to the release branch:
-  https://github.com/upfrontIO/livingdocs-editor/tree/release-2018-01
+  https://github.com/livingdocsIO/livingdocs-editor/tree/release-2018-01
 
 
 
@@ -307,7 +307,7 @@ import({
 }, callback)
 ```
 
-[Server PR #1696](https://github.com/upfrontIO/livingdocs-server/pull/1696)
+[Server PR #1696](https://github.com/livingdocsIO/livingdocs-server/pull/1696)
 
 
 ## Content Types - Editor :fire:
@@ -320,14 +320,14 @@ But the groups and defaultContent configuration are still loaded from the layout
 
 There is a new filter with type `contentType` that can be used in the dashboard or document searches.
 
-[Editor PR #1759](https://github.com/upfrontIO/livingdocs-editor/pull/1759)
+[Editor PR #1759](https://github.com/livingdocsIO/livingdocs-editor/pull/1759)
 
 
 ## Allow to replace an image by an image drop :gift:
 
 When dragging an image from the file system over an image in the editor the image will replace said image.
 
-[Editor PR #1796](https://github.com/upfrontIO/livingdocs-editor/pull/1796)
+[Editor PR #1796](https://github.com/livingdocsIO/livingdocs-editor/pull/1796)
 
 
 ## Improved document history :gift: :fire:
@@ -354,9 +354,9 @@ The main section of the history is still segmented by day. In addition each day 
 
 We also introduced the restore functionality. You can now restore any old revision. The exception is revisions with an outdated design. Those can still be seen but due to the possibility of conflicts in the design versions, can not be restored.
 
-[Server PR #1762](https://github.com/upfrontIO/livingdocs-server/pull/1762)
+[Server PR #1762](https://github.com/livingdocsIO/livingdocs-server/pull/1762)
 
-[Editor PR #1174](https://github.com/upfrontIO/livingdocs-editor/pull/1774)
+[Editor PR #1174](https://github.com/livingdocsIO/livingdocs-editor/pull/1774)
 
 
 ## Extended design loader configurations :gift: :fire:
@@ -378,7 +378,7 @@ designLoader: {
 }
 ```
 
-For details see the detailed changelog in the [Server PR #1787](https://github.com/upfrontIO/livingdocs-server/pull/1787)
+For details see the detailed changelog in the [Server PR #1787](https://github.com/livingdocsIO/livingdocs-server/pull/1787)
 
 ## Removed `designLoader` module in the editor :fire: :wrench:
 
@@ -391,7 +391,7 @@ in case the server is configured with a different design server.
 This solves a few inconsistencies as previously it was possible to
 load a different design than the one that was cached on the server.
 
-[Editor PR #1803](https://github.com/upfrontIO/livingdocs-editor/pull/1803)
+[Editor PR #1803](https://github.com/livingdocsIO/livingdocs-editor/pull/1803)
 
 
 ## Mark list that have pending changes with a blue dot :gift:
@@ -400,86 +400,86 @@ In the editor lists screen a blue circle is shown for lists with pending changes
 
 In the server the `documentListApi` returns the inbox size of every list.
 
-[Editor PR #1792](https://github.com/upfrontIO/livingdocs-editor/pull/1792)   
-[Server PR #1776](https://github.com/upfrontIO/livingdocs-server/pull/1776)
+[Editor PR #1792](https://github.com/livingdocsIO/livingdocs-editor/pull/1792)   
+[Server PR #1776](https://github.com/livingdocsIO/livingdocs-server/pull/1776)
 
 
 ## Fix the behaviour of read-only mode during collaboration :beetle:
 
-[Editor PR #1791](https://github.com/upfrontIO/livingdocs-editor/pull/1791)
+[Editor PR #1791](https://github.com/livingdocsIO/livingdocs-editor/pull/1791)
 
 
 # Other Changes
 
 * Editor
   * Add visibility config switch for the "transform component" in the side panel
-    [#1793](https://github.com/upfrontIO/livingdocs-editor/pull/1793) :wrench:
+    [#1793](https://github.com/livingdocsIO/livingdocs-editor/pull/1793) :wrench:
   * Show component name when no transformations are available
-    [#1864](https://github.com/upfrontIO/livingdocs-editor/pull/1864) :beetle:
-  * Disable copy button on saving [#1795](https://github.com/upfrontIO/livingdocs-editor/pull/1795) :beetle:
-  * Keep image focus after cropping [#1769](https://github.com/upfrontIO/livingdocs-editor/pull/1769) :beetle:
+    [#1864](https://github.com/livingdocsIO/livingdocs-editor/pull/1864) :beetle:
+  * Disable copy button on saving [#1795](https://github.com/livingdocsIO/livingdocs-editor/pull/1795) :beetle:
+  * Keep image focus after cropping [#1769](https://github.com/livingdocsIO/livingdocs-editor/pull/1769) :beetle:
   * Specify homepage in project settings
-    [#1767](https://github.com/upfrontIO/livingdocs-editor/pull/1767) [#1751](https://github.com/upfrontIO/livingdocs-server/pull/1751) :gift:
+    [#1767](https://github.com/livingdocsIO/livingdocs-editor/pull/1767) [#1751](https://github.com/livingdocsIO/livingdocs-server/pull/1751) :gift:
   * Show user profile in a separate page instead of a modal
-    [#1843](https://github.com/upfrontIO/livingdocs-editor/pull/1843) :wrench:
+    [#1843](https://github.com/livingdocsIO/livingdocs-editor/pull/1843) :wrench:
   * Reduce image flashing when uploading an image
-    [#1829](https://github.com/upfrontIO/livingdocs-editor/pull/1829) :beetle:
+    [#1829](https://github.com/livingdocsIO/livingdocs-editor/pull/1829) :beetle:
   * Provide a better login error message when the server is offline
-    [#1831](https://github.com/upfrontIO/livingdocs-editor/pull/1831) :beetle:
+    [#1831](https://github.com/livingdocsIO/livingdocs-editor/pull/1831) :beetle:
   * Improve positioning of the proofreading box for different designs
-    [#1820](https://github.com/upfrontIO/livingdocs-editor/pull/1820) :beetle:
+    [#1820](https://github.com/livingdocsIO/livingdocs-editor/pull/1820) :beetle:
   * Hide toolbar when editing teaser image
-    [#1841](https://github.com/upfrontIO/livingdocs-editor/pull/1841) :beetle:
+    [#1841](https://github.com/livingdocsIO/livingdocs-editor/pull/1841) :beetle:
   * Fix: anchor links are persisted
-    [#1845](https://github.com/upfrontIO/livingdocs-editor/pull/1845) :beetle:
+    [#1845](https://github.com/livingdocsIO/livingdocs-editor/pull/1845) :beetle:
   * Fix: show unpublished inboxed docs in list screen
-    [#1848](https://github.com/upfrontIO/livingdocs-editor/pull/1848)
+    [#1848](https://github.com/livingdocsIO/livingdocs-editor/pull/1848)
   * Fix: missing list assignment in publish screen
-    [#1850](https://github.com/upfrontIO/livingdocs-editor/pull/1850)
+    [#1850](https://github.com/livingdocsIO/livingdocs-editor/pull/1850)
   * Fix: Drag and Drop in inbox list
-    [#1858](https://github.com/upfrontIO/livingdocs-editor/pull/1858)
+    [#1858](https://github.com/livingdocsIO/livingdocs-editor/pull/1858)
   * Bugfix: Show only a component transformation if there are valid transformations
-    [#1885](https://github.com/upfrontIO/livingdocs-editor/pull/1885) :beetle:
-  * Consider `canReset: true` for a li-meta-slug-form :beetle: https://github.com/upfrontIO/livingdocs-editor/pull/1914
-  * Guard for undefined user in revision history :beetle: https://github.com/upfrontIO/livingdocs-editor/pull/1907
+    [#1885](https://github.com/livingdocsIO/livingdocs-editor/pull/1885) :beetle:
+  * Consider `canReset: true` for a li-meta-slug-form :beetle: https://github.com/livingdocsIO/livingdocs-editor/pull/1914
+  * Guard for undefined user in revision history :beetle: https://github.com/livingdocsIO/livingdocs-editor/pull/1907
 * Elasticsearch
   * make elasticsearch apiVersion configurable
-    [#1754](https://github.com/upfrontIO/livingdocs-server/pull/1754) :gift:
+    [#1754](https://github.com/livingdocsIO/livingdocs-server/pull/1754) :gift:
   * replace top-level filter parameter with post_filter
-    [#1726](https://github.com/upfrontIO/livingdocs-server/pull/1726) :wrench:
+    [#1726](https://github.com/livingdocsIO/livingdocs-server/pull/1726) :wrench:
 * Hooks
   * handle resolveHandle errors
-    [#1766](https://github.com/upfrontIO/livingdocs-server/pull/1766) :beetle:
+    [#1766](https://github.com/livingdocsIO/livingdocs-server/pull/1766) :beetle:
   * publication hooks registration ignores missing projects/channels
-    [#1771](https://github.com/upfrontIO/livingdocs-server/pull/1771) :gift:
+    [#1771](https://github.com/livingdocsIO/livingdocs-server/pull/1771) :gift:
 * Print
   * advanced woodwing infobox
-    [#1710](https://github.com/upfrontIO/livingdocs-server/pull/1710) :gift:
+    [#1710](https://github.com/livingdocsIO/livingdocs-server/pull/1710) :gift:
   * send `<br>` to printAPI
-    [#1746](https://github.com/upfrontIO/livingdocs-server/pull/1746) :wrench:
+    [#1746](https://github.com/livingdocsIO/livingdocs-server/pull/1746) :wrench:
   * set publicationDates period to 30d
-    [#1778](https://github.com/upfrontIO/livingdocs-editor/pull/1778) :wrench:
-  * Fixes print layout select for new release :beetle: https://github.com/upfrontIO/livingdocs-editor/pull/1910
-  * Fix print dialogs after refresh :beetle: https://github.com/upfrontIO/livingdocs-editor/pull/1901
+    [#1778](https://github.com/livingdocsIO/livingdocs-editor/pull/1778) :wrench:
+  * Fixes print layout select for new release :beetle: https://github.com/livingdocsIO/livingdocs-editor/pull/1910
+  * Fix print dialogs after refresh :beetle: https://github.com/livingdocsIO/livingdocs-editor/pull/1901
   
 * Redis
   * use ioredis instead of node-redis
-    [#1773](https://github.com/upfrontIO/livingdocs-server/pull/1773) :wrench:
+    [#1773](https://github.com/livingdocsIO/livingdocs-server/pull/1773) :wrench:
 * Tests
   * Get headless chromium properly to work
-    [#1784](https://github.com/upfrontIO/livingdocs-editor/pull/1784) :beetle:
+    [#1784](https://github.com/livingdocsIO/livingdocs-editor/pull/1784) :beetle:
 * Server
   * Silently skip indexing for publications that have no path
-    [#1824](https://github.com/upfrontIO/livingdocs-server/pull/1824) :beetle:
+    [#1824](https://github.com/livingdocsIO/livingdocs-server/pull/1824) :beetle:
   * Validate image service config
-    [#1820](https://github.com/upfrontIO/livingdocs-server/pull/1820) :wrench:
+    [#1820](https://github.com/livingdocsIO/livingdocs-server/pull/1820) :wrench:
   * Deprecate 'resrc.it' image service
-    [#1820](https://github.com/upfrontIO/livingdocs-server/pull/1820) :wrench:
+    [#1820](https://github.com/livingdocsIO/livingdocs-server/pull/1820) :wrench:
   * Expose origin array to the editor
-    [#1813](https://github.com/upfrontIO/livingdocs-server/pull/1813) :wrench:
-  * /images/upload sets width and height on animated gifs :beetle: https://github.com/upfrontIO/livingdocs-server/pull/1860
-  * Support spaces in directory paths when running tests :wrench: https://github.com/upfrontIO/livingdocs-server/pull/1845
-  * fix: add missing logger object in document feature :beetle: https://github.com/upfrontIO/livingdocs-server/pull/1839
+    [#1813](https://github.com/livingdocsIO/livingdocs-server/pull/1813) :wrench:
+  * /images/upload sets width and height on animated gifs :beetle: https://github.com/livingdocsIO/livingdocs-server/pull/1860
+  * Support spaces in directory paths when running tests :wrench: https://github.com/livingdocsIO/livingdocs-server/pull/1845
+  * fix: add missing logger object in document feature :beetle: https://github.com/livingdocsIO/livingdocs-server/pull/1839
     
 ---
 
