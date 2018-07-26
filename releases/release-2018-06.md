@@ -1,0 +1,149 @@
+**Attention:** If you skipped one or more release, please also check the release-notes of the skipped ones.
+
+# Repositories
+
+This release consists of the following new versions of the `livingdocs-server` and the `livingdocs-editor`:
+
+Package | Version
+--- | ---
+`@livingdocs/server` | `72.5.2`
+`@livingdocs/editor` | `32.3.1`
+
+
+## Livingdocs Server
+
+How to require the server in your package.json:
+
+```json
+"dependencies": {
+  "@livingdocs/server": "72.5.2",
+}
+```
+
+- Link to the release branch:
+  https://github.com/livingdocsIO/livingdocs-server/tree/release-2018-06
+
+
+## Livingdocs Editor
+
+How to require the editor in your package.json:
+
+```json
+"dependencies": {
+  "@livingdocs/editor": "32.3.1",
+}
+```
+
+- Link to the release branch:
+  https://github.com/livingdocsIO/livingdocs-editor/tree/release-2018-06
+
+
+
+
+# Highlights
+
+## Editor Multiselect :gift:
+
+Add multiselect functionality to the editor. In multiselect mode when a component is clicked this component is added to the selection. When a component is clicked again it is removed from the selection. In the sidebar the count of selected components is shown and there is the option to delete all selected components.
+
+Required editor configuration to enable the multiselect feature:
+
+```js
+keyboardShortcuts: {
+      '↓shift': 'start multiselect mode',
+      '↑shift': 'end multiselect mode'
+}
+```
+
+For a more detailed description check the [editor PR #2143](https://github.com/livingdocsIO/livingdocs-editor/pull/2143)
+
+## Show Icon and Description in Component :gift:
+
+Our component list in the sidebar looked too boring. This change enables designer to add icons and descriptions that are shown in the sidebar list of component to add.
+
+Example:
+```html
+<script type="ld-conf">
+{
+  "name": "p"
+  "label": "Paragraph",
+  "iconUrl": "https://livingdocs.io/images/building_blocks_magazine.svg",
+  "description": "Your main writing tool"
+}
+</script>
+
+<p doc-editable="text">
+  foo
+</p>
+```
+
+
+# Breaking Changes :fire:
+
+##  Registration procedure :gift: :fire:
+
+There are two new flags per authentication connections: `loginEnabled` and `registrationEnabled`. The editor won't show the login screen without them.
+
+Auth configuration before:
+```
+auth: {
+  connections: {
+    foo: {
+      enabled: true
+    }
+  }
+}
+```
+Auth configuration after:
+```
+auth: {
+  connections: {
+    foo: {
+      enabled: true,
+      loginEnabled: true,
+      registrationEnabled: true,
+    }
+  }
+}
+```
+
+ For a more detailed description check the [server PR #2010](https://github.com/livingdocsIO/livingdocs-server/pull/2010) | [editor PR #2114](https://github.com/livingdocsIO/livingdocs-editor/pull/2114)
+
+##  Save metadata config :gift: :fire:
+
+Removed property `channel.availableVersions` in the editor.
+This property is not available anymore. It is not used anywhere we know of. Please contact us if you have been using this.
+
+For a more detailed description check the [server PR #1989](https://github.com/livingdocsIO/livingdocs-server/pull/1989) | [editor PR #2076](https://github.com/livingdocsIO/livingdocs-editor/pull/2076) :gift: :fire:
+
+
+
+# Other Changes
+* Features
+  * Set homepage in pages dashboard [editor #2126](https://github.com/livingdocsIO/livingdocs-editor/pull/2126) :gift:
+  * Add push notification search filter [editor #2082](https://github.com/livingdocsIO/livingdocs-editor/pull/2082) :gift:
+* Chore
+  * Basic Cypress End2End Setup [server #2019](https://github.com/livingdocsIO/livingdocs-server/pull/2019) [editor #2122](https://github.com/livingdocsIO/livingdocs-editor/pull/2122) :wrench:
+  * Support Elasticsearch 6 [server #2017](https://github.com/livingdocsIO/livingdocs-server/pull/2017) :wrench:
+  * Add User Config to App Session [editor #2043](https://github.com/livingdocsIO/livingdocs-editor/pull/2043) :wrench:
+* Bugfixes
+  * Fix Document Cleanup Algorithm [server #1980](https://github.com/livingdocsIO/livingdocs-server/pull/1980) :beetle:
+  * Fix insert character when formatting text [editor #2140](https://github.com/livingdocsIO/livingdocs-editor/pull/2140) :beetle:
+  * Improve error message in case a member already exists [editor #2130](https://github.com/livingdocsIO/livingdocs-editor/pull/2130) :beetle:
+  * Fix edit menu [editor #2081](https://github.com/livingdocsIO/livingdocs-editor/pull/2081) :beetle:
+  * Login Bugfix [editor #2079](https://github.com/livingdocsIO/livingdocs-editor/pull/2079) :beetle:
+  * Allow to login users who have no default project set [server #1959](https://github.com/livingdocsIO/livingdocs-server/pull/1959) :beetle:
+  * Only shutdown metrics server if it is listening [server #1964](https://github.com/livingdocsIO/livingdocs-server/pull/1964) :beetle:
+* Service
+  * Support terms signing in signup [server #1988](https://github.com/livingdocsIO/livingdocs-server/pull/1988) [editor #2080](https://github.com/livingdocsIO/livingdocs-editor/pull/2080) :gift:
+  * Metadata plugins API [server #1985](https://github.com/livingdocsIO/livingdocs-server/pull/1985) :gift:
+  * Stop registration when disabled [server #2103](https://github.com/livingdocsIO/livingdocs-server/pull/2103) :gift:
+
+---
+
+**Icon Legend**
+
+* Breaking changes: :fire:
+* Feature: :gift:
+* Bugfix: :beetle:
+* Chore: :wrench:

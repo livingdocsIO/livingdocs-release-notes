@@ -1,7 +1,8 @@
 # Table of Contents
 
-* [May 2018 Release](./releases/release-2018-05.md)
-* [April 2018 Release](./releases/release-2018-04.md)
+* [June 2018 Release](./releases/release-2018-06.md)
+* [May 2018 Release](./releases/release-2018-05.md) (legacy*)
+* [April 2018 Release](./releases/release-2018-04.md) (legacy*)
 * [March 2018 Release](./releases/release-2018-03.md) (legacy*)
 * [February 2018 Release](./releases/release-2018-02.md) (legacy*)
 * [January 2018 Release](./releases/release-2018-01.md) (legacy*)
