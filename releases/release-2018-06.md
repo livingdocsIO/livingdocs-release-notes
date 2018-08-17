@@ -59,7 +59,7 @@ For a more detailed description check the [editor PR #2143](https://github.com/l
 
 ## Show Icon and Description in Component :gift:
 
-Our component list in the sidebar looked too boring. This change enables designer to add icons and descriptions that are shown in the sidebar list of component to add.
+Our component list in the sidebar looked too boring. This change enables designers to add icons and descriptions that are shown in the 'insert components' sidebar.
 
 Example:
 ```html
@@ -82,26 +82,25 @@ Example:
 
 ##  Registration procedure :gift: :fire:
 
-There are two new flags per authentication connections: `loginEnabled` and `registrationEnabled`. The editor won't show the login screen without them.
+There are two new flags per authentication connections: `loginEnabled` and `registrationEnabled`. The editor won't show the respective connection option
+in the login screen without them.
 
-Auth configuration before:
-```
+Server `auth` configuration:
+```js
 auth: {
   connections: {
-    foo: {
-      enabled: true
-    }
-  }
-}
-```
-Auth configuration after:
-```
-auth: {
-  connections: {
-    foo: {
+    // email and password authentication
+    local: {
       enabled: true,
       loginEnabled: true,
-      registrationEnabled: true,
+      registrationEnabled: true
+      //...
+    },
+    github: {
+      enabled: true,
+      loginEnabled: false,
+      registrationEnabled: false
+      // ...
     }
   }
 }
