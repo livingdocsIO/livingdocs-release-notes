@@ -1,3 +1,5 @@
+**Attention:** If you skipped one or more release, please also check the release-notes of the skipped ones.
+
 # Repositories
 
 This release consists of the following new versions of the `livingdocs-server` and the `livingdocs-editor`:

@@ -1,3 +1,4 @@
+**Attention:** If you skipped one or more release, please also check the release-notes of the skipped ones.
 
 ## Repositories
 
