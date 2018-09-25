@@ -38,6 +38,15 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2018-06
 
 
+### Livingdocs Editor Patches
+
+- v32.3.10: Form layout fixes in password reset screen
+- v32.3.11: Webpack build fixes
+- v32.3.12: Properly restore search filter values upon view load
+- v32.3.13: Update the framework in order to fix the regression when resetting the image directive crop.
+- v32.3.14: Revert to in-memory based search for document lists
+- v32.3.15: Respect autoSaveInterval config from server
+- v32.3.16: Fix hugo Article Drop on the dashboard
 
 
 # Highlights
