@@ -40,13 +40,14 @@ How to require the editor in your package.json:
 
 ### Livingdocs Editor Patches
 
-- v32.3.10: Form layout fixes in password reset screen
-- v32.3.11: Webpack build fixes
-- v32.3.12: Properly restore search filter values upon view load
-- v32.3.13: Update the framework in order to fix the regression when resetting the image directive crop.
-- v32.3.14: Revert to in-memory based search for document lists
-- v32.3.15: Respect autoSaveInterval config from server
-- v32.3.16: Fix hugo Article Drop on the dashboard
+- [v32.3.10](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v32.3.10): Form layout fixes in password reset screen
+- [v32.3.11](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v32.3.11): Webpack build fixes
+- [v32.3.12](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v32.3.12): Properly restore search filter values upon view load
+- [v32.3.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v32.3.13): Update the framework in order to fix the regression when resetting the image directive crop.
+- [v32.3.14](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v32.3.14): Revert to in-memory based search for document lists
+- [v32.3.15](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v32.3.15): Respect autoSaveInterval config from server
+- [v32.3.16](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v32.3.16): Fix hugo Article Drop on the dashboard
+- [v32.3.17](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v32.3.17): Fix webpack build (compatibility issue with webpack-cli)
 
 
 # Highlights
