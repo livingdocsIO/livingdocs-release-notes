@@ -9,7 +9,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `75.2.1`
-`@livingdocs/editor` | `34.3.1`
+`@livingdocs/editor` | `34.4.0`
 
 
 ## Livingdocs Server
@@ -23,7 +23,7 @@ How to require the server in your package.json:
 ```
 
 - Link to the release branch:
-  https://github.com/livingdocsIO/livingdocs-server/tree/release-YYYY-MM
+  https://github.com/livingdocsIO/livingdocs-server/tree/release-2018-09
 
 
 ## Livingdocs Editor
@@ -32,21 +32,25 @@ How to require the editor in your package.json:
 
 ```json
 "dependencies": {
-  "@livingdocs/editor": "34.3.1",
+  "@livingdocs/editor": "34.4.0",
 }
 ```
 
 - Link to the release branch:
-  https://github.com/livingdocsIO/livingdocs-editor/tree/release-YYYY-MM
+  https://github.com/livingdocsIO/livingdocs-editor/tree/release-2018-09
 
 
 
 # Highlights
 
-## Document Copy Feature Improvement :gift: :fire:
+## Document Copy Feature :gift: :fire:
 
-... Add a proper description ...
+Since this release, you have some more options to copy a document.
+- create a **copy** with a copy configuration (same as before)
+- create a **simple copy** (without a copy configuration)
+- **transform** a document (the document id is the same, but the content-type can be changed)
 
+If you want to know more, you can read the [documentation](https://github.com/livingdocsIO/livingdocs/pull/193) of the copy feature or look into the related pull requests at the end of this section.
 
 
 #### Breaking Changes
@@ -56,17 +60,56 @@ How to require the editor in your package.json:
 
 
 #### Related Pull Requests
-* Transform Document [livingdocs-server #2092](https://github.com/livingdocsIO/livingdocs-server/pull/2092) :gift:
+* Transform Document PR [livingdocs-editor #2251](https://github.com/livingdocsIO/livingdocs-editor/pull/2251) | [livingdocs-server #2092](https://github.com/livingdocsIO/livingdocs-server/pull/2092)
+* Simple Copy PR [livingdocs-server #2099](https://github.com/livingdocsIO/livingdocs-server/pull/2099)
+* Refactoring PR [livingdocs-server #2081](https://github.com/livingdocsIO/livingdocs-server/pull/2081)
 
 
-* Allow a simple copy (1:1 copy of a content-type without a copy config on the server) [livingdocs-server #2099](https://github.com/livingdocsIO/livingdocs-server/pull/2099) :gift:
+## Metadata References :gift:
 
-* Transform Document [livingdocs-editor #2251](https://github.com/livingdocsIO/livingdocs-editor/pull/2251) :gift:
+This feature adds two new metadata plugins `li-reference` and `li-reference-list` in order to reference entities (at the moment only references of the type `document`).
+
+![set_doc_ref](https://user-images.githubusercontent.com/6567088/43144771-35e4aff4-8f5e-11e8-9760-fecffe7573fb.gif)
+
+**Example of a li-reference configuration**
+
+```js
+{
+    handle: 'author',
+    type: 'li-reference',
+    config: {
+      referenceType: 'document',
+      documentType: 'data-record',
+      contentType: 'author'
+    },
+    ui: {
+      component: 'liMetaReferenceForm',
+      label: 'Author'
+    }
+ }
+```
+
+#### Related Pull Requests
+
+* Documentation of metadata references [livingdocs-editor #2141](https://github.com/livingdocsIO/livingdocs-editor/pull/2141) [livingdocs-server #2030](https://github.com/livingdocsIO/livingdocs-server/pull/2030)
+* Integration in example server [livingdocs-server #2057](https://github.com/livingdocsIO/livingdocs-server/pull/2057)
+* Implementation in project settings [livingdocs-editor #2208](https://github.com/livingdocsIO/livingdocs-editor/pull/2208)
 
 
-* Refactoring: Split Up Document Copy Feature to Support Main Use Cases Better [livingdocs-server #2081](https://github.com/livingdocsIO/livingdocs-server/pull/2081) :wrench:
+## Design Viewer (beta) :gift:
+
+It's still in beta, but worth a look. When you go to "project setup" -> "component library", you can choose a component and
+- enter some text and get a rendered preview
+- see the structure of the component (directives)
+- see the html template
+
+Related PR: [livingdocs-editor #2202](https://github.com/livingdocsIO/livingdocs-editor/pull/2202)
 
 
+
+## Channel and Metadata Administration with the Editor :gift:
+
+In the last 2 months we did huge improvements regarding the channel- and metadata-administration with the editor (for the service). When the UI based power for the configuration increases, maybe it's also interesting for business customers to use this feature.
 
 
 # Breaking Changes :fire:
@@ -133,66 +176,14 @@ Read more at [livingdocs-editor #2253](https://github.com/livingdocsIO/livingdoc
 
 
 # Other Changes
-* Chore
-  * Introduce Content Behavior [livingdocs-editor #2170](https://github.com/livingdocsIO/livingdocs-editor/pull/2170) :gift: :gift: :gift:
-  * Support `--reporter` option in test cli [livingdocs-server #2042](https://github.com/livingdocsIO/livingdocs-server/pull/2042) :wrench:
-  * Throw a MetadataValidationError during autosave [livingdocs-server #2054](https://github.com/livingdocsIO/livingdocs-server/pull/2054) :wrench:
-  * Add component properties styles to styleguide  [livingdocs-editor #2219](https://github.com/livingdocsIO/livingdocs-editor/pull/2219) :chore:
-
-
-* Bugfixes
-  * Support partial document include renders [livingdocs-server #2086](https://github.com/livingdocsIO/livingdocs-server/pull/2086) :beetle:
-  * allow default handle set by editor [livingdocs-server #2078](https://github.com/livingdocsIO/livingdocs-server/pull/2078) :beetle:
-  * Fix multiselect [livingdocs-server #2075](https://github.com/livingdocsIO/livingdocs-server/pull/2075) :beetle:
-  * Fix of Hugo Article Drag & Drop [livingdocs-server #2113](https://github.com/livingdocsIO/livingdocs-server/pull/2113) :beetle:
-  * metadataFormArrangement to metadataProperty compatibility check [livingdocs-server #2100](https://github.com/livingdocsIO/livingdocs-server/pull/2100) :beetle:
-  * Fix: Always enable channel configs feature [livingdocs-server #2107](https://github.com/livingdocsIO/livingdocs-server/pull/2107) :beetle:
-  * Fix token mask [livingdocs-editor #2147](https://github.com/livingdocsIO/livingdocs-editor/pull/2147) :beetle:
-  * Fix dependencies requirement [livingdocs-editor #2196](https://github.com/livingdocsIO/livingdocs-editor/pull/2196) :beetle: :gift:
-  * Fix NZZ logo styles  [livingdocs-editor #2239](https://github.com/livingdocsIO/livingdocs-editor/pull/2239) :beetle:
-  * Create content-types with title and teaserImage [livingdocs-editor #2230](https://github.com/livingdocsIO/livingdocs-editor/pull/2230) :beetle:
-  * Fix to show a pusher error again with wrong credentials [livingdocs-editor #2234](https://github.com/livingdocsIO/livingdocs-editor/pull/2234) :beetle:
-
-
-* Print
-  * adds authors and editor to print export [livingdocs-server #2037](https://github.com/livingdocsIO/livingdocs-server/pull/2037) :gift:
-  * fix(print): escaping special characters in title for hugo. Added additional metadata to print section on export to hugo [livingdocs-server #2105](https://github.com/livingdocsIO/livingdocs-server/pull/2105) :beetle:
-
-
-* Channel config v2
-  * Allow to rewrite the channel config [livingdocs-server #2066](https://github.com/livingdocsIO/livingdocs-server/pull/2066) :gift:
-  * feat: li-enum metadata plugin now supports a dataProvider config [livingdocs-server #2040](https://github.com/livingdocsIO/livingdocs-server/pull/2040) :gift:
-  * Added channel config publish event [livingdocs-server #2029](https://github.com/livingdocsIO/livingdocs-server/pull/2029) :gift:
-  * extend schema for contentType.editor [livingdocs-server #2091](https://github.com/livingdocsIO/livingdocs-server/pull/2091) :gift:
-  * Channel config diff improvements [livingdocs-server #2080](https://github.com/livingdocsIO/livingdocs-server/pull/2080) :gift:
-  * Support language configuration through the editor [livingdocs-server #2071](https://github.com/livingdocsIO/livingdocs-server/pull/2071) :gift:
-  * Fix: li-string-list / li-numeric-list metadata plugins [livingdocs-server #2063](https://github.com/livingdocsIO/livingdocs-server/pull/2063) :beetle:
-  * Fix the compatibility of the metadata plugin property 'label' between channelConfig v1 and v2 [livingdocs-server #2073](https://github.com/livingdocsIO/livingdocs-server/pull/2073) :beetle:
-  * Fix channel config diff [livingdocs-server #2072](https://github.com/livingdocsIO/livingdocs-server/pull/2072) :beetle:
-
 
 * Features
-  * Design viewer [livingdocs-editor #2202](https://github.com/livingdocsIO/livingdocs-editor/pull/2202) :gift:
-  * Feat/admin project details [livingdocs-editor #2237](https://github.com/livingdocsIO/livingdocs-editor/pull/2237) :gift:
-
-
-
   * admin-project-details: aggregate documents by content_type [livingdocs-server #2084](https://github.com/livingdocsIO/livingdocs-server/pull/2084) :gift:
   * Improve Multiselect [livingdocs-editor #2227](https://github.com/livingdocsIO/livingdocs-editor/pull/2227) :gift:
   * allow autoSaveInterval to be configurable [livingdocs-server #2061](https://github.com/livingdocsIO/livingdocs-server/pull/2061) :gift:
   * Allow for Array in Content Type Filter [livingdocs-server #2094](https://github.com/livingdocsIO/livingdocs-server/pull/2094) :gift:
   * Change the default language handle [livingdocs-server #2093](https://github.com/livingdocsIO/livingdocs-server/pull/2093) :gift:
-
-
-
-* Testing
-  * re-add author for e2e tests [livingdocs-server #2090](https://github.com/livingdocsIO/livingdocs-server/pull/2090) :wrench:
-  * Remove old author plugin in the e2e seeding [livingdocs-server #2089](https://github.com/livingdocsIO/livingdocs-server/pull/2089) :wrench:
-  * Increase content type limit [livingdocs-server #2109](https://github.com/livingdocsIO/livingdocs-server/pull/2109) :wrench:
-  * fix magazine setup for cypress tests [livingdocs-server #2104](https://github.com/livingdocsIO/livingdocs-server/pull/2104) :beetle:
-  * Set CI env for cypress editor tests [livingdocs-server #2103](https://github.com/livingdocsIO/livingdocs-server/pull/2103) :wrench:
-  * Fix Cypress Tests [livingdocs-editor #2242](https://github.com/livingdocsIO/livingdocs-editor/pull/2242) :gift:
-
+  * Feat/admin project details [livingdocs-editor #2237](https://github.com/livingdocsIO/livingdocs-editor/pull/2237) :gift:
 
 
 * UX/Design
@@ -211,13 +202,6 @@ Read more at [livingdocs-editor #2253](https://github.com/livingdocsIO/livingdoc
   * Improve Menu UI [livingdocs-editor #2266](https://github.com/livingdocsIO/livingdocs-editor/pull/2266) :gift:
 
 
-* Metadata References
-  * Add form for li-metadata-references [livingdocs-editor #2208](https://github.com/livingdocsIO/livingdocs-editor/pull/2208) :gift:
-  * Integrate references in example server [livingdocs-server #2057](https://github.com/livingdocsIO/livingdocs-server/pull/2057) :gift:
-  * Metadata References [livingdocs-server #2030](https://github.com/livingdocsIO/livingdocs-server/pull/2030) :gift:
-  * Metadata References [livingdocs-editor #2141](https://github.com/livingdocsIO/livingdocs-editor/pull/2141) :gift:
-
-
 * Metadata Administration
   * Client side validation [livingdocs-editor #2165](https://github.com/livingdocsIO/livingdocs-editor/pull/2165) :gift:
   * Fix: li-integer metadata property service / validation [livingdocs-editor #2144](https://github.com/livingdocsIO/livingdocs-editor/pull/2144) :beetle:
@@ -233,6 +217,53 @@ Read more at [livingdocs-editor #2253](https://github.com/livingdocsIO/livingdoc
   * feat: support metadata plugin configurationUi.disableSelection [livingdocs-editor #2224](https://github.com/livingdocsIO/livingdocs-editor/pull/2224) :gift:
   * Make language handle read-only [livingdocs-editor #2249](https://github.com/livingdocsIO/livingdocs-editor/pull/2249) :gift:
   * Feat: Handle metadata validation errors on autosave [livingdocs-editor #2198](https://github.com/livingdocsIO/livingdocs-editor/pull/2198) :beetle:
+
+
+* Channel Config v2
+  * Allow to rewrite the channel config [livingdocs-server #2066](https://github.com/livingdocsIO/livingdocs-server/pull/2066) :gift:
+  * feat: li-enum metadata plugin now supports a dataProvider config [livingdocs-server #2040](https://github.com/livingdocsIO/livingdocs-server/pull/2040) :gift:
+  * Added channel config publish event [livingdocs-server #2029](https://github.com/livingdocsIO/livingdocs-server/pull/2029) :gift:
+  * extend schema for contentType.editor [livingdocs-server #2091](https://github.com/livingdocsIO/livingdocs-server/pull/2091) :gift:
+  * Channel config diff improvements [livingdocs-server #2080](https://github.com/livingdocsIO/livingdocs-server/pull/2080) :gift:
+  * Support language configuration through the editor [livingdocs-server #2071](https://github.com/livingdocsIO/livingdocs-server/pull/2071) :gift:
+  * Fix: li-string-list / li-numeric-list metadata plugins [livingdocs-server #2063](https://github.com/livingdocsIO/livingdocs-server/pull/2063) :beetle:
+  * Fix the compatibility of the metadata plugin property 'label' between channelConfig v1 and v2 [livingdocs-server #2073](https://github.com/livingdocsIO/livingdocs-server/pull/2073) :beetle:
+  * Fix channel config diff [livingdocs-server #2072](https://github.com/livingdocsIO/livingdocs-server/pull/2072) :beetle:
+
+
+* Print
+  * adds authors and editor to print export [livingdocs-server #2037](https://github.com/livingdocsIO/livingdocs-server/pull/2037) :gift:
+  * fix(print): escaping special characters in title for hugo. Added additional metadata to print section on export to hugo [livingdocs-server #2105](https://github.com/livingdocsIO/livingdocs-server/pull/2105) :beetle:
+
+
+* Bugfixes
+  * Support partial document include renders [livingdocs-server #2086](https://github.com/livingdocsIO/livingdocs-server/pull/2086) :beetle:
+  * allow default handle set by editor [livingdocs-server #2078](https://github.com/livingdocsIO/livingdocs-server/pull/2078) :beetle:
+  * Fix multiselect [livingdocs-server #2075](https://github.com/livingdocsIO/livingdocs-server/pull/2075) :beetle:
+  * Fix of Hugo Article Drag & Drop [livingdocs-server #2113](https://github.com/livingdocsIO/livingdocs-server/pull/2113) :beetle:
+  * metadataFormArrangement to metadataProperty compatibility check [livingdocs-server #2100](https://github.com/livingdocsIO/livingdocs-server/pull/2100) :beetle:
+  * Fix: Always enable channel configs feature [livingdocs-server #2107](https://github.com/livingdocsIO/livingdocs-server/pull/2107) :beetle:
+  * Fix token mask [livingdocs-editor #2147](https://github.com/livingdocsIO/livingdocs-editor/pull/2147) :beetle:
+  * Fix dependencies requirement [livingdocs-editor #2196](https://github.com/livingdocsIO/livingdocs-editor/pull/2196) :beetle: :gift:
+  * Fix NZZ logo styles  [livingdocs-editor #2239](https://github.com/livingdocsIO/livingdocs-editor/pull/2239) :beetle:
+  * Create content-types with title and teaserImage [livingdocs-editor #2230](https://github.com/livingdocsIO/livingdocs-editor/pull/2230) :beetle:
+  * Fix to show a pusher error again with wrong credentials [livingdocs-editor #2234](https://github.com/livingdocsIO/livingdocs-editor/pull/2234) :beetle:
+
+
+* Testing
+  * re-add author for e2e tests [livingdocs-server #2090](https://github.com/livingdocsIO/livingdocs-server/pull/2090) :wrench:
+  * Remove old author plugin in the e2e seeding [livingdocs-server #2089](https://github.com/livingdocsIO/livingdocs-server/pull/2089) :wrench:
+  * Increase content type limit [livingdocs-server #2109](https://github.com/livingdocsIO/livingdocs-server/pull/2109) :wrench:
+  * fix magazine setup for cypress tests [livingdocs-server #2104](https://github.com/livingdocsIO/livingdocs-server/pull/2104) :beetle:
+  * Set CI env for cypress editor tests [livingdocs-server #2103](https://github.com/livingdocsIO/livingdocs-server/pull/2103) :wrench:
+  * Fix Cypress Tests [livingdocs-editor #2242](https://github.com/livingdocsIO/livingdocs-editor/pull/2242) :gift:
+
+
+* Chore
+  * Introduce Content Behavior [livingdocs-editor #2170](https://github.com/livingdocsIO/livingdocs-editor/pull/2170) :gift: :gift: :gift:
+  * Support `--reporter` option in test cli [livingdocs-server #2042](https://github.com/livingdocsIO/livingdocs-server/pull/2042) :wrench:
+  * Throw a MetadataValidationError during autosave [livingdocs-server #2054](https://github.com/livingdocsIO/livingdocs-server/pull/2054) :wrench:
+  * Add component properties styles to styleguide  [livingdocs-editor #2219](https://github.com/livingdocsIO/livingdocs-editor/pull/2219) :chore:
 
 
   ---
