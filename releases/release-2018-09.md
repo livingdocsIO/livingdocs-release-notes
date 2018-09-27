@@ -9,7 +9,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `75.2.1`
-`@livingdocs/editor` | `34.4.0`
+`@livingdocs/editor` | `34.4.1`
 
 
 ## Livingdocs Server
@@ -32,7 +32,7 @@ How to require the editor in your package.json:
 
 ```json
 "dependencies": {
-  "@livingdocs/editor": "34.4.0",
+  "@livingdocs/editor": "34.4.1",
 }
 ```
 
@@ -107,9 +107,20 @@ Related PR: [livingdocs-editor #2202](https://github.com/livingdocsIO/livingdocs
 
 
 
-## Channel and Metadata Administration with the Editor :gift:
+## Service Features - Channel + Metadata Administration :gift:
 
-In the last 2 months we did huge improvements regarding the channel- and metadata-administration with the editor (for the service). When the UI based power for the configuration increases, maybe it's also interesting for business customers to use this feature.
+We made huge improvements regarding the channel- and metadata-administration with the editor. Maybe at some point it's interesting for business customers to use this feature.
+
+Some of the features are
+- create and configure content types in the editor
+- create and configure metadata fields in the editor
+- create and configure multi-language - handle documents in multiple languages within one project
+
+You can find all related changes at the "Other Changes - Metadata Administration / Channel Config v2" section.
+
+## Mobile Support - Version 1
+
+Livingdocs can now be fully used on a tablet and has full read support on phones. The changes can be found at the UX/Design section.
 
 
 # Breaking Changes :fire:
