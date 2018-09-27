@@ -48,6 +48,7 @@ How to require the editor in your package.json:
 - [v32.3.15](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v32.3.15): Respect autoSaveInterval config from server
 - [v32.3.16](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v32.3.16): Fix hugo Article Drop on the dashboard
 - [v32.3.17](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v32.3.17): Fix webpack build (compatibility issue with webpack-cli)
+- [v32.3.18](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v32.3.18): Always show custom login if configured
 
 
 # Highlights
