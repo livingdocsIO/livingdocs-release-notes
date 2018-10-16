@@ -9,7 +9,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `75.2.1`
-`@livingdocs/editor` | `34.4.1`
+`@livingdocs/editor` | `34.4.5`
 
 
 ## Livingdocs Server
@@ -32,7 +32,7 @@ How to require the editor in your package.json:
 
 ```json
 "dependencies": {
-  "@livingdocs/editor": "34.4.1",
+  "@livingdocs/editor": "34.4.5",
 }
 ```
 
