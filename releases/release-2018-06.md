@@ -49,6 +49,10 @@ How to require the editor in your package.json:
 - [v32.3.16](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v32.3.16): Fix hugo Article Drop on the dashboard
 - [v32.3.17](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v32.3.17): Fix webpack build (compatibility issue with webpack-cli)
 - [v32.3.18](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v32.3.18): Always show custom login if configured
+- [v32.3.19](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v32.3.19): lists: Fix the debounce of the list search
+- [v32.3.20](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v32.3.20): Backport: Document History: Return “Today” instead of hours
+
+
 
 
 # Highlights
