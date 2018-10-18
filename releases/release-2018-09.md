@@ -134,8 +134,8 @@ This change improves the speed and reliability of (re)indexing documents to elas
 ```js
 redis: {
   // Simple configuration (HA redis cluster can be found in PR 2009)
-  host: process.env.redis_host || 'localhost',
-  port: process.env.redis_port || 6379,
+  host: process.env.redis__host || 'localhost',
+  port: process.env.redis__port || 6379,
 }
 ```
 
