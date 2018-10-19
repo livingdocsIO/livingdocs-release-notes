@@ -28,11 +28,11 @@ How to require the server in your package.json:
 
 ### Livingdocs Server Patches
 
-- [v75.2.1](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v75.2.1): hugo: return res.error(err) in error case
-- [v75.2.2](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v75.2.2): routing: Fix bug and leanup routing arguments & storage
-- [v75.2.3](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v75.2.3): routing: There is a document route checker that wasnt update to the recent routing change
-- [v75.2.4](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v75.2.4): routing: Use correct document route path on routes checker
-- [v75.2.5](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v75.2.5): revisions: pass layout property by default at /revisions
+- [v75.2.1](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.2.1): hugo: return res.error(err) in error case
+- [v75.2.2](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.2.2): routing: Fix bug and leanup routing arguments & storage
+- [v75.2.3](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.2.3): routing: There is a document route checker that wasnt update to the recent routing change
+- [v75.2.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.2.4): routing: Use correct document route path on routes checker
+- [v75.2.5](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.2.5): revisions: pass layout property by default at /revisions
 
 
 ## Livingdocs Editor
