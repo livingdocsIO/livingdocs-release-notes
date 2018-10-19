@@ -24,6 +24,15 @@ How to require the server in your package.json:
 
 - Link to the release branch:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2018-09
+  
+
+### Livingdocs Server Patches
+
+- [v75.2.1](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v75.2.1): hugo: return res.error(err) in error case
+- [v75.2.2](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v75.2.2): routing: Fix bug and leanup routing arguments & storage
+- [v75.2.3](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v75.2.3): routing: There is a document route checker that wasnt update to the recent routing change
+- [v75.2.4](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v75.2.4): routing: Use correct document route path on routes checker
+- [v75.2.5](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v75.2.5): revisions: pass layout property by default at /revisions
 
 
 ## Livingdocs Editor
@@ -38,6 +47,15 @@ How to require the editor in your package.json:
 
 - Link to the release branch:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2018-09
+  
+### Livingdocs Editor Patches
+
+- [v34.4.2](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.2): always show alternative logins if they are configured
+- [v34.4.3](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.3): adjust font size
+- [v34.4.4](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.4): adjust title in editor iframe
+- [v34.4.5](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.5): lists: fix the debounce of the list search
+- [v34.4.6](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.6): history: return “Today” instead of hours from now for a date without time / do not show a revision restore option when the content-type is different
+- [v34.4.7](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.7): Disable watcher on dist directory
 
 
 
