@@ -213,6 +213,7 @@ Read more at [livingdocs-editor #2253](https://github.com/livingdocsIO/livingdoc
   * Allow for Array in Content Type Filter [livingdocs-server #2094](https://github.com/livingdocsIO/livingdocs-server/pull/2094) :gift:
   * Change the default language handle [livingdocs-server #2093](https://github.com/livingdocsIO/livingdocs-server/pull/2093) :gift:
   * Feat/admin project details [livingdocs-editor #2237](https://github.com/livingdocsIO/livingdocs-editor/pull/2237) :gift:
+  * Copy from dashboard [livingdocs-editor #2268](https://github.com/livingdocsIO/livingdocs-editor/pull/2268) :gift:
 
 
 * UX/Design
