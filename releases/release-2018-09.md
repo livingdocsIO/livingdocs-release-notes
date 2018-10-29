@@ -56,6 +56,10 @@ How to require the editor in your package.json:
 - [v34.4.5](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.5): lists: fix the debounce of the list search
 - [v34.4.6](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.6): history: return “Today” instead of hours from now for a date without time / do not show a revision restore option when the content-type is different
 - [v34.4.7](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.7): Disable watcher on dist directory
+- [v34.4.8](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.8): fix key edge cases in editor / immediately save on going to dashboar
+- [v34.4.9](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.9): do not check filter.id for active filter state
+- [v34.4.10](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.10): fix create print article
+- [v34.4.11](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.11): show content-type in history
 
 
 
