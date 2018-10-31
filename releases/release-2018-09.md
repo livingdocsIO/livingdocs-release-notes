@@ -8,8 +8,8 @@ This release consists of the following new versions of the `livingdocs-server` a
 
 Package | Version
 --- | ---
-`@livingdocs/server` | `75.2.5`
-`@livingdocs/editor` | `34.4.7`
+`@livingdocs/server` | `75.2.6`
+`@livingdocs/editor` | `34.4.12`
 
 
 ## Livingdocs Server
@@ -18,7 +18,7 @@ How to require the server in your package.json:
 
 ```json
 "dependencies": {
-  "@livingdocs/server": "75.2.5",
+  "@livingdocs/server": "75.2.6",
 }
 ```
 
@@ -33,6 +33,7 @@ How to require the server in your package.json:
 - [v75.2.3](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.2.3): routing: There is a document route checker that wasnt update to the recent routing change
 - [v75.2.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.2.4): routing: Use correct document route path on routes checker
 - [v75.2.5](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.2.5): revisions: pass layout property by default at /revisions
+- [v75.2.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.2.6): add property disableEditTitleAtToolbar to the content-type config
 
 
 ## Livingdocs Editor
@@ -41,7 +42,7 @@ How to require the editor in your package.json:
 
 ```json
 "dependencies": {
-  "@livingdocs/editor": "34.4.7",
+  "@livingdocs/editor": "34.4.12",
 }
 ```
 
