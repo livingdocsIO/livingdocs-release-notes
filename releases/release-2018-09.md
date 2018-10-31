@@ -60,6 +60,7 @@ How to require the editor in your package.json:
 - [v34.4.9](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.9): do not check filter.id for active filter state
 - [v34.4.10](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.10): fix create print article
 - [v34.4.11](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.11): show content-type in history
+- [v34.4.12](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.12): Add flag to disable editing the document title at the toolbar
 
 
 
