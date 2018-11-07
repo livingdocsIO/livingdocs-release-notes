@@ -210,6 +210,16 @@ metadata: [{
 Read more at [livingdocs-editor #2253](https://github.com/livingdocsIO/livingdocs-editor/pull/2253)
 
 
+## Store editor user settings in the session store by default :fire:
+
+Breaking Change: filters are stored per tab now by default.
+
+To keep the current behavior where filter state is shared between tabs use the following editor config option:
+```
+app: {
+  userPreferencesStore: 'localstore' // default: 'sessionstore'
+}
+```
 
 # Other Changes
 
