@@ -1,6 +1,7 @@
 # Table of Contents
 
-* [September 2018 Release](./releases/release-2018-09.md)
+* [November 2018 Release](./releases/release-2018-11.md)
+* [September 2018 Release](./releases/release-2018-09.md) (legacy*)
 * [June 2018 Release](./releases/release-2018-06.md) (legacy*)
 * [May 2018 Release](./releases/release-2018-05.md) (legacy*)
 * [April 2018 Release](./releases/release-2018-04.md) (legacy*)
