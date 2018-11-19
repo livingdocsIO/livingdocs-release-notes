@@ -1,36 +1,41 @@
 
 **Attention:** If you skipped one or more release, please also check the release-notes of the skipped ones.
 # Repositories
+
 This release consists of the following new versions of the `livingdocs-server` and the `livingdocs-editor`:
+
 Package | Version
 --- | ---
-`@livingdocs/server` | `??.?.?`
-`@livingdocs/editor` | `??.?.?`
+`@livingdocs/server` | `75.9.0`
+`@livingdocs/editor` | `35.15.2`
+
 ## Livingdocs Server
 How to require the server in your package.json:
+
 ```json
 "dependencies": {
-  "@livingdocs/server": "??.?.?",
+  "@livingdocs/server": "75.9.0",
 }
 ```
 - Link to the release branch:
-  https://github.com/livingdocsIO/livingdocs-server/tree/release-YYYY-MM
+  https://github.com/livingdocsIO/livingdocs-server/tree/release-2018-11
 
 ### Livingdocs Server Patches
-- [v??.?.?](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v??.?.?): text
+- [v75.9.0](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.0): version bump
 
 ## Livingdocs Editor
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "??.?.?",
+  "@livingdocs/editor": "35.15.2",
 }
 ```
 - Link to the release branch:
-  https://github.com/livingdocsIO/livingdocs-editor/tree/release-YYYY-MM
+  https://github.com/livingdocsIO/livingdocs-editor/tree/release-2018-11
 
 ### Livingdocs Editor Patches
-- [v??.?.?](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v??.?.?): text
+- [v35.15.2](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.2): nanoid: replace nanoid with generate
+- [v35.15.1](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.1): fix Thumbnail of copied image
 
 # Highlights
 
