@@ -34,58 +34,99 @@ How to require the editor in your package.json:
 
 # Highlights
 
-* Features
-  * Copy Component - MVP [livingdocs-editor #2312](https://github.com/livingdocsIO/livingdocs-editor/pull/2312) :gift:
+## Comments :gift:
 
+...description will follow...
 
-BREAKING
-* Replace webpack-dev-server with a custom node server [livingdocs-editor #2264](https://github.com/livingdocsIO/livingdocs-editor/pull/2264) :gift:
-
-Comment
-* Highlight comments [livingdocs-editor #2301](https://github.com/livingdocsIO/livingdocs-editor/pull/2301) -- wait for updated PR notes --:gift:
-* Comments [livingdocs-server #2139](https://github.com/livingdocsIO/livingdocs-server/pull/2139) :gift:
-* --- add this to the description? --- Read comments from mock [livingdocs-editor #2236](https://github.com/livingdocsIO/livingdocs-editor/pull/2236) :gift:
+* Related Pull Requests
+  * [livingdocs-editor #2301](https://github.com/livingdocsIO/livingdocs-editor/pull/2301)
 
 
 
+## Copy Component :gift:
+
+With an enabled 'Copy Component' feature it's possible to copy and paste components to the editor.
+
+Workflow:
+- Click on a component in the editor
+- Click on `copy` at the sidebar
+- Go to the clipboard
+- Drag and drop the copied component into the editor
+
+When trying to drop a component, you get immediate feedback when drop zones are not allowed with a reason.
 
 
+#### Enable copy component feature
 
-## EXAMPLE !!!!!!!!!!!!!!!!!!! Editor Multiselect :gift:
-Add multiselect functionality to the editor. In multiselect mode when a component is clicked this component is added to the selection. When a component is clicked again it is removed from the selection. In the sidebar the count of selected components is shown and there is the option to delete all selected components.
-Required editor configuration to enable the multiselect feature:
-```js
-keyboardShortcuts: {
-      '↓shift': 'start multiselect mode',
-      '↑shift': 'end multiselect mode'
-}
-```
-For a more detailed description check the [editor PR #2143](https://github.com/livingdocsIO/livingdocs-editor/pull/2143)
-# Breaking Changes :fire:
-## EXAMPLE !!!!!!!!!!!!!!!!!!! Registration procedure :gift: :fire:
-There are two new flags per authentication connections: `loginEnabled` and `registrationEnabled`.
-The editor won't show the respective connection option in the login screen without them.
-Server `auth` configuration:
-```js
-auth: {
-  connections: {
-    // email and password authentication
-    local: {
-      enabled: true,
-      loginEnabled: true,
-      registrationEnabled: true
-      //...
-    },
-    github: {
-      enabled: true,
-      loginEnabled: false,
-      registrationEnabled: false
-      // ...
+To enable the copy component feature add `componentCopyEnabled` to your editor environment config, e.g.
+
+```all.js
+modules.exports: {
+  app: {
+    copy: {
+      componentCopyEnabled: true
     }
   }
 }
 ```
- For a more detailed description check the [server PR #2010](https://github.com/livingdocsIO/livingdocs-server/pull/2010) | [editor PR #2114](https://github.com/livingdocsIO/livingdocs-editor/pull/2114)
+
+* Related Pull Requests
+  * [livingdocs-editor #2312](https://github.com/livingdocsIO/livingdocs-editor/pull/2312)
+
+
+
+# Breaking Changes :fire:
+
+
+##  Replaced Webpack Dev-server with a custom node server :gift: :fire:
+
+This change migrated from a traditional webpack setup to a custom node server with built in webpack support. Build scripts are now provided as an executable (`bin`) to the downstream. You can run `./node_modules/.bin/livingdocs-editor watch` or `./node_modules/.bin/liivngdocs-editor build` in the downstreams to run the dev server or build the final docker container.
+
+### Migration guide
+
+#### How to require the editor config.
+
+```javascript
+// old approach was requiring the config via the index file
+const config = require('../../../../config')
+
+// new approach is to require the config via appConfig
+const config = require('appConfig')
+```
+
+#### How to build a docker container
+```bash
+# previous setup, all dev dependencies were deployed to production
+docker build -t livingdocs-editor:production .
+docker run livingdocs-editor:production npm test
+
+# new setup, only the minimal dependencies are deployed to production
+docker build -t livingdocs-editor:test .
+docker run livingdocs-editor:test npm test
+docker run -v $PWD/bundle:/app/bundle livingdocs-editor:test npm run build
+docker build -t livingdocs-editor:production ./bundle
+```
+
+#### Changes in package.json
+
+* :fire: Renamed `DIST_PATH` to `DIST_DIR`
+* :fire: Renamed `CONFIG_PATH ` to `CONFIG_DIR`
+* :fire: Removed `ROOT_PATH` without replacement
+* :fire: Replaced `npm explore @livingdocs/editor -- npm run build` with a build and watch script.
+
+```javascript
+// old approach at the scripts sections of package.json
+"build": "DIST_PATH=$PWD/dist CUSTOM_PATH=$PWD/app/editor.js CONFIG_PATH=$PWD/config EDITOR_STYLE_PATH=$PWD/app/styles/editor-styles.scss ROOT_PATH=$PWD npm explore @livingdocs/editor -- npm run build",
+"start": "DIST_PATH=$PWD/dist CUSTOM_PATH=$PWD/app/editor.js CONFIG_PATH=$PWD/config EDITOR_STYLE_PATH=$PWD/app/styles/editor-styles.scss ROOT_PATH=$PWD npm explore @livingdocs/editor -- npm run start",
+"build:environment": "DIST_PATH=$PWD/dist CUSTOM_PATH=$PWD/app/editor.js CONFIG_PATH=$PWD/config EDITOR_STYLE_PATH=$PWD/app/styles/editor-styles.scss ROOT_PATH=$PWD npm explore @livingdocs/editor -- npm run build:environment",
+
+// new approach at the scripts sections of package.json
+"build": "CUSTOM_PATH=./app/editor.js EDITOR_STYLE_PATH=./app/styles/editor-styles.scss livingdocs-editor build",
+"start": "CUSTOM_PATH=./app/editor.js EDITOR_STYLE_PATH=./app/styles/editor-styles.scss livingdocs-editor watch",
+```
+
+For test instructions, build instructions and supported environment variables and more check the detailed description at the [livingdocs-editor #2264](https://github.com/livingdocsIO/livingdocs-editor/pull/2264).
+
 
 
 # Other Changes
