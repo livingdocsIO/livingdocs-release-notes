@@ -82,11 +82,49 @@ modules.exports: {
 
 # Breaking Changes :fire:
 
-## Mandatory actions
+## Migrate the database
 
 ```sh
 # run grunt migrate to update to the newest database scheme
 grunt migrate
+```
+
+## Teaser images
+
+### Update custom elasticsearch document mapping
+When using a custom elasticsearch document mapping (the mapping can be found at `search: metadata_mapping` usually in the all environment config), and you used teaser images at the publish screen, the elasticsearch mapping of the corresponding field needs to be updated with a `ratio` property.
+
+```
+"teaserImage": {
+  "properties": {
+    "crops": {
+      "properties": {
+        ...,
+        "ratio": {
+          "type": "double",
+          "index": "not_analyzed"
+        }
+      }
+    }
+  }
+}
+```
+
+After adding `ratio` to the mapping, execute `grunt search-index:document` during deployment to update the mapping.
+
+### Update custom metadata plugins
+
+When using a custom image metadata plugin, instead of the default `li-image` plugin, it's needed to set `behaveAsLiImage: true` to your metadata config for backwards compatibility, e.g.
+
+```
+metadata: 
+    teaserImage: {
+      plugin: 'my-custom-image-plugin',
+      config: {
+        behaveAsLiImage: true
+      }
+    }
+}
 ```
 
 
