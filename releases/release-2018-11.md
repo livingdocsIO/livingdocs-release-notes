@@ -21,7 +21,11 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2018-11
 
 ### Livingdocs Server Patches
+- [v75.9.2](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.2): metadata: integrate custom teaser image for testing
+- [v75.9.1](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.1): image-processing: Catch newer imagemagic error message when applying the image-processing on an invalid image
 - [v75.9.0](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.0): version bump
+
+
 
 ## Livingdocs Editor
 How to require the editor in your package.json:
@@ -34,6 +38,8 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2018-11
 
 ### Livingdocs Editor Patches
+- [v35.15.4](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.4): Integrate custom teaser image for testing
+- [v35.15.3](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.3): signup: Get rid of error messages caused by redirects
 - [v35.15.2](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.2): nanoid: replace nanoid with generate
 - [v35.15.1](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.1): fix Thumbnail of copied image
 
