@@ -82,6 +82,13 @@ modules.exports: {
 
 # Breaking Changes :fire:
 
+## Mandatory actions
+
+```sh
+# run grunt migrate to update to the newest database scheme
+grunt migrate
+```
+
 
 ##  Replaced Webpack Dev-server with a custom node server :gift: :fire:
 
