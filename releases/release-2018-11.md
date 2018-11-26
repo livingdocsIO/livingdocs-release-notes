@@ -47,7 +47,7 @@ How to require the editor in your package.json:
 
 ## Comments :gift:
 
-...description will follow...
+You can now add comment threads to text of a document. The comment threads can have replies to allow for discussions directly in the editor. You can edit or delete your own replies and comment threads can be resolved to indicate that they have been addressed. We hope you can use comments in a variety of ways to improve your workflows and would love feedback how you use them and how they can be improved.
 
 * Related Pull Requests
   * [livingdocs-editor #2301](https://github.com/livingdocsIO/livingdocs-editor/pull/2301)
@@ -123,7 +123,7 @@ After adding `ratio` to the mapping, execute `grunt search-index:document` durin
 When using a custom image metadata plugin, instead of the default `li-image` plugin, it's needed to set `behaveAsLiImage: true` to your metadata config for backwards compatibility, e.g.
 
 ```
-metadata: 
+metadata:
     teaserImage: {
       plugin: 'my-custom-image-plugin',
       config: {
