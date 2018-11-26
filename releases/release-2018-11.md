@@ -21,6 +21,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2018-11
 
 ### Livingdocs Server Patches
+- [v75.9.3](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.3): indexer: Set the correct user and creation timestamp on an indexed document
 - [v75.9.2](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.2): metadata: integrate custom teaser image for testing
 - [v75.9.1](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.1): image-processing: Catch newer imagemagic error message when applying the image-processing on an invalid image
 - [v75.9.0](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.0): version bump
