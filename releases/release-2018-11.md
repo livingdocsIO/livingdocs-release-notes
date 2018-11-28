@@ -6,15 +6,15 @@ This release consists of the following new versions of the `livingdocs-server` a
 
 Package | Version
 --- | ---
-`@livingdocs/server` | `75.9.0`
-`@livingdocs/editor` | `35.15.2`
+`@livingdocs/server` | `75.9.3`
+`@livingdocs/editor` | `35.15.4`
 
 ## Livingdocs Server
 How to require the server in your package.json:
 
 ```json
 "dependencies": {
-  "@livingdocs/server": "75.9.0",
+  "@livingdocs/server": "75.9.3",
 }
 ```
 - Link to the release branch:
@@ -32,7 +32,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "35.15.2",
+  "@livingdocs/editor": "35.15.4",
 }
 ```
 - Link to the release branch:
@@ -41,7 +41,7 @@ How to require the editor in your package.json:
 ### Livingdocs Editor Patches
 - [v35.15.4](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.4): Integrate custom teaser image for testing
 - [v35.15.3](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.3): signup: Get rid of error messages caused by redirects
-- [v35.15.2](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.2): nanoid: replace nanoid with generate
+- [v35.15.2](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.2): fix broken menu tool
 - [v35.15.1](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.1): fix Thumbnail of copied image
 
 # Highlights
@@ -57,7 +57,7 @@ You can now add comment threads to text of a document. The comment threads can h
 
 ## Copy Component :gift:
 
-With an enabled 'Copy Component' feature it's possible to copy and paste components to the editor.
+With an enabled 'Copy Component' feature it's possible to copy component or sets of components in a document or across different documents.
 
 Workflow:
 - Click on a component in the editor
@@ -87,12 +87,30 @@ modules.exports: {
 
 
 
+## Improved server admin screens :gift:
+
+You have now a lot more information on the server admin screen like
+- create date of a user
+- identity of the user (SSO or mail)
+- user login graph
+
+For a description of all additions check the related pull requests.
+
+* Related Pull Requests
+  * [livingdocs-editor #2372](https://github.com/livingdocsIO/livingdocs-editor/pull/2372)
+  * [livingdocs-server #2134](https://github.com/livingdocsIO/livingdocs-server/pull/2134)
+
+
+
+
 # Breaking Changes :fire:
 
 ## Migrate the database
 
 ```sh
 # run grunt migrate to update to the newest database scheme
+# migration - 111-add-comments-table.js
+#   create comments table + add events to the stream_events_types table
 grunt migrate
 ```
 
@@ -137,7 +155,7 @@ metadata:
 
 ##  Replaced Webpack Dev-server with a custom node server :gift: :fire:
 
-This change migrated from a traditional webpack setup to a custom node server with built in webpack support. Build scripts are now provided as an executable (`bin`) to the downstream. You can run `./node_modules/.bin/livingdocs-editor watch` or `./node_modules/.bin/liivngdocs-editor build` in the downstreams to run the dev server or build the final docker container.
+This change migrated from a traditional webpack setup to a custom node server with built in webpack support. The consequence is to have a much faster build cycle. The build scripts are now provided as an executable (`bin`) to the downstream. You can run `./node_modules/.bin/livingdocs-editor watch` or `./node_modules/.bin/liivngdocs-editor build` in the downstreams to run the dev server or build the final docker container.
 
 ### Migration guide
 
@@ -192,6 +210,7 @@ For test instructions, build instructions and supported environment variables an
   * Make sign-up responsive [livingdocs-editor #2360](https://github.com/livingdocsIO/livingdocs-editor/pull/2360) :gift:
   * Design component library [livingdocs-editor #2318](https://github.com/livingdocsIO/livingdocs-editor/pull/2318) :gift:
   * Brush up our public documentation [livingdocs-editor #2392](https://github.com/livingdocsIO/livingdocs-editor/pull/2392) :gift:
+  * Implement undo/redo in toolbar [livingdocs-editor #2381](https://github.com/livingdocsIO/livingdocs-editor/pull/2381) :gift:
 
 * Improvements
   * Support Escape key to close modal windows [livingdocs-editor #2336](https://github.com/livingdocsIO/livingdocs-editor/pull/2336) :gift:
@@ -202,15 +221,13 @@ For test instructions, build instructions and supported environment variables an
   * No check for id for an active filter [livingdocs-editor #2364](https://github.com/livingdocsIO/livingdocs-editor/pull/2364) :gift:
 
 * Server Administration
-  * Improve server admin screens [livingdocs-editor #2372](https://github.com/livingdocsIO/livingdocs-editor/pull/2372)  [livingdocs-server #2134](https://github.com/livingdocsIO/livingdocs-server/pull/2134) :wrench:
-  * Show links to kibana usage statistics at the admin section [livingdocs-editor #2382](https://github.com/livingdocsIO/livingdocs-editor/pull/2382) :wrench:
   * don’t show filtered users [livingdocs-editor #2378](https://github.com/livingdocsIO/livingdocs-editor/pull/2378)  [livingdocs-server #2146](https://github.com/livingdocsIO/livingdocs-server/pull/2146)
    :wrench:
 
 * Service
   * add delete button to content type menu in project settings [livingdocs-editor #2216](https://github.com/livingdocsIO/livingdocs-editor/pull/2216) :gift:
   * Configure imageRatios in li-image metadata form [livingdocs-editor #2238](https://github.com/livingdocsIO/livingdocs-editor/pull/2238) :gift:
-  * Fix service signup [livingdocs-editor #2328](https://github.com/livingdocsIO/livingdocs-editor/pull/2328)  [livingdocs-server #2128](https://github.com/livingdocsIO/livingdocs-server/pull/2128) :gift:
+  * Introduction of SSO logins [livingdocs-editor #2328](https://github.com/livingdocsIO/livingdocs-editor/pull/2328)  [livingdocs-server #2128](https://github.com/livingdocsIO/livingdocs-server/pull/2128) :gift:
 
 
 * Bugfixes
