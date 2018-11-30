@@ -63,7 +63,7 @@ How to require the editor in your package.json:
 - [v34.4.11](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.11): show content-type in history
 - [v34.4.12](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.12): Add flag to disable editing the document title at the toolbar
 - [v34.4.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.13): remove type check for title property
-
+- [v34.4.14](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.14): copy: fix print->print copy fix regular->print copy
 
 
 # Highlights
