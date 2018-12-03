@@ -14,7 +14,7 @@ How to require the server in your package.json:
 
 ```json
 "dependencies": {
-  "@livingdocs/server": "75.9.3",
+  "@livingdocs/server": "75.9.5",
 }
 ```
 - Link to the release branch:
@@ -33,7 +33,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "35.15.4",
+  "@livingdocs/editor": "35.15.6",
 }
 ```
 - Link to the release branch:
