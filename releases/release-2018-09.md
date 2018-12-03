@@ -34,6 +34,8 @@ How to require the server in your package.json:
 - [v75.2.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.2.4): routing: Use correct document route path on routes checker
 - [v75.2.5](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.2.5): revisions: pass layout property by default at /revisions
 - [v75.2.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.2.6): add property disableEditTitleAtToolbar to the content-type config
+- [75.2.12](https://github.com/livingdocsIO/livingdocs-server/releases/tag/75.2.12): Add ethinking as a possible new provider for push notifications (alternative to firebase)
+
 
 
 ## Livingdocs Editor
@@ -64,6 +66,7 @@ How to require the editor in your package.json:
 - [v34.4.12](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.12): Add flag to disable editing the document title at the toolbar
 - [v34.4.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.13): remove type check for title property
 - [v34.4.14](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.14): copy: fix print->print copy fix regular->print copy
+- [v34.4.15](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.15): Add support for push platforms for push notifications
 
 
 # Highlights
