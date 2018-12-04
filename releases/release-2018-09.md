@@ -9,7 +9,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `75.2.6`
-`@livingdocs/editor` | `34.4.13`
+`@livingdocs/editor` | `34.4.16`
 
 
 ## Livingdocs Server
@@ -44,7 +44,7 @@ How to require the editor in your package.json:
 
 ```json
 "dependencies": {
-  "@livingdocs/editor": "34.4.13",
+  "@livingdocs/editor": "34.4.16",
 }
 ```
 
@@ -67,6 +67,7 @@ How to require the editor in your package.json:
 - [v34.4.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.13): remove type check for title property
 - [v34.4.14](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.14): copy: fix print->print copy fix regular->print copy
 - [v34.4.15](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.15): Add support for push platforms for push notifications
+- [v34.4.16](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.16): Enable character count for print mode
 
 
 # Highlights
