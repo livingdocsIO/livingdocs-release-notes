@@ -6,7 +6,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 
 Package | Version
 --- | ---
-`@livingdocs/server` | `75.9.5`
+`@livingdocs/server` | `75.9.6`
 `@livingdocs/editor` | `35.15.10`
 
 ## Livingdocs Server
@@ -14,13 +14,14 @@ How to require the server in your package.json:
 
 ```json
 "dependencies": {
-  "@livingdocs/server": "75.9.5",
+  "@livingdocs/server": "75.9.6",
 }
 ```
 - Link to the release branch:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2018-11
 
 ### Livingdocs Server Patches
+- [v75.9.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.6): Add 'not_content_type' Filter
 - [v75.9.5](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.5): Push notifications: add support for ethinking as a possible provider.
 - [v75.9.3](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.3): indexer: Set the correct user and creation timestamp on an indexed document
 - [v75.9.2](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.2): metadata: integrate custom teaser image for testing
