@@ -7,7 +7,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `75.9.5`
-`@livingdocs/editor` | `35.15.6`
+`@livingdocs/editor` | `35.15.10`
 
 ## Livingdocs Server
 How to require the server in your package.json:
@@ -33,13 +33,18 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "35.15.6",
+  "@livingdocs/editor": "35.15.10",
 }
 ```
 - Link to the release branch:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2018-11
 
 ### Livingdocs Editor Patches
+
+- [v35.15.10](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.10): Improve the pick of a cached server image for travis
+- [v35.15.9](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.9): fix regular->print copy
+- [v35.15.8](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.8): enable character count for print mode
+- [v35.15.7](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.7): use the correct server image for the cypress tests
 - [v35.15.6](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.6): Add support for push platforms for push notifications
 - [v35.15.4](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.4): Integrate custom teaser image for testing
 - [v35.15.3](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.3): signup: Get rid of error messages caused by redirects
