@@ -31,7 +31,6 @@ How to require the server in your package.json:
   
 
 ### Livingdocs Server Patches
-
 - [v75.2.13](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.2.13): fix: push patch info to release-notes
 - [v75.2.12](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.2.12): Add ethinking as a possible new provider for push notifications (alternative to firebase)
 - [v75.2.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.2.6): add property disableEditTitleAtToolbar to the content-type config
@@ -57,7 +56,6 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2018-09
   
 ### Livingdocs Editor Patches
-
 - [v34.4.2](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.2): always show alternative logins if they are configured
 - [v34.4.3](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.3): adjust font size
 - [v34.4.4](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.4): adjust title in editor iframe
