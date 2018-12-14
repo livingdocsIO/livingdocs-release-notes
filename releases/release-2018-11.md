@@ -23,7 +23,8 @@ How to require the server in your package.json:
 
 ### Livingdocs Server Patches
 
-- [v75.9.7](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.7): fix: push patch info to release-notes- [v75.9.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.6): Add 'not_content_type' Filter
+- [v75.9.7](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.7): fix: push patch info to release-notes
+- [v75.9.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.6): Add 'not_content_type' Filter
 - [v75.9.5](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.5): Push notifications: add support for ethinking as a possible provider.
 - [v75.9.3](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.3): indexer: Set the correct user and creation timestamp on an indexed document
 - [v75.9.2](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.2): metadata: integrate custom teaser image for testing
