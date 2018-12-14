@@ -43,7 +43,6 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2018-11
 
 ### Livingdocs Editor Patches
-
 - [v35.15.10](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.10): Improve the pick of a cached server image for travis
 - [v35.15.9](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.9): fix regular->print copy
 - [v35.15.8](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.8): enable character count for print mode
