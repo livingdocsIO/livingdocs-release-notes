@@ -33,10 +33,6 @@ How to require the server in your package.json:
 ### Livingdocs Server Patches
 
 - [v75.2.13](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.2.13): fix: push patch info to release-notes
-
-- [v75.2.13](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.2.13): fix: push patch info to release-notes
-
-- [v75.2.13](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.2.13): fix: push patch info to release-notes
 - [v75.2.12](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.2.12): Add ethinking as a possible new provider for push notifications (alternative to firebase)
 - [v75.2.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.2.6): add property disableEditTitleAtToolbar to the content-type config
 - [v75.2.5](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.2.5): revisions: pass layout property by default at /revisions
