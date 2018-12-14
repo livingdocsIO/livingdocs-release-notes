@@ -1,5 +1,6 @@
 
 
+
 **Attention:** If you skipped one or more release, please also check the release-notes of the skipped ones.
 
 # Repositories
@@ -8,7 +9,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 
 Package | Version
 --- | ---
-`@livingdocs/server` | `75.2.6`
+`@livingdocs/server` | `v75.2.13`
 `@livingdocs/editor` | `34.4.16`
 
 
@@ -18,7 +19,7 @@ How to require the server in your package.json:
 
 ```json
 "dependencies": {
-  "@livingdocs/server": "75.2.6",
+  "@livingdocs/server": "v75.2.13",
 }
 ```
 
@@ -27,6 +28,8 @@ How to require the server in your package.json:
   
 
 ### Livingdocs Server Patches
+
+- [v75.2.13](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.2.13): fix: push patch info to release-notes
 
 - [v75.2.1](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.2.1): hugo: return res.error(err) in error case
 - [v75.2.2](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.2.2): routing: Fix bug and leanup routing arguments & storage
