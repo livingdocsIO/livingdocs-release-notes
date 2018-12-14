@@ -1,5 +1,6 @@
 
 
+
 **Attention:** If you skipped one or more release, please also check the release-notes of the skipped ones.
 # Repositories
 
@@ -8,7 +9,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `v75.9.7`
-`@livingdocs/editor` | `35.15.10`
+`@livingdocs/editor` | `v35.15.13`
 
 ## Livingdocs Server
 How to require the server in your package.json:
@@ -36,13 +37,14 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "35.15.10",
+  "@livingdocs/editor": "v35.15.13",
 }
 ```
 - Link to the release branch:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2018-11
 
 ### Livingdocs Editor Patches
+- [v35.15.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.13): fix: remove extension to be able to start the server again on ci
 - [v35.15.10](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.10): Improve the pick of a cached server image for travis
 - [v35.15.9](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.9): fix regular->print copy
 - [v35.15.8](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.8): enable character count for print mode
