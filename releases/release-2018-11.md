@@ -1,6 +1,7 @@
 
 
 
+
 **Attention:** If you skipped one or more release, please also check the release-notes of the skipped ones.
 # Repositories
 
@@ -44,6 +45,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2018-11
 
 ### Livingdocs Editor Patches
+- [v35.15.14](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.14): fix(comments): sort resolved comments by updated date
 - [v35.15.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.13): fix: remove extension to be able to start the server again on ci
 - [v35.15.10](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.10): Improve the pick of a cached server image for travis
 - [v35.15.9](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.9): fix regular->print copy
