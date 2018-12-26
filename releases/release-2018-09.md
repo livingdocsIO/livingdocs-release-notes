@@ -5,6 +5,7 @@
 
 
 
+
 **Attention:** If you skipped one or more release, please also check the release-notes of the skipped ones.
 
 # Repositories
@@ -14,7 +15,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `v75.2.13`
-`@livingdocs/editor` | `34.4.16`
+`@livingdocs/editor` | `v34.4.19`
 
 
 ## Livingdocs Server
@@ -50,7 +51,7 @@ How to require the editor in your package.json:
 
 ```json
 "dependencies": {
-  "@livingdocs/editor": "34.4.16",
+  "@livingdocs/editor": "v34.4.19",
 }
 ```
 
@@ -58,6 +59,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2018-09
   
 ### Livingdocs Editor Patches
+- [v34.4.19](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.19): chore(readme): trigger status checks, semantic release hang up
 - [v34.4.2](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.2): always show alternative logins if they are configured
 - [v34.4.3](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.3): adjust font size
 - [v34.4.4](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.4): adjust title in editor iframe
