@@ -2,6 +2,7 @@
 
 
 
+
 **Attention:** If you skipped one or more release, please also check the release-notes of the skipped ones.
 # Repositories
 
@@ -24,6 +25,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2018-11
 
 ### Livingdocs Server Patches
+- [v75.9.8](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.8): test(menu): updateMenuItem with target (uri ref, external)
 - [v75.9.7](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.7): fix: push patch info to release-notes
 - [v75.9.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.6): Add 'not_content_type' Filter
 - [v75.9.5](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.5): Push notifications: add support for ethinking as a possible provider.
