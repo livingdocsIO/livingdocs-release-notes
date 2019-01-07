@@ -6,6 +6,7 @@
 
 
 
+
 **Attention:** If you skipped one or more release, please also check the release-notes of the skipped ones.
 
 # Repositories
@@ -33,6 +34,7 @@ How to require the server in your package.json:
   
 
 ### Livingdocs Server Patches
+- [v75.2.15](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.2.15): test(push): add notificationParams config for ethinking
 - [v75.2.14](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.2.14): chore(ci): use local integration file
 - [v75.2.13](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.2.13): fix: push patch info to release-notes
 - [v75.2.12](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.2.12): Add ethinking as a possible new provider for push notifications (alternative to firebase)
