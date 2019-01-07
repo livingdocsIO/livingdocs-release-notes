@@ -15,7 +15,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 
 Package | Version
 --- | ---
-`@livingdocs/server` | `v75.2.13`
+`@livingdocs/server` | `v75.2.15`
 `@livingdocs/editor` | `v34.4.19`
 
 
@@ -25,7 +25,7 @@ How to require the server in your package.json:
 
 ```json
 "dependencies": {
-  "@livingdocs/server": "v75.2.13",
+  "@livingdocs/server": "v75.2.15",
 }
 ```
 
