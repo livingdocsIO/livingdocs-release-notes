@@ -62,21 +62,22 @@ How to require the editor in your package.json:
   
 ### Livingdocs Editor Patches
 - [v34.4.19](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.19): chore(readme): trigger status checks, semantic release hang up
-- [v34.4.2](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.2): always show alternative logins if they are configured
-- [v34.4.3](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.3): adjust font size
-- [v34.4.4](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.4): adjust title in editor iframe
-- [v34.4.5](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.5): lists: fix the debounce of the list search
-- [v34.4.6](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.6): history: return “Today” instead of hours from now for a date without time / do not show a revision restore option when the content-type is different
-- [v34.4.7](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.7): Disable watcher on dist directory
-- [v34.4.8](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.8): fix key edge cases in editor / immediately save on going to dashboar
-- [v34.4.9](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.9): do not check filter.id for active filter state
-- [v34.4.10](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.10): fix create print article
-- [v34.4.11](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.11): show content-type in history
-- [v34.4.12](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.12): Add flag to disable editing the document title at the toolbar
-- [v34.4.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.13): remove type check for title property
-- [v34.4.14](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.14): copy: fix print->print copy fix regular->print copy
-- [v34.4.15](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.15): Add support for push platforms for push notifications
 - [v34.4.16](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.16): Enable character count for print mode
+- [v34.4.15](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.15): Add support for push platforms for push notifications
+- [v34.4.14](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.14): copy: fix print->print copy fix regular->print copy
+- [v34.4.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.13): remove type check for title property
+- [v34.4.12](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.12): Add flag to disable editing the document title at the toolbar
+- [v34.4.11](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.11): show content-type in history
+- [v34.4.10](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.10): fix create print article
+- [v34.4.9](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.9): do not check filter.id for active filter state
+- [v34.4.8](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.8): fix key edge cases in editor / immediately save on going to dashboar
+- [v34.4.7](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.7): Disable watcher on dist directory
+- [v34.4.6](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.6): history: return “Today” instead of hours from now for a date without time / do not show a revision restore option when the content-type is different
+- [v34.4.5](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.5): lists: fix the debounce of the list search
+- [v34.4.4](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.4): adjust title in editor iframe
+- [v34.4.3](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.3): adjust font size
+- [v34.4.2](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v34.4.2): always show alternative logins if they are configured
+
 
 
 # Highlights
