@@ -6,6 +6,7 @@
 
 
 
+
 **Attention:** If you skipped one or more release, please also check the release-notes of the skipped ones.
 # Repositories
 
@@ -52,6 +53,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2018-11
 
 ### Livingdocs Editor Patches
+- [v35.15.16](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.16): fix(comments): add config options
 - [v35.15.15](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.15): fix(menu): show menu item options in case an optional value was set
 - [v35.15.14](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.14): fix(comments): sort resolved comments by updated date
 - [v35.15.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.13): fix: remove extension to be able to start the server again on ci
