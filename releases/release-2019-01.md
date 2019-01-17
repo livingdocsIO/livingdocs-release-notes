@@ -67,9 +67,7 @@ To enable the do not disturb mode, add this code snippet to your metadata config
 
 * Related Pull Requests
   * [editor PR #2455](https://github.com/livingdocsIO/livingdocs-editor/pull/2455)
-  * [server PR #2230](https://github.com/livingdocsIO/livingdocs-server/pull/2230)
   * [documentation PR #203](https://github.com/livingdocsIO/livingdocs/pull/203)
-  * [editor PR fix #2467](https://github.com/livingdocsIO/livingdocs-editor/pull/2467)
 
 
 
@@ -106,12 +104,12 @@ Introduce a structural view of the document (tree view) in the split panel that 
 ## Migrate the database
 
 ```sh
-# run grunt migrate to update to the newest database scheme
+# run livingdocs-server migrate up to update to the newest database scheme
 # migration - 112-add-event-type-content-type-view-after-document-creation-updated.js
 #   add event ContentTypeViewAfterDocumentCreationUpdated to the stream_events_types table
 # migration - 113-add-event-type-content-type-document-creation-disabled-updated.js
 #   add event ContentTypeDocumentCreationDisabledUpdated to the stream_events_types table
-grunt migrate
+livingdocs-server migrate up
 ```
 
 
@@ -124,7 +122,7 @@ grunt migrate
   * New configs options
     * Add option to disable image upload [livingdocs-editor #2466](https://github.com/livingdocsIO/livingdocs-editor/pull/2466) :gift:
     * Add option to go to publish screen after document creation [livingdocs-server #2221](https://github.com/livingdocsIO/livingdocs-server/pull/2221) [livingdocs-editor #2451](https://github.com/livingdocsIO/livingdocs-editor/pull/2451) :gift:
-    * Add option `documentCreationDisabled` to control the document creation workflow [livingdocs-server #2220](https://github.com/livingdocsIO/livingdocs-server/pull/2220) [livingdocs-editor #2448](https://github.com/livingdocsIO/livingdocs-editor/pull/2448) :gift:
+    * Add option `documentCreationDisabled` to disallow creating new documents of a contentType in the editor [livingdocs-server #2220](https://github.com/livingdocsIO/livingdocs-server/pull/2220) [livingdocs-editor #2448](https://github.com/livingdocsIO/livingdocs-editor/pull/2448) :gift:
     * Add option `notContentType` to control search filter [livingdocs-editor #2439](https://github.com/livingdocsIO/livingdocs-editor/pull/2439) [livingdocs-server #2210](https://github.com/livingdocsIO/livingdocs-server/pull/2210) :gift:
     * Push Notifications: add support for ethinking as provider [livingdocs-server #2178](https://github.com/livingdocsIO/livingdocs-server/pull/2178) :gift:
 * Improvements
