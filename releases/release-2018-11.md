@@ -84,6 +84,18 @@ A failing `getStatus` during `getPreview` would lead to the print preview call n
 
 You can now add comment threads to text of a document. The comment threads can have replies to allow for discussions directly in the editor. You can edit or delete your own replies and comment threads can be resolved to indicate that they have been addressed. We hope you can use comments in a variety of ways to improve your workflows and would love feedback how you use them and how they can be improved.
 
+#### Enable comments feature
+
+To enable the comments feature add `useComments` to your editor environment config, e.g.
+
+```all.js
+modules.exports: {
+  app: {
+    useComments: true
+  }
+}
+```
+
 * Related Pull Requests
   * [livingdocs-editor #2301](https://github.com/livingdocsIO/livingdocs-editor/pull/2301)
 
