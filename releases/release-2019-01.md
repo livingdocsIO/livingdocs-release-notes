@@ -1,5 +1,6 @@
 
 
+
 **Attention:** If you skipped one or more release, please also check the release-notes of the skipped ones.
 
 # Repositories
@@ -41,6 +42,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-01
 
 ### Livingdocs Editor Patches
+- [v35.24.3](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.24.3): fix: improve softlock button styles
 - [v35.24.2](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.24.2): fix: opposite logic for documentCreationDisabled used
 - [v35.24.1](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.24.1): package: update nanoid to version 2.0.1
 - [v35.24.0](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.24.0): images: improve image url validation
