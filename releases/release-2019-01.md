@@ -1,6 +1,7 @@
 
 
 
+
 **Attention:** If you skipped one or more release, please also check the release-notes of the skipped ones.
 
 # Repositories
@@ -24,6 +25,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2019-01
 
 ### Livingdocs Server Patches
+- [v75.17.3](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.17.3): fix(logging): Use the correct object to pick properties
 - [v75.17.2](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.17.2): indexing: Fix query by epochTime in indexing api
 - [v75.17.1](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.17.1): prometheus: Properly listen to event on metricsServer.once
 - [v75.17.0](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.17.0): document-indexing: Fix search-index task
