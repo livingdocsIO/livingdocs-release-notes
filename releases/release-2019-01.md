@@ -9,6 +9,7 @@
 
 
 
+
 **Attention:** If you skipped one or more release, please also check the release-notes of the skipped ones.
 
 # Repositories
@@ -32,6 +33,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2019-01
 
 ### Livingdocs Server Patches
+- [v75.17.7](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.17.7): fix(s3): Fix the s3 configs to support a custom http agent
 - [v75.17.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.17.6): fix(print-api): Add documentId to export fixed copySourceId
 - [v75.17.5](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.17.5): fix: Remove `assert-node-version.js` from postinstall script as it's causing issues. We'll need to show a warning on server start instead of doing it on install.
 - [v75.17.3](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.17.3): fix(logging): Use the correct object to pick properties
