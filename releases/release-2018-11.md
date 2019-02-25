@@ -13,6 +13,7 @@
 
 
 
+
 **Attention:** If you skipped one or more release, please also check the release-notes of the skipped ones.
 # Repositories
 
@@ -35,6 +36,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2018-11
 
 ### Livingdocs Server Patches
+- [v75.9.13](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.13): fix: pin highlight.js to 9.14.2
 - [v75.9.12](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.12): fix(indexing): Fix query by epochTime in indexing api
 - [v75.9.11](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.11): fix(document-copy): replace the too generic source parameter with sourceMetadata
 - [v75.9.10](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.10): fix(node-version): new node version 8.15.0 has problems to escape two byte chracters
