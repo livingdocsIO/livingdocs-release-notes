@@ -14,6 +14,7 @@
 
 
 
+
 **Attention:** If you skipped one or more release, please also check the release-notes of the skipped ones.
 # Repositories
 
@@ -63,6 +64,11 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2018-11
 
 ### Livingdocs Editor Patches
+- [v35.15.21](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.21): fix(package): pin highlight.js to 9.14.2
+
+The latest version `9.15.1` is breaking the `npm install` due to a 
+missing build file. Therefore we are pinning it to `9.14.2` with which 
+the build is working again properly.
 - [v35.15.20](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.20): fix(document-lists): sort lists alphabetically
 - [v35.15.19](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.19): fix(metadata-mapper): make sure document reference is set on updater
 - [v35.15.18](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.15.18): fix(print): Improve print preview error handling
