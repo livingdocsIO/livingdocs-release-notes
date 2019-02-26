@@ -15,6 +15,7 @@
 
 
 
+
 **Attention:** If you skipped one or more release, please also check the release-notes of the skipped ones.
 
 # Repositories
@@ -38,6 +39,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2019-01
 
 ### Livingdocs Server Patches
+- [v75.17.10](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.17.10): fix(lock): store tab id
 - [v75.17.9](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.17.9): fix: pin highlight.js to 9.14.2
 - [v75.17.8](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.17.8): fix(add-density-config): add the density to image convert config
 
