@@ -13,6 +13,7 @@
 
 
 
+
 **Attention:** If you skipped one or more release, please also check the release-notes of the skipped ones.
 
 # Repositories
@@ -65,6 +66,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-01
 
 ### Livingdocs Editor Patches
+- [v35.24.10](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.24.10): fix(printPreview): fix bug causing incorrect preview sizing
 - [v35.24.9](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.24.9): fix(package): pin highlight.js to 9.14.2
 
 The latest version `9.15.1` is breaking the `npm install` due to a 
