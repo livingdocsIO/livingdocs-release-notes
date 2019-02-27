@@ -7,7 +7,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `v75.17.10`
-`@livingdocs/editor` | `v35.24.13`
+`@livingdocs/editor` | `v35.24.14`
 
 ## Livingdocs Server
 How to require the server in your package.json:
@@ -43,7 +43,7 @@ Removed the old coffee script and moved the test to the same location as in the 
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v35.24.13",
+  "@livingdocs/editor": "v35.24.14",
 }
 ```
 
@@ -51,6 +51,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-01
 
 ### Livingdocs Editor Patches
+- [v35.24.14](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.24.14): chore(lock): implement feedback
 - [v35.24.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.24.13): fix(history): fix highlight for substates
 - [v35.24.11](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.24.11): fix(project-settings): fix view and form state for static config
 - [v35.24.10](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.24.10): fix(printPreview): fix bug causing incorrect preview sizing
