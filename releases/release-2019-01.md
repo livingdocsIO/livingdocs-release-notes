@@ -1,22 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 **Attention:** If you skipped one or more release, please also check the release-notes of the skipped ones.
 
 # Repositories
@@ -25,14 +6,14 @@ This release consists of the following new versions of the `livingdocs-server` a
 
 Package | Version
 --- | ---
-`@livingdocs/server` | `v75.17.2`
-`@livingdocs/editor` | `v35.24.1`
+`@livingdocs/server` | `v75.17.10`
+`@livingdocs/editor` | `v35.24.13`
 
 ## Livingdocs Server
 How to require the server in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/server": "v75.17.2",
+  "@livingdocs/server": "v75.17.10",
 }
 ```
 
@@ -62,7 +43,7 @@ Removed the old coffee script and moved the test to the same location as in the 
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v35.24.2",
+  "@livingdocs/editor": "v35.24.13",
 }
 ```
 
