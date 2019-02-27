@@ -1,21 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 **Attention:** If you skipped one or more release, please also check the release-notes of the skipped ones.
 # Repositories
 
@@ -23,15 +5,15 @@ This release consists of the following new versions of the `livingdocs-server` a
 
 Package | Version
 --- | ---
-`@livingdocs/server` | `v75.9.7`
-`@livingdocs/editor` | `v35.15.13`
+`@livingdocs/server` | `v75.9.14`
+`@livingdocs/editor` | `v35.15.21`
 
 ## Livingdocs Server
 How to require the server in your package.json:
 
 ```json
 "dependencies": {
-  "@livingdocs/server": "v75.9.7",
+  "@livingdocs/server": "v75.9.14",
 }
 ```
 - Link to the release branch:
@@ -59,7 +41,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v35.15.13",
+  "@livingdocs/editor": "v35.15.21",
 }
 ```
 - Link to the release branch:
