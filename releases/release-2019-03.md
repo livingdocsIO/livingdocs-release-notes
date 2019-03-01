@@ -1,4 +1,4 @@
-**Attention:** If you skipped one or more release, please also check the release-notes of the skipped ones.
+**Attention:** If you skipped one or more releases, please also check the release-notes of the skipped ones.
 
 # Repositories
 
@@ -62,6 +62,23 @@ Dropping objects over a dashboard is a separate subject.
   * [editor PR #2530](https://github.com/livingdocsIO/livingdocs-editor/pull/2530)
   * [documentation](https://upfrontio.gitbook.io/livingdocs/reference-documentation/editor/document-drag-drop#add-custom-drag-and-drop-handlers)
 
+## Merge users :gift:
+
+A project admin can now merge n users into 1 in the editor.
+
+* Related
+  * [editor PR #2555](https://github.com/livingdocsIO/livingdocs-editor/pull/2555)
+
+## Remove editor reload and live updates in read-only mode :gift:
+
+When you are switched to read-only mode, e.g. because another user is editing, then the screen
+does not reload anymore and the position in the document stays as it is.
+When you are in read-only mode, you also don't see live updates of other typing users anymore.
+
+* Related
+  * [editor PR #2464](https://github.com/livingdocsIO/livingdocs-editor/pull/2464)
+
+
 
 
 # Breaking Changes :fire:
@@ -73,7 +90,7 @@ Dropping objects over a dashboard is a separate subject.
 #   112-add-event-type-content-type-view-after-document-creation-updated.js
 #   113-add-event-type-content-type-document-creation-disabled-updated.js
 #   114-alter-user-config-value.js
-grunt migrate
+livingdocs-server migrate up
 ```
 
 ## Removed functions
@@ -89,14 +106,12 @@ grunt migrate
 # Other Changes
 
 * UI/UX
-  * Start page design rework [livingdocs-editor #2520](https://github.com/livingdocsIO/livingdocs-editor/pull/2520) :gift:
   * Updated look of delete confirmation [livingdocs-editor #2536](https://github.com/livingdocsIO/livingdocs-editor/pull/2536) :gift:
   * Improve button styles on dark backgrounds [livingdocs-editor #2496](https://github.com/livingdocsIO/livingdocs-editor/pull/2496) :gift:
   * UI improvements for Static Project Settings [livingdocs-editor #2567](https://github.com/livingdocsIO/livingdocs-editor/pull/2567) :gift:
+  * (Service only) Start page design rework [livingdocs-editor #2520](https://github.com/livingdocsIO/livingdocs-editor/pull/2520) :gift:
 * Features
   * Support channel config v2 for static files [livingdocs-server #2282](https://github.com/livingdocsIO/livingdocs-server/pull/2282) :gift:
-  * Merge users as admin [livingdocs-editor #2555](https://github.com/livingdocsIO/livingdocs-editor/pull/2555) :gift:
-  * Remove read-only redrawing [livingdocs-editor #2464](https://github.com/livingdocsIO/livingdocs-editor/pull/2464) :gift:
 * Admin Tasks
   * New task to create admin user (`livingdocs-server create-admin-user`) [livingdocs-server #2288](https://github.com/livingdocsIO/livingdocs-server/pull/2288) :gift:
   * New task to create admin users (`livingdocs-server create-admin-users`) [livingdocs-server #2259](https://github.com/livingdocsIO/livingdocs-server/pull/2259) :gift:
