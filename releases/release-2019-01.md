@@ -6,14 +6,14 @@ This release consists of the following new versions of the `livingdocs-server` a
 
 Package | Version
 --- | ---
-`@livingdocs/server` | `v75.17.10`
+`@livingdocs/server` | `v75.17.11`
 `@livingdocs/editor` | `v35.24.15`
 
 ## Livingdocs Server
 How to require the server in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/server": "v75.17.10",
+  "@livingdocs/server": "v75.17.11",
 }
 ```
 
@@ -21,6 +21,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2019-01
 
 ### Livingdocs Server Patches
+- [v75.17.11](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.17.11): chore(elasticsearch): Remove unnecessary rest argument in addDateFilter
 - [v75.17.10](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.17.10): fix(lock): store tab id
 - [v75.17.9](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.17.9): fix: pin highlight.js to 9.14.2
 - [v75.17.8](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.17.8): fix(add-density-config): add the density to image convert config
