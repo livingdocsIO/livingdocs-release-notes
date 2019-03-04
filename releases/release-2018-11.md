@@ -5,7 +5,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 
 Package | Version
 --- | ---
-`@livingdocs/server` | `v75.9.14`
+`@livingdocs/server` | `v75.9.15`
 `@livingdocs/editor` | `v35.15.21`
 
 ## Livingdocs Server
@@ -13,13 +13,14 @@ How to require the server in your package.json:
 
 ```json
 "dependencies": {
-  "@livingdocs/server": "v75.9.14",
+  "@livingdocs/server": "v75.9.15",
 }
 ```
 - Link to the release branch:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2018-11
 
 ### Livingdocs Server Patches
+- [v75.9.15](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.15): chore(elasticsearch): Remove unnecessary rest argument in addDateFilter
 - [v75.9.14](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.14): fix: pin dom-serializer to v0.1.0
 - [v75.9.13](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.13): fix: pin highlight.js to 9.14.2
 - [v75.9.12](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v75.9.12): fix(indexing): Fix query by epochTime in indexing api
