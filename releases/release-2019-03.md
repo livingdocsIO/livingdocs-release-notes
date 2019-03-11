@@ -6,14 +6,14 @@ This release consists of the following new versions of the `livingdocs-server` a
 
 Package | Version
 --- | ---
-`@livingdocs/server` | `v76.8.0`
-`@livingdocs/editor` | `v35.36.0`
+`@livingdocs/server` | `v76.8.8`
+`@livingdocs/editor` | `v35.36.5`
 
 ## Livingdocs Server
 How to require the server in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/server": "v76.8.0",
+  "@livingdocs/server": "v76.8.8",
 }
 ```
 
@@ -21,6 +21,14 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2019-03
 
 ### Livingdocs Server Patches
+- [v76.8.8](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v76.8.8): resolve hugo author when dnd
+- [v76.8.7](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v76.8.7): elasticsearch: Fix optional date filters in elasticsearch 6
+- [v76.8.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v76.8.6): merge: fix json schema
+- [v76.8.5](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v76.8.5): lock: store tab id
+- [v76.8.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v76.8.4): push-notifications: add placeholder id mappings for local env conf
+- [v76.8.3](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v76.8.3): config: do not camelize storage.config
+- [v76.8.2](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v76.8.2): pin highlight.js to 9.14.2
+- [v76.8.1](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v76.8.1): languages: index with custom lang handle
 - [v76.8.0](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v76.8.0): initial version for release
 
 
@@ -29,7 +37,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v35.36.0",
+  "@livingdocs/editor": "v35.36.5",
 }
 ```
 
@@ -37,6 +45,11 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-03
 
 ### Livingdocs Editor Patches
+- [v35.36.5](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.36.5): history: load more revisions with a load more button
+- [v35.36.4](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.36.4): print: use presets to fill the modal with a prefered publication
+- [v35.36.3](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.36.3): max width: Preparing for themeing
+- [v35.36.2](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.36.2): do not delete document after transform errors
+- [v35.36.1](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.36.1): Fix nzz soft lock issues
 - [v35.36.0](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.36.0): initial version for release
 
 
