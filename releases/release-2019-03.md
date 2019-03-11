@@ -7,7 +7,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `v76.8.8`
-`@livingdocs/editor` | `v35.36.7`
+`@livingdocs/editor` | `v35.36.8`
 
 ## Livingdocs Server
 How to require the server in your package.json:
@@ -37,7 +37,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v35.36.7",
+  "@livingdocs/editor": "v35.36.8",
 }
 ```
 
@@ -45,6 +45,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-03
 
 ### Livingdocs Editor Patches
+- [v35.36.8](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.36.8): fix(print): guard the access of publicationPreset if its undefined
 - [v35.36.7](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.36.7): fix(prefill-component): Fixed the component prefill and metadata initial extraction
 
 The component prefill and metadata initial extraction worked with isNew
