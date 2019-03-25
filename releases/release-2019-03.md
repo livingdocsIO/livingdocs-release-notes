@@ -7,7 +7,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `v76.8.11`
-`@livingdocs/editor` | `v35.36.12`
+`@livingdocs/editor` | `v35.36.13`
 
 ## Livingdocs Server
 How to require the server in your package.json:
@@ -38,7 +38,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v35.36.12",
+  "@livingdocs/editor": "v35.36.13",
 }
 ```
 
@@ -46,6 +46,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-03
 
 ### Livingdocs Editor Patches
+- [v35.36.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.36.13): fix(selection-mode-btn): don't disable the selection mode btn in selection mode state
 - [v35.36.12](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.36.12): chore: Fix eslint errors
 - [v35.36.11](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.36.11): chore: Ignore updates of angular-ui-tree as it has a bug and not maintained anyways
 - [v35.36.10](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.36.10): fix(lists-alphabetically): the sort is now alphabetically asc ordered
