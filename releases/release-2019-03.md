@@ -6,14 +6,14 @@ This release consists of the following new versions of the `livingdocs-server` a
 
 Package | Version
 --- | ---
-`@livingdocs/server` | `v76.8.11`
+`@livingdocs/server` | `v76.8.12`
 `@livingdocs/editor` | `v35.36.15`
 
 ## Livingdocs Server
 How to require the server in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/server": "v76.8.11",
+  "@livingdocs/server": "v76.8.12",
 }
 ```
 
@@ -21,6 +21,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2019-03
 
 ### Livingdocs Server Patches
+- [v76.8.12](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v76.8.12): fix(search): resolve channel correctly
 - [v76.8.11](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v76.8.11): fix: Work around alpine linux issue in droneci tagging
 - [v76.8.8](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v76.8.8): resolve hugo author when dnd
 - [v76.8.7](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v76.8.7): elasticsearch: Fix optional date filters in elasticsearch 6
