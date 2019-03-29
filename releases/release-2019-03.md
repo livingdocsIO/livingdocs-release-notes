@@ -7,7 +7,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `v76.8.12`
-`@livingdocs/editor` | `v35.36.15`
+`@livingdocs/editor` | `v35.36.16`
 
 ## Livingdocs Server
 How to require the server in your package.json:
@@ -39,7 +39,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v35.36.15",
+  "@livingdocs/editor": "v35.36.16",
 }
 ```
 
@@ -47,6 +47,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-03
 
 ### Livingdocs Editor Patches
+- [v35.36.16](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.36.16): fix(queries): add filter by channel handle
 - [v35.36.15](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.36.15): chore: Improve display of buildInfo
 - [v35.36.14](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.36.14): fix(scrolling-in-lists): The scrolling on the lists view doesn't work for chrome 73 and firefox
 - [v35.36.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.36.13): fix(selection-mode-btn): don't disable the selection mode btn in selection mode state
