@@ -45,56 +45,65 @@ How to require the editor in your package.json:
 
 # Highlights
 
+## Improved Dashboard Search / Implement Your Own Dashboard Search :gift:
+
+### Better Default Search
+
+:tada: The editor dashboard search has been massively improved and now you get much better search results.
+
+### Custom Search
+
+:gift: You can also implement you own Dashboard search by registering a [queryBuilderPlugin](https://github.com/livingdocsIO/livingdocs-server/pull/2395).
+
+
+* References
+  * [server PR #2395](https://github.com/livingdocsIO/livingdocs-server/pull/2395)
+  * [documentation](https://github.com/livingdocsIO/livingdocs/blob/master/reference-docs/server-configuration/config.md#querybuilderplugin)
 
 
 
-* Differ
-  * diff-revisions [livingdocs-editor #2630](https://github.com/livingdocsIO/livingdocs-editor/pull/2630) :gift:
+## Predefined Filter Sets :gift:
 
-* Proofreading
-  * Implement paging for proofreading [livingdocs-editor #2689](https://github.com/livingdocsIO/livingdocs-editor/pull/2689) :gift:
-  * Proofreading li-task UI/UX integration [livingdocs-editor #2632](https://github.com/livingdocsIO/livingdocs-editor/pull/2632) :gift:
-  * Proofreading dashboard [livingdocs-editor #2577](https://github.com/livingdocsIO/livingdocs-editor/pull/2577) :gift:
-  * Proofreading li-task metadata plugin [livingdocs-editor #2606](https://github.com/livingdocsIO/livingdocs-editor/pull/2606) :gift:
-  * Design kanbanboard and fixes [livingdocs-editor #2680](https://github.com/livingdocsIO/livingdocs-editor/pull/2680) :gift:
-  * Urgency Config/Visualisation of a Task [livingdocs-editor #2677](https://github.com/livingdocsIO/livingdocs-editor/pull/2677) :gift:
+Enables predefined Filter Sets on a dashboard.
+Project admins can navigate to any dashboard, choose filters and then store the setting in a predefined filter set.
+The filter sets can be edited over a user interface in the project setup and can be nested in groups (one-level deep) for organizing.
+Users (non-admins) can see and use the predefined filter sets, i.e. on a dashboard, e.g. the article dashboard, they can choose a filter set which will then apply the complete set selection of filters to the dashboard.
 
-
-Predefined Filter Sets
-* Predefined Filter Sets [livingdocs-editor #2633](https://github.com/livingdocsIO/livingdocs-editor/pull/2633) :gift:
-
-Google Cloud Storage
-* feat(storage): support google cloud storage [livingdocs-server #2409](https://github.com/livingdocsIO/livingdocs-server/pull/2409) :gift:
-
-
-support fast reindexing - describe it exactly
-* Document version fetcher get latest publications [livingdocs-server #2408](https://github.com/livingdocsIO/livingdocs-server/pull/2408) :gift:
-
-
-Better search
-* Better document search results & search customisation [livingdocs-server #2395](https://github.com/livingdocsIO/livingdocs-server/pull/2395) :gift:
+* References
+  * [editor PR #2633](https://github.com/livingdocsIO/livingdocs-editor/pull/2633)
 
 
 
+## Google Cloud Storage support for designs/files/images :gift:
 
+For users who want to store their images, files and design assets in a Google Cloud Storage (GCS) bucket rather than on Amazon, we provide a separate storage strategy.
 
-
-
-
-
-
-## EXAMPLE !!!!!!!!!!!!!!!!!!! Editor Multiselect :gift:
-Add multiselect functionality to the editor. In multiselect mode when a component is clicked this component is added to the selection. When a component is clicked again it is removed from the selection. In the sidebar the count of selected components is shown and there is the option to delete all selected components.
-Required editor configuration to enable the multiselect feature:
-```js
-keyboardShortcuts: {
-      '↓shift': 'start multiselect mode',
-      '↑shift': 'end multiselect mode'
+Required server configuration to enable storing assets on GCS.
+```
+storage: {
+  strategy: 'google-cloud-storage',
+  config: {
+    bucket: 'livingdocs-images-dev', // The bucket name
+    credentials: {} // The credentials
+  }
 }
 ```
 
-* Related Pull Requests
-  * [editor PR #2143](https://github.com/livingdocsIO/livingdocs-editor/pull/2143)
+
+A more detailled description and an example configuration can you find in the [documentation](https://docs.livingdocs.io/reference-documentation/server/google-cloud-storage)
+
+* References
+  * [editor PR #2409](https://github.com/livingdocsIO/livingdocs-server/pull/2409)
+  * [Documentation](https://docs.livingdocs.io/reference-documentation/server/google-cloud-storage)
+
+
+
+## Improve speed of reindexing :gift:
+
+Depending on how many documents you have stored, the re-indexing into elasticsearch needed some time. For production this has been a pain for a long time, when you did an upgrade where data migrations were involved or even an elasticsearch mapping update.
+
+Since the January 2019 release, we have continually improved the indexing speed. The optimisation results in a `10x - 100x` speed improvement and an average indexing speed of `1000 docs/s`. The indexing speed depends on your elasticsearch configuration and the size of your documents.
+
 
 
 # Breaking Changes :fire:
@@ -103,40 +112,15 @@ keyboardShortcuts: {
 
 ```sh
 # run grunt migrate to update to the newest database scheme
-# migration - 111-add-comments-table.js
-#   create comments table + add events to the stream_events_types table
+# migrations
+# - 112-add-event-type-content-type-view-after-document-creation-updated.js
+# - 113-add-event-type-content-type-document-creation-disabled-updated.js
+# - 114-alter-user-config-value.js
+# - 115-add-filter-set-table.js
+# - 116-add-assets-table.js
+# - 117-add-channel-config-events.js
 livingdocs-server migrate up
 ```
-
-## EXAMPLE !!!!!!!!!!!!!!!!!!! Registration procedure :gift: :fire:
-There are two new flags per authentication connections: `loginEnabled` and `registrationEnabled`.
-The editor won't show the respective connection option in the login screen without them.
-Server `auth` configuration:
-```js
-auth: {
-  connections: {
-    // email and password authentication
-    local: {
-      enabled: true,
-      loginEnabled: true,
-      registrationEnabled: true
-      //...
-    },
-    github: {
-      enabled: true,
-      loginEnabled: false,
-      registrationEnabled: false
-      // ...
-    }
-  }
-}
-```
-
-* Related Pull Requests
-  * [server PR #2010](https://github.com/livingdocsIO/livingdocs-server/pull/2010)
-  * [editor PR #2114](https://github.com/livingdocsIO/livingdocs-editor/pull/2114)
-
-
 
 
 # Other Changes
@@ -146,6 +130,13 @@ auth: {
 * Features
   * Add new search filter type 'channelHandle' [livingdocs-editor #2626](https://github.com/livingdocsIO/livingdocs-editor/pull/2626) :gift:
   * Make article limit on dashboard configurable [livingdocs-server #2405](https://github.com/livingdocsIO/livingdocs-server/pull/2405) :gift:
+  * Proofreading
+    * Implement paging for proofreading [livingdocs-editor #2689](https://github.com/livingdocsIO/livingdocs-editor/pull/2689) :gift:
+    * Proofreading li-task UI/UX integration [livingdocs-editor #2632](https://github.com/livingdocsIO/livingdocs-editor/pull/2632) :gift:
+    * Proofreading dashboard [livingdocs-editor #2577](https://github.com/livingdocsIO/livingdocs-editor/pull/2577) :gift:
+    * Proofreading li-task metadata plugin [livingdocs-editor #2606](https://github.com/livingdocsIO/livingdocs-editor/pull/2606) :gift:
+    * Design kanbanboard and fixes [livingdocs-editor #2680](https://github.com/livingdocsIO/livingdocs-editor/pull/2680) :gift:
+    * Urgency Config/Visualisation of a Task [livingdocs-editor #2677](https://github.com/livingdocsIO/livingdocs-editor/pull/2677) :gift:
 * Improvements
   * Improve error handling for expired sessions [livingdocs-editor #2691](https://github.com/livingdocsIO/livingdocs-editor/pull/2691) :gift:
   * Signup - add ng-disabled to signup button [livingdocs-editor #2653](https://github.com/livingdocsIO/livingdocs-editor/pull/2653) :gift:
