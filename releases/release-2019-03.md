@@ -7,7 +7,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `v76.8.12`
-`@livingdocs/editor` | `v35.36.21`
+`@livingdocs/editor` | `v35.36.22`
 
 ## Livingdocs Server
 How to require the server in your package.json:
@@ -39,7 +39,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v35.36.21",
+  "@livingdocs/editor": "v35.36.22",
 }
 ```
 
@@ -47,6 +47,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-03
 
 ### Livingdocs Editor Patches
+- [v35.36.22](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.36.22): fix(readOnly): robustify read only mode
 - [v35.36.21](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.36.21): fix(lock): fix remove lock behavior
 - [v35.36.20](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.36.20): refactor: improve naming and use helper function
 - [v35.36.19](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.36.19): fix(lists): move instead of copy on DnD
