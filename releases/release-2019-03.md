@@ -7,7 +7,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `v76.8.12`
-`@livingdocs/editor` | `v35.36.23`
+`@livingdocs/editor` | `v35.36.24`
 
 ## Livingdocs Server
 How to require the server in your package.json:
@@ -39,7 +39,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v35.36.23",
+  "@livingdocs/editor": "v35.36.24",
 }
 ```
 
@@ -47,6 +47,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-03
 
 ### Livingdocs Editor Patches
+- [v35.36.24](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.36.24): fix: remove todo and retrigger semantic release
 - [v35.36.23](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.36.23): fix(component-sidebar): Hide filtered components using ng-show
 
 With `ng-show` the sidebar DOM structure remains the same regardless of the filter applied.
