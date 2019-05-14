@@ -45,15 +45,33 @@ How to require the editor in your package.json:
 
 # Highlights
 
+## Digital Asset Management (DAM) :gift:
+
+:DESCRIPTION from Gabriel:
+
+* References
+  * [documentation](https://docs.livingdocs.io/reference-documentation/server/config#asset-management)
+  * [editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/2647)
+
+
+
+
 ## Improved Dashboard Search / Implement Your Own Dashboard Search :gift:
 
 ### Better Default Search
 
 :tada: The editor dashboard search has been massively improved and now you get much better search results.
+We did a lot of improvements to the default search algorithm. The most important change is, that recent edited articles have much more importance, which you can see in the following digram.
+
+https://user-images.githubusercontent.com/835108/47582728-86187f00-d955-11e8-8a79-19d1aca8982c.png
+
+- y-axis: importance boost
+- x-axis: time of editing an article
+- black line: importance boost / time
 
 ### Custom Search
 
-:gift: You can also implement you own Dashboard search by registering a [queryBuilderPlugin](https://github.com/livingdocsIO/livingdocs-server/pull/2395).
+:gift: You can also implement your own Dashboard search by registering a [queryBuilderPlugin](https://github.com/livingdocsIO/livingdocs-server/pull/2395).
 
 
 * References
@@ -62,15 +80,40 @@ How to require the editor in your package.json:
 
 
 
+
 ## Predefined Filter Sets :gift:
 
 Enables predefined Filter Sets on a dashboard.
-Project admins can navigate to any dashboard, choose filters and then store the setting in a predefined filter set.
+Project admins can navigate to any dashboard, choose filters and then store the setting in a predefined filter set which is similar in kind to a bookmark.
 The filter sets can be edited over a user interface in the project setup and can be nested in groups (one-level deep) for organizing.
 Users (non-admins) can see and use the predefined filter sets, i.e. on a dashboard, e.g. the article dashboard, they can choose a filter set which will then apply the complete set selection of filters to the dashboard.
 
 * References
   * [editor PR #2633](https://github.com/livingdocsIO/livingdocs-editor/pull/2633)
+
+
+
+
+## Custom Workflows with Tasks v2 :gift:
+
+With Tasks (v2) you are able to define custom workflows in the editor. It's an overhauled version which replaces Tasks (v1). You can find the migration guide from Tasks v1 to v2 [here](https://github.com/livingdocsIO/livingdocs-editor/pull/2606).
+
+Highlights of Tasks v2:
+- Tasks have 3 states (`requested`, `accepted`, `completed`)
+- Define your custom metadata field for every task
+- Every tasks is individually configurable, e.g.
+  - labels for all states
+  - request a deadline date
+  - define when a task appears urgent
+- Customise the deadline computation via the core API in the editor
+  - Register a function to make suggestion for the deadline date
+  - Register a function to provide an allowed deadline date range
+
+* References
+  * [documentation - how to add a custom proofreading task](https://docs.livingdocs.io/general-howtos/add-custom-proofreading-task)
+  * [documentation - how to add a custom task](https://docs.livingdocs.io/general-howtos/add-custom-task)
+  * [editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/2606)
+
 
 
 
@@ -90,7 +133,7 @@ storage: {
 ```
 
 
-A more detailled description and an example configuration can you find in the [documentation](https://docs.livingdocs.io/reference-documentation/server/google-cloud-storage)
+A more detailled description and an example configuration can be found in the [documentation](https://docs.livingdocs.io/reference-documentation/server/google-cloud-storage)
 
 * References
   * [editor PR #2409](https://github.com/livingdocsIO/livingdocs-server/pull/2409)
@@ -98,11 +141,37 @@ A more detailled description and an example configuration can you find in the [d
 
 
 
+
+
 ## Improve speed of reindexing :gift:
 
-Depending on how many documents you have stored, the re-indexing into elasticsearch needed some time. For production this has been a pain for a long time, when you did an upgrade where data migrations were involved or even an elasticsearch mapping update.
+Depending on how many documents you have stored, the re-indexing into elasticsearch needed some time. For production this has been a challenge for a long time, when you did an upgrade where data migrations were involved or even an elasticsearch mapping update.
 
 Since the January 2019 release, we have continually improved the indexing speed. The optimisation results in a `10x - 100x` speed improvement and an average indexing speed of `1000 docs/s`. The indexing speed depends on your elasticsearch configuration and the size of your documents.
+
+
+
+
+# Beta Versions
+
+## Track Changes (Differ) :tada:
+
+:DESCRIPTION from Meinrad:
+
+* References
+  * [documentation :link from Meinrad:]()
+  * [editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/2630)
+
+
+## Customisable Dashboards/Kanbanboards :tada:
+
+:DESCRIPTION from Lukas:
+
+* References
+  * [documentation :link from Lukas:]()
+  * [editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/2577)
+
+
 
 
 
@@ -128,27 +197,20 @@ livingdocs-server migrate up
 * Security
   * Sanitize all user input on render to prevent script injection [livingdocs-editor #2670](https://github.com/livingdocsIO/livingdocs-editor/pull/2670) :gift:
 * Features
-  * Add new search filter type 'channelHandle' [livingdocs-editor #2626](https://github.com/livingdocsIO/livingdocs-editor/pull/2626) :gift:
+  * Add ability to filter dashboard results by channel [livingdocs-editor #2626](https://github.com/livingdocsIO/livingdocs-editor/pull/2626) :gift:
   * Make article limit on dashboard configurable [livingdocs-server #2405](https://github.com/livingdocsIO/livingdocs-server/pull/2405) :gift:
-  * Proofreading
-    * Implement paging for proofreading [livingdocs-editor #2689](https://github.com/livingdocsIO/livingdocs-editor/pull/2689) :gift:
-    * Proofreading li-task UI/UX integration [livingdocs-editor #2632](https://github.com/livingdocsIO/livingdocs-editor/pull/2632) :gift:
-    * Proofreading dashboard [livingdocs-editor #2577](https://github.com/livingdocsIO/livingdocs-editor/pull/2577) :gift:
-    * Proofreading li-task metadata plugin [livingdocs-editor #2606](https://github.com/livingdocsIO/livingdocs-editor/pull/2606) :gift:
-    * Design kanbanboard and fixes [livingdocs-editor #2680](https://github.com/livingdocsIO/livingdocs-editor/pull/2680) :gift:
-    * Urgency Config/Visualisation of a Task [livingdocs-editor #2677](https://github.com/livingdocsIO/livingdocs-editor/pull/2677) :gift:
 * Improvements
   * Improve error handling for expired sessions [livingdocs-editor #2691](https://github.com/livingdocsIO/livingdocs-editor/pull/2691) :gift:
   * Signup - add ng-disabled to signup button [livingdocs-editor #2653](https://github.com/livingdocsIO/livingdocs-editor/pull/2653) :gift:
   * Load more button for revisions in the history panel [livingdocs-editor #2546](https://github.com/livingdocsIO/livingdocs-editor/pull/2546) :gift:
   * Metadata Image - image selection [livingdocs-editor #2486](https://github.com/livingdocsIO/livingdocs-editor/pull/2486) :gift:
-  * Comments: Update directive name on comment context after transform [livingdocs-editor #2654](https://github.com/livingdocsIO/livingdocs-editor/pull/2654) :gift:
-  * Improve user admin screen layout [livingdocs-editor #2669](https://github.com/livingdocsIO/livingdocs-editor/pull/2669) :gift:
   * Create new revision on publish for another user [livingdocs-server #2393](https://github.com/livingdocsIO/livingdocs-server/pull/2393) :gift:
   * Validate hook results on publish [livingdocs-server #2364](https://github.com/livingdocsIO/livingdocs-server/pull/2364) :gift:
   * Expose db create script to downstreams [livingdocs-server #2374](https://github.com/livingdocsIO/livingdocs-server/pull/2374) :gift:
   * Make server fully compatible with node 10 [livingdocs-server #2332](https://github.com/livingdocsIO/livingdocs-server/pull/2332) :gift:
 * Bugfixes
+  * Fix layouting issues on admin screen [livingdocs-editor #2669](https://github.com/livingdocsIO/livingdocs-editor/pull/2669) :beetle:
+  * Keep comments when transforming a component, e.g. paragraph to subtitle [livingdocs-editor #2654](https://github.com/livingdocsIO/livingdocs-editor/pull/2654) :beetle:
   * Lists - move document instead of copying on drag and drop [livingdocs-editor #2686](https://github.com/livingdocsIO/livingdocs-editor/pull/2686) :beetle:
   * fix browser support function [livingdocs-editor #2694](https://github.com/livingdocsIO/livingdocs-editor/pull/2694) :beetle:
   * Fix session expired login [livingdocs-editor #2688](https://github.com/livingdocsIO/livingdocs-editor/pull/2688) :beetle:
@@ -169,9 +231,7 @@ livingdocs-server migrate up
   * Robustify print modal and the template / layout mode [livingdocs-editor #2624](https://github.com/livingdocsIO/livingdocs-editor/pull/2624) :gift:
 * Chore
   * Migrate from Travis CI to DroneCI [livingdocs-editor #2640](https://github.com/livingdocsIO/livingdocs-editor/pull/2640) :wrench:
-  * Add Cypress qa strings for DAM [livingdocs-editor #2602](https://github.com/livingdocsIO/livingdocs-editor/pull/2602) :wrench:
 * Service
-  * Digital asset management improvements [livingdocs-editor #2647](https://github.com/livingdocsIO/livingdocs-editor/pull/2647) [livingdocs-server #2339](https://github.com/livingdocsIO/livingdocs-server/pull/2339) :gift:
   * Show google vision results for DAM [livingdocs-editor #2652](https://github.com/livingdocsIO/livingdocs-editor/pull/2652) :gift:
   * prefer use of base64 buffer in google vision API [livingdocs-server #2401](https://github.com/livingdocsIO/livingdocs-server/pull/2401) :gift:
   * Configurable image service in DAM [livingdocs-server #2343](https://github.com/livingdocsIO/livingdocs-server/pull/2343) :gift:
