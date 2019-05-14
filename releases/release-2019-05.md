@@ -54,8 +54,6 @@ How to require the editor in your package.json:
   * [editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/2647)
 
 
-
-
 ## Improved Dashboard Search / Implement Your Own Dashboard Search :gift:
 
 ### Better Default Search
@@ -63,11 +61,13 @@ How to require the editor in your package.json:
 :tada: The editor dashboard search has been massively improved and now you get much better search results.
 We did a lot of improvements to the default search algorithm. The most important change is, that recent edited articles have much more importance, which you can see in the following digram.
 
-https://user-images.githubusercontent.com/835108/47582728-86187f00-d955-11e8-8a79-19d1aca8982c.png
+
 
 - y-axis: importance boost
 - x-axis: time of editing an article
 - black line: importance boost / time
+
+![47582728-86187f00-d955-11e8-8a79-19d1aca8982c](https://user-images.githubusercontent.com/172394/57685243-cc0a0b80-7637-11e9-99cf-4e1a9ad3c961.png)
 
 ### Custom Search
 
