@@ -45,9 +45,9 @@ How to require the editor in your package.json:
 
 # Highlights
 
-## Digital Asset Management (DAM) :gift:
+## Media Library :gift:
 
-:DESCRIPTION from Gabriel:
+We introduce a new media library in Livingdocs that allows to track and search all images uploaded to Livingdocs and to manage metadata for those images. As an option we offer auto-tagging of all uploaded images using the Google Vision API (infers costs). We also introduced a new image service `liImageProxy` which allows to track all image requests through the server, e.g. for traffic control.
 
 * References
   * [documentation](https://docs.livingdocs.io/reference-documentation/server/config#asset-management)
