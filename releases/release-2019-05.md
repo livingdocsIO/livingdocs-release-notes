@@ -154,12 +154,23 @@ Since the January 2019 release, we have continually improved the indexing speed.
 
 # Beta Versions
 
+You can use and test beta features. Your feedback is highly appreciated. As long as a feature is in beta phase, we will sometimes change it's UX, design or config if needed.
+
 ## Track Changes (Differ) :tada:
 
-:DESCRIPTION from Meinrad:
+We finally have the Track Changes feature in the editor. Track Changes shows you changes between two versions of a document e.g.
+
+- added and removed components
+- added and removed text
+
+Every change is labeled by the user which did the change. You are also able to configure the color palette of the changes to match your design.
+
+Track Changes is available at the editor in the History menu.
+
+We are actively working on Track Changes and its UI. We are happy to hear feedback and ideas how to improve the feature from you.
 
 * References
-  * [documentation :link from Meinrad:]()
+  * [documentation](https://docs.livingdocs.io/reference-documentation/editor/editing-features#diff-view)
   * [editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/2630)
 
 
