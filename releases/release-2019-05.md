@@ -165,14 +165,18 @@ Since the January 2019 release, we have continually improved the indexing speed.
 
 ## Customisable Dashboards/Kanbanboards :tada:
 
-:DESCRIPTION from Lukas:
+Custom Dashboards are configurable versions of the current Articles / Pages / Date-Records Screens you can use to customise the main screens your editors and writers
+use on a daily basis. Kanbanboards are a variation of dashboards to better support
+task based workflows in your teams.
+
+You can add as many custom dashboards as you want in the Editor configuration and
+link them directly in the main navigation.
+
+See the documentation for details :TODO:
 
 * References
   * [documentation :link from Lukas:]()
   * [editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/2577)
-
-
-
 
 
 # Breaking Changes :fire:
