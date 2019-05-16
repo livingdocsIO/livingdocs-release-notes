@@ -7,7 +7,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `v76.8.12`
-`@livingdocs/editor` | `v35.36.25`
+`@livingdocs/editor` | `v35.36.26`
 
 ## Livingdocs Server
 How to require the server in your package.json:
@@ -39,7 +39,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v35.36.25",
+  "@livingdocs/editor": "v35.36.26",
 }
 ```
 
@@ -47,6 +47,9 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-03
 
 ### Livingdocs Editor Patches
+- [v35.36.26](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.36.26): fix(print): Tweak print preview bottom bar
+
+Make sure the print preview bottom bar fully covers the text counter it replaces.
 - [v35.36.25](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.36.25): fix(cropping): correctly round the decimals
 - [v35.36.24](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.36.24): fix: remove todo and retrigger semantic release
 - [v35.36.23](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.36.23): fix(component-sidebar): Hide filtered components using ng-show
