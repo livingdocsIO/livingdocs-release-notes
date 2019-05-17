@@ -183,10 +183,10 @@ task based workflows in your teams.
 You can add as many custom dashboards as you want in the Editor configuration and
 link them directly in the main navigation.
 
-See the documentation for details :TODO:
+See the [documentation](https://docs.livingdocs.io/reference-documentation/editor/menu-and-dashboards) for details.
 
 * References
-  * [documentation :link from Lukas:]()
+  * [documentation](https://docs.livingdocs.io/reference-documentation/editor/menu-and-dashboards)
   * [editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/2577)
 
 
