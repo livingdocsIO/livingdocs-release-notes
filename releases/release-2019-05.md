@@ -8,7 +8,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `v76.26.1`
-`@livingdocs/editor` | `v36.9.0`
+`@livingdocs/editor` | `v36.9.2`
 
 ## Livingdocs Server
 How to require the server in your package.json:
@@ -31,7 +31,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v36.9.0",
+  "@livingdocs/editor": "v36.9.2",
 }
 ```
 
@@ -39,6 +39,8 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-05
 
 ### Livingdocs Editor Patches
+- [v36.9.2](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.2): several small fixes for readOnly mode
+- [v36.9.1](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.1): component-sidebar: Hide filtered components using ng-show
 - [v36.9.0](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.0): autosave: cover promises for multiple saveNow() calls when saving
 
 
@@ -108,6 +110,7 @@ Highlights of Tasks v2:
 - Customise the deadline computation via the core API in the editor
   - Register a function to make suggestion for the deadline date
   - Register a function to provide an allowed deadline date range
+- Tasks can be connected with the the Task Kanban Board (which is mentioned in the beta section)
 
 * References
   * [documentation - how to add a custom proofreading task](https://docs.livingdocs.io/general-howtos/add-custom-proofreading-task)
@@ -158,7 +161,7 @@ You can use and test beta features. Your feedback is highly appreciated. As long
 
 ## Track Changes (Differ) :tada:
 
-We finally have the Track Changes feature in the editor. Track Changes shows you changes between two versions of a document e.g.
+We now have the much anticipated Track Changes feature in the editor. Track Changes shows you changes between two versions of a document e.g.
 
 - added and removed components
 - added and removed text
