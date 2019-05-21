@@ -1,4 +1,3 @@
-
 **Attention:** If you skipped one or more releases, please also check the release-notes of the skipped ones.
 
 # Repositories
@@ -8,7 +7,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `v76.26.1`
-`@livingdocs/editor` | `v36.9.2`
+`@livingdocs/editor` | `v36.9.3`
 
 ## Livingdocs Server
 How to require the server in your package.json:
@@ -31,7 +30,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v36.9.2",
+  "@livingdocs/editor": "v36.9.3",
 }
 ```
 
@@ -39,6 +38,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-05
 
 ### Livingdocs Editor Patches
+- [v36.9.3](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.3): fix(fastify): add cache-control everywhere
 - [v36.9.2](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.2): several small fixes for readOnly mode
 - [v36.9.1](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.1): component-sidebar: Hide filtered components using ng-show
 - [v36.9.0](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.0): autosave: cover promises for multiple saveNow() calls when saving
