@@ -7,7 +7,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `v76.8.12`
-`@livingdocs/editor` | `v35.36.27`
+`@livingdocs/editor` | `v35.36.28`
 
 ## Livingdocs Server
 How to require the server in your package.json:
@@ -39,7 +39,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v35.36.27",
+  "@livingdocs/editor": "v35.36.28",
 }
 ```
 
@@ -47,6 +47,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-03
 
 ### Livingdocs Editor Patches
+- [v35.36.28](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.36.28): fix(dependencies): update livingdocs framework
 - [v35.36.27](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.36.27): fix(print): Use document state notification for remote lock
 - [v35.36.26](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v35.36.26): fix(print): Tweak print preview bottom bar
 
