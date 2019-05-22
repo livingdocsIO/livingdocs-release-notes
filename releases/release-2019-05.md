@@ -7,7 +7,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `v76.26.1`
-`@livingdocs/editor` | `v36.9.4`
+`@livingdocs/editor` | `v36.9.5`
 
 ## Livingdocs Server
 How to require the server in your package.json:
@@ -30,7 +30,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v36.9.4",
+  "@livingdocs/editor": "v36.9.5",
 }
 ```
 
@@ -38,6 +38,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-05
 
 ### Livingdocs Editor Patches
+- [v36.9.5](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.5): fix(print): Use document state notification for remote lock
 - [v36.9.4](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.4): fix(project-setup): fix metadata form preview
 - [v36.9.3](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.3): fix(fastify): add cache-control everywhere
 - [v36.9.2](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.2): several small fixes for readOnly mode
