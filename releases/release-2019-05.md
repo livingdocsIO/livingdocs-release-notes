@@ -6,14 +6,14 @@ This release consists of the following new versions of the `livingdocs-server` a
 
 Package | Version
 --- | ---
-`@livingdocs/server` | `v76.26.1`
+`@livingdocs/server` | `v76.26.2`
 `@livingdocs/editor` | `v36.9.7`
 
 ## Livingdocs Server
 How to require the server in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/server": "v76.26.1",
+  "@livingdocs/server": "v76.26.2",
 }
 ```
 
@@ -21,6 +21,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2019-05
 
 ### Livingdocs Server Patches
+- [v76.26.2](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v76.26.2): fix(hugo): add filename
 - [v76.26.1](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v76.26.1): update framework version to 11.7.0 for release management
 - [v76.26.0](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v76.26.0): support google cloud storage
 
