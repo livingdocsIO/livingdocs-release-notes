@@ -7,7 +7,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `v76.26.2`
-`@livingdocs/editor` | `v36.9.8`
+`@livingdocs/editor` | `v36.9.9`
 
 ## Livingdocs Server
 How to require the server in your package.json:
@@ -31,7 +31,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v36.9.8",
+  "@livingdocs/editor": "v36.9.9",
 }
 ```
 
@@ -39,6 +39,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-05
 
 ### Livingdocs Editor Patches
+- [v36.9.9](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.9): fix(metadata-plugins): remove unnecessary ng-if
 - [v36.9.8](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.8): fix(package): update @livingdocs/framework to version 11.8.2
 - [v36.9.7](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.7): fix(links): check if link attributes are allowed before setting defaults
 - [v36.9.6](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.6): fix(dependencies): update livingdocs framework
