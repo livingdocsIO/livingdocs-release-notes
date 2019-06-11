@@ -6,14 +6,14 @@ This release consists of the following new versions of the `livingdocs-server` a
 
 Package | Version
 --- | ---
-`@livingdocs/server` | `v76.26.3`
+`@livingdocs/server` | `v76.26.4`
 `@livingdocs/editor` | `v36.9.10`
 
 ## Livingdocs Server
 How to require the server in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/server": "v76.26.3",
+  "@livingdocs/server": "v76.26.4",
 }
 ```
 
@@ -21,6 +21,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2019-05
 
 ### Livingdocs Server Patches
+- [v76.26.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v76.26.4): chore: Change config processor merging logic to respect regular key order
 - [v76.26.3](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v76.26.3): fix: Add code to inspect feature config changes using the environment variable `DEBUG_CONFIG_CHANGE`
 - [v76.26.2](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v76.26.2): fix(hugo): add filename
 - [v76.26.1](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v76.26.1): update framework version to 11.7.0 for release management
