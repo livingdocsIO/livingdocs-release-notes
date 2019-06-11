@@ -7,7 +7,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `v76.26.4`
-`@livingdocs/editor` | `v36.9.10`
+`@livingdocs/editor` | `v36.9.11`
 
 ## Livingdocs Server
 How to require the server in your package.json:
@@ -33,7 +33,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v36.9.10",
+  "@livingdocs/editor": "v36.9.11",
 }
 ```
 
@@ -41,6 +41,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-05
 
 ### Livingdocs Editor Patches
+- [v36.9.11](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.11): fix: fix semantic-release script on droneci.yml
 - [v36.9.10](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.10): fix(diff-change-article-ui): remove check on changes
 
 When the view is changing the check on changes
