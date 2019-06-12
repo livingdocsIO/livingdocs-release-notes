@@ -7,7 +7,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `v76.26.5`
-`@livingdocs/editor` | `v36.9.12`
+`@livingdocs/editor` | `v36.9.13`
 
 ## Livingdocs Server
 How to require the server in your package.json:
@@ -34,7 +34,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v36.9.12",
+  "@livingdocs/editor": "v36.9.13",
 }
 ```
 
@@ -42,6 +42,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-05
 
 ### Livingdocs Editor Patches
+- [v36.9.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.13): fix(tasks): task can be restarted without deleting the task
 - [v36.9.12](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.12): fix(print): Remove unneeded bottom bar CSS
 
 Removes a workaround that is no longer needed. This fixes a display bug where the bottom preview image was covered by the print preview bottom bar.
