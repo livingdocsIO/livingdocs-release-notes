@@ -7,7 +7,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `v76.26.6`
-`@livingdocs/editor` | `v36.9.15`
+`@livingdocs/editor` | `v36.9.16`
 
 ## Livingdocs Server
 How to require the server in your package.json:
@@ -35,7 +35,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v36.9.15",
+  "@livingdocs/editor": "v36.9.16",
 }
 ```
 
@@ -43,6 +43,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-05
 
 ### Livingdocs Editor Patches
+- [v36.9.16](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.16): code: incorporate pr feedback
 - [v36.9.15](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.15): fix(dashboard): make it possible to pass componentName per config
 - [v36.9.14](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.14): fix(history): re-add bold styles, revisions topbar
 - [v36.9.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.13): fix(tasks): task can be restarted without deleting the task
