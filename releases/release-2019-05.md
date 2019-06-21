@@ -7,7 +7,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `v76.26.6`
-`@livingdocs/editor` | `v36.9.18`
+`@livingdocs/editor` | `v36.9.19`
 
 ## Livingdocs Server
 How to require the server in your package.json:
@@ -35,7 +35,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v36.9.18",
+  "@livingdocs/editor": "v36.9.19",
 }
 ```
 
@@ -43,6 +43,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-05
 
 ### Livingdocs Editor Patches
+- [v36.9.19](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.19): cypress(tasks): adapt cypress task tests to the new action bar
 - [v36.9.18](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.18): fix(diff-boxes): fix the layout of the diff boxes to be more independent to the design
 - [v36.9.17](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.17): fix(diff-outdated-designs): fix load design before create livingdoc
 
