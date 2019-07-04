@@ -51,9 +51,18 @@ How to require the editor in your package.json:
 
 ## Track Changes (Differ) :tada:
 
----TODO good feature description by Meinrad---
----TODO documentation in docu repo?---
----TODO screenshot by Meinrad---
+We now have the much anticipated Track Changes feature as official version in the editor :tada:. Track Changes shows you all the changes between two versions of a document e.g.
+- added and removed components
+- added and removed text
+- modified components (style changes, image change, embed changes)
+
+Every change is labeled by the user which did the change. You are also able to configure the color palette of the changes to match your design. The component changes are marked with boxes to be as independent as possible from the design.
+In the history sidebar you can switch now between the `compare` and the `revision selection` mode. 
+All the existing functionality for show a specific version or revert to it are still there.
+Track Changes can be found in the History menu of the editor.
+
+References:
+* [Documentation](https://docs.livingdocs.io/reference-documentation/editor/editing-features#diff-view)
 
 ## Custom Realtime Proofreading Task Dashboard :gift:
 
