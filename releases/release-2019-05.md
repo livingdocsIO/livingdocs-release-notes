@@ -7,7 +7,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `v76.26.6`
-`@livingdocs/editor` | `v36.9.22`
+`@livingdocs/editor` | `v36.9.23`
 
 ## Livingdocs Server
 How to require the server in your package.json:
@@ -35,7 +35,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v36.9.22",
+  "@livingdocs/editor": "v36.9.23",
 }
 ```
 
@@ -43,6 +43,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-05
 
 ### Livingdocs Editor Patches
+- [v36.9.23](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.23): fix(dashboard): resolve filter properly when query string is set in url on a custom dashboard
 - [v36.9.22](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.22): fix: retrigger the CI
 - [v36.9.21](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.21): fix(diff-outdated-versions): don't set revision inactive for outdated design
 - [v36.9.20](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.20): fix(diff-outdated-versions): bump the framework version to 11.8.3
