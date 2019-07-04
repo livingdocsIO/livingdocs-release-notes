@@ -56,8 +56,8 @@ We now have the much anticipated Track Changes feature as official version in th
 - added and removed text
 - modified components (style changes, image change, embed changes)
 
-Every change is labeled by the user which did the change. You are also able to configure the color palette of the changes to match your design. The component changes are marked with boxes to be as independent as possible from the design.
-In the history sidebar you can switch now between the `compare` and the `revision selection` mode. 
+Every change is labeled by the user who did the change. You are also able to configure the color palette of the changes to match your design. Changed component are marked with colored and lableed boxes.
+In the history sidebar you can switch between the `compare` and the `revision selection` mode.
 All the existing functionality for show a specific version or revert to it are still there.
 Track Changes can be found in the History menu of the editor.
 
@@ -71,7 +71,7 @@ This [guide](https://github.com/livingdocsIO/livingdocs/pull/251) shows you, how
 
 ## Pin Component Feature :gift:
 
-Pinning of components enables a pin icon next to a component card in the sidebar. When clicked the component is pinned according to the rules:
+Components can now be pinned which prevents both deletion and moving of the component. In the sidebar you can see a pin icon in the sidebar when a component is focused. Clicking it pins the component according to the rules:
 - if it is alone in a container it can not be moved, deleted nor can anything be moved or inserted before or after it (perfect for a fixed article header)
 - if it is next to other components, it can not be moved nor deleted, but other components can be moved or inserted around it
 
@@ -90,13 +90,11 @@ References:
 
 ## Prefill Author :tada:
 
-Allow the author on the metadata screen to be prefilled from the currently logged in user.
+Allow the author on the metadata screen to be prefilled from the currently logged in user. This requires setting up data-records for users and some metadata configuration in contentTypes.
 
 References:
 * [Documentation](https://docs.livingdocs.io/general-howtos/prefill-author#prefilling-configuration)
 * [Pull Request livingdocs-editor](https://github.com/livingdocsIO/livingdocs-editor/pull/2760)
-
-
 
 
 
@@ -108,7 +106,7 @@ References:
 # run grunt migrate to update to the newest database scheme
 # migration - 118-add-configs-table.js
 #   create config_indexes + config_properties table
-# migration - 119-migrate-channel-configs.js	
+# migration - 119-migrate-channel-configs.js
 #   migrate channel configs
 livingdocs-server migrate up
 ```
@@ -255,6 +253,8 @@ You can read more about the changes in the [Project Builder PR](https://github.c
 
 You can skip this section when you are a business customer which configures the channel-config via files.
 This change replaces the event stream implementation with a simpler config properties store that makes it easier to add and test additional configurations. Also draft support is considered from the beginning.
+In the next release we will introduce new configuration and design workflows which base on this new implementation and will significantly ease working with and testing designs.
+And we will also gradually introduce new configuration options which can be defined per project instead of for the whole server (it will become possible to configure many options per project which currently can only be configured either in the editor or server configuration)
 
 ### Breaking Changes in the ChannelConfig API
 - :fire: removed `channelConfigApi.execCommands()`
