@@ -56,10 +56,12 @@ We now have the much anticipated Track Changes feature as official version in th
 - added and removed text
 - modified components (style changes, image change, embed changes)
 
-Every change is labeled by the user who did the change. You are also able to configure the color palette of the changes to match your design. Changed component are marked with colored and lableed boxes.
+Every change is labeled by the user who did the change. You are also able to configure the color palette of the changes to match your design. Changed component are marked with colored and labled boxes.
 In the history sidebar you can switch between the `compare` and the `revision selection` mode.
-All the existing functionality for show a specific version or revert to it are still there.
+All the existing functionality for show a specific version or revert to it are still there. The task events are now also showed in the history.
 Track Changes can be found in the History menu of the editor.
+
+![basic_compare](https://user-images.githubusercontent.com/546185/60800330-50c76080-a175-11e9-817d-57a81f15cfc8.gif)
 
 References:
 * [Documentation](https://docs.livingdocs.io/reference-documentation/editor/editing-features#diff-view)
