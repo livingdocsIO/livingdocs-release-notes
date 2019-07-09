@@ -6,14 +6,14 @@ This release consists of the following new versions of the `livingdocs-server` a
 
 Package | Version
 --- | ---
-`@livingdocs/server` | `v76.26.6`
+`@livingdocs/server` | `v76.26.7`
 `@livingdocs/editor` | `v36.9.25`
 
 ## Livingdocs Server
 How to require the server in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/server": "v76.26.6",
+  "@livingdocs/server": "v76.26.7",
 }
 ```
 
@@ -21,6 +21,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2019-05
 
 ### Livingdocs Server Patches
+- [v76.26.7](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v76.26.7): fix(merge-users): prevent group membership assignment from overwriting
 - [v76.26.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v76.26.6): fix: enable proofreading and review property for dashboards
 - [v76.26.5](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v76.26.5): fix(tasks): support link from tasks to dashboard
 - [v76.26.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v76.26.4): chore: Change config processor merging logic to respect regular key order
