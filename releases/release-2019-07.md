@@ -7,14 +7,14 @@ This release consists of the following new versions of the `livingdocs-server` a
 
 Package | Version
 --- | ---
-`@livingdocs/server` | `39.2.0`
-`@livingdocs/editor` | `83.2.0`
+`@livingdocs/server` | `83.2.3`
+`@livingdocs/editor` | `39.2.9`
 
 ## Livingdocs Server
 How to require the server in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/server": "39.2.0",
+  "@livingdocs/server": "83.2.3",
 }
 ```
 
@@ -22,7 +22,10 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2019-07
 
 ### Livingdocs Server Patches
-- [v39.2.0](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v39.2.0): fix: show modified components in the diff view
+- [v83.2.3](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v83.2.3): prevent group membership assignment from overwriting
+- [v83.2.2](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v83.2.2): Disable Netlify feature flag
+- [v83.2.1](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v83.2.1): Update livingdocs-framework for release-management
+- [v83.2.0](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v83.2.0): webhooks via channel config
 
 
 
@@ -30,7 +33,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "83.2.0",
+  "@livingdocs/editor": "39.2.9",
 }
 ```
 
@@ -38,9 +41,16 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-07
 
 ### Livingdocs Editor Patches
-- [v83.2.2](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v83.2.2): Disable Netlify feature flag
-- [v83.2.1](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v83.2.1): Update livingdocs-framework for release-management
-- [v83.2.0](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v83.2.0): webhooks via channel config
+- [v39.2.9](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.9): tasks: respect policy for priority updates
+- [v39.2.8](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.8): track changes polishing
+- [v39.2.7](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.7): show fast-truck icon always in the same size
+- [v39.2.6](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.6): dashboard: handle errors when an item has no metadata config
+- [v39.2.5](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.5): crop-size: use image size as max value for crop
+- [v39.2.4](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.4): resolve filter properly when query string is set in url on a custom dashboard 
+- [v39.2.3](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.3): fix ‘load more articles’ computation
+- [v39.2.2](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.2): add default label for tasks
+- [v39.2.1](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.1): correctly initiate lock-mode from history
+- [v39.2.0](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.0): fix: show modified components in the diff view
 
 
 
