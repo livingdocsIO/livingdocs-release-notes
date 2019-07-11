@@ -61,7 +61,9 @@ In the history sidebar you can switch between the `compare` and the `revision se
 All the existing functionality for show a specific version or revert to it are still there. The task events are now also showed in the history.
 Track Changes can be found in the History menu of the editor.
 
-![basic_compare](https://user-images.githubusercontent.com/546185/60800330-50c76080-a175-11e9-817d-57a81f15cfc8.gif)
+We removed the beta version config option `diffViewEnabled` because track changes are now included in the history.
+
+![basic_compare](https://user-images.githubusercontent.com/546185/60800852-35108a00-a176-11e9-8068-9b7e2947a93a.gif)
 
 References:
 * [Documentation](https://docs.livingdocs.io/reference-documentation/editor/editing-features#diff-view)
