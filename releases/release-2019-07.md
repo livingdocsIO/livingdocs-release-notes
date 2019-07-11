@@ -1,4 +1,3 @@
-
 **Attention:** If you skipped one or more releases, please also check the release-notes of the skipped ones.
 
 # Repositories
@@ -8,7 +7,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `83.2.3`
-`@livingdocs/editor` | `39.2.9`
+`@livingdocs/editor` | `v39.2.10`
 
 ## Livingdocs Server
 How to require the server in your package.json:
@@ -33,7 +32,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "39.2.9",
+  "@livingdocs/editor": "v39.2.10",
 }
 ```
 
@@ -41,6 +40,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-07
 
 ### Livingdocs Editor Patches
+- [v39.2.10](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.10): fix(lists): don't always hide the delete button
 - [v39.2.9](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.9): tasks: respect policy for priority updates
 - [v39.2.8](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.8): track changes polishing
 - [v39.2.7](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.7): show fast-truck icon always in the same size
