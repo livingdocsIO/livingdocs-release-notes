@@ -7,7 +7,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `83.2.3`
-`@livingdocs/editor` | `v39.2.11`
+`@livingdocs/editor` | `v39.2.12`
 
 ## Livingdocs Server
 How to require the server in your package.json:
@@ -32,7 +32,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v39.2.11",
+  "@livingdocs/editor": "v39.2.12",
 }
 ```
 
@@ -40,6 +40,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-07
 
 ### Livingdocs Editor Patches
+- [v39.2.12](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.12): fix(styleguide): adapt wording
 - [v39.2.11](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.11): fix(proofreading): show truck status
 - [v39.2.10](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.10): fix(lists): don't always hide the delete button
 - [v39.2.9](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.9): tasks: respect policy for priority updates
