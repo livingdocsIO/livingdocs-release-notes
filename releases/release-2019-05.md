@@ -7,7 +7,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `v76.26.8`
-`@livingdocs/editor` | `v36.9.27`
+`@livingdocs/editor` | `v36.9.28`
 
 ## Livingdocs Server
 How to require the server in your package.json:
@@ -37,7 +37,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v36.9.27",
+  "@livingdocs/editor": "v36.9.28",
 }
 ```
 
@@ -45,6 +45,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-05
 
 ### Livingdocs Editor Patches
+- [v36.9.28](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.28): fix: trigger build to solve bowser problem
 - [v36.9.27](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.27): fix(tasks): show always a username in tasks
 - [v36.9.26](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.26): fix(filter): allow notContentType in dashboard filters to be a value or an array
 - [v36.9.25](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.25): fix(crop-size): use image size as max value for crop
