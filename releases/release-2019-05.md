@@ -7,7 +7,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `v76.26.8`
-`@livingdocs/editor` | `v36.9.30`
+`@livingdocs/editor` | `v36.9.31`
 
 ## Livingdocs Server
 How to require the server in your package.json:
@@ -37,7 +37,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v36.9.30",
+  "@livingdocs/editor": "v36.9.31",
 }
 ```
 
@@ -45,6 +45,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-05
 
 ### Livingdocs Editor Patches
+- [v36.9.31](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.31): fix(tasks): show tasks in publish panel on the sidebar
 - [v36.9.30](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.30): fix(proofreading): fix proofreading filter behaviour
 - [v36.9.29](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.29): fix: set bowser version to 2.5.2 to prevent building problems
 - [v36.9.28](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.28): fix: trigger build to solve bowser problem
