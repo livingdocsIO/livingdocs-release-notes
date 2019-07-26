@@ -7,7 +7,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `83.2.3`
-`@livingdocs/editor` | `v39.2.17`
+`@livingdocs/editor` | `v39.2.18`
 
 ## Livingdocs Server
 How to require the server in your package.json:
@@ -32,7 +32,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v39.2.17",
+  "@livingdocs/editor": "v39.2.18",
 }
 ```
 
@@ -40,6 +40,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-07
 
 ### Livingdocs Editor Patches
+- [v39.2.18](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.18): fix: dedicated element for dot for windows compat
 - [v39.2.17](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.17): fix(ABAC): correctly access for multiple groups
 - [v39.2.16](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.16): fix(tasks): show tasks in publish panel on the sidebar
 - [v39.2.15](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.15): fix: increase the delay from 400 to 800 ms when leaving a document
