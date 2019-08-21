@@ -7,7 +7,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `v83.2.4`
-`@livingdocs/editor` | `v39.2.19`
+`@livingdocs/editor` | `v39.2.20`
 
 ## Livingdocs Server
 How to require the server in your package.json:
@@ -33,7 +33,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v39.2.19",
+  "@livingdocs/editor": "v39.2.20",
 }
 ```
 
@@ -41,6 +41,10 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-07
 
 ### Livingdocs Editor Patches
+- [v39.2.20](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.20): fix(revision): Spacing
+
+- Fixed left spacing on revision items
+- Linted some lines
 - [v39.2.19](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.19): fix(styling): display deleted articles warning red
 - [v39.2.18](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.18): fix: dedicated element for dot for windows compat
 - [v39.2.17](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.17): fix(ABAC): correctly access for multiple groups
