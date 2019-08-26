@@ -7,7 +7,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `v83.2.4`
-`@livingdocs/editor` | `v39.2.22`
+`@livingdocs/editor` | `v39.2.23`
 
 ## Livingdocs Server
 How to require the server in your package.json:
@@ -33,7 +33,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v39.2.22",
+  "@livingdocs/editor": "v39.2.23",
 }
 ```
 
@@ -41,6 +41,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-07
 
 ### Livingdocs Editor Patches
+- [v39.2.23](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.23): fix(history): always display published event
 - [v39.2.22](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.22): chore: re-run ci
 - [v39.2.21](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.21): fix(proofreading): improve dashboard card sorting
 - [v39.2.20](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.20): fix(revision): Spacing
