@@ -6,14 +6,14 @@ This release consists of the following new versions of the `livingdocs-server` a
 
 Package | Version
 --- | ---
-`@livingdocs/server` | `v83.2.4`
+`@livingdocs/server` | `v83.2.5`
 `@livingdocs/editor` | `v39.2.23`
 
 ## Livingdocs Server
 How to require the server in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/server": "v83.2.4",
+  "@livingdocs/server": "v83.2.5",
 }
 ```
 
@@ -21,6 +21,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2019-07
 
 ### Livingdocs Server Patches
+- [v83.2.5](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v83.2.5): chore: improve test naming for copy-controller
 - [v83.2.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v83.2.4): chore: rotate npm token
 - [v83.2.3](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v83.2.3): prevent group membership assignment from overwriting
 - [v83.2.2](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v83.2.2): Disable Netlify feature flag
