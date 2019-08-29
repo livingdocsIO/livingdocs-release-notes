@@ -7,7 +7,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `v76.26.8`
-`@livingdocs/editor` | `v36.9.32`
+`@livingdocs/editor` | `v36.9.33`
 
 ## Livingdocs Server
 How to require the server in your package.json:
@@ -37,7 +37,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v36.9.32",
+  "@livingdocs/editor": "v36.9.33",
 }
 ```
 
@@ -45,6 +45,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-05
 
 ### Livingdocs Editor Patches
+- [v36.9.33](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.33): chore: incorporate feedback
 - [v36.9.32](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.32): fix: rotate npm token
 - [v36.9.31](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.31): fix(tasks): show tasks in publish panel on the sidebar
 - [v36.9.30](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v36.9.30): fix(proofreading): fix proofreading filter behaviour
