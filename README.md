@@ -1,6 +1,7 @@
 # Table of Contents
 
-* [July 2019 Release](./releases/release-2019-07.md)
+* [September 2019 Release](./releases/release-2019-09.md)
+* [July 2019 Release](./releases/release-2019-07.md) (legacy*)
 * [May 2019 Release](./releases/release-2019-05.md) (legacy*)
 * [March 2019 Release](./releases/release-2019-03.md) (legacy*)
 * [January 2019 Release](./releases/release-2019-01.md) (legacy*)
