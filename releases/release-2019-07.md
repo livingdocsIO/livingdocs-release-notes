@@ -6,14 +6,14 @@ This release consists of the following new versions of the `livingdocs-server` a
 
 Package | Version
 --- | ---
-`@livingdocs/server` | `v83.2.7`
+`@livingdocs/server` | `v83.2.8`
 `@livingdocs/editor` | `v39.2.25`
 
 ## Livingdocs Server
 How to require the server in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/server": "v83.2.7",
+  "@livingdocs/server": "v83.2.8",
 }
 ```
 
@@ -21,6 +21,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2019-07
 
 ### Livingdocs Server Patches
+- [v83.2.8](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v83.2.8): fix: correctly pass userId for copied articles
 - [v83.2.7](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v83.2.7): fix(render_pipeline): passing renditionNames to beforeRender hook
 - [v83.2.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v83.2.6): fix(document-api): Re-introduce the accidentally removed `path` query support in `documentApi.findOne`
 - [v83.2.5](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v83.2.5): chore: improve test naming for copy-controller
