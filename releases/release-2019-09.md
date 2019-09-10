@@ -49,9 +49,22 @@ How to require the editor in your package.json:
 
 # Highlights
 
+## Categories :gift:
+
+The categories feature allows to organise routing information and category related metadata such as ad campaigns, analytics, etc.
+We provide a Monaco Editor instance in the Project Setup to edit the categories information as a JSON. In addition there are new metadata plugins to enable the categories on content-types as well as a one-click setup that sets up all metadata for pages and articles in one go.
+
+For use in the frontend projects we provide new public API endpoints:
+* :heavy_plus_sign: `/routing/resolve` to resolve a given path to a document id
+* :heavy_plus_sign: `/categories` to get all categories
+* :heavy_plus_sign: `/categories/:id` to get a specific category
+Detailed documentation on the new public API endpoints is in the public API documentation `<your-editor-host>/public-api`.
+
 ## Reindex Documents via Operation Screen :gift:
 
-A server administrator can now reindex documents via the `Operations` panel in the editor. The reindexing mechanism is the same as via the `livingdocs-server` cli.
+Reindexing will often be used when one wants to have updated metadatadata and design for deliveries.
+A server administrator can now reindex documents via the `Operations` panel (Server Administration -> Operations) in the editor.
+The reindexing mechanism is the same as via the `livingdocs-server` cli.
 
 ![elasticsearch-operations](https://user-images.githubusercontent.com/431376/62135777-1750c380-b2e3-11e9-8ec5-b5d23d2c7102.gif)
 
@@ -60,13 +73,13 @@ References:
 
 ## Teaser Preview :gift:
 
-The Teaser Preview adds an additional read-only view to the publication section of the Livingdocs Editor. It is by default disabled and can only be enabled and configured in a content type config.
+The Teaser Preview adds an additional read-only view to the publication section of the Livingdocs Editor. It is by default disabled and can only be enabled and configured in a content type config. Examples and more details how to set up a teaser preview, can be found in the [documentation](https://github.com/livingdocsIO/livingdocs/pull/258)
 
 ![teaser_preview](https://user-images.githubusercontent.com/546185/63969271-ced32400-caa1-11e9-9428-8b5248ff77e9.gif)
 
 References:
-  * [editor PR #2908](https://github.com/livingdocsIO/livingdocs-editor/pull/2908)
   * [documentation](https://github.com/livingdocsIO/livingdocs/pull/258)
+  * [editor PR #2908](https://github.com/livingdocsIO/livingdocs-editor/pull/2908)
 
 ## doc-include Enhancements :gift:
 
@@ -75,7 +88,7 @@ doc-include have been enhanced.
 - :heavy_plus_sign: New `onIncludeRendered` hook
 
 You can find the updated doc-include in the documentation. 
-There is also a Twitter guide which uses the new options of doc-includes.
+There is also a guide in our documentation on how to set up a Twitter include which uses the new options of doc-includes.
 
 References:
   * [documentation](https://github.com/livingdocsIO/livingdocs/pull/256)
@@ -87,7 +100,7 @@ References:
 
 The editor has experienced some small but useful improvements
 
-- :heavy_plus_sign: Support ssl certificates and therefore https/http2
+- :heavy_plus_sign: Support ssl certificates for localhost and therefore https/http2
 - :heavy_plus_sign: Introduce a proxy for API requests to prevent CORS requests
 - :heavy_plus_sign: Serving assets using a cdn url
 
