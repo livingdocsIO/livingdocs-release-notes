@@ -7,7 +7,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `v83.2.8`
-`@livingdocs/editor` | `v39.2.25`
+`@livingdocs/editor` | `v39.2.26`
 
 ## Livingdocs Server
 How to require the server in your package.json:
@@ -37,7 +37,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v39.2.25",
+  "@livingdocs/editor": "v39.2.26",
 }
 ```
 
@@ -45,6 +45,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-07
 
 ### Livingdocs Editor Patches
+- [v39.2.26](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.26): fix: finishing proofreading forces a new revision
 - [v39.2.25](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.25): fix(search): Fix last publication date on search result
 - [v39.2.24](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.24): chore: retrigger ci
 - [v39.2.23](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.23): fix(history): always display published event
