@@ -1,4 +1,3 @@
-
 **Attention:** If you skipped one or more releases, please also check the release-notes of the skipped ones.
 
 # Repositories
@@ -39,6 +38,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-09
 
 ### Livingdocs Editor Patches
+- [v41.9.12](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.12): fix: finishing proofreading forces a new revision
 - [v41.9.8](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.8): search: Fix last publication date on search result
 - [v41.9.7](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.7): assets: Set default cache time of assets to 1 year again.
 - [v41.9.6](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.6): component-library: use correct binding variable ref for design modal
