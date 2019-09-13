@@ -39,6 +39,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-09
 
 ### Livingdocs Editor Patches
+- [v41.9.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.13): fix: Migrate to the newer dependency injection syntax
 - [v41.9.12](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.12): fix: finishing proofreading forces a new revision
 - [v41.9.8](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.8): search: Fix last publication date on search result
 - [v41.9.7](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.7): assets: Set default cache time of assets to 1 year again.
