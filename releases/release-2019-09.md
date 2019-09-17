@@ -21,6 +21,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2019-09
 
 ### Livingdocs Server Patches
+- [v85.3.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.4): fix(token): add issuer to token if available
 - [v85.3.3](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.3): chore: Migrate to elasticsearch 6 as bluewin is using that by default already in the september release
 - [v85.3.2](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.2): test for release management
 - [v85.3.1](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.1): update framework
