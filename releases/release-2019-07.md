@@ -7,7 +7,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `v83.2.8`
-`@livingdocs/editor` | `v39.2.28`
+`@livingdocs/editor` | `v39.2.29`
 
 ## Livingdocs Server
 How to require the server in your package.json:
@@ -37,7 +37,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v39.2.28",
+  "@livingdocs/editor": "v39.2.29",
 }
 ```
 
@@ -45,6 +45,9 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-07
 
 ### Livingdocs Editor Patches
+- [v39.2.29](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.29): fix(compare-toggle): reset diffService selection
+
+Revisions must be reset before compare started again
 - [v39.2.28](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.28): fix(sortable-js): use version 1.9.0
 
 because 1.10.0 doesn't work with
