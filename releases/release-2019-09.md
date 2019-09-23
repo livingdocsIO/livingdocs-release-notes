@@ -42,6 +42,9 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-09
 
 ### Livingdocs Editor Patches
+- [v41.9.15](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.15): fix: Upgrade to @livingdocs/framework@^12.6.3
+
+To fix some image service helpers
 - [v41.9.14](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.14): fix(compare-toggle): reset diffService selection
 
 Revisions must be reset before compare started again
