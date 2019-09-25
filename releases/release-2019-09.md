@@ -21,6 +21,9 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2019-09
 
 ### Livingdocs Server Patches
+- [v85.3.7](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.7): fix: Upgrade to @livingdocs/framework@^12.6.3
+
+To fix some image service helpers
 - [v85.3.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.6): fix(add-pagination-config): add pagination config for document-lists
 - [v85.3.5](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.5): fix(include): Support the `options` parameter in the new sync & async include render function
 - [v85.3.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.4): fix(token): add issuer to token if available
