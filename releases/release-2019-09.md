@@ -45,6 +45,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-09
 
 ### Livingdocs Editor Patches
+- [v41.9.18](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.18): fix(collaboration): Fix the user names that are shown when another user edits a document
 - [v41.9.17](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.17): fix(user-proxy): ensure inexistent users have a preview
 - [v41.9.16](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.16): fix(cropping): editing metadata image check scoped on distinct metafield
 - [v41.9.15](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.15): fix: Upgrade to @livingdocs/framework@^12.6.3
