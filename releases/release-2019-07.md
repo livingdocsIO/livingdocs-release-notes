@@ -7,7 +7,7 @@ This release consists of the following new versions of the `livingdocs-server` a
 Package | Version
 --- | ---
 `@livingdocs/server` | `v83.2.9`
-`@livingdocs/editor` | `v39.2.29`
+`@livingdocs/editor` | `v39.2.30`
 
 ## Livingdocs Server
 How to require the server in your package.json:
@@ -38,7 +38,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v39.2.29",
+  "@livingdocs/editor": "v39.2.30",
 }
 ```
 
@@ -46,6 +46,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-07
 
 ### Livingdocs Editor Patches
+- [v39.2.30](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.30): fix(collaboration): Fix the user names that are shown when another user edits a document
 - [v39.2.29](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.29): fix(compare-toggle): reset diffService selection
 
 Revisions must be reset before compare started again
