@@ -51,6 +51,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-09
 
 ### Livingdocs Editor Patches
+- [v41.9.21](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.21): fix: Support http proxies in the proxy feature
 - [v41.9.20](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.20): fix(user-proxy): allow proper loading of multiple users
 - [v41.9.19](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.19): fix: track call, extended info
 - [v41.9.18](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.18): fix(collaboration): Fix the user names that are shown when another user edits a document
