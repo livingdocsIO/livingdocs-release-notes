@@ -51,6 +51,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-09
 
 ### Livingdocs Editor Patches
+- [v41.9.33](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.33): chore: trigger ci
 - [v41.9.23](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.23): fix: Use newest fastify-reply-from to support separate http proxy agents
 - [v41.9.22](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.22): fix: Revert the npm ci to npm install as npm automatically removes the package-lock from the published module
 - [v41.9.21](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.21): fix: Support http proxies in the proxy feature
