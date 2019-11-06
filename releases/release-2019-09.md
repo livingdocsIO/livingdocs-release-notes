@@ -21,6 +21,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2019-09
 
 ### Livingdocs Server Patches
+- [v85.3.27](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.27): fix: trigger a new release
 - [v85.3.13](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.13): fix(tasks): exit process after transform channel task
 - [v85.3.12](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.12): fix: Properly provide the leveldown options to the levelup instance
 - [v85.3.11](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.11): chore: Fix javascript syntax error in node 8
