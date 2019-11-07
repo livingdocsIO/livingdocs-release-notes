@@ -6,14 +6,14 @@ This release consists of the following new versions of the `livingdocs-server` a
 
 Package | Version
 --- | ---
-`@livingdocs/server` | `v83.2.10`
-`@livingdocs/editor` | `v39.2.30`
+`@livingdocs/server` | `v83.2.11`
+`@livingdocs/editor` | `v39.2.31`
 
 ## Livingdocs Server
 How to require the server in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/server": "v83.2.10",
+  "@livingdocs/server": "v83.2.11",
 }
 ```
 
@@ -21,6 +21,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2019-07
 
 ### Livingdocs Server Patches
+- [v83.2.11](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v83.2.11): bump framework includes componentConversion match all flag and links are correctly copied
 - [v83.2.10](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v83.2.10): fix(request-logger): extend with user id through verified token
 - [v83.2.9](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v83.2.9): fix(add-pagination-config): add pagination config for document-lists
 - [v83.2.8](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v83.2.8): fix: correctly pass userId for copied articles
@@ -39,7 +40,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "v39.2.30",
+  "@livingdocs/editor": "v39.2.31",
 }
 ```
 
@@ -47,6 +48,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-07
 
 ### Livingdocs Editor Patches
+- [v39.2.31](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.31): bump framework includes componentConversion match all flag and links are correctly copied
 - [v39.2.30](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.30): fix(collaboration): Fix the user names that are shown when another user edits a document
 - [v39.2.29](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v39.2.29): fix(compare-toggle): reset diffService selection
 
