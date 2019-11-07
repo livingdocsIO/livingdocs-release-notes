@@ -21,8 +21,21 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2019-09
 
 ### Livingdocs Server Patches
-- [v85.3.28](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.28): fix: trigger a new release
-- [v85.3.27](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.27): fix: trigger a new release
+- [v85.3.28](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.28): fix livingdocs-relelease-notes patch notes
+- [v85.3.27](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.27): trigger a new release
+- [v85.3.26](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.26): set timeout to 60s for testing
+- [v85.3.25](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.25): migration: remove 125-add-group-member-list-table
+- [v85.3.24](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.24): categories: never have //
+- [v85.3.23](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.23): groups: backport scope migration
+- [v85.3.22](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.22): channel-config: allow read for user
+- [v85.3.21](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.21): correctly pass userId for copied articles
+- [v85.3.20](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.20): task: add new task group-add-user
+- [v85.3.19](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.19): metadata-plugins: getRoutePart can handle an empty category / categories: correctly inherit null metadata
+- [v85.3.18](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.18): design-loader: add cacheMaxAge config option
+- [v85.3.17](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.17): routing: use cache only during initial warmup
+- [v85.3.16](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.16): bump framework includes componentConversion match all flag and links are correctly copied
+- [v85.3.15](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.15): server-admin: reactivate archived users
+- [v85.3.14](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.14): fix data-migration task
 - [v85.3.13](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.13): fix(tasks): exit process after transform channel task
 - [v85.3.12](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.12): fix: Properly provide the leveldown options to the levelup instance
 - [v85.3.11](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.11): chore: Fix javascript syntax error in node 8
