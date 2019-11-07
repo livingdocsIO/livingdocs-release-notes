@@ -67,6 +67,15 @@ How to require the editor in your package.json:
 
 ### Livingdocs Editor Patches
 - [v41.9.33](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.33): chore: trigger ci
+- [v41.9.32](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.32): po-dashboard: improve load more button
+- [v41.9.31](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.31): print-preview: add zoom functionality
+- [v41.9.30](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.30): toolbar-comments: add indicator for comments
+- [v41.9.29](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.29): publish-screen: correctly align publish btn / server-admin-users-ui: correctly sort users
+- [v41.9.28](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.28): iframely: return promise
+- [v41.9.27](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.27): content-behavior: read the components from contentType
+- [v41.9.26](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.26): bump framework includes componentConversion match all flag and links are correctly copied
+- [v41.9.25](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.25): icons: add swisscom tv icons
+- [v41.9.24](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.24): server-admin: reactivate archived users
 - [v41.9.23](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.23): fix: Use newest fastify-reply-from to support separate http proxy agents
 - [v41.9.22](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.22): fix: Revert the npm ci to npm install as npm automatically removes the package-lock from the published module
 - [v41.9.21](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.21): fix: Support http proxies in the proxy feature
