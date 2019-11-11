@@ -21,6 +21,11 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2019-09
 
 ### Livingdocs Server Patches
+- [v85.3.29](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.29): fix(hugo): Expose hugo config
+
+This exposes the hugo feature config so it can be used in the editor.
+
+For now we’ll only expose `hugo.resource.images`, which is used by the hugo image drag-and-drop.
 - [v85.3.28](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.28): fix livingdocs-relelease-notes patch notes
 - [v85.3.27](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.27): trigger a new release
 - [v85.3.26](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.26): set timeout to 60s for testing
