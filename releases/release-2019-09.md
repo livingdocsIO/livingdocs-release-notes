@@ -66,6 +66,59 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-09
 
 ### Livingdocs Editor Patches
+- [v41.9.37](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.37): fix(hugo-drag-and-drop): Map huGO text fields to image directives
+
+https://tracking.nzzmg.ch/browse/WCMS-4962
+
+This will allow multiple hugoPicture text fields to be imported into dropped images.
+
+The mapping of which `hugoPicture` field is mapped to which `image` component directive is done via a server configuration that looks like this:
+```
+  hugo: {
+    resource: {
+      images: {
+        directiveMappings: [
+          {
+            directiveName: 'caption',
+            hugoFields: [
+              {
+                name: 'caption'
+              }
+            ]
+          },
+          {
+            directiveName: 'author',
+            hugoFields: [
+              {
+                name: 'author',
+                options: {
+                  shouldRemoveReference: true,
+                  isStartCase: true
+                }
+              },
+              {
+                name: 'source'
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+```
+
+If this mapping is not configured a simple `caption` -> `caption` mapping is assumed (as is the previous behavior).
+
+If multiple hugo fields are mapped to a single image directive the texts of all the fields are concatenated (comma-separated).
+
+The mapping config introduces the following formatting options for the imported hugo text:
+
+`isStartCase`: text will be converted to initial caps, e.g.
+`JOHN RONALD REUEL TOLKIEN` -> `John Ronald Reuel Tolkien`
+`frodo baggins` -> `Frodo Baggins`
+
+`shouldRemoveReference`: will remove the substring ` via [some entity]` which is often added to the author name, e.g.
+`John Rambo via www.aaargh.com` -> `John Rambo`
 - [v41.9.36](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.36): chore: trigger ci
 - [v41.9.35](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.35): fix: correctly notify user during a conflict
 - [v41.9.34](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.34): fix(metadata-image-cropping): guard out of bounds
