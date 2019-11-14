@@ -72,6 +72,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-09
 
 ### Livingdocs Editor Patches
+- [v41.9.41](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.41): chore: retrigger ci
 - [v41.9.40](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.40): fix(print-preview): prevent from showing while loading in publishing screen
 - [v41.9.39](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.39): fix(comments-toolbar): count threads in favor of comments
 - [v41.9.38](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.38): chore: improve param naming
