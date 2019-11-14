@@ -71,6 +71,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-09
 
 ### Livingdocs Editor Patches
+- [v41.9.39](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.39): fix(comments-toolbar): count threads in favor of comments
 - [v41.9.38](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.38): chore: improve param naming
 - [v41.9.37](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.37): fix(hugo-drag-and-drop): Map huGO text fields to image directives
 
