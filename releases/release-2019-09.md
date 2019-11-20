@@ -72,6 +72,14 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-09
 
 ### Livingdocs Editor Patches
+- [v41.9.43](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.43): fix(print-preview): Revert new print preview
+
+This reverts commits:
+ec9b9097627dce26713f4883b01fc7f3a23f4cd4
+af8dc4259a5993fadb7fef9a9601339dca029400
+
+The new preview zoom introduces some bugs that are difficult to work around, details:
+https://tracking.nzzmg.ch/browse/WCMS-5060
 - [v41.9.42](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.42): fix(workspace): don't overwrite conflict state
 - [v41.9.41](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.41): chore: retrigger ci
 - [v41.9.40](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.40): fix(print-preview): prevent from showing while loading in publishing screen
