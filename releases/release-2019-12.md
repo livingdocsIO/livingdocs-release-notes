@@ -46,8 +46,28 @@ How to require the editor in your package.json:
 
 
 ## Real Time Collaboration :tada:
+The users can now work on the same document at the same time. The editor will update automatically to the newest version and shows where the other users are editing. 
 
--------Text from Meinrad-------
+- Content and metadata are synchronized with other users
+   - When a new version of a document is saved to the server through another user the document in the editor is updated without blocking. 
+   - When a user is editing on a component the other user will see on which component a user is working and can't edit this component during that time
+![concurrentEditing](https://user-images.githubusercontent.com/4352425/69640367-80accd00-105e-11ea-8a50-6aa9215cb304.PNG)
+
+   - When metadata are changed through another user this changes will also be automatically synchronized
+   - when a comment is created it will be also synchronized
+   - when a user is on the publish screen and another is updating the content it will show a message on the publish screen that the content is updated
+![publishscreen_updatecontent](https://user-images.githubusercontent.com/4352425/69640047-f95f5980-105d-11ea-9011-52bb6256f73f.PNG)
+
+- conflict handling
+   - if the content is updated with the server version and there were changes on the same component the conflict mode is opened and a user can solve the conflicts
+![conflictMode](https://user-images.githubusercontent.com/4352425/69640072-067c4880-105e-11ea-80d8-782f89807fda.PNG)
+
+   - if the same metadata is changed the version from the server will be taken and a message is shown that the local version is overwritten.
+- all the user which are on the document are shown
+   - it shows which users are on the document
+   - it shows which users are editing
+   - the information is also shown on the publish screen
+- In the history the moves of a component will be also marked
 
 References:
   * [editor PR #3018](https://github.com/livingdocsIO/livingdocs-editor/pull/3018)
@@ -140,7 +160,19 @@ References:
 
 ## Show correct components in component list :fire:
 
--------Text from Meinrad------- need breaking change description
+🔥 in the base level of the design json the groups section is not allowed anymore. They have to be defined in the "layouts" section per layout
+```
+"layouts": [
+    {
+      "name": "regular",
+      "groups": [
+        {
+          "label": "Headers",
+          "components": ["head", "head-wide", "subtitle"]
+        }
+      ]
+    }
+```
 
 References:
   * [livingdocs-server #3031](https://github.com/livingdocsIO/livingdocs-editor/pull/3031)
