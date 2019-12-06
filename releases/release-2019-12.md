@@ -46,10 +46,10 @@ How to require the editor in your package.json:
 
 
 ## Real Time Collaboration :tada:
-The users can now work on the same document at the same time. The editor will update automatically to the newest version and shows where the other users are editing. 
+The users can now work on the same document at the same time. The editor will update automatically to the newest version and shows where the other users are editing.
 
 - Content and metadata are synchronized with other users
-   - When a new version of a document is saved to the server through another user the document in the editor is updated without blocking. 
+   - When a new version of a document is saved to the server through another user the document in the editor is updated without blocking.
    - When a user is editing on a component the other user will see on which component a user is working and can't edit this component during that time
 ![concurrentEditing](https://user-images.githubusercontent.com/4352425/69640367-80accd00-105e-11ea-8a50-6aa9215cb304.PNG)
 
@@ -62,11 +62,11 @@ The users can now work on the same document at the same time. The editor will up
    - if the content is updated with the server version and there were changes on the same component the conflict mode is opened and a user can solve the conflicts
 ![conflictMode](https://user-images.githubusercontent.com/4352425/69640072-067c4880-105e-11ea-80d8-782f89807fda.PNG)
 
-   - if the same metadata is changed the version from the server will be taken and a message is shown that the local version is overwritten.
-- all the user which are on the document are shown
-   - it shows which users are on the document
+   - if the same metadata property is changed the version from the server will be taken and a message is shown that the local version is overwritten.
+- all users which are on the document are shown
+   - it shows which users are viewing the document
    - it shows which users are editing
-   - the information is also shown on the publish screen
+   - the same information is also shown on the publish screen
 - In the history the moves of a component will be also marked
 
 References:
@@ -84,7 +84,7 @@ For the December release we worked on several improvements for Admins. Here is a
 
 ## Desk-Net Integration :tada:
 
-We previously released a [MVP](https://github.com/livingdocsIO/livingdocs-release-notes/blob/master/releases/release-2019-07.md#desk-net-integration-tada) for the Desk-Net integration. With the December release we went from MVP to fully supported feature. 
+We previously released a [MVP](https://github.com/livingdocsIO/livingdocs-release-notes/blob/master/releases/release-2019-07.md#desk-net-integration-tada) for the Desk-Net integration. With the December release we went from MVP to fully supported feature.
 
 The additions:
 * Feature can be fully configured in a UI for the channel-config
@@ -124,15 +124,19 @@ References:
   * [livingdocs-server #2538](https://github.com/livingdocsIO/livingdocs-server/pull/2538)
 
 
-## Drop Support for Elastic Search <6.x :fire:
+## Drop Support for Elasticsearch <6.x :fire:
 
-Drop support for Elastic Search `< v6.x`. Please upgrade your metadata mapping and configure the server config `search.apiVersion` to `6.x`.
-As reference, we've introduced Elastic Search 6 in [#2017](https://github.com/livingdocsIO/livingdocs-server/pull/2017).
+Drop support for Elasticsearch `< v6.x`. Please upgrade your metadata mapping and configure the server config `search.apiVersion` to `6.x`.
+As reference, we've introduced Elasticsearch 6 in [#2017](https://github.com/livingdocsIO/livingdocs-server/pull/2017).
 
 References:
   * [livingdocs-server #2535](https://github.com/livingdocsIO/livingdocs-server/pull/2535)
 
 ## Removed Functions and Properties from the channelApi :fire:
+
+We removed all functions related to the available versions and disabled versions
+that were previously stored on channel records. These function were not used as far
+as we know and had an inconsistent API.
 
 The following functions are removed from the channelApi:
 - :fire: channelApi.removeDesignVersion()
@@ -144,41 +148,38 @@ The following functions are removed from the channelApi:
 - :fire: channelApi.isDesignVersionAvailable()
 
 The following functions are removed from the channel_model:
-- :fire: channelModel.isCurrentDesignVersion()
+- :wrench: channelModel.isCurrentDesignVersion()
 
 References:
   * [livingdocs-server #2632](https://github.com/livingdocsIO/livingdocs-server/pull/2632)
 
 
-## Introduce Draft and DraftStorage to Workspace :fire:
+## Editor: Introduce Draft and DraftStorage to Workspace :fire:
 
--------Text from Lukas------- need breaking change description
+The workspace internals got a big refactoring so we can support realtime-collaboration.
+
+If you have custom code in you livingdocs-editor search your project for the following accessors:
+
+- `workspace.document`: replaced by the new `workspace.draft`. The draft offers most properties that were available on the document (but mind that `workspace.document.id` is now `workspace.draft.documentId`). The loaded document now is readOnly and is internally stored in `draft.remoteDocument`. Also any changes through `draft.livingdoc`, `draft.metadata` and `draft.changeTitle()` are monitored and it should not be necessary to call `autosave.informOfChanges()` anymore.
+- `workspace.metadata`: use `workspace.draft.metadata` instead
+- `workspace.autosave`: now lives in `workspace.draftStorage.autosave`. But it is better to not access autosave directly but use `draftStorage` directly.
 
 References:
-  * [livingdocs-server #2927](https://github.com/livingdocsIO/livingdocs-editor/pull/2927)
+  * [livingdocs-editor #2927](https://github.com/livingdocsIO/livingdocs-editor/pull/2927)
 
 
-## Show correct components in component list :fire:
+## Show correct components in the editor for legacy group definitions in the design :fire:
 
-🔥 in the base level of the design json the groups section is not allowed anymore. They have to be defined in the "layouts" section per layout
-```
-"layouts": [
-    {
-      "name": "regular",
-      "groups": [
-        {
-          "label": "Headers",
-          "components": ["head", "head-wide", "subtitle"]
-        }
-      ]
-    }
-```
+🔥If you still define component groups within `layouts` in your design then `groups` defined on the top level of the design json will be ignored now.
+
+But we recommend to upgrade your design config and define the allowed components, the default content and the wrapper directly on the contentType and define the component groups once in the design without using the `layouts` config at all.
 
 References:
   * [livingdocs-server #3031](https://github.com/livingdocsIO/livingdocs-editor/pull/3031)
 
 
 ## livingdocs-server tasks :fire:
+
 The `livingdocs-server` commands have been overhauled.
 - updated all descriptions for better comprehensibility
 - renamed commands where necessary
@@ -186,7 +187,7 @@ The `livingdocs-server` commands have been overhauled.
 
 🔥 🔥 🔥  
 **When you integrate this pull request, please also search and replace the commands in your scripts/documentation/wiki**
-🔥 🔥 🔥 
+🔥 🔥 🔥
 
 ```
 livingdocs-server database delete
@@ -263,18 +264,21 @@ livingdocs-server  parse-channel-config-v1-to-v2
 ```
 
 References:
-  * Overhaul of existing commands [#2284](https://github.com/livingdocsIO/livingdocs-server/pull/2284) 
+  * Overhaul of existing commands [#2284](https://github.com/livingdocsIO/livingdocs-server/pull/2284)
   * Add new command `npx livingdocs-server group-add-user` [#2603](https://github.com/livingdocsIO/livingdocs-server/pull/2603) :gift:
+
 
 # Other Changes
 
 ### Features
+
 * Editor: Allow restoring of archived documents [livingdocs-server #2585](https://github.com/livingdocsIO/livingdocs-server/pull/2585) :gift:
 * Add category filter [livingdocs-editor #3074](https://github.com/livingdocsIO/livingdocs-editor/pull/3074) :gift:
 * Feature API: Support async/await (most of the APIs) [livingdocs-server #2640](https://github.com/livingdocsIO/livingdocs-server/pull/2640) :gift:
 * DevOps: Graceful shutdown of the server [livingdocs-server #2640](https://github.com/livingdocsIO/livingdocs-server/pull/2640) :gift:
 
 ### Design
+
 * Document History: Sidebar extensions [livingdocs-editor #2862](https://github.com/livingdocsIO/livingdocs-editor/pull/2862) :gift:
 * Project Setup: Improved design of channel config history [livingdocs-editor #3020](https://github.com/livingdocsIO/livingdocs-editor/pull/3020) :gift:
 * Profile Dropdown: Improved design [livingdocs-editor #3026](https://github.com/livingdocsIO/livingdocs-editor/pull/3026) :gift:
@@ -283,10 +287,12 @@ References:
 * Styleguide: Added new icons to the styleguide [livingdocs-editor #3055](https://github.com/livingdocsIO/livingdocs-editor/pull/3055) :gift:
 
 ### APIs
-* Channel Config Drafts: add new endpoints [livingdocs-server #2540](https://github.com/livingdocsIO/livingdocs-server/pull/2540) :gift:
+
+* Channel Config: add new public api endpoints [livingdocs-server #2540](https://github.com/livingdocsIO/livingdocs-server/pull/2540) :gift:
 * Channel Config: Add 'GET channel-configs/properties' endpoint [livingdocs-server #2568](https://github.com/livingdocsIO/livingdocs-server/pull/2568) :gift:
 
 ### Improvements
+
 * Channel Config
   * Make editor settings editable [livingdocs-editor #2972](https://github.com/livingdocsIO/livingdocs-editor/pull/2972) :gift:
   * Manage metadata groups in the metadata screen [livingdocs-editor #3087](https://github.com/livingdocsIO/livingdocs-editor/pull/3087) :gift:
@@ -317,6 +323,7 @@ References:
   * Map huGO text fields to image directives [livingdocs-editor #3063](https://github.com/livingdocsIO/livingdocs-editor/pull/3063) :gift:
 
 ### Bugfixes
+
 * Categories
   * GetRoutePart() can handle an empty category [livingdocs-server #2533](https://github.com/livingdocsIO/livingdocs-server/pull/2533) :beetle:
   * Correct error handling in prepublish hook [livingdocs-server #2565](https://github.com/livingdocsIO/livingdocs-server/pull/2565) :beetle:
