@@ -21,6 +21,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2019-09
 
 ### Livingdocs Server Patches
+- [v85.3.31](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.31): fix(drone): wait-on-services
 - [v85.3.30](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.30): fix(hugo): disable feature if config is missing
 - [v85.3.29](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.29): fix(hugo): Expose hugo config
 
