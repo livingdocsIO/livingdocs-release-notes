@@ -73,6 +73,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-09
 
 ### Livingdocs Editor Patches
+- [v41.9.45](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.45): fix(hugo): Use ` / ` as huGO image source field delimiter
 - [v41.9.44](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.44): fix(drone): remove recording for cypress
 - [v41.9.43](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.43): fix(print-preview): Revert new print preview
 
