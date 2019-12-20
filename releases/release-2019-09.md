@@ -21,7 +21,6 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2019-09
 
 ### Livingdocs Server Patches
-- [v85.3.36](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.36): fix(migration): set default object in callback
 - [v85.3.35](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.35): fix(index): allow to reindex by contentType or documentType
 - [v85.3.34](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.34): code(indexing): reverse the order of the batches in the result instead in the query
 - [v85.3.33](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v85.3.33): fix(ci): fix build
