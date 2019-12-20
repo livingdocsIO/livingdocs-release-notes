@@ -22,7 +22,14 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2019-12
 
 ### Livingdocs Server Patches
-- [v91.0.1](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v91.0.0): ?
+- [v91.0.8](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v91.0.8): migration: validate a livingdocs after the file migration and not before
+- [v91.0.7](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v91.0.7): index: allow to reindex by contentType or documentType
+- [v91.0.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v91.0.6): hugo-import: Allow import of articles with missing images
+- [v91.0.5](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v91.0.5): indexing: add delay when elastic cpu passes threshold / reindex newest documents first
+- [v91.0.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v91.0.4): localAuth: correctly delete all identities
+- [v91.0.3](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v91.0.3): setup-project: start downstream with config
+- [v91.0.2](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v91.0.2): includes: add label to schema
+- [v91.0.1](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v91.0.1): Use a new yargs instance instead of the global one to prevent conflicts with downstreams 
 
 
 
@@ -38,8 +45,14 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-12
 
 ### Livingdocs Editor Patches
-- [v42.9.1](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.1): ?
-
+- [v42.9.11](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.11): drag-and-drop: Cancel drop if no target channels configured
+- [v42.9.10](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.10): hugo: Use / as huGO image source field delimiter
+- [v42.9.9](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.9): correctly resolve document publishers name
+- [v42.9.8](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.8): component-styles: update styles selection on update
+- [v42.9.7](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.7): config: Add sourcePolicy to channel config settings
+- [v42.9.6](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.6): add missing downstream icon 
+- [v42.9.5](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.5): correctly return tasks from dashboard model
+- [v42.9.4](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.4): conflicts: only show message if it is a shown metadata property
 
 
 # Highlights
@@ -104,6 +117,9 @@ References:
 # Breaking Changes :fire:
 
 ## Migrate the database :fire:
+
+The database migration is expected to be fast, easy and without issues.
+The fields `channels.disabled_versions` and `channels.available_versions` are deleted, but were not used in the last release.
 
 ```sh
 # run grunt migrate to update to the newest database scheme
