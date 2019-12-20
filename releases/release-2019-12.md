@@ -1,4 +1,3 @@
-
 **Attention:** If you skipped one or more releases, please also check the release-notes of the skipped ones.
 
 # Repositories
@@ -22,6 +21,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2019-12
 
 ### Livingdocs Server Patches
+- [v91.0.9](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v91.0.9): fix(tasks): remove interactive -y question to show the help when no parameter has been passed
 - [v91.0.8](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v91.0.8): migration: validate a livingdocs after the file migration and not before
 - [v91.0.7](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v91.0.7): index: allow to reindex by contentType or documentType
 - [v91.0.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v91.0.6): hugo-import: Allow import of articles with missing images
