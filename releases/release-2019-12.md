@@ -45,6 +45,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-12
 
 ### Livingdocs Editor Patches
+- [v42.9.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.13): fix(real-time): listen on html and data changes on component
 - [v42.9.12](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.12): fix(package): downgrade monaco editor due to failing package
 - [v42.9.11](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.11): drag-and-drop: Cancel drop if no target channels configured
 - [v42.9.10](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.10): hugo: Use / as huGO image source field delimiter
