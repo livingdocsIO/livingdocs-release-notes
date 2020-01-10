@@ -172,7 +172,7 @@ The mapping config introduces the following formatting options for the imported 
 To fix some image service helpers
 - [v41.9.14](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.14): fix(compare-toggle): reset diffService selection
 
-Revisions must be reset before compare started again
+toggle of compare mode works correctly
 - [v41.9.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.13): fix: Migrate to the newer dependency injection syntax
 - [v41.9.12](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.12): fix: finishing proofreading forces a new revision
 - [v41.9.8](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v41.9.8): search: Fix last publication date on search result
