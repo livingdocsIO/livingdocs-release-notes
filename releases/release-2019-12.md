@@ -45,6 +45,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-12
 
 ### Livingdocs Editor Patches
+- [v42.9.16](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.16): fix(edit-mode): don't open interactive view twice
 - [v42.9.15](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.15): fix: ensure message for overwritten metadata shows
 - [v42.9.14](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.14): fix(package.json): update the framework to 13.2.0
 - [v42.9.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.13): fix(real-time): listen on html and data changes on component
