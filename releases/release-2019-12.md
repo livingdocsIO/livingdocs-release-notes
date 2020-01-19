@@ -45,6 +45,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-12
 
 ### Livingdocs Editor Patches
+- [v42.9.21](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.21): fix(unlock-timeout): on lockComponent otherwise it will flicker
 - [v42.9.20](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.20): fix(embeds-loading): rename activateEmbeds
 - [v42.9.19](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.19): fix(metadata): update metadata correctly
 - [v42.9.18](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.18): fix(component-lock): lock component on crop screen
