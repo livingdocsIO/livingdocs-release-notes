@@ -46,6 +46,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-12
 
 ### Livingdocs Editor Patches
+- [v42.9.23](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.23): fix(http): Disable http2 by default as it's causing a crash streams that are cancelled before they ended
 - [v42.9.22](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.22): fix(print-preview): setup print preview in workspace
 - [v42.9.21](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.21): fix(unlock-timeout): on lockComponent otherwise it will flicker
 - [v42.9.20](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.20): fix(embeds-loading): rename activateEmbeds
