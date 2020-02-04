@@ -46,6 +46,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-12
 
 ### Livingdocs Editor Patches
+- [v42.9.26](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.26): fix(insert): on read-only don't show insert components
 - [v42.9.25](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.25): fix(print-modal): use lodash clonedeep
 - [v42.9.24](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.24): fix: stop updating document in history mode
 - [v42.9.23](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.23): fix(http): Disable http2 by default as it's causing a crash streams that are cancelled before they ended
