@@ -46,6 +46,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-12
 
 ### Livingdocs Editor Patches
+- [v42.9.32](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.32): fix(memory-leaks): save bind to use in off function
 - [v42.9.31](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.31): fix(documentProxy): Fix an issue where an empty list of documents throws
 - [v42.9.30](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.30): refactor(undefined-array): use understandable language patterns
 - [v42.9.29](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.29): fix(idle-user): if user didn't push since 2 cylces
