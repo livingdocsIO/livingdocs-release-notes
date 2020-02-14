@@ -1,4 +1,3 @@
-
 **Attention:** If you skipped one or more releases, please also check the release-notes of the skipped ones.
 
 # Table of content
@@ -29,6 +28,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-02
 
 ### Livingdocs Server Patches
+- [v93.2.7](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v93.2.7): fix(includes): actually validate context
 - [v93.2.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v93.2.6): hugo: pass metadata on image upload
 - [v93.2.5](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v93.2.5): user-api: add valid_from and valid_to to the editable user properties
 - [v93.2.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v93.2.4): seeding-import: add default to groupmembership validation
