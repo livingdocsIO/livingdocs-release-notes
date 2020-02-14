@@ -29,6 +29,12 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-02
 
 ### Livingdocs Server Patches
+- [v93.2.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v93.2.6): hugo: pass metadata on image upload
+- [v93.2.5](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v93.2.5): user-api: add valid_from and valid_to to the editable user properties
+- [v93.2.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v93.2.4): seeding-import: add default to groupmembership validation
+- [v93.2.3](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v93.2.3): change-history: improve query
+- [v93.2.2](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v93.2.2): migrations: Mutate the migration.version when using the apis, so multiple calls don't lock each other
+- [v93.2.1](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v93.2.1): group-seeding: correctly push group policies
 - [v93.2.0](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v93.2.0): create new release-2020-02
 
 
@@ -45,6 +51,12 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-02
 
 ### Livingdocs Editor Patches
+- [v44.4.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.13): editor: respect srcsets configs again
+- [v44.4.12](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.12): public-api-docs: add design endpoint documentation
+- [v44.4.11](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.11): filters: don't do an extra query on resetting filters
+- [v44.4.10](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.10): icons: re-add timetable icon
+- [v44.4.9](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.9): includes: switch from get to post request
+- [v44.4.8](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.8): dependencies: exactly match sortable versions
 - [v44.4.7](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.7): pusher: don't emit pusher event during init
 
 
@@ -53,7 +65,7 @@ How to require the editor in your package.json:
 
 ## Search API for Publications :tada:
 
-------------> TODO: Gabriel - add a nice description of the feature <----------------
+The new publication search API allows customers to search and filter in the set of published documents. You can run your frontend search from it and use it to fetch documents for automated lists such as category lists or feed provider (SDA, DPA) lists. You can also configure custom sort dates as well as scheduled publishing, i.e. embargo dates for your content.
 
 References:
   * [Public API Documentation (under "search Publications")](https://edit.livingdocs.io/public-api)
@@ -92,8 +104,8 @@ The migration is simple, the duration is short and there are no datalosses expec
 #   add field access_tokens.user_agent
 # migration - 129-add-index-user-id-created-at-access-tokens.js
 #   add index to access_tokens.user_id | access_tokens.created_at
-# migration - 129-add-index-user-id-created-at-access-tokens.js
-#   add index to access_tokens.user_id | access_tokens.created_at
+# migration - 130-groups-stream-migration.js
+#   add stream_types and stream_event_types for groups
 
 livingdocs-server migrate up
 ```
@@ -111,7 +123,13 @@ References:
 
 ## Context Object for include API :fire:
 
--------------> TODO Gabriel/Ralph/Marc: overhaul implementation/documentation <----------------------------------------------------------------------
+To have more infos during the rendering of `doc-includes`, we pass now a context object into the rendering functions of the `includesApi`.
+
+New Required param context on includes API methods
+- :fire: includesApi.processHtml({html, context}) - context is now mandatory
+- :fire: includesApi.resolveChannelOutputs({renderConfig, channelOutputs, context}) context is now mandatory
+- :fire: includesApi.resolveInclude(serviceName, serviceParams, options) - options.context is now mandatory
+- :fire: Editing API: POST /includes/preview requires the context param (old Editor versions won't be able to resolve includes).
 
 References:
   * [server PR #2783](https://github.com/livingdocsIO/livingdocs-server/pull/2783) :gift:
@@ -127,7 +145,7 @@ References:
   * [Public API Documentation](https://edit.livingdocs.io/public-api)
   * [server PR #2617](https://github.com/livingdocsIO/livingdocs-server/pull/2617)
 
-## CoreAPI - Dashboard List Filter :tada:
+## CoreAPI - Improve API for Dashboard Filters :tada:
 
 We introduced a Dashboard List Filter named `List Filter v2`. 
 
