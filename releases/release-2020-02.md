@@ -52,6 +52,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-02
 
 ### Livingdocs Editor Patches
+- [v44.4.14](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.14): fix(redirect): correctly redirect with a destination
 - [v44.4.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.13): editor: respect srcsets configs again
 - [v44.4.12](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.12): public-api-docs: add design endpoint documentation
 - [v44.4.11](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.11): filters: don't do an extra query on resetting filters
