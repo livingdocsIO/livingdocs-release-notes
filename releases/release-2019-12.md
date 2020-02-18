@@ -21,6 +21,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2019-12
 
 ### Livingdocs Server Patches
+- [v91.0.12](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v91.0.12): fix: Enable package-lock.json file to fix shrinkwrap with optional dependencies
 - [v91.0.11](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v91.0.11): chore: remove bluewin downstream tests from drone.yml
 - [v91.0.10](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v91.0.10): chore: Update the npm token
 - [v91.0.9](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v91.0.9): fix(tasks): remove interactive -y question to show the help when no parameter has been passed
