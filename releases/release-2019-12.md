@@ -48,6 +48,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-12
 
 ### Livingdocs Editor Patches
+- [v42.9.38](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.38): fix: Use package-lock.json file to generate the shrinkwrap to fix the optional dependencies
 - [v42.9.37](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.37): chore: update mocha from v5 to v7
 - [v42.9.36](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.36): fix: npm package
 - [v42.9.35](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.35): chore: drone/docker issue
