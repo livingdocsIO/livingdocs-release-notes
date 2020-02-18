@@ -28,6 +28,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-02
 
 ### Livingdocs Server Patches
+- [v93.2.9](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v93.2.9): fix: Use package-lock.json file to generate the shrinkwrap to fix the optional dependencies
 - [v93.2.8](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v93.2.8): fix(includes): dont require preview
 - [v93.2.7](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v93.2.7): fix(includes): actually validate context
 - [v93.2.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v93.2.6): hugo: pass metadata on image upload
