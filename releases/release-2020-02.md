@@ -53,6 +53,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-02
 
 ### Livingdocs Editor Patches
+- [v44.4.17](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.17): fix: Use package-lock.json file to generate the shrinkwrap to fix the optional dependencies
 - [v44.4.16](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.16): fix(iframe-api): pass interactive false
 - [v44.4.15](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.15): fix: iframe behavior in real-time
 - [v44.4.14](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.14): fix(redirect): correctly redirect with a destination
