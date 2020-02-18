@@ -47,6 +47,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-12
 
 ### Livingdocs Editor Patches
+- [v42.9.36](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.36): fix: npm package
 - [v42.9.35](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.35): chore: drone/docker issue
 - [v42.9.34](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.34): chore: trigger ci
 - [v42.9.33](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.33): fix(icons): re-add timetable icon
