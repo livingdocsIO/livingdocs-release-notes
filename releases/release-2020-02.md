@@ -28,6 +28,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-02
 
 ### Livingdocs Server Patches
+- [v93.2.13](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v93.2.13): fix(hugo): pass projectHandle to transform
 - [v93.2.12](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v93.2.12): fix: Fix a rebase issue that resulted in a wrong require
 - [v93.2.11](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v93.2.11): fix(setupProjects): auto-update design versions
 - [v93.2.10](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v93.2.10): test: Fix an inconsistent test in the registration api
