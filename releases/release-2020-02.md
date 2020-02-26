@@ -60,6 +60,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-02
 
 ### Livingdocs Editor Patches
+- [v44.4.21](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.21): fix(project-setup): guard against undef props
 - [v44.4.20](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.20): comment(config): add links to list unicode characters
 - [v44.4.19](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.19): fix: iframe scan regex
 - [v44.4.18](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.18): chore: revert resetting localstorage
