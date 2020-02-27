@@ -28,6 +28,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-02
 
 ### Livingdocs Server Patches
+- [v93.2.17](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v93.2.17): fix(imatrics): commit for tag
 - [v93.2.16](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v93.2.16): chore(lint): indexing config
 - [v93.2.15](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v93.2.15): fix(document-search): correctly return the promise
 - [v93.2.14](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v93.2.14): fix(mutex): Only stop the indexer, when it actually was running
