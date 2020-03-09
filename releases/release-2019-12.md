@@ -48,6 +48,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-12
 
 ### Livingdocs Editor Patches
+- [v42.9.41](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.41): fix: update framework to 13.2.7
 - [v42.9.40](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.40): fix(image): take processedUrl from image service instead of originalUrl for image cropping
 - [v42.9.39](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.39): fix: iframe scan regex
 - [v42.9.38](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.38): fix: Use package-lock.json file to generate the shrinkwrap to fix the optional dependencies
