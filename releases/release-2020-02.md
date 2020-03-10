@@ -62,6 +62,9 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-02
 
 ### Livingdocs Editor Patches
+- [v44.4.24](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.24): fix(image-crop): Reset originalWidth/Height on upload
+
+Fixes: An uploaded image might use the wrong dimensions of a previously selected image when calculating crop.
 - [v44.4.23](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.23): fix: update framework to 13.2.7
 - [v44.4.22](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.22): fix(image): take processedUrl from image service instead of originalUrl for image cropping
 - [v44.4.21](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.21): fix(project-setup): guard against undef props
