@@ -48,6 +48,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-12
 
 ### Livingdocs Editor Patches
+- [v42.9.43](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.43): refactor(livingdoc): do not pass editable config anymore
 - [v42.9.42](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.42): fix(image-crop): Reset originalWidth/Height on upload
 
 Fixes: An uploaded image might use the wrong dimensions of a previously selected image when calculating crop.
