@@ -28,6 +28,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-02
 
 ### Livingdocs Server Patches
+- [v93.2.21](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v93.2.21): fix(impersonify): adapt to createAccessTokenV2
 - [v93.2.20](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v93.2.20): fix: provoke tag and build artifacts
 - [v93.2.19](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v93.2.19): fix: Upgrade to node 12
 - [v93.2.18](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v93.2.18): fix(imatrics): make v1 backward compatible
