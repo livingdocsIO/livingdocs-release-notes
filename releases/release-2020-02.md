@@ -65,6 +65,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-02
 
 ### Livingdocs Editor Patches
+- [v44.4.28](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.28): fix(impersonification): fix setting of token
 - [v44.4.27](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.27): fix(publish-screen): indicate unpublished changes
 - [v44.4.26](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.26): fix(date-picker): never set null when date reset
 - [v44.4.25](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.25): refactor(livingdoc): do not pass editable config anymore
