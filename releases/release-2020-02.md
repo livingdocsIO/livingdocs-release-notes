@@ -166,6 +166,16 @@ New Required param context on includes API methods
 References:
   * [server PR #2783](https://github.com/livingdocsIO/livingdocs-server/pull/2783) :gift:
 
+## embeds config `allowUnrecognizedEmbeds` is working again :fire:
+The config 
+```json
+embeds: {
+  options: {
+    allowUnrecognizedEmbeds: true
+  }
+}
+```
+must be set to true if a free-html component is used and no [custom embedHandler](https://docs.livingdocs.io/general-howtos/instagram_embed#adding-an-embed-class) is registered. Otherwise the free-html component doesn't work anymore and the input is not saved.
 
 # APIs :gift:
 
