@@ -48,6 +48,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-12
 
 ### Livingdocs Editor Patches
+- [v42.9.46](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.46): fix: correctly reset filter sets
 - [v42.9.45](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.45): fix(editor): pass editableConfig to framework again
 - [v42.9.44](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.44): fix(date-picker): never set null when date reset
 - [v42.9.43](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.43): refactor(livingdoc): do not pass editable config anymore
