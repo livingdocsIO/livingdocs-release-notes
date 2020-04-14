@@ -29,7 +29,10 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-YYYY-MM
 
 ### Livingdocs Server Patches
-- [v??.?.?](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v??.?.?): text
+- [v94.1.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v94.1.4): import: add service url to image import
+- [v94.1.3](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v94.1.3): core server includes: update to 0.1.2
+- [v94.1.2](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v94.1.2): doc-queries: rename dateFilter to rangeFilter
+- [v94.1.1](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v94.1.1): include source in fulltext search for media library assets
 
 
 
@@ -45,8 +48,9 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-YYYY-MM
 
 ### Livingdocs Editor Patches
-- [v??.?.?](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v??.?.?): text
-
+- [v49.5.3](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.3): correctly resend email on expired token
+- [v49.5.2](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.2): media: extract image source from media library images
+- [v49.5.1](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.1): core-plugins: language and category selection
 
 
 # Highlights
