@@ -1,4 +1,3 @@
-
 **Attention:** If you skipped one or more releases, please also check the release-notes of the skipped ones.
 
 # Table of content
@@ -48,6 +47,9 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-YYYY-MM
 
 ### Livingdocs Editor Patches
+- [v49.5.4](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.4): design(history): More button
+
+- Centered the more button in history sidepanel
 - [v49.5.3](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.3): correctly resend email on expired token
 - [v49.5.2](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.2): media: extract image source from media library images
 - [v49.5.1](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.1): core-plugins: language and category selection
