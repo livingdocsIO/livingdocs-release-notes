@@ -47,6 +47,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-YYYY-MM
 
 ### Livingdocs Editor Patches
+- [v49.5.6](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.6): fix(publish): show metadata validation error
 - [v49.5.5](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.5): fix(history): change default history mode colors to variants with higher contrast
 - [v49.5.4](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.4): design(history): More button
 
