@@ -1,6 +1,7 @@
 # Table of Contents
 
-* [February 2020 Release](./releases/release-2020-02.md)
+* [April 2020 Release](./releases/release-2020-04.md)
+* [February 2020 Release](./releases/release-2020-02.md) (legacy*)
 * [December 2019 Release](./releases/release-2019-12.md) (legacy*)
 * [September 2019 Release](./releases/release-2019-09.md) (legacy*)
 * [July 2019 Release](./releases/release-2019-07.md) (legacy*)
