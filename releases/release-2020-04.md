@@ -5,6 +5,7 @@
 - [Patches](#repositories)
 - [Highlights](#highlights)
 - [Breaking Changes](#breaking-changes-fire)
+- [APIs](#apis-gift)
 - [Other Changes](#other-changes)
 
 # Repositories
@@ -50,21 +51,20 @@ How to require the editor in your package.json:
 
 # Highlights
 
-# UI updates :tada:
+## UI updates :tada:
 
 We improved a whole bunch of small UI stuff. Check all the nice screenshots in the references.
 
 References:
-  * [Improved Collaboration Bar](https://github.com/livingdocsIO/livingdocs-editor/pull/3397)
   * [Indicate Unpublished Changes](https://github.com/livingdocsIO/livingdocs-editor/pull/3335)
   * [Design Mobile Improvements pt1](https://github.com/livingdocsIO/livingdocs-editor/pull/3341)
   * [Design Mobile Improvements pt2](https://github.com/livingdocsIO/livingdocs-editor/pull/3348)
   * [Design Mobile Improvements pt3](https://github.com/livingdocsIO/livingdocs-editor/pull/3351)
   * [Design Mobile Improvements pt4](https://github.com/livingdocsIO/livingdocs-editor/pull/3356)
 
-# Comyan Integration :tada:
+## Comyan Integration :tada:
 
-Comyan is another Asset Management System we have integrated into Livingdocs.
+Comyan is beside Hugo the second Asset Management System we have integrated into Livingdocs.
 
 To use the feature, activate Comyan in the environment config on the server (see example). As a next step you 
 can configure the Comyan integration in the project setup of the editor under the menu item "Intergrations - Comyan".
@@ -83,19 +83,11 @@ References:
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3388)
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/2849)
 
-# Data Sources :tada:
-
-The basic idea behind a dataSource is that you can fetch/transform any dataSource (e.g. a public gist or another URL) and provide the results to any server feature or use it in the editor as a dataSource for metadata or filters.
-
-References:
-  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/2865)
-  * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3366)
-
-# Media Library Improvements :tada:
+## Media Library Improvements :tada:
 
 The Media Library experienced 2 important improvements. 
 - Gets a list of documents in the Media Library where the current image is embedded into
-- It's possible to enter image metadata before uploading an image
+- It's possible to force the user to enter image metadata before uploading an image
 
 References:
   * Image references
@@ -107,18 +99,8 @@ References:
     * [Editor UI](https://github.com/livingdocsIO/livingdocs-editor/pull/3358)
     * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/2873)
 
-# Document and Image Batch Import :tada:
 
-Enables customers of the Livingdocs public API to import batches of documents or images. Imported documents/images can also be updates through the same API.
-
-References:
-  * [Document Batch Import Documentation (see changelog)](https://github.com/livingdocsIO/livingdocs-server/pull/2842)
-  * [Image Batch Import Documentation](https://github.com/livingdocsIO/livingdocs-editor/pull/3283)
-  * [Image Batch Import Implementation](https://github.com/livingdocsIO/livingdocs-server/pull/2786)
-  * [Create write tokens for the public API](https://github.com/livingdocsIO/livingdocs-editor/pull/3324)
-
-
-# Abuse Detection :tada:
+## Abuse Detection :tada:
 
 Enabled abuse detection sends users a notification when a new device logged in.
 
@@ -127,7 +109,7 @@ References:
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/2852)
 
 
-# Character Limit for Directives :tada:
+## Character Limit for Directives :tada:
 
 Support a character limit on directives of a component. The character limit is configured in the design on a directive with the `maxLength` property.
 
@@ -136,7 +118,7 @@ References:
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/2864)
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3359)
 
-# Transform multiple Components in one Step :tada:
+## Transform multiple Components in one Step :tada:
 
 When selecting multiple components in the editor and they have the same type, one can transform them into another type within one step.
 
@@ -317,9 +299,8 @@ CUSTOM_STYLE_PATH_BEFORE=./app/styles.scss
 CUSTOM_STYLE_PATH_AFTER=./app/styles.scss
 ```
 
-### Needed Actions :fire:
+### Breaking Change :fire:
 - :fire: editor: removed support for environment variable `EDITOR_STYLE_PATH`
-- :fire: server environment-config: moved `imatrics.enabled` to `integrations.imatrics.allowed`
 
 * References
   * [Editor PR #3337](https://github.com/livingdocsIO/livingdocs-editor/pull/3337)
@@ -336,6 +317,26 @@ This refactoring **should** only have an effect on the upstream. To be on the sa
 * References
   * [Editor PR #3358](https://github.com/livingdocsIO/livingdocs-editor/pull/3358)
 
+
+# APIs :gift:
+
+## Document and Image Import :tada:
+
+Finally, Livingdocs offers a public API endpoint for Import (import of documents/images).
+
+References:
+  * [Document Batch Import Documentation (see changelog)](https://github.com/livingdocsIO/livingdocs-server/pull/2842)
+  * [Image Batch Import Documentation](https://github.com/livingdocsIO/livingdocs-editor/pull/3283)
+  * [Image Batch Import Implementation](https://github.com/livingdocsIO/livingdocs-server/pull/2786)
+  * [Create write tokens for the public API](https://github.com/livingdocsIO/livingdocs-editor/pull/3324)
+
+## Data Sources :tada:
+
+The basic idea behind a dataSource is that you can fetch/transform any dataSource (e.g. a public gist or another URL) and provide the results to any server feature or use it in the editor as a dataSource for metadata or filters.
+
+References:
+  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/2865)
+  * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3366)
 
 # Other Changes
 
