@@ -28,6 +28,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-YYYY-MM
 
 ### Livingdocs Server Patches
+- [v94.1.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v94.1.6): fix(document): add references on create and save
 - [v94.1.5](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v94.1.5): fix(framework): update to 13.4.0
 - [v94.1.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v94.1.4): import: add service url to image import
 - [v94.1.3](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v94.1.3): core server includes: update to 0.1.2
