@@ -28,6 +28,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-YYYY-MM
 
 ### Livingdocs Server Patches
+- [v94.1.8](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v94.1.8): chore: Fix named functions
 - [v94.1.7](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v94.1.7): fix: add publicationId and publicationDate to public_api output
 - [v94.1.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v94.1.6): fix(document): add references on create and save
 - [v94.1.5](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v94.1.5): fix(framework): update to 13.4.0
