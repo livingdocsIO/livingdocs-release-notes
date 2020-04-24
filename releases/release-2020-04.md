@@ -51,6 +51,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-YYYY-MM
 
 ### Livingdocs Editor Patches
+- [v49.5.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.13): fix(references): trigger digest refresh after loading references
 - [v49.5.12](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.12): fix(references): behaviour when record is deleted
 - [v49.5.11](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.11): fix: correct image uploads and small delay upon submittion of image metadata
 - [v49.5.10](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.10): fix: correctly replace images on DnD
