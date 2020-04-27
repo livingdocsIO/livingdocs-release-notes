@@ -52,6 +52,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-YYYY-MM
 
 ### Livingdocs Editor Patches
+- [v49.5.15](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.15): fix: update framework to release-2020-04 reference
 - [v49.5.14](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.14): chore(framework): update to 13.4.1
 - [v49.5.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.13): fix(references): trigger digest refresh after loading references
 - [v49.5.12](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.12): fix(references): behaviour when record is deleted
