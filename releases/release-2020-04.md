@@ -54,6 +54,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-YYYY-MM
 
 ### Livingdocs Editor Patches
+- [v49.5.18](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.18): fix(copy): allow copy even if documentCreationDisabled is set
 - [v49.5.17](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.17): chore(testrail): add ids
 - [v49.5.16](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.16): fix(lists): prevent deletion on return press
 - [v49.5.15](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.15): fix: update framework to release-2020-04 reference
