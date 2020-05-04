@@ -1,10 +1,11 @@
 #### 📬 Release Newsletter
 [Subscribe to the release newsletter](https://confirmsubscription.com/h/j/61B064416E79453D) to get notified with a rundown of the latest features and improvements as soon as a new release is ready.
 
-
 # Releases
 
 * [![Current Release](https://img.shields.io/badge/-current-success)]() 
+  [May 2020 Release](./releases/release-2020-05.md)
+* [![Legacy Release](https://img.shields.io/badge/-legacy*-lightgrey)]() 
   [April 2020 Release](./releases/release-2020-04.md)
 * [![Legacy Release](https://img.shields.io/badge/-legacy*-lightgrey)]() 
   [February 2020 Release](./releases/release-2020-02.md)
