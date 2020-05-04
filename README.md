@@ -2,6 +2,7 @@ Subscribe [here](https://confirmsubscription.com/h/j/61B064416E79453D) to the re
 
 # Table of Contents
 
+* [May 2020 Release](./releases/release-2020-05.md)
 * [April 2020 Release](./releases/release-2020-04.md)
 * [February 2020 Release](./releases/release-2020-02.md) (legacy*)
 * [December 2019 Release](./releases/release-2019-12.md) (legacy*)
