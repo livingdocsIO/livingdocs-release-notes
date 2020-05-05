@@ -55,6 +55,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-YYYY-MM
 
 ### Livingdocs Editor Patches
+- [v49.5.19](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.19): fix(side-panel): custom document previews
 - [v49.5.18](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.18): fix(copy): allow copy even if documentCreationDisabled is set
 - [v49.5.17](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.17): chore(testrail): add ids
 - [v49.5.16](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.16): fix(lists): prevent deletion on return press
