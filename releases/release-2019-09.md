@@ -1,5 +1,10 @@
 **Attention:** If you skipped one or more releases, please also check the release-notes of the skipped ones.
 
+# Newsletter
+
+* Newsletter: [release-2019-09](https://livingdocsag.createsend.com/t/ViewEmail/j/172328235F0895DC2540EF23F30FEDED/C67FD2F38AC4859C)
+* Subscribe here: https://confirmsubscription.com/h/j/61B064416E79453D
+
 # Repositories
 
 This release consists of the following new versions of the `livingdocs-server` and the `livingdocs-editor`:

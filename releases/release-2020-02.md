@@ -7,6 +7,11 @@
 - [APIs](#apis-gift)
 - [Other Changes](#other-changes)
 
+# Newsletter
+
+* Newsletter: [release-2020-02](https://livingdocsag.createsend.com/t/ViewEmail/j/30A473BB76A310C32540EF23F30FEDED/C67FD2F38AC4859C)
+* Subscribe here: https://confirmsubscription.com/h/j/61B064416E79453D
+
 # Repositories
 
 This release consists of the following new versions of the `livingdocs-server` and the `livingdocs-editor`:

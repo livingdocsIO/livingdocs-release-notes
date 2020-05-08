@@ -1,3 +1,5 @@
+Subscribe [here](https://confirmsubscription.com/h/j/61B064416E79453D) to the release newsletter.
+
 # Table of Contents
 
 * [April 2020 Release](./releases/release-2020-04.md)
