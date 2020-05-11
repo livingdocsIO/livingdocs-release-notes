@@ -1,17 +1,16 @@
-------------------------------------------------------------------
-LAAAAAAAAAAAAAAAAAAAAAST STATE of release notes
-server - 94.9.1
-editor - 49.12.1
-------------------------------------------------------------------
-
 **Attention:** If you skipped one or more releases, please also check the release-notes of the skipped ones.
 
 # Table of content
 - [Patches](#repositories)
 - [Highlights](#highlights)
 - [Breaking Changes](#breaking-changes-fire)
-- [APIs](#apis-gift)
 - [Other Changes](#other-changes)
+
+# Newsletter
+
+* Newsletter: .................... TODO ............................
+* Link to subscription form: https://confirmsubscription.com/h/j/61B064416E79453D
+
 
 # Repositories
 
@@ -26,7 +25,7 @@ Package | Version
 How to require the server in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/server": "??.?.?",
+  "@livingdocs/server": "release-2020-05",
 }
 ```
 
@@ -42,7 +41,7 @@ How to require the server in your package.json:
 How to require the editor in your package.json:
 ```json
 "dependencies": {
-  "@livingdocs/editor": "??.?.?",
+  "@livingdocs/editor": "release-2020-05",
 }
 ```
 
@@ -56,44 +55,93 @@ How to require the editor in your package.json:
 
 # Highlights
 
------------------ WEBHOOOOKS --------------------
-* v94.5.0 Webhooks system [livingdocs-server #2907](https://github.com/livingdocsIO/livingdocs-server/pull/2907) :gift:
-* v49.9.0 Webhooks [livingdocs-editor #3445](https://github.com/livingdocsIO/livingdocs-editor/pull/3445) :gift:
+## Live Coverage :tada:
+
+...................... ADD some TEXT @ Meinrad ...........................
+
+References:
+  * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3446)
+  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/2920)
 
 
------------------ Delivery Links ----------------
-* v94.7.0 deliveryLinks (publish panel links to frontend) [livingdocs-server #2924](https://github.com/livingdocsIO/livingdocs-server/pull/2924) :gift:
-* v49.10.0 deliveryLinks (and custom function for NZZ) [livingdocs-editor #3453](https://github.com/livingdocsIO/livingdocs-editor/pull/3453) :gift:
+## Multilanguage :tada:
 
----------------Custom Document Preview----------------
-* v94.8.0 feat: new /documents/preview enpoint for custom previews of a document [livingdocs-server #2887](https://github.com/livingdocsIO/livingdocs-server/pull/2887) :gift:
-* v49.11.0 Optional custom document previews in the sidepanel [livingdocs-editor #3410](https://github.com/livingdocsIO/livingdocs-editor/pull/3410) :gift:
+Livingdocs now supports multilanguage. You can for example create an article in german and translate this document into another language like english.
 
-------------- remote include ---------------------
-* v49.12.0 remote include services on channelConfig  [livingdocs-editor #3451](https://github.com/livingdocsIO/livingdocs-editor/pull/3451) :gift:
-* v94.9.0 remote include services on channelConfig [livingdocs-server #2922](https://github.com/livingdocsIO/livingdocs-server/pull/2922) :gift:
+![multilanguage](https://user-images.githubusercontent.com/39759830/80695632-79d72a00-8ad6-11ea-90e2-3e5107336d5c.gif)
 
 
+References:
+  * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3436)
+  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/2903)
 
+
+## Webhooks :tada:
+
+Livingdocs adds Webhooks to the core system. Webhooks can be configured to call a 3rd-party endpoint on `document.published` and `document.unpublished` event.
+Check out the [documentation](https://github.com/livingdocsIO/livingdocs/pull/294) if you want to know more.
+
+![webhooks](https://user-images.githubusercontent.com/172394/81531875-c5ee5e00-9363-11ea-868f-3ea5cb1a952a.png)
+
+References:
+  * [Documentation](https://github.com/livingdocsIO/livingdocs/pull/294)
+  * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3445)
+  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/2907)
+
+
+## Custom Document Preview :tada:
+
+Livingdocs now supports a custom document preview. You are now able to register your own rendering function to generate a preview of
+your delivery system like your webpage or an RSS feed. For more information on how to do it look into the [Server Pull Request](https://github.com/livingdocsIO/livingdocs-server/pull/2887).
+
+![document-preview3](https://user-images.githubusercontent.com/172394/81532319-79575280-9364-11ea-8d38-7f8fbc34b43e.png)
+
+References:
+  * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3410)
+  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/2887)
+
+
+## Delivery Links :tada:
+
+Livingdocs introduces multiple delivery links which can be configured via channelConfig (or UI) and are displayed on the publish panel. These links are usually used to check if the document has been published correctly on the website.
+Check out the [Editor Pull Request](https://github.com/livingdocsIO/livingdocs-editor/pull/3453) if you want to know more.
+
+![delivery-link](https://user-images.githubusercontent.com/172394/81531842-b66f1500-9363-11ea-93c6-c1eec1ecb8d5.png)
+
+References:
+  * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3453)
+  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/2924)
+
+
+## Remote Include :tada:
+
+Remote includes are a declarative way to configure remote doc-includes. Find out more at the [documentation](................TODO...........)
+
+![remote-includes](https://user-images.githubusercontent.com/172394/81533417-73fb0780-9366-11ea-8880-9c14ca9a4187.png)
+
+References:
+  * [Documentation](.......................TODO.....................)
+  * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3451)
+  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/2922)
 
 
 # Breaking Changes :fire:
 
 ## Migrate the database
 
-- Expected duration?
-- Possible data losses?
-- Is it a simple migration? (fast/easy downgradable)
+The migration is simple, the duration is short and there are no datalosses expected on up-/downgrade.
 
 ```sh
 # run grunt migrate to update to the newest database scheme
-# migration - 111-add-comments-table.js
-#   create comments table + add events to the stream_events_types table
+# migration - 135-add-webhooks.js.js
+#   create webhooks table
 livingdocs-server migrate up
 ```
 
+## UI Changes in the Editor
 
-# APIs :gift:
+........... ADD some TEXT @ Meinrad .....................
+
 
 
 # Other Changes
@@ -104,10 +152,7 @@ livingdocs-server migrate up
 * Images: Add `libvips` as `images.processingStrategy` which is twice as fast as `imagemagick` [livingdocs-server #2925](https://github.com/livingdocsIO/livingdocs-server/pull/2925) :gift:
 * Elasticsearch: Indexes and support `numberOfReplicas` and `numberOfShards` configs [livingdocs-server #2911](https://github.com/livingdocsIO/livingdocs-server/pull/2911) :gift:
 * Image: Add remove image button for an existing image on the properties panel [livingdocs-editor #3444](https://github.com/livingdocsIO/livingdocs-editor/pull/3444) :gift:
-
-### Design
-
-* ... :gift:
+* Metadata: Support dataSources/dataProvider and more data types in Select/Multiselect [livingdocs-editor #3458](https://github.com/livingdocsIO/livingdocs-editor/pull/3458) :gift:
 
 ### Improvements
 
@@ -125,7 +170,6 @@ livingdocs-server migrate up
   * Fix history user colors [livingdocs-editor #3424](https://github.com/livingdocsIO/livingdocs-editor/pull/3424) :beetle:
   * Fix history char counter & PO-truck [livingdocs-editor #3431](https://github.com/livingdocsIO/livingdocs-editor/pull/3431) :beetle:
 * Navigation: Fix spacing / scrolling [livingdocs-editor #3440](https://github.com/livingdocsIO/livingdocs-editor/pull/3440) :beetle:
-
 
   ---
   **Icon Legend**
