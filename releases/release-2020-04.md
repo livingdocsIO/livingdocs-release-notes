@@ -8,10 +8,10 @@
 - [Other Changes](#other-changes)
 
 
-# Newsletter
+#### 📬Release Newsletter
 
-* Newsletter: [release-2020-04](http://createsend.com/t/j-0F1302733E9082472540EF23F30FEDED)
-* Subscribe here: https://confirmsubscription.com/h/j/61B064416E79453D
+[View the newsletter for this release](http://createsend.com/t/j-0F1302733E9082472540EF23F30FEDED)
+or [subscribe for future releases](https://confirmsubscription.com/h/j/61B064416E79453D)
 
 
 # Repositories
