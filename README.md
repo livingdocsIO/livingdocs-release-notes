@@ -1,4 +1,4 @@
-#### Release Newsletter
+#### 📬 Release Newsletter
 [Subscribe to the release newsletter](https://confirmsubscription.com/h/j/61B064416E79453D) to get notified with a rundown of the latest features and improvements as soon as a new release is ready.
 
 # Releases
