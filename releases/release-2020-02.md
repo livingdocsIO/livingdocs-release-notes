@@ -70,6 +70,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-02
 
 ### Livingdocs Editor Patches
+- [v44.4.31](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.31): chore: disable parts of the CI
 - [v44.4.30](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.30): fix(collaboration): when a expired softlock is in the metadata
 - [v44.4.29](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.29): fix(editor): pass editableConfig to framework again
 - [v44.4.28](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.28): fix(impersonification): fix setting of token
