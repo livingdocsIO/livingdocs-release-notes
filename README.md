@@ -1,6 +1,7 @@
-Subscribe [here](https://confirmsubscription.com/h/j/61B064416E79453D) to the release newsletter.
+#### Release Newsletter
+[Subscribe to the release newsletter](https://confirmsubscription.com/h/j/61B064416E79453D) to get notified with a rundown of the latest features and improvements as soon as a new release is ready.
 
-# Table of Contents
+# Releases
 
 * [April 2020 Release](./releases/release-2020-04.md)
 * [February 2020 Release](./releases/release-2020-02.md) (legacy*)
