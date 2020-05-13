@@ -12,10 +12,6 @@
   [December 2019 Release](./releases/release-2019-12.md)
 * [![Legacy Release](https://img.shields.io/badge/-legacy*-lightgrey)]()
   [September 2019 Release](./releases/release-2019-09.md)
-* [![Legacy Release](https://img.shields.io/badge/-legacy*-lightgrey)]()
-  [July 2019 Release](./releases/release-2019-07.md)
-* [![Legacy Release](https://img.shields.io/badge/-legacy*-lightgrey)]()
-  [May 2019 Release](./releases/release-2019-05.md)
 
 
 (*) __Legacy releases__ do not receive bugfixes anymore. If you use an old release please notify us (release@livingdocs.io) so we are aware and can inform you of critical fixes in newer releases.
