@@ -358,6 +358,19 @@ This refactoring **should** only have an effect on the upstream. To be on the sa
 * References
   * [Editor PR #3358](https://github.com/livingdocsIO/livingdocs-editor/pull/3358)
 
+## Remove old import configs
+
+If you have started with the boilerplate there may be some outdated configs that need to be removed or moved.
+In case the importer is not actively used it can be removed together with the configs as there is a public-API version available now. 
+In case the custom-import (+configs) are used, the configs should be moved accordingly.
+
+### Needed Actions :fire:
+
+The `import: {}` configs for the livingdocs-server are now validated more strictly. Legacy configs should be either removed or moved to a `customImport: {}` config section.
+
+Example:
+https://github.com/livingdocsIO/livingdocs-server-boilerplate/commit/8cab034735cdfa3aec8a90e4d98aab32e5d87b74#diff-944c02e3009e6c7ddedd2ee2ddebee4aL150
+
 
 # APIs :gift:
 
