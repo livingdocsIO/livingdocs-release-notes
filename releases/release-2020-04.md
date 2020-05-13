@@ -361,6 +361,8 @@ This refactoring **should** only have an effect on the upstream. To be on the sa
 ## Remove old import configs
 
 If you have started with the boilerplate there may be some outdated configs that need to be removed or moved.
+In case the importer is not actively used it can be removed together with the configs as there is a public-API version available now. 
+In case the custom-import (+configs) are used, the configs should be moved accordingly.
 
 ### Needed Actions :fire:
 
