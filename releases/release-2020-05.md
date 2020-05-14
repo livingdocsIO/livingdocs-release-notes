@@ -57,7 +57,9 @@ How to require the editor in your package.json:
 
 ## Live Coverage :tada:
 
-...................... ADD some TEXT @ Meinrad ...........................
+With the Live Coverage mode you can write on an article and always decide which changes you would like to have in the next publication. In this mode for every change which is done in the document a proposal is created. The proposals must be first accepted so that they getting applied to the document. In the publication the open proposals are not included. You can always hide the proposals so that you can see the version which will be deployed.
+
+![image](https://user-images.githubusercontent.com/4352425/81931412-5938c500-95ea-11ea-8358-8e67145af59a.png)
 
 References:
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3446)
@@ -140,9 +142,17 @@ livingdocs-server migrate up
 
 ## UI Changes in the Editor
 
-........... ADD some TEXT @ Meinrad .....................
+### Canvas added
+We have now removed the side-panel for properties and comments. Instead we have a canvas on the right side of the document and scrolling of the document is on the right side of the canvas.
+![image](https://user-images.githubusercontent.com/4352425/80966827-8f6d8c00-8e15-11ea-8335-d1c042d2611a.png)
 
+#### Comments moved to Canvas
+The comments are now shown in the canvas. They can be shown or hidden in the collab-bar. The default is that the open comments will be shown and the resolved comments will be hidden.
+![image](https://user-images.githubusercontent.com/4352425/80967132-26d2df00-8e16-11ea-89f4-66e29a21460c.png)
 
+### properties-panel
+The properties-panel is now not anymore in the side-panel. It is now over the canvas and can be closed so that the cards behind can be selected.
+![image](https://user-images.githubusercontent.com/4352425/80968640-9c3faf00-8e18-11ea-9cec-9998f0e82ef3.png)
 
 # Other Changes
 
