@@ -55,9 +55,27 @@ How to require the editor in your package.json:
 
 # Highlights
 
+## Editor UI Changes
+
+..........TODO: Lukas wording.............
+
+### Canvas added
+We have now removed the side-panel for properties and comments. Instead we have a canvas on the right side of the document and scrolling of the document is on the right side of the canvas.
+
+![image](https://user-images.githubusercontent.com/4352425/80966827-8f6d8c00-8e15-11ea-8335-d1c042d2611a.png)
+
+### Comments moved to Canvas
+The comments are now shown in the canvas. They can be shown or hidden in the collab-bar. The default is that the open comments will be shown and the resolved comments will be hidden.
+![image](https://user-images.githubusercontent.com/4352425/80967132-26d2df00-8e16-11ea-89f4-66e29a21460c.png)
+
+### properties-panel
+The properties-panel is now not anymore in the side-panel. It is now over the canvas and can be closed so that the cards behind can be selected.
+![image](https://user-images.githubusercontent.com/4352425/80968640-9c3faf00-8e18-11ea-9cec-9998f0e82ef3.png)
+
+
 ## Live Coverage :tada:
 
-With the Live Coverage mode you can write on an article and always decide which changes you would like to have in the next publication. In this mode for every change which is done in the document a proposal is created. The proposals must be first accepted so that they getting applied to the document. In the publication the open proposals are not included. You can always hide the proposals so that you can see the version which will be deployed.
+Live coverage mode enables teams of editors to collaborate under moderation. This is particularly useful for things like live tickers. Every change is written as a proposal (draft) that can be reviewed and accepted. Only accepted changes are published when an editor presses the publish button. As things can get a bit messy with many people writing proposals, the UI allows you to hide proposals to see what is currently published.
 
 ![image](https://user-images.githubusercontent.com/4352425/81931412-5938c500-95ea-11ea-8358-8e67145af59a.png)
 
@@ -66,11 +84,11 @@ References:
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/2920)
 
 
-## Multilanguage :tada:
+## Translations :tada:
 
-Livingdocs now supports multilanguage. You can for example create an article in german and translate this document into another language like english.
+Livingdocs now supports translations. You can for example create an article in german and translate this document into another language like english.
 
-![multilanguage](https://user-images.githubusercontent.com/39759830/80695632-79d72a00-8ad6-11ea-90e2-3e5107336d5c.gif)
+![Translations](https://user-images.githubusercontent.com/39759830/80695632-79d72a00-8ad6-11ea-90e2-3e5107336d5c.gif)
 
 
 References:
@@ -94,7 +112,7 @@ References:
 ## Custom Document Preview :tada:
 
 Livingdocs now supports a custom document preview. You are now able to register your own rendering function to generate a preview of
-your delivery system like your webpage or an RSS feed. For more information on how to do it look into the [Server Pull Request](https://github.com/livingdocsIO/livingdocs-server/pull/2887).
+your delivery system like your webpage or an RSS feed. It's even thinkable to generate a truly native app preview. For more information on how to do it look into the [Server Pull Request](https://github.com/livingdocsIO/livingdocs-server/pull/2887).
 
 ![document-preview3](https://user-images.githubusercontent.com/172394/81532319-79575280-9364-11ea-8d38-7f8fbc34b43e.png)
 
@@ -127,20 +145,6 @@ The migration is simple, the duration is short and there are no datalosses expec
 #   create webhooks table
 livingdocs-server migrate up
 ```
-
-## UI Changes in the Editor
-
-### Canvas added
-We have now removed the side-panel for properties and comments. Instead we have a canvas on the right side of the document and scrolling of the document is on the right side of the canvas.
-![image](https://user-images.githubusercontent.com/4352425/80966827-8f6d8c00-8e15-11ea-8335-d1c042d2611a.png)
-
-#### Comments moved to Canvas
-The comments are now shown in the canvas. They can be shown or hidden in the collab-bar. The default is that the open comments will be shown and the resolved comments will be hidden.
-![image](https://user-images.githubusercontent.com/4352425/80967132-26d2df00-8e16-11ea-89f4-66e29a21460c.png)
-
-### properties-panel
-The properties-panel is now not anymore in the side-panel. It is now over the canvas and can be closed so that the cards behind can be selected.
-![image](https://user-images.githubusercontent.com/4352425/80968640-9c3faf00-8e18-11ea-9cec-9998f0e82ef3.png)
 
 # Other Changes
 
