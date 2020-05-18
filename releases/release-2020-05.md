@@ -8,7 +8,7 @@
 
 # Newsletter
 
-* Newsletter: .................... TODO ............................
+* Newsletter: TODO
 * Link to subscription form: https://confirmsubscription.com/h/j/61B064416E79453D
 
 
@@ -30,10 +30,10 @@ How to require the server in your package.json:
 ```
 
 - Link to the release branch:
-  https://github.com/livingdocsIO/livingdocs-server/tree/release-YYYY-MM
+  https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-05
 
 ### Livingdocs Server Patches
-- [v??.?.?](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v??.?.?): text
+- [v??.?.?](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v??.?.?): TODO
 
 
 
@@ -46,10 +46,10 @@ How to require the editor in your package.json:
 ```
 
 - Link to the release branch:
-  https://github.com/livingdocsIO/livingdocs-editor/tree/release-YYYY-MM
+  https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-05
 
 ### Livingdocs Editor Patches
-- [v??.?.?](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v??.?.?): text
+- [v??.?.?](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v??.?.?): TODO
 
 
 
@@ -115,18 +115,6 @@ References:
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/2924)
 
 
-## Remote Include :tada:
-
-Remote includes are a declarative way to configure remote doc-includes. Find out more at the [documentation](................TODO...........)
-
-![remote-includes](https://user-images.githubusercontent.com/172394/81533417-73fb0780-9366-11ea-8880-9c14ca9a4187.png)
-
-References:
-  * [Documentation](.......................TODO.....................)
-  * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3451)
-  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/2922)
-
-
 # Breaking Changes :fire:
 
 ## Migrate the database
@@ -163,6 +151,8 @@ The properties-panel is now not anymore in the side-panel. It is now over the ca
 * Elasticsearch: Indexes and support `numberOfReplicas` and `numberOfShards` configs [livingdocs-server #2911](https://github.com/livingdocsIO/livingdocs-server/pull/2911) :gift:
 * Image: Add remove image button for an existing image on the properties panel [livingdocs-editor #3444](https://github.com/livingdocsIO/livingdocs-editor/pull/3444) :gift:
 * Metadata: Support dataSources/dataProvider and more data types in Select/Multiselect [livingdocs-editor #3458](https://github.com/livingdocsIO/livingdocs-editor/pull/3458) :gift:
+* Remote includes beta: [livingdocs-editor #3451](https://github.com/livingdocsIO/livingdocs-editor/pull/3451)
+
 
 ### Improvements
 
