@@ -63,6 +63,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-YYYY-MM
 
 ### Livingdocs Editor Patches
+- [v49.5.22](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.22): fix: support edge 18
 - [v49.5.21](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.21): fix(framework): upgrade framework to 13.4.2
 - [v49.5.20](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.20): fix: add missing icons
 - [v49.5.19](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.19): fix(side-panel): custom document previews
