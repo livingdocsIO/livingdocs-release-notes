@@ -64,6 +64,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-YYYY-MM
 
 ### Livingdocs Editor Patches
+- [v49.5.24](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.24): fix(login): support query state params
 - [v49.5.23](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.23): chore: incorporate feedback
 - [v49.5.22](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.22): fix: support edge 18
 - [v49.5.21](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.21): fix(framework): upgrade framework to 13.4.2
