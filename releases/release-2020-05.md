@@ -8,7 +8,7 @@
 
 # Newsletter
 
-* Newsletter: TODO
+* Newsletter: [release-2020-05](http://createsend.com/t/j-AF920550C57E4C292540EF23F30FEDED)
 * Link to subscription form: https://confirmsubscription.com/h/j/61B064416E79453D
 
 
@@ -33,7 +33,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-05
 
 ### Livingdocs Server Patches
-- [v??.?.?](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v??.?.?): TODO
+- [v94.10.9](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v94.10.9): bump framework
 
 
 
@@ -49,7 +49,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-05
 
 ### Livingdocs Editor Patches
-- [v??.?.?](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v??.?.?): TODO
+- [v50.2.28](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.28): add uploadImage function to iFrameview
 
 
 
