@@ -57,31 +57,23 @@ How to require the editor in your package.json:
 
 ## Editor UI Changes
 
-..........TODO: Lukas wording.............
+We did an iteration on the side panel next to the document to integrate
+the comments more seamlessly into the editing experience as well as prepare
+the editor for future mobile optimisations.
 
 ### Canvas added
-We have now removed the side-panel for properties and comments. Instead we have a canvas on the right side of the document and scrolling of the document is on the right side of the canvas.
+We have now removed the side-panel for properties and comments. Instead we have a canvas on the right side of the document that is visible by default. That way users do not have to jump between editing and comment modes and comments are more visible if there are any.
+As a general improvement the scrollbar of the document is now on the right side of the canvas which feels more natural.
 
 ![image](https://user-images.githubusercontent.com/4352425/80966827-8f6d8c00-8e15-11ea-8335-d1c042d2611a.png)
 
 ### Comments moved to Canvas
-The comments are now shown in the canvas. They can be shown or hidden in the collab-bar. The default is that the open comments will be shown and the resolved comments will be hidden.
+The comments are now shown in the canvas. And instead of using tabs to switch between open and resolved comments which comments are visible can be controlled from the collaboration-bar. The default is that the open comments will be shown and the resolved comments will be hidden.
 ![image](https://user-images.githubusercontent.com/4352425/80967132-26d2df00-8e16-11ea-89f4-66e29a21460c.png)
 
 ### properties-panel
-The properties-panel is now not anymore in the side-panel. It is now over the canvas and can be closed so that the cards behind can be selected.
+The properties-panel is not a side-panel anymore. Now it is a panel over the canvas and can be minimised.
 ![image](https://user-images.githubusercontent.com/4352425/80968640-9c3faf00-8e18-11ea-9cec-9998f0e82ef3.png)
-
-
-## Live Coverage :tada:
-
-Live coverage mode enables teams of editors to collaborate under moderation. This is particularly useful for things like live tickers. Every change is written as a proposal (draft) that can be reviewed and accepted. Only accepted changes are published when an editor presses the publish button. As things can get a bit messy with many people writing proposals, the UI allows you to hide proposals to see what is currently published.
-
-![image](https://user-images.githubusercontent.com/4352425/81931412-5938c500-95ea-11ea-8358-8e67145af59a.png)
-
-References:
-  * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3446)
-  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/2920)
 
 
 ## Translations :tada:
@@ -176,6 +168,9 @@ livingdocs-server migrate up
 * Image: Add remove image button for an existing image on the properties panel [livingdocs-editor #3444](https://github.com/livingdocsIO/livingdocs-editor/pull/3444) :gift:
 * Metadata: Support dataSources/dataProvider and more data types in Select/Multiselect [livingdocs-editor #3458](https://github.com/livingdocsIO/livingdocs-editor/pull/3458) :gift:
 * Remote includes beta: [livingdocs-editor #3451](https://github.com/livingdocsIO/livingdocs-editor/pull/3451)
+* Live Coverage Mode (alpha state - contact us for details):
+  [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3446)
+  [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/2920)
 
 
 ### Improvements
@@ -190,7 +185,7 @@ livingdocs-server migrate up
 * Import: Add image service URL to imported image [livingdocs-server #2889](https://github.com/livingdocsIO/livingdocs-server/pull/2889) :beetle:
 * Images: Fix image extraction bug [livingdocs-server #2896](https://github.com/livingdocsIO/livingdocs-server/pull/2896) :beetle:
 * Imatrics: Config fixes [livingdocs-server #2923](https://github.com/livingdocsIO/livingdocs-server/pull/2923) :beetle:
-* History: 
+* History:
   * Fix history user colors [livingdocs-editor #3424](https://github.com/livingdocsIO/livingdocs-editor/pull/3424) :beetle:
   * Fix history char counter & PO-truck [livingdocs-editor #3431](https://github.com/livingdocsIO/livingdocs-editor/pull/3431) :beetle:
 * Navigation: Fix spacing / scrolling [livingdocs-editor #3440](https://github.com/livingdocsIO/livingdocs-editor/pull/3440) :beetle:
