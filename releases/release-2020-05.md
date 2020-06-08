@@ -49,6 +49,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-05
 
 ### Livingdocs Editor Patches
+- [v50.2.29](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.29): fix: blur only if component is focused
 - [v50.2.28](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.28): add uploadImage function to iFrameview
 
 
