@@ -123,7 +123,8 @@ References:
 
 ## Delivery Links :tada:
 
-Livingdocs introduces multiple delivery links which can be configured via channelConfig (or UI) and are displayed on the publish panel. These links are usually used to check if the document has been published correctly on the website.
+Delivery links are shown in the publish panel when a document is published. These links are usually used to check if the document has been published correctly on the website.
+You can now configure more than one of these links through channelConfig (or UI).
 Check out the [Editor Pull Request](https://github.com/livingdocsIO/livingdocs-editor/pull/3453) if you want to know more.
 
 ![delivery-link](https://user-images.githubusercontent.com/172394/81531842-b66f1500-9363-11ea-93c6-c1eec1ecb8d5.png)
@@ -131,6 +132,26 @@ Check out the [Editor Pull Request](https://github.com/livingdocsIO/livingdocs-e
 References:
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3453)
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/2924)
+  * [Documentation](https://github.com/livingdocsIO/livingdocs/pull/301)
+
+
+## 2 Times Faster Image Upload :tada: :speedoat:
+
+If you upload/drop an image into Livingdocs, the image upload is now twice as fast with the new `libvips` strategy.
+
+### Dropped image format support :fire:
+
+- `libvips` does not support `.bmp`images, but supports HEIC (iphone format for images)
+
+```js
+// change your environment config on the server to upload images twice as fast as with the 'imagemagick' strategy
+images: {
+  processingStrategy: 'libvips'
+}
+```
+
+References:
+  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/2925)
 
 
 # Breaking Changes :fire:
@@ -151,7 +172,6 @@ livingdocs-server migrate up
 ### Features
 
 * Metadata: Add `li-publish-date` metadata plugin [livingdocs-server #2929](https://github.com/livingdocsIO/livingdocs-server/pull/2929) :gift:
-* Images: Add `libvips` as `images.processingStrategy` which is twice as fast as `imagemagick` [livingdocs-server #2925](https://github.com/livingdocsIO/livingdocs-server/pull/2925) :gift:
 * Elasticsearch: Indexes and support `numberOfReplicas` and `numberOfShards` configs [livingdocs-server #2911](https://github.com/livingdocsIO/livingdocs-server/pull/2911) :gift:
 * Image: Add remove image button for an existing image on the properties panel [livingdocs-editor #3444](https://github.com/livingdocsIO/livingdocs-editor/pull/3444) :gift:
 * Metadata: Support dataSources/dataProvider and more data types in Select/Multiselect [livingdocs-editor #3458](https://github.com/livingdocsIO/livingdocs-editor/pull/3458) :gift:
