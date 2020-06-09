@@ -64,6 +64,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-YYYY-MM
 
 ### Livingdocs Editor Patches
+- [v49.5.27](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.27): fix(framework): update framework to fix chrome 83 bug
 - [v49.5.26](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.26): fix: bp settings icon
 - [v49.5.25](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.25): fix(print): Fix magnify icons in print layout selector
 - [v49.5.24](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.24): fix(login): support query state params
