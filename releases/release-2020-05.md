@@ -49,6 +49,9 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-05
 
 ### Livingdocs Editor Patches
+- [v50.2.32](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.32): fix(editor text selection): Color
+
+- Changed color to cyan and increased contrast against background (white)
 - [v50.2.31](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.31): fix(locale): fix default moment locale to 'en-li'
 - [v50.2.30](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.30): fix: add allow-downloads flag to support chrome 83
 - [v50.2.29](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.29): fix: blur only if component is focused
