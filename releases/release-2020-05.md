@@ -50,6 +50,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-05
 
 ### Livingdocs Editor Patches
+- [v50.2.34](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.34): fix: improve visiblity of urgent proofreading tasks and deadlines
 - [v50.2.33](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.33): chore: disable shakey cypress test
 - [v50.2.32](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.32): fix(editor text selection): Color
 
