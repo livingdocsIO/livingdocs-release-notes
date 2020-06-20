@@ -50,6 +50,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-05
 
 ### Livingdocs Editor Patches
+- [v50.2.36](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.36): fix: document copies and references are reliably shown as published and do not rely on a metadata field named publishDate
 - [v50.2.35](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.35): fix: only promt entering languages on creation if languages are available on content types metadata
 - [v50.2.34](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.34): fix: improve visiblity of urgent proofreading tasks and deadlines
 - [v50.2.33](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.33): chore: disable shakey cypress test
