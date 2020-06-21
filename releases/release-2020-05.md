@@ -33,6 +33,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-05
 
 ### Livingdocs Server Patches
+- [v94.10.11](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v94.10.11): fix: add getRoutePart for core li-language plugin
 - [v94.10.10](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v94.10.10): chore: improve formatting
 - [v94.10.9](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v94.10.9): bump framework
 
