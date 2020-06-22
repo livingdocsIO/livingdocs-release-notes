@@ -65,6 +65,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-YYYY-MM
 
 ### Livingdocs Editor Patches
+- [v49.5.30](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.30): test(conflict): add tests
 - [v49.5.29](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.29): fix: hide custom document preview for print
 - [v49.5.28](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.28): chore: skip failing ci test
 - [v49.5.27](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.27): fix(framework): update framework to fix chrome 83 bug
