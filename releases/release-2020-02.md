@@ -70,6 +70,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-02
 
 ### Livingdocs Editor Patches
+- [v44.4.34](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.34): fix(resolve-conflicts): check only on content, document.version and userId
 - [v44.4.33](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.33): test(conflict): add tests
 - [v44.4.32](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.32): fix(framework): upgrade framework 13.2.7 to 13.2.8
 - [v44.4.31](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v44.4.31): chore: disable parts of the CI
