@@ -53,6 +53,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2019-12
 
 ### Livingdocs Editor Patches
+- [v42.9.50](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.50): fix(resolve-conflicts): check only on content, document.version and userId
 - [v42.9.49](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.49): test(conflict): add tests
 - [v42.9.48](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.48): fix: add allow-downloads flag to support chrome 83
 - [v42.9.47](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v42.9.47): fix(collaboration): when a expired softlock is in the metadata
