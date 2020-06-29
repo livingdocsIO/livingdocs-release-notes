@@ -52,6 +52,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-05
 
 ### Livingdocs Editor Patches
+- [v50.2.42](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.42): fix: add comment and cancel btn
 - [v50.2.41](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.41): fix(kanbanboard): fix live update of a kanban board card
 - [v50.2.40](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.40): fix(remove-route): remove add route and save status in canvas
 - [v50.2.39](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.39): fix(resolve-conflicts): check only on content, document.version and userId
