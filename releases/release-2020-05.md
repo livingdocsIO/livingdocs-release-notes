@@ -33,6 +33,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-05
 
 ### Livingdocs Server Patches
+- [v94.10.14](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v94.10.14): fix(imatrics): Allow value `0` for minchars
 - [v94.10.13](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v94.10.13): fix: add user to new login device data object
 - [v94.10.12](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v94.10.12): fix(imatrics): make imatrics tag schema more flexibel by allowing additional properties
 - [v94.10.11](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v94.10.11): fix: add getRoutePart for core li-language plugin
