@@ -33,6 +33,9 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-05
 
 ### Livingdocs Server Patches
+- [v94.10.15](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v94.10.15): fix: Upgrade to ioredis@4.17.3 to potentially fix a redis reconnect issue
+
+The code in https://github.com/luin/ioredis/pull/1139 might fix the connection issue we've been running into
 - [v94.10.14](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v94.10.14): fix(imatrics): Allow value `0` for minchars
 - [v94.10.13](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v94.10.13): fix: add user to new login device data object
 - [v94.10.12](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v94.10.12): fix(imatrics): make imatrics tag schema more flexibel by allowing additional properties
