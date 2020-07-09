@@ -58,6 +58,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-05
 
 ### Livingdocs Editor Patches
+- [v50.2.45](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.45): fix(asset-server): Do not serve `.map` files on production
 - [v50.2.44](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.44): fix(error-message): deleted article message is error
 - [v50.2.43](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.43): fix: activation of insert toolbar action only on canvas route
 - [v50.2.42](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.42): fix: add comment and cancel btn
