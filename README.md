@@ -3,11 +3,13 @@
 
 # Releases
 
-* [![Current Release](https://img.shields.io/badge/-current-success)]() 
+* [![Current Release](https://img.shields.io/badge/-current-success)]()
+  [July 2020 Release](./releases/release-2020-07.md)
+* [![Legacy Release](https://img.shields.io/badge/-legacy*-lightgrey)]()
   [May 2020 Release](./releases/release-2020-05.md)
-* [![Legacy Release](https://img.shields.io/badge/-legacy*-lightgrey)]() 
+* [![Legacy Release](https://img.shields.io/badge/-legacy*-lightgrey)]()
   [April 2020 Release](./releases/release-2020-04.md)
-* [![Legacy Release](https://img.shields.io/badge/-legacy*-lightgrey)]() 
+* [![Legacy Release](https://img.shields.io/badge/-legacy*-lightgrey)]()
   [February 2020 Release](./releases/release-2020-02.md)
 * [![Legacy Release](https://img.shields.io/badge/-legacy*-lightgrey)]()
   [December 2019 Release](./releases/release-2019-12.md)
