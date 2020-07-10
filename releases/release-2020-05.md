@@ -33,6 +33,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-05
 
 ### Livingdocs Server Patches
+- [v94.10.17](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v94.10.17): fix(add-origin): to local authentication api
 - [v94.10.16](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v94.10.16): fix(elasticsearch): Backport the fix for the numberOfReplicas and numberOfShards index configs
 - [v94.10.15](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v94.10.15): fix: Upgrade to ioredis@4.17.3 to potentially fix a redis reconnect issue
 
