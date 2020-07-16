@@ -59,6 +59,10 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-05
 
 ### Livingdocs Editor Patches
+- [v50.2.48](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.48): fix(image-uploader): Add file input element to DOM
+
+The <input type=file>element generated in file_picker.js can not be accessed from the DOM.
+This adds the input element to the DOM so it can be accessed by E2E tests.
 - [v50.2.47](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.47): fix(comment-cards): add comment thread to canvas
 - [v50.2.46](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.46): fix(comments): add instead of remove highlight on change
 - [v50.2.45](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.45): fix(asset-server): Do not serve `.map` files on production
