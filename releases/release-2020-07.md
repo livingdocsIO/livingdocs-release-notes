@@ -161,8 +161,32 @@ projectBuildersApi.registerBuilder({
 
 
 
-EDITOR (until 56.6.0)
+EDITOR (until 57.5.1)
 -----------------------------------------------------------
+* v57.5.1 fix(file picker): emit the click event ouside angular to not run into errors [livingdocs-editor #3727](https://github.com/livingdocsIO/livingdocs-editor/pull/3727) :gift:
+* v57.5.0 Improve iMatrics metadata updates [livingdocs-editor #3673](https://github.com/livingdocsIO/livingdocs-editor/pull/3673) :gift:
+* v57.4.0 Feature: isDefault Option for Default Display Filter [livingdocs-editor #3716](https://github.com/livingdocsIO/livingdocs-editor/pull/3716) :gift:
+* v57.3.0 Add custom text formatting [livingdocs-editor #3719](https://github.com/livingdocsIO/livingdocs-editor/pull/3719) :gift:
+* v57.2.0 Media Library: show "Load more Images" / "No Images" instead of "Documents" [livingdocs-editor #3704](https://github.com/livingdocsIO/livingdocs-editor/pull/3704) :gift:
+* v57.1.1 Image uploader - expose input in dom [livingdocs-editor #3724](https://github.com/livingdocsIO/livingdocs-editor/pull/3724) :gift:
+* v57.1.0 liMetaReferenceForm now has the correct filters for its document types [livingdocs-editor #3711](https://github.com/livingdocsIO/livingdocs-editor/pull/3711) :gift:
+* v57.0.1 fix(media library): disable dragging cards in media library and in media library selection modal [livingdocs-editor #3713](https://github.com/livingdocsIO/livingdocs-editor/pull/3713) :gift:
+* v57.0.0 Show scheduled publishing dates on the publish cards in the metadata screen [livingdocs-editor #3662](https://github.com/livingdocsIO/livingdocs-editor/pull/3662) :gift:
+* v56.12.4 Fix "what is new" icon position and "offline" notification not going away [livingdocs-editor #3710](https://github.com/livingdocsIO/livingdocs-editor/pull/3710) :gift:
+* v56.12.3 fix reopen a comment and check if objects already exists [livingdocs-editor #3714](https://github.com/livingdocsIO/livingdocs-editor/pull/3714) :gift:
+* v56.12.2 remove and add expired image indication on directive update [livingdocs-editor #3708](https://github.com/livingdocsIO/livingdocs-editor/pull/3708) :gift:
+* v56.12.1 Editing Toolbar: fix some styles [livingdocs-editor #3702](https://github.com/livingdocsIO/livingdocs-editor/pull/3702) :gift:
+* v56.12.0 Media Library: refactor media library upload to take state from imageUploadService, remove mediaLibraryUploadService [livingdocs-editor #3703](https://github.com/livingdocsIO/livingdocs-editor/pull/3703) :gift:
+* v56.11.0 Media library selection modal [livingdocs-editor #3706](https://github.com/livingdocsIO/livingdocs-editor/pull/3706) :gift:
+* v56.10.2 fix(forms): make only textareas resizable [livingdocs-editor #3705](https://github.com/livingdocsIO/livingdocs-editor/pull/3705) :gift:
+* v56.10.1 Allow to change language if no translations yet [livingdocs-editor #3700](https://github.com/livingdocsIO/livingdocs-editor/pull/3700) :gift:
+* v56.10.0 Display Filter: Pass Config Object to Filters [livingdocs-editor #3697](https://github.com/livingdocsIO/livingdocs-editor/pull/3697) :gift:
+* v56.9.0 (Media Library) set image component directives from metadata based on componentDirectivesPrefilling config [livingdocs-editor #3698](https://github.com/livingdocsIO/livingdocs-editor/pull/3698) :gift:
+* v56.8.0 Time Range Dashboard Filter [livingdocs-editor #3670](https://github.com/livingdocsIO/livingdocs-editor/pull/3670) :gift:
+* v56.7.1 (Media Library) rename extractMetadata to extractExif & mediaLibrary.enabled -> mediaLibrary.showUi [livingdocs-editor #3696](https://github.com/livingdocsIO/livingdocs-editor/pull/3696) :gift:
+* v56.7.0 Media library in toolbar [livingdocs-editor #3692](https://github.com/livingdocsIO/livingdocs-editor/pull/3692) :gift:
+* v56.6.1 Do not serve sourcemaps on production [livingdocs-editor #3694](https://github.com/livingdocsIO/livingdocs-editor/pull/3694) :gift:
+* v56.6.0 (Media Library) Extract metadata when form for required metadata properties is shown [livingdocs-editor #3690](https://github.com/livingdocsIO/livingdocs-editor/pull/3690) :gift:
 * v56.6.0 (Media Library) Extract metadata when form for required metadata properties is shown [livingdocs-editor #3690](https://github.com/livingdocsIO/livingdocs-editor/pull/3690) :gift:
 * v56.5.0 vue-form-generator: support date picker [livingdocs-editor #3671](https://github.com/livingdocsIO/livingdocs-editor/pull/3671) :gift:
 * v56.4.0 Support "media library -> document" drag and drop [livingdocs-editor #3640](https://github.com/livingdocsIO/livingdocs-editor/pull/3640) :gift:
@@ -276,8 +300,31 @@ EDITOR (until 56.6.0)
 
 
 
-SERVER (until 102.2.6)
+SERVER (until 103.3.2)
 -----------------------------------------------------------
+* v103.3.2 Metadata property update [livingdocs-server #3068](https://github.com/livingdocsIO/livingdocs-server/pull/3068) :gift:
+* v103.3.1 Correctly support sorting on the document title [livingdocs-server #3078](https://github.com/livingdocsIO/livingdocs-server/pull/3078) :gift:
+* v103.3.0 Add custom text formatting [livingdocs-server #3070](https://github.com/livingdocsIO/livingdocs-server/pull/3070) :gift:
+* v103.2.3 add origin from headers to local authentication api [livingdocs-server #3056](https://github.com/livingdocsIO/livingdocs-server/pull/3056) :gift:
+* v103.2.2 Revert e2e media library filter back to timeRange to prevent fai… [livingdocs-server #3077](https://github.com/livingdocsIO/livingdocs-server/pull/3077) :gift:
+* v103.2.1 chore(deps): bump lodash from 4.17.15 to 4.17.19 [livingdocs-server #3075](https://github.com/livingdocsIO/livingdocs-server/pull/3075) :gift:
+* v103.2.0 Validate Media Library Entries Metadata Values [livingdocs-server #3074](https://github.com/livingdocsIO/livingdocs-server/pull/3074) :gift:
+* v103.1.0 Document version check [livingdocs-server #3067](https://github.com/livingdocsIO/livingdocs-server/pull/3067) :gift:
+* v103.0.3 Properly inject normalized configurations down into the document save transaction [livingdocs-server #3066](https://github.com/livingdocsIO/livingdocs-server/pull/3066) :gift:
+* v103.0.2 fix(channel-configs): use strictObj validation for properties [livingdocs-server #3041](https://github.com/livingdocsIO/livingdocs-server/pull/3041) :gift:
+* v103.0.1 Keep EXIF metadata in images processed by libvips [livingdocs-server #3065](https://github.com/livingdocsIO/livingdocs-server/pull/3065) :gift:
+* v103.0.0 Switch from imagemagick to libvips for the image processing [livingdocs-server #3063](https://github.com/livingdocsIO/livingdocs-server/pull/3063) :gift:
+* v102.5.1 Database query refactorings [livingdocs-server #3062](https://github.com/livingdocsIO/livingdocs-server/pull/3062) :gift:
+* v102.5.0 Image alt text [livingdocs-server #3043](https://github.com/livingdocsIO/livingdocs-server/pull/3043) :gift:
+* v102.4.2 Make media library displayFilter schema more strict [livingdocs-server #3055](https://github.com/livingdocsIO/livingdocs-server/pull/3055) :gift:
+* v102.4.1 Index language with custom handle [livingdocs-server #3060](https://github.com/livingdocsIO/livingdocs-server/pull/3060) :gift:
+* v102.4.0 (exif extraction): remove recoding code [livingdocs-server #3054](https://github.com/livingdocsIO/livingdocs-server/pull/3054) :gift:
+* v102.3.2 fix(exif extraction): rename the dest property to metadataPropertyName in the extraction config [livingdocs-server #3053](https://github.com/livingdocsIO/livingdocs-server/pull/3053) :gift:
+* v102.3.2 add origin from headers to local authentication api [livingdocs-server #3056](https://github.com/livingdocsIO/livingdocs-server/pull/3056) :gift:
+* v102.3.1 (Media Library) rename metadataExtraction to exifExtraction & mediaLibrary.enabled to mediaLibrary.showUi [livingdocs-server #3051](https://github.com/livingdocsIO/livingdocs-server/pull/3051) :gift:
+* v102.3.0 feat(datetime validity): rename metadata plugin from li-date-range to li-datetime-validity [livingdocs-server #3048](https://github.com/livingdocsIO/livingdocs-server/pull/3048) :gift:
+* v102.2.7 fix dashboard schema [livingdocs-server #3050](https://github.com/livingdocsIO/livingdocs-server/pull/3050) :gift:
+* v102.2.6 Fix dashboard schema [livingdocs-server #3042](https://github.com/livingdocsIO/livingdocs-server/pull/3042) :gift:
 * v102.2.6 Fix dashboard schema [livingdocs-server #3042](https://github.com/livingdocsIO/livingdocs-server/pull/3042) :gift:
 * v102.2.5 fix(editorSettings): allow dashboard componentOptions to be any object [livingdocs-server #3049](https://github.com/livingdocsIO/livingdocs-server/pull/3049) :gift:
 * v102.2.4 Upgrade ioredis [livingdocs-server #3046](https://github.com/livingdocsIO/livingdocs-server/pull/3046) :gift:
