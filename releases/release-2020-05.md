@@ -59,6 +59,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-05
 
 ### Livingdocs Editor Patches
+- [v50.2.49](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.49): fix(revision-selection): use always next revision to compare
 - [v50.2.48](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.48): fix(image-uploader): Add file input element to DOM
 
 The <input type=file>element generated in file_picker.js can not be accessed from the DOM.
