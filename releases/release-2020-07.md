@@ -61,6 +61,11 @@ How to require the editor in your package.json:
 
 # Highlights
 
+
+---------- Improvement Publish Screen Error Handling -----------
+* Publish Screen: Show an error message on error during property form rendering [livingdocs-editor #3519](https://github.com/livingdocsIO/livingdocs-editor/pull/3519) :gift:
+* v51.5.0 Show multiple validation errors on the publish screen [livingdocs-editor #3513](https://github.com/livingdocsIO/livingdocs-editor/pull/3513) :gift:
+
 ----------- alt text prefilling -------------
 https://github.com/livingdocsIO/livingdocs-editor/pull/3699
 * v102.5.0 Image alt text [livingdocs-server #3043](https://github.com/livingdocsIO/livingdocs-server/pull/3043) :gift:
@@ -146,7 +151,7 @@ DO: read and compose the logs
 
 
 
-
+* v102.3.2 fix(exif extraction): rename the dest property to metadataPropertyName in the extraction config [livingdocs-server #3053](https://github.com/livingdocsIO/livingdocs-server/pull/3053) :gift:
 * v103.2.2 Revert e2e media library filter back to timeRange to prevent fai… [livingdocs-server #3077](https://github.com/livingdocsIO/livingdocs-server/pull/3077) :gift:
 * v103.2.0 Validate Media Library Entries Metadata Values [livingdocs-server #3074](https://github.com/livingdocsIO/livingdocs-server/pull/3074) :gift:
 * v102.4.2 Make media library displayFilter schema more strict [livingdocs-server #3055](https://github.com/livingdocsIO/livingdocs-server/pull/3055) :gift:
@@ -205,6 +210,12 @@ Google Vision Config
 Show Schedule Publishing Dates
 Q: field names - https://github.com/livingdocsIO/livingdocs-editor/pull/3662#issuecomment-660628545
 * v57.0.0 Show scheduled publishing dates on the publish cards in the metadata screen [livingdocs-editor #3662](https://github.com/livingdocsIO/livingdocs-editor/pull/3662) :gift:
+
+Upgrading Elasticsearch Client
+* v98.0.0 Upgrade the elasticsearch client [livingdocs-server #2963](https://github.com/livingdocsIO/livingdocs-server/pull/2963) :gift:
+
+libvips image processing
+* v103.0.0 Switch from imagemagick to libvips for the image processing [livingdocs-server #3063](https://github.com/livingdocsIO/livingdocs-server/pull/3063) :gift:
 
 
 
@@ -331,6 +342,9 @@ Q: preview feature documented somewhere? https://github.com/livingdocsIO/livingd
 
 
 
+
+
+
 Main Navigation
 * (BREAKING!!!) Allow custom components in MainMenu [livingdocs-editor #3584](https://github.com/livingdocsIO/livingdocs-editor/pull/3584) :gift:
 * v52.0.2 fix(main nav): recalculate isActive state after navigation success [livingdocs-editor #3597](https://github.com/livingdocsIO/livingdocs-editor/pull/3597) :gift:
@@ -345,21 +359,31 @@ Bugs
 * DO: big pr, check again - v53.1.0 Fix: (vueified) document copy&embeds relation cards now correctly show as published [livingdocs-editor #3614](https://github.com/livingdocsIO/livingdocs-editor/pull/3614) :gift:
 * v53.1.1 Fix multiline comment support [livingdocs-editor #3633](https://github.com/livingdocsIO/livingdocs-editor/pull/3633) :gift:
 * v53.4.7 fix recover on conflicts with metadata changes on server [livingdocs-editor #3642](https://github.com/livingdocsIO/livingdocs-editor/pull/3642) :gift:
+* v100.0.0 Support content types that didn't declare a metadata array [livingdocs-server #2997](https://github.com/livingdocsIO/livingdocs-server/pull/2997) :gift:
 
 
-Improvement
-
-Improvement Publish Screen Error Handling
-* Publish Screen: Show an error message on error during property form rendering [livingdocs-editor #3519](https://github.com/livingdocsIO/livingdocs-editor/pull/3519) :gift:
-* v51.5.0 Show multiple validation errors on the publish screen [livingdocs-editor #3513](https://github.com/livingdocsIO/livingdocs-editor/pull/3513) :gift:
-* v57.1.0 liMetaReferenceForm now has the correct filters for its document types [livingdocs-editor #3711](https://github.com/livingdocsIO/livingdocs-editor/pull/3711) :gift:
 
 
 
 
 Improvements
-* v56.10.1 Allow to change language if no translations yet [livingdocs-editor #3700](https://github.com/livingdocsIO/livingdocs-editor/pull/3700) :gift:
-* v52.6.1 fix: improve visiblity of urgent proofreading tasks and deadlines [livingdocs-editor #3618](https://github.com/livingdocsIO/livingdocs-editor/pull/3618) :gift:
+* Translation: Allow to change language if no translation is set yet [livingdocs-editor #3700](https://github.com/livingdocsIO/livingdocs-editor/pull/3700) :gift:
+* Proofreading: Improve visiblity of urgent proofreading tasks and deadlines [livingdocs-editor #3618](https://github.com/livingdocsIO/livingdocs-editor/pull/3618) :gift:
+* Copy config: Make channelHandle optional [livingdocs-server #2930](https://github.com/livingdocsIO/livingdocs-server/pull/2930) :gift:
+* v96.0.4 Device Detection History [livingdocs-server #2949](https://github.com/livingdocsIO/livingdocs-server/pull/2949) :gift:
+* v57.1.0 liMetaReferenceForm now has the correct filters for its document types [livingdocs-editor #3711](https://github.com/livingdocsIO/livingdocs-editor/pull/3711) :gift:
+* v97.1.0 Upgrade the dashboards to retrieve the list of queues automatically from redis [livingdocs-server #2979](https://github.com/livingdocsIO/livingdocs-server/pull/2979) :gift:
+* v100.1.0 Async support in the public api [livingdocs-server #3000](https://github.com/livingdocsIO/livingdocs-server/pull/3000) :gift:
+* v101.0.2 Migrate `publicationApi.renderSelectedRenditions` to async/await [livingdocs-server #3011](https://github.com/livingdocsIO/livingdocs-server/pull/3011) :gift:
+* Server schema: More strictly verifying JSON schemas [livingdocs-server #3003](https://github.com/livingdocsIO/livingdocs-server/pull/3003) :gift:
+* v101.1.6 Do not crash the document copy feature when the framework complaints about errors [livingdocs-server #3023](https://github.com/livingdocsIO/livingdocs-server/pull/3023) :gift:
+* v101.4.1 add user to new login device data object [livingdocs-server #3025](https://github.com/livingdocsIO/livingdocs-server/pull/3025) :gift:
+* v102.3.2 add origin from headers to local authentication api [livingdocs-server #3056](https://github.com/livingdocsIO/livingdocs-server/pull/3056) :gift:
+* v102.2.3 Project seeding fixes [livingdocs-server #3044](https://github.com/livingdocsIO/livingdocs-server/pull/3044) :gift:
+* v103.0.2 fix(channel-configs): use strictObj validation for properties [livingdocs-server #3041](https://github.com/livingdocsIO/livingdocs-server/pull/3041) :gift:
+* v103.0.3 Properly inject normalized configurations down into the document save transaction [livingdocs-server #3066](https://github.com/livingdocsIO/livingdocs-server/pull/3066) :gift:
+* v103.1.0 Document version check [livingdocs-server #3067](https://github.com/livingdocsIO/livingdocs-server/pull/3067) :gift:
+* v103.3.1 Correctly support sorting on the document title [livingdocs-server #3078](https://github.com/livingdocsIO/livingdocs-server/pull/3078) :gift:
 
 
 live coverage
@@ -391,66 +415,14 @@ Internal Changes - Cypress
 * v53.4.1 Cypress logs [livingdocs-editor #3594](https://github.com/livingdocsIO/livingdocs-editor/pull/3594) :gift:
 * v101.0.1 Fix cypress login tests [livingdocs-server #3010](https://github.com/livingdocsIO/livingdocs-server/pull/3010) :gift:
 
+Internal Changes - Others
+- * v101.4.0 feat(images): expose storage publicUrl to the editor [livingdocs-server #3028](https://github.com/livingdocsIO/livingdocs-server/pull/3028) :gift:
 
 
 
 
 
-SERVER (until 103.3.2)
------------------------------------------------------------
 
-* v103.3.1 Correctly support sorting on the document title [livingdocs-server #3078](https://github.com/livingdocsIO/livingdocs-server/pull/3078) :gift:
-
-* v103.2.3 add origin from headers to local authentication api [livingdocs-server #3056](https://github.com/livingdocsIO/livingdocs-server/pull/3056) :gift:
-* v103.1.0 Document version check [livingdocs-server #3067](https://github.com/livingdocsIO/livingdocs-server/pull/3067) :gift:
-* v103.0.3 Properly inject normalized configurations down into the document save transaction [livingdocs-server #3066](https://github.com/livingdocsIO/livingdocs-server/pull/3066) :gift:
-* v103.0.2 fix(channel-configs): use strictObj validation for properties [livingdocs-server #3041](https://github.com/livingdocsIO/livingdocs-server/pull/3041) :gift:
-* v103.0.1 Keep EXIF metadata in images processed by libvips [livingdocs-server #3065](https://github.com/livingdocsIO/livingdocs-server/pull/3065) :gift:
-* v103.0.0 Switch from imagemagick to libvips for the image processing [livingdocs-server #3063](https://github.com/livingdocsIO/livingdocs-server/pull/3063) :gift:
-* v102.5.1 Database query refactorings [livingdocs-server #3062](https://github.com/livingdocsIO/livingdocs-server/pull/3062) :gift:
-
-* v102.4.1 Index language with custom handle [livingdocs-server #3060](https://github.com/livingdocsIO/livingdocs-server/pull/3060) :gift:
-* v102.4.0 (exif extraction): remove recoding code [livingdocs-server #3054](https://github.com/livingdocsIO/livingdocs-server/pull/3054) :gift:
-* v102.3.2 fix(exif extraction): rename the dest property to metadataPropertyName in the extraction config [livingdocs-server #3053](https://github.com/livingdocsIO/livingdocs-server/pull/3053) :gift:
-* v102.3.2 add origin from headers to local authentication api [livingdocs-server #3056](https://github.com/livingdocsIO/livingdocs-server/pull/3056) :gift:
-
-* v102.2.7 fix dashboard schema [livingdocs-server #3050](https://github.com/livingdocsIO/livingdocs-server/pull/3050) :gift:
-* v102.2.6 Fix dashboard schema [livingdocs-server #3042](https://github.com/livingdocsIO/livingdocs-server/pull/3042) :gift:
-* v102.2.5 fix(editorSettings): allow dashboard componentOptions to be any object [livingdocs-server #3049](https://github.com/livingdocsIO/livingdocs-server/pull/3049) :gift:
-* v102.2.4 Upgrade ioredis [livingdocs-server #3046](https://github.com/livingdocsIO/livingdocs-server/pull/3046) :gift:
-* v102.2.3 Project seeding fixes [livingdocs-server #3044](https://github.com/livingdocsIO/livingdocs-server/pull/3044) :gift:
-* v102.2.2 Fix editor settings schema validation [livingdocs-server #3040](https://github.com/livingdocsIO/livingdocs-server/pull/3040) :gift:
-* v102.1.1 Await requests in import api [livingdocs-server #3038](https://github.com/livingdocsIO/livingdocs-server/pull/3038) :gift:
-* v101.4.1 add user to new login device data object [livingdocs-server #3025](https://github.com/livingdocsIO/livingdocs-server/pull/3025) :gift:
-* v101.4.0 feat(images): expose storage publicUrl to the editor [livingdocs-server #3028](https://github.com/livingdocsIO/livingdocs-server/pull/3028) :gift:
-
-
-* v101.1.9 fix: improve error message for stale memory cache [livingdocs-server #2953](https://github.com/livingdocsIO/livingdocs-server/pull/2953) :gift:
-* v101.1.8 fix: example project should be able to copy [livingdocs-server #3019](https://github.com/livingdocsIO/livingdocs-server/pull/3019) :gift:
-* v101.1.6 Do not crash the document copy feature when the framework complaints about errors [livingdocs-server #3023](https://github.com/livingdocsIO/livingdocs-server/pull/3023) :gift:
-* v101.1.3 sort import jobs by started_at date [livingdocs-server #3016](https://github.com/livingdocsIO/livingdocs-server/pull/3016) :gift:
-* v101.1.2 Fix database down migrations [livingdocs-server #3015](https://github.com/livingdocsIO/livingdocs-server/pull/3015) :gift:
-
-* v101.0.2 Migrate `publicationApi.renderSelectedRenditions` to async/await [livingdocs-server #3011](https://github.com/livingdocsIO/livingdocs-server/pull/3011) :gift:
-
-
-* v100.3.1 fix: design_stats_routes are working again [livingdocs-server #3005](https://github.com/livingdocsIO/livingdocs-server/pull/3005) :gift:
-* v100.2.1 Fix json schemas and remove custom extends logic [livingdocs-server #3003](https://github.com/livingdocsIO/livingdocs-server/pull/3003) :gift:
-
-* v100.1.0 Async support in the public api [livingdocs-server #3000](https://github.com/livingdocsIO/livingdocs-server/pull/3000) :gift:
-* v100.0.0 Support content types that didn't declare a metadata array [livingdocs-server #2997](https://github.com/livingdocsIO/livingdocs-server/pull/2997) :gift:
-* v98.0.3 Use channel config api instead of channel api [livingdocs-server #2990](https://github.com/livingdocsIO/livingdocs-server/pull/2990) :gift:
-* v98.0.2 fix(google-vision): disable in tests [livingdocs-server #2978](https://github.com/livingdocsIO/livingdocs-server/pull/2978) :gift:
-* v98.0.0 Upgrade the elasticsearch client [livingdocs-server #2963](https://github.com/livingdocsIO/livingdocs-server/pull/2963) :gift:
-* v97.1.2 fix: update framework and unskip tests [livingdocs-server #2973](https://github.com/livingdocsIO/livingdocs-server/pull/2973) :gift:
-* v97.1.0 Upgrade the dashboards to retrieve the list of queues automatically from redis [livingdocs-server #2979](https://github.com/livingdocsIO/livingdocs-server/pull/2979) :gift:
-* v96.3.3 fix: only push errors if metadata is missing [livingdocs-server #2960](https://github.com/livingdocsIO/livingdocs-server/pull/2960) :gift:
-* v96.3.1 fix: add getRoutePart for core li-language plugin [livingdocs-server #2954](https://github.com/livingdocsIO/livingdocs-server/pull/2954) :gift:
-* v96.2.1 fix: expose pusherApi.pusherClient again [livingdocs-server #2957](https://github.com/livingdocsIO/livingdocs-server/pull/2957) :gift:
-* v96.1.1 Document References: Detect an image directive based on the mediaId [livingdocs-server #2948](https://github.com/livingdocsIO/livingdocs-server/pull/2948) :gift:
-* v96.0.4 Device Detection History [livingdocs-server #2949](https://github.com/livingdocsIO/livingdocs-server/pull/2949) :gift:
-* v96.0.2 Copy config: make channelHandle optional [livingdocs-server #2930](https://github.com/livingdocsIO/livingdocs-server/pull/2930) :gift:
-* v94.13.2 fix(deprecation): Use new channelApi.getChannel() [livingdocs-server #2720](https://github.com/livingdocsIO/livingdocs-server/pull/2720) :gift:
 
 
   ---
