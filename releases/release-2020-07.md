@@ -10,6 +10,7 @@ INFO:
 - [Highlights](#highlights)
 - [Breaking Changes](#breaking-changes-fire)
 - [APIs](#apis-gift)
+- [Deprecations](#deprecations)
 - [Internal Changes](#internal-changes)
 - [Other Changes](#other-changes)
 
@@ -61,34 +62,53 @@ How to require the editor in your package.json:
 
 # Highlights
 
+---------- Media Library ---------------
+...
 
----------- Improvement Publish Screen Error Handling -----------
-* Publish Screen: Show an error message on error during property form rendering [livingdocs-editor #3519](https://github.com/livingdocsIO/livingdocs-editor/pull/3519) :gift:
-* v51.5.0 Show multiple validation errors on the publish screen [livingdocs-editor #3513](https://github.com/livingdocsIO/livingdocs-editor/pull/3513) :gift:
+---------- every project has it's own mainNavigation / dashboard
 
------------ alt text prefilling -------------
-https://github.com/livingdocsIO/livingdocs-editor/pull/3699
-* v102.5.0 Image alt text [livingdocs-server #3043](https://github.com/livingdocsIO/livingdocs-server/pull/3043) :gift:
+move editor settings - https://github.com/livingdocsIO/livingdocs-editor/pull/3663
+Q: exact description of how to move / deprecations - https://github.com/livingdocsIO/livingdocs-editor/pull/3663#issuecomment-660989917
+* v101.3.0 New projectConfig.editorSettings properties (mainNavigation, dashboards) [livingdocs-server #3024](https://github.com/livingdocsIO/livingdocs-server/pull/3024) :gift:
 
------------ custom text formatting -----------------
-DO: meinrad - write documentation - https://github.com/livingdocsIO/livingdocs-editor/pull/3719#issuecomment-660630314
-* v57.3.0 Add custom text formatting [livingdocs-editor #3719](https://github.com/livingdocsIO/livingdocs-editor/pull/3719) :gift:
-* v103.3.0 Add custom text formatting [livingdocs-server #3070](https://github.com/livingdocsIO/livingdocs-server/pull/3070) :gift:
+## Show all Errors at once on Publish Screen :tada:
 
-
------------- Display Filter -------------------
-new liDateTimeRange filter
-* v56.8.0 Time Range Dashboard Filter [livingdocs-editor #3670](https://github.com/livingdocsIO/livingdocs-editor/pull/3670) :gift:
-pass config to display filter
-* v56.10.0 Display Filter: Pass Config Object to Filters [livingdocs-editor #3697](https://github.com/livingdocsIO/livingdocs-editor/pull/3697) :gift:
-DO: isDefault Option
-* v57.4.0 Feature: isDefault Option for Default Display Filter [livingdocs-editor #3716](https://github.com/livingdocsIO/livingdocs-editor/pull/3716) :gift:
+There are 2 improvements on the editor publish screen:
+- When publishing, show all errors at once (not only one error) - [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3513)
+- Show an error message when a field has an error (development) - [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3519)
 
 
+## Custom Text Editing Config :tada:
 
----------- restore project config / diff project config history -------------
-* v51.6.0 Allow to restore a project config [livingdocs-editor #3475](https://github.com/livingdocsIO/livingdocs-editor/pull/3475) :gift:
-* v96.2.0 Add compare channel-config route [livingdocs-server #2952](https://github.com/livingdocsIO/livingdocs-server/pull/2952) :gift:
+It's possible to define your own custom text editing elements (see documentation reference for more info).
+Another improvement is that we moved the config of the default and custom elements to the server. One can now define text editing elements for every project (project config) and even for every content-type individually.
+
+![image](https://user-images.githubusercontent.com/4352425/87558211-2332c280-c6b9-11ea-9b16-ae4d8f84a86e.png)
+
+DO: meinrad - write documentation / deprecation - https://github.com/livingdocsIO/livingdocs-editor/pull/3719#issuecomment-660630314
+
+References:
+  * [Documentation]()
+  * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3719)
+  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3070)
+
+
+## Display Filter :tada:
+
+Display filters are the heart for dashboards. Therefore we introduce some improvements:
+
+- We have a new time based filter called `liDateTimeRange` - [more info](https://github.com/livingdocsIO/livingdocs-editor/pull/3670)
+- When adding a filter to a dashboard, it's now possible to pass (and interprete) a config - [more info](https://github.com/livingdocsIO/livingdocs-editor/pull/3697)
+- When a filter option defines `isDefault`, the filter will be applied on the first request - [more info](https://github.com/livingdocsIO/livingdocs-editor/pull/3716)
+
+## Restore Project Config :tada:
+
+When having a dynamic project config one can now show a diff of and older version of the project config in the history screen of the project setup.
+Additionally it's possible to restore an old project.
+
+References:
+  * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3475)
+  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/2952)
 
 
 ---------------- startpage config -----------------------
@@ -114,6 +134,21 @@ DO: add testrail cases
 Q: to myself: cypress test?
 * v52.6.0 Import log viewer [livingdocs-editor #3616](https://github.com/livingdocsIO/livingdocs-editor/pull/3616) :gift:
 * v100.2.0 Import log viewer [livingdocs-server #3002](https://github.com/livingdocsIO/livingdocs-server/pull/3002) :gift:
+
+
+------------------------
+imatrics/tagging (+breaking change!)
+
+* v52.1.0 Tags / iMatrics [livingdocs-editor #3593](https://github.com/livingdocsIO/livingdocs-editor/pull/3593) :gift:
+* v57.5.0 Improve iMatrics metadata updates [livingdocs-editor #3673](https://github.com/livingdocsIO/livingdocs-editor/pull/3673) :gift:
+  - * v103.3.2 Metadata property update [livingdocs-server #3068](https://github.com/livingdocsIO/livingdocs-server/pull/3068) :gift:
+* v54.2.3 fix(imatrics): improve error handling [livingdocs-editor #3681](https://github.com/livingdocsIO/livingdocs-editor/pull/3681) :gift:
+* v54.1.0 feat(imatrics): add event and object entity types [livingdocs-editor #3629](https://github.com/livingdocsIO/livingdocs-editor/pull/3629) :gift:
+* v52.2.1 fix(imatrics): do not log errors from li-taglist on publish screen [livingdocs-editor #3608](https://github.com/livingdocsIO/livingdocs-editor/pull/3608) :gift:
+* v101.4.3 fix(imatrics): Allow value `0` for minchars [livingdocs-server #3033](https://github.com/livingdocsIO/livingdocs-server/pull/3033) :gift:
+* v101.4.2 fix(imatrics): improve IMatricsTextTooShortError error case [livingdocs-server #3029](https://github.com/livingdocsIO/livingdocs-server/pull/3029) :gift:
+* v101.1.4 fix(imatrics): make imatrics tag schema more flexibel by allowing additional properties [livingdocs-server #3017](https://github.com/livingdocsIO/livingdocs-server/pull/3017) :gift:
+------------------------
 
 
 
@@ -168,25 +203,6 @@ DO: read and compose the logs
 ------------------------
 
 
-------------------------
-------------------------
-imatrics/tagging (+breaking change!)
-
-* v52.1.0 Tags / iMatrics [livingdocs-editor #3593](https://github.com/livingdocsIO/livingdocs-editor/pull/3593) :gift:
-* v57.5.0 Improve iMatrics metadata updates [livingdocs-editor #3673](https://github.com/livingdocsIO/livingdocs-editor/pull/3673) :gift:
-  - * v103.3.2 Metadata property update [livingdocs-server #3068](https://github.com/livingdocsIO/livingdocs-server/pull/3068) :gift:
-* v54.2.3 fix(imatrics): improve error handling [livingdocs-editor #3681](https://github.com/livingdocsIO/livingdocs-editor/pull/3681) :gift:
-* v54.1.0 feat(imatrics): add event and object entity types [livingdocs-editor #3629](https://github.com/livingdocsIO/livingdocs-editor/pull/3629) :gift:
-* v52.2.1 fix(imatrics): do not log errors from li-taglist on publish screen [livingdocs-editor #3608](https://github.com/livingdocsIO/livingdocs-editor/pull/3608) :gift:
-* v101.4.3 fix(imatrics): Allow value `0` for minchars [livingdocs-server #3033](https://github.com/livingdocsIO/livingdocs-server/pull/3033) :gift:
-* v101.4.2 fix(imatrics): improve IMatricsTextTooShortError error case [livingdocs-server #3029](https://github.com/livingdocsIO/livingdocs-server/pull/3029) :gift:
-* v101.1.4 fix(imatrics): make imatrics tag schema more flexibel by allowing additional properties [livingdocs-server #3017](https://github.com/livingdocsIO/livingdocs-server/pull/3017) :gift:
-
-
-------------------------
-------------------------
-
-
 
 
 
@@ -195,6 +211,29 @@ imatrics/tagging (+breaking change!)
 
 
 # Breaking Changes :fire:
+
+## Migrate the database
+
+It's a simple migration with no expected data losses.
+The expected time for the image migration is 10'000 images / second.
+
+```sh
+# run grunt migrate to update to the newest database scheme
+# migration - 136-add-tag-suggestions.js
+#   create tag_suggestions table
+# migration - 137-migrate-assets.js
+#   create media_library_entries table + migrate old data to new table
+# migration - 138-text-index-on-project-and-users.js
+#   add indexes on import_jobs, cache, config_properties table
+#   migrate media_type to media_type_id
+livingdocs-server migrate up
+```
+
+## Vue Components
+
+Vue components that injected `navigateTo` need to inject `router` and call `router.navigateTo({name: routeName, params: { a: 1, b: 2}})` instead of `navigateTo(routeName, { a: 1, b: 2}})`. See [livingdocs-editor #3584](https://github.com/livingdocsIO/livingdocs-editor/pull/3584) for more info
+
+
 
 Node 14, drop node 10
 * v51.0.0 Add node 14, drop node 10 support [livingdocs-editor #3505](https://github.com/livingdocsIO/livingdocs-editor/pull/3505) :gift:
@@ -207,30 +246,12 @@ Google Vision Config
 * v51.12.0 Configure Google Vision as integration [livingdocs-editor #3555](https://github.com/livingdocsIO/livingdocs-editor/pull/3555) :gift:
 * v97.0.0 Move google vision config [livingdocs-server #2969](https://github.com/livingdocsIO/livingdocs-server/pull/2969) :gift:
 
-Show Schedule Publishing Dates
-Q: field names - https://github.com/livingdocsIO/livingdocs-editor/pull/3662#issuecomment-660628545
-* v57.0.0 Show scheduled publishing dates on the publish cards in the metadata screen [livingdocs-editor #3662](https://github.com/livingdocsIO/livingdocs-editor/pull/3662) :gift:
 
 Upgrading Elasticsearch Client
 * v98.0.0 Upgrade the elasticsearch client [livingdocs-server #2963](https://github.com/livingdocsIO/livingdocs-server/pull/2963) :gift:
 
 libvips image processing
 * v103.0.0 Switch from imagemagick to libvips for the image processing [livingdocs-server #3063](https://github.com/livingdocsIO/livingdocs-server/pull/3063) :gift:
-
-
-
-## Migrate the database
-
-- Expected duration?
-- Possible data losses?
-- Is it a simple migration? (fast/easy downgradable)
-
-```sh
-# run grunt migrate to update to the newest database scheme
-# migration - 111-add-comments-table.js
-#   create comments table + add events to the stream_events_types table
-livingdocs-server migrate up
-```
 
 
 ## EXAMPLE !!!!!!!!!!!!!!!!!!! Update Elasticsearch Index
@@ -279,11 +300,15 @@ projectBuildersApi.registerBuilder({
 
 # APIs :gift:
 
-* Added Curl examples for the public API [livingdocs-editor #3549](https://github.com/livingdocsIO/livingdocs-editor/pull/3549) :gift:
+* Public API: Added Curl examples [livingdocs-editor #3549](https://github.com/livingdocsIO/livingdocs-editor/pull/3549) :gift:
+* Public API: Introduce Async support [livingdocs-server #3000](https://github.com/livingdocsIO/livingdocs-server/pull/3000) :gift:
+* Publication API: Support async/await for `publicationApi.renderSelectedRenditions` [livingdocs-server #3011](https://github.com/livingdocsIO/livingdocs-server/pull/3011) :gift:
 
-Q: maybe add new section configs?
-move editor settings - https://github.com/livingdocsIO/livingdocs-editor/pull/3663
-* v101.3.0 New projectConfig.editorSettings properties (mainNavigation, dashboards) [livingdocs-server #3024](https://github.com/livingdocsIO/livingdocs-server/pull/3024) :gift:
+# Deprecations
+
+### Main Navigation Config
+- `app.sidePanelItems` config should contain `route: {name: "routeName"}` instead of `sref: "routeName"`. sref is still valid but deprecated.
+- `app.sidePanelItems` in the static editor config is deprecated and will be moved to the project config on the server - https://github.com/livingdocsIO/livingdocs-editor/pull/3663
 
 
 # Internal Changes
@@ -303,6 +328,7 @@ PR: [livingdocs-editor #3492](https://github.com/livingdocsIO/livingdocs-editor/
 * Vueify project settings screen + add new component li-multi-select [livingdocs-editor #3515](https://github.com/livingdocsIO/livingdocs-editor/pull/3515)
 * Vueify liDashboardTitle [livingdocs-editor #3607](https://github.com/livingdocsIO/livingdocs-editor/pull/3607)
 * Vueify liCreateDocumentButton [livingdocs-editor #3609](https://github.com/livingdocsIO/livingdocs-editor/pull/3609)
+* Vueify document copy [livingdocs-editor #3614](https://github.com/livingdocsIO/livingdocs-editor/pull/3614) :beetle:
 * vue-form-generator: support date picker [livingdocs-editor #3671](https://github.com/livingdocsIO/livingdocs-editor/pull/3671)
 
 **Cypress**
@@ -314,7 +340,15 @@ PR: [livingdocs-editor #3492](https://github.com/livingdocsIO/livingdocs-editor/
 
 ### Features
 
+
+### Design
+
+* ... :gift:
+
+### Improvements
+
 **UI**
+* Publish Screen: Show scheduled publishing dates when `document.customPublicationDateField` in static editor config [livingdocs-editor #3662](https://github.com/livingdocsIO/livingdocs-editor/pull/3662) :gift:
 * Translation: Allow to change language if no translation is set yet [livingdocs-editor #3700](https://github.com/livingdocsIO/livingdocs-editor/pull/3700) :gift:
 * Proofreading: Improve visiblity of urgent proofreading tasks and deadlines [livingdocs-editor #3618](https://github.com/livingdocsIO/livingdocs-editor/pull/3618) :gift:
 * Metadata form: `liMetaReferenceForm` provides the same filter as its referenced document type [livingdocs-editor #3711](https://github.com/livingdocsIO/livingdocs-editor/pull/3711) :gift:
@@ -331,25 +365,25 @@ PR: [livingdocs-editor #3492](https://github.com/livingdocsIO/livingdocs-editor/
 **Technical**
 * Copy config: Make channelHandle optional [livingdocs-server #2930](https://github.com/livingdocsIO/livingdocs-server/pull/2930) :gift:
 * Device detection: Improve sensitivity of device detection [livingdocs-server #2949](https://github.com/livingdocsIO/livingdocs-server/pull/2949) :gift:
-* Public API: Introduce Async support for the public api [livingdocs-server #3000](https://github.com/livingdocsIO/livingdocs-server/pull/3000) :gift:
-* Publication API: Support async/await for `publicationApi.renderSelectedRenditions` [livingdocs-server #3011](https://github.com/livingdocsIO/livingdocs-server/pull/3011) :gift:
 * Schema validation
   * Server schemas: Strictly verify JSON schemas [livingdocs-server #3003](https://github.com/livingdocsIO/livingdocs-server/pull/3003) :gift:
   * Project config: Use `strictObj` validation for properties [livingdocs-server #3041](https://github.com/livingdocsIO/livingdocs-server/pull/3041) :gift:
 * Document copy: Do not crash when the framework throws errors [livingdocs-server #3023](https://github.com/livingdocsIO/livingdocs-server/pull/3023) :gift:
 * Metadata: Safely update metadata with a document version check [livingdocs-server #3067](https://github.com/livingdocsIO/livingdocs-server/pull/3067) :gift:
 
-
-### Design
-
-* ... :gift:
-
-### Improvements
-
-* ... :gift:
-
 ### Bugfixes
 
+* Publish screen: Fix showing correct state of document relations (copy of, embedded in) [livingdocs-editor #3614](https://github.com/livingdocsIO/livingdocs-editor/pull/3614) :beetle:
+* Language: show/hide li-language metadata form based on a behavior [livingdocs-editor #3527](https://github.com/livingdocsIO/livingdocs-editor/pull/3527) :beetle:
+* Text counter: Allow to exclude whole components from text-counter [livingdocs-editor #3329](https://github.com/livingdocsIO/livingdocs-editor/pull/3329) :beetle:
+* Create document modal: Fix create document modal and ios navi [livingdocs-editor #3567](https://github.com/livingdocsIO/livingdocs-editor/pull/3567) :beetle:
+* Images: Fix add uploadImage function to iFrameview [livingdocs-editor #3582](https://github.com/livingdocsIO/livingdocs-editor/pull/3582) :beetle:
+* Styles: Fix style alias to work in downstreams [livingdocs-editor #3621](https://github.com/livingdocsIO/livingdocs-editor/pull/3621) :beetle:
+* Comments: Fix multiline comment support [livingdocs-editor #3633](https://github.com/livingdocsIO/livingdocs-editor/pull/3633) :beetle:
+* Conflict management: Fix recover on conflicts with metadata changes on server [livingdocs-editor #3642](https://github.com/livingdocsIO/livingdocs-editor/pull/3642) :beetle:
+* Content Types: Support content types that didn't declare a metadata array [livingdocs-server #2997](https://github.com/livingdocsIO/livingdocs-server/pull/2997) :beetle:
+* Project seeding: Fix transaction issues and add error log for reliability and traceability [livingdocs-server #3044](https://github.com/livingdocsIO/livingdocs-server/pull/3044) :beetle:
+  * Indexing: Normalize configurations for a proper indexing [livingdocs-server #3066](https://github.com/livingdocsIO/livingdocs-server/pull/3066) :beetle:
 * Realtime Collab
   * Refactor: Refactor component locks and add them also for proposals [livingdocs-editor #3517](https://github.com/livingdocsIO/livingdocs-editor/pull/3517) :beetle:
   * Only blur component if focused on component lock [livingdocs-editor #3586](https://github.com/livingdocsIO/livingdocs-editor/pull/3586) :beetle:
@@ -386,49 +420,6 @@ Q: doc? where is it used? what fields supported? https://github.com/livingdocsIO
 Preview API
 Q: preview feature documented somewhere? https://github.com/livingdocsIO/livingdocs-editor/pull/3585#issuecomment-660599040
 * v52.0.4 Fix: support previewUrl for custom document previews [livingdocs-editor #3585](https://github.com/livingdocsIO/livingdocs-editor/pull/3585) :gift:
-
-
-
-
-
-
-Main Navigation
-* (BREAKING!!!) Allow custom components in MainMenu [livingdocs-editor #3584](https://github.com/livingdocsIO/livingdocs-editor/pull/3584) :gift:
-* v52.0.2 fix(main nav): recalculate isActive state after navigation success [livingdocs-editor #3597](https://github.com/livingdocsIO/livingdocs-editor/pull/3597) :gift:
-
-
-Bugs
-* Language: show/hide li-language metadata form based on a behavior [livingdocs-editor #3527](https://github.com/livingdocsIO/livingdocs-editor/pull/3527) :gift:
-* Allow to exclude whole components from text-counter [livingdocs-editor #3329](https://github.com/livingdocsIO/livingdocs-editor/pull/3329) :gift:
-* Fix create document modal and ios navi [livingdocs-editor #3567](https://github.com/livingdocsIO/livingdocs-editor/pull/3567) :gift:
-* v51.12.5 fix: add uploadImage function to iFrameview [livingdocs-editor #3582](https://github.com/livingdocsIO/livingdocs-editor/pull/3582) :gift:
-* v52.6.3 fix(webpack): fix style alias to work in downstreams [livingdocs-editor #3621](https://github.com/livingdocsIO/livingdocs-editor/pull/3621) :gift:
-* DO: big pr, check again - v53.1.0 Fix: (vueified) document copy&embeds relation cards now correctly show as published [livingdocs-editor #3614](https://github.com/livingdocsIO/livingdocs-editor/pull/3614) :gift:
-* v53.1.1 Fix multiline comment support [livingdocs-editor #3633](https://github.com/livingdocsIO/livingdocs-editor/pull/3633) :gift:
-* v53.4.7 fix recover on conflicts with metadata changes on server [livingdocs-editor #3642](https://github.com/livingdocsIO/livingdocs-editor/pull/3642) :gift:
-* v100.0.0 Support content types that didn't declare a metadata array [livingdocs-server #2997](https://github.com/livingdocsIO/livingdocs-server/pull/2997) :gift:
-Features
-  * ...
-Technical
-  * Project seeding: Fix transaction issues and add error log for reliability and traceability [livingdocs-server #3044](https://github.com/livingdocsIO/livingdocs-server/pull/3044) :gift:
-  * Indexing: Normalize configurations for a proper indexing [livingdocs-server #3066](https://github.com/livingdocsIO/livingdocs-server/pull/3066) :gift:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   ---
   **Icon Legend**
