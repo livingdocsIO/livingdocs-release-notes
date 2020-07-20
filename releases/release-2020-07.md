@@ -295,11 +295,50 @@ Renames `ld_icon` to `li-icon`. If you use any icons you have to use them like t
 
 PR: [livingdocs-editor #3492](https://github.com/livingdocsIO/livingdocs-editor/pull/3492)
 
+## Internal PR's
+
+**Vue**
+* Vue styleguide [livingdocs-editor #3500](https://github.com/livingdocsIO/livingdocs-editor/pull/3500)
+* Support Vue mixin props in the Angular-Vue wrapper [livingdocs-editor #3511](https://github.com/livingdocsIO/livingdocs-editor/pull/3511)
+* Vueify project settings screen + add new component li-multi-select [livingdocs-editor #3515](https://github.com/livingdocsIO/livingdocs-editor/pull/3515)
+* Vueify liDashboardTitle [livingdocs-editor #3607](https://github.com/livingdocsIO/livingdocs-editor/pull/3607)
+* Vueify liCreateDocumentButton [livingdocs-editor #3609](https://github.com/livingdocsIO/livingdocs-editor/pull/3609)
+* vue-form-generator: support date picker [livingdocs-editor #3671](https://github.com/livingdocsIO/livingdocs-editor/pull/3671)
+
+**Cypress**
+* Add Cypress logs for Drone CI runs [livingdocs-editor #3594](https://github.com/livingdocsIO/livingdocs-editor/pull/3594)
+* Fix cypress login tests [livingdocs-server #3010](https://github.com/livingdocsIO/livingdocs-server/pull/3010)
+
+
 # Other Changes
 
 ### Features
 
-* ... :gift:
+**UI**
+* Translation: Allow to change language if no translation is set yet [livingdocs-editor #3700](https://github.com/livingdocsIO/livingdocs-editor/pull/3700) :gift:
+* Proofreading: Improve visiblity of urgent proofreading tasks and deadlines [livingdocs-editor #3618](https://github.com/livingdocsIO/livingdocs-editor/pull/3618) :gift:
+* Metadata form: `liMetaReferenceForm` provides the same filter as its referenced document type [livingdocs-editor #3711](https://github.com/livingdocsIO/livingdocs-editor/pull/3711) :gift:
+* Dashboard: Correctly support sorting on the document title [livingdocs-server #3078](https://github.com/livingdocsIO/livingdocs-server/pull/3078) :gift:
+* Webhooks: Validate form and show editor side error messages [livingdocs-editor #3507](https://github.com/livingdocsIO/livingdocs-editor/pull/3507) :gift:
+* Redis dashboard: Dashboards retrieve the list of queues automatically from Redis [livingdocs-server #2979](https://github.com/livingdocsIO/livingdocs-server/pull/2979) :gift:
+* Authentication:
+  * Add user to login object to support email templates with more info [livingdocs-server #3025](https://github.com/livingdocsIO/livingdocs-server/pull/3025) :gift:
+  * Add origin from headers to login object [livingdocs-server #3056](https://github.com/livingdocsIO/livingdocs-server/pull/3056) :gift:
+* Live Coverage
+  * Fix insert proposal [livingdocs-editor #3491](https://github.com/livingdocsIO/livingdocs-editor/pull/3491) :beetle:
+  * Adapt live coverage UI [livingdocs-editor #3572](https://github.com/livingdocsIO/livingdocs-editor/pull/3572) :gift:
+
+**Technical**
+* Copy config: Make channelHandle optional [livingdocs-server #2930](https://github.com/livingdocsIO/livingdocs-server/pull/2930) :gift:
+* Device detection: Improve sensitivity of device detection [livingdocs-server #2949](https://github.com/livingdocsIO/livingdocs-server/pull/2949) :gift:
+* Public API: Introduce Async support for the public api [livingdocs-server #3000](https://github.com/livingdocsIO/livingdocs-server/pull/3000) :gift:
+* Publication API: Support async/await for `publicationApi.renderSelectedRenditions` [livingdocs-server #3011](https://github.com/livingdocsIO/livingdocs-server/pull/3011) :gift:
+* Schema validation
+  * Server schemas: Strictly verify JSON schemas [livingdocs-server #3003](https://github.com/livingdocsIO/livingdocs-server/pull/3003) :gift:
+  * Project config: Use `strictObj` validation for properties [livingdocs-server #3041](https://github.com/livingdocsIO/livingdocs-server/pull/3041) :gift:
+* Document copy: Do not crash when the framework throws errors [livingdocs-server #3023](https://github.com/livingdocsIO/livingdocs-server/pull/3023) :gift:
+* Metadata: Safely update metadata with a document version check [livingdocs-server #3067](https://github.com/livingdocsIO/livingdocs-server/pull/3067) :gift:
+
 
 ### Design
 
@@ -311,7 +350,15 @@ PR: [livingdocs-editor #3492](https://github.com/livingdocsIO/livingdocs-editor/
 
 ### Bugfixes
 
-* ... :beetle:
+* Realtime Collab
+  * Refactor: Refactor component locks and add them also for proposals [livingdocs-editor #3517](https://github.com/livingdocsIO/livingdocs-editor/pull/3517) :beetle:
+  * Only blur component if focused on component lock [livingdocs-editor #3586](https://github.com/livingdocsIO/livingdocs-editor/pull/3586) :beetle:
+  * Show insert in format panel and register empty click for it [livingdocs-editor #3637](https://github.com/livingdocsIO/livingdocs-editor/pull/3637) :beetle:
+  * Add comment and cancel btn to comment card [livingdocs-editor #3664](https://github.com/livingdocsIO/livingdocs-editor/pull/3664) :beetle:
+  * Fix component locks and history overlays [livingdocs-editor #3509](https://github.com/livingdocsIO/livingdocs-editor/pull/3509) :beetle:
+  * Fix close on include modal and remove lock on idle [livingdocs-editor #3530](https://github.com/livingdocsIO/livingdocs-editor/pull/3530) :beetle:
+  * Fix conflict handling with self [livingdocs-editor #3605](https://github.com/livingdocsIO/livingdocs-editor/pull/3605) :beetle:
+  * Fix reopen a comment and check if objects already exists [livingdocs-editor #3714](https://github.com/livingdocsIO/livingdocs-editor/pull/3714) :beetle:
 
 
 
@@ -360,63 +407,21 @@ Bugs
 * v53.1.1 Fix multiline comment support [livingdocs-editor #3633](https://github.com/livingdocsIO/livingdocs-editor/pull/3633) :gift:
 * v53.4.7 fix recover on conflicts with metadata changes on server [livingdocs-editor #3642](https://github.com/livingdocsIO/livingdocs-editor/pull/3642) :gift:
 * v100.0.0 Support content types that didn't declare a metadata array [livingdocs-server #2997](https://github.com/livingdocsIO/livingdocs-server/pull/2997) :gift:
+Features
+  * ...
+Technical
+  * Project seeding: Fix transaction issues and add error log for reliability and traceability [livingdocs-server #3044](https://github.com/livingdocsIO/livingdocs-server/pull/3044) :gift:
+  * Indexing: Normalize configurations for a proper indexing [livingdocs-server #3066](https://github.com/livingdocsIO/livingdocs-server/pull/3066) :gift:
 
 
 
 
 
 
-Improvements
-* Translation: Allow to change language if no translation is set yet [livingdocs-editor #3700](https://github.com/livingdocsIO/livingdocs-editor/pull/3700) :gift:
-* Proofreading: Improve visiblity of urgent proofreading tasks and deadlines [livingdocs-editor #3618](https://github.com/livingdocsIO/livingdocs-editor/pull/3618) :gift:
-* Copy config: Make channelHandle optional [livingdocs-server #2930](https://github.com/livingdocsIO/livingdocs-server/pull/2930) :gift:
-* v96.0.4 Device Detection History [livingdocs-server #2949](https://github.com/livingdocsIO/livingdocs-server/pull/2949) :gift:
-* v57.1.0 liMetaReferenceForm now has the correct filters for its document types [livingdocs-editor #3711](https://github.com/livingdocsIO/livingdocs-editor/pull/3711) :gift:
-* v97.1.0 Upgrade the dashboards to retrieve the list of queues automatically from redis [livingdocs-server #2979](https://github.com/livingdocsIO/livingdocs-server/pull/2979) :gift:
-* v100.1.0 Async support in the public api [livingdocs-server #3000](https://github.com/livingdocsIO/livingdocs-server/pull/3000) :gift:
-* v101.0.2 Migrate `publicationApi.renderSelectedRenditions` to async/await [livingdocs-server #3011](https://github.com/livingdocsIO/livingdocs-server/pull/3011) :gift:
-* Server schema: More strictly verifying JSON schemas [livingdocs-server #3003](https://github.com/livingdocsIO/livingdocs-server/pull/3003) :gift:
-* v101.1.6 Do not crash the document copy feature when the framework complaints about errors [livingdocs-server #3023](https://github.com/livingdocsIO/livingdocs-server/pull/3023) :gift:
-* v101.4.1 add user to new login device data object [livingdocs-server #3025](https://github.com/livingdocsIO/livingdocs-server/pull/3025) :gift:
-* v102.3.2 add origin from headers to local authentication api [livingdocs-server #3056](https://github.com/livingdocsIO/livingdocs-server/pull/3056) :gift:
-* v102.2.3 Project seeding fixes [livingdocs-server #3044](https://github.com/livingdocsIO/livingdocs-server/pull/3044) :gift:
-* v103.0.2 fix(channel-configs): use strictObj validation for properties [livingdocs-server #3041](https://github.com/livingdocsIO/livingdocs-server/pull/3041) :gift:
-* v103.0.3 Properly inject normalized configurations down into the document save transaction [livingdocs-server #3066](https://github.com/livingdocsIO/livingdocs-server/pull/3066) :gift:
-* v103.1.0 Document version check [livingdocs-server #3067](https://github.com/livingdocsIO/livingdocs-server/pull/3067) :gift:
-* v103.3.1 Correctly support sorting on the document title [livingdocs-server #3078](https://github.com/livingdocsIO/livingdocs-server/pull/3078) :gift:
 
 
-live coverage
-* Fix insert proposal [livingdocs-editor #3491](https://github.com/livingdocsIO/livingdocs-editor/pull/3491) :gift:
-* v51.12.3 Adapt live coverage ui [livingdocs-editor #3572](https://github.com/livingdocsIO/livingdocs-editor/pull/3572) :gift:
 
-realtime collab
-* Refactor component locks and add them also for proposals [livingdocs-editor #3517](https://github.com/livingdocsIO/livingdocs-editor/pull/3517) :gift:
-* Fix component locks and history overlays [livingdocs-editor #3509](https://github.com/livingdocsIO/livingdocs-editor/pull/3509) :gift:
-* Fix close on include modal and remove lock on idle [livingdocs-editor #3530](https://github.com/livingdocsIO/livingdocs-editor/pull/3530) :gift:
-* v51.12.6 Only blur component if focused on component lock [livingdocs-editor #3586](https://github.com/livingdocsIO/livingdocs-editor/pull/3586) :gift:
-* v52.6.5 Fix conflict with self [livingdocs-editor #3605](https://github.com/livingdocsIO/livingdocs-editor/pull/3605) :gift:
-* v53.5.1 show insert in format panel and register empty click for it [livingdocs-editor #3637](https://github.com/livingdocsIO/livingdocs-editor/pull/3637) :gift:
-* v53.5.2 add comment and cancel btn to comment card [livingdocs-editor #3664](https://github.com/livingdocsIO/livingdocs-editor/pull/3664) :gift:
-* v56.12.3 fix reopen a comment and check if objects already exists [livingdocs-editor #3714](https://github.com/livingdocsIO/livingdocs-editor/pull/3714) :gift:
 
-webhooks
-* Webhooks: Validate form and show error messages [livingdocs-editor #3507](https://github.com/livingdocsIO/livingdocs-editor/pull/3507) :gift:
-
-Internal Changes - Vue
-* Vue styleguide [livingdocs-editor #3500](https://github.com/livingdocsIO/livingdocs-editor/pull/3500) :gift:
-* Support vue mixin props in the angular vue wrapper [livingdocs-editor #3511](https://github.com/livingdocsIO/livingdocs-editor/pull/3511) :gift:
-* Vueify project settings screen + add new component li-multi-select [livingdocs-editor #3515](https://github.com/livingdocsIO/livingdocs-editor/pull/3515) :gift:
-* v52.3.1 Refactoring: Vueify liDashboardTitle [livingdocs-editor #3607](https://github.com/livingdocsIO/livingdocs-editor/pull/3607) :gift:
-* v53.2.1 Refactoring: migrate li-create-document-button from angular to vue [livingdocs-editor #3609](https://github.com/livingdocsIO/livingdocs-editor/pull/3609) :gift:
-* v56.5.0 vue-form-generator: support date picker [livingdocs-editor #3671](https://github.com/livingdocsIO/livingdocs-editor/pull/3671) :gift:
-
-Internal Changes - Cypress
-* v53.4.1 Cypress logs [livingdocs-editor #3594](https://github.com/livingdocsIO/livingdocs-editor/pull/3594) :gift:
-* v101.0.1 Fix cypress login tests [livingdocs-server #3010](https://github.com/livingdocsIO/livingdocs-server/pull/3010) :gift:
-
-Internal Changes - Others
-- * v101.4.0 feat(images): expose storage publicUrl to the editor [livingdocs-server #3028](https://github.com/livingdocsIO/livingdocs-server/pull/3028) :gift:
 
 
 
