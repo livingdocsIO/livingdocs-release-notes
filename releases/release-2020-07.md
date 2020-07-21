@@ -9,8 +9,8 @@ INFO:
 - [Patches](#repositories)
 - [Highlights](#highlights)
 - [Breaking Changes](#breaking-changes-fire)
-- [APIs](#apis-gift)
 - [Deprecations](#deprecations)
+- [APIs](#apis-gift)
 - [Internal Changes](#internal-changes)
 - [Other Changes](#other-changes)
 
@@ -62,14 +62,16 @@ How to require the editor in your package.json:
 
 # Highlights
 
----------- Media Library ---------------
-...
+## Overhauled Media Library :tada:
+DO: Lukas - create description / doc / changelog for media library
 
----------- every project has it's own mainNavigation / dashboard
+## Project Based Main Navigation + Dashboards
 
-move editor settings - https://github.com/livingdocsIO/livingdocs-editor/pull/3663
-Q: exact description of how to move / deprecations - https://github.com/livingdocsIO/livingdocs-editor/pull/3663#issuecomment-660989917
-* v101.3.0 New projectConfig.editorSettings properties (mainNavigation, dashboards) [livingdocs-server #3024](https://github.com/livingdocsIO/livingdocs-server/pull/3024) :gift:
+Until now only one editor main navigation and dashboard config was possible (because the config was living on the editor). Since the configs have been moved to the project config on the server, it's now possible to configure the main navigation and dashboards per project.
+
+References:
+  * [Documentation](https://github.com/livingdocsIO/livingdocs/pull/307)
+  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3024)
 
 ## Show all Errors at once on Publish Screen :tada:
 
@@ -106,108 +108,54 @@ Display filters are the heart for dashboards. Therefore we introduce some improv
 When having a dynamic project config one can now show a diff of and older version of the project config in the history screen of the project setup.
 Additionally it's possible to restore an old project.
 
+![image](https://user-images.githubusercontent.com/181334/82370740-52121c80-9a19-11ea-9b33-f20620111a14.png)
+
 References:
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3475)
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/2952)
 
+## Define Dashboard Entry Point :tada:
 
----------------- startpage config -----------------------
-DO: Breaking Change!
-* v101.4.4 Allow startPage configuration in editor settings [livingdocs-server #3031](https://github.com/livingdocsIO/livingdocs-server/pull/3031) :gift:
-* v56.0.0 Ability to configure entry point dashboard [livingdocs-editor #3687](https://github.com/livingdocsIO/livingdocs-editor/pull/3687) :gift:
+One can now define a custom entry point on login or when switching projects. For more info see [here](https://github.com/livingdocsIO/livingdocs-editor/pull/3687).
 
+## Custom User Menu :tada:
 
------------ add custom user menu --------------
-* v101.1.0 Feat: Custom user menu configuration [livingdocs-server #2996](https://github.com/livingdocsIO/livingdocs-server/pull/2996) :gift:
-* v53.3.0 Feat: Custom user menu configuration [livingdocs-editor #3603](https://github.com/livingdocsIO/livingdocs-editor/pull/3603) :gift:
-DO: Okan add doc - https://github.com/livingdocsIO/livingdocs-server/pull/2996#issuecomment-660605503
+Now it's possible to define custom entries within the livingdocs user menu.
 
+![image](https://user-images.githubusercontent.com/39759830/87947563-cf065480-caa3-11ea-890a-8735dfaf8ebc.png)
 
------------- livingdocs notifications --------------------
-DO: breaking changes / internal breaking changes
-DO: maybe draw attention to screenshots
-* v52.5.0 Feat: revamp livingdocs notifications  [livingdocs-editor #3533](https://github.com/livingdocsIO/livingdocs-editor/pull/3533) :gift:
+References:
+  * [Documentation](https://github.com/livingdocsIO/livingdocs/pull/307)
+  * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3603)
+  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/2996)
 
 
-------------- Import Log Viewer -------------------------
-DO: add testrail cases
-Q: to myself: cypress test?
-* v52.6.0 Import log viewer [livingdocs-editor #3616](https://github.com/livingdocsIO/livingdocs-editor/pull/3616) :gift:
-* v100.2.0 Import log viewer [livingdocs-server #3002](https://github.com/livingdocsIO/livingdocs-server/pull/3002) :gift:
+## Revamped Editor Notifications :tada:
 
+We improved the design and placement of editor notifications. Warnings and errors still stay on top middle of the editor, success and info messages go to the bottom left.
+Also the API of `ldNotify` changed a little bit.
+Check [the pull request](https://github.com/livingdocsIO/livingdocs-editor/pull/3533) to see some screenshots and the changed API.
 
-------------------------
-imatrics/tagging (+breaking change!)
+## Import Log Viewer :tada:
 
-* v52.1.0 Tags / iMatrics [livingdocs-editor #3593](https://github.com/livingdocsIO/livingdocs-editor/pull/3593) :gift:
-* v57.5.0 Improve iMatrics metadata updates [livingdocs-editor #3673](https://github.com/livingdocsIO/livingdocs-editor/pull/3673) :gift:
-  - * v103.3.2 Metadata property update [livingdocs-server #3068](https://github.com/livingdocsIO/livingdocs-server/pull/3068) :gift:
-* v54.2.3 fix(imatrics): improve error handling [livingdocs-editor #3681](https://github.com/livingdocsIO/livingdocs-editor/pull/3681) :gift:
-* v54.1.0 feat(imatrics): add event and object entity types [livingdocs-editor #3629](https://github.com/livingdocsIO/livingdocs-editor/pull/3629) :gift:
-* v52.2.1 fix(imatrics): do not log errors from li-taglist on publish screen [livingdocs-editor #3608](https://github.com/livingdocsIO/livingdocs-editor/pull/3608) :gift:
-* v101.4.3 fix(imatrics): Allow value `0` for minchars [livingdocs-server #3033](https://github.com/livingdocsIO/livingdocs-server/pull/3033) :gift:
-* v101.4.2 fix(imatrics): improve IMatricsTextTooShortError error case [livingdocs-server #3029](https://github.com/livingdocsIO/livingdocs-server/pull/3029) :gift:
-* v101.1.4 fix(imatrics): make imatrics tag schema more flexibel by allowing additional properties [livingdocs-server #3017](https://github.com/livingdocsIO/livingdocs-server/pull/3017) :gift:
-------------------------
+When importing documents or images, one can now see the "import jobs" via project setup.
+For more info look into the [PR description](https://github.com/livingdocsIO/livingdocs-editor/pull/3616)
 
+## Manage Component Groups for Embedded Designs :tada:
 
+Projects with an embedded design support now the management of component groups (grouping of components in editor sidebar).
+Via project setup one has the ability to move components across groups, move groups, edit label of groups, add new groups and delete (empty) groups.
+For more info look into the [PR description](https://github.com/livingdocsIO/livingdocs-editor/pull/3441)
 
+## Custom Document Preview :tada:
 
-------------------------
-------------------------
-media library
-DO: read and compose the logs
-* v57.0.1 fix(media library): disable dragging cards in media library and in media library selection modal [livingdocs-editor #3713](https://github.com/livingdocsIO/livingdocs-editor/pull/3713) :gift:
-* v56.12.2 remove and add expired image indication on directive update [livingdocs-editor #3708](https://github.com/livingdocsIO/livingdocs-editor/pull/3708) :gift:
-* v56.12.0 Media Library: refactor media library upload to take state from imageUploadService, remove mediaLibraryUploadService [livingdocs-editor #3703](https://github.com/livingdocsIO/livingdocs-editor/pull/3703) :gift:
-* v56.11.0 Media library selection modal [livingdocs-editor #3706](https://github.com/livingdocsIO/livingdocs-editor/pull/3706) :gift:
-* v56.9.0 (Media Library) set image component directives from metadata based on componentDirectivesPrefilling config [livingdocs-editor #3698](https://github.com/livingdocsIO/livingdocs-editor/pull/3698) :gift:
-* v56.7.1 (Media Library) rename extractMetadata to extractExif & mediaLibrary.enabled -> mediaLibrary.showUi [livingdocs-editor #3696](https://github.com/livingdocsIO/livingdocs-editor/pull/3696) :gift:
-* v56.7.0 Media library in toolbar [livingdocs-editor #3692](https://github.com/livingdocsIO/livingdocs-editor/pull/3692) :gift:
-* v56.6.0 (Media Library) Extract metadata when form for required metadata properties is shown [livingdocs-editor #3690](https://github.com/livingdocsIO/livingdocs-editor/pull/3690) :gift:
-* v56.4.0 Support "media library -> document" drag and drop [livingdocs-editor #3640](https://github.com/livingdocsIO/livingdocs-editor/pull/3640) :gift:
-* v56.3.0 Media library validity support [livingdocs-editor #3688](https://github.com/livingdocsIO/livingdocs-editor/pull/3688) :gift:
-* v56.2.0 Create MediaLibrary Config based on Project Config [livingdocs-editor #3691](https://github.com/livingdocsIO/livingdocs-editor/pull/3691) :gift:
-* v56.1.0 Adapt Media Library Search to the new API [livingdocs-editor #3689](https://github.com/livingdocsIO/livingdocs-editor/pull/3689) :gift:
-* v55.0.1 fix(asset proxy) add asset.url to MediaLibraryEntry in resolve value to assetProxy.postImage for compatibility reasons [livingdocs-editor #3686](https://github.com/livingdocsIO/livingdocs-editor/pull/3686) :gift:
-* v55.0.0 (MediaLibrary): Introduce and use MediaLibraryEntry model [livingdocs-editor #3680](https://github.com/livingdocsIO/livingdocs-editor/pull/3680) :gift:
-* v54.2.0 (Media Library) Image Upload Service / Metadata Form Validations [livingdocs-editor #3661](https://github.com/livingdocsIO/livingdocs-editor/pull/3661) :gift:
-* v54.0.0 feat: media library UI can now be turned off [livingdocs-editor #3667](https://github.com/livingdocsIO/livingdocs-editor/pull/3667) :gift:
-* v53.6.0 Introduce default Proofreading and Media Library Navigation Menu [livingdocs-editor #3666](https://github.com/livingdocsIO/livingdocs-editor/pull/3666) :gift:
-* v53.5.0 Dashboard: Vueify MediaLibraryCard [livingdocs-editor #3628](https://github.com/livingdocsIO/livingdocs-editor/pull/3628) :gift:
-* v53.4.0 Render required metadata form with form generator [livingdocs-editor #3636](https://github.com/livingdocsIO/livingdocs-editor/pull/3636) :gift:
-* v53.2.0 Embed custom media library dashboard into editor sidebar [livingdocs-editor #3604](https://github.com/livingdocsIO/livingdocs-editor/pull/3604) :gift:
-* v53.0.0 Migrate /documents?q=Text to /documents?search=Text [livingdocs-editor #3630](https://github.com/livingdocsIO/livingdocs-editor/pull/3630) :gift:
-* v52.7.0 (Media Library) use mediaTypes for metadata configuration [livingdocs-editor #3613](https://github.com/livingdocsIO/livingdocs-editor/pull/3613) :gift:
-* v52.3.0 (BC!!!!)Refactor image uploading workflow, introduce a imageUploadService [livingdocs-editor #3430](https://github.com/livingdocsIO/livingdocs-editor/pull/3430) :gift:
-* v52.2.0 MediaLibrary as Custom Dashboard - Iteration 1 [livingdocs-editor #3562](https://github.com/livingdocsIO/livingdocs-editor/pull/3562) :gift:
-* v51.12.2 fix: correctly set label for uploaded files [livingdocs-editor #3565](https://github.com/livingdocsIO/livingdocs-editor/pull/3565) :gift:
-* v51.8.0 feat: enforce image metadata during bulk upload [livingdocs-editor #3544](https://github.com/livingdocsIO/livingdocs-editor/pull/3544) :gift:
+It's now possible to integrate a custom document preview via the server side `previewApi`. Example of custom previews are
+- custom mobile preview
+- a preview of a finished article living on the frontend
+- anything that fits the specific customer need.
 
-
-
-* v102.3.2 fix(exif extraction): rename the dest property to metadataPropertyName in the extraction config [livingdocs-server #3053](https://github.com/livingdocsIO/livingdocs-server/pull/3053) :gift:
-* v103.2.2 Revert e2e media library filter back to timeRange to prevent fai… [livingdocs-server #3077](https://github.com/livingdocsIO/livingdocs-server/pull/3077) :gift:
-* v103.2.0 Validate Media Library Entries Metadata Values [livingdocs-server #3074](https://github.com/livingdocsIO/livingdocs-server/pull/3074) :gift:
-* v102.4.2 Make media library displayFilter schema more strict [livingdocs-server #3055](https://github.com/livingdocsIO/livingdocs-server/pull/3055) :gift:
-* v102.3.1 (Media Library) rename metadataExtraction to exifExtraction & mediaLibrary.enabled to mediaLibrary.showUi [livingdocs-server #3051](https://github.com/livingdocsIO/livingdocs-server/pull/3051) :gift:
-* v102.2.1 fix(e2e): fix mediaType configuration [livingdocs-server #3039](https://github.com/livingdocsIO/livingdocs-server/pull/3039) :gift:
-* v102.2.0 (Media Library) metadata extraction [livingdocs-server #3035](https://github.com/livingdocsIO/livingdocs-server/pull/3035) :gift:
-* v102.0.0 Media Library [livingdocs-server #3030](https://github.com/livingdocsIO/livingdocs-server/pull/3030) :gift:
-* v101.2.0 feat: add projectConfig.editorSettings.mediaLibrary.enabled [livingdocs-server #3027](https://github.com/livingdocsIO/livingdocs-server/pull/3027) :gift:
-* v101.0.0 (breaking CHANGE!!) Migrate /documents?q=Text to /documents?search=Text [livingdocs-server #3004](https://github.com/livingdocsIO/livingdocs-server/pull/3004) :gift:
-* v100.3.0 Project Config: MediaTypes [livingdocs-server #3001](https://github.com/livingdocsIO/livingdocs-server/pull/3001) :gift:
-* v99.0.0 Rename li-asset-management to li-media-library [livingdocs-server #2993](https://github.com/livingdocsIO/livingdocs-server/pull/2993) :gift:
-* v96.3.2 Fix media re-indexing [livingdocs-server #2968](https://github.com/livingdocsIO/livingdocs-server/pull/2968) :gift:
-------------------------
-------------------------
-
-
-
-
-
-
-
+References:
+  * [Documentation](https://github.com/livingdocsIO/livingdocs/pull/309)
 
 
 # Breaking Changes :fire:
@@ -233,6 +181,21 @@ livingdocs-server migrate up
 
 Vue components that injected `navigateTo` need to inject `router` and call `router.navigateTo({name: routeName, params: { a: 1, b: 2}})` instead of `navigateTo(routeName, { a: 1, b: 2}})`. See [livingdocs-editor #3584](https://github.com/livingdocsIO/livingdocs-editor/pull/3584) for more info
 
+## Editor Entry Point
+`app.ui.welcome` in the static editor config does not support Angular routes anymore. Change them to a path, e.g. from `app.home` to `/home` ([read more here](https://github.com/livingdocsIO/livingdocs-editor/pull/3687))
+
+## Editor ldNotify API Change
+
+- removed `ldNotify.error` in favor of `ldNotify.alert`
+- removed `ldNotify.sections` (the position will be derived from the log level)
+- removed `ldNotify.appWarning`, use `ldNotify.banner` instead
+- removed `ldNotify.appAlert`, use `ldNotify.alert` instead
+- removed `ldNotify.appStatus`, use `ldNotify.info({ephemeral: false})` instead. 'ephemeral: false' set a sticky behavior.
+- removed `ldNotify.notification.appearanceMode`. To keep the sticky behavior of a notification use 'ephemeral: false'
+
+See [editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3533) for more info
+
+
 
 
 Node 14, drop node 10
@@ -254,48 +217,18 @@ libvips image processing
 * v103.0.0 Switch from imagemagick to libvips for the image processing [livingdocs-server #3063](https://github.com/livingdocsIO/livingdocs-server/pull/3063) :gift:
 
 
-## EXAMPLE !!!!!!!!!!!!!!!!!!! Update Elasticsearch Index
+# Deprecations
 
-We now only store the reference to a user (`userId`) instead of the whole `user` object in Elasticsearch...
+### Main Navigation Config
+- `app.sidePanelItems` in the static editor config should contain `route: {name: "routeName"}` instead of `sref: "routeName"`. sref is still valid but deprecated.
+- `app.sidePanelItems` in the static editor config is deprecated. Configura the main navigation via project config `editorSettings.mainNavigation: [{'liItem': 'articles'}]` - [PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3663)
 
-### Changes
-These properties were added/deprecated from the document index...
-- :fire: deprecated `last_publication`
-- :fire: removed `last_publication`
-- :heavy_plus_sign: added `last_publication`
-- :heavy_minus_sign: removed `last_publication`
-- :recycle: refactored `last_publication`
+### Editor Entry Point
+- `app.ui.welcome` in the static editor config is deprecated. Configure your editor entry point via `startPage` in the project config - [howto](https://github.com/livingdocsIO/livingdocs-editor/pull/3687)
 
-### Needed Actions :fire:
-- :fire: Check and update your code to not use deprecated fields
-- :fire: The mapping should update automatically during server start. If indexing fails for some reason, please run grunt `search-index:documents:update-mapping`
-- optionally reindex calling `livingdocs-server search-index`
+### Dashboard Config
 
-**Example**
-
-```js
-// Before
-const registrationApi = liServer.features.api('li-registration')
-registrationApi.registerProjectBuilder({
-  handle: 'awesome-project',
-  builder: ({userId}, builderConfig, callback) => {
-    buildMyAwesomeProject({userId}, builderConfig, callback)
-  }
-})
-
-// Now
-const projectBuildersApi = liServer.features.api('li-project-builders')
-projectBuildersApi.registerBuilder({
-  handle: 'awesome-project',
-  async builder ({userId}, builderConfig) {
-    const project = await buildMyAwesomeProject({userId}, builderConfig)
-    return project
-  }
-})
-```
-
-* References
-  * [server PR #2426](https://github.com/livingdocsIO/livingdocs-server/pull/2426)
+- `dashboards` in the static editor config is deprecated. Configure a dashboard via project config `editorSettings.dashboards: [{}]` - [PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3663)
 
 
 # APIs :gift:
@@ -303,12 +236,6 @@ projectBuildersApi.registerBuilder({
 * Public API: Added Curl examples [livingdocs-editor #3549](https://github.com/livingdocsIO/livingdocs-editor/pull/3549) :gift:
 * Public API: Introduce Async support [livingdocs-server #3000](https://github.com/livingdocsIO/livingdocs-server/pull/3000) :gift:
 * Publication API: Support async/await for `publicationApi.renderSelectedRenditions` [livingdocs-server #3011](https://github.com/livingdocsIO/livingdocs-server/pull/3011) :gift:
-
-# Deprecations
-
-### Main Navigation Config
-- `app.sidePanelItems` config should contain `route: {name: "routeName"}` instead of `sref: "routeName"`. sref is still valid but deprecated.
-- `app.sidePanelItems` in the static editor config is deprecated and will be moved to the project config on the server - https://github.com/livingdocsIO/livingdocs-editor/pull/3663
 
 
 # Internal Changes
@@ -338,13 +265,6 @@ PR: [livingdocs-editor #3492](https://github.com/livingdocsIO/livingdocs-editor/
 
 # Other Changes
 
-### Features
-
-
-### Design
-
-* ... :gift:
-
 ### Improvements
 
 **UI**
@@ -355,6 +275,7 @@ PR: [livingdocs-editor #3492](https://github.com/livingdocsIO/livingdocs-editor/
 * Dashboard: Correctly support sorting on the document title [livingdocs-server #3078](https://github.com/livingdocsIO/livingdocs-server/pull/3078) :gift:
 * Webhooks: Validate form and show editor side error messages [livingdocs-editor #3507](https://github.com/livingdocsIO/livingdocs-editor/pull/3507) :gift:
 * Redis dashboard: Dashboards retrieve the list of queues automatically from Redis [livingdocs-server #2979](https://github.com/livingdocsIO/livingdocs-server/pull/2979) :gift:
+* Project setup: Form generator add `li-boolean` type form [livingdocs-editor #3526](https://github.com/livingdocsIO/livingdocs-editor/pull/3526) :gift:
 * Authentication:
   * Add user to login object to support email templates with more info [livingdocs-server #3025](https://github.com/livingdocsIO/livingdocs-server/pull/3025) :gift:
   * Add origin from headers to login object [livingdocs-server #3056](https://github.com/livingdocsIO/livingdocs-server/pull/3056) :gift:
@@ -393,33 +314,6 @@ PR: [livingdocs-editor #3492](https://github.com/livingdocsIO/livingdocs-editor/
   * Fix close on include modal and remove lock on idle [livingdocs-editor #3530](https://github.com/livingdocsIO/livingdocs-editor/pull/3530) :beetle:
   * Fix conflict handling with self [livingdocs-editor #3605](https://github.com/livingdocsIO/livingdocs-editor/pull/3605) :beetle:
   * Fix reopen a comment and check if objects already exists [livingdocs-editor #3714](https://github.com/livingdocsIO/livingdocs-editor/pull/3714) :beetle:
-
-
-
-
-
-
-Open Questions
-
----------
-Q: Missing Documentation: https://github.com/livingdocsIO/livingdocs-server/pull/2959#issuecomment-659931193
-Q: New Testrail Testcase?
-* v51.7.0 Editor: Configurable List Search Config [livingdocs-editor #3537](https://github.com/livingdocsIO/livingdocs-editor/pull/3537) :gift:
-* v96.2.3 Server: Configurable List Search Config [livingdocs-server #2959](https://github.com/livingdocsIO/livingdocs-server/pull/2959) :gift:
----------
-Embedded Design
-Q: Gabriel test - feedback if it works - https://github.com/livingdocsIO/livingdocs-editor/pull/3441#issuecomment-659909071
-DO: Add new Testrail case
-* v96.0.1 Manage component groups [livingdocs-server #2926](https://github.com/livingdocsIO/livingdocs-server/pull/2926) :gift:
-* v51.2.0 Manage component groups [livingdocs-editor #3441](https://github.com/livingdocsIO/livingdocs-editor/pull/3441) :gift:
----------
-Form Generator
-Q: doc? where is it used? what fields supported? https://github.com/livingdocsIO/livingdocs-editor/pull/3526#issuecomment-659949062
-* Form Generator add `li-boolean` type form [livingdocs-editor #3526](https://github.com/livingdocsIO/livingdocs-editor/pull/3526) :gift:
---------
-Preview API
-Q: preview feature documented somewhere? https://github.com/livingdocsIO/livingdocs-editor/pull/3585#issuecomment-660599040
-* v52.0.4 Fix: support previewUrl for custom document previews [livingdocs-editor #3585](https://github.com/livingdocsIO/livingdocs-editor/pull/3585) :gift:
 
   ---
   **Icon Legend**
