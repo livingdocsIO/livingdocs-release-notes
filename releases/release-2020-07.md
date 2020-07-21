@@ -1,8 +1,3 @@
-INFO:
-- editor: until 57.5.1
-- server: until 103.3.2
-
-
 **Attention:** If you skipped one or more releases, please also check the release-notes of the skipped ones.
 
 # Table of content
@@ -37,10 +32,10 @@ How to require the server in your package.json:
 ```
 
 - Link to the release branch:
-  https://github.com/livingdocsIO/livingdocs-server/tree/release-YYYY-MM
+  https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-07
 
 ### Livingdocs Server Patches
-- [v??.?.?](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v??.?.?): text
+- [v103.3.3](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v103.3.3): medialibrary: guarantee order of ids in resultset
 
 
 
@@ -53,17 +48,25 @@ How to require the editor in your package.json:
 ```
 
 - Link to the release branch:
-  https://github.com/livingdocsIO/livingdocs-editor/tree/release-YYYY-MM
+  https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-07
 
 ### Livingdocs Editor Patches
-- [v??.?.?](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v??.?.?): text
+- [v57.5.12](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.12): update framework
 
 
 
 # Highlights
 
 ## Overhauled Media Library :tada:
-DO: Lukas - create description / doc / changelog for media library
+
+The Media Library got a lot of updates. Some of the highlights are:
+- The media library dashboard can be configured the same way as document dashboards (filter/search)
+- Image asset custom metadata use the same configuration as document contentTypes
+- Visually support copyright restrictions
+- Extraction of metadata on image drop
+- Alt text
+
+A full changelog can be found [here](https://github.com/livingdocsIO/livingdocs-planning/issues/3779).
 
 ## Project Based Main Navigation + Dashboards
 
@@ -87,10 +90,7 @@ Another improvement is that we moved the config of the default and custom elemen
 
 ![image](https://user-images.githubusercontent.com/4352425/87558211-2332c280-c6b9-11ea-9b16-ae4d8f84a86e.png)
 
-DO: meinrad - write documentation / deprecation - https://github.com/livingdocsIO/livingdocs-editor/pull/3719#issuecomment-660630314
-
 References:
-  * [Documentation]()
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3719)
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3070)
 
@@ -160,7 +160,7 @@ References:
 
 # Breaking Changes :fire:
 
-## Migrate the database
+## Migrate the database :fire:
 
 It's a simple migration with no expected data losses.
 The expected time for the image migration is 10'000 images / second.
@@ -177,44 +177,58 @@ The expected time for the image migration is 10'000 images / second.
 livingdocs-server migrate up
 ```
 
+## Elasticsearch Client Upgrade
+
+- :fire: `liServer.api('li-search').esClient` is now an instance of `@elastic/elasticsearch').Client`, so please migrate to that [api](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/api-reference.html).
+- :fire: removed `liServer.api('li-search').IndexManager`. Use the elasticsearc client instead.
+- :fire: removed `liServer.api('li-search').indexManager`. Use the elasticsearc client instead.
+- :fire: removed `liServer.api('li-search').typeManager`. Use the elasticsearc client instead.
+- :fire: removed `grunt search-index` and the file `task/util/search-index-configuration`. Use `livingdocs-server es-search-index` instead.
+- :fire: `liServer.api('li-search').searchManager({}, {onlyId: true})` doesn't return an array of internal identifiers anymore. Instead the `documentId` is returned.
+
+References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/2963)
+
+## Use libvips as Default for Image Processing
+
+- :fire: set `libvips` as default for image processing (because it's much faster and more secure).
+
+If you want to fall back to `imagemagick`, you can add a config on the static server config `images.processingStrategy: 'imagemagick'`.
+
+References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3063)
+
+
 ## Vue Components
 
-Vue components that injected `navigateTo` need to inject `router` and call `router.navigateTo({name: routeName, params: { a: 1, b: 2}})` instead of `navigateTo(routeName, { a: 1, b: 2}})`. See [livingdocs-editor #3584](https://github.com/livingdocsIO/livingdocs-editor/pull/3584) for more info
+:fire: Vue components that injected `navigateTo` need to inject `router` and call `router.navigateTo({name: routeName, params: { a: 1, b: 2}})` instead of `navigateTo(routeName, { a: 1, b: 2}})`. See [livingdocs-editor #3584](https://github.com/livingdocsIO/livingdocs-editor/pull/3584) for more info
 
 ## Editor Entry Point
-`app.ui.welcome` in the static editor config does not support Angular routes anymore. Change them to a path, e.g. from `app.home` to `/home` ([read more here](https://github.com/livingdocsIO/livingdocs-editor/pull/3687))
+:fire: `app.ui.welcome` in the static editor config does not support Angular routes anymore. Change them to a path, e.g. from `app.home` to `/home` ([read more here](https://github.com/livingdocsIO/livingdocs-editor/pull/3687))
 
 ## Editor ldNotify API Change
 
-- removed `ldNotify.error` in favor of `ldNotify.alert`
-- removed `ldNotify.sections` (the position will be derived from the log level)
-- removed `ldNotify.appWarning`, use `ldNotify.banner` instead
-- removed `ldNotify.appAlert`, use `ldNotify.alert` instead
-- removed `ldNotify.appStatus`, use `ldNotify.info({ephemeral: false})` instead. 'ephemeral: false' set a sticky behavior.
-- removed `ldNotify.notification.appearanceMode`. To keep the sticky behavior of a notification use 'ephemeral: false'
+- :fire: removed `ldNotify.error` in favor of `ldNotify.alert`
+- :fire: removed `ldNotify.sections` (the position will be derived from the log level)
+- :fire: removed `ldNotify.appWarning`, use `ldNotify.banner` instead
+- :fire: removed `ldNotify.appAlert`, use `ldNotify.alert` instead
+- :fire: removed `ldNotify.appStatus`, use `ldNotify.info({ephemeral: false})` instead. 'ephemeral: false' set a sticky behavior.
+- :fire: removed `ldNotify.notification.appearanceMode`. To keep the sticky behavior of a notification use 'ephemeral: false'
 
 See [editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3533) for more info
 
+## Drop Node 10 Support
 
+- :fire: removed support for `Node 10`. Move to `Node 12` or `Node 14` ([read more here](https://github.com/livingdocsIO/livingdocs-editor/pull/3505))
 
+## Renamed Icons
 
-Node 14, drop node 10
-* v51.0.0 Add node 14, drop node 10 support [livingdocs-editor #3505](https://github.com/livingdocsIO/livingdocs-editor/pull/3505) :gift:
+- :fire: renamed icon from `settings` to `cog`
+- :fire: renamed icon from `github-circle` to `github`
 
-Renamed Icons for server config
-* v51.0.1 Remove unsupported icons from icon list [livingdocs-editor #3506](https://github.com/livingdocsIO/livingdocs-editor/pull/3506) :gift:
-https://github.com/livingdocsIO/livingdocs-server/pull/2942
+Read [here](https://github.com/livingdocsIO/livingdocs-editor/pull/3505) for a more detailled description.
 
-Google Vision Config
-* v51.12.0 Configure Google Vision as integration [livingdocs-editor #3555](https://github.com/livingdocsIO/livingdocs-editor/pull/3555) :gift:
-* v97.0.0 Move google vision config [livingdocs-server #2969](https://github.com/livingdocsIO/livingdocs-server/pull/2969) :gift:
+## Removed Global GoogleVision Config
 
-
-Upgrading Elasticsearch Client
-* v98.0.0 Upgrade the elasticsearch client [livingdocs-server #2963](https://github.com/livingdocsIO/livingdocs-server/pull/2963) :gift:
-
-libvips image processing
-* v103.0.0 Switch from imagemagick to libvips for the image processing [livingdocs-server #3063](https://github.com/livingdocsIO/livingdocs-server/pull/3063) :gift:
+:fire: You can't globally configure google vision anymore and have to move the config to the integrations project config. A migration guide can be found [here](https://github.com/livingdocsIO/livingdocs-server/pull/2969)
 
 
 # Deprecations
