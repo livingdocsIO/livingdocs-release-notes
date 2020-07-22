@@ -66,7 +66,7 @@ The Media Library got a lot of updates. Some of the highlights are:
 - Extraction of metadata on image drop
 - Alt text
 
-A full changelog can be found [here](https://github.com/livingdocsIO/livingdocs-planning/issues/3779).
+A full changelog and screenshots can be found [here](https://github.com/livingdocsIO/livingdocs-planning/issues/3779).
 
 ## Project Based Main Navigation + Dashboards
 
@@ -185,6 +185,7 @@ livingdocs-server migrate up
 - :fire: removed `liServer.api('li-search').typeManager`. Use the elasticsearc client instead.
 - :fire: removed `grunt search-index` and the file `task/util/search-index-configuration`. Use `livingdocs-server es-search-index` instead.
 - :fire: `liServer.api('li-search').searchManager({}, {onlyId: true})` doesn't return an array of internal identifiers anymore. Instead the `documentId` is returned.
+- :fire: static server config `search.elasticsearchClient` configuration supports now the [official](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/client-configuration.html) `@elastic/elasticsearch` client configuration
 
 References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/2963)
 
@@ -196,6 +197,36 @@ If you want to fall back to `imagemagick`, you can add a config on the static se
 
 References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3063)
 
+## Media Library
+
+:fire: **The MediaLibrary is now active by default**
+Both on the editor and server side.
+The editor UI can be disabled but the server side feature is always active storing data in postgres and indexing into elasticsearch.
+
+Disable the MediLibrary UI:
+```js
+// server project config
+editorSettings: {
+  mediaLibrary: {
+    showUi: false
+  }
+}
+```
+Configure an elasticsearch index name for the `mediaLibraryIndex` (otherwise a default name will be used):
+```js
+// static server config
+search: {
+  // ...
+  articleDocumentIndex: 'li-local-documents',
+  articlePublicationIndex: 'li-local-publications',
+  mediaLibraryIndex: 'li-local-media-library' // -> add this config
+
+}
+```
+
+:fire: Server Media Library API
+
+- The server API `li-asset-management` got renamed to `li-media-library`. Please update your code in case you're accessing it using `server.features.api('li-asset-management')` somewhere.
 
 ## Vue Components
 
@@ -233,17 +264,43 @@ Read [here](https://github.com/livingdocsIO/livingdocs-editor/pull/3505) for a m
 
 # Deprecations
 
-### Main Navigation Config
+### Main Navigation (static editor config)
 - `app.sidePanelItems` in the static editor config should contain `route: {name: "routeName"}` instead of `sref: "routeName"`. sref is still valid but deprecated.
 - `app.sidePanelItems` in the static editor config is deprecated. Configura the main navigation via project config `editorSettings.mainNavigation: [{'liItem': 'articles'}]` - [PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3663)
 
-### Editor Entry Point
+### Editor Entry Point (static editor config)
 - `app.ui.welcome` in the static editor config is deprecated. Configure your editor entry point via `startPage` in the project config - [howto](https://github.com/livingdocsIO/livingdocs-editor/pull/3687)
 
-### Dashboard Config
+### Dashboard Config (static editor config)
 
 - `dashboards` in the static editor config is deprecated. Configure a dashboard via project config `editorSettings.dashboards: [{}]` - [PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3663)
 
+### documentAPI (server API)
+
+- `server.features.api('li-documents).document.find()`
+  The methods parameters have changed and there is a new response structure. The old queries and properties will still work, but will log deprecation messages on every call.
+  - The `q` attribute in the query parameter changed to `search`
+  - In the return value the property `documents` got renamed to `results`
+  ```js
+  // change
+  const {total, documents} = await documentApi.find({project_id: 1, q: 'Some text'})
+  // to this
+  const {total, results} = await documentApi.find({project_id: 1, search: 'Some text'})
+  ```
+
+- `server.features.api('li-documents).document.getReferences()` the response format changed
+  ```js
+  // and change
+  const {total, documents} = await documentApi.getReferences({projectId, reference: 'image:1234'})
+  // to this
+  const {total, results} = await documentApi.getReferences({projectId, reference: 'image:1234'})
+  ```
+
+Reference: [Server PR #3004](https://github.com/livingdocsIO/livingdocs-server/pull/3004)
+
+### Media Library (static server config)
+
+- `assetManagement.enabled` in the static server config is deprecated. It has no effect anymore and will be removed in the [next release](https://github.com/livingdocsIO/livingdocs-server/pull/3086).
 
 # APIs :gift:
 
@@ -264,17 +321,24 @@ PR: [livingdocs-editor #3492](https://github.com/livingdocsIO/livingdocs-editor/
 ## Internal PR's
 
 **Vue**
-* Vue styleguide [livingdocs-editor #3500](https://github.com/livingdocsIO/livingdocs-editor/pull/3500)
-* Support Vue mixin props in the Angular-Vue wrapper [livingdocs-editor #3511](https://github.com/livingdocsIO/livingdocs-editor/pull/3511)
-* Vueify project settings screen + add new component li-multi-select [livingdocs-editor #3515](https://github.com/livingdocsIO/livingdocs-editor/pull/3515)
-* Vueify liDashboardTitle [livingdocs-editor #3607](https://github.com/livingdocsIO/livingdocs-editor/pull/3607)
-* Vueify liCreateDocumentButton [livingdocs-editor #3609](https://github.com/livingdocsIO/livingdocs-editor/pull/3609)
-* Vueify document copy [livingdocs-editor #3614](https://github.com/livingdocsIO/livingdocs-editor/pull/3614) :beetle:
-* vue-form-generator: support date picker [livingdocs-editor #3671](https://github.com/livingdocsIO/livingdocs-editor/pull/3671)
+* Vue styleguide [Editor #3500](https://github.com/livingdocsIO/livingdocs-editor/pull/3500)
+* Support Vue mixin props in the Angular-Vue wrapper [Editor #3511](https://github.com/livingdocsIO/livingdocs-editor/pull/3511)
+* Vueify project settings screen + add new component li-multi-select [Editor #3515](https://github.com/livingdocsIO/livingdocs-editor/pull/3515)
+* Vueify liDashboardTitle [Editor #3607](https://github.com/livingdocsIO/livingdocs-editor/pull/3607)
+* Vueify liCreateDocumentButton [Editor #3609](https://github.com/livingdocsIO/livingdocs-editor/pull/3609)
+* Vueify document copy [Editor #3614](https://github.com/livingdocsIO/livingdocs-editor/pull/3614) :beetle:
+* vue-form-generator: support date picker [Editor #3671](https://github.com/livingdocsIO/livingdocs-editor/pull/3671)
 
 **Cypress**
-* Add Cypress logs for Drone CI runs [livingdocs-editor #3594](https://github.com/livingdocsIO/livingdocs-editor/pull/3594)
-* Fix cypress login tests [livingdocs-server #3010](https://github.com/livingdocsIO/livingdocs-server/pull/3010)
+* Add Cypress logs for Drone CI runs [Editor #3594](https://github.com/livingdocsIO/livingdocs-editor/pull/3594)
+* Fix cypress login tests [Server #3010](https://github.com/livingdocsIO/livingdocs-server/pull/3010)
+
+**Images**
+* Image upload workflow [Editor #3430](https://github.com/livingdocsIO/livingdocs-editor/pull/3430)
+* AssetProxy and mediaLibraryProxy [Editor #3680](https://github.com/livingdocsIO/livingdocs-editor/pull/3680)
+
+**Editing API**
+ * Document search parameters + response [Server #3004](https://github.com/livingdocsIO/livingdocs-server/pull/3004)
 
 
 # Other Changes
