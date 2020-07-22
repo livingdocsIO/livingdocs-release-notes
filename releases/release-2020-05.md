@@ -60,6 +60,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-05
 
 ### Livingdocs Editor Patches
+- [v50.2.52](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.52): chore: simplify redirect
 - [v50.2.51](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.51): fix: properties panel behaves correct for multi selects
 - [v50.2.50](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.50): fix(comment-count): set to undefined when count is 0
 - [v50.2.49](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v50.2.49): fix(revision-selection): use always next revision to compare
