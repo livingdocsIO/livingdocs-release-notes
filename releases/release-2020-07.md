@@ -203,7 +203,7 @@ References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3
 Both on the editor and server side.
 The editor UI can be disabled but the server side feature is always active storing data in postgres and indexing into elasticsearch.
 
-Disable the MediLibrary UI:
+Disable the MediaLibrary UI:
 ```js
 // server project config
 editorSettings: {
