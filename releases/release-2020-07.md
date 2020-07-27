@@ -106,7 +106,7 @@ Display filters are the heart for dashboards. Therefore we introduce some improv
 ## Restore Project Config :tada:
 
 When having a dynamic project config one can now show a diff of and older version of the project config in the history screen of the project setup.
-Additionally it's possible to restore an old project.
+Additionally it's possible to restore an old project config.
 
 ![image](https://user-images.githubusercontent.com/181334/82370740-52121c80-9a19-11ea-9b33-f20620111a14.png)
 
@@ -205,7 +205,7 @@ The editor UI can be disabled but the server side feature is always active stori
 
 Disable the MediaLibrary UI:
 ```js
-// server project config
+// project config
 editorSettings: {
   mediaLibrary: {
     showUi: false
