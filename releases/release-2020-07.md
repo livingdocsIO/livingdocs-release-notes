@@ -35,6 +35,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-07
 
 ### Livingdocs Server Patches
+- [v103.3.9](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v103.3.9): fix(includes): allow vue-component type for doc-includes
 - [v103.3.8](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v103.3.8): correct copy behavior for articles with langauges and translations
 
 
