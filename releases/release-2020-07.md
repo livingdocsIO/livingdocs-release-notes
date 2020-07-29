@@ -35,8 +35,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-07
 
 ### Livingdocs Server Patches
-- [v103.3.3](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v103.3.3): medialibrary: guarantee order of ids in resultset
-
+- [v103.3.8](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v103.3.8): correct copy behavior for articles with langauges and translations
 
 
 ## Livingdocs Editor
@@ -51,7 +50,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-07
 
 ### Livingdocs Editor Patches
-- [v57.5.12](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.12): update framework
+- [v57.5.19](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.19): menu's can be sorted correctly again
 
 
 
