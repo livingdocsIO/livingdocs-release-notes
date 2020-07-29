@@ -11,7 +11,7 @@
 
 # Newsletter
 
-* Newsletter: **TODO**
+* Newsletter: [release-2020-07](http://createsend.com/t/j-9E8CA344FFE6D18F2540EF23F30FEDED)
 * Subscribe here: https://confirmsubscription.com/h/j/61B064416E79453D
 
 # Repositories
