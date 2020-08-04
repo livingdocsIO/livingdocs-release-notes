@@ -52,6 +52,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-07
 
 ### Livingdocs Editor Patches
+- [v57.5.21](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.21): fix: improve ldNotify warning wording
 - [v57.5.20](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.20): fix(doc-includes): allow for vue components to define include params
 - [v57.5.19](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.19): menu's can be sorted correctly again
 
