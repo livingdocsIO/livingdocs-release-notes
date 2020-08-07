@@ -356,7 +356,8 @@ PR: [livingdocs-editor #3492](https://github.com/livingdocsIO/livingdocs-editor/
 * Publish Screen: Show scheduled publishing dates when `document.customPublicationDateField` in static editor config [livingdocs-editor #3662](https://github.com/livingdocsIO/livingdocs-editor/pull/3662) :gift:
 * Translation: Allow to change language if no translation is set yet [livingdocs-editor #3700](https://github.com/livingdocsIO/livingdocs-editor/pull/3700) :gift:
 * Proofreading: Improve visiblity of urgent proofreading tasks and deadlines [livingdocs-editor #3618](https://github.com/livingdocsIO/livingdocs-editor/pull/3618) :gift:
-* Metadata form: `liMetaReferenceForm` provides the same filter as its referenced document type [livingdocs-editor #3711](https://github.com/livingdocsIO/livingdocs-editor/pull/3711) :gift:
+* Metadata form: `liMetaReferenceForm` can now control what filters should be displayed. `liMetaReferenceForm.ui.config.displayFilters` [livingdocs-editor #3780](https://github.com/livingdocsIO/livingdocs-editor/pull/3780) :gift:
+  * ~~Metadata form: `liMetaReferenceForm` provides the same filter as its referenced document type [livingdocs-editor #3711](https://github.com/livingdocsIO/livingdocs-editor/pull/3711) :gift:~~ _Has been reverted in [#3780](https://github.com/livingdocsIO/livingdocs-editor/pull/3780)_
 * Dashboard: Correctly support sorting on the document title [livingdocs-server #3078](https://github.com/livingdocsIO/livingdocs-server/pull/3078) :gift:
 * Webhooks: Validate form and show editor side error messages [livingdocs-editor #3507](https://github.com/livingdocsIO/livingdocs-editor/pull/3507) :gift:
 * Redis dashboard: Dashboards retrieve the list of queues automatically from Redis [livingdocs-server #2979](https://github.com/livingdocsIO/livingdocs-server/pull/2979) :gift:
