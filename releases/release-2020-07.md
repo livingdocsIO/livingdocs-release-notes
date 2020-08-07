@@ -53,6 +53,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-07
 
 ### Livingdocs Editor Patches
+- [v57.5.25](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.25): fix(Monaco-editor): dispose model before instance
 - [v57.5.24](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.24): chore: add test for rendering the list assignment
 - [v57.5.23](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.23): fix: use uiConfig for the displayfilters instead of config
 - [v57.5.22](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.22): fix(schema-form): do not debounce onChange call but debounce at receiving end if needed
