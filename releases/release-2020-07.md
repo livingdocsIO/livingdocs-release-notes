@@ -53,6 +53,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-07
 
 ### Livingdocs Editor Patches
+- [v57.5.28](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.28): fix: persist search when navigating from an document back to a dashboard
 - [v57.5.27](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.27): fix: improve css
 - [v57.5.26](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.26): chore: retrigger commit lint
 - [v57.5.25](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.25): fix(Monaco-editor): dispose model before instance
