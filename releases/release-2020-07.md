@@ -14,6 +14,11 @@
 * Newsletter: [release-2020-07](http://createsend.com/t/j-9E8CA344FFE6D18F2540EF23F30FEDED)
 * Subscribe here: https://confirmsubscription.com/h/j/61B064416E79453D
 
+# Webinar
+
+* Recording: [https://vimeo.com/446835734/56cd78cdcd](https://vimeo.com/446835734/56cd78cdcd)
+* Google Doc: [https://docs.google.com/document/d/1SvVlEBPMKiY-dK56LAL219-GWTvjCh-GXwJnarnI3L0/edit?usp=sharing](https://docs.google.com/document/d/1SvVlEBPMKiY-dK56LAL219-GWTvjCh-GXwJnarnI3L0/edit?usp=sharing)
+
 # Repositories
 
 This release consists of the following new versions of the `livingdocs-server` and the `livingdocs-editor`:
