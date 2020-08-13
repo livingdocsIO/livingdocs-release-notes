@@ -58,6 +58,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-07
 
 ### Livingdocs Editor Patches
+- [v57.5.30](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.30): fix(google-vision): fix language select
 - [v57.5.29](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.29): chore: add small in code comment
 - [v57.5.28](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.28): fix: persist search when navigating from an document back to a dashboard
 - [v57.5.27](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.27): fix: improve css
