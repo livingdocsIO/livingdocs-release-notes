@@ -59,6 +59,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-07
 
 ### Livingdocs Editor Patches
+- [v57.5.32](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.32): fix(liImageProxy): fix url getter
 - [v57.5.31](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.31): fix: add the square icon to the icons
 - [v57.5.30](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.30): fix(google-vision): fix language select
 - [v57.5.29](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.29): chore: add small in code comment
