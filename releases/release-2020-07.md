@@ -61,6 +61,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-07
 
 ### Livingdocs Editor Patches
+- [v57.5.35](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.35): fix(conflict-ui): add width to checkbox-icon in conflict-ui
 - [v57.5.34](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.34): fix(public-api): fix image import docs
 - [v57.5.33](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.33): fix(comments): update metadata comment count only locally
 - [v57.5.32](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.32): fix(liImageProxy): fix url getter
