@@ -40,6 +40,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-07
 
 ### Livingdocs Server Patches
+- [v103.3.14](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v103.3.14): chore(public-api): fix test helpers
 - [v103.3.13](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v103.3.13): fix: empty commit to create release
 - [v103.3.12](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v103.3.12): fix: correctly handle promise
 - [v103.3.11](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v103.3.11): fix(tasks): fix create project task for the embedded design case
