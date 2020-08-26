@@ -61,6 +61,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-07
 
 ### Livingdocs Editor Patches
+- [v57.5.39](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.39): fix(imatrics): store any concept properties returned from the server
 - [v57.5.38](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.38): fix: update framework to version 15.1.2
 - [v57.5.37](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.37): fix: redirect to home with projectHandle
 - [v57.5.36](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.36): fix: drop indicator for hugo and asset drop
