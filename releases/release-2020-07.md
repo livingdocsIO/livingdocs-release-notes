@@ -40,6 +40,9 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-07
 
 ### Livingdocs Server Patches
+- [v103.3.16](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v103.3.16): fix(print-api): Improve logging
+
+Make Print-API debug logs JSON format and more informative (adds `host`, `action..).
 - [v103.3.15](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v103.3.15): fix(dependencies): add dependency to transliteration for imatrics slug
 - [v103.3.14](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v103.3.14): chore(public-api): fix test helpers
 - [v103.3.13](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v103.3.13): fix: empty commit to create release
