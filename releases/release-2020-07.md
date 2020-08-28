@@ -62,6 +62,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-07
 
 ### Livingdocs Editor Patches
+- [v57.5.41](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.41): fix(buttons): fix image upload button icon
 - [v57.5.40](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.40): fix: show loading button while image is uploading in metadata image form
 - [v57.5.39](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.39): fix(imatrics): store any concept properties returned from the server
 - [v57.5.38](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.38): fix: update framework to version 15.1.2
