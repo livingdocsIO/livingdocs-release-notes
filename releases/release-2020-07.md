@@ -40,6 +40,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-07
 
 ### Livingdocs Server Patches
+- [v103.3.17](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v103.3.17): fix: Adapt docker compose to new postgres version
 - [v103.3.16](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v103.3.16): fix(print-api): Improve logging
 
 Make Print-API debug logs JSON format and more informative (adds `host`, `action..).
