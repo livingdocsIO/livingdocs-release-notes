@@ -66,6 +66,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-07
 
 ### Livingdocs Editor Patches
+- [v57.5.43](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.43): fix(metadata): correctly set image uploading state after image uploaded
 - [v57.5.42](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.42): fix(context menu): Opener wrapper removed
 
 - Removed opener wrapper from context menu component
