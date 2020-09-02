@@ -40,6 +40,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-07
 
 ### Livingdocs Server Patches
+- [v103.3.19](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v103.3.19): chore: correctly apply defaults and adapt tests
 - [v103.3.18](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v103.3.18): fix(media-library): Fix a migration where we've accidentally dropped the title of media library entries
 
 In this migration, we're setting the title on the media library entry again if it isn't present.
