@@ -40,6 +40,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-07
 
 ### Livingdocs Server Patches
+- [v103.3.22](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v103.3.22): fix: external services work correctly despite required metadata
 - [v103.3.21](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v103.3.21): fix(imatrics): store slug on user added concepts
 - [v103.3.20](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v103.3.20): fix(imatrics): Register feature API
 
