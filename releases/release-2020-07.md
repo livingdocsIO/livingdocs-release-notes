@@ -75,6 +75,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-07
 
 ### Livingdocs Editor Patches
+- [v57.5.49](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.49): fix(lists): show correct date for future publication
 - [v57.5.48](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.48): fix(image-upload): prevent exception when the canvas is not set
 - [v57.5.47](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.47): fix(dropzone-message): make it ephemeral to hide close button
 - [v57.5.46](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.46): fix(browser-spellcheck): pastedHtmlRules are now used in editableConfig only
