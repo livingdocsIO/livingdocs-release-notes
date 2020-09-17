@@ -76,6 +76,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-07
 
 ### Livingdocs Editor Patches
+- [v57.5.51](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.51): fix: do not trigger imatrics updates if imatrics is not initialized
 - [v57.5.50](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.50): fix(lists): always show scheduled date in case it's configured
 - [v57.5.49](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.49): fix(lists): show correct date for future publication
 - [v57.5.48](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.48): fix(image-upload): prevent exception when the canvas is not set
