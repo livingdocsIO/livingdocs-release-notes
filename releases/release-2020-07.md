@@ -77,6 +77,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-07
 
 ### Livingdocs Editor Patches
+- [v57.5.54](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.54): fix(media-library-dnd): correctly handle drops from media library in all browsers
 - [v57.5.53](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.53): fix(comyan): fix media library entry upload format for comyan
 - [v57.5.52](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.52): fix(print-proxy): Add `editions` endpoint
 - [v57.5.51](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.51): fix: do not trigger imatrics updates if imatrics is not initialized
