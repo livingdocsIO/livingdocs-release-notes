@@ -65,6 +65,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-YYYY-MM
 
 ### Livingdocs Editor Patches
+- [v49.5.36](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.36): fix(resolve-conflicts): check only on content, document.version and userId
 - [v49.5.35](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.35): fix(resolve-conflicts): check only on content, document.version and userId
 - [v49.5.34](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.34): fix(resolve-conflicts): check only on content, document.version and userId
 - [v49.5.33](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.33): fix(resolve-conflicts): check only on content, document.version and userId
