@@ -193,7 +193,7 @@ Pull Request: [livingdocs-server #3151](https://github.com/livingdocsIO/livingdo
 
 ## Register Custom Vue Display Filter :gift:
 
-One can register and use a custom display filter as a Vue component (e.g. on a dashboard).
+One can register a Vue component as a custom display filter (e.g. on a dashboard).
 
 References:
   * [Documentation](https://github.com/livingdocsIO/livingdocs/pull/317)
