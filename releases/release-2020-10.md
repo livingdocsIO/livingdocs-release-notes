@@ -84,6 +84,8 @@ References:
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3771)
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3079)
 
+Related: We also implemented an open-source boilerplate for a [Livingdocs to WoodWing Studio transformer](https://github.com/livingdocsIO/livingdocs-to-woodwing-exporter) as an AWS serverless app.
+
 
 ## Referenced Documents :tada:
 
@@ -110,6 +112,7 @@ Look at this [PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3814) f
 
 ## Image Service 2.0 :tada:
 
+TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOO Lukas: Rewrite this section...
 [Image services 2.0](https://docs.livingdocs.io/evaluation-guide/image-services) have experienced a lot of improvements.
 For example register custom image services in in the downstream (instead of adding them to the `livingdocs-framework`).
 
@@ -118,13 +121,11 @@ Other nice improvements are:
 - New image service configuration like a `imgTagRenderStrategy` are available
 - Added a backgroundImage render strategy with responsive behaviour
 
-Look [here](https://github.com/livingdocsIO/livingdocs-framework/pull/497) fore more infos on how the new image services can be configured.
-
 References:
   * [Framework PR](https://github.com/livingdocsIO/livingdocs-framework/pull/497)
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3833)
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3144)
-
+  * [Documentation](TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO Lukas)
 
 
 
@@ -199,12 +200,14 @@ References:
   * [Documentation](https://github.com/livingdocsIO/livingdocs/pull/317)
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3777)
 
-## Doc Includes with Vue :gift:
+## Customise Editor UI with Vue for Doc Includes :gift:
 
-Implement [Doc Includes](https://docs.livingdocs.io/evaluation-guide/intro#summary-of-a-doc-include) with Vue.
+Implement a [custom Editor UI](TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO Beni) for doc-includes with Vue.
 
 References:
+  * [Documentation (custom Editor UI)](TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO Beni)
   * [Documentation (Twitter Example)](https://github.com/livingdocsIO/livingdocs/pull/312)
+  * [Documentation (doc-include)](https://docs.livingdocs.io/evaluation-guide/intro#summary-of-a-doc-include)
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3768)
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3098)
 
@@ -230,13 +233,14 @@ References:
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3138)
 
 
-## Public API - Support client defined documentId in the import API #3145 :gift:
+## Public API - Support client defined documentId in the import API :gift:
 
 During a migration of an existing system, it's best practice to migrate all entries of the old system into livingdocs.
 To ease the migration, we want to support user-defined identifiers, so a custom import script can reuse existing identifiers.
 
 References:
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3145)
+  * [Documentation](TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO Marc)
 
 
 ## Livingdocs-server CLI - Simplify data migrations :gift:
@@ -302,7 +306,7 @@ PR: [livingdocs-editor #3801](https://github.com/livingdocsIO/livingdocs-editor/
   * Show proper message when image is broken [livingdocs-editor #3828](https://github.com/livingdocsIO/livingdocs-editor/pull/3828) :gift:
 * Imatrics
   * Store any concept properties returned from the server [livingdocs-editor #3837](https://github.com/livingdocsIO/livingdocs-editor/pull/3837) :gift:
-  * Updates suggestion in realtime [livingdocs-editor #3817](https://github.com/livingdocsIO/livingdocs-editor/pull/3817) :gift:
+  * Update suggestion in realtime in the dashboard [livingdocs-editor #3817](https://github.com/livingdocsIO/livingdocs-editor/pull/3817) :gift:
   * Do not trigger imatrics updates if imatrics is not initialized [livingdocs-editor #3870](https://github.com/livingdocsIO/livingdocs-editor/pull/3870) :gift:
 * Dashboards
   * Support relative date range in display filters [livingdocs-editor #3813](https://github.com/livingdocsIO/livingdocs-editor/pull/3813) :gift:
