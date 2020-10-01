@@ -194,7 +194,7 @@ Pull Request: [livingdocs-server #3151](https://github.com/livingdocsIO/livingdo
 
 ## Register Custom Vue Display Filter :gift:
 
-One can register and use a custom display filter as a Vue component (e.g. on a dashboard).
+One can register a Vue component as a custom display filter (e.g. on a dashboard).
 
 References:
   * [Documentation](https://github.com/livingdocsIO/livingdocs/pull/317)
@@ -302,7 +302,7 @@ PR: [livingdocs-editor #3801](https://github.com/livingdocsIO/livingdocs-editor/
 ### Improvements
 
 * Media Library
-  * Show message when no document has an image reference [livingdocs-editor #3826](https://github.com/livingdocsIO/livingdocs-editor/pull/3826) :gift:
+  * Show message when an image is not used in any document [livingdocs-editor #3826](https://github.com/livingdocsIO/livingdocs-editor/pull/3826) :gift:
   * Show proper message when image is broken [livingdocs-editor #3828](https://github.com/livingdocsIO/livingdocs-editor/pull/3828) :gift:
 * Imatrics
   * Store any concept properties returned from the server [livingdocs-editor #3837](https://github.com/livingdocsIO/livingdocs-editor/pull/3837) :gift:
