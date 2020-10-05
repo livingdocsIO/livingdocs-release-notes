@@ -40,6 +40,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-07
 
 ### Livingdocs Server Patches
+- [v103.3.28](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v103.3.28): fix(imatrics): fix an inconsitency in slugging
 - [v103.3.27](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v103.3.27): fix(imatrics): fix tag slugging
 - [v103.3.26](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v103.3.26): fix(build): revert v103.3.23
 - [v103.3.25](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v103.3.25): fix(print): Catch publication not found case
