@@ -82,6 +82,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-07
 
 ### Livingdocs Editor Patches
+- [v57.5.58](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.58): chore: add unit tests for the sorting config
 - [v57.5.57](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.57): fix: use publish type configs
 - [v57.5.56](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.56): fix(dashboards): show contentType label instead of handle
 - [v57.5.55](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.55): chore: fix image url drop handler test
