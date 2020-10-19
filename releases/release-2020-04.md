@@ -65,6 +65,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-YYYY-MM
 
 ### Livingdocs Editor Patches
+- [v49.5.99](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.99): fix: remove nzz step from drone.yml
 - [v49.5.32](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.32): fix: remove nzz step from drone.yml
 - [v49.5.38](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.38): fix(resolve-conflicts): check only on content, document.version and userId
 - [v49.5.31](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.31): fix(resolve-conflicts): check only on content, document.version and userId
