@@ -43,7 +43,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-10
 
 ### Livingdocs Server Patches
-- [v??.?.?](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v??.?.?): text
+- [v104.1.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v104.1.4): imatrics: fix an inconsitency in slugging
 
 
 
@@ -59,9 +59,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-10
 
 ### Livingdocs Editor Patches
-- [v49.5.99](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v49.5.99): fix(conflict-handling): styling of conflict handling buttons
-- [v??.?.?](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v??.?.?): text
-
+- [v57.18.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.13): fix styling of conflict handling buttons
 
 
 
@@ -77,7 +75,7 @@ transition. Find more in the [APIs](#apis-gift) section of the release notes.
 
 Adds a basic WoodWing integration into Livingdocs:
 - Support drag+drop from WoodWing assets to Livingdocs
-- Proof of concept: Whenever an image is uploaded to Livingdocs, it's also uploaded to WoodWing assets with some basic metadata.
+- Whenever an image is uploaded to Livingdocs, it's also uploaded to WoodWing assets with some basic metadata.
 
 References:
   * [Video](https://vimeo.com/444823016)
@@ -101,7 +99,9 @@ References:
 
 ## Parallel Image Upload :tada:
 
-We massively improved the image uploading process. The improvements are:
+We improved the image uploading process for cases when the user needs to provide image metadata before an image can be uploaded.
+
+The improvements are:
 - Upload multiple images in parallel
 - Edit metadata for multiple images at once
 - Cancel single uploads
@@ -112,7 +112,7 @@ Look at this [PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3814) f
 
 ## Image Service 2.0 :tada:
 
-TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOO Lukas: Rewrite this section...
+TODO Lukas: Rewrite section
 [Image services 2.0](https://docs.livingdocs.io/evaluation-guide/image-services) have experienced a lot of improvements.
 For example register custom image services in in the downstream (instead of adding them to the `livingdocs-framework`).
 
@@ -122,10 +122,10 @@ Other nice improvements are:
 - Added a backgroundImage render strategy with responsive behaviour
 
 References:
+  * [Documentation](https://github.com/livingdocsIO/livingdocs/pull/330)
   * [Framework PR](https://github.com/livingdocsIO/livingdocs-framework/pull/497)
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3833)
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3144)
-  * [Documentation](TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO Lukas)
 
 
 
@@ -202,10 +202,10 @@ References:
 
 ## Customise Editor UI with Vue for Doc Includes :gift:
 
-Implement a [custom Editor UI](TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO Beni) for doc-includes with Vue.
+Implement a [custom Editor UI - TODO Beni](TODO Beni) for doc-includes with Vue.
 
 References:
-  * [Documentation (custom Editor UI)](TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO Beni)
+  * [Documentation (custom Editor UI - TODO Beni)](TODO Beni)
   * [Documentation (Twitter Example)](https://github.com/livingdocsIO/livingdocs/pull/312)
   * [Documentation (doc-include)](https://docs.livingdocs.io/evaluation-guide/intro#summary-of-a-doc-include)
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3768)
@@ -240,7 +240,7 @@ To ease the migration, we want to support user-defined identifiers, so a custom 
 
 References:
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3145)
-  * [Documentation](TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO Marc)
+  * [Documentation](TODO Marc)
 
 
 ## Livingdocs-server CLI - Simplify data migrations :gift:
