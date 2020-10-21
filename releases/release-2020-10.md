@@ -112,14 +112,12 @@ Look at this [PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3814) f
 
 ## Image Service 2.0 :tada:
 
-TODO Lukas: Rewrite section
-[Image services 2.0](https://docs.livingdocs.io/evaluation-guide/image-services) have experienced a lot of improvements.
-For example register custom image services in in the downstream (instead of adding them to the `livingdocs-framework`).
+Livingdocs supports mechanisms to crop images and serve images in an optimised way to browsers and devices. This is done by uploading an original image and then cropping or resizing it on the fly through a SaaS image service.
+We improved this process, e.g.
+- integrate your own image service by registering a url building function
+- improved the possibilities to configure the image rendering process
 
-Other nice improvements are:
-- The rendering is separated from the imageService itself and renderStrategies can be defined via configuration.
-- New image service configuration like a `imgTagRenderStrategy` are available
-- Added a backgroundImage render strategy with responsive behaviour
+For more details read the [image service evaluation guide](https://docs.livingdocs.io/evaluation-guide/image-services) or the [documentation diff](https://github.com/livingdocsIO/livingdocs/pull/330).
 
 References:
   * [Documentation](https://github.com/livingdocsIO/livingdocs/pull/330)
