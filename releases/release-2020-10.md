@@ -106,6 +106,8 @@ The improvements are:
 - Edit metadata for multiple images at once
 - Cancel single uploads
 
+![image](https://user-images.githubusercontent.com/821875/92760343-da357c80-f390-11ea-878e-d29b44285db2.png)
+
 Look at this [PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3814) for some impressions.
 
 
