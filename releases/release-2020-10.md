@@ -60,6 +60,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-10
 
 ### Livingdocs Editor Patches
+- [v57.18.14](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.14): chore(migrations): add cypress tests
 - [v57.18.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.13): fix styling of conflict handling buttons
 
 
