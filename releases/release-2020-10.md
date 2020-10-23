@@ -43,6 +43,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-10
 
 ### Livingdocs Server Patches
+- [v104.1.7](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v104.1.7): fix: do not throw on unhandled rejections in the import api
 - [v104.1.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v104.1.6): fix: fix tests and logs of import api
 - [v104.1.5](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v104.1.5): chore(migrations): add tests for embedded switch
 - [v104.1.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v104.1.4): imatrics: fix an inconsitency in slugging
