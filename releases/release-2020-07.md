@@ -40,6 +40,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-07
 
 ### Livingdocs Server Patches
+- [v103.3.30](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v103.3.30): fix(elasticsearch): log cpu-wait as warning
 - [v103.3.29](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v103.3.29): chore: remove example config
 - [v103.3.28](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v103.3.28): fix(imatrics): fix an inconsitency in slugging
 - [v103.3.27](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v103.3.27): fix(imatrics): fix tag slugging
