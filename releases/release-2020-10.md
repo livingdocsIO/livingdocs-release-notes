@@ -65,6 +65,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-10
 
 ### Livingdocs Editor Patches
+- [v57.18.18](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.18): fix(date-range): allow strings for dateRange query
 - [v57.18.17](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.17): fix: improve import error log
 - [v57.18.16](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.16): chore: do not allowUnrecognizedEmbeds by default in our setup unless env = local
 - [v57.18.15](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.15): chore: adapt tests
