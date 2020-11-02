@@ -65,6 +65,9 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-10
 
 ### Livingdocs Editor Patches
+- [v57.18.20](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.20): fix(trackjs): add empty string instead of undefined
+
+the token is not written when the userId is set to undefined
 - [v57.18.19](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.19): fix: use foreach to get task object
 - [v57.18.18](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.18): fix(date-range): allow strings for dateRange query
 - [v57.18.17](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.17): fix: improve import error log
