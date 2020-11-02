@@ -83,6 +83,9 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-07
 
 ### Livingdocs Editor Patches
+- [v57.5.61](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.61): fix(trackjs): add empty string instead of undefined
+
+the token is not written when the userId is set to undefined
 - [v57.5.60](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.60): chore: do not allowUnrecognizedEmbeds by default in our setup unless env = local
 - [v57.5.59](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.59): chore: adapt tests
 - [v57.5.58](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.58): chore: add unit tests for the sorting config
