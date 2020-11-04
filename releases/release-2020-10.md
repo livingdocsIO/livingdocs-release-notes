@@ -268,8 +268,8 @@ Improvements:
 - Show a specific migration report for either a version bump or a data migration
 
 References:
-  * [Server PR - data-migration-run](https://github.com/livingdocsIO/livingdocs-server/pull/3162)
-  * [Server PR - report](https://github.com/livingdocsIO/livingdocs-server/pull/3162)
+  * [Server PR - data-migration-run](https://github.com/livingdocsIO/livingdocs-server/pull/3151)
+  * [Server PR - report](https://github.com/livingdocsIO/livingdocs-server/pull/3148)
 
 ## Livingdocs-server CLI - Improve reindex tasks :gift:
 
