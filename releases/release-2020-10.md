@@ -237,7 +237,7 @@ Examples:
 
 References:
   * Documentation - 'https://your-editor.com/public-api'
-  * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3099)
+  * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3895)
 
 ## Public API - Expose Public API via the server API :gift:
 
