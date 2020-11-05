@@ -221,10 +221,10 @@ References:
 
 ## Customise Editor UI with Vue for Doc Includes :gift:
 
-Implement a [custom Editor UI - TODO Beni](TODO Beni) for doc-includes with Vue.
+Implement a [custom Editor UI](https://docs.livingdocs.io/reference-docs/includes/editor_customization) for doc-includes with Vue.
 
 References:
-  * [Documentation (custom Editor UI - TODO Beni)](TODO Beni)
+  * [Documentation (custom Editor UI)](https://docs.livingdocs.io/reference-docs/includes/editor_customization)
   * [Documentation (Twitter Example)](https://github.com/livingdocsIO/livingdocs/pull/312)
   * [Documentation (doc-include)](https://docs.livingdocs.io/evaluation-guide/intro#summary-of-a-doc-include)
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3768)
