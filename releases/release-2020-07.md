@@ -83,6 +83,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-07
 
 ### Livingdocs Editor Patches
+- [v57.5.62](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.62): fix(iframes): pasting iframes with the addResponsiveContainer: false config works reliably again
 - [v57.5.61](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.61): fix(trackjs): add empty string instead of undefined
 
 the token is not written when the userId is set to undefined
