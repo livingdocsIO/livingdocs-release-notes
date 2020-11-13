@@ -67,6 +67,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-10
 
 ### Livingdocs Editor Patches
+- [v57.18.25](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.25): fix: defaultSearchEntityLabel remove the s
 - [v57.18.24](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.24): fix(time-range-filter): use correct key for 'Past week'
 - [v57.18.23](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.23): fix(embeds): do not add padding bottom unless it's a responsive container
 - [v57.18.22](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.22): fix(public-api): add documentation for document lists
