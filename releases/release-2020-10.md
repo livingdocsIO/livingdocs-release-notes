@@ -43,6 +43,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-10
 
 ### Livingdocs Server Patches
+- [v104.1.13](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v104.1.13): refactor: async/await with callbackify
 - [v104.1.12](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v104.1.12): test(public-api): adapt fixtures
 - [v104.1.11](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v104.1.11): fix(routing): use slug in :slug pattern
 - [v104.1.10](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v104.1.10): fix(import): improve error logging
