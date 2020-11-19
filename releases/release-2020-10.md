@@ -68,6 +68,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-10
 
 ### Livingdocs Editor Patches
+- [v57.18.27](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.27): fix: use given color and add different padding
 - [v57.18.26](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.26): fix: conflict highlight label height to set on overlay object
 - [v57.18.25](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.25): fix: defaultSearchEntityLabel remove the s
 - [v57.18.24](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.24): fix(time-range-filter): use correct key for 'Past week'
