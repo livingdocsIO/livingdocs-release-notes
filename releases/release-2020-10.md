@@ -69,6 +69,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-10
 
 ### Livingdocs Editor Patches
+- [v57.18.29](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.29): chore(twitch): make chat optional
 - [v57.18.28](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.28): fix(counter): only exclude from total count
 - [v57.18.27](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.27): fix: use given color and add different padding
 - [v57.18.26](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.26): fix: conflict highlight label height to set on overlay object
