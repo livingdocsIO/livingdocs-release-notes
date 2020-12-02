@@ -71,6 +71,9 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-10
 
 ### Livingdocs Editor Patches
+- [v57.18.30](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.30): fix(admin): Cap the users list to 500 entries until we have the pagination
+
+Users are still searchable because we load all users into the search object
 - [v57.18.29](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.29): chore(twitch): make chat optional
 - [v57.18.28](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.28): fix(counter): only exclude from total count
 - [v57.18.27](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.27): fix: use given color and add different padding
