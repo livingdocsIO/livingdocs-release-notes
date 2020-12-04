@@ -71,6 +71,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-10
 
 ### Livingdocs Editor Patches
+- [v57.18.32](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.32): fix: correctly indicate total users
 - [v57.18.31](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.31): fix(embeds): Avoid transforming free-html content
 - [v57.18.30](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.30): fix(admin): Cap the users list to 500 entries until we have the pagination
 
