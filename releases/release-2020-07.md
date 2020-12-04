@@ -83,6 +83,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-07
 
 ### Livingdocs Editor Patches
+- [v57.5.64](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.64): fix(embeds): Avoid transforming free-html content
 - [v57.5.63](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.63): fix(embeds): do not add padding bottom unless it's a responsive container
 - [v57.5.62](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.62): fix(iframes): pasting iframes with the addResponsiveContainer: false config works reliably again
 - [v57.5.61](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.5.61): fix(trackjs): add empty string instead of undefined
