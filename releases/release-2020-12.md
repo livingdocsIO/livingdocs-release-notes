@@ -1,4 +1,3 @@
-
 TODO
 - server until 114.0.0
 - editor until 57.33.1
@@ -48,6 +47,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-12
 
 ### Livingdocs Server Patches
+- [v114.0.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.4): fix: update framework version to release-2020-12
 - [v??.?.?](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v??.?.?): text
 
 
