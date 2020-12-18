@@ -66,6 +66,10 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-12
 
 ### Livingdocs Editor Patches
+- [v57.33.7](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.7): fix(expired image): Rendering fixed
+
+- Fixed visibility of inline add button when overlapping with expired image (basically inline add button is now in front of all other area components)
+- Fixed text rendering in expired image badge
 - [v57.33.6](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.6): fix: update framework to release-2020-12
 - [v??.?.?](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v??.?.?): text
 
