@@ -1,4 +1,3 @@
-
 TODO
 - server until 114.0.0
 - editor until 57.33.1
@@ -46,6 +45,9 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-12
 
 ### Livingdocs Server Patches
+- [v114.0.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.6): fix(indexing): Make the redis prefix optional
+- [v114.0.5](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.5): fix: handle auth errors in case of a malformed JWT
+- [v114.0.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.4): fix: update framework version to release-2020-12
 - [v??.?.?](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v??.?.?): text
 
 
@@ -62,6 +64,11 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-12
 
 ### Livingdocs Editor Patches
+- [v57.33.7](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.7): fix(expired image): Rendering fixed
+
+- Fixed visibility of inline add button when overlapping with expired image (basically inline add button is now in front of all other area components)
+- Fixed text rendering in expired image badge
+- [v57.33.6](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.6): fix: update framework to release-2020-12
 - [v??.?.?](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v??.?.?): text
 
 
