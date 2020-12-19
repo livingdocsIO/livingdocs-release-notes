@@ -1,7 +1,3 @@
-TODO
-- server until 114.0.0
-- editor until 57.33.1
-
 **Attention:** If you skipped one or more releases, please also check the release-notes of the skipped ones.
 
 # Table of content
@@ -11,6 +7,7 @@ TODO
 - [Highlights](#highlights)
 - [Breaking Changes](#breaking-changes-fire)
 - [APIs](#apis-gift)
+- [Internal Changes](#internal-changes)
 - [Other Changes](#other-changes)
 
 # Newsletter
@@ -46,10 +43,6 @@ How to require the server in your package.json:
 
 ### Livingdocs Server Patches
 - [v114.0.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.6): fix(indexing): Make the redis prefix optional
-- [v114.0.5](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.5): fix: handle auth errors in case of a malformed JWT
-- [v114.0.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.4): fix: update framework version to release-2020-12
-- [v??.?.?](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v??.?.?): text
-
 
 
 ## Livingdocs Editor
@@ -64,15 +57,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-12
 
 ### Livingdocs Editor Patches
-- [v57.33.7](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.7): fix(expired image): Rendering fixed
-
-- Fixed visibility of inline add button when overlapping with expired image (basically inline add button is now in front of all other area components)
-- Fixed text rendering in expired image badge
-- [v57.33.6](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.6): fix: update framework to release-2020-12
-- [v??.?.?](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v??.?.?): text
-
-
-
+- [v57.33.7](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.7): fix visibility of inline add button
 
 
 # Highlights
@@ -115,7 +100,7 @@ References:
 
 ## Custom Indexes / Queue Base Work :tada:
 
-### Base Work
+### Queue Base Work
 To support all kind of features which need (job-)queues (now/future), we did some base work. These are the most important changes:
 - Get rid of [bullmq](https://github.com/taskforcesh/bullmq)
 - Introduce [Redis streams](https://github.com/livingdocsIO/livingdocs-server/pull/3224) for messaging (more control/reliability/transparency)
@@ -311,27 +296,23 @@ References: [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4
 
 # APIs :gift:
 
-TODO: Ralph - overhaul API descriptions
+## Public API
 
-## Public API - Added Import Endpoint for MediaLibrary :gift:
+For all endpoints documentation, look into your editor's public API doc - 'https://your-editor.com/public-api'.
 
-The public API contains a new endpoint for importing a `MediaLibrary`.
+#### Added Endpoint for a MediaLibrary Import :gift:
 
-New endpoint:
-- `POST /api/v1/import/mediaLibrary`
+:gift: `POST /api/v1/import/mediaLibrary`
 
 References:
-  * Documentation - 'https://your-editor.com/public-api'
+
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3895)
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3152)
 
 
-## Public API - Added MediaLibrary Endpoint :gift:
+#### Added Endpoint for a MediaLibrary Metadata Update :gift:
 
-The public API contains a new endpoint for updating metadata of a `MediaLibrary` entry.
-
-New endpoint:
-- `PATCH /api/v1/mediaLibrary/:id`
+:gift: `PATCH /api/v1/mediaLibrary/:id`
 
 References:
   * Documentation - 'https://your-editor.com/public-api'
@@ -339,13 +320,10 @@ References:
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3267)
 
 
-## Public API - Added Document List Endpoints :gift:
+#### Added Endpoints for Document Lists :gift:
 
-The public API contains new endpoints for document lists.
-
-New endpoints:
-- `GET /api/v1/document-lists`  Search endpoint for document lists
-- `GET /api/v1/document-lists/:id` Get a document list by :id
+- :gift: `GET /api/v1/document-lists`  Search endpoint for document lists
+- :gift: `GET /api/v1/document-lists/:id` Get a document list by :id
 
 References:
   * Documentation - 'https://your-editor.com/public-api'
@@ -353,10 +331,9 @@ References:
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3226)
 
 
-## Public API - Added Import Endpoint for Videos :gift:
+#### Added Endpoint for a Video Import :gift:
 
-New endpoints:
-- `POST api/v1/import/videos` Import videos in Livingdocs
+:gift: `POST api/v1/import/videos`
 
 References:
   * Documentation - 'https://your-editor.com/public-api'
@@ -366,25 +343,36 @@ References:
 
 
 
+## Server Events API
 
-## Public API - Beta Endpoints for publications :gift:
+We added new events to the sever events API
+- :gift: `mediaLibraryEntry.create`
+- :gift: `mediaLibraryEntry.update`
+- :gift: `mediaLibraryEntry.archive`
 
-We added a new base endpoint ...`/api/beta` for...
+References:
+  * [Documentation](https://github.com/livingdocsIO/livingdocs/pull/345)
+  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3255)
+
+
+
+
+# Internal Changes
+
+## Beta Endpoints for Publications :gift:
+
+We added a new base endpoint `/api/beta/`. This allows us to expose things on the public API we are not
+sure enough yet, to introduce it on the `v1` endpoint that we can never break.
+
+The first 2 introduced beta endpoints are already existing and have the same format on `v1`, but extend the response
+with `references`. This might break in the future.
 
 New endpoints:
-- `GET /api/beta/documents/:documentId/latestPublication`
-- `GET /api/beta/documents/latestPublications`
+- :gift: `GET /api/beta/documents/:documentId/latestPublication`
+- :gift: `GET /api/beta/documents/latestPublications`
 
 References:
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3254)
-
-
-
-## Server Events API - Added mediaLibrary Events :gift:
-
-
-* v111.2.0 feat(media library): emit events mediaLibraryEntry.create, .update, .archive [livingdocs-server #3255](https://github.com/livingdocsIO/livingdocs-server/pull/3255) :gift:
-* doc: https://github.com/livingdocsIO/livingdocs/pull/345
 
 
 # Other Changes
@@ -442,7 +430,7 @@ References:
   * Correctly indicate total users [livingdocs-editor #4002](https://github.com/livingdocsIO/livingdocs-editor/pull/4002) :beetle:
   * Fix Add Member Screen for users that are already in a group [livingdocs-editor #4004](https://github.com/livingdocsIO/livingdocs-editor/pull/4004) :beetle:
   * Display error message during user create on admin screen [livingdocs-editor #4007](https://github.com/livingdocsIO/livingdocs-editor/pull/4007) :beetle:
-* Directives:
+* Directives
   * Don't show UI elements in non-interactive iframe view [livingdocs-editor #4008](https://github.com/livingdocsIO/livingdocs-editor/pull/4008) :beetle:
   * Set clean data from paramsSchema form instead of reactive vue objects to the include directive [livingdocs-editor #4018](https://github.com/livingdocsIO/livingdocs-editor/pull/4018) :beetle:
 * Fix focus reset and error log in embedded teaser [livingdocs-editor #4028](https://github.com/livingdocsIO/livingdocs-editor/pull/4028) :beetle:
@@ -450,9 +438,11 @@ References:
 * Imatrics: Fix tag slugging [livingdocs-server #3188](https://github.com/livingdocsIO/livingdocs-server/pull/3188) :beetle:
 * Includes: Allow `ui.label` for paramsSchema entries [livingdocs-server #3239](https://github.com/livingdocsIO/livingdocs-server/pull/3239) :beetle:
 
-  ---
-  **Icon Legend**
-  * Breaking changes: :fire:
-  * Feature: :gift:
-  * Bugfix: :beetle:
-  * Chore: :wrench:
+---
+
+**Icon Legend**
+
+* Breaking changes: :fire:
+* Feature: :gift:
+* Bugfix: :beetle:
+* Chore: :wrench:
