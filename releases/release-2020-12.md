@@ -42,6 +42,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-12
 
 ### Livingdocs Server Patches
+- [v114.0.7](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.7): fix: remove videoLibrary menu entry from example server
 - [v114.0.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.6): fix(indexing): Make the redis prefix optional
 
 
