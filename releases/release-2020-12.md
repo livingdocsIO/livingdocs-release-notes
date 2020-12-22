@@ -58,6 +58,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-12
 
 ### Livingdocs Editor Patches
+- [v57.33.9](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.9): fix(inline-links): allow localhost in dev
 - [v57.33.8](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.8): fix(deliveries): remove path and routingPath handling from the internal document link feature since it's not reliable
 - [v57.33.7](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.7): fix visibility of inline add button
 
