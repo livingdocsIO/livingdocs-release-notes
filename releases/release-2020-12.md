@@ -42,6 +42,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-12
 
 ### Livingdocs Server Patches
+- [v114.0.10](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.10): fix(factories): remove uuid.v1
 - [v114.0.9](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.9): chore: Only execute one http request when deleting configured indexes
 - [v114.0.8](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.8): fix(import): add trx to resolveHandles
 - [v114.0.7](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.7): fix: remove videoLibrary menu entry from example server
