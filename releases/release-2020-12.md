@@ -42,6 +42,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-12
 
 ### Livingdocs Server Patches
+- [v114.0.11](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.11): fix(knex): update to 0.21.14
 - [v114.0.10](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.10): fix(factories): remove uuid.v1
 - [v114.0.9](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.9): chore: Only execute one http request when deleting configured indexes
 - [v114.0.8](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.8): fix(import): add trx to resolveHandles
