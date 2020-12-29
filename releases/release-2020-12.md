@@ -62,6 +62,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-12
 
 ### Livingdocs Editor Patches
+- [v57.33.12](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.12): fix: improve image upload layout
 - [v57.33.11](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.11): fix(dashboard): Show create buttons to valid users
 - [v57.33.10](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.10): chore: unskip character counter cypress test
 - [v57.33.9](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.9): fix(inline-links): allow localhost in dev
