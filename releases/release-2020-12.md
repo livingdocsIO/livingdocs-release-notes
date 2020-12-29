@@ -298,6 +298,21 @@ References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3
 
 References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3187)
 
+## Security - User access tokens require valid cookies 
+
+- 🔥 Cypress helpers need some adaptions to correctly support cookies.
+
+Our core implementation can serve as reference for a cypress login helper: https://github.com/livingdocsIO/livingdocs-editor/blob/master/cypress/support/liLogin.js/#L69
+
+- 🔥 All requests against the server using an user access token require a valid session and the cookies that belong to it.
+
+You may need to allow credentials or forwarding cookies if you have been working with User tokens. _(API Tokens should still work exactly as before!)_
+
+Example an `axios` instance using the withCredentials flag
+```
+const axios = require('axios').create({..., withCredentials: true})
+```
+
 ## Editor CSS Class Renamings :fire:
 
 :fire: If you've done CSS modifications based on the original upstream classes in the editor please look into this PR. We did a lot of small refactorings/renamings.
