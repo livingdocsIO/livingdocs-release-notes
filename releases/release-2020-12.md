@@ -62,6 +62,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-12
 
 ### Livingdocs Editor Patches
+- [v57.33.14](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.14): fix: bump livingdocs framework
 - [v57.33.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.13): fix(metadata): fix iMatrics inappropriate toggle
 - [v57.33.12](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.12): fix: improve image upload layout
 - [v57.33.11](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.11): fix(dashboard): Show create buttons to valid users
