@@ -42,6 +42,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-12
 
 ### Livingdocs Server Patches
+- [v114.0.14](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.14): chore(indexing): Pass the bulk method to the custom index factory
 - [v114.0.13](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.13): fix: correctly redirect on user sign up
 - [v114.0.12](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.12): fix: bump livingdocs framework
 - [v114.0.11](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.11): fix(knex): update to 0.21.14
