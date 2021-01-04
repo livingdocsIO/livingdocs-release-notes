@@ -66,6 +66,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-12
 
 ### Livingdocs Editor Patches
+- [v57.33.16](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.16): fix(tasks-panel): Align task panel in publish page
 - [v57.33.15](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.15): fix(properties panel): apply correct spacing for include UI components in properties panel
 - [v57.33.14](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.14): fix: bump livingdocs framework
 - [v57.33.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.13): fix(metadata): fix iMatrics inappropriate toggle
