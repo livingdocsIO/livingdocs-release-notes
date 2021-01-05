@@ -42,6 +42,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-12
 
 ### Livingdocs Server Patches
+- [v114.0.18](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.18): fix(envoy): Fix the envoy support for cookies as they only serve the original url, not the prefix
 - [v114.0.17](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.17): fix(video-upload-btn): remove backwards-compatibility-transformations for video
 - [v114.0.16](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.16): fix(authentication): Expose the authUtils.setCookies method on authApi.setCookies
 - [v114.0.15](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.15): fix(public-api): fix breaking change in GET design
