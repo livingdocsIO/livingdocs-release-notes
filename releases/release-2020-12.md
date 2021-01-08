@@ -71,6 +71,11 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-12
 
 ### Livingdocs Editor Patches
+- [v57.33.18](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.18): fix: Various viewport-units-buggyfill improvements
+
+- Handle styles without ownerNode in buggyfill
+- Reset buggyfill when replacing viewport
+- Append buggyfill CSS to body for specicifity
 - [v57.33.17](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.17): fix(srcissors): update to 2.0.2
 - [v57.33.16](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.16): fix(tasks-panel): Align task panel in publish page
 - [v57.33.15](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.15): fix(properties panel): apply correct spacing for include UI components in properties panel
