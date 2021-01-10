@@ -71,6 +71,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-12
 
 ### Livingdocs Editor Patches
+- [v57.33.19](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.19): fix(properties panel): correctly show red alert line for pinned position
 - [v57.33.18](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.18): fix: Various viewport-units-buggyfill improvements
 
 - Handle styles without ownerNode in buggyfill
