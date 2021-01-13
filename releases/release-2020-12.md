@@ -5,6 +5,7 @@
 - [Webinar](#webinar)
 - [Patches](#repositories)
 - [Highlights](#highlights)
+- [Experimental](#experimental)
 - [Breaking Changes](#breaking-changes-fire)
 - [APIs](#apis-gift)
 - [Internal Changes](#internal-changes)
@@ -99,29 +100,12 @@ How to require the editor in your package.json:
 
 # Highlights
 
-## Mobile - Inline Editing :tada:
-
-With this release, we allow a user to inline add/edit components and its settings (e.g. images) in the editor with your mobile.
-
-References:
-  * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3900)
-
-
-## Editable Teasers :tada:
-
-Editable teasers are embedded editable livingdocs components. Technically editable teasers are doc-includes returning livingdocs components, which can be edited like any other component. For more information read the [documentation - TODO: Beni]() and look into the [example](https://github.com/livingdocsIO/livingdocs-server/pull/3235) on the example-server.
-
-References:
-  * [Editable Teasers Editor Integration](https://github.com/livingdocsIO/livingdocs-editor/pull/3961)
-  * [Base Work - Properties Panel Refactoring](https://github.com/livingdocsIO/livingdocs-editor/pull/3951)
-  * [Base Work - Resolve Includes](https://github.com/livingdocsIO/livingdocs-editor/pull/3949)
-  * [Example - Teaser Include on Example Server](https://github.com/livingdocsIO/livingdocs-server/pull/3235)
-  * [Documentation - TODO: Beni]()
-
 
 ## Internal Document Links :tada:
 
 When selecting text in the editor, the link tool in the editable toolbar allows to link to documents instead of URLs only. The input field is a combined input and detects if you want to search, or if you entered an URL.
+
+Attention: The delivery needs a strategy to redirect id route patterns in order for inline links to work in the delivery.
 
 ![image](https://user-images.githubusercontent.com/821875/95599481-6ea70380-0a51-11eb-9cb5-639db68b238c.png)
 
@@ -146,6 +130,9 @@ To support all kind of features which need (job-)queues (now/future), we did som
 Some customers want to have their customised Elasticsearch publication index to make customised search requests. The switch to Redis streams was necessary to
 make custom indexes possible. Why you could need a custom index and how to setup one, can be found [here](https://github.com/livingdocsIO/livingdocs/pull/328).
 
+**Migration Guide**
+If you already have implemented a custom index in your downstream and want to replace it with the Livingdocs custom index solution, please contact us to make a planning. The upgrade is not difficult, but every customer is different and therefore it needs individual planning.
+
 References:
   * [Base Work - Queue Refactoring - Part I](https://github.com/livingdocsIO/livingdocs-server/pull/3187)
   * [Base Work - Queue Refactoring - Part II](https://github.com/livingdocsIO/livingdocs-server/pull/3193)
@@ -157,23 +144,6 @@ References:
   * [Indexing Cleanup](https://github.com/livingdocsIO/livingdocs-server/pull/3284)
 
 
-## Videos :tada:
-
-We introduce videos in Livingdocs with these abilities:
-
-- upload videos and set metadata in media library
-- upload videos and set metadata in editor via drag + drop / upload button
-- import videos via public API
-- Add project configuration for mediaVideo MediaType
-- Add new directive `doc-video` in a livingdocs design
-
-References:
-  * [Editor PR with Screenshots](https://github.com/livingdocsIO/livingdocs-editor/pull/3957)
-  * [Editor PR with Improvements (drag+drop from filesystem)](https://github.com/livingdocsIO/livingdocs-editor/pull/3989)
-  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3234)
-  * [Documentation](https://github.com/livingdocsIO/livingdocs/pull/337)
-
-
 ## Cloudinary Storage Support :tada:
 
 Beside Amazon S3 we introduced Cloudinary as storage. Look into the [documentation - TODO: Marc]() for instructions.
@@ -182,17 +152,6 @@ References:
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4023)
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3270)
   * [Documentation - TODO: Marc]()
-
-
-## Migrations from Referenced to Embedded Design via UI :tada:
-
-More and more customers switch from referenced to embedded designs. To support them we added a flag in the operations screen
-of the editor to migrate all documents from a reference to an embedded design.
-
-References:
-  * [Editor PR with Screenots and Explanation](https://github.com/livingdocsIO/livingdocs-editor/pull/3932)
-  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3208)
-  * [Documentation - TODO: Gabriel](https://github.com/livingdocsIO/livingdocs/pull/334)
 
 
 ## More Secure Authentication Workflow :tada:
@@ -214,12 +173,59 @@ References:
 
 ## Airship Integration for Push Notifications :tada:
 
-We integrated Airship for push notifications.
+We integrated [Airship](https://www.airship.com/) for push notifications.
 
 References:
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3975)
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3231)
   * [Documentation](https://github.com/livingdocsIO/livingdocs/pull/340)
+
+
+
+
+# Experimental
+
+## Mobile - Inline Editing :tada:
+
+With this release, we allow a user to inline add/edit components and its settings in the editor with your mobile. This is a MVP, but we will gradually improve the inline editing in the next few releases.
+
+References:
+  * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3900)
+
+
+## Editable Teasers :tada:
+
+Editable teasers are embedded editable livingdocs components. Technically editable teasers are doc-includes returning livingdocs components, which can be edited like any other component. For more information read the [documentation - TODO: Beni]() and look into the [example](https://github.com/livingdocsIO/livingdocs-server/pull/3235) on the example-server.
+
+Attention: Editable teasers do not work with the render pipeline v1 (which most of the customers are using at the moment). This should be fixed in an upcoming release.
+
+References:
+  * [Editable Teasers Editor Integration](https://github.com/livingdocsIO/livingdocs-editor/pull/3961)
+  * [Base Work - Properties Panel Refactoring](https://github.com/livingdocsIO/livingdocs-editor/pull/3951)
+  * [Base Work - Resolve Includes](https://github.com/livingdocsIO/livingdocs-editor/pull/3949)
+  * [Example - Teaser Include on Example Server](https://github.com/livingdocsIO/livingdocs-server/pull/3235)
+  * [Documentation - TODO: Beni]()
+
+
+## Videos :tada:
+
+We introduce videos in Livingdocs with these abilities:
+
+- upload videos and set metadata in media library
+- upload videos and set metadata in editor via drag + drop / upload button
+- import videos via public API
+- Add project configuration for mediaVideo MediaType
+- Add new directive `doc-video` in a livingdocs design
+
+In the upcoming releases we will bring in some improvements and make the video feature more stable.
+
+References:
+  * [Editor PR with Screenshots](https://github.com/livingdocsIO/livingdocs-editor/pull/3957)
+  * [Editor PR with Improvements (drag+drop from filesystem)](https://github.com/livingdocsIO/livingdocs-editor/pull/3989)
+  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3234)
+  * [Documentation](https://github.com/livingdocsIO/livingdocs/pull/337)
+
+
 
 
 
@@ -253,6 +259,56 @@ livingdocs-server migrate up
 TODO: Ralph - write a guide how to update to the newest version on a productive system (without downtime)
 
 References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3275)
+
+## Elasticsearch Indexes :fire:
+
+#### Server Configuration
+- 🔥 moved server config `search.articlePublicationIndexEnabled` to `elasticIndex.documentPublicationIndexEnabled`
+- 🔥 removed server config `search.articlePublicationIndex`. The publication index name is now auto generated: `${indexNamePrefix}-li-document-publications-index`
+
+#### CLI
+- 🔥 removed `livingdocs-server es-publication-delete-index` use `livingdocs-server elasticsearch-delete-index --handle=li-publications -y` instead
+- 🔥 removed `livingdocs-server es-publication-reindex` use `livingdocs-server elasticsearch-index --handle=li-publications -y` instead
+
+#### Environment Config
+
+We automatically create a publication index for the public API. Therefore you **must** define an `indexNamePrefix` for every environment. The definition of `indexNamePrefix` is free, but we suggest a pattern like `${your-company}-${environment}`.
+
+🔥  Define an `indexNamePrefix` for every environment
+
+```js
+elasticIndex: {
+
+  // every index name will be prefixed to prevent name clashes
+  // the index will be created with this pattern: `${indexNamePrefix}-${handle}-index`
+  indexNamePrefix: 'your-company-local',
+}
+```
+
+
+#### public API publications search
+
+🔥  When using the public API search endpoint (`/api/v1/publications/search`), then you have to reindex all publications, with the command `livingdocs-server elasticsearch-index --handle=li-publications -y`.
+
+When you start the new server version, the publication index is empty. To use the publication index in production for the public API as fast as possible, you have 2 options:
+
+- 1) Start a sidekick container with the new server version and make a full background index with `livingdocs-server elasticsearch-index --handle=li-publications -y`. As soon as it's done, you can start your casual servers with the new server version
+- 2) If you want to deploy/start your new server version without a preparation step, you can index the most recent publication with an additional parameter `--since`. For example `livingdocs-server elasticsearch-index --handle=li-publications --since 1m -y` does indexing all publications published within the last month. As soon as you're done with this indexing step, you can run another background without `--since` argument to index all publications.
+
+
+## SSO Logins :fire:
+
+With the improved [authentication workflow](https://github.com/livingdocsIO/livingdocs-server/pull/3225), we have some additional [breaking changes](https://github.com/livingdocsIO/livingdocs-planning/issues/4140) for SSO Logins. If the callback URL for SSO does not match the editorUrl, we set the auth cookies for a wrong domain leading to issues when logging in.
+
+**Migrating an existing SSO login**
+
+With cookies being set on a new URL, the SSO Logins need to be re-configured. Do the following:
+
+1. Make sure your `editor__public_host` env variable is set to the editor URL (e.g. `https://edit.livingdocs.io`)
+2. Change all callback URLs for your SSO provider to the pattern `https://{editorUrl}/proxy/auth/{provider}/callback`. For the livingdocs service this looked e.g. as follows: `auth__connections__github__config__callbackURL = https://edit.livingdocs.io/proxy/auth/github/callback`. (NOTE: depending on your traefik setup it might also require `proxy/api` instead of `/proxy`).
+3. In the settings for your social providers, allow the new callback URLs (for FB for example we had to allow the redirect URL `https://edit.livingdocs.io/proxy/auth/facebook/callback` in our Facebook app)
+
+
 
 ## Migration to Redis Streams :fire:
 
@@ -302,7 +358,7 @@ References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3
 
 ## DocumentRelationApi - Changed Params :fire:
 
-🔥 Changed params on `documentRelationApi.setDocumentEmbedRefrences` from `(documentVersion)` to `({documentVersion, trx})`
+🔥 Changed params on `documentRelationApi.setDocumentEmbedReferences` from `(documentVersion)` to `({documentVersion, trx})`
 
 NOTE: The new param `trx` is optional and only necessary if you want to call within a transactional context. If you do pass it, you are responsible to call `trx.commit` or `trx.rollback` when you're done.
 
@@ -324,7 +380,7 @@ References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3
 
 References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3187)
 
-## Security - User access tokens require valid cookies 
+## Security - User access tokens require valid cookies
 
 - 🔥 Cypress helpers need some adaptions to correctly support cookies.
 
@@ -453,6 +509,7 @@ References:
 * Login: Show login buttons for all auth providers [livingdocs-editor #3934](https://github.com/livingdocsIO/livingdocs-editor/pull/3934) :gift:
 * Dashboard: Scroll to last article [livingdocs-editor #4006](https://github.com/livingdocsIO/livingdocs-editor/pull/4006) :gift:
 * Operation Screen
+  * Support design bumps from referenced to embedded designs via UI [livingdocs-editor #3932](https://github.com/livingdocsIO/livingdocs-editor/pull/3932)
   * Migrate server operations screen to websockets [livingdocs-server #3192](https://github.com/livingdocsIO/livingdocs-server/pull/3192) :gift:
   * Improve import jobs log in editor [livingdocs-server #3202](https://github.com/livingdocsIO/livingdocs-server/pull/3202) :gift:
 * Allow to register icons in downstream [livingdocs-editor #3925](https://github.com/livingdocsIO/livingdocs-editor/pull/3925) :gift:
