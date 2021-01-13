@@ -42,6 +42,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-12
 
 ### Livingdocs Server Patches
+- [v114.0.22](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.22): test: fix failing imageUploadProxy test
 - [v114.0.21](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.21): chore: add error handling and fix linting issues
 - [v114.0.20](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.20): fix(document-relations): Fix the updates of document relations that didn't work when the CTE was executed in the wrong order
 - [v114.0.19](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.19): fix(document-relations): Fix the updates of document relations after a first insert
