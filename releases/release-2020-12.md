@@ -43,6 +43,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-12
 
 ### Livingdocs Server Patches
+- [v114.0.25](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.25): chore(express): Name our middlewares
 - [v114.0.24](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.24): chore(test): Pause the indexers before recreating the indexes as we have pending jobs
 - [v114.0.23](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.23): fix(indexing): Start the indexers after server initialization
 - [v114.0.22](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.22): test: fix failing imageUploadProxy test
