@@ -77,6 +77,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-12
 
 ### Livingdocs Editor Patches
+- [v57.33.24](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.24): fix: debounce-input directive so that it debounces the calls
 - [v57.33.23](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.23): fix(includes): correctly apply params from paramsSchema if additional uiComponents are configured for the include service
 - [v57.33.22](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.22): fix: tag search in metadata with imatrics calls
 - [v57.33.21](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.21): fix: update iframe height on every change of a component
