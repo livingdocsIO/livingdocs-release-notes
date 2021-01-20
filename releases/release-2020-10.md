@@ -75,6 +75,9 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-10
 
 ### Livingdocs Editor Patches
+- [v57.18.40](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.40): fix(push-notifications): Make routing optional
+
+Remove dependency on `routing` metadata.
 - [v57.18.39](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.39): fix: debounce-input directive so that it debounces the calls
 - [v57.18.38](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.38): fix: tag search in metadata with imatrics calls
 - [v57.18.37](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.37): fix: custom dashboards show the correct labels
