@@ -43,6 +43,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-10
 
 ### Livingdocs Server Patches
+- [v104.1.19](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v104.1.19): fix: do not require routing for push notifications
 - [v104.1.18](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v104.1.18): test: fix failing imageUploadProxy test
 - [v104.1.17](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v104.1.17): fix(print): Unescape `&amp;` in links before export
 
