@@ -77,6 +77,9 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-12
 
 ### Livingdocs Editor Patches
+- [v57.33.26](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.26): fix(push-notifications): Make routing optional
+
+Remove dependency on `routing` metadata.
 - [v57.33.25](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.25): chore: update framework
 - [v57.33.24](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.24): fix: debounce-input directive so that it debounces the calls
 - [v57.33.23](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.23): fix(includes): correctly apply params from paramsSchema if additional uiComponents are configured for the include service
