@@ -264,9 +264,10 @@ livingdocs-server migrate up
 
 ## Drop Support for Elasticsearch < 6.8.5 :fire:
 
-:fire: The support for Elasticsearch versions < 6.8.5 has been dropped. Please upate your Elasticsearch cluster.
+:fire: The support for Elasticsearch versions < 6.8.5 has been dropped. Please update your Elasticsearch cluster to Elasticsearch >= 6.8.5.
 
-TODO: Ralph - write a guide how to update to the newest version on a productive system (without downtime)
+**Important!** You have to do an Elasticsearch update to >=6.8.5 before installing the December release. How to to a rolling upgrade is documented [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/rolling-upgrades.html).
+
 
 References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3275)
 
@@ -293,6 +294,18 @@ elasticIndex: {
   // the index will be created with this pattern: `${indexNamePrefix}-${handle}-index`
   indexNamePrefix: 'your-company-local',
 }
+```
+
+#### Publication Index for public API
+
+🔥 Run a background index job for the publication index
+
+To support future updates, we did an internal update where we define Elasticsearch aliases pointing on an index. With this change, you need to re-index the publication index used for the public API search endpoint.
+
+After the deployment, please **immediately** run this cli task (the publication index will be empty after the deployment):
+
+```bash
+livingdocs-server elasticsearch-index --handle=li-publications -y
 ```
 
 
