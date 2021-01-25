@@ -79,6 +79,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-12
 
 ### Livingdocs Editor Patches
+- [v57.33.30](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.30): fix: jquery version to ~3.4.1
 - [v57.33.29](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.29): fix(documentModel): prevent js errors from undefined configs
 - [v57.33.28](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.28): fix: add vh growing infinite guard
 - [v57.33.27](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.27): chore(drag and drop): fix drop handler function name
