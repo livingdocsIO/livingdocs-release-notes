@@ -43,6 +43,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-12
 
 ### Livingdocs Server Patches
+- [v114.0.28](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.28): fix(grunt-user-create): task works again
 - [v114.0.27](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.27): fix: support openid-connect
 - [v114.0.26](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.26): fix: do not require routing for push notifications
 - [v114.0.25](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.25): chore(express): Name our middlewares
