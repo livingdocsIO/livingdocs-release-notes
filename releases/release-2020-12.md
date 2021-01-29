@@ -433,6 +433,9 @@ const axios = require('axios').create({..., withCredentials: true})
 
 References: [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4015)
 
+## CSS Stylesheets vh is not supported anymore :fire:
+Because of changes in the editor we need to replace the vh unit in the design assets. This is done automatically but the css assets in the design should support CORS when the files are on a different domain then your livingdocs editor. Otherwise we can't read the CSS Rules and it can lead to an unexpected behavior in the editor.
+If CORS can't be enabled on the css assets it should be replaced with a unit which does not directly base on the height of the viewport.
 
 # APIs :gift:
 
