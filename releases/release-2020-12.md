@@ -80,6 +80,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-12
 
 ### Livingdocs Editor Patches
+- [v57.33.33](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.33): fix: resolve includes after reset of main area
 - [v57.33.32](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.32): fix(link tool): don't throw if no link config given
 - [v57.33.31](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.31): fix: view of lists creation in the side-panel
 - [v57.33.30](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.30): fix: jquery version to ~3.4.1
