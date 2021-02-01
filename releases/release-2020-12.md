@@ -167,12 +167,11 @@ References:
 
 ## Cloudinary Storage Support :tada:
 
-Beside Amazon S3 we introduced Cloudinary as storage. Look into the [documentation - TODO: Marc]() for instructions.
+Beside Amazon S3 we introduced Cloudinary as storage. Look into the [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3270) for instructions.
 
 References:
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4023)
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3270)
-  * [Documentation - TODO: Marc]()
 
 
 ## More Secure Authentication Workflow :tada:
@@ -216,7 +215,7 @@ References:
 
 ## Editable Teasers :tada:
 
-Editable teasers are embedded editable livingdocs components. Technically editable teasers are doc-includes returning livingdocs components, which can be edited like any other component. For more information read the [documentation - TODO: Beni]() and look into the [example](https://github.com/livingdocsIO/livingdocs-server/pull/3235) on the example-server.
+Editable teasers are embedded editable livingdocs components. Technically editable teasers are doc-includes returning livingdocs components, which can be edited like any other component. For more information read the [documentation](https://github.com/livingdocsIO/livingdocs/pull/354) and look into the [example](https://github.com/livingdocsIO/livingdocs-server/pull/3235) on the example-server.
 
 Attention: Editable teasers do not work with the render pipeline v1 (which most of the customers are using at the moment). This should be fixed in an upcoming release.
 
@@ -225,7 +224,7 @@ References:
   * [Base Work - Properties Panel Refactoring](https://github.com/livingdocsIO/livingdocs-editor/pull/3951)
   * [Base Work - Resolve Includes](https://github.com/livingdocsIO/livingdocs-editor/pull/3949)
   * [Example - Teaser Include on Example Server](https://github.com/livingdocsIO/livingdocs-server/pull/3235)
-  * [Documentation - TODO: Beni]()
+  * [Documentation](https://github.com/livingdocsIO/livingdocs/pull/354)
 
 
 ## Videos :tada:
