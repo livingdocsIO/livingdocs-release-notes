@@ -81,6 +81,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-12
 
 ### Livingdocs Editor Patches
+- [v57.33.36](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.36): fix(project settings): make integration settings changes in the UI properly change the channelConfigDraft
 - [v57.33.35](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.35): fix(ww-assets): fix external origin display
 - [v57.33.34](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.34): fix(link tool): fix linking behavior for relative and anchor URLs
 - [v57.33.33](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.33): fix: resolve includes after reset of main area
