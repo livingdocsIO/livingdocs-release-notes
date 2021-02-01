@@ -44,29 +44,6 @@ How to require the server in your package.json:
 
 ### Livingdocs Server Patches
 - [v114.0.29](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.29): fix: correct expiration date for cookies and accessTokens
-- [v114.0.28](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.28): fix(grunt-user-create): task works again
-- [v114.0.27](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.27): fix: support openid-connect
-- [v114.0.26](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.26): fix: do not require routing for push notifications
-- [v114.0.25](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.25): chore(express): Name our middlewares
-- [v114.0.24](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.24): chore(test): Pause the indexers before recreating the indexes as we have pending jobs
-- [v114.0.23](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.23): fix(indexing): Start the indexers after server initialization
-- [v114.0.22](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.22): test: fix failing imageUploadProxy test
-- [v114.0.21](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.21): chore: add error handling and fix linting issues
-- [v114.0.20](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.20): fix(document-relations): Fix the updates of document relations that didn't work when the CTE was executed in the wrong order
-- [v114.0.19](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.19): fix(document-relations): Fix the updates of document relations after a first insert
-- [v114.0.18](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.18): fix(envoy): Fix the envoy support for cookies as they only serve the original url, not the prefix
-- [v114.0.17](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.17): fix(video-upload-btn): remove backwards-compatibility-transformations for video
-- [v114.0.16](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.16): fix(authentication): Expose the authUtils.setCookies method on authApi.setCookies
-- [v114.0.15](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.15): fix(public-api): fix breaking change in GET design
-- [v114.0.14](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.14): chore(indexing): Pass the bulk method to the custom index factory
-- [v114.0.13](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.13): fix: correctly redirect on user sign up
-- [v114.0.12](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.12): fix: bump livingdocs framework
-- [v114.0.11](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.11): fix(knex): update to 0.21.14
-- [v114.0.10](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.10): fix(factories): remove uuid.v1
-- [v114.0.9](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.9): chore: Only execute one http request when deleting configured indexes
-- [v114.0.8](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.8): fix(import): add trx to resolveHandles
-- [v114.0.7](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.7): fix: remove videoLibrary menu entry from example server
-- [v114.0.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.6): fix(indexing): Make the redis prefix optional
 
 
 ## Livingdocs Editor
@@ -81,42 +58,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-12
 
 ### Livingdocs Editor Patches
-- [v57.33.36](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.36): fix(project settings): make integration settings changes in the UI properly change the channelConfigDraft
-- [v57.33.35](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.35): fix(ww-assets): fix external origin display
-- [v57.33.34](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.34): fix(link tool): fix linking behavior for relative and anchor URLs
-- [v57.33.33](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.33): fix: resolve includes after reset of main area
-- [v57.33.32](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.32): fix(link tool): don't throw if no link config given
-- [v57.33.31](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.31): fix: view of lists creation in the side-panel
-- [v57.33.30](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.30): fix: jquery version to ~3.4.1
-- [v57.33.29](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.29): fix(documentModel): prevent js errors from undefined configs
-- [v57.33.28](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.28): fix: add vh growing infinite guard
-- [v57.33.27](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.27): chore(drag and drop): fix drop handler function name
-- [v57.33.26](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.26): fix(push-notifications): Make routing optional
-
-Remove dependency on `routing` metadata.
-- [v57.33.25](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.25): chore: update framework
-- [v57.33.24](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.24): fix: debounce-input directive so that it debounces the calls
-- [v57.33.23](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.23): fix(includes): correctly apply params from paramsSchema if additional uiComponents are configured for the include service
-- [v57.33.22](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.22): fix: tag search in metadata with imatrics calls
-- [v57.33.21](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.21): fix: update iframe height on every change of a component
-- [v57.33.20](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.20): fix(assets): Serve a 404 error if a non-existent woff2 file is requested
-- [v57.33.19](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.19): fix(properties panel): correctly show red alert line for pinned position
-- [v57.33.18](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.18): fix: Various viewport-units-buggyfill improvements
-
-- Handle styles without ownerNode in buggyfill
-- Reset buggyfill when replacing viewport
-- Append buggyfill CSS to body for specicifity
-- [v57.33.17](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.17): fix(srcissors): update to 2.0.2
-- [v57.33.16](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.16): fix(tasks-panel): Align task panel in publish page
-- [v57.33.15](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.15): fix(properties panel): apply correct spacing for include UI components in properties panel
-- [v57.33.14](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.14): fix: bump livingdocs framework
-- [v57.33.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.13): fix(metadata): fix iMatrics inappropriate toggle
-- [v57.33.12](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.12): fix: improve image upload layout
-- [v57.33.11](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.11): fix(dashboard): Show create buttons to valid users
-- [v57.33.10](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.10): chore: unskip character counter cypress test
-- [v57.33.9](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.9): fix(inline-links): allow localhost in dev
-- [v57.33.8](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.8): fix(deliveries): remove path and routingPath handling from the internal document link feature since it's not reliable
-- [v57.33.7](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.7): fix visibility of inline add button
+- [v57.33.36](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.36): fix: make integration settings changes in the UI properly change the channelConfigDraft
 
 
 # Highlights
