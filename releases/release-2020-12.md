@@ -260,7 +260,6 @@ After the deployment, please **immediately** run this cli task (the publication 
 livingdocs-server elasticsearch-index --handle=li-publications -y
 ```
 
-
 #### public API publications search
 
 🔥  When using the public API search endpoint (`/api/v1/publications/search`), then you have to reindex all publications, with the command `livingdocs-server elasticsearch-index --handle=li-publications -y`.
@@ -269,6 +268,66 @@ When you start the new server version, the publication index is empty. To use th
 
 - 1) Start a sidekick container with the new server version and make a full background index with `livingdocs-server elasticsearch-index --handle=li-publications -y`. As soon as it's done, you can start your casual servers with the new server version
 - 2) If you want to deploy/start your new server version without a preparation step, you can index the most recent publication with an additional parameter `--since`. For example `livingdocs-server elasticsearch-index --handle=li-publications --since 1m -y` does indexing all publications published within the last month. As soon as you're done with this indexing step, you can run another background without `--since` argument to index all publications.
+
+
+## Authentication
+With the improved [authentication workflow](https://github.com/livingdocsIO/livingdocs-server/pull/3225), we have some additional breaking changes.
+
+🔥 third party applications / e2e-tests may need some adaptions correctly support cookies (*Note, see changes for local development to test correctly)
+
+🔥 Local development on chrome now requires a SSL setup for authentication to work. Setting up [a certificate locally](https://github.com/livingdocsIO/livingdocs-editor/blob/master/config/cert.js) and proxying requests using the [editor environment](https://github.com/livingdocsIO/livingdocs-editor/blob/master/config/environments/local.js#L14) config is advised.
+```js
+// advised configs for local development
+module.exports= {
+  // https is not _required_ but there may be some complications such as cookies being filtered when trying to overwrite secure cookies or other behavior that's dependant on the browser vendor
+  https: require('../cert'),
+  api: {
+    // disabling the proxiedHost config (CORS-mode)
+    // will only work in production 
+    // or a server with a valid SSL setup
+    proxiedHost: 'http://localhost:9090'
+  }
+}
+```
+
+🔥 all requests need to allow sending credentials or forward cookies if requests are made with user/project tokens. (API Tokens should still work exactly as before!)
+
+🔥 (3rd-party) applications that use the /auth/local/login endpoint, need to support cookies. It should be as easy as forwarding the liClient cookie.
+
+🔥 For security reasons CORS is now disabled by default. We encourage a more secure approach where we forward a path on the editor domain to the server instance. For Example: ’https://edit.livingdocs.io/proxy/api/' should be forwarded to ‘https://server.livingdocs.io’
+- This guards against CSRF attacks
+- Latency improvements as requests are halved (no more OPTIONS requests)
+- Cookies are more secure due to the possibility of using the sameSite: 'strict' option.
+
+#### API Changes
+🔥 removed authApi.getLoginHistory
+
+🔥 removed authApi.revokeAccessTokensOfUser
+
+🔥 removed authApi.reissueAccessToken
+
+🔥 removed authApi.revokeAccessToken
+
+🔥 changed authApi.createAccessTokenForTests -> authApi._createAccessTokenForTests | now returns token instead of {token}
+
+🔥 move authApi.authorizationMiddleware out of the authApi and do not expose it anymore
+
+🔥 Removed authUtils. authenticationSuccess (The promise version is still the same)
+
+Routes
+🔥 /authenticate has moved to /auth/local/login
+
+🔥 /users/me has moved to /auth/me
+
+🔥 removed POST /authenticate/refresh
+
+🔥 removed POST /token/revoke
+
+🔥 removed POST /token/reissue -> access tokens are reissued on /auth/me now
+
+🔥 removed POST /token/revoke-tokens
+
+🔥 changed GET /users/:id does not return a login history anymore
 
 
 ## SSO Logins :fire:
