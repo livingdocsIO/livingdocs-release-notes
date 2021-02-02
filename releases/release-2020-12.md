@@ -419,6 +419,8 @@ References:
 
 #### Added Endpoint for a Video Import :gift:
 
+Attention! Even when we've added the video endpoint already, sthe video feature is still experimental.
+
 :gift: `POST api/v1/import/videos`
 
 References:
