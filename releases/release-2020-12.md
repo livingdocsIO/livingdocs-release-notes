@@ -273,9 +273,9 @@ When you start the new server version, the publication index is empty. To use th
 ## Authentication
 With the improved [authentication workflow](https://github.com/livingdocsIO/livingdocs-server/pull/3225), we have some additional breaking changes.
 
-🔥 third party applications / e2e-tests may need some adaptions correctly support cookies (*Note, see changes for local development to test correctly)
+🔥 third party applications / e2e-tests may need some adaptions correctly supporting cookies
 
-🔥 Local development on chrome now requires a SSL setup for authentication to work. Setting up [a certificate locally](https://github.com/livingdocsIO/livingdocs-editor/blob/master/config/cert.js) and proxying requests using the [editor environment](https://github.com/livingdocsIO/livingdocs-editor/blob/master/config/environments/local.js#L14) config is advised.
+🔥 Local development on Chrome now requires a SSL setup for authentication to work. Setting up [a certificate locally](https://github.com/livingdocsIO/livingdocs-editor/blob/master/config/cert.js) and proxying requests using the [editor environment](https://github.com/livingdocsIO/livingdocs-editor/blob/master/config/environments/local.js#L14) config is advised.
 ```js
 // advised configs for local development
 module.exports= {
