@@ -77,6 +77,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-10
 
 ### Livingdocs Editor Patches
+- [v57.18.41](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.41): fix: add new npm read token
 - [v57.18.40](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.18.40): fix(push-notifications): Make routing optional
 
 Remove dependency on `routing` metadata.
