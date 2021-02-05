@@ -60,6 +60,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-12
 
 ### Livingdocs Editor Patches
+- [v57.33.38](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.38): fix(media library): make the context menu edit button work again
 - [v57.33.37](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.37): fix: add new npm read token
 - [v57.33.36](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.36): fix: make integration settings changes in the UI properly change the channelConfigDraft
 
