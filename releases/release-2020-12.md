@@ -13,7 +13,6 @@
 
 # Newsletter
 
-* Newsletter: **TODO**
 * Subscribe here: https://confirmsubscription.com/h/j/61B064416E79453D
 
 
