@@ -49,6 +49,54 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-12
 
 ### Livingdocs Server Patches
+- [v114.0.32](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.32): fix(print): Handle image components
+
+Data from `image` components (such as the origin) can now be extracted and exposed in the export XML.
+
+An `image` component:
+```
+{
+  "identifier": "nzz-standard.image",
+  "id": "doc-1eph26b470",
+  "content": {
+    "image": {
+      "originalUrl": "https://nzz-img-dev.s3.amazonaws.com/2020/12/14/8db79a6c-0958-4236-9f57-2c36de0945cf.jpeg",
+      "url": "https://img-test.nzz.ch/O=75/https://nzz-img-dev.s3.amazonaws.com/2020/12/14/8db79a6c-0958-4236-9f57-2c36de0945cf.jpeg",
+      "width": 2667,
+      "height": 4000,
+      "mimeType": "image/jpeg",
+      "imageService": "resrc.it",
+      "origins": [
+        {
+          "name": "hugo",
+          "identifier": "picture-18029184"
+        }
+      ]
+    },
+    "caption": "Logs in pallets at a warehouse used by LogsNearMe.co.uk, in Shepton Mallet, U.K., on Wednesday, Dec. 9, 2020. Jonathan Baylis, founder of LogsNearMe.co.uk, had a hunch that firewood was a Covid-proof business. Photographer: Luke MacGregor/Bloomberg",
+    "author": "Luke Macgregor / Bloomberg"
+  }
+}
+```
+will be exported as:
+```
+        <article>
+            <content type="title">Kopie von foobar</content>
+            <content type="author">Mister Developer</content>
+            <content type="image-data”>
+                <content type="originalUrl">https://nzz-img-dev.s3.amazonaws.com/2020/12/14/8db79a6c-0958-4236-9f57-2c36de0945cf.jpeg</content>
+                <content type="url">https://img-test.nzz.ch/O=75/https://nzz-img-dev.s3.amazonaws.com/2020/12/14/8db79a6c-0958-4236-9f57-2c36de0945cf.jpeg</content>
+                <content type="width">2667</content>
+                <content type="height">4000</content>
+                <content type="mimeType">image/jpeg</content>
+                <content type="imageService">resrc.it</content>
+                <content type="origins">hugo:picture-18029184</content>
+            </content>
+            <content type=“image-caption">Logs in pallets at a warehouse used by LogsNearMe.co.uk, in Shepton Mallet, U.K., on Wednesday, Dec. 9, 2020. Jonathan Baylis, founder of LogsNearMe.co.uk, had a hunch that firewood was a Covid-proof business. Photographer: Luke MacGregor/Bloomberg</content>
+            <content type=“image-author">Luke Macgregor / Bloomberg</content>
+            <content type="text">text</content>
+        </article>
+```
 - [v114.0.31](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.31): fix(open-id-connect): correctly create users
 - [v114.0.30](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.30): fix: add new npm read token
 - [v114.0.29](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.29): fix: correct expiration date for cookies and accessTokens
