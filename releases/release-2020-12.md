@@ -20,7 +20,7 @@
 
 #### Features
 
-* Recording: [here](https://us02web.zoom.us/rec/share/vLM8TMOrDEn1eSdhGwSyfV4aOSVdJOtxNtB5NgFYaw0TWL6g51-mdXknJsQJbS3G.GeiW8RR_sSjAJ6li)
+* Recording: [here](https://us02web.zoom.us/rec/share/vLM8TMOrDEn1eSdhGwSyfV4aOSVdJOtxNtB5NgFYaw0TWL6g51-mdXknJsQJbS3G.GeiW8RR_sSjAJ6li) (code: 6Tvm^5U8)
 * Documentation: [here](https://docs.google.com/document/d/1fqw2E4OTW-Dcv55xXyGi4isH1OfW_6ZTeInf7U4LBLY/edit)
 
 #### Developers
