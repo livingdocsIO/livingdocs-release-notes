@@ -114,6 +114,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-12
 
 ### Livingdocs Editor Patches
+- [v57.33.41](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.41): fix(server): Fix support for redirecting based on x-forwarded-proto header
 - [v57.33.40](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.40): fix(link tool): show linked URL when valid but not accessible via iframely link checker
 - [v57.33.39](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.39): fix(media library): fix download when storage bucket is private
 - [v57.33.38](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.38): fix(media library): make the context menu edit button work again
