@@ -116,6 +116,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-12
 
 ### Livingdocs Editor Patches
+- [v57.33.44](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.44): fix(includes): Add interaction blocker config
 - [v57.33.43](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.43): chore: adapt cypress tests
 - [v57.33.42](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.42): fix: correctly navigate back from a custom dashboard
 - [v57.33.41](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.41): fix(server): Fix support for redirecting based on x-forwarded-proto header
