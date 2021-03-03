@@ -43,6 +43,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-10
 
 ### Livingdocs Server Patches
+- [v104.1.22](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v104.1.22): fix(airship): enable push notifications for web channel as well
 - [v104.1.21](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v104.1.21): fix(print): Handle image components
 
 Data from `image` components (such as the origin) can now be extracted and exposed in the export XML.
