@@ -118,6 +118,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-12
 
 ### Livingdocs Editor Patches
+- [v57.33.47](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.47): fix(split-pane): Minimize sidebar on conflict
 - [v57.33.46](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.46): chore: Fix the livingdocs-integration.json for the release-2020-12 in bluewin
 - [v57.33.45](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.45): fix(ci): Use our docker images instead of the official docker image
 - [v57.33.44](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.44): fix(includes): Add interaction blocker config
