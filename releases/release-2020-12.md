@@ -49,6 +49,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-12
 
 ### Livingdocs Server Patches
+- [v114.0.36](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.36): fix(airship): enable push notifications for web channel as well
 - [v114.0.35](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.35): fix(includes): Add interaction blocker config
 - [v114.0.34](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.34): fix(websocket): Rewrite the url for websockets as we do it for requests if /proxy/api is present
 - [v114.0.33](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.33): fix: add data field 'classifications' for hugo_article
