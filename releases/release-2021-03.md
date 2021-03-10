@@ -1,3 +1,10 @@
+- TODO@ralph: go through the whole release again
+- TODO@ralph: add a screenshot for every highlight if possible
+- TODO@ralph: add a description for every highlight
+- TODO@ralph: fix order of highlights
+- TODO@ralph: fix order of breaking changes
+- TODO@ralph: fix order of other changes
+
 **Attention:** If you skipped one or more releases, please also check the release-notes of the skipped ones.
 
 # Table of content
@@ -130,9 +137,18 @@ References:
 
 
 
-## Notification Center
+## Upload Center
 
-TODO@okan / TODO@beni - add doc for Notification Center
+When the user uploads images or videos, a new Upload Center is visible in the bottom right corner of the screen showing the overall upload status and an error indication.
+
+<img width="377" alt="Screenshot 2021-03-08 at 21 26 16" src="https://user-images.githubusercontent.com/821875/110377665-f884e800-8054-11eb-9891-3f06aafc45ae.png">
+
+References: [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4145)
+
+
+## Notifications
+
+TODO@okan - add general doc for Notifications
 TODO@okan - add doc for document subscriptions - https://github.com/livingdocsIO/livingdocs-server/pull/3344
 
 References:
@@ -162,17 +178,7 @@ References:
 
 ## Tracing :tada:
 
-...add a description TODO@alex...
-
-References:
-  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3205)
-  * [Documentation](TODO@alex)
-
-
-
-## Tracing :tada:
-
-...add a description TODO@alex...
+TODO@alex - add description
 
 References:
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3205)
@@ -190,15 +196,6 @@ References:
   * [Documentation](https://github.com/livingdocsIO/livingdocs/pull/359)
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3385)
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4152)
-
-
-
-
-
-
-
-
-
 
 
 
@@ -628,6 +625,28 @@ References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3
 References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3389)
 
 
+### Drop Coffee Script Support :fire:
+
+- 🔥 Remove coffee-script support in the webpack setup in the editor. We've dropped coffee-script a few years ago, but still kept the webpack loader as not all projects were migrated. From now on we've completely removed support for it. Please upgrade your code base if you still use coffee-script.
+
+References: [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4164)
+
+
+### Remove Deprecated Editor Env Config 'dashboards' :fire:
+
+- :fire: remove [deprecated](https://github.com/livingdocsIO/livingdocs-editor/pull/3663) editor config `dashboards`.
+
+```js
+// editor config - old
+module.exports = {dashboards: [{handle: 'kanban-proofreading'}]}
+
+// project config - new
+projectConfig.editorSettings.dashboards: [{handle: 'kanban-proofreading'}]`
+```
+
+References: [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4166)
+
+
 
 
 
@@ -756,13 +775,13 @@ colt().createConfigProject('project', {...})
 
 * Priority truck polish [livingdocs-editor #4091](https://github.com/livingdocsIO/livingdocs-editor/pull/4091) :gift:
 * Style Guide: Clean up the style guide [livingdocs-editor #4149](https://github.com/livingdocsIO/livingdocs-editor/pull/4149) :gift:
+* Improve dashboard footer [livingdocs-editor #4209](https://github.com/livingdocsIO/livingdocs-editor/pull/4209) :gift:
 
 
 ### Features
 
 * Tasks: Assign users to a task [livingdocs-editor #4214](https://github.com/livingdocsIO/livingdocs-editor/pull/4214) :gift:
 * Print: Move print to project config [livingdocs-server #3372](https://github.com/livingdocsIO/livingdocs-server/pull/3372) :gift:
-  * TODO@gabriel - add documentation to the doc repo
 
 ### Improvements
 
@@ -776,6 +795,7 @@ colt().createConfigProject('project', {...})
   * Allow multiple mediaTypes of same type, allow mediaType parameter for upload/import APIs [livingdocs-server #3406](https://github.com/livingdocsIO/livingdocs-server/pull/3406) :gift:
   * Hardening Media Library Import [livingdocs-server #3430](https://github.com/livingdocsIO/livingdocs-server/pull/3430) :gift:
   * Reimplement `video.asset.size` support for the stream-based upload [livingdocs-server #3439](https://github.com/livingdocsIO/livingdocs-server/pull/3439) :gift:
+* Media Library: Resolve dashboards in main navigation from mediaTypes config [livingdocs-editor #4180](https://github.com/livingdocsIO/livingdocs-editor/pull/4180) :gift:
 * Webhooks: Add media library webhooks | extend document.update webhook with metadata filter [livingdocs-server #3359](https://github.com/livingdocsIO/livingdocs-server/pull/3359) :gift:
 * Editor
   * Image cropping: Use downscaled image size for very large images [livingdocs-editor #4141](https://github.com/livingdocsIO/livingdocs-editor/pull/4141) :gift:
@@ -786,11 +806,14 @@ colt().createConfigProject('project', {...})
   * Support files with no file ending of mimeType image [livingdocs-server #3380](https://github.com/livingdocsIO/livingdocs-server/pull/3380) :gift:
 * Search
   * Add support for a `customFilters` object to pass through custom search parameters [livingdocs-editor #4172](https://github.com/livingdocsIO/livingdocs-editor/pull/4172) :gift: -> TODO@marc - add doc to business doc
+  * Properly Handle Pagination for a ResultList [livingdocs-editor #4153](https://github.com/livingdocsIO/livingdocs-editor/pull/4153) :gift:
 * Error handling: Add extended description to error declaration class [livingdocs-server #3214](https://github.com/livingdocsIO/livingdocs-server/pull/3214) :gift:
 * Administration
   * Extend the indexing UI screen to support all configured indexes [livingdocs-server #3409](https://github.com/livingdocsIO/livingdocs-server/pull/3409) :gift:
 * Add Support for Secure Imgix URLs [livingdocs-server #3410](https://github.com/livingdocsIO/livingdocs-server/pull/3410) :gift:
-* Includes: Add interaction blocker config option [livingdocs-server #3397](https://github.com/livingdocsIO/livingdocs-server/pull/3397) :gift:
+* Includes
+  * Add interaction blocker config option [livingdocs-server #3397](https://github.com/livingdocsIO/livingdocs-server/pull/3397) :gift:
+  * Add interaction blocker to project config to include services UI [livingdocs-editor #4205](https://github.com/livingdocsIO/livingdocs-editor/pull/4205) :gift:
 * Security: Revoke client if another user uses the same client id [livingdocs-server #3441](https://github.com/livingdocsIO/livingdocs-server/pull/3441) :gift:
 * Filter: allow document_types to be an array [livingdocs-server #3412](https://github.com/livingdocsIO/livingdocs-server/pull/3412) :gift:
 
@@ -804,100 +827,10 @@ colt().createConfigProject('project', {...})
 * Metadata: Correctly handle image URL's when picking from article [livingdocs-editor #4132](https://github.com/livingdocsIO/livingdocs-editor/pull/4132) :beetle:
 * Editor Link Tool: fix link validation / update link info / no reload on enter [livingdocs-editor #4142](https://github.com/livingdocsIO/livingdocs-editor/pull/4142) :beetle:
 * Comments: Fix comment highlight when paging through comment cards [livingdocs-editor #4147](https://github.com/livingdocsIO/livingdocs-editor/pull/4147) :beetle:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-EDITOR
-------------------------
-* v63.8.3 Fix group screen errors [release-2021-03]  [livingdocs-editor #4227](https://github.com/livingdocsIO/livingdocs-editor/pull/4227) :gift:
-* v63.8.3 fix(publish screen): don't log errors to console when MetadataValidationErrors are returned for publish request [release-2021-03]  [livingdocs-editor #4223](https://github.com/livingdocsIO/livingdocs-editor/pull/4223) :gift:
-* v63.8.2 Fix group screen errors [release-2021-03]  [livingdocs-editor #4227](https://github.com/livingdocsIO/livingdocs-editor/pull/4227) :gift:
-* v63.8.1 fix(comments): Show max thread count limit error [livingdocs-editor #4188](https://github.com/livingdocsIO/livingdocs-editor/pull/4188) :gift:
-
-* v63.7.1 fix: Check that imageDirectives is defined before accessing it [livingdocs-editor #4219](https://github.com/livingdocsIO/livingdocs-editor/pull/4219) :gift:
-* v63.7.0 Add unsubscribe url [livingdocs-editor #4218](https://github.com/livingdocsIO/livingdocs-editor/pull/4218) :gift:
-* v63.6.1 Add block editor interaction to Project Config > Include Services UI [livingdocs-editor #4205](https://github.com/livingdocsIO/livingdocs-editor/pull/4205) :gift:
-* v63.6.0 Upload Center [livingdocs-editor #4145](https://github.com/livingdocsIO/livingdocs-editor/pull/4145) :gift:
-* v63.5.4 Improvement External Sources [livingdocs-editor #4215](https://github.com/livingdocsIO/livingdocs-editor/pull/4215) :gift:
-
-* v63.5.2 Improve Dashboard Footer [livingdocs-editor #4209](https://github.com/livingdocsIO/livingdocs-editor/pull/4209) :gift:
-* v63.5.1 show notifications action card only when it is enabled [livingdocs-editor #4208](https://github.com/livingdocsIO/livingdocs-editor/pull/4208) :gift:
-* v63.4.1 Fix document.metadata.update support in the policies [livingdocs-editor #4206](https://github.com/livingdocsIO/livingdocs-editor/pull/4206) :gift:
-* v63.3.2 fix(conflict-bar): Position sidebar below collab & conflict bar [livingdocs-editor #4201](https://github.com/livingdocsIO/livingdocs-editor/pull/4201) :gift:
-* v63.3.1 Rename project routes  [livingdocs-editor #4183](https://github.com/livingdocsIO/livingdocs-editor/pull/4183) :gift:
-* v63.2.3 Fix project not found error [livingdocs-editor #4197](https://github.com/livingdocsIO/livingdocs-editor/pull/4197) :gift:
-* v63.2.2 fix: users should not get in redirect loops [livingdocs-editor #4194](https://github.com/livingdocsIO/livingdocs-editor/pull/4194) :gift:
-* v63.2.1 Fix the ci builds [livingdocs-editor #4195](https://github.com/livingdocsIO/livingdocs-editor/pull/4195) :gift:
-* v63.1.3 Fix media library [livingdocs-editor #4189](https://github.com/livingdocsIO/livingdocs-editor/pull/4189) :gift:
-* v63.1.1 fix: guard projects from having a undefined handle in the url [livingdocs-editor #4182](https://github.com/livingdocsIO/livingdocs-editor/pull/4182) :gift:
-* v63.1.0 Media Library Dashboards in Main Navigation from mediaTypes config [livingdocs-editor #4180](https://github.com/livingdocsIO/livingdocs-editor/pull/4180) :gift:
-* v63.0.0 Remove deprecated editor env config 'dashboards' [livingdocs-editor #4166](https://github.com/livingdocsIO/livingdocs-editor/pull/4166) :gift:
-
-* v61.4.0 chore(includes): Add blockEditorInteraction to test [livingdocs-editor #4181](https://github.com/livingdocsIO/livingdocs-editor/pull/4181) :gift:
-* v61.3.4 fix(named crops): fix resetting to automatic crops after user change [livingdocs-editor #4179](https://github.com/livingdocsIO/livingdocs-editor/pull/4179) :gift:
-* v61.3.3 fix(metadata image): fix picking an image from media library [livingdocs-editor #4177](https://github.com/livingdocsIO/livingdocs-editor/pull/4177) :gift:
-* v61.3.2 Add Support for Secure Imgix URLs [livingdocs-editor #4176](https://github.com/livingdocsIO/livingdocs-editor/pull/4176) :gift:
-* v61.3.1 Fix Image Cropper on Mobile [livingdocs-editor #4175](https://github.com/livingdocsIO/livingdocs-editor/pull/4175) :gift:
-* v61.1.1 fix(references): Convert reference id to string [livingdocs-editor #4173](https://github.com/livingdocsIO/livingdocs-editor/pull/4173) :gift:
-* v61.0.4 Move some print config to project config [livingdocs-editor #4130](https://github.com/livingdocsIO/livingdocs-editor/pull/4130) :gift:
-* v61.0.3 Fix editor.workspace references [livingdocs-editor #4170](https://github.com/livingdocsIO/livingdocs-editor/pull/4170) :gift:
-* v61.0.2 Correctly go back from publish screen to articles/dashboards [livingdocs-editor #4168](https://github.com/livingdocsIO/livingdocs-editor/pull/4168) :gift:
-* v61.0.1 Upgrade axios and increase timeouts for upload [livingdocs-editor #4167](https://github.com/livingdocsIO/livingdocs-editor/pull/4167) :gift:
-* v61.0.0 Drop coffee-script support [livingdocs-editor #4164](https://github.com/livingdocsIO/livingdocs-editor/pull/4164) :gift:
-
-* v60.1.3 fix: update framework to 18.3.0 [livingdocs-editor #4162](https://github.com/livingdocsIO/livingdocs-editor/pull/4162) :gift:
-* v60.1.2 fix: correctly navigate back from a custom dashboard [livingdocs-editor #4158](https://github.com/livingdocsIO/livingdocs-editor/pull/4158) :gift:
-* v60.1.1 Fix x-forwarded-proto support [livingdocs-editor #4156](https://github.com/livingdocsIO/livingdocs-editor/pull/4156) :gift:
-* v60.1.0 Properly Handle Pagination for a ResultList [livingdocs-editor #4153](https://github.com/livingdocsIO/livingdocs-editor/pull/4153) :gift:
-
-
-
-
-
+* Fix Image Cropper on Mobile [livingdocs-editor #4175](https://github.com/livingdocsIO/livingdocs-editor/pull/4175) :beetle:
+* Guard projects from having a undefined handle in the url [livingdocs-editor #4182](https://github.com/livingdocsIO/livingdocs-editor/pull/4182) :beetle:
+* Editor: Fix transform components feature [livingdocs-editor #4219](https://github.com/livingdocsIO/livingdocs-editor/pull/4219) :beetle:
+* Comments: Show max thread count limit error [livingdocs-editor #4188](https://github.com/livingdocsIO/livingdocs-editor/pull/4188) :beetle:
 
 
   ---
