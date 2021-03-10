@@ -72,6 +72,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-03
 
 ### Livingdocs Editor Patches
+- [v63.8.4](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.4): fix(collaboration): Fix the avatar support in the collaboration mode
 - [v63.8.3](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.3): fix(publish screen): don't log errors to console when MetadataValidationErrors are returned for publish request
 - [v63.8.2](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.2): fix: update framework to release-2021-03
 - [v??.?.?](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v??.?.?): text
