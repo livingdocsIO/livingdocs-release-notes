@@ -199,8 +199,6 @@ References:
 
 # Breaking Changes :fire:
 
-TODO@marc: do we expect npm > 7?
-
 This time we have a huge amount of breaking changes, therefore we grouped the breaking changes into different sections:
 - [Post Deployment](#post-deployment-fire)
 - [Breaking Changes - Public API](#breaking-changes---public-api-fire)
@@ -285,6 +283,12 @@ References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3
 
 
 ## Breaking Changes - Server :fire:
+
+### Require npm7 :fire:
+
+:fire: To support ~lib requires in downstreams we expect `npm > 7`
+
+References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3475)
 
 ### Migrate the database :fire:
 
@@ -748,7 +752,7 @@ For all public API endpoints documentation, go to 'https://your-editor.com/publi
 - 🎁 Add new endpoint `GET /api/beta/mediaLibrary/:mediaId/incomingMediaReferences`
 
 References:
-* [Documentation](TODO@alex)
+* [Documentation](https://github.com/livingdocsIO/livingdocs-editor/pull/4228)
 * [Add Endpoints PR I](https://github.com/livingdocsIO/livingdocs-server/pull/3365)
 * [Add Endpoints PR II](https://github.com/livingdocsIO/livingdocs-server/pull/3400)
 
