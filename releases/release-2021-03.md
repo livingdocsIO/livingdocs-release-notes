@@ -50,6 +50,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-03
 
 ### Livingdocs Server Patches
+- [v124.5.5](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.5): fix(cli): rename fix-group-memberships script
 - [v124.5.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.4): chore: Fix the docker images as we can't change the base image because of the sharp build issue
 - [v124.5.3](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.3): fix: update framework to release-2021-03
 
