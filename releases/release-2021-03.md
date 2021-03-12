@@ -69,6 +69,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-03
 
 ### Livingdocs Editor Patches
+- [v63.8.7](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.7): fix: show an indicator incase the ES limit defaults to 10000 total documents
 - [v63.8.6](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.6): fix(signup): correctly redirect upon signup
 - [v63.8.5](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.5): fix: alignment of component title when no description is available
 - [v63.8.4](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.4): fix(collaboration): Fix the avatar support in the collaboration mode
