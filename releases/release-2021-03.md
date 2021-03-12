@@ -278,13 +278,7 @@ References:
 - :fire: Document publish webhook, changed value of `event` from `document.published` to `document.publish`
 - :fire: Document unpublish webhook, changed value of `event` from `document.unpublished` to `document.unpublish`
 
-TODO@okan - Update business documentation (update old payload formats, add new media library payloads)
-
 References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3359)
-
-
-
-
 
 ## Breaking Changes - Server :fire:
 
@@ -824,7 +818,6 @@ colt().createConfigProject('project', {...})
 ### Features
 
 * SSO: Integrate Azure Active Directory [livingdocs-server #3355](https://github.com/livingdocsIO/livingdocs-server/pull/3355) :gift:
-  * TODO@okan - add doc to business documentation
 * Tasks: Assign a user to a task [livingdocs-editor #4214](https://github.com/livingdocsIO/livingdocs-editor/pull/4214) :gift:
 * Print: Move print to project config [livingdocs-server #3372](https://github.com/livingdocsIO/livingdocs-server/pull/3372) :gift:
 
