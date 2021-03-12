@@ -238,7 +238,7 @@ Please make sure that all code that consumes Livingdocs (web frontend, native ap
 
 References:
 - [Revision Migration Framework](https://github.com/livingdocsIO/livingdocs-server/pull/3268)
-- [doc-link and doc-html Migration](https://github.com/livingdocsIO/livingdocs-server/pull/3268)
+- [doc-link and doc-html Migration](https://github.com/livingdocsIO/livingdocs-server/pull/3398)
 
 
 ### Migrate References (post deployment) :fire:
@@ -257,13 +257,13 @@ References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3
 
 ### CLI Script to Fix Group Memberships (post deployment) :fire:
 
-We're having some customers running an old state of the groups tables which got partially corrupted by some old user merge logic that we've fixed about a year ago. The new `npx livingdocs-server fix-group-memberships` command fixes those tables completely.
+We're having some customers running an old state of the groups tables which got partially corrupted by some old user merge logic that we've fixed about a year ago. The new `npx release-2021-03-fix-group-memberships` command fixes those tables completely.
 
-- :fire: Run `npx livingdocs-server fix-group-memberships` to fix corrupt membership data
+- :fire: Run `npx release-2021-03-fix-group-memberships` to fix corrupt membership data
 
-TODO@ralph - rename the script (to express it's just a one time script)
-
-References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3418)
+References:
+- [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3418)
+- [Server Update PR](https://github.com/livingdocsIO/livingdocs-server/pull/3480)
 
 
 
@@ -424,10 +424,30 @@ References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3
 
 ### Add property 'isAutomatic' to Metadata plugin 'li-image' :fire:
 
-A crop object in the crops array on the value of a metadata `li-image` property contains the boolean property `isAutomatic` now. If you have any metadata property of type `li-image` configured, you need to add the `isAutomatic` property to the mapping.
+A metadata field of type `li-image` has a new property `isAutomatic`, e.g. `teaserImage.crops[{..., isAutomatic: true}].`
+:fire: Add the field `isAutomatic` to the Elasticsearch metadata mapping:
 
 ```js
-// TODO@beni - Add Instruction what exactly to do here
+// 1) search in the project config for all metadata fields with type 'li-image' (e.g. teaserImage)
+// 2) Open the Elasticsearch mapping file defined in the server config 'search.metadataMapping' (see https://docs.livingdocs.io/reference-docs/server-config/config#search)
+// 3) Update the mapping definition with 'isAutomatic' for all metadata fields of type 'li-image'
+
+// metadata-mapping.js
+{
+    ...,
+    "teaserImage": {
+      "properties": {
+        "crops": {
+          "properties": {
+            ...
+            "isAutomatic": { // <------------    add isAutomatic property to the mapping
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    }
+}
 ```
 
 :fire: removed the editor config `app.ui.article.publish.cropStyles`. It has no effect anymore
