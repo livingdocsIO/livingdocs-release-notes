@@ -123,6 +123,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-12
 
 ### Livingdocs Editor Patches
+- [v57.33.51](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.51): fix: alignment of component title when no description is available
 - [v57.33.50](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.50): fix(comments): Show max thread count limit error
 - [v57.33.49](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.49): chore(policies): Add additionalProperties: false to the policy schema to keep it in sync with the one on the server
 - [v57.33.48](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.48): fix(conflict): Hide comments in conflict mode
