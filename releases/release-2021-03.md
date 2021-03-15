@@ -484,6 +484,22 @@ References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3
 
 - 🔥 Media Library Index: `caption`, `source` and `google-vision` fields are not indexed automatically anymore. The config `config: {index:true}` must be set in the metadata configuration.
 
+```js
+// When you still want to search/filter by caption or source or google-vision, you have to extend your mediaType config in the project config
+{
+  metadata: [
+    {
+      handle: 'source', // or 'caption' or 'google-vision'
+      // ...
+      config: {
+        index: true, // <------- add this property to be able to search/filter
+      }
+    },
+    // ...
+  ]
+}
+```
+
 References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3389)
 
 
@@ -737,7 +753,7 @@ References:
 
 ## References
 
-We worked on document reference extraction. The list below contains public APIs and server APIs with an additional `reference` property in the response. Look into the [documentation](TODO@alex) to get different types of references.
+We worked on document reference extraction. The list below contains public APIs and server APIs with an additional `reference` property in the response. Look into the [documentation](https://github.com/livingdocsIO/livingdocs/pull/372) to get different types of references.
 
 - :candy: `POST /document-copy/:documentId/copy`
 - :candy: `POST /document-copy/:documentId/transform`
@@ -753,7 +769,7 @@ We worked on document reference extraction. The list below contains public APIs 
 - :candy: `publicationApi.republish()`
 
 References:
-* [Documentation](TODO@alex)
+* [Documentation](https://github.com/livingdocsIO/livingdocs/pull/372)
 * [Extract References PR](https://github.com/livingdocsIO/livingdocs-server/pull/3341)
 * [Extract References for Videos PR](https://github.com/livingdocsIO/livingdocs-server/pull/3383)
 * [Add Endpoints PR](https://github.com/livingdocsIO/livingdocs-server/pull/3365)
