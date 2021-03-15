@@ -50,6 +50,9 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-03
 
 ### Livingdocs Server Patches
+- [v124.5.8](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.8): fix(node): Bump node to >=v12.9 as we rely on Promise.allSettled
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 - [v124.5.7](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.7): fix(cli): show help of a revision migration
 - [v124.5.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.6): fix(indexing): Fix the assertion about the projectHandle and channelHandle indexConfig combination in test environments
 - [v124.5.5](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.5): fix(cli): rename fix-group-memberships script
