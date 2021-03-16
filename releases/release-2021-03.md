@@ -50,6 +50,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-03
 
 ### Livingdocs Server Patches
+- [v124.5.11](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.11): test(db): Add a documentVersionFetcher.getLatestPublications tests to ensure we don't return deleted publications
 - [v124.5.10](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.10): fix(publicApi): downgrade contentFormat via config
 - [v124.5.9](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.9): fix: extend baseFilter schema for all basefilters
 - [v124.5.8](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.8): fix(node): Bump node to >=v12.9 as we rely on Promise.allSettled
