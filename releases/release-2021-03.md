@@ -76,6 +76,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-03
 
 ### Livingdocs Editor Patches
+- [v63.8.11](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.11): fix(design-bump): order semantic versions
 - [v63.8.10](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.10): fix(basefilter): multiSourceSearch uses the filters correctly
 - [v63.8.9](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.9): fix: commit to generate a new version
 - [v63.8.8](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.8): fix(clipboard): fix clipboard paste for a container
