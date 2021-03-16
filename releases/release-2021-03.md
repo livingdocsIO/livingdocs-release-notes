@@ -50,6 +50,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-03
 
 ### Livingdocs Server Patches
+- [v124.5.9](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.9): fix: extend baseFilter schema for all basefilters
 - [v124.5.8](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.8): fix(node): Bump node to >=v12.9 as we rely on Promise.allSettled
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled
