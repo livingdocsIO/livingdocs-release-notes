@@ -51,16 +51,6 @@ How to require the server in your package.json:
 
 ### Livingdocs Server Patches
 - [v124.5.11](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.11): test(db): Add a documentVersionFetcher.getLatestPublications tests to ensure we don't return deleted publications
-- [v124.5.10](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.10): fix(publicApi): downgrade contentFormat via config
-- [v124.5.9](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.9): fix: extend baseFilter schema for all basefilters
-- [v124.5.8](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.8): fix(node): Bump node to >=v12.9 as we rely on Promise.allSettled
-
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled
-- [v124.5.7](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.7): fix(cli): show help of a revision migration
-- [v124.5.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.6): fix(indexing): Fix the assertion about the projectHandle and channelHandle indexConfig combination in test environments
-- [v124.5.5](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.5): fix(cli): rename fix-group-memberships script
-- [v124.5.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.4): chore: Fix the docker images as we can't change the base image because of the sharp build issue
-- [v124.5.3](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.3): fix: update framework to release-2021-03
 
 
 
@@ -78,14 +68,6 @@ How to require the editor in your package.json:
 ### Livingdocs Editor Patches
 - [v63.8.12](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.12): fix: checkboxes for twitch and instagram include
 - [v63.8.11](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.11): fix(design-bump): order semantic versions
-- [v63.8.10](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.10): fix(basefilter): multiSourceSearch uses the filters correctly
-- [v63.8.9](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.9): fix: commit to generate a new version
-- [v63.8.8](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.8): fix(clipboard): fix clipboard paste for a container
-- [v63.8.7](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.7): fix: show an indicator incase the ES limit defaults to 10000 total documents
-- [v63.8.6](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.6): fix(signup): correctly redirect upon signup
-- [v63.8.5](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.5): fix: alignment of component title when no description is available
-- [v63.8.4](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.4): fix(collaboration): Fix the avatar support in the collaboration mode
-- [v63.8.3](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.3): fix(publish screen): don't log errors to console when MetadataValidationErrors are returned for publish request
 
 
 
@@ -908,6 +890,10 @@ colt().createConfigProject('project', {...})
 * Guard projects from having a undefined handle in the url [livingdocs-editor #4182](https://github.com/livingdocsIO/livingdocs-editor/pull/4182) :beetle:
 * Editor: Fix transform components feature [livingdocs-editor #4219](https://github.com/livingdocsIO/livingdocs-editor/pull/4219) :beetle:
 * Comments: Show max thread count limit error [livingdocs-editor #4188](https://github.com/livingdocsIO/livingdocs-editor/pull/4188) :beetle:
+
+### Service
+
+* Public Api: downgrade contentFormat when required [livingdocs-server](https://github.com/livingdocsIO/livingdocs-server/pull/3468) :gift:
 
 
   ---
