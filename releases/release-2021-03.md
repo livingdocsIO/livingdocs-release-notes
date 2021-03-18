@@ -50,6 +50,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-03
 
 ### Livingdocs Server Patches
+- [v124.5.16](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.16): fix(mediaSource): set a sane default
 - [v124.5.15](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.15): fix(indexing): Skip indexing for media library entries of a media type that got removed
 - [v124.5.14](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.14): fix(migrations): Enable error logs for document migrations
 
