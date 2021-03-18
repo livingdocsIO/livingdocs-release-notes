@@ -67,6 +67,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-03
 
 ### Livingdocs Editor Patches
+- [v63.8.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.13): fix(images): make sure image directive content is only changed by directive.setContent, never by mutating the object directly
 - [v63.8.12](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.12): fix: checkboxes for twitch and instagram include
 - [v63.8.11](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.11): fix(design-bump): order semantic versions
 
