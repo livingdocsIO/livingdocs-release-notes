@@ -131,11 +131,13 @@ References:
 
 Define which media library metadata are indexed and define dashboard filter for all metadata (same as for documents and publications).
 
-TODO@meinrad - add doc for media library indexing/filter
-
-References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3389)
-
-
+References: 
+  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3389)
+  * [Documentation plugin](https://docs.livingdocs.io/reference-docs/server-config/config#setting-up-the-media-library-elastic-search-mapping)
+  * [Documentation mediaTypes](https://docs.livingdocs.io/reference-docs/project-config/media_types)
+  * [Documentation baseFilters](https://docs.livingdocs.io/reference/base_filter#example-5-filter-by-metadata-with-datatype-keyword-for-mediaindex)
+  * [Documentation custom Display Filter](https://docs.livingdocs.io/guides/register_custom_dashboard_filters_#register-custom-vue-component-filter)
+  
 ## Named Crops :tada:
 
 The Named Crops feature supports multiple crops per image in a document.
