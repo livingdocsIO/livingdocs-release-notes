@@ -49,6 +49,9 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-12
 
 ### Livingdocs Server Patches
+- [v114.0.42](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.42): fix(migrations): Enable error logs for document migrations
+
+Customers need more informations when a migration fails.
 - [v114.0.41](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.41): fix(indexing): the custom indexer passes ids instead of documentIds
 - [v114.0.40](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.40): fix(comments): Add maxThreadCount config property
 - [v114.0.39](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.39): fix(policies): Introduce a more strict schema and allow additional properties
