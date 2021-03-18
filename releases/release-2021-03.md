@@ -50,6 +50,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-03
 
 ### Livingdocs Server Patches
+- [v124.5.13](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.13): chore(actions): remove not implemented action metadata.property.changed
 - [v124.5.12](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.12): fix(cloudinary): correctly resolve the resourceId for the readStream
 - [v124.5.11](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.11): test(db): Add a documentVersionFetcher.getLatestPublications tests to ensure we don't return deleted publications
 
