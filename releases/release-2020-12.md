@@ -127,6 +127,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-12
 
 ### Livingdocs Editor Patches
+- [v57.33.53](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.53): fix(teaser-preview): render includes in teaser preview
 - [v57.33.52](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.52): fix(clipboard): fix clipboard paste for a container
 - [v57.33.51](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.51): fix: alignment of component title when no description is available
 - [v57.33.50](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.50): fix(comments): Show max thread count limit error
