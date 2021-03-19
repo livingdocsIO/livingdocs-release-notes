@@ -172,9 +172,7 @@ References:
 
 ## Simplify Setup of Article Teasers
 
-A simpler way to setup teasers is introduced. It is based on Includes and the possiblity to define the UI with a `paramsSchema`.
-
-TODO@beni - text ok?
+A simpler way to setup [Article Teasers](https://docs.livingdocs.io/guides/includes-embeds/article_teasers) is introduced. It is based on Includes and the possiblity to define the UI with a `paramsSchema`.
 
 References:
   * [Documentation](https://github.com/livingdocsIO/livingdocs/pull/359)
