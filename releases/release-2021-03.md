@@ -75,6 +75,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-03
 
 ### Livingdocs Editor Patches
+- [v63.8.17](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.17): chore(lists): skip shaky test
 - [v63.8.16](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.16): fix(teaser-preview): render includes in teaser preview
 - [v63.8.15](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.15): fix(connection): Show correct message when server is offline and proxiedHost is enabled
 - [v63.8.14](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.14): fix(twich/instagram includes): render include sidebar forms with correct layout
