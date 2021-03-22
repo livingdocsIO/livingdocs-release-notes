@@ -49,6 +49,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-12
 
 ### Livingdocs Server Patches
+- [v114.0.44](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.44): fix(render-pipeline): log documentId for failed renderings
 - [v114.0.43](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.43): fix(list-update): finish trx if not passed in
 - [v114.0.42](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.42): fix(migrations): Enable error logs for document migrations
 
