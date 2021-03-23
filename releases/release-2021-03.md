@@ -51,6 +51,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-03
 
 ### Livingdocs Server Patches
+- [v124.5.21](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.21): fix(document): Send correct data for realtime update
 - [v124.5.20](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.20): chore: Fix the documentVersion constructor name assertion
 - [v124.5.19](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.19): fix(render-pipeline): log documentId for failed renderings
 - [v124.5.18](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.18): fix(li-migrations): fix a bug where documents got mutated twice in the migration apply step
