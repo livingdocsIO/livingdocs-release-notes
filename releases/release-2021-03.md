@@ -5,6 +5,7 @@
 - [Webinar](#webinar)
 - [Patches](#repositories)
 - [Highlights](#highlights)
+- [Experimental](#experimental)
 - [Breaking Changes](#breaking-changes-fire)
 - [Deprecations](#deprecations)
 - [APIs](#apis-gift)
@@ -92,27 +93,6 @@ How to require the editor in your package.json:
 
 # Highlights
 
-## Media Library - Videos :tada:
-
-![image](https://user-images.githubusercontent.com/4352425/98831646-2312bb80-243c-11eb-9211-5ea665b7e22c.png)
-
-With this release we introduce a stable version of videos with these abilities:
-
-- Upload videos and set metadata in media library
-- Upload videos and set metadata in editor via drag + drop / upload button
-- Define a poster image for videos
-- Import videos via public API
-- Add project configuration for mediaVideo MediaType
-- Add new directive `doc-video` in a livingdocs design
-- Add configuration for video storage
-
-References:
-  * [Add Storage Config for Video](https://github.com/livingdocsIO/livingdocs-server/pull/3296)
-  * [Video Storage Config Documentation](https://github.com/livingdocsIO/livingdocs/pull/350)
-  * [Video Poster Image](https://github.com/livingdocsIO/livingdocs-editor/pull/4187)
-  * [Documentation](TODO@beni)
-
-
 ## Media Library - Upload Center
 
 When the user uploads images or videos, a new Upload Center is visible in the bottom right corner of the screen showing the overall upload status and an error indication.
@@ -138,13 +118,13 @@ References:
 
 Define which media library metadata are indexed and define dashboard filter for all metadata (same as for documents and publications).
 
-References: 
+References:
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3389)
   * [Documentation plugin](https://docs.livingdocs.io/reference-docs/server-config/config#setting-up-the-media-library-elastic-search-mapping)
   * [Documentation mediaTypes](https://docs.livingdocs.io/reference-docs/project-config/media_types)
   * [Documentation baseFilters](https://docs.livingdocs.io/reference/base_filter#example-5-filter-by-metadata-with-datatype-keyword-for-mediaindex)
   * [Documentation custom Display Filter](https://docs.livingdocs.io/guides/register_custom_dashboard_filters_#register-custom-vue-component-filter)
-  
+
 ## Named Crops :tada:
 
 The Named Crops feature supports multiple crops per image in a document.
@@ -212,6 +192,24 @@ References:
   * [Documentation](TODO@alex)
 
 
+# Experimental
+
+## Media Library - Videos :tada:
+
+![image](https://user-images.githubusercontent.com/4352425/98831646-2312bb80-243c-11eb-9211-5ea665b7e22c.png)
+
+With this release we extend the videos integration in the Media Library with new features:
+
+- Define a poster image for videos
+- Add configuration for video storage
+- Several performance improvements
+
+References:
+  * [Add Storage Config for Video](https://github.com/livingdocsIO/livingdocs-server/pull/3296)
+  * [Video Storage Config Documentation](https://github.com/livingdocsIO/livingdocs/pull/350)
+  * [Video Poster Image](https://github.com/livingdocsIO/livingdocs-editor/pull/4187)
+
+
 
 # Breaking Changes :fire:
 
@@ -233,27 +231,27 @@ This section contains tasks you have to do **after** the deployment was successf
 
 We changed the `doc-link` and `doc-html` directives to be objects instead of strings (see [here](#changed-doc-link-and-doc-html-directive-to-objects-post-deployment-fire) to compare the :fire: old/new format).
 
-After the deployment (when everything is running fine again) you should run the task :fire: `npx livingdocs-server revision-migration` and then choose the migration with the name `doc-link and doc-html`. This migrates all revisions to use the new data format.
+After the deployment (when everything is running fine again) you should run the task :fire: `npx livingdocs-server revision-migration -t doc-link-and-doc-html -y`. This migrates all old revisions to use the new data format.
 
-The default revision migration is quite agressive regarding db load, but we recommend to choose a less agressive approach, which you can run during the day without issues.
+The default revision migration is quite slow and can be run in production without any impact. The revision migration should be run through all stages of deployment (dev, stage, prod). If you want to choose a more agressive approach outside of business hours, you can change the scheduler settings in the server config.
+
 ```js
-// server config for a less agressiv revision migration
+// server config for a more agressive but more performant approach (should not be done during business hours)
 documentMigration: {
    scheduler: {
         batchSize: 100, // default: 100
-        concurrency: 2, // default: 10
+        concurrency: 10, // default: 1
        }
     }
 }
 ```
 
-The revision migration should be run through all stages of deployment (dev, stage, prod). If you run into troubles you can fine-tune the job scheduler in the configuration e.g. changing the batchSize or the concurrency.
-
-Please make sure that all code that consumes Livingdocs (web frontend, native apps, etc.) support :fire: **both formats** and are still working as expected.
+:fire: Please make sure that all code that consumes Livingdocs (web frontend, native apps, etc.) support :fire: **both formats** and are still working as expected.
 
 References:
 - [Revision Migration Framework](https://github.com/livingdocsIO/livingdocs-server/pull/3268)
 - [doc-link and doc-html Migration](https://github.com/livingdocsIO/livingdocs-server/pull/3398)
+- [Set sane defaults for the Revision Migration](https://github.com/livingdocsIO/livingdocs-server/pull/3478)
 
 
 ### Migrate References (post deployment) :fire:
