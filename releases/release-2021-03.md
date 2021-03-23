@@ -137,7 +137,7 @@ References:
   * [Framework PR](https://github.com/livingdocsIO/livingdocs-framework/pull/511)
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3261)
   * [Editor PR (Design Improvements)](https://github.com/livingdocsIO/livingdocs-editor/pull/4101)
-  * [Documentation](TODO@beni)
+  * [Documentation](https://github.com/livingdocsIO/livingdocs/pull/377)
 
 
 ## Notifications
@@ -146,11 +146,8 @@ References:
 
 Notifications allow a user to subscribe to specific events of a document (e.g. a publish) and notifies this user via mail/slack when this event happens.
 
-TODO@okan - add general doc for Notifications
-TODO@okan - add doc for document subscriptions - https://github.com/livingdocsIO/livingdocs-server/pull/3344
-
 References:
-* [Documentation](TODO@okan TODO@beni)
+* [Documentation](https://github.com/livingdocsIO/livingdocs/pull/375)
 * [Document Notifications](https://github.com/livingdocsIO/livingdocs-server/pull/3251)
 * [Manage Document Subscriptions](https://github.com/livingdocsIO/livingdocs-server/pull/3344)
 * [Manage Document Subscriptions UI](https://github.com/livingdocsIO/livingdocs-editor/pull/4013)
@@ -261,9 +258,9 @@ As described in the [APIs](#apis-gift) section, we extend some endpoints (public
 After the release, execute the manual db migration `node ./db/manual-migrations/006-generate-references`
 
 These are the key changes/issues
-- It's a database heavy operation and should be executed outside business time (when having lot of documents)
+- It's a database heavy operation and should be executed outside business time (when having a lot of documents)
 - generate document and publication references and store them on the db
-- remove document revision references (TODO@alex what are the consequences for public- and serverAPIs?)
+- remove document revision references
 
 References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3341)
 
@@ -410,8 +407,6 @@ References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3
   //   Output
   "foo":"bar","msg":"a silly message"
   ```
-
-TODO@marc - update doc with new CLI commands.
 
 References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3361)
 
@@ -753,8 +748,6 @@ The server config `swisscomTV.customLanguageHandle` is not used any longer for t
 
 ## Publication Events
 
-TODO@marc - update public API doc (incl. backport)
-
 - :candy: Support `/api/v1/publicationEvents?reverse=true` query parameter to retrieve events in reverse order starting at the latest event
 
 References:
@@ -862,7 +855,7 @@ colt().createConfigProject('project', {...})
   * List dashboard: Hide 'go to article' button in list UI when dragging [livingdocs-editor #4094](https://github.com/livingdocsIO/livingdocs-editor/pull/4094) :gift:
   * Add 'video-' and 'imageLibrary' dashboard [livingdocs-editor #4046](https://github.com/livingdocsIO/livingdocs-editor/pull/4046) :gift:
 * Search
-  * Add support for a `customFilters` object to pass through custom search parameters [livingdocs-editor #4172](https://github.com/livingdocsIO/livingdocs-editor/pull/4172) :gift: -> TODO@marc - add doc to business doc
+  * Add support for a `customFilters` object to pass through custom search parameters [livingdocs-editor #4172](https://github.com/livingdocsIO/livingdocs-editor/pull/4172) :gift:
 * Administration
   * Extend the indexing UI screen to support all configured indexes [livingdocs-server #3409](https://github.com/livingdocsIO/livingdocs-server/pull/3409) :gift:
 * Image cropping: Use downscaled image size for very large images [livingdocs-editor #4141](https://github.com/livingdocsIO/livingdocs-editor/pull/4141) :gift:
