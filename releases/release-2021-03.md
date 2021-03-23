@@ -78,6 +78,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-03
 
 ### Livingdocs Editor Patches
+- [v63.8.19](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.19): fix(kanban): Pass searchParams to reload function
 - [v63.8.18](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.18): fix(lists): cancel spinner after error
 - [v63.8.17](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.17): chore(lists): skip shaky test
 - [v63.8.16](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.16): fix(teaser-preview): render includes in teaser preview
