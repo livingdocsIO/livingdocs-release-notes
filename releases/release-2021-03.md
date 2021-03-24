@@ -754,6 +754,7 @@ The server config `swisscomTV.customLanguageHandle` is not used any longer for t
 
 References:
 * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3447)
+* [Documentation](https://github.com/livingdocsIO/livingdocs-editor/pull/4290)
 
 ## References
 
