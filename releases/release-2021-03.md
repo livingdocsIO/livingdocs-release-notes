@@ -79,6 +79,9 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-03
 
 ### Livingdocs Editor Patches
+- [v63.8.23](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.23): fix(BW service changer): Markup updated to new standard
+
+- Updated BW service changer's markup on par with recently set standard
 - [v63.8.21](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.21): fix(access): always setup a policy (an empty policy always returns true)
 - [v63.8.20](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.20): fix(documentation): Add an example for `/v1/publicationEvents?reverse=true&limit=2`
 - [v63.8.19](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.19): fix(kanban): Pass searchParams to reload function
