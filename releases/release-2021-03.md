@@ -79,6 +79,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-03
 
 ### Livingdocs Editor Patches
+- [v63.8.24](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.24): fix(login): correctly log users into specific projects
 - [v63.8.23](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.23): fix(BW service changer): Markup updated to new standard
 
 - Updated BW service changer's markup on par with recently set standard
