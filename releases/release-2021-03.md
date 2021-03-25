@@ -79,6 +79,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-03
 
 ### Livingdocs Editor Patches
+- [v63.8.27](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.27): fix(media library): fix download action of mediaVideo types
 - [v63.8.26](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.26): fix: use documentPropertyName instead of metadataPropertyName for filter
 - [v63.8.25](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.25): fix: handle local component changes to add comment highlights
 - [v63.8.24](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.24): fix(login): correctly log users into specific projects
