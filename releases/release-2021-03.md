@@ -624,6 +624,9 @@ projectConfig.editorSettings.dashboards: [{handle: 'kanban-proofreading'}]`
 References: [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4166)
 
 
+### liDateTimeRange Filter config :fire:
+
+- :fire: `metadataPropertyName` in the liDateTimeRange Filter config can only be used for metadata. To filter for `documentPropertyName` created_at or updated_at (default) you should use in the config `{filterName: 'liDateTimeRange', config: {documentPropertyName: 'updated_at'}}`
 
 
 
