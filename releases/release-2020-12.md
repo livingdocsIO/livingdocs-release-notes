@@ -128,6 +128,9 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-12
 
 ### Livingdocs Editor Patches
+- [v57.33.55](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.55): fix(BW service changer): Markup updated to new standard
+
+- Updated BW service changer's markup on par with recently set standard
 - [v57.33.54](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.54): fix(lists): cancel spinner after error
 - [v57.33.53](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.53): fix(teaser-preview): render includes in teaser preview
 - [v57.33.52](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.52): fix(clipboard): fix clipboard paste for a container
