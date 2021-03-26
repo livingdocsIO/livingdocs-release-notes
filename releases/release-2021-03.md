@@ -109,7 +109,7 @@ How to require the editor in your package.json:
 
 ## Media Library - Upload Center
 
-When the user uploads images or videos, a new Upload Center is visible in the bottom right corner of the screen showing the overall upload status and an error indication.
+When the user uploads images or videos, a new Upload Center is visible in the bottom right corner of the editor screen allowing the users to continue their work in the document while assets are uploaded in parallel in the background. If an error with any of the uploads happens it is shown and logged in the upload center.
 
 <img width="377" alt="Screenshot 2021-03-08 at 21 26 16" src="https://user-images.githubusercontent.com/821875/110377665-f884e800-8054-11eb-9891-3f06aafc45ae.png">
 
@@ -121,6 +121,7 @@ References: [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4
 ![image](https://user-images.githubusercontent.com/821875/107018818-35816480-67a1-11eb-945e-02f4838c5b61.png)
 
 Allow to connect/integrate external asset services (e.g. Unsplash, Shutterstock, Pixabay, ...) as a Media Source in the Livingdocs Media Library. Working with a Media Source in Livingdocs feels the same as working with other assets of the Media Library.
+The examples from the Livingdocs core all include free open source platforms, but of course one could also use media sources to integrate external DAM systems that might already be present in a publishers system landscape and by that consolidate the asset workflow for the journalists into Livingdocs.
 
 References:
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3266)
@@ -130,7 +131,8 @@ References:
 
 ## Media Library - Index/Filter :tada:
 
-Define which media library metadata are indexed and define dashboard filter for all metadata (same as for documents and publications).
+The media library dashboard has now the same search and filter capabilites as the documents dashboard.
+Define which media library metadata are indexed and define dashboard filter for all metadata.
 
 References:
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3389)
@@ -141,7 +143,7 @@ References:
 
 ## Named Crops :tada:
 
-The Named Crops feature supports multiple crops per image in a document.
+The Named Crops feature supports multiple crops per image in a document. This allows to preset crops on the master images in the Media Library and on demand overwrite those master crops on the placed image inside an article. Also, the API now provides several crops per image as defined in the named crops settings.
 
 <img width="589" src="https://user-images.githubusercontent.com/821875/103688930-dc9c9180-4f92-11eb-894d-45ae105e72a4.png">
 
@@ -158,7 +160,7 @@ References:
 
 <img width="285" alt="Screenshot 2021-03-03 at 17 19 37" src="https://user-images.githubusercontent.com/821875/109836673-af8ff680-7c44-11eb-8e21-628a4016ef87.png">
 
-Notifications allow a user to subscribe to specific events of a document (e.g. a publish) and notifies this user via mail/slack when this event happens.
+Notifications allow a user to subscribe to specific events of a document (e.g. a publish) and notifies this user via mail/slack when this event happens. Currently we support notification of task changes to the task requester and notification of document status changes to the document author.
 
 References:
 * [Documentation](https://github.com/livingdocsIO/livingdocs/pull/375)
@@ -169,7 +171,7 @@ References:
 
 ## Simplify Setup of Article Teasers
 
-A simpler way to setup [Article Teasers](https://docs.livingdocs.io/guides/includes-embeds/article_teasers) is introduced. It is based on Includes and the possiblity to define the UI with a `paramsSchema`.
+A simpler way to setup [Article Teasers](https://docs.livingdocs.io/guides/includes-embeds/article_teasers) is introduced. It is based on Includes and the possiblity to define the UI with a `paramsSchema` instead of writing code.
 
 References:
   * [Documentation](https://github.com/livingdocsIO/livingdocs/pull/359)
@@ -224,7 +226,7 @@ References:
 
 # Breaking Changes :fire:
 
-This time we have a huge amount of breaking changes, therefore we grouped the breaking changes into different sections:
+This time we have a rather high amount of breaking changes, therefore we grouped the breaking changes into different sections:
 - [Post Deployment](#post-deployment-fire)
 - [Breaking Changes - Public API](#breaking-changes---public-api-fire)
 - [Breaking Changes - Server](#breaking-changes---server-fire)
