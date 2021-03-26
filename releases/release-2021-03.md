@@ -552,6 +552,11 @@ If you want to keep the filters, you need to move the config to the `mediaType` 
       // use the config of editorSettings.mediaLibrary.editorSelection.displayFilters
       // if you want to keep the old behavior
       displayFilters: []
+    },
+    managementDashboard: {
+      // configure different filters for the management dashboard (opened via Main Navigation)
+      // if you want.
+      displayFilters: []
     }
   }
 }
@@ -890,7 +895,7 @@ colt().createConfigProject('project', {...})
   * Allow multiple mediaTypes of same type, allow mediaType parameter for upload/import APIs [livingdocs-server #3406](https://github.com/livingdocsIO/livingdocs-server/pull/3406) :gift:
   * Hardening Media Library Import [livingdocs-server #3430](https://github.com/livingdocsIO/livingdocs-server/pull/3430) :gift:
   * Reimplement `video.asset.size` support for the stream-based upload [livingdocs-server #3439](https://github.com/livingdocsIO/livingdocs-server/pull/3439) :gift:
-* Resolve dashboards in main navigation from mediaTypes config [livingdocs-editor #4180](https://github.com/livingdocsIO/livingdocs-editor/pull/4180) :gift:
+* Resolve dashboards in Main Navigation and Document Editing Toolbar from mediaTypes config [livingdocs-editor #4106](https://github.com/livingdocsIO/livingdocs-editor/pull/4106) & [livingdocs-editor #4180](https://github.com/livingdocsIO/livingdocs-editor/pull/4180) :gift:
 
 #### Other
 
