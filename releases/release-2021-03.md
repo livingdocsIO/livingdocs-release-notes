@@ -51,6 +51,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-03
 
 ### Livingdocs Server Patches
+- [v124.5.23](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.23): fix(print): fix print host
 - [v124.5.22](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.22): fix(desknet): adapt to new auth method
 - [v124.5.21](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.21): fix(document): Send correct data for realtime update
 - [v124.5.20](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.20): chore: Fix the documentVersion constructor name assertion
