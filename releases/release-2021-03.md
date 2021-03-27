@@ -206,13 +206,11 @@ References:
   * [Documentation](TODO@alex)
 
 
-# Experimental
-
 ## Media Library - Videos :tada:
 
 ![image](https://user-images.githubusercontent.com/4352425/98831646-2312bb80-243c-11eb-9211-5ea665b7e22c.png)
 
-With this release we extend the videos integration in the Media Library with new features:
+With this release we extend the [videos integration in the Media Library](https://docs.livingdocs.io/guides/media_library#videos) with new features:
 
 - Define a poster image for videos
 - Add configuration for video storage
