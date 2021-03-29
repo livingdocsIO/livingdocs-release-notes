@@ -49,6 +49,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-12
 
 ### Livingdocs Server Patches
+- [v114.0.47](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.47): fix(open-id-connect-sso): correctly resolve projectIds as strings
 - [v114.0.46](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.46): fix(print): fix `filterText()` type-check
 
 Fixes 
