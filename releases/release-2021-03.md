@@ -5,7 +5,6 @@
 - [Webinar](#webinar)
 - [Patches](#repositories)
 - [Highlights](#highlights)
-- [Experimental](#experimental)
 - [Breaking Changes](#breaking-changes-fire)
 - [Deprecations](#deprecations)
 - [APIs](#apis-gift)
@@ -143,6 +142,38 @@ References:
   * [Documentation baseFilters](https://docs.livingdocs.io/reference/base_filter#example-5-filter-by-metadata-with-datatype-keyword-for-mediaindex)
   * [Documentation custom Display Filter](https://docs.livingdocs.io/guides/register_custom_dashboard_filters_#register-custom-vue-component-filter)
 
+
+## Media Library - Videos :tada:
+
+![image](https://user-images.githubusercontent.com/4352425/98831646-2312bb80-243c-11eb-9211-5ea665b7e22c.png)
+
+With this release we extend the [videos integration in the Media Library](https://docs.livingdocs.io/guides/media_library#videos) with new features:
+
+- Define a poster image for videos
+- Add configuration for video storage
+- Several performance improvements
+
+
+#### Shortcomings
+
+Even when you are able to use videos in production, there are some shortcomings we want to share with you:
+
+- There is no video service available (comparable with image services for images), the consequences are
+  - The video tag uses the public url of the storage
+  - Your video storage has to be public (or you don't see videos in the editor)
+  - You have to render the document JSON with the video content on your own, otherwise the storage URL must be public in your delivery
+- There is no video provider integration yet (as we do with images, e.g. imgix)
+- There is no good way yet to hook a transcoding pipeline into the system (we will do something with a core metadata plugin you could use right now)
+
+If you are interested, we are ready to help you and build a nice video integration.
+
+References:
+  * [Add Storage Config for Video](https://github.com/livingdocsIO/livingdocs-server/pull/3296)
+  * [Video Storage Config Documentation](https://github.com/livingdocsIO/livingdocs/pull/350)
+  * [Video Poster Image](https://github.com/livingdocsIO/livingdocs-editor/pull/4187)
+
+
+
 ## Named Crops :tada:
 
 The Named Crops feature supports multiple crops per image in a document. This allows to preset crops on the master images in the Media Library and on demand overwrite those master crops on the placed image inside an article. Also, the API now provides several crops per image as defined in the named crops settings.
@@ -207,21 +238,22 @@ References:
   * [Documentation](TODO@alex)
 
 
-## Media Library - Videos :tada:
+## Support Deep Links in Multi Project Environments :tada:
 
-![image](https://user-images.githubusercontent.com/4352425/98831646-2312bb80-243c-11eb-9211-5ea665b7e22c.png)
-
-With this release we extend the [videos integration in the Media Library](https://docs.livingdocs.io/guides/media_library#videos) with new features:
-
-- Define a poster image for videos
-- Add configuration for video storage
-- Several performance improvements
+We support now editor deep links in multi-project environments. This is the new pattern - `https://0.0.0.0:9000/p/<your-project-handle>/articles/<article-id>`
 
 References:
-  * [Add Storage Config for Video](https://github.com/livingdocsIO/livingdocs-server/pull/3296)
-  * [Video Storage Config Documentation](https://github.com/livingdocsIO/livingdocs/pull/350)
-  * [Video Poster Image](https://github.com/livingdocsIO/livingdocs-editor/pull/4187)
+  *  [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4171)
 
+
+## Admin UI - Extend Indexing UI to Support all Configured Indexes :tada:
+
+A server admin can now reindex every existing index.
+
+![image](https://user-images.githubusercontent.com/431376/108784781-64a11f80-7570-11eb-92eb-7e3604c7b330.png)
+
+References:
+  *  [Editor PR](https://github.com/livingdocsIO/livingdocs-server/pull/3409)
 
 
 # Breaking Changes :fire:
@@ -292,6 +324,13 @@ References:
 - [Server Update PR](https://github.com/livingdocsIO/livingdocs-server/pull/3480)
 
 
+### Support OpenID Connect for SSO :fire:
+
+We support now OpenID Connect for a SSO connection. This allows customers to setup 2-factor authentication and external group management.
+
+References:
+- [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3355)
+- [Documentation](https://github.com/livingdocsIO/livingdocs/pull/353)
 
 
 ## Breaking Changes - Public API :fire:
@@ -618,6 +657,8 @@ References: [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4
 
 - 🔥 Remove coffee-script support in the webpack setup in the editor. We've dropped coffee-script a few years ago, but still kept the webpack loader as not all projects were migrated. From now on we've completely removed support for it. Please upgrade your code base if you still use coffee-script.
 
+If you still want to use coffeescript, you can require it manually, e.g. `node -r coffee-cscript/register node index.js`.
+
 References: [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4164)
 
 ### Remove Deprecated Editor Env Config 'dashboards' :fire:
@@ -725,7 +766,7 @@ References:
 * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3981)
 
 
-### Render Pipeline CheerioHtml: Use onTimeRendering by default :fire:
+### Use onTimeRendering by default :fire:
 
 If you use custom outputFormatters which use the frameworks rendering you should switch them to `livingdoc.render()`. This gives you a big performance boost (10x - 20x faster) and ensures consistency with the new default of the CheerioHtml output renderer.
 
@@ -780,7 +821,7 @@ References:
 
 ## References
 
-We worked on document reference extraction. The list below contains public APIs and server APIs with an additional `reference` property in the response. Look into the [documentation](https://github.com/livingdocsIO/livingdocs/pull/372) to get different types of references.
+We worked on document reference extraction. The list below contains public APIs and server APIs with an additional `reference` property in the response. Look into the [documentation](https://github.com/livingdocsIO/livingdocs/pull/372) to get different types of references. References can be used for static page rendering strategies where updates of references in a page, e.g. teasers, must be identified.
 
 - :candy: `POST /document-copy/:documentId/copy`
 - :candy: `POST /document-copy/:documentId/transform`
@@ -800,6 +841,33 @@ References:
 * [Extract References PR](https://github.com/livingdocsIO/livingdocs-server/pull/3341)
 * [Extract References for Videos PR](https://github.com/livingdocsIO/livingdocs-server/pull/3383)
 * [Add Endpoints PR](https://github.com/livingdocsIO/livingdocs-server/pull/3365)
+
+
+## Public API - Add context object to import endpoints :gift:
+
+A `context` (max 8192 bytes) parameter can be passed to:
+
+- `POST api/v1/import/documents`
+- `POST api/v1/import/images`
+- `POST api/v1/import/videos`
+
+If the webhook parameter is defined as well, context will be passed to the webhook once the job is finished.
+
+References:
+  * [Documentation](https://github.com/livingdocsIO/livingdocs-editor/pull/4100)
+  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3353)
+
+
+## Public API - Add Media Library Webhooks + Extend document.update Webhook :gift:
+
+- 🎁 Add webhook for event `mediaLibraryEntry.create`
+- 🎁 Add webhook for event `mediaLibraryEntry.update`
+- 🎁 Add webhook for event `mediaLibraryEntry.archive`
+- :candy: Extend `document.update` webhook - subscribe to a specific metadata property update
+
+References:
+  * [Documentation](https://github.com/livingdocsIO/livingdocs/pull/367)
+  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3359)
 
 
 ## Public API Beta
@@ -824,23 +892,6 @@ References:
 - :gift: Add `includesApi.getServiceConfig({serviceName})` method to `includesApi`.
 
 
-#### Add context object to import endpoints :gift:
-
-A `context` (max 8192 bytes) parameter can be passed to:
-
-- `POST api/v1/import/documents`
-- `POST api/v1/import/images`
-- `POST api/v1/import/videos`
-
-If the webhook parameter is defined as well, context will be passed to the webhook once the job is finished.
-
-References:
-  * [Documentation](https://github.com/livingdocsIO/livingdocs-editor/pull/4100)
-  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3353)
-
-
-
-
 
 # Internal Changes
 
@@ -861,7 +912,6 @@ colt().createConfigProject('project', {...})
 
 ### Features
 
-* SSO: Integrate Azure Active Directory [livingdocs-server #3355](https://github.com/livingdocsIO/livingdocs-server/pull/3355) :gift:
 * Tasks: Assign a user to a task [livingdocs-editor #4214](https://github.com/livingdocsIO/livingdocs-editor/pull/4214) :gift:
 * Print: Move print to project config [livingdocs-server #3372](https://github.com/livingdocsIO/livingdocs-server/pull/3372) :gift:
 
@@ -881,8 +931,6 @@ colt().createConfigProject('project', {...})
   * Add 'video-' and 'imageLibrary' dashboard [livingdocs-editor #4046](https://github.com/livingdocsIO/livingdocs-editor/pull/4046) :gift:
 * Search
   * Add support for a `customFilters` object to pass through custom search parameters [livingdocs-editor #4172](https://github.com/livingdocsIO/livingdocs-editor/pull/4172) :gift:
-* Administration
-  * Extend the indexing UI screen to support all configured indexes [livingdocs-server #3409](https://github.com/livingdocsIO/livingdocs-server/pull/3409) :gift:
 * Image cropping: Use downscaled image size for very large images [livingdocs-editor #4141](https://github.com/livingdocsIO/livingdocs-editor/pull/4141) :gift:
 * Editing: Add Iframe height watcher (guard) [livingdocs-editor #4108](https://github.com/livingdocsIO/livingdocs-editor/pull/4108) :gift:
 
@@ -898,7 +946,6 @@ colt().createConfigProject('project', {...})
 
 #### Other
 
-* Webhooks: Add media library webhooks | extend document.update webhook with metadata filter [livingdocs-server #3359](https://github.com/livingdocsIO/livingdocs-server/pull/3359) :gift:
 * CLI: Add 'newerThan' argument for task 'cleanup-documents' [livingdocs-server #3333](https://github.com/livingdocsIO/livingdocs-server/pull/3333) :gift:
 * Import: Support files with no file ending of mimeType image [livingdocs-server #3380](https://github.com/livingdocsIO/livingdocs-server/pull/3380) :gift:
 * Error handling: Add extended description to error declaration class [livingdocs-server #3214](https://github.com/livingdocsIO/livingdocs-server/pull/3214) :gift:
