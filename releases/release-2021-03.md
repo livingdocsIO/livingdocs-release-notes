@@ -88,6 +88,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-03
 
 ### Livingdocs Editor Patches
+- [v63.8.30](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.30): fix: add data-tour property for format-panel
 - [v63.8.29](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.29): fix(image service filter): don't ignore crops anymore when liImageProxy is the selected image service
 - [v63.8.28](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.28): fix(dashboards): move load more button from the footer into the result list body for consistency
 - [v63.8.27](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.27): fix(media library): fix download action of mediaVideo types
