@@ -233,16 +233,14 @@ References:
   * [Multi Cluster Indexing](https://github.com/livingdocsIO/livingdocs-server/pull/3361)
   * [Support Disabling Elasticsearch Clusters](https://github.com/livingdocsIO/livingdocs-server/pull/3373)
   * [Improve CLI Help for Indexing](https://github.com/livingdocsIO/livingdocs-server/pull/3371)
-  * [Documentation](TODO@marc)
+  * [Documentation](https://github.com/livingdocsIO/livingdocs/commit/5d7d2622b937b69c132ddab653383efcf18e945c#diff-7bbdd5c871b81a390b45235abfd10ec146307fd2f4ebca354f4d2a1115b17a7c)
 
 
 ## Tracing :tada:
 
-TODO@alex - add description
-
 References:
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3205)
-  * [Documentation](TODO@alex)
+  * [Documentation](https://github.com/livingdocsIO/livingdocs/pull/381)
 
 
 ## Support Deep Links in Multi Project Environments :tada:
