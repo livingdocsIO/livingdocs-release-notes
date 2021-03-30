@@ -49,6 +49,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-03
 
 ### Livingdocs Server Patches
+- [v124.5.27](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.27): chore(ww-assets): add tests for search
 - [v124.5.26](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.26): chore: correctly pass trx to authIdentityModel.deleteIdentity
 
 
