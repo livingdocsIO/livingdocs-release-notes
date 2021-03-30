@@ -13,7 +13,6 @@
 
 # Newsletter
 
-* Newsletter: **TODO**
 * Subscribe here: https://confirmsubscription.com/h/j/61B064416E79453D
 
 
@@ -22,7 +21,7 @@
 #### Features
 
 * Recording: **TODO**
-* Documentation: **TODO**
+* Documentation: [here](https://docs.google.com/document/d/1gSbHm6nRBT0O8i9Z2UPvQ_PSLS_ZtGiy_qi8erTIMls)
 
 #### Developers
 
@@ -51,29 +50,7 @@ How to require the server in your package.json:
 
 ### Livingdocs Server Patches
 - [v124.5.26](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.26): chore: correctly pass trx to authIdentityModel.deleteIdentity
-- [v124.5.25](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.25): fix(print): fix `filterText()` type-check
 
-Fixes 
-```
-uncaughtException: content.replace is not a function
-```
-that could occur under certain circumstances.
-- [v124.5.24](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.24): fix(seeding): always reset handle cache on project seeding
-- [v124.5.23](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.23): fix(print): fix print host
-- [v124.5.22](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.22): fix(desknet): adapt to new auth method
-- [v124.5.21](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.21): fix(document): Send correct data for realtime update
-- [v124.5.20](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.20): chore: Fix the documentVersion constructor name assertion
-- [v124.5.19](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.19): fix(render-pipeline): log documentId for failed renderings
-- [v124.5.18](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.18): fix(li-migrations): fix a bug where documents got mutated twice in the migration apply step
-- [v124.5.17](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.17): fix(list-update): pass error to rollback
-- [v124.5.16](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.16): fix(mediaSource): set a sane default
-- [v124.5.15](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.15): fix(indexing): Skip indexing for media library entries of a media type that got removed
-- [v124.5.14](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.14): fix(migrations): Enable error logs for document migrations
-
-Customers need more informations when a migration fails.
-- [v124.5.13](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.13): chore(actions): remove not implemented action metadata.property.changed
-- [v124.5.12](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.12): fix(cloudinary): correctly resolve the resourceId for the readStream
-- [v124.5.11](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.11): test(db): Add a documentVersionFetcher.getLatestPublications tests to ensure we don't return deleted publications
 
 
 
@@ -90,26 +67,6 @@ How to require the editor in your package.json:
 
 ### Livingdocs Editor Patches
 - [v63.8.30](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.30): fix: add data-tour property for format-panel
-- [v63.8.29](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.29): fix(image service filter): don't ignore crops anymore when liImageProxy is the selected image service
-- [v63.8.28](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.28): fix(dashboards): move load more button from the footer into the result list body for consistency
-- [v63.8.27](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.27): fix(media library): fix download action of mediaVideo types
-- [v63.8.26](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.26): fix: use documentPropertyName instead of metadataPropertyName for filter
-- [v63.8.25](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.25): fix: handle local component changes to add comment highlights
-- [v63.8.24](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.24): fix(login): correctly log users into specific projects
-- [v63.8.23](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.23): fix(BW service changer): Markup updated to new standard
-
-- Updated BW service changer's markup on par with recently set standard
-- [v63.8.21](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.21): fix(access): always setup a policy (an empty policy always returns true)
-- [v63.8.20](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.20): fix(documentation): Add an example for `/v1/publicationEvents?reverse=true&limit=2`
-- [v63.8.19](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.19): fix(kanban): Pass searchParams to reload function
-- [v63.8.18](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.18): fix(lists): cancel spinner after error
-- [v63.8.17](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.17): chore(lists): skip shaky test
-- [v63.8.16](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.16): fix(teaser-preview): render includes in teaser preview
-- [v63.8.15](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.15): fix(connection): Show correct message when server is offline and proxiedHost is enabled
-- [v63.8.14](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.14): fix(twich/instagram includes): render include sidebar forms with correct layout
-- [v63.8.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.13): fix(images): make sure image directive content is only changed by directive.setContent, never by mutating the object directly
-- [v63.8.12](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.12): fix: checkboxes for twitch and instagram include
-- [v63.8.11](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.11): fix(design-bump): order semantic versions
 
 
 
@@ -171,10 +128,8 @@ Even when you are able to use videos in production, there are some shortcomings 
   - The video tag uses the public url of the storage
   - Your video storage has to be public (or you don't see videos in the editor)
   - You have to render the document JSON with the video content on your own, otherwise the storage URL must be public in your delivery
-- There is no video provider integration yet (as we do with images, e.g. imgix)
-- There is no good way yet to hook a transcoding pipeline into the system (we will do something with a core metadata plugin you could use right now)
 
-If you are interested, we are ready to help you and build a nice video integration.
+Please get in touch if you want to integrate a transcoding pipeline or a video service.
 
 References:
   * [Add Storage Config for Video](https://github.com/livingdocsIO/livingdocs-server/pull/3296)
@@ -240,6 +195,8 @@ References:
 
 ## Tracing :tada:
 
+We've added tracing support in the server based on opentelemetry.
+
 References:
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3205)
   * [Documentation](https://github.com/livingdocsIO/livingdocs/pull/381)
@@ -247,7 +204,7 @@ References:
 
 ## Support Deep Links in Multi Project Environments :tada:
 
-We support now editor deep links in multi-project environments. This is the new pattern - `https://0.0.0.0:9000/p/<your-project-handle>/articles/<article-id>`
+We changed editor urls to contain the project handle so links work reliably in multi-project setups. This is the new pattern - `https://0.0.0.0:9000/p/<your-project-handle>/articles/<article-id>`
 
 References:
   *  [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4171)
@@ -268,9 +225,9 @@ References:
 This time we have a rather high amount of breaking changes, therefore we grouped the breaking changes into different sections:
 - [Post Deployment](#post-deployment-fire)
 - [Breaking Changes - Public API](#breaking-changes---public-api-fire)
+- [Breaking Changes - Server + Editor](#breaking-changes---server-+-editor-fire)
 - [Breaking Changes - Server](#breaking-changes---server-fire)
 - [Breaking Changes - Editor](#breaking-changes---editor-fire)
-- [Breaking Changes - Server + Editor](#breaking-changes---server-+-editor-fire)
 
 
 ## Post Deployment :fire:
@@ -314,8 +271,8 @@ After the release, execute the manual db migration `node ./db/manual-migrations/
 
 These are the key changes/issues
 - It's a database heavy operation and should be executed outside business time (when having a lot of documents)
-- generate document and publication references and store them on the db
-- remove document revision references
+- The migration removes references from document revisions and stores them per document instead
+- The migration generates references on all publications
 
 References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3341)
 
@@ -348,6 +305,121 @@ References:
 - :fire: Document unpublish webhook, changed value of `event` from `document.unpublished` to `document.unpublish`
 
 References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3359)
+
+
+
+## Breaking Changes - Server + Editor :fire:
+
+### Changed doc-link and doc-html directive to objects :fire:
+
+- :fire: Update [Framework](https://github.com/livingdocsIO/livingdocs-framework/pull/509) to v18 - New documents will store link and html directives as objects. Old documents will still store them as strings until you run the [manual migration](#revision-migration-post-deployment-fire).
+- :fire: Public API: `GET /latestPublication` and `GET /latestPublications` return the JSON as stored in the database. Thus after the update you will receive the old and new format until you run the [manual migration](#revision-migration-post-deployment-fire).
+
+After the update newly created doc-link and doc-html directives are stored as
+
+```js
+// Example Old
+content = [{
+  id: 'doc-ez23k2',
+  identifier: 'design.link',
+  content: {
+    link: 'https://livingdocs.io'
+  }
+}, {
+  id: 'doc-iej286',
+  identifier: 'design.html',
+  content: {
+    html: '<div></div>'
+  }
+}]
+
+
+// Example New
+content = [{
+  id: 'doc-ez23k2',
+  identifier: 'design.link',
+  content: {
+    link: {
+      href: 'https://livingdocs.io'
+    }
+  }
+}, {
+  id: 'doc-iej286',
+  identifier: 'design.html',
+  content: {
+    html: {
+      html: '<div></div>',
+      target: '_blank'
+    }
+  }
+}]
+```
+
+
+- 🔥 `getContent()` of html and link directives changes return type
+
+The html and link directives are now data directives, i.e. store object literals. This means that the `getContent()` method will return an object literal and not a string value anymore. The change looks as follows.
+
+```js
+// old
+const html = htmlDirective.getContent()
+const href = linkDirective.getContent()
+
+// new
+const {html} = htmlDirective.getContent()
+const {href, target} = linkDirective.getContent()
+```
+
+:fire: This change requires you to change all cases of `getContent` on link and html directives in your code. In particular look out for custom document conversions and include code.
+
+If you used direct JSON access in a livingdoc directive (not recommended),
+you will also need to change the access.
+
+```js
+// old
+const html = htmlDirective.content.value
+const href = linkDirective.content.value
+
+// new
+const {html} = htmlDirective.content
+const {href, target} = linkDirective.content
+```
+
+
+References:
+* [Framework PR](https://github.com/livingdocsIO/livingdocs-framework/pull/509)
+* [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3242)
+* [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3981)
+
+
+### Use One Time Rendering by Default :fire:
+
+The CheerioHtml output renderer for the render-pipeline now uses the frameworks one time rendering
+by default which is 10 to 20 times faster but has a few minor differences in render output.
+
+Things which are not rendered anymore by default:
+
+- empty image classes
+- empty optional elements (with display: none style)
+- comments for hidden optional elements
+- placeholders in unresolved include elements
+
+You can still use the old renderer with `CheerioHtml({useLegacyRendering: true})` in your `contentType` configuration.
+
+If you use custom outputFormatters which use the frameworks rendering you should switch them to `livingdoc.render()`. This gives you a big performance boost (10x - 20x faster) and ensures consistency with the new default of the CheerioHtml output renderer.
+
+
+```js
+// current - slow
+html = rendition.livingdoc.toHtml()
+
+// better alternative - fast
+html = rendition.livingdoc.render()
+```
+
+References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3401)
+
+
 
 ## Breaking Changes - Server :fire:
 
@@ -688,106 +760,6 @@ References: [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4
 - :fire: `metadataPropertyName` in the liDateTimeRange Filter config can only be used for metadata. To filter for `documentPropertyName` created_at or updated_at (default) you should use in the config `{filterName: 'liDateTimeRange', config: {documentPropertyName: 'updated_at'}}`
 
 References: [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4202)
-
-## Breaking Changes - Server + Editor :fire:
-
-### Changed doc-link and doc-html directive to objects :fire:
-
-- :fire: Update [Framework](https://github.com/livingdocsIO/livingdocs-framework/pull/509) to v18 - New documents will store link and html directives as objects. Old documents will still store them as strings until you run the [manual migration](#revision-migration-post-deployment-fire).
-- :fire: Public API: `GET /latestPublication` and `GET /latestPublications` return the JSON as stored in the database. Thus after the update you will receive the old and new format until you run the [manual migration](#revision-migration-post-deployment-fire).
-
-After the update newly created doc-link and doc-html directives are stored as
-
-```js
-// Example Old
-content = [{
-  id: 'doc-ez23k2',
-  identifier: 'design.link',
-  content: {
-    link: 'https://livingdocs.io'
-  }
-}, {
-  id: 'doc-iej286',
-  identifier: 'design.html',
-  content: {
-    html: '<div></div>'
-  }
-}]
-
-
-// Example New
-content = [{
-  id: 'doc-ez23k2',
-  identifier: 'design.link',
-  content: {
-    link: {
-      href: 'https://livingdocs.io'
-    }
-  }
-}, {
-  id: 'doc-iej286',
-  identifier: 'design.html',
-  content: {
-    html: {
-      html: '<div></div>',
-      target: '_blank'
-    }
-  }
-}]
-```
-
-
-- 🔥 `getContent()` of html and link directives changes return type
-
-The html and link directives will in future be data directives, i.e. store object literals. This means that the `getContent()` method will return an object literal and not a string value anymore. The change looks as follows.
-
-```js
-// old
-const html = htmlDirective.getContent()
-const href = linkDirective.getContent()
-
-// new
-const {html} = htmlDirective.getContent()
-const {href, target} = linkDirective.getContent()
-```
-
-:fire: This change requires you to change all cases of `getContent` on link and html directives in your code. In particular look out for custom document conversions and include code.
-
-If you used direct JSON access in a livingdoc directive (not recommended),
-you will also need to change the access.
-
-```js
-// old
-const html = htmlDirective.content.value
-const href = linkDirective.content.value
-
-// new
-const {html} = htmlDirective.content
-const {href, target} = linkDirective.content
-```
-
-
-References:
-* [Framework PR](https://github.com/livingdocsIO/livingdocs-framework/pull/509)
-* [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3242)
-* [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3981)
-
-
-### Use onTimeRendering by default :fire:
-
-If you use custom outputFormatters which use the frameworks rendering you should switch them to `livingdoc.render()`. This gives you a big performance boost (10x - 20x faster) and ensures consistency with the new default of the CheerioHtml output renderer.
-
-```js
-// current - slow
-html = rendition.livingdoc.toHtml()
-
-// better alternative - fast
-html = rendition.livingdoc.render()
-```
-
-You can still use the old renderer with `CheerioHtml({useLegacyRendering: true})` in your `contentType` configuration.
-
-References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3401)
 
 
 # Deprecations
