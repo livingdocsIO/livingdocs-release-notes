@@ -66,6 +66,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-03
 
 ### Livingdocs Editor Patches
+- [v63.8.32](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.32): fix(link tool): make removing an existing link possible again
 - [v63.8.31](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.31): fix(docked content): Visibility
 
 - Fixed z visibility of project-setup's docked content (was in front of top right user menu on mobile)
