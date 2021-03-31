@@ -225,6 +225,15 @@ References:
   *  [Editor PR](https://github.com/livingdocsIO/livingdocs-server/pull/3409)
 
 
+### Support OpenID Connect for SSO
+
+We support now OpenID Connect for a SSO connection. This allows customers to setup 2-factor authentication and external group management.
+
+References:
+- [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3355)
+- [Documentation](https://github.com/livingdocsIO/livingdocs/pull/353)
+
+
 # Breaking Changes :fire:
 
 This time we have a rather high amount of breaking changes, therefore we grouped the breaking changes into different sections:
@@ -292,14 +301,6 @@ References:
 - [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3418)
 - [Server Update PR](https://github.com/livingdocsIO/livingdocs-server/pull/3480)
 
-
-### Support OpenID Connect for SSO :fire:
-
-We support now OpenID Connect for a SSO connection. This allows customers to setup 2-factor authentication and external group management.
-
-References:
-- [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3355)
-- [Documentation](https://github.com/livingdocsIO/livingdocs/pull/353)
 
 
 ## Breaking Changes - Public API :fire:
@@ -789,6 +790,10 @@ References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3
 ## swisscomTV.customLanguageHandle
 
 The server config `swisscomTV.customLanguageHandle` is not used any longer for the reference extraction. All metadata of type `li-language` will be extracted to the references if they have a `groupId`.
+
+## Server Callbacks
+
+All callback functions on the server are now in deprecated state. We will start removing callbacks and switch to a promise based only approach.
 
 
 
