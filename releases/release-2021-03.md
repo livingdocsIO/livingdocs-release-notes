@@ -297,9 +297,9 @@ References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3
 
 ### CLI Script to Fix Group Memberships (post deployment) :fire:
 
-We're having some customers running an old state of the groups tables which got partially corrupted by some old user merge logic that we've fixed about a year ago. The new `npx release-2021-03-fix-group-memberships` command fixes those tables completely.
+We're having some customers running an old state of the groups tables which got partially corrupted by some old user merge logic that we've fixed about a year ago. The new `release-2021-03-fix-group-memberships` command fixes those tables completely.
 
-- :fire: Run `npx release-2021-03-fix-group-memberships` to fix corrupt membership data
+- :fire: Run `npx livingdocs-server release-2021-03-fix-group-memberships` to fix corrupt membership data
 
 References:
 - [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3418)
