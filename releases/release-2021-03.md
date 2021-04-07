@@ -20,13 +20,11 @@
 
 #### Features
 
-* Recording: **TODO**
 * Documentation: [here](https://docs.google.com/document/d/1gSbHm6nRBT0O8i9Z2UPvQ_PSLS_ZtGiy_qi8erTIMls)
 
 #### Developers
 
-* Recording: **TODO**
-* Slides: **TODO**
+* Slides: [here](https://docs.google.com/presentation/d/e/2PACX-1vTZHMF4UEK40l3dAOHA8rz4gPge2LXJD8R8R6alGDUgGbotd2iBuy44bsSWJvg_aKcFxa8ft8dFMyPH/pub?start=false&loop=false&delayms=3000&slide=id.g5d9a6eb16f_1_0)
 
 # Repositories
 
