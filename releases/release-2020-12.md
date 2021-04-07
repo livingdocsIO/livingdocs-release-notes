@@ -26,7 +26,7 @@
 #### Developers
 
 * Recording: [here](https://us02web.zoom.us/rec/share/cygtXhg7Kn1M5ge4cZ8tOLCacrGUxhEccVz-W8Ew2nX03tztmWFx0g7oBu7YX7xe.WMbL_taUDRE9Xdj3) (code: #0jfi47c)
-* Slides: [here](https://docs.google.com/presentation/d/1ZTg6U8JI3GSenrt9qySiNoa3LSXYk8Bp3rVyREmgl1w/edit#slide=id.g5d9a6eb16f_1_0)
+* Slides: [here](https://docs.google.com/presentation/d/e/2PACX-1vToisv-nnjqHgDdVu_agXTchS_9pX5T_gtYBxg8Jjon7zauQQ-0BgiKhY5i7Ju4xdIM3Pp1bToGkBci/pub?start=false&loop=false&delayms=3000)
 
 # Repositories
 
