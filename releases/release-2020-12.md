@@ -49,6 +49,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-12
 
 ### Livingdocs Server Patches
+- [v114.0.50](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.50): fix(queue): Do not delete the consumer if we can't transfer the pending messages
 - [v114.0.49](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.49): fix: Do not send out too many 'new device login' emails
 - [v114.0.48](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.48): fix(openid-connect): fix various coercion issues
 - [v114.0.47](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.47): fix(open-id-connect-sso): correctly resolve projectIds as strings
