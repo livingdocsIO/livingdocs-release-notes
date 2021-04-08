@@ -20,7 +20,7 @@
 
 #### Features
 
-* Documentation: [here](https://docs.google.com/document/d/1gSbHm6nRBT0O8i9Z2UPvQ_PSLS_ZtGiy_qi8erTIMls)
+* Documentation/Recording: [here](https://docs.google.com/document/d/1gSbHm6nRBT0O8i9Z2UPvQ_PSLS_ZtGiy_qi8erTIMls)
 
 #### Developers
 
