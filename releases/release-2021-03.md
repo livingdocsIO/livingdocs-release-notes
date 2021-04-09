@@ -48,6 +48,10 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-03
 
 ### Livingdocs Server Patches
+- [v124.5.32](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.32): fix(publication): Keep first_publication_id on unpublish
+
+This property is used to check if a document has ever been published,
+so once it has been set it should always exist
 - [v124.5.31](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.31): fix(print): fix crash on certificate errors
 - [v124.5.30](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.30): fix(queue): Fix a typo and apply the same pending check to the xcleanup script
 - [v124.5.29](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.29): fix(queue): Do not delete the consumer if we can't transfer the pending messages
