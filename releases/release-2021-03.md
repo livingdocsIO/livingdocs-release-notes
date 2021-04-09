@@ -48,6 +48,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-03
 
 ### Livingdocs Server Patches
+- [v124.5.31](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.31): fix(print): fix crash on certificate errors
 - [v124.5.30](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.30): fix(queue): Fix a typo and apply the same pending check to the xcleanup script
 - [v124.5.29](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.29): fix(queue): Do not delete the consumer if we can't transfer the pending messages
 - [v124.5.28](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.28): chore(openid): Move getOrCreateProject to support file
