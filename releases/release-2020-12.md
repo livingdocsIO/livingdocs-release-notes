@@ -49,6 +49,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-12
 
 ### Livingdocs Server Patches
+- [v114.0.53](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.53): fix(login): Users will be able to log in even if new device emails can not be sent
 - [v114.0.52](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.52): fix(print): fix crash on certificate errors
 - [v114.0.51](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.51): fix(queue): Fix a typo and apply the same pending check to the xcleanup script
 - [v114.0.50](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.50): fix(queue): Do not delete the consumer if we can't transfer the pending messages
