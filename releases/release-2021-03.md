@@ -48,6 +48,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-03
 
 ### Livingdocs Server Patches
+- [v124.5.34](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.34): fix(public-api): allow to set 'publicationDate' flag on import
 - [v124.5.33](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.33): fix: correctly log in users that create their accounts with SSO
 - [v124.5.32](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.32): fix(publication): Keep first_publication_id on unpublish
 
