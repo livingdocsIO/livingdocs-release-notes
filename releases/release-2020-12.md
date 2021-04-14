@@ -144,6 +144,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-12
 
 ### Livingdocs Editor Patches
+- [v57.33.58](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.58): fix(clipboard): render includes when dropping a component from the clipboard
 - [v57.33.57](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.57): fix(viewport-viewport-units-buggyfill): improve regex to match only vh units
 - [v57.33.56](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.56): fix: show an indicator incase the ES limit defaults to 10000 total documents
 - [v57.33.55](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.55): fix(BW service changer): Markup updated to new standard
