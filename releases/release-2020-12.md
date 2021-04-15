@@ -49,6 +49,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-12
 
 ### Livingdocs Server Patches
+- [v114.0.56](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.56): fix(hugo): require auth on all print routes
 - [v114.0.55](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.55): fix(print-api): Force `no-cache` for print API requests
 
 If the Livingdocs Editor is cached via CDN print API requests like `getLayouts` will return a cached/outdated version. This will fix the issue.
