@@ -27,6 +27,22 @@
 * Slides: [here](https://docs.google.com/presentation/d/e/2PACX-1vTZHMF4UEK40l3dAOHA8rz4gPge2LXJD8R8R6alGDUgGbotd2iBuy44bsSWJvg_aKcFxa8ft8dFMyPH/pub?start=false&loop=false&delayms=3000&slide=id.g5d9a6eb16f_1_0)
 * Video: [here](https://us02web.zoom.us/rec/play/DPHqD8K6fVJbNVKon-oDu9ZOPzyjgPvRDS8CiqRA8uaiZ9KiQXIpuTpTjJ_NR8ke39VN8alRNMzbCGXq.XOMZuoBbvpdlHrgR?startTime=1617871969000&_x_zm_rtaid=RHvqvTfISdKgOm4AgbOGdw.1617882110914.f572a02e3425f855371a47d681f7d3af&_x_zm_rhtaid=96)
 
+# System Requirements
+
+#### Minimal
+* Node 12
+* NPM 7
+* Postgres 9.6
+* Elasticsearch 6.x
+* Redis 5
+
+#### Suggested
+* Node 14
+* NPM 7
+* Postgres 13
+* Elasticsearch 7
+* Redis 6
+
 # Repositories
 
 This release consists of the following new versions of the `livingdocs-server` and the `livingdocs-editor`:
