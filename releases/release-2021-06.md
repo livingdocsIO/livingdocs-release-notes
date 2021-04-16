@@ -33,6 +33,22 @@ server until: 127.4.2
 * Recording: **TODO**
 * Slides: **TODO**
 
+# System Requirements
+
+#### Minimal
+* Node 12
+* NPM 7
+* Postgres 9.6
+* Elasticsearch 6.x
+* Redis 5
+
+#### Suggested
+* Node 14
+* NPM 7
+* Postgres 13
+* Elasticsearch 7
+* Redis 6
+
 # Repositories
 
 This release consists of the following new versions of the `livingdocs-server` and the `livingdocs-editor`:
