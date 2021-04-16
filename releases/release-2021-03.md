@@ -64,6 +64,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-03
 
 ### Livingdocs Server Patches
+- [v124.5.37](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.37): fix(document-copy): Rewrite the document-copy config loader to promises to ensure that the promises always resolve
 - [v124.5.36](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.36): fix(queue): Automatically delete consumers where the consumer group in redis got deleted manually
 - [v124.5.35](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.35): chore: simplify code
 - [v124.5.34](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.34): fix(public-api): allow to set 'publicationDate' flag on import
