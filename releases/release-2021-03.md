@@ -95,6 +95,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-03
 
 ### Livingdocs Editor Patches
+- [v63.8.38](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.38): fix(test): pin vue-test-utils version to 1.1.3
 - [v63.8.37](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.37): fix: to create a new tag
 - [v63.8.36](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.36): fix(clipboard): render includes when dropping a component from the clipboard
 - [v63.8.35](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.35): fix(multiselect): only allow to transform available components in a content-type
