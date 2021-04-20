@@ -96,6 +96,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-03
 
 ### Livingdocs Editor Patches
+- [v63.8.40](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.40): fix(crops): simplify metadata crop calculations
 - [v63.8.39](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.39): test(metadata updater): add tests for crop url recalculation on crop coordinates change on an li-image
 - [v63.8.38](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.38): fix(test): pin vue-test-utils version to 1.1.3
 - [v63.8.37](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.37): fix: to create a new tag
