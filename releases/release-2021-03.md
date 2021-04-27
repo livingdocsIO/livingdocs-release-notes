@@ -323,7 +323,7 @@ References:
 
 As described in the [APIs](#apis-gift) section, we extend some endpoints (public API + server API) with reference information of a document. Old document references need to be converted into the new format with a manual db migration.
 
-After the release, execute the manual db migration `node ./db/manual-migrations/006-generate-references`
+After the release, execute the manual db migration `node node_modules/@livingdocs/server/db/manual-migrations/006-generate-references`
 
 These are the key changes/issues
 - It's a database heavy operation and should be executed outside business time (when having a lot of documents)
