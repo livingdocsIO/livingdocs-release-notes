@@ -3,6 +3,7 @@
 # Table of content
 - [Newsletter](#newsletter)
 - [Webinar](#webinar)
+- [System Requirements](#system-requirements)
 - [Patches](#repositories)
 - [Highlights](#highlights)
 - [Experimental](#experimental)
@@ -27,6 +28,17 @@
 
 * Recording: [here](https://us02web.zoom.us/rec/share/cygtXhg7Kn1M5ge4cZ8tOLCacrGUxhEccVz-W8Ew2nX03tztmWFx0g7oBu7YX7xe.WMbL_taUDRE9Xdj3) (code: #0jfi47c)
 * Slides: [here](https://docs.google.com/presentation/d/e/2PACX-1vToisv-nnjqHgDdVu_agXTchS_9pX5T_gtYBxg8Jjon7zauQQ-0BgiKhY5i7Ju4xdIM3Pp1bToGkBci/pub?start=false&loop=false&delayms=3000)
+
+# System Requirements
+
+#### Minimal
+* Elasticsearch 6.8.5 :fire:
+
+#### Suggested
+* Elasticsearch 7
+* Base Docker Images
+  * livingdocs-server: `livingdocs/server-base:14.3`
+  * livingdocs-editor: `livingdocs/editor-base:14.3`
 
 # Repositories
 
