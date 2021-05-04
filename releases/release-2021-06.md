@@ -7,6 +7,7 @@ server until: 128.2.1
 # Table of content
 - [Newsletter](#newsletter)
 - [Webinar](#webinar)
+- [System Requirements](#system-requirements)
 - [Patches](#repositories)
 - [Highlights](#highlights)
 - [Breaking Changes](#breaking-changes-fire)
@@ -41,13 +42,19 @@ server until: 128.2.1
 * Postgres 9.6
 * Elasticsearch 6.x
 * Redis 5
+* Base Docker Images
+  * livingdocs-server: `livingdocs/server-base:14`
+  * livingdocs-editor: `livingdocs/editor-base:14`
 
 #### Suggested
-* Node 15
+* Node 16
 * NPM 7
 * Postgres 13
 * Elasticsearch 7
 * Redis 6
+* Base Docker Images
+  * livingdocs-server: `livingdocs/server-base:16`
+  * livingdocs-editor: `livingdocs/editor-base:16`
 
 # Repositories
 
