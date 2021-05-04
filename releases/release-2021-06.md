@@ -43,8 +43,8 @@ server until: 128.2.1
 * Elasticsearch 6.x
 * Redis 5
 * Base Docker Images
-  * livingdocs-server: `livingdocs/server-base:14`
-  * livingdocs-editor: `livingdocs/editor-base:14`
+  * livingdocs-server: `livingdocs/server-base:14.3`
+  * livingdocs-editor: `livingdocs/editor-base:14.3`
 
 #### Suggested
 * Node 16
