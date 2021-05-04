@@ -3,6 +3,7 @@
 # Table of content
 - [Newsletter](#newsletter)
 - [Webinar](#webinar)
+- [System Requirements](#system-requirements)
 - [Patches](#repositories)
 - [Highlights](#highlights)
 - [Breaking Changes](#breaking-changes-fire)
@@ -35,6 +36,9 @@
 * Postgres 9.6
 * Elasticsearch 6.x
 * Redis 5
+* Base Docker Images
+  * livingdocs-server: `livingdocs/server-base:12.5`
+  * livingdocs-editor: `livingdocs/editor-base:12.2`
 
 #### Suggested
 * Node 14
@@ -42,6 +46,9 @@
 * Postgres 13
 * Elasticsearch 7
 * Redis 6
+* Base Docker Images
+  * livingdocs-server: `livingdocs/server-base:14.3`
+  * livingdocs-editor: `livingdocs/editor-base:14.3`
 
 # Repositories
 
