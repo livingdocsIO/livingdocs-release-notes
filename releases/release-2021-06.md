@@ -39,7 +39,7 @@ server until: 128.2.1
 #### Minimal
 * Node 14 :fire:
 * NPM 7
-* Postgres 9.6
+* Postgres 9.6 (Deprecate Postgres 9 and 10)
 * Elasticsearch 6.x
 * Redis 5
 * Base Docker Images
