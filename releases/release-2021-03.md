@@ -106,6 +106,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-03
 
 ### Livingdocs Editor Patches
+- [v63.8.45](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.45): fix: update integration test because of an outdated github API
 - [v63.8.44](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.44): fix(crop): prevent mousedown and mouseup events from zoom-control buttons to srcissors crop-view
 - [v63.8.43](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.43): fix(framework): update framework to 18.6.4
 - [v63.8.42](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.42): fix(clipboard): do not insert default content on clipboard drop
