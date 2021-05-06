@@ -1,6 +1,6 @@
 
-editor until: 66.4.3
-server until: 128.2.1
+editor until: 66.8.1
+server until: 132.1.0
 
 **Attention:** If you skipped one or more releases, please also check the release-notes of the skipped ones.
 
@@ -101,22 +101,40 @@ How to require the editor in your package.json:
 
 # Highlights
 
+## Include Preloader :tada:
+
+TODO@peyerluk add a nice text
+
+* References
+  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3618)
+  * [Documentation TODO@peyerluk]()
+
+
 ## Media Library - Multi Language :tada:
 
 With the introduction of the multi language metadata feature, one can now translate metadata into different languages.
 
 * References
-  * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4283)
-  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3512)
+  * [Multilanguage Metadata for Images](https://github.com/livingdocsIO/livingdocs-editor/pull/4283)
+  * [Multilanguage Metadata for Videos](https://github.com/livingdocsIO/livingdocs-editor/pull/4372)
+  * [Prefilling for Images](https://github.com/livingdocsIO/livingdocs-editor/pull/4357)
+  * [Multilanguage Media Upload](https://github.com/livingdocsIO/livingdocs-editor/pull/4364)
+  * [Multilanguage Media Library Types](https://github.com/livingdocsIO/livingdocs-server/pull/3512)
+  * [Media Library Support for Granular Patches](https://github.com/livingdocsIO/livingdocs-server/pull/3624)
   * [Documentation TODO@benib]()
 
-## Media Library - Add Support for Files
+## Media Library - Add Support for Files :tada:
 
 Additionally to the existing images and videos, we now also support files in the Media Library.
 
 * References
-  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3595)
+  * [File Upload Editor](https://github.com/livingdocsIO/livingdocs-editor/pull/4373)
+  * [File Upload Server](https://github.com/livingdocsIO/livingdocs-server/pull/3595)
+  * [Remove Old File Upload in Server](https://github.com/livingdocsIO/livingdocs-server/pull/3643)
   * [Documentation TODO@benib]()
+  * [Documentation Media Type mediaFile](https://github.com/livingdocsIO/documentation/pull/395)
+  * [Documentation Media Library Config](https://github.com/livingdocsIO/documentation/pull/393)
+
 
 
 ## Media Library - Video - Add Transcoding Metadata Plugin :tada:
@@ -130,6 +148,18 @@ With the video transcoding metadata plugin
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4324)
   * [Server PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3568)
   * [Documentation TODO@romankaravia]()
+
+
+## New License Model :tada:
+
+TODO@Gabriel add some nice words
+
+* References
+  * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4334)
+  * [Server PR Iteration 1](https://github.com/livingdocsIO/livingdocs-server/pull/3594)
+  * [Server PR Iteration 2](https://github.com/livingdocsIO/livingdocs-server/pull/3637)
+  * [Documentation TODO@gabriel]()
+
 
 
 
@@ -228,6 +258,71 @@ Some writing operations of the `documentsApi` return a `LegacyDocumentModel`.
 
 References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3542)
 
+### Remove Support for Callbacks in Authentication API :fire:
+
+:fire: Remove callback support for `authenticationApi` (`server.features.api('li-authentication')`) functions. Only promise based calls are supported.
+
+References:
+- [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3633)
+
+
+### Media Library Server Config :fire:
+
+- :fire: remove serverConfig `assetManagement` (googleVision and enabled has no effect since release-2020-07)
+- :fire: remove serverConfig `mediaLibrary.enabled` (had no effect since release-2020-07)
+- :fire: remove serverConfig `mediaLibrary.types` (had no effect since release-2020-07) use [mediaTypes](https://docs.livingdocs.io/enterprise/reference-docs/project-config/media_types/) instead
+- :fire: remove serverConfig `mediaLibrary.autoTagging` (googleVision has no effect since release-2020-07) use [project integrations](https://docs.livingdocs.io/enterprise/reference-docs/server-configuration/#google-vision-api) instead
+- :fire: remove serverConfig `mediaLibrary.paginationSize` (had no effect since release-2020-07)
+
+References:
+- [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3642)
+
+
+### Moved Elasticsearch Properties :fire:
+
+The server configuration `search.indexer` got moved into `elasticIndex`. The old `search.indexer` config got removed.
+
+- :fire: Move `search.indexer.concurrency` to `elasticIndex.concurrency`
+- :fire: Move `search.indexer.batchSize` to `elasticIndex.batchSize`
+- :fire: Move `search.indexer.maxCpu` to `elasticIndex.maxCpu`
+
+References:
+- [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3640)
+
+
+### Remove Old File Feature :fire:
+
+- :fire: removed core feature `li-files`
+- :fire: removed server API `liServer.features.api('li-files')`
+- :fire: removed `/files/upload` in editing API, use `POST /media-library/upload-file` instead
+
+#### 🔧 How to migrate
+
+If you used the file upload through drag&drop into documents before, you now have to configure a `mediaType` like this to restore that behavior:
+
+```js
+module.exports = {
+  type: 'mediaFile',
+  handle: 'file',
+  info: {
+    label: 'File'
+  },
+  metadata: [
+    {
+      handle: 'title',
+      type: 'li-text',
+      ui: {component: 'liMetaTextForm'},
+    }
+  ]
+}
+```
+
+A more detailed description can be found in the [documentation](https://github.com/livingdocsIO/documentation/pull/395)
+
+References:
+- [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3643)
+
+
 
 
 # Deprecations
@@ -236,10 +331,11 @@ We did a cleanup for asset related server configs and moved them into the mediaL
 
 🔧  Deprecate server config `files`. Move config to server config `mediaLibrary.files`
 🔧  Deprecate server config `videos`. Move config to server config `mediaLibrary.videos`
+🔧  Deprecate server config `images`. Move config to server config `mediaLibrary.images`
 
 References:
-* [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3595)
-
+* [Server PR - files/videos](https://github.com/livingdocsIO/livingdocs-server/pull/3595)
+* [Server PR - images](https://github.com/livingdocsIO/livingdocs-server/pull/3627)
 
 
 # APIs :gift:
@@ -317,6 +413,17 @@ References:
 * Do not use offensive project handles [livingdocs-server #3589](https://github.com/livingdocsIO/livingdocs-server/pull/3589) :gift:
 * Show tasks in toolbar as soon as the content-type has a task config [livingdocs-editor #4359](https://github.com/livingdocsIO/livingdocs-editor/pull/4359) :gift:
 * Configure icons for each ContentType [livingdocs-editor #4339](https://github.com/livingdocsIO/livingdocs-editor/pull/4339) :gift:
+* MediaLibrary
+  * Download files in editor via server [livingdocs-server #3627](https://github.com/livingdocsIO/livingdocs-server/pull/3627) :gift:
+  * Improve config error handling [livingdocs-server #3647](https://github.com/livingdocsIO/livingdocs-server/pull/3647) :gift:
+  * Use video poster image in dashboard card [livingdocs-editor #4363](https://github.com/livingdocsIO/livingdocs-editor/pull/4363) :gift:
+* Public API: fix order and validation in `/api/v1/documents/latestPublications` [livingdocs-server #3649](https://github.com/livingdocsIO/livingdocs-server/pull/3649) :gift:
+* Editor
+  * Emitting event before a connection is initialised no longer throws errors. [livingdocs-editor #4366](https://github.com/livingdocsIO/livingdocs-editor/pull/4366) :gift:
+  * Consider image drop cases with insertsBlocked [livingdocs-editor #4377](https://github.com/livingdocsIO/livingdocs-editor/pull/4377) :gift:
+  * Configure Icons for each ContentType [livingdocs-editor #4339](https://github.com/livingdocsIO/livingdocs-editor/pull/4339) :gift:
+  * Imatrics performance improvements [livingdocs-editor #4347](https://github.com/livingdocsIO/livingdocs-editor/pull/4347) :gift:
+
 
 ### Bugfixes
 
@@ -325,31 +432,33 @@ References:
 * Prevent identity creation without a user  [livingdocs-server #3560](https://github.com/livingdocsIO/livingdocs-server/pull/3560) :beetle:
 * Do not send out too many 'new device login' emails [livingdocs-server #3571](https://github.com/livingdocsIO/livingdocs-server/pull/3571) :beetle:
 * Users will be able to log in even if new device emails cant be sent [livingdocs-server #3597](https://github.com/livingdocsIO/livingdocs-server/pull/3597) :beetle:
-* Correctly redirect upon signup [livingdocs-editor #4232](https://github.com/livingdocsIO/livingdocs-editor/pull/4232) :gift:
-* Log users in even if they dont have a default design [livingdocs-editor #4275](https://github.com/livingdocsIO/livingdocs-editor/pull/4275) :gift:
+* Correctly redirect upon signup [livingdocs-editor #4232](https://github.com/livingdocsIO/livingdocs-editor/pull/4232) :beetle:
+* Log users in even if they dont have a default design [livingdocs-editor #4275](https://github.com/livingdocsIO/livingdocs-editor/pull/4275) :beetle:
 
 #### Editor
 
 * Link tool
-  * Make removing an existing link possible again [livingdocs-editor #4321](https://github.com/livingdocsIO/livingdocs-editor/pull/4321) :gift:
-  * Improve delivery path pattern matching and handling of matching paths with nonexisting IDs [livingdocs-editor #4325](https://github.com/livingdocsIO/livingdocs-editor/pull/4325) :gift:
-* Multiselect: Only allow to transform available components of a content-type [livingdocs-editor #4331](https://github.com/livingdocsIO/livingdocs-editor/pull/4331) :gift:
+  * Make removing an existing link possible again [livingdocs-editor #4321](https://github.com/livingdocsIO/livingdocs-editor/pull/4321) :beetle:
+  * Improve delivery path pattern matching and handling of matching paths with nonexisting IDs [livingdocs-editor #4325](https://github.com/livingdocsIO/livingdocs-editor/pull/4325) :beetle:
+* Multiselect: Only allow to transform available components of a content-type [livingdocs-editor #4331](https://github.com/livingdocsIO/livingdocs-editor/pull/4331) :beetle:
 * Clipboard
-  * Fix drag and drop of a container [livingdocs-editor #4243](https://github.com/livingdocsIO/livingdocs-editor/pull/4243) :gift:
-  * Render includes when dropping a component from the clipboard [livingdocs-editor #4330](https://github.com/livingdocsIO/livingdocs-editor/pull/4330) :gift:
-  * Do not insert default content when dropping a component [livingdocs-editor #4358](https://github.com/livingdocsIO/livingdocs-editor/pull/4358) :gift:
-* Search Filter: Fix multiSourceSearch to use filters [livingdocs-editor #4257](https://github.com/livingdocsIO/livingdocs-editor/pull/4257) :gift:
+  * Fix drag and drop of a container [livingdocs-editor #4243](https://github.com/livingdocsIO/livingdocs-editor/pull/4243) :beetle:
+  * Render includes when dropping a component from the clipboard [livingdocs-editor #4330](https://github.com/livingdocsIO/livingdocs-editor/pull/4330) :beetle:
+  * Do not insert default content when dropping a component [livingdocs-editor #4358](https://github.com/livingdocsIO/livingdocs-editor/pull/4358) :beetle:
+* Search Filter: Fix multiSourceSearch to use filters [livingdocs-editor #4257](https://github.com/livingdocsIO/livingdocs-editor/pull/4257) :beetle:
 * Editor Admin
-  * Fix ordering of semantic versions in design screen [livingdocs-editor #4260](https://github.com/livingdocsIO/livingdocs-editor/pull/4260) :gift:
-  * Fix group screen errors [livingdocs-editor #4226](https://github.com/livingdocsIO/livingdocs-editor/pull/4226) :gift:
-  * Webhooks: fix the form layout for the event checkboxes [livingdocs-editor #4320](https://github.com/livingdocsIO/livingdocs-editor/pull/4320) :gift:
-* Includes: Fix checkboxes for twitch and instagram include [livingdocs-editor #4262](https://github.com/livingdocsIO/livingdocs-editor/pull/4262) :gift:
-* Show correct message when server is offline and proxiedHost is enabled [livingdocs-editor #4264](https://github.com/livingdocsIO/livingdocs-editor/pull/4264) :gift:
+  * Fix ordering of semantic versions in design screen [livingdocs-editor #4260](https://github.com/livingdocsIO/livingdocs-editor/pull/4260) :beetle:
+  * Fix group screen errors [livingdocs-editor #4226](https://github.com/livingdocsIO/livingdocs-editor/pull/4226) :beetle:
+  * Webhooks: fix the form layout for the event checkboxes [livingdocs-editor #4320](https://github.com/livingdocsIO/livingdocs-editor/pull/4320) :beetle:
+* Includes: Fix checkboxes for twitch and instagram include [livingdocs-editor #4262](https://github.com/livingdocsIO/livingdocs-editor/pull/4262) :beetle:
+* Show correct message when server is offline and proxiedHost is enabled [livingdocs-editor #4264](https://github.com/livingdocsIO/livingdocs-editor/pull/4264) :beetle:
 * Metadata
-  * li-text: correctly render when `config.useAsTitle` [livingdocs-editor #4270](https://github.com/livingdocsIO/livingdocs-editor/pull/4270) :gift:
-  * li-image: Crop url fix [livingdocs-editor #4348](https://github.com/livingdocsIO/livingdocs-editor/pull/4348) :gift:
-  * li-image / li-poster-image: Crop handling [livingdocs-editor #4352](https://github.com/livingdocsIO/livingdocs-editor/pull/4352) :gift:
-  * li-date-time-validity: Ensure date input format for all metadata fields is ISO 8601 compatible [livingdocs-editor #4356](https://github.com/livingdocsIO/livingdocs-editor/pull/4356) :gift:
+  * li-text: correctly render when `config.useAsTitle` [livingdocs-editor #4270](https://github.com/livingdocsIO/livingdocs-editor/pull/4270) :beetle:
+  * li-image: Crop url fix [livingdocs-editor #4348](https://github.com/livingdocsIO/livingdocs-editor/pull/4348) :beetle:
+  * li-image / li-poster-image: Crop handling [livingdocs-editor #4352](https://github.com/livingdocsIO/livingdocs-editor/pull/4352) :beetle:
+  * li-date-time-validity: Ensure date input format for all metadata fields is ISO 8601 compatible [livingdocs-editor #4356](https://github.com/livingdocsIO/livingdocs-editor/pull/4356) :beetle:
+* Images: Fix the step behavior of the zoom buttons on the image cropper [livingdocs-editor #4367](https://github.com/livingdocsIO/livingdocs-editor/pull/4367) :beetle:
+
 
 #### Server
 
