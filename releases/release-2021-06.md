@@ -322,6 +322,15 @@ A more detailed description can be found in the [documentation](https://github.c
 References:
 - [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3643)
 
+### Remove Registration Endpoints :fire:
+
+- :fire: removed editing API endpoint `register`
+- :fire: removed editing API endpoint `register/website`
+
+References:
+- [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3594)
+
+
 
 
 
