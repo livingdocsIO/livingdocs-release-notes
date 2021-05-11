@@ -1,6 +1,7 @@
 
-editor until: 66.8.1
-server until: 132.1.0
+editor until: 67.1.1
+server until: 132.1.4
+
 
 **Attention:** If you skipped one or more releases, please also check the release-notes of the skipped ones.
 
@@ -101,6 +102,17 @@ How to require the editor in your package.json:
 
 # Highlights
 
+## Comment mentions :tada:
+
+Allows in the comments a user A to mention another user B. User B then gets a notification. Check the [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4375) if you want to get some visual impressions.
+
+* References
+  * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4375)
+  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3652)
+  * [Documentation TODO@meinrad]()
+
+
+
 ## Include Preloader :tada:
 
 TODO@peyerluk add a nice text
@@ -129,8 +141,8 @@ Additionally to the existing images and videos, we now also support files in the
 
 * References
   * [File Upload Editor](https://github.com/livingdocsIO/livingdocs-editor/pull/4373)
+  * [File Icons Editor](https://github.com/livingdocsIO/livingdocs-editor/pull/4385)
   * [File Upload Server](https://github.com/livingdocsIO/livingdocs-server/pull/3595)
-  * [Remove Old File Upload in Server](https://github.com/livingdocsIO/livingdocs-server/pull/3643)
   * [Documentation TODO@benib]()
   * [Documentation Media Type mediaFile](https://github.com/livingdocsIO/documentation/pull/395)
   * [Documentation Media Library Config](https://github.com/livingdocsIO/documentation/pull/393)
@@ -290,13 +302,7 @@ References:
 - [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3640)
 
 
-### Remove Old File Feature :fire:
-
-- :fire: removed core feature `li-files`
-- :fire: removed server API `liServer.features.api('li-files')`
-- :fire: removed `/files/upload` in editing API, use `POST /media-library/upload-file` instead
-
-#### 🔧 How to migrate
+### Old File Upload :fire:
 
 If you used the file upload through drag&drop into documents before, you now have to configure a `mediaType` like this to restore that behavior:
 
@@ -317,10 +323,8 @@ module.exports = {
 }
 ```
 
-A more detailed description can be found in the [documentation](https://github.com/livingdocsIO/documentation/pull/395)
-
 References:
-- [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3643)
+- [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4373)
 
 ### Remove Registration Endpoints :fire:
 
@@ -329,6 +333,14 @@ References:
 
 References:
 - [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3594)
+
+
+### Enable Notification when using Comments :fire:
+
+TODO@meinrad
+
+References:
+- [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3652)
 
 
 
@@ -466,7 +478,11 @@ References:
   * li-image: Crop url fix [livingdocs-editor #4348](https://github.com/livingdocsIO/livingdocs-editor/pull/4348) :beetle:
   * li-image / li-poster-image: Crop handling [livingdocs-editor #4352](https://github.com/livingdocsIO/livingdocs-editor/pull/4352) :beetle:
   * li-date-time-validity: Ensure date input format for all metadata fields is ISO 8601 compatible [livingdocs-editor #4356](https://github.com/livingdocsIO/livingdocs-editor/pull/4356) :beetle:
-* Images: Fix the step behavior of the zoom buttons on the image cropper [livingdocs-editor #4367](https://github.com/livingdocsIO/livingdocs-editor/pull/4367) :beetle:
+* Images:
+  * Fix the step behavior of the zoom buttons on the image cropper [livingdocs-editor #4367](https://github.com/livingdocsIO/livingdocs-editor/pull/4367) :beetle:
+  * Fix issue where an image could not be dropped onto a directive of a fixed component if no insert before or after this component is allowed. [livingdocs-editor #4377](https://github.com/livingdocsIO/livingdocs-editor/pull/4377) :beetle:
+* Upload Center: Don't close the upload dialog when the crop tool is opened from the upload dialog [livingdocs-editor #4383](https://github.com/livingdocsIO/livingdocs-editor/pull/4383) :beetle:
+* Comments: Init comments only when they are enabled on collab bar [livingdocs-editor #4337](https://github.com/livingdocsIO/livingdocs-editor/pull/4337) :beetle:
 
 
 #### Server
