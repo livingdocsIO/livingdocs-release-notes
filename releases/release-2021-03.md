@@ -71,6 +71,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-03
 
 ### Livingdocs Server Patches
+- [v124.5.42](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.42): fix(notifications): use Authorization Header for slack api
 - [v124.5.41](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.41): fix: update integration test because of an outdated github API
 - [v124.5.40](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.40): fix(langauge-metadata): test for object
 - [v124.5.39](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.39): test(import): check response format of input in more detail
