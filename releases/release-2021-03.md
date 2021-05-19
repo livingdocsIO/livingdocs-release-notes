@@ -71,6 +71,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-03
 
 ### Livingdocs Server Patches
+- [v124.5.44](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.44): fix(indexing): Support a elasticIndex.maxCpuFunction config option to define a cpu threshold getter function
 - [v124.5.43](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.43): chore: Upgrade sharp to get the setup working with node 16
 - [v124.5.42](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.42): fix(notifications): use Authorization Header for slack api
 - [v124.5.41](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.41): fix: update integration test because of an outdated github API
