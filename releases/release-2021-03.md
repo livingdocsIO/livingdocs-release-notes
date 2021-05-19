@@ -110,6 +110,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-03
 
 ### Livingdocs Editor Patches
+- [v63.8.49](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.49): chore(CI): run nzz tests with node 16
 - [v63.8.48](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.48): fix: imatrics performance improvements & fix styling issues
 - [v63.8.47](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.47): fix: init comments only when they are enabled
 - [v63.8.46](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.46): fix(dropActions): consider image drop cases with insertsBlocked
