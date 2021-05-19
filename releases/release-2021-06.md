@@ -77,6 +77,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-06
 
 ### Livingdocs Server Patches
+- [v135.1.7](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.7): test(media-library): Test translations support of video and file uploads
 - [v135.1.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.6): fix(process-config): Do not coerce functions to objects
 - [v135.1.5](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.5): fix(sitemaps): move sitemaps to public api
 - [v135.1.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.4): fix(indexing): Support a elasticIndex.maxCpuFunction config option to define a cpu threshold getter function
