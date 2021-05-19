@@ -1,4 +1,3 @@
-
 editor until: 67.1.1
 server until: 132.1.4
 
@@ -94,6 +93,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.1](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.1): fix: update framework for release
 - [v??.?.?](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v??.?.?): text
 
 
