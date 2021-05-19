@@ -98,6 +98,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.4](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.4): fix(vms): ensure li-transcoding-state-form triggers save
 - [v67.6.3](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.3): fix(sso): correctly show alternative login buttons
 - [v67.6.2](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.2): fix(media library): await user loading for detail screen
 - [v67.6.1](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.1): fix: update framework for release
