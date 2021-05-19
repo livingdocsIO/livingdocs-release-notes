@@ -77,6 +77,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-06
 
 ### Livingdocs Server Patches
+- [v135.1.2](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.2): fix: update framework for release
 - [v??.?.?](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v??.?.?): text
 
 
