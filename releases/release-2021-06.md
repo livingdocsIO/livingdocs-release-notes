@@ -77,6 +77,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-06
 
 ### Livingdocs Server Patches
+- [v135.1.8](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.8): fix(group_projection): add archived to return object
 - [v135.1.7](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.7): test(media-library): Test translations support of video and file uploads
 - [v135.1.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.6): fix(process-config): Do not coerce functions to objects
 - [v135.1.5](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.5): fix(sitemaps): move sitemaps to public api
