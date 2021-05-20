@@ -1,7 +1,3 @@
-editor until: 67.1.1
-server until: 132.1.4
-
-
 **Attention:** If you skipped one or more releases, please also check the release-notes of the skipped ones.
 
 # Table of content
@@ -77,14 +73,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-06
 
 ### Livingdocs Server Patches
-- [v135.1.8](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.8): fix(group_projection): add archived to return object
-- [v135.1.7](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.7): test(media-library): Test translations support of video and file uploads
-- [v135.1.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.6): fix(process-config): Do not coerce functions to objects
-- [v135.1.5](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.5): fix(sitemaps): move sitemaps to public api
-- [v135.1.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.4): fix(indexing): Support a elasticIndex.maxCpuFunction config option to define a cpu threshold getter function
-- [v135.1.3](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.3): fix(lists): don't crash if list is undefined
-- [v135.1.2](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.2): fix: update framework for release
-- [v??.?.?](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v??.?.?): text
+- [v135.1.8](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.8): Group projection: add archived to return object
 
 
 
@@ -100,26 +89,28 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
-- [v67.6.9](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.9): chore(dependencies): Upgrade fastify-reply-from to get rid of deprecation message with node 16
-- [v67.6.8](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.8): fix(icons): add icons for blue
-- [v67.6.7](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.7): fix(media library): clamp the preview to max height for portrait format images/videos. Ensure images/video are shown entirely without overlowing the preview.
-- [v67.6.6](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.6): test(history): adapt test to localized date format
-- [v67.6.5](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.5): fix(comments-mentioning): only show users with name and not archived
-- [v67.6.4](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.4): fix(vms): ensure li-transcoding-state-form triggers save
-- [v67.6.3](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.3): fix(sso): correctly show alternative login buttons
-- [v67.6.2](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.2): fix(media library): await user loading for detail screen
-- [v67.6.1](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.1): fix: update framework for release
-- [v??.?.?](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v??.?.?): text
-
+- [v67.6.9](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.9): Upgrade fastify-reply-from to get rid of deprecation message with node 16
 
 
 
 
 # Highlights
 
+## Document Import between Projects (Drag + Drop)
+
+Allows to export/import a document via drag + drop. A user can drag a document A in project A onto the dashboard of project B, then the dropped document will be imported.
+
+* References
+  * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4387)
+  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3604)
+  * [Documentation TODO@Alex]()
+
+
 ## Comment mentions :tada:
 
 Allows in the comments a user A to mention another user B. User B then gets a notification. Check the [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4375) if you want to get some visual impressions.
+
+Important: If you want to use comments mentioning, you have to enable [Notifications](https://docs.livingdocs.io/enterprise/guides/watching-documents/)
 
 * References
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4375)
@@ -127,14 +118,12 @@ Allows in the comments a user A to mention another user B. User B then gets a no
   * [Documentation TODO@meinrad]()
 
 
-
-## Include Preloader :tada:
+## Composition API
 
 TODO@peyerluk add a nice text
 
-* References
-  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3618)
-  * [Documentation TODO@peyerluk]()
+* [Composition API preparation](https://github.com/livingdocsIO/livingdocs-server/pull/3668)
+* [Composition API](https://github.com/livingdocsIO/livingdocs-server/pull/3667)
 
 
 ## Media Library - Multi Language :tada:
@@ -148,9 +137,10 @@ With the introduction of the multi language metadata feature, one can now transl
   * [Multilanguage Media Upload](https://github.com/livingdocsIO/livingdocs-editor/pull/4364)
   * [Multilanguage Media Library Types](https://github.com/livingdocsIO/livingdocs-server/pull/3512)
   * [Media Library Support for Granular Patches](https://github.com/livingdocsIO/livingdocs-server/pull/3624)
+  * [Replace / Translate Assets Editor](https://github.com/livingdocsIO/livingdocs-editor/pull/4393) :gift:
   * [Documentation TODO@benib]()
 
-## Media Library - Add Support for Files :tada:
+## Media Library - File - Add Support for Files :tada:
 
 Additionally to the existing images and videos, we now also support files in the Media Library.
 
@@ -163,7 +153,6 @@ Additionally to the existing images and videos, we now also support files in the
   * [Documentation Media Library Config](https://github.com/livingdocsIO/documentation/pull/393)
 
 
-
 ## Media Library - Video - Add Transcoding Metadata Plugin :tada:
 
 With the video transcoding metadata plugin
@@ -172,19 +161,34 @@ With the video transcoding metadata plugin
 - The editor shows the current state
 
 * References
-  * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4324)
-  * [Server PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3568)
+  * [Basic Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4324)
+  * [Basic Server PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3568)
+  * [Update Transcoding State in Realtime w/o reload](https://github.com/livingdocsIO/livingdocs-editor/pull/4382)
+  * [Realtime Metadata Sync for li-transcoding state](https://github.com/livingdocsIO/livingdocs-server/pull/3665)
   * [Documentation TODO@romankaravia]()
 
 
-## New License Model :tada:
+## Sitemaps + Feeds :tada:
+
+- Consume Sitemaps via public API
+- We support you to implement your own RSS Feed (RSS 2.0) via server APIs (because feeds are highly customizable)
+
+* References
+  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3664)
+  * [Guide on how to generate Sitemaps & Feeds](https://github.com/livingdocsIO/documentation/pull/401)
+  * [Public API doc](https://github.com/livingdocsIO/livingdocs-editor/pull/4409)
+
+
+## New License Model and Billing :tada:
 
 TODO@Gabriel add some nice words
 
 * References
-  * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4334)
-  * [Server PR Iteration 1](https://github.com/livingdocsIO/livingdocs-server/pull/3594)
-  * [Server PR Iteration 2](https://github.com/livingdocsIO/livingdocs-server/pull/3637)
+  * [License Model - Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4334)
+  * [License Model - Server PR Iteration 1](https://github.com/livingdocsIO/livingdocs-server/pull/3594)
+  * [License Model - Server PR Iteration 2](https://github.com/livingdocsIO/livingdocs-server/pull/3637)
+  * [Billing - Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4388)
+  * [Billing - Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3669)
   * [Documentation TODO@gabriel]()
 
 
@@ -192,50 +196,51 @@ TODO@Gabriel add some nice words
 
 # Breaking Changes :fire:
 
+This time we have a rather high amount of breaking changes, therefore we grouped the breaking changes into different sections:
+
+- [Pre Deployment](#pre-deployment-fire)
+- [Main](#main-fire)
+- [Configs](#configs-fire)
+- [Drop Callback Support](#drop-callback-support-fire)
+
+## Pre Deployment :fire:
+
 ### Migrate firstPublicationDate to documents table (pre deployment) :fire:
 
 For productive systems please run a manual migration using `node ./db/manual-migrations/007-populate-first-publication-date.js` to process the documents in batches. The manual migration must be done before `livingdocs-server migrate up`, which contains the same migration, but locks the database by ~10s for 100k documents.
 
 References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3505)
 
+## Main :fire:
 
 ### Migrate the database
 
-TODO@ralph
-
-- Expected duration?
-- Possible data losses?
-- Is it a simple migration? (fast/easy downgradable)
+It's a simple/fast migration with no expected data losses.
 
 ```sh
 # run grunt migrate to update to the newest database scheme
-# migration - 111-add-comments-table.js
-#   create comments table + add events to the stream_events_types table
+# migration - 156-add-content-type-id-on-document-publication-events.js
+# migration - 157-add-documents-data-column.js
+# migration - 158-remove-metadata_id-columns.js
+# migration - 159-add-content_type_id_indexes.js
+# migration - 160-add-li_jsonb_patch-function.js
+# migration - 161-add-user-occupations.js
+# migration - 162-update-li_jsonb_patch-function.js
 livingdocs-server migrate up
 ```
-
 
 ### Drop Node 12 support :fire:
 
 - :fire: Upgrade to npm v7
-- :fire: Drop node `v12`. Only node `v14` and `v15` are supported from now on.
+- :fire: Drop node `v12`. Only node `v14` / `v15` and `v16` are supported from now on.
 - 🛡️ Run the process as non-root user in production
 
-#### Migration Howto
-- Change the content of the `.nvmrc` in your project root to `15`
-- Change the `engines.node` declaration in the `package.json` to `>=14` or `>=15`
-- Change the docker image versions in your `Dockerfile` to `livingdocs/editor-base:14.2` or `livingdocs/editor-base:15.0`.
+#### Migration Howto (node 16)
+- Change the content of the `.nvmrc` in your project root to `16`
+- Change the `engines.node` declaration in the `package.json` to `>=16`
+- Change the docker image versions in your `Dockerfile` to `livingdocs/server-base:16.0` / `livingdocs/editor-base:16.0`
 
 References: [Server PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4256)
-
-
-### Remove editor configs :fire:
-
-- 🔥 Removed editor config `supportedBrowsers`. No replacement is provided for now. If you really need one, talk to us.
-- 🔥 Removed editor config `sidePanelBehaviour`. The main navigation opens/closes on click (by ignoring double-clicks). The possibility to activate open/close on mouseenter (hover) is removed.
-- 🔥 Removed dependency `bowser` (https://www.npmjs.com/package/bowser). If you use it in downstream, we suggest to replace by feature/touch input detection or adding the dependency to your downstream project
-
-References: [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4244)
 
 
 ### Remove set() hook for metadata plugins :fire:
@@ -244,28 +249,6 @@ References: [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4
 
 References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3541)
 
-
-### Remove Deprecated Upload Configs :fire:
-
-We removed a few server configs which are deprecated for a long time.
-
-- :fire: removed `files.aws`. Use `files.storage` instead
-- :fire: removed `files.public`. Use `files.publicUrl` instead
-- :fire: removed `designs.bucket` and `designs.bucketPath`. Use `designs.assets.storage` instead
-- :fire: removed `designs.public`. Use `designs.assets.publicUrl` instead
-- :fire: removed `images.public`. Use `images.publicUrl` instead
-- :fire: removed `images.bucket` and `images.bucketPath`. Use `images.storage` instead
-- :fire: removed `images.upload`. Use `images.uploadRestrictions` instead
-- :fire: do not support deprecated format in `images.processing.convert` anymore. Use the new format instead (see example)
-  ```js
-  // old format
-  images.processing.convert: {pdf: 'png'}
-
-  // new format
-  convert: [{sourceFormat: 'pdf', targetFormat: 'png'}]
-  ```
-
-References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3577)
 
 ### Remove Gravatar for User Avatars as Default Solution :fire:
 
@@ -284,38 +267,6 @@ Some writing operations of the `documentsApi` return a `LegacyDocumentModel`.
 `LegacyDocumentModel.revision`, `LegacyDocumentModel.document`, `LegacyDocumentModel.metadata` and `LegacyDocumentModel.last_publication` are now getters and will :fire: throw when you try to assign a value. If you really need to assign a value, please use the new `LegacyDocumentModel.revisionEntity` or similar property.
 
 References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3542)
-
-### Remove Support for Callbacks in Authentication API :fire:
-
-:fire: Remove callback support for `authenticationApi` (`server.features.api('li-authentication')`) functions. Only promise based calls are supported.
-
-References:
-- [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3633)
-
-
-### Media Library Server Config :fire:
-
-- :fire: remove serverConfig `assetManagement` (googleVision and enabled has no effect since release-2020-07)
-- :fire: remove serverConfig `mediaLibrary.enabled` (had no effect since release-2020-07)
-- :fire: remove serverConfig `mediaLibrary.types` (had no effect since release-2020-07) use [mediaTypes](https://docs.livingdocs.io/enterprise/reference-docs/project-config/media_types/) instead
-- :fire: remove serverConfig `mediaLibrary.autoTagging` (googleVision has no effect since release-2020-07) use [project integrations](https://docs.livingdocs.io/enterprise/reference-docs/server-configuration/#google-vision-api) instead
-- :fire: remove serverConfig `mediaLibrary.paginationSize` (had no effect since release-2020-07)
-
-References:
-- [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3642)
-
-
-### Moved Elasticsearch Properties :fire:
-
-The server configuration `search.indexer` got moved into `elasticIndex`. The old `search.indexer` config got removed.
-
-- :fire: Move `search.indexer.concurrency` to `elasticIndex.concurrency`
-- :fire: Move `search.indexer.batchSize` to `elasticIndex.batchSize`
-- :fire: Move `search.indexer.maxCpu` to `elasticIndex.maxCpu`
-
-References:
-- [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3640)
-
 
 ### Old File Upload :fire:
 
@@ -350,13 +301,97 @@ References:
 - [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3594)
 
 
-### Enable Notification when using Comments :fire:
+## Configs :fire:
 
-TODO@meinrad
+### Remove editor configs :fire:
+
+- 🔥 Removed editor config `supportedBrowsers`. No replacement is provided for now. If you really need one, talk to us.
+- 🔥 Removed editor config `sidePanelBehaviour`. The main navigation opens/closes on click (by ignoring double-clicks). The possibility to activate open/close on mouseenter (hover) is removed.
+- 🔥 Removed dependency `bowser` (https://www.npmjs.com/package/bowser). If you use it in downstream, we suggest to replace by feature/touch input detection or adding the dependency to your downstream project
+
+References: [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4244)
+
+### Remove Deprecated Upload Configs :fire:
+
+We removed a few server configs which are deprecated for a long time.
+
+- :fire: removed `files.aws`. Use `files.storage` instead
+- :fire: removed `files.public`. Use `files.publicUrl` instead
+- :fire: removed `designs.bucket` and `designs.bucketPath`. Use `designs.assets.storage` instead
+- :fire: removed `designs.public`. Use `designs.assets.publicUrl` instead
+- :fire: removed `images.public`. Use `images.publicUrl` instead
+- :fire: removed `images.bucket` and `images.bucketPath`. Use `images.storage` instead
+- :fire: removed `images.upload`. Use `images.uploadRestrictions` instead
+- :fire: do not support deprecated format in `images.processing.convert` anymore. Use the new format instead (see example)
+  ```js
+  // old format
+  images.processing.convert: {pdf: 'png'}
+
+  // new format
+  convert: [{sourceFormat: 'pdf', targetFormat: 'png'}]
+  ```
+
+References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3577)
+
+
+### Media Library Server Config :fire:
+
+- :fire: remove serverConfig `assetManagement` (googleVision and enabled has no effect since release-2020-07)
+- :fire: remove serverConfig `mediaLibrary.enabled` (had no effect since release-2020-07)
+- :fire: remove serverConfig `mediaLibrary.types` (had no effect since release-2020-07) use [mediaTypes](https://docs.livingdocs.io/enterprise/reference-docs/project-config/media_types/) instead
+- :fire: remove serverConfig `mediaLibrary.autoTagging` (googleVision has no effect since release-2020-07) use [project integrations](https://docs.livingdocs.io/enterprise/reference-docs/server-configuration/#google-vision-api) instead
+- :fire: remove serverConfig `mediaLibrary.paginationSize` (had no effect since release-2020-07)
 
 References:
-- [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3652)
+- [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3642)
 
+
+### Moved Elasticsearch Properties :fire:
+
+The server configuration `search.indexer` got moved into `elasticIndex`. The old `search.indexer` config got removed.
+
+- :fire: Move `search.indexer.concurrency` to `elasticIndex.concurrency`
+- :fire: Move `search.indexer.batchSize` to `elasticIndex.batchSize`
+- :fire: Move `search.indexer.maxCpu` to `elasticIndex.maxCpu`
+
+References:
+- [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3640)
+
+
+### Handles and mediaLibraryEntry.asset.url :fire:
+
+#### Handles :fire:
+
+Content Type and Media Type handles must conform to the pattern `^[a-z][a-zA-Z0-9-]{2,49}$`.
+Metadata properties must conform to the pattern `^[a-zA-Z][a-zA-Z0-9-_]{2,49}$`.
+
+Please alert us if the pattern is too restrictive. We already applied those patterns in the editor when Content Types got configured on the Project Settings screen. It was just the validation on the server that was missing.
+In all the cases known to us, this won't affect the existing setups.
+
+#### mediaLibraryEntry.asset.url
+Before the changes in here either the `mediaLibraryEntry.asset.key` or `mediaLibraryEntry.asset.key` were mandatory on an media library asset object. From now on the `url` is not considered as fallback for the key and therefore the `key` property is :fire: `mandatory`.
+This change shouldn't affect you and you should see warnings in case you've invoked the internal apis without key, you should see a validation error.
+Please let us know if you run into any issues with that.
+
+References:
+- [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3672)
+
+
+## Drop Callback Support :fire:
+
+### Drop Callbacks for Authentication API :fire:
+
+:fire: Remove callback support for `authenticationApi` (`server.features.api('li-authentication')`) functions. Only promise based calls are supported.
+
+References:
+- [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3633)
+
+### Drop Callbacks for localAuthenticationApi :fire:
+
+:fire: Remove callback support for localAuthenticationApi (server.features.api('li-authentication-local')) functions. Only promise based calls are supported
+
+References:
+- [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3670)
 
 
 
@@ -376,7 +411,57 @@ References:
 
 # APIs :gift:
 
-## Public API - Add Filters for latestPublications
+## Server API's
+
+### Includes API
+
+The includes API got a lot of improvements regarding batch loading and performance, please check out the [pull request](https://github.com/livingdocsIO/livingdocs-server/pull/3618) to get more info. The most important features are:
+- Bulk include resolver
+- Preloading include param refrences
+- Duplicate Filtering
+- Added `li-list` metadata plugin
+
+Extended APIs:
+- 🎁 `includesApi.resolveIncludes({options, includes})`: resolve multiple includes at once. This will automatically batch requests with the new batchLoader. This will drastically reduce the number of database requests as well as response times.
+- 🍬 `includesApi.resolveIncludes({..., batchLoader})`: you can now pass in a batchLoader instance.
+- 🎁 `includesApi.buildOptions({documentVersion})`: new helper method to build the options params which need to be passed to resolveInclude() and resolveIncludes()
+
+References:
+* [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3618)
+
+
+### Sitemaps API
+
+Added a new Sitemaps API to simplify setting up and maintaining sitemaps and RSS feeds.
+
+- 🎁 `sitemapsApi.getSitemapIndex({contentTypes, baseUrl, projectId})`
+- 🎁 `sitemapsApi.getSitemapUrlSet({date, contentTypes, projectId, baseUrl})`
+- 🎁 `sitemapsApi.renderFeedXml({...})`
+
+The renderFeedXml is based on [RSS 2.0 Specification](https://validator.w3.org/feed/docs/rss2.html)
+
+References:
+* [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3664)
+
+### Import API
+
+- 🎁 `server.features.api('li-import').importDocumentAndMedia()` - added new function to import documents and media assets from another project
+
+### Document API
+
+- 🍬 `documentApi.createV2()` Now accepts params content and design (Previously one had to pass revision: {data: {content, design}}.
+
+### Document List API
+
+* 🎁 `documentListApi.get(id, null, {reverseMatched: false})` - Add reverse option
+
+References:
+* [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3654)
+
+
+## Public API's
+
+### Add Filters for latestPublications
 
 Introduce more filters on `api/v1/documents/latestPublications`.
 
@@ -394,18 +479,17 @@ Supported filters: `id.gte`, `id.gt`, `id.lte`, `id.lt`, `publishedAt.gte`, `pub
 - 🎁 Introduce `?id.gte=1&id.lte=100` range filters
 Supported filters: `id.gte`, `id.gt`, `id.lte`, `id.lt`, `createdAt.gte`, `createdAt.gt`, `createdAt.lte`, `createdAt.lt`
 
-
 References:
 * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3596)
 * [Documentation](https://github.com/livingdocsIO/livingdocs-editor/pull/4336)
 
-## Public API - Media Library - Add Version property
+### Media Library - Add Version property
 
 References:
 * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3567)
 
 
-## Public API - Document Import - Set Creation Date of Publication
+### Document Import - Set Creation Date of Publication
 
 Allows to import documents with a publicationDate flag which will set the creation date of a publication.
 
@@ -413,8 +497,20 @@ References:
 * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3569)
 * [Documentation](https://github.com/livingdocsIO/documentation/pull/390)
 
+### Sitemaps
 
-## livingdocs-server project-truncate
+Allows to get sitemap infos. Two new HTTP endpoints accessible with a public API token with the 'read'-scope
+
+- 🎁 Introduce  `GET ${serverUrl}/api/v1/sitemaps/index?contentTypes=articles&baseUrl=https://livingdocs.io` (public API token with 'read'-scope needed)
+- 🎁 Introduce  `GET ${serverUrl}/api/v1/sitemaps/entries?date=2020-01&contentTypes=article&baseUrl=https://livingdocs.io/&entriesPerPage=20000` (public API token with 'read'-scope needed)
+
+References:
+* [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3664)
+* [Documentation](https://github.com/livingdocsIO/livingdocs-editor/pull/4409)
+
+## CLI
+
+### livingdocs-server project-truncate
 
 `livingdocs-server project-truncate -p <your-project> -y` truncates documents in Elasticsearch too (instead of only truncating Postgres documents).
 
@@ -442,6 +538,8 @@ References:
 * Woodwing: Add media source example into the example server [livingdocs-server #3565](https://github.com/livingdocsIO/livingdocs-server/pull/3565) :gift:
 * Auth: Sync OpenId Connect user groups on login [livingdocs-server #3563](https://github.com/livingdocsIO/livingdocs-server/pull/3563) :gift:
 * Storage: Add support for storage prefix [livingdocs-server #3587](https://github.com/livingdocsIO/livingdocs-server/pull/3587) :gift:
+* Includes: add bulk resolve endpoint to editingApi [livingdocs-server #3688](https://github.com/livingdocsIO/livingdocs-server/pull/3688) :gift:
+* Toolbar: Add localised quotation marks to toolbar [livingdocs-editor #4391](https://github.com/livingdocsIO/livingdocs-editor/pull/4391) :gift:
 
 
 ### Improvements
@@ -459,7 +557,7 @@ References:
   * Consider image drop cases with insertsBlocked [livingdocs-editor #4377](https://github.com/livingdocsIO/livingdocs-editor/pull/4377) :gift:
   * Configure Icons for each ContentType [livingdocs-editor #4339](https://github.com/livingdocsIO/livingdocs-editor/pull/4339) :gift:
   * Imatrics performance improvements [livingdocs-editor #4347](https://github.com/livingdocsIO/livingdocs-editor/pull/4347) :gift:
-
+  * Includes: bulk resolve includes [livingdocs-editor #4400](https://github.com/livingdocsIO/livingdocs-editor/pull/4400) :gift:
 
 ### Bugfixes
 
@@ -498,6 +596,7 @@ References:
   * Fix issue where an image could not be dropped onto a directive of a fixed component if no insert before or after this component is allowed. [livingdocs-editor #4377](https://github.com/livingdocsIO/livingdocs-editor/pull/4377) :beetle:
 * Upload Center: Don't close the upload dialog when the crop tool is opened from the upload dialog [livingdocs-editor #4383](https://github.com/livingdocsIO/livingdocs-editor/pull/4383) :beetle:
 * Comments: Init comments only when they are enabled on collab bar [livingdocs-editor #4337](https://github.com/livingdocsIO/livingdocs-editor/pull/4337) :beetle:
+* Handle multiple open dialogs in dialogService [livingdocs-editor #4383](https://github.com/livingdocsIO/livingdocs-editor/pull/4383) :beetle:
 
 
 #### Server
@@ -513,6 +612,7 @@ References:
 * Media Sources: Fix Unsplash plugin [livingdocs-server #3588](https://github.com/livingdocsIO/livingdocs-server/pull/3588) :beetle:
 * Print: Fix crash on certificate errors [livingdocs-server #3590](https://github.com/livingdocsIO/livingdocs-server/pull/3590) :beetle:
 * Copy: Copy Config Fix [livingdocs-server #3613](https://github.com/livingdocsIO/livingdocs-server/pull/3613) :beetle:
+* Email: Schema Fix [livingdocs-server #3692](https://github.com/livingdocsIO/livingdocs-server/pull/3692) :gift:
 
   ---
   **Icon Legend**
