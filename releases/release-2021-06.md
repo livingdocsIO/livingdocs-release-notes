@@ -100,6 +100,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.7](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.7): fix(media library): clamp the preview to max height for portrait format images/videos. Ensure images/video are shown entirely without overlowing the preview.
 - [v67.6.6](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.6): test(history): adapt test to localized date format
 - [v67.6.5](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.5): fix(comments-mentioning): only show users with name and not archived
 - [v67.6.4](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.4): fix(vms): ensure li-transcoding-state-form triggers save
