@@ -71,6 +71,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-03
 
 ### Livingdocs Server Patches
+- [v124.5.46](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.46): fix(group_projection): add archived to return object
 - [v124.5.45](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.45): fix(yargs): Upgrade to the most recent version of yargs
 - [v124.5.44](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.44): fix(indexing): Support a elasticIndex.maxCpuFunction config option to define a cpu threshold getter function
 - [v124.5.43](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.43): chore: Upgrade sharp to get the setup working with node 16
