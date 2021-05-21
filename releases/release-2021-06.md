@@ -73,6 +73,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-06
 
 ### Livingdocs Server Patches
+- [v135.1.9](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.9): fix(indexing): Fix channelId comparison in live indexing
 - [v135.1.8](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.8): Group projection: add archived to return object
 
 
