@@ -90,6 +90,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.10](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.10): fix(media library): don't show upload dialog for uploads without required metadata
 - [v67.6.9](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.9): Upgrade fastify-reply-from to get rid of deprecation message with node 16
 
 
