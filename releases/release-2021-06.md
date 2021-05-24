@@ -119,7 +119,7 @@ Important: If you want to use comments mentioning, you have to enable [Notificat
 * References
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4375)
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3652)
-  * [Documentation TODO@meinrad]()
+  * [Documentation](https://github.com/livingdocsIO/documentation/pull/403)
 
 
 ## Composition API
