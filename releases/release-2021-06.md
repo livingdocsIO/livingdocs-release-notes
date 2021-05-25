@@ -124,11 +124,19 @@ Important: If you want to use comments mentioning, you have to enable [Notificat
   * [Documentation](https://github.com/livingdocsIO/documentation/pull/403)
 
 
-## Composition API
+## Composition API (in beta)
 
-TODO@peyerluk add a nice text
+There is a new public api endpoint:
+```http
+POST /api/beta/composition/:documentId
+```
 
-* [Composition API preparation](https://github.com/livingdocsIO/livingdocs-server/pull/3668)
+This endpoint is meant to serve as a replacement of `GET api/v1/documents/:documentId/latestPublication` for deliveries when rendering documents. The goal of the composition endpoint is to gather all required information to render a document in one endpoint and to work for different rendering strategies (e.g. render from JSON or use the prerendered Html). The composition Api currently supports rendering Html without any configuration, can preload references in metadata and can return resolved includes as JSON.
+
+It also offers optimised performance for all those tasks and will replace the RenderPipeline feature.
+
+We plan to add additional functionalities like automatic design updates of documents and more to the composition Api in upcoming releases and are open for inputs what we could add to the composition Api.
+
 * [Composition API](https://github.com/livingdocsIO/livingdocs-server/pull/3667)
 
 
