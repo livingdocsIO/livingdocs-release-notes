@@ -73,6 +73,9 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-06
 
 ### Livingdocs Server Patches
+- [v135.1.13](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.13): fix(files): Fix exposed `files.publicUrl` in `/serverConfiguration` endpoint
+
+We're also introducing the `mediaLibrary` config, so we can remove the old keys already in the next version
 - [v135.1.12](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.12): fix(import): Delay media indexing and notifications
 - [v135.1.11](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.11): chore: Do not fallback to an empty array for the `documentVersion.content` getter
 - [v135.1.10](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.10): fix(imatrics): Fix typos in the imatrics implementation that got introduced during the introduction of the new DocumentVersion getters
