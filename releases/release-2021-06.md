@@ -73,6 +73,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-06
 
 ### Livingdocs Server Patches
+- [v135.1.14](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.14): test(sitemaps): use datefns instead of magic strings
 - [v135.1.13](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.13): fix(files): Fix exposed `files.publicUrl` in `/serverConfiguration` endpoint
 
 We're also introducing the `mediaLibrary` config, so we can remove the old keys already in the next version
