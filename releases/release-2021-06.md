@@ -9,7 +9,6 @@
 - [Breaking Changes](#breaking-changes-fire)
 - [Deprecations](#deprecations)
 - [APIs](#apis-gift)
-- [Internal Changes](#internal-changes)
 - [Other Changes](#other-changes)
 
 # Newsletter
@@ -109,7 +108,7 @@ How to require the editor in your package.json:
 
 ## Document Import between Projects (Drag + Drop)
 
-Allows to export/import a document via drag + drop. A user can drag a document A in project A onto the dashboard of project B, then the dropped document will be imported.
+Allows to export/import a document via drag + drop (only between 2 projects of the same design on the same server). A user can drag a document A in project A onto the dashboard of project B, then the dropped document will be imported.
 
 * References
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4387)
@@ -119,7 +118,7 @@ Allows to export/import a document via drag + drop. A user can drag a document A
 
 ## Comment mentions :tada:
 
-Allows in the comments a user A to mention another user B. User B then gets a notification. Check the [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4375) if you want to get some visual impressions.
+Allows to mention another user in the comments. When writing '@' in a comment a user search will appear to select a user to be mentioned. The mentioned user then gets a notification. Check the [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4375) if you want to get some visual impressions.
 
 Important: If you want to use comments mentioning, you have to enable [Notifications](https://docs.livingdocs.io/enterprise/guides/watching-documents/)
 
@@ -150,6 +149,7 @@ We plan to add additional functionalities like automatic design updates of docum
 With the introduction of the multi language metadata feature, one can now translate metadata into different languages.
 
 * References
+  * [Documentation](https://github.com/livingdocsIO/documentation/pull/402)
   * [Multilanguage Metadata for Images](https://github.com/livingdocsIO/livingdocs-editor/pull/4283)
   * [Multilanguage Metadata for Videos](https://github.com/livingdocsIO/livingdocs-editor/pull/4372)
   * [Prefilling for Images](https://github.com/livingdocsIO/livingdocs-editor/pull/4357)
@@ -157,17 +157,15 @@ With the introduction of the multi language metadata feature, one can now transl
   * [Multilanguage Media Library Types](https://github.com/livingdocsIO/livingdocs-server/pull/3512)
   * [Media Library Support for Granular Patches](https://github.com/livingdocsIO/livingdocs-server/pull/3624)
   * [Replace / Translate Assets Editor](https://github.com/livingdocsIO/livingdocs-editor/pull/4393) :gift:
-  * [Documentation TODO@benib]()
 
 ## Media Library - File - Add Support for Files :tada:
 
-Additionally to the existing images and videos, we now also support files in the Media Library.
+Additionally to the existing images and videos, we now also support files in the Media Library. Files can be added to documents in order to allow downloads, e.g. providing a downloadable press release next to an article.
 
 * References
   * [File Upload Editor](https://github.com/livingdocsIO/livingdocs-editor/pull/4373)
   * [File Icons Editor](https://github.com/livingdocsIO/livingdocs-editor/pull/4385)
   * [File Upload Server](https://github.com/livingdocsIO/livingdocs-server/pull/3595)
-  * [Documentation TODO@benib]()
   * [Documentation Media Type mediaFile](https://github.com/livingdocsIO/documentation/pull/395)
   * [Documentation Media Library Config](https://github.com/livingdocsIO/documentation/pull/393)
 
@@ -180,11 +178,11 @@ With the video transcoding metadata plugin
 - The editor shows the current state
 
 * References
+  * [Documentation](https://github.com/livingdocsIO/documentation/pull/397)
   * [Basic Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4324)
   * [Basic Server PR](https://github.com/livingdocsIO/livingdocs-editor/pull/3568)
   * [Update Transcoding State in Realtime w/o reload](https://github.com/livingdocsIO/livingdocs-editor/pull/4382)
   * [Realtime Metadata Sync for li-transcoding state](https://github.com/livingdocsIO/livingdocs-server/pull/3665)
-  * [Documentation TODO@romankaravia]()
 
 
 ## Sitemaps + Feeds :tada:
@@ -200,7 +198,8 @@ With the video transcoding metadata plugin
 
 ## New License Model and Billing :tada:
 
-TODO@Gabriel add some nice words
+We provide a new "Billing" screen in the server admin backend that shows per month which kinds of users are on the system and the changes from month to month. In that way customers can keep track of their inferred license costs.
+Also, all screens to invite users to your projects now require you to specify the kind of user: Editorial User (full license), Freelancer or Technical User (free). The employment type can be corrected if need be on the server admin detail screen.
 
 * References
   * [License Model - Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4334)
@@ -208,7 +207,6 @@ TODO@Gabriel add some nice words
   * [License Model - Server PR Iteration 2](https://github.com/livingdocsIO/livingdocs-server/pull/3637)
   * [Billing - Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4388)
   * [Billing - Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3669)
-  * [Documentation TODO@gabriel]()
 
 
 
@@ -225,6 +223,8 @@ This time we have a rather high amount of breaking changes, therefore we grouped
 ## Pre Deployment :fire:
 
 ### Migrate firstPublicationDate to documents table (pre deployment) :fire:
+
+In order for a delivery to know when a document was first published, we want to provide the firstPublicationDate when a Publication is fetched from the Public API. To be able to fullfill that goal we need a db migration.
 
 For productive systems please run a manual migration using `node ./db/manual-migrations/007-populate-first-publication-date.js` to process the documents in batches. The manual migration must be done before `livingdocs-server migrate up`, which contains the same migration, but locks the database by ~10s for 100k documents.
 
@@ -388,7 +388,7 @@ Please alert us if the pattern is too restrictive. We already applied those patt
 In all the cases known to us, this won't affect the existing setups.
 
 #### mediaLibraryEntry.asset.url
-Before the changes in here either the `mediaLibraryEntry.asset.key` or `mediaLibraryEntry.asset.key` were mandatory on an media library asset object. From now on the `url` is not considered as fallback for the key and therefore the `key` property is :fire: `mandatory`.
+Before the changes in here either the `mediaLibraryEntry.asset.key` or `mediaLibraryEntry.asset.url` were mandatory on an media library asset object. From now on the `url` is not considered as fallback for the key and therefore the `key` property is :fire: `mandatory`.
 This change shouldn't affect you and you should see warnings in case you've invoked the internal apis without key, you should see a validation error.
 Please let us know if you run into any issues with that.
 
@@ -417,7 +417,7 @@ References:
 
 # Deprecations
 
-We did a cleanup for asset related server configs and moved them into the mediaLibrary feature. The old configs are still supported, but we suggest to immediately move them.
+We did a cleanup for asset related server configs and moved them into the mediaLibrary feature. The old configs are still supported, but we suggest to move them now.
 
 🔧  Deprecate server config `files`. Move config to server config `mediaLibrary.files`
 🔧  Deprecate server config `videos`. Move config to server config `mediaLibrary.videos`
@@ -527,7 +527,7 @@ References:
 * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3664)
 * [Documentation](https://github.com/livingdocsIO/livingdocs-editor/pull/4409)
 
-## CLI
+## Server CLI
 
 ### livingdocs-server project-truncate
 
@@ -537,19 +537,17 @@ References:
 * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3545)
 
 
+# Other Changes
 
+### Opt-In for Vue based metadata form rendering (support us!)
 
-# Internal Changes
+When you opt-in by setting the editor config to `metadata.useVueBasedFormRendering: true`, all Metadata Forms are rendered using a Vue based rendering. For any properties/forms without a Vue component, the Angular component is rendered. This is also how custom metadata plugins using angular forms is supported.
 
-## Opt-In for Vue based metadata form rendering
+:gift: You can support us with the transition to Vue when opt-in to the vue based form rendering.
+
 
 References:
 * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4231)
-
-
-
-
-# Other Changes
 
 ### Features
 
@@ -565,7 +563,6 @@ References:
 
 * Do not use offensive project handles [livingdocs-server #3589](https://github.com/livingdocsIO/livingdocs-server/pull/3589) :gift:
 * Show tasks in toolbar as soon as the content-type has a task config [livingdocs-editor #4359](https://github.com/livingdocsIO/livingdocs-editor/pull/4359) :gift:
-* Configure icons for each ContentType [livingdocs-editor #4339](https://github.com/livingdocsIO/livingdocs-editor/pull/4339) :gift:
 * MediaLibrary
   * Download files in editor via server [livingdocs-server #3627](https://github.com/livingdocsIO/livingdocs-server/pull/3627) :gift:
   * Improve config error handling [livingdocs-server #3647](https://github.com/livingdocsIO/livingdocs-server/pull/3647) :gift:
@@ -632,6 +629,8 @@ References:
 * Print: Fix crash on certificate errors [livingdocs-server #3590](https://github.com/livingdocsIO/livingdocs-server/pull/3590) :beetle:
 * Copy: Copy Config Fix [livingdocs-server #3613](https://github.com/livingdocsIO/livingdocs-server/pull/3613) :beetle:
 * Email: Schema Fix [livingdocs-server #3692](https://github.com/livingdocsIO/livingdocs-server/pull/3692) :gift:
+
+
 
   ---
   **Icon Legend**
