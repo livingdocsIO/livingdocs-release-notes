@@ -71,6 +71,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-03
 
 ### Livingdocs Server Patches
+- [v124.5.49](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.49): fix(search): Invoke search requests against elasticsearch with the correct publication index
 - [v124.5.48](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.48): fix(emails): Upgrade the SES configuration to the newest aws sdk v2 to get rid of deprecation messages
 
 Upgrading to v3 of the client (`@aws-sdk/client-ses`) would result
