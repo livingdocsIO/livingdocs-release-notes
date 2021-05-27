@@ -71,6 +71,10 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-03
 
 ### Livingdocs Server Patches
+- [v124.5.48](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.48): fix(emails): Upgrade the SES configuration to the newest aws sdk v2 to get rid of deprecation messages
+
+Upgrading to v3 of the client (`@aws-sdk/client-ses`) would result
+in breaking changes in the configuration and therefore we should tackle that in a separate PR.
 - [v124.5.47](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.47): fix(indexing): Fix channelId comparison in live indexing
 - [v124.5.46](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.46): fix(group_projection): add archived to return object
 - [v124.5.45](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.45): fix(yargs): Upgrade to the most recent version of yargs
