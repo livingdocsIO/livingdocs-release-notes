@@ -97,6 +97,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.14](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.14): fix(media-library): Fix context menu download link
 - [v67.6.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.13): fix(css): Load the fonts only once
 - [v67.6.12](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.12): chore: use userInfoService and add ignoreArchived
 - [v67.6.11](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.11): fix(media upload): make cancelling a single upload in the upload dialog work again
