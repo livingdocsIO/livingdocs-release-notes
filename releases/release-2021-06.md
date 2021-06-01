@@ -72,6 +72,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-06
 
 ### Livingdocs Server Patches
+- [v135.1.16](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.16): fix(file-upload): Do not handle files as strings when calculating the byte size
 - [v135.1.15](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.15): fix(search): Invoke search requests against elasticsearch with the correct publication index
 - [v135.1.14](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.14): test(sitemaps): use datefns instead of magic strings
 - [v135.1.13](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.13): fix(files): Fix exposed `files.publicUrl` in `/serverConfiguration` endpoint
