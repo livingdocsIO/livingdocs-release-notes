@@ -238,7 +238,7 @@ References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3
 
 Tidy-up after populating `document_revisions.metadata_id` as part of the `firstPublicationDate` feature in [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3505)
 
-For productive systems please run a manual migration using `node ./db/manual-migrations/008-move-metadata_id.js` to process the documents in batches. The manual migration must be done before `livingdocs-server migrate up`, which contains the same migration, but locks the database.
+For productive systems please run a manual migration using `node ./db/manual-migrations/008-move-metadata_id.js` to process the documents in batches. The manual migration must be done before `livingdocs-server migrate up`, which contains the same migration, but locks the database. We propose to have enough disk space left for this migration (2 x used disk space by the database). After the migration, the disk space should be smaller, but during the migration, it will grow.
 
 References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3518)
 
