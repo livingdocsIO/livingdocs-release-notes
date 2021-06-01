@@ -477,6 +477,34 @@ References:
 References:
 * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3654)
 
+### DocumentVersion
+
+Some customers still use internal properties of the `DocumentVersion` model which always can change. Please don't use them.
+- :fire: don't use `documentVersion.documentEntity`
+- :fire: don't use `documentVersion.revisionEntity`
+- :fire: don't use `documentVersion.publicationEntity`
+- :fire: don't use `documentVersion.metadataEntity`
+
+Always use the [official API of the documentVersion](https://github.com/livingdocsIO/documentation/pull/406).
+
+We also have deprecated some functions in the `DocumentVersion`. Please go through the list below and replace internal and deprecated calls.
+
+**Deprecations**
+- `documentVersion.getContentType()` -> `documentVersion.contentType`
+- `documentVersion.getDocumentType()` -> `documentVersion.documentType`
+- `documentVersion.getProjectId()` -> `documentVersion.projectId`
+- `documentVersion.getChannelId()` -> `documentVersion.channelId`
+- `documentVersion.getDocumentId()` -> `documentVersion.id`
+- `documentVersion.getDesignDescriptor()` -> `documentVersion.design`
+- `documentVersion.getDesignVersion()` -> `documentVersion.design.version`
+- `documentVersion.getTitle()` -> `documentVersion.title`
+- `documentVersion.getMetadata()` -> `documentVersion.metadata`
+- `documentVersion.getMetadataSource()` -> `documentVersion.metadataSource`
+- `documentVersion.getSystemdata()` -> `documentVersion.systemdata`
+
+
+
+
 
 ## Public API's
 
