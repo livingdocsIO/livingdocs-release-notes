@@ -72,6 +72,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-06
 
 ### Livingdocs Server Patches
+- [v135.1.15](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.15): fix(search): Invoke search requests against elasticsearch with the correct publication index
 - [v135.1.14](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.14): test(sitemaps): use datefns instead of magic strings
 - [v135.1.13](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.13): fix(files): Fix exposed `files.publicUrl` in `/serverConfiguration` endpoint
 
@@ -96,6 +97,9 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.15](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.15): chore: fix shaky cypress
+- [v67.6.14](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.14): fix(media-library): Fix context menu download link
+- [v67.6.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.13): fix(css): Load the fonts only once
 - [v67.6.12](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.12): chore: use userInfoService and add ignoreArchived
 - [v67.6.11](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.11): fix(media upload): make cancelling a single upload in the upload dialog work again
 - [v67.6.10](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.10): fix(media library): don't show upload dialog for uploads without required metadata
@@ -113,7 +117,7 @@ Allows to export/import a document via drag + drop (only between 2 projects of t
 * References
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4387)
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3604)
-  * [Documentation TODO@Alex]()
+  * [Documentation](https://github.com/livingdocsIO/documentation/pull/404)
 
 
 ## Comment mentions :tada:
@@ -142,7 +146,7 @@ It also offers optimised performance for all those tasks and will replace the Re
 We plan to add additional functionalities like automatic design updates of documents and more to the composition Api in upcoming releases and are open for inputs what we could add to the composition Api.
 
 * [Composition API](https://github.com/livingdocsIO/livingdocs-server/pull/3667)
-
+* [Public API Doc](https://github.com/livingdocsIO/livingdocs-editor/pull/4434)
 
 ## Media Library - Multi Language :tada:
 
@@ -259,7 +263,7 @@ livingdocs-server migrate up
 - Change the `engines.node` declaration in the `package.json` to `>=16`
 - Change the docker image versions in your `Dockerfile` to `livingdocs/server-base:16.0` / `livingdocs/editor-base:16.0`
 
-References: [Server PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4256)
+References: [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4256)
 
 
 ### Remove set() hook for metadata plugins :fire:
