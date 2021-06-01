@@ -234,6 +234,14 @@ For productive systems please run a manual migration using `node ./db/manual-mig
 
 References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3505)
 
+### Move metadata id's (pre deployment) :fire:
+
+Tidy-up after populating `document_revisions.metadata_id` as part of the `firstPublicationDate` feature in [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3505)
+
+For productive systems please run a manual migration using `node ./db/manual-migrations/008-move-metadata_id.js` to process the documents in batches. The manual migration must be done before `livingdocs-server migrate up`, which contains the same migration, but locks the database.
+
+References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3518)
+
 ## Main :fire:
 
 ### Migrate the database
