@@ -117,7 +117,7 @@ Allows to export/import a document via drag + drop (only between 2 projects of t
 * References
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4387)
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3604)
-  * [Documentation TODO@Alex]()
+  * [Documentation](https://github.com/livingdocsIO/documentation/pull/404)
 
 
 ## Comment mentions :tada:
