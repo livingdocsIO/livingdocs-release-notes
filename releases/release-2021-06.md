@@ -98,6 +98,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.16](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.16): chore: Upgrade nzz and bluewin tests to node 16
 - [v67.6.15](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.15): chore: fix shaky cypress
 - [v67.6.14](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.14): fix(media-library): Fix context menu download link
 - [v67.6.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.13): fix(css): Load the fonts only once
