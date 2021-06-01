@@ -146,7 +146,7 @@ It also offers optimised performance for all those tasks and will replace the Re
 We plan to add additional functionalities like automatic design updates of documents and more to the composition Api in upcoming releases and are open for inputs what we could add to the composition Api.
 
 * [Composition API](https://github.com/livingdocsIO/livingdocs-server/pull/3667)
-
+* [Public API Doc](https://github.com/livingdocsIO/livingdocs-editor/pull/4434)
 
 ## Media Library - Multi Language :tada:
 
