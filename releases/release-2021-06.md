@@ -259,11 +259,35 @@ livingdocs-server migrate up
 - 🛡️ Run the process as non-root user in production
 
 #### Migration Howto (node 16)
+
 - Change the content of the `.nvmrc` in your project root to `16`
 - Change the `engines.node` declaration in the `package.json` to `>=16`
 - Change the docker image versions in your `Dockerfile` to `livingdocs/server-base:16.0` / `livingdocs/editor-base:16.0`
 
 References: [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4256)
+
+
+#### Add Strict Schema Validation for JSON Schema :fire:
+
+- We've migrated our json validator from `tv4` to `ajv` and applied a :fire: strict schema validation.
+- Invalid json schemas now cause a shutdown of the server.
+- If the server stops during startup, you'll need to fix the schemas.
+
+The `type` declaration on a schema is now mandatory. Previously it was implicitly declared.
+
+```js
+body: {
+  type: 'object', // < this attribute was optional with
+                  // the old validator. It's mandatory now.
+  properties: {
+    something: {type: 'string'}
+  }
+}
+```
+
+References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3681)
+
+
 
 
 ### Remove set() hook for metadata plugins :fire:
