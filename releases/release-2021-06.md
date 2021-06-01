@@ -263,7 +263,7 @@ livingdocs-server migrate up
 - Change the `engines.node` declaration in the `package.json` to `>=16`
 - Change the docker image versions in your `Dockerfile` to `livingdocs/server-base:16.0` / `livingdocs/editor-base:16.0`
 
-References: [Server PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4256)
+References: [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4256)
 
 
 ### Remove set() hook for metadata plugins :fire:
