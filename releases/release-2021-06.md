@@ -102,6 +102,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.20](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.20): chore: Update @livingdocs/framework
 - [v67.6.19](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.19): fix: display the creation date for new API tokens
 - [v67.6.18](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.18): fix: throw errors on user invitation if they exist
 - [v67.6.17](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.17): chore: skip metadata permission error Cypress test
