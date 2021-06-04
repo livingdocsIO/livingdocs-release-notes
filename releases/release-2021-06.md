@@ -102,6 +102,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.22](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.22): fix(embeds): fix twitter embeds
 - [v67.6.21](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.21): fix: correctly align context menu for the admin screen occupations table
 - [v67.6.20](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.20): chore: Update @livingdocs/framework
 - [v67.6.19](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.19): fix: display the creation date for new API tokens
