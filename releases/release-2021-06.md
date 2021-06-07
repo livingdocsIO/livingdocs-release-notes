@@ -72,6 +72,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-06
 
 ### Livingdocs Server Patches
+- [v135.1.21](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.21): fix(user): Don't throw when reactivating users without occupations
 - [v135.1.20](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.20): fix(indexing): Retry bulk requests that respond with a 429 error when elasticsearch is overloaded
 - [v135.1.19](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.19): fix(import): Make config type mappings optional
 - [v135.1.18](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.18): fix(li-users): Do not respond with duplicate users in the userApi.findMany and userApi.findByProjectId methods
