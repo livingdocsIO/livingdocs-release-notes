@@ -102,6 +102,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.25](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.25): fix(icons): fix some icons missing from the icon lib
 - [v67.6.24](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.24): fix(embed): Extract html from directive content
 - [v67.6.23](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.23): fix(dashboards): fix loading more articles
 - [v67.6.22](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.22): fix(embeds): fix twitter embeds
