@@ -103,6 +103,15 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.26](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.26): fix(media library): Hide transcoding state + poster image in upload dialog
+
+Both metadata plugins are not appropriate to show in the upload dialog.
+
+Transcoding can only happen after the video has been uploaded.
+
+The poster image form needs to know the video dimensions, which are
+only known after upload (the video is not loaded as preview since that
+could lead to excessive memory usage in the browser.
 - [v67.6.25](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.25): fix(icons): fix some icons missing from the icon lib
 - [v67.6.24](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.24): fix(embed): Extract html from directive content
 - [v67.6.23](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.23): fix(dashboards): fix loading more articles
