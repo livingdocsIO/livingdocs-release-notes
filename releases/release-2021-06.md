@@ -103,6 +103,10 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.27](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.27): fix(media library): Consistent asset replacement for default language
+
+When default language is selected, always update the "default" asset,
+do not create a locale-specific additional asset.
 - [v67.6.26](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.26): fix(media library): Hide transcoding state + poster image in upload dialog
 
 Both metadata plugins are not appropriate to show in the upload dialog.
