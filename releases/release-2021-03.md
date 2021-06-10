@@ -71,6 +71,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-03
 
 ### Livingdocs Server Patches
+- [v124.5.53](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.53): test(image-upload-proxy): Write a test that the filename gets passed to the multipart request
 - [v124.5.52](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.52): fix(elasticsearch): Fix elasticsearch bulk retries by matching failed entries in reverse order
 
 🤦‍♂️
