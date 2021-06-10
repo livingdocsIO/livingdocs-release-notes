@@ -107,6 +107,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.29](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.29): chore: improve sitemap entries example
 - [v67.6.28](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.28): fix(comments): Disable multiselect mode while editing a comment
 - [v67.6.27](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.27): fix(media library): Consistent asset replacement for default language
 
