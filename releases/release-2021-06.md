@@ -72,6 +72,9 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-06
 
 ### Livingdocs Server Patches
+- [v135.1.23](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.23): fix(elasticsearch): Fix elasticsearch bulk retries by matching failed entries in reverse order
+
+🤦‍♂️
 - [v135.1.22](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.22): test(sitemaps): Use the correct timestamp in tests
 - [v135.1.21](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.21): fix(user): Don't throw when reactivating users without occupations
 - [v135.1.20](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.20): fix(indexing): Retry bulk requests that respond with a 429 error when elasticsearch is overloaded
