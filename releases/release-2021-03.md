@@ -123,6 +123,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-03
 
 ### Livingdocs Editor Patches
+- [v63.8.51](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.51): fix: fix icon link in styleguide
 - [v63.8.50](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.50): fix(embed): Extract html from directive content
 - [v63.8.49](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.49): chore(CI): run nzz tests with node 16
 - [v63.8.48](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.48): fix: imatrics performance improvements & fix styling issues
