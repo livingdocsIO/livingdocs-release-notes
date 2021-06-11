@@ -108,6 +108,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.31](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.31): fix(link tool): don't reset the linkedDocument as soon as the user starts typing but only when actually linking a URL
 - [v67.6.30](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.30): fix: fix icon link
 - [v67.6.29](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.29): chore: improve sitemap entries example
 - [v67.6.28](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.28): fix(comments): Disable multiselect mode while editing a comment
