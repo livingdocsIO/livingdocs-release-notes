@@ -108,6 +108,12 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.32](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.32): fix(crop handling): Fix cropping for poster images
+
+In 59bd995, filtering out of extra crops was added to MetadataImage.
+This caused a bug where crops would be removed for poster images.
+
+The fix is to filter out crops only if there is a namedCrops configuration.
 - [v67.6.31](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.31): fix(link tool): don't reset the linkedDocument as soon as the user starts typing but only when actually linking a URL
 - [v67.6.30](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.30): fix: fix icon link
 - [v67.6.29](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.29): chore: improve sitemap entries example
