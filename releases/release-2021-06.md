@@ -72,6 +72,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-06
 
 ### Livingdocs Server Patches
+- [v135.1.25](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.25): fix: add indexing config for datetime-validity plugin
 - [v135.1.24](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.24): fix(iptc extraction): add an additional safety check to not run into errors in getValueForStorage
 - [v135.1.23](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.23): fix(elasticsearch): Fix elasticsearch bulk retries by matching failed entries in reverse order
 
