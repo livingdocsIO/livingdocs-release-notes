@@ -108,6 +108,12 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.33](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.33): code(media library): Incorporate PR feedback
+
+- Better name for function (updateTranslatableAsset => replaceAssetIfNecessary)
+- Clone directive content before updating it
+- Add explanation to `isNewTranslation: false`
+- Also reset namedCrops when asset is replaced
 - [v67.6.32](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.32): fix(crop handling): Fix cropping for poster images
 
 In 59bd995, filtering out of extra crops was added to MetadataImage.
