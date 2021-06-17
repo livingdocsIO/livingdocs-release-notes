@@ -72,6 +72,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-06
 
 ### Livingdocs Server Patches
+- [v135.1.28](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.28): chore(migrations): Improve the job status logs
 - [v135.1.27](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.27): fix(cli): fix data migration run link
 - [v135.1.26](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.26): fix(redis): Fix support for redis sentinel with the `livingdocs-server redis-flushdb` command
 - [v135.1.25](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.25): fix: add indexing config for datetime-validity plugin
