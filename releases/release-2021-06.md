@@ -319,7 +319,7 @@ livingdocs-server migrate up
 ### Drop Node 12 support :fire:
 
 - :fire: Upgrade to npm v7
-- :fire: Drop node `v12`. Only node `v14` / `v15` and `v16` are supported from now on.
+- :fire: Drop node `v12`. Only node `v14` and `v16` are supported from now on.
 - 🛡️ Run the process as non-root user in production
 
 #### Migration Howto (node 16)
