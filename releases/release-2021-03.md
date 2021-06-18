@@ -125,6 +125,12 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-03
 
 ### Livingdocs Editor Patches
+- [v63.8.52](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.52): fix(image manager): Handle missing/archived images
+
+Show an overlay in the editor for images that are missing
+from the media library (no entry found for mediaId) or
+have been archived.
+The existing overlay for expired images is reused/adapted for this purpose.
 - [v63.8.51](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.51): fix: fix icon link in styleguide
 - [v63.8.50](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.50): fix(embed): Extract html from directive content
 - [v63.8.49](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.49): chore(CI): run nzz tests with node 16
