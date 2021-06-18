@@ -112,6 +112,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.36](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.36): fix(mediaLibrary): do not throw reactive errors
 - [v67.6.35](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.35): fix(dependencies): remove release-tools as editor dependency
 - [v67.6.34](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.34): fix(defaultProject): respect the default project
 - [v67.6.33](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.33): code(media library): Incorporate PR feedback
