@@ -71,6 +71,10 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-06
 
 ### Livingdocs Server Patches
+- [v135.1.32](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.32): fix(emails): Fix schema.org annotations in email templates
+
+The examples at google are wrong on that page: https://developers.google.com/gmail/markup/reference/go-to-action#view_action
+There are correct examples here: https://developers.google.com/gmail/markup/actions/declaring-actions
 - [v135.1.31](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.31): fix: trigger a new release version
 - [v135.1.30](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.30): fix(import): Process jobs in series to not run into pool allocation timeouts
 - [v135.1.29](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.29): chore(document-migrations): Lower the concurrency to 2 as we're running multiple processes most times
