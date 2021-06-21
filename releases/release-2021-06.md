@@ -71,6 +71,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-06
 
 ### Livingdocs Server Patches
+- [v135.1.31](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.31): fix: trigger a new release version
 - [v135.1.30](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.30): fix(import): Process jobs in series to not run into pool allocation timeouts
 - [v135.1.29](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.29): chore(document-migrations): Lower the concurrency to 2 as we're running multiple processes most times
 - [v135.1.28](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.28): chore(migrations): Improve the job status logs
