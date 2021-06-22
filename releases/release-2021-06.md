@@ -71,6 +71,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-06
 
 ### Livingdocs Server Patches
+- [v135.1.34](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.34): fix: assign user to a task
 - [v135.1.33](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.33): fix: document.transform notification
 - [v135.1.32](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.32): fix(emails): Fix schema.org annotations in email templates
 
