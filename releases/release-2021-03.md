@@ -71,6 +71,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-03
 
 ### Livingdocs Server Patches
+- [v124.5.57](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.57): chore: adapt tests for release-2021-03
 - [v124.5.56](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.56): fix(emails): Fix schema.org annotations in email templates
 
 The examples at google are wrong on that page: https://developers.google.com/gmail/markup/reference/go-to-action#view_action
