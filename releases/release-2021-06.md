@@ -74,10 +74,7 @@ How to require the server in your package.json:
 - [v135.1.35](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.35): fix(notifications): Set a default sender address for `notifications.channels[].email.fromAddress` based on the configured template and transport
 - [v135.1.34](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.34): fix: assign user to a task
 - [v135.1.33](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.33): fix: document.transform notification
-- [v135.1.32](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.32): fix(emails): Fix schema.org annotations in email templates
-
-The examples at google are wrong on that page: https://developers.google.com/gmail/markup/reference/go-to-action#view_action
-There are correct examples here: https://developers.google.com/gmail/markup/actions/declaring-actions
+- [v135.1.32](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.32): fix(emails): Fix schema.org annotations in email templates. The examples at google are wrong on [that page](https://developers.google.com/gmail/markup/actions/declaring-actions). There are correct examples [here](https://developers.google.com/gmail/markup/reference/go-to-action#view_action).
 - [v135.1.31](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.31): fix: trigger a new release version
 - [v135.1.30](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.30): fix(import): Process jobs in series to not run into pool allocation timeouts
 - [v135.1.29](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.29): chore(document-migrations): Lower the concurrency to 2 as we're running multiple processes most times
@@ -87,8 +84,6 @@ There are correct examples here: https://developers.google.com/gmail/markup/acti
 - [v135.1.25](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.25): fix: add indexing config for datetime-validity plugin
 - [v135.1.24](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.24): fix(iptc extraction): add an additional safety check to not run into errors in getValueForStorage
 - [v135.1.23](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.23): fix(elasticsearch): Fix elasticsearch bulk retries by matching failed entries in reverse order
-
-🤦‍♂️
 - [v135.1.22](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.22): test(sitemaps): Use the correct timestamp in tests
 - [v135.1.21](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.21): fix(user): Don't throw when reactivating users without occupations
 - [v135.1.20](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.20): fix(indexing): Retry bulk requests that respond with a 429 error when elasticsearch is overloaded
