@@ -121,6 +121,11 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.39](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.39): code(image manager): Address PR feedback
+
+- Use undefined for not-found (404) mediaLibraryEntries inside image manager
+  instead of rejected promises
+- Add test for image without mediaId (no error should be displayed in this case)
 - [v67.6.38](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.38): fix(employment type): correctly show error message when revoking fails
 - [v67.6.37](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.37): fix(media library): properly remove event listeners
 - [v67.6.36](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.36): fix(mediaLibrary): do not throw reactive errors
