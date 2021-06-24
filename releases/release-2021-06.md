@@ -116,6 +116,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.40](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.40): fix(lists): show error message when publishing a list fails
 - [v67.6.39](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.39): code(image manager): Address PR feedback
 
 - Use undefined for not-found (404) mediaLibraryEntries inside image manager
