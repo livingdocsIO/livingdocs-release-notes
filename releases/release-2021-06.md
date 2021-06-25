@@ -117,6 +117,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.41](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.41): fix(li-image): show crop previews larger for li-image metadata if there are no more than 2 namedCrop options
 - [v67.6.40](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.40): fix(lists): show error message when publishing a list fails
 - [v67.6.39](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.39): code(image manager): Address PR feedback
 
