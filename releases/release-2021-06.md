@@ -71,6 +71,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-06
 
 ### Livingdocs Server Patches
+- [v135.1.38](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.38): chore(ajv): Add benchmark/ajv-compile.js script
 - [v135.1.37](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.37): chore: Use date-fns instead of moment
 - [v135.1.36](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.36): fix: add comment.resolve action to notifications
 - [v135.1.35](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.35): fix(notifications): Set a default sender address for `notifications.channels[].email.fromAddress` based on the configured template and transport
