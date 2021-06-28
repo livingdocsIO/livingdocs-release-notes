@@ -71,6 +71,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-03
 
 ### Livingdocs Server Patches
+- [v124.5.60](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.60): fix: allow to add only ids instead of range for processBatch
 - [v124.5.59](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.59): fix(import): Process jobs in series to not run into pool allocation timeouts
 - [v124.5.58](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.58): fix: add comment.resolve action to notifications
 - [v124.5.57](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.57): chore: adapt tests for release-2021-03
