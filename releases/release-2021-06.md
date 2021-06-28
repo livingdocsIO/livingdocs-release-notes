@@ -71,6 +71,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-06
 
 ### Livingdocs Server Patches
+- [v135.1.40](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.40): fix: allow to add only ids instead of range for processBatch
 - [v135.1.39](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.39): fix(media-library): Fix the li_jsonb_patch function in postgres to properly set keys that include a slash
 - [v135.1.38](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.38): chore(ajv): Add benchmark/ajv-compile.js script
 - [v135.1.37](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.37): chore: Use date-fns instead of moment
