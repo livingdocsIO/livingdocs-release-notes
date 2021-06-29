@@ -122,6 +122,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.44](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.44): fix(media library): Use locale-specific asset when inserting file into document
 - [v67.6.43](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.43): fix(read-only): nest in ui object
 - [v67.6.42](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.42): chore(viewport): fix specs
 - [v67.6.41](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.41): fix(li-image): show crop previews larger for li-image metadata if there are no more than 2 namedCrop options
