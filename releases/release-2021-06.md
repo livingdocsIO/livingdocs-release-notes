@@ -123,6 +123,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.47](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.47): fix: select print layout use arrow function
 - [v67.6.46](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.46): fix(print-preview): only set editMode from contentType when it is defined
 - [v67.6.45](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.45): fix(date inputs): make it easier to reset a date input
 - [v67.6.44](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.44): fix(media library): Use locale-specific asset when inserting file into document
