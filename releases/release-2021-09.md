@@ -1,5 +1,5 @@
-last editor version: 70.0.4
-last server version: 136.3.6
+last editor version: 70.3.0
+last server version: 137.0.4
 
 **Attention:** If you skipped one or more releases, please also check the release-notes of the skipped ones.
 
@@ -170,6 +170,55 @@ References: [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4
 References: [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4477)
 
 
+#### Data-Migration: remove callback support :fire:
+
+🔥 The callback-based function `migrate` has been removed for a file data-migration. Use the promise based function `migrateAsync` instead.
+
+References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3819)
+
+
+#### Fix JSON patch operation of MediaLibraryEntries :fire:
+
+We had some invalid data structures when an asset in the media library got replaced.
+
+### Required action for downstreams :fire:
+
+In case you had the replaceAsset functionality enabled, you might want to fix invalid data structures. To check whether there are existing archived assets, please execute that query:
+
+```sql
+SELECT *
+FROM media_library_entries
+WHERE data->'archivedAssets' IS NOT NULL;
+```
+
+In case you have broken assets, please execute the following migration.
+We didn't put it into a new migration as the migration could block for too long.
+
+```sql
+CREATE OR REPLACE FUNCTION li_jsonb_extract_nested_image_objects(val jsonb, obj jsonb)
+RETURNS jsonb
+LANGUAGE plpgsql
+IMMUTABLE
+AS $$
+DECLARE
+  key text;
+BEGIN
+  IF jsonb_typeof(val) != 'object' THEN RETURN obj; END IF;
+  IF val->'key' IS NOT NULL THEN RETURN obj || jsonb_build_object(val->>'key', val); END IF;
+  FOR key IN SELECT * FROM jsonb_object_keys(val) LOOP
+    obj := li_jsonb_extract_nested_image_objects(val->key, obj);
+  END LOOP;
+  RETURN obj;
+END;
+$$;
+
+UPDATE media_library_entries
+SET data = data || jsonb_build_object('archivedAssets', li_jsonb_extract_nested_image_objects(data->'archivedAssets', '{}'))
+WHERE data->'archivedAssets' IS NOT NULL;
+```
+
+References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3815)
+
 
 
 # Deprecations
@@ -205,24 +254,36 @@ References: [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4
 
 ### Improvements
 
+* Editor
+  * Focus Editor when out of viewport [livingdocs-editor #4496](https://github.com/livingdocsIO/livingdocs-editor/pull/4496) :gift:
+  * User Profile: Show active sessions [livingdocs-editor #4494](https://github.com/livingdocsIO/livingdocs-editor/pull/4494) :gift:
+  * Lists: show error message when publishing a list fails [livingdocs-editor #4514](https://github.com/livingdocsIO/livingdocs-editor/pull/4514) :gift:
 * Includes: Improve error handling [livingdocs-editor #4432](https://github.com/livingdocsIO/livingdocs-editor/pull/4432) :gift:
 * Performance:
   * Streaming of image uploads [livingdocs-server #3758](https://github.com/livingdocsIO/livingdocs-server/pull/3758) :gift:
   * Streaming of file uploads [livingdocs-server #3738](https://github.com/livingdocsIO/livingdocs-server/pull/3738) :gift:
   * Only load the document content from postgres when requested [livingdocs-server #3721](https://github.com/livingdocsIO/livingdocs-server/pull/3721) :gift:
+  * Fix AJV memory leak [livingdocs-server #3803](https://github.com/livingdocsIO/livingdocs-server/pull/3803) :gift:
 * AWS: Upgrade AWS SES to use signature V4 [livingdocs-server #3730](https://github.com/livingdocsIO/livingdocs-server/pull/3730) :gift:
 * Fix pool allocation timeouts in imports [livingdocs-server #3788](https://github.com/livingdocsIO/livingdocs-server/pull/3788) :gift:
 * Collaboration: Do not rely on a hardcoded metadata property handle [livingdocs-editor #4501](https://github.com/livingdocsIO/livingdocs-editor/pull/4501) :gift:
+* Indexing: Allow to id's instead of range for `addPublicationBackgroundIndexingJobsByIds` [livingdocs-server #3812](https://github.com/livingdocsIO/livingdocs-server/pull/3812) :gift:
+* Migrations: Allow `--design-version-to=latest` param and do not allow to migrate to non existend design-version  [livingdocs-server #3814](https://github.com/livingdocsIO/livingdocs-server/pull/3814) :gift:
+
 
 ### Bugfixes
 
-* Drag + Drop: Correctly replace images & videos on DnD [livingdocs-editor #4462](https://github.com/livingdocsIO/livingdocs-editor/pull/4462) :beetle:
 * Media Library
   * Use locale-specific image asset on drop if available [livingdocs-editor #4428](https://github.com/livingdocsIO/livingdocs-editor/pull/4428) :beetle:
   * Handle missing/archived images [livingdocs-editor #4495](https://github.com/livingdocsIO/livingdocs-editor/pull/4495) :beetle:
   * Asset Translation: Media Library video and file translation support [livingdocs-server #3708](https://github.com/livingdocsIO/livingdocs-server/pull/3708) :beetle:
   * Rerender angular wrapped metadata forms when entities change in videos [livingdocs-editor #4511](https://github.com/livingdocsIO/livingdocs-editor/pull/4511) :beetle:
   * IPTC Extraction: Improve compatibility with different storage formats for the Keyword tag [livingdocs-server #3760](https://github.com/livingdocsIO/livingdocs-server/pull/3760) :beetle:
+  * Add posterImage to video directive schema [livingdocs-server #3786](https://github.com/livingdocsIO/livingdocs-server/pull/3786) :beetle:
+  * Set posterImage attribute on video directive [livingdocs-editor #4503](https://github.com/livingdocsIO/livingdocs-editor/pull/4503) :beetle:
+  * Consider readOnly config for metadata [livingdocs-editor #4517](https://github.com/livingdocsIO/livingdocs-editor/pull/4517) :beetle:
+  * Use correct language for a link text when inserting a file into a document [livingdocs-editor #4526](https://github.com/livingdocsIO/livingdocs-editor/pull/4526) :beetle:
+  * `li-meta-transcoding-state-form` UI updates after Video replacement [livingdocs-editor #4511](https://github.com/livingdocsIO/livingdocs-editor/pull/4511) :beetle:
 * Project
   * Fix project config state navigation [livingdocs-editor #4412](https://github.com/livingdocsIO/livingdocs-editor/pull/4412) :beetle:
   * Project: Respect last opened project after login / open base url [livingdocs-editor #4489](https://github.com/livingdocsIO/livingdocs-editor/pull/4489) :beetle:
@@ -235,9 +296,14 @@ References: [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4
 * Notification
   * Fix assign user to a task notification [livingdocs-server #3796](https://github.com/livingdocsIO/livingdocs-server/pull/3796) :beetle:
   * Fix `document.transform` notification [livingdocs-server #3791](https://github.com/livingdocsIO/livingdocs-server/pull/3791) :beetle:
+  * add `comment.resolve` action to notifications [livingdocs-server #3806](https://github.com/livingdocsIO/livingdocs-server/pull/3806) :beetle:
 * Comments
   * Allow user selection and deleting for mentions again (for the UI) [livingdocs-editor #4471](https://github.com/livingdocsIO/livingdocs-editor/pull/4471) :beetle:
   * Disable multiselect mode while editing a comment [livingdocs-editor #4478](https://github.com/livingdocsIO/livingdocs-editor/pull/4478) :beetle:
+* Other
+  * Drag + Drop: Correctly replace images & videos on DnD [livingdocs-editor #4462](https://github.com/livingdocsIO/livingdocs-editor/pull/4462) :beetle:
+  * Livingdocs-server: fix `project-truncate` (also delete events table) [livingdocs-server #3802](https://github.com/livingdocsIO/livingdocs-server/pull/3802) :beetle:
+  * Images: Show bigger crop preview if no more than 2 crops/ratios [livingdocs-editor #4519](https://github.com/livingdocsIO/livingdocs-editor/pull/4519) :beetle:
 
 
   ---
