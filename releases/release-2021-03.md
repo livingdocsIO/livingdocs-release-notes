@@ -133,6 +133,9 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-03
 
 ### Livingdocs Editor Patches
+- [v63.8.55](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.55): fix(task-assign): only show users with name and not archived
+
+(cherry picked from commit 9d2bfa0a454ba4f71712d1d636fa6a86928f4e84)
 - [v63.8.54](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.54): fix(print-preview): only set editMode from contentType when it is defined
 - [v63.8.53](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.53): fix(li-image): show crop previews larger for li-image metadata if there are no more than 2 namedCrop options
 - [v63.8.52](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.52): fix(image manager): Handle missing/archived images
