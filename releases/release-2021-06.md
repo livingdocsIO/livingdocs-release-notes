@@ -71,6 +71,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-06
 
 ### Livingdocs Server Patches
+- [v135.1.43](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.43): fix: read channelId from documentVersion
 - [v135.1.42](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.42): fix(datetime validity): allow undefined to/from values
 - [v135.1.41](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.41): fix(media): add read-only metadata field
 - [v135.1.40](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.40): fix: allow to add only ids instead of range for processBatch
