@@ -126,6 +126,10 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.48](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.48): fix(properties panel): Handle initial undefined value in li-form-color
+
+This fixes a bug where the color preview was not showing up and errors
+were logged to the console in the case that the initial value was undefined.
 - [v67.6.47](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.47): fix: select print layout use arrow function
 - [v67.6.46](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.46): fix(print-preview): only set editMode from contentType when it is defined
 - [v67.6.45](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.45): fix(date inputs): make it easier to reset a date input
