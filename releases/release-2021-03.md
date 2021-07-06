@@ -71,6 +71,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-03
 
 ### Livingdocs Server Patches
+- [v124.5.63](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.63): chore: fix test message
 - [v124.5.62](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.62): fix(references): Do not crash the reference extraction when no directive value is present
 
 In the json schema of the Livingdocs Document we allow null values and our code should be able to handle that.
