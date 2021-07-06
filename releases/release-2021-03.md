@@ -140,6 +140,10 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-03
 
 ### Livingdocs Editor Patches
+- [v63.8.57](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.57): fix(properties panel): Handle initial undefined value in li-form-color
+
+This fixes a bug where the color preview was not showing up and errors
+were logged to the console in the case that the initial value was undefined.
 - [v63.8.56](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.56): fix: select print layout use arrow function
 - [v63.8.55](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.55): fix(task-assign): only show users with name and not archived
 
