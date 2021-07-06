@@ -141,6 +141,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-03
 
 ### Livingdocs Editor Patches
+- [v63.8.58](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.58): fix: rename Ignore to Off
 - [v63.8.57](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.57): fix(properties panel): Handle initial undefined value in li-form-color
 
 This fixes a bug where the color preview was not showing up and errors
