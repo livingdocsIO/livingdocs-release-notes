@@ -71,6 +71,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-06
 
 ### Livingdocs Server Patches
+- [v135.1.47](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.47): chore(revision): add test for metadata
 - [v135.1.46](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.46): fix(project-delete): Delete media_library_entries, types and events correctly when deleting a project
 - [v135.1.45](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.45): fix(migrations): incorporate pr feedback
 - [v135.1.44](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.44): chore: change the slack messages template
