@@ -4,6 +4,8 @@
 # Releases
 
 * [![Current Release](https://img.shields.io/badge/-current-success)]()
+  [September 2021 Release](./releases/release-2021-09.md)
+* [![Legacy Release](https://img.shields.io/badge/-legacy*-lightgrey)]()
   [June 2021 Release](./releases/release-2021-06.md)
 * [![Legacy Release](https://img.shields.io/badge/-legacy*-lightgrey)]()
   [March 2021 Release](./releases/release-2021-03.md)
