@@ -1,5 +1,5 @@
-last editor version: 70.3.0
-last server version: 137.0.4
+last editor version: 70.6.1
+last server version: 138.0.1
 
 **Attention:** If you skipped one or more releases, please also check the release-notes of the skipped ones.
 
@@ -86,6 +86,18 @@ This feature allows you to register your own dashboard card in the Media Library
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3779)
   * [Documentation](https://github.com/livingdocsIO/documentation/pull/407)
 
+## Responsive Editing Toolbar :tada:
+
+With the introduction of more an more actions in the Document Editing Toolbar, space was getting rare, especially on smaller screens. Therefore a responsive editing toolbar has been introduced which collapse actions to groups when there is not enough space.
+
+![Screenshot 2021-07-06 at 12 51 19](https://user-images.githubusercontent.com/821875/124588351-fd1da980-de58-11eb-87b8-ec5d3e9cda02.png)
+![Screenshot 2021-07-06 at 12 51 38](https://user-images.githubusercontent.com/821875/124588354-fdb64000-de58-11eb-8c7a-8fd6b68a830b.png)
+![Screenshot 2021-07-06 at 12 51 57](https://user-images.githubusercontent.com/821875/124588356-fe4ed680-de58-11eb-928f-e99dbddacce7.png)
+![Screenshot 2021-07-06 at 12 53 02](https://user-images.githubusercontent.com/821875/124588454-1aeb0e80-de59-11eb-8895-bbcf59ebc960.png)
+
+* References
+  * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4245)
+
 
 
 
@@ -104,7 +116,40 @@ This feature allows you to register your own dashboard card in the Media Library
 livingdocs-server migrate up
 ```
 
+#### Remove support for callbacks in a few server API's :fire:
 
+We removed Callback support in several server API's. In the next releases we will continue with the removal of callbacks in server API's. All server API's already support Promises, therefore you can prepare the downstream migration from Callbacks to Promises.
+
+- 🔥 remove callback support for designLoaderApi (`server.features.api('li-design-loader')`) functions. Only promise based calls are supported
+
+
+##### Example how to migrate
+
+Search e.g. for `li-design-loader` and replace all your code from a callback to a promise based approach (async/await). Please also consider your tests.
+
+```js
+// from
+const designLoaderApi = liServer.features.api('li-design-loader')
+designLoaderApi.loadConfig({
+  name: req.params.name,
+  version: req.params.version,
+  projectId
+}, (err, designConfig) => {
+  if (err) return callback(err)
+  // ...
+})
+
+// to
+const designLoaderApi = liServer.features.api('li-design-loader')
+const designConfig = await designLoaderApi.loadConfig({
+  name: req.params.name,
+  version: req.params.version,
+  projectId
+})
+```
+
+References:
+- [designLoaderApi PR](https://github.com/livingdocsIO/livingdocs-server/pull/3845)
 
 
 #### Dashboard Card Configuration :fire:
@@ -228,7 +273,22 @@ References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3
 
 # APIs :gift:
 
+## Server CLI
 
+### livingdocs-server add-design
+
+- renamed `livingdocs-server add-design` to `livingdocs-server design-add` (deprecate `add-design`)
+
+References:
+* [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3844)
+
+
+### livingdocs-server add-design
+
+- add task to set current/active design `livingdocs-server design-set-active --project=<project handle> --design-version=<design-version>`
+
+References:
+* [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3841)
 
 
 # Internal Changes
@@ -245,6 +305,9 @@ References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3
   * Support a `maxCpuFunction` to retrieve the maximum cpu threshold during indexing [livingdocs-server #3701](https://github.com/livingdocsIO/livingdocs-server/pull/3701) :gift:
   * Add indexing config for li-datetime-validity plugin [livingdocs-server #3774](https://github.com/livingdocsIO/livingdocs-server/pull/3774) :gift:
   * Prevent implicit index creation in elasticsearch [livingdocs-server #3772](https://github.com/livingdocsIO/livingdocs-server/pull/3772) :gift:
+* History
+  * Allow to restore metadata [livingdocs-editor #4538](https://github.com/livingdocsIO/livingdocs-editor/pull/4538) :gift:
+bugs
 
 ### Design
 
@@ -258,6 +321,7 @@ References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3
   * Focus Editor when out of viewport [livingdocs-editor #4496](https://github.com/livingdocsIO/livingdocs-editor/pull/4496) :gift:
   * User Profile: Show active sessions [livingdocs-editor #4494](https://github.com/livingdocsIO/livingdocs-editor/pull/4494) :gift:
   * Lists: show error message when publishing a list fails [livingdocs-editor #4514](https://github.com/livingdocsIO/livingdocs-editor/pull/4514) :gift:
+  * Dashboards: show a loading indicator [livingdocs-editor #4551](https://github.com/livingdocsIO/livingdocs-editor/pull/4551) :gift:
 * Includes: Improve error handling [livingdocs-editor #4432](https://github.com/livingdocsIO/livingdocs-editor/pull/4432) :gift:
 * Performance:
   * Streaming of image uploads [livingdocs-server #3758](https://github.com/livingdocsIO/livingdocs-server/pull/3758) :gift:
@@ -297,6 +361,7 @@ References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3
   * Fix assign user to a task notification [livingdocs-server #3796](https://github.com/livingdocsIO/livingdocs-server/pull/3796) :beetle:
   * Fix `document.transform` notification [livingdocs-server #3791](https://github.com/livingdocsIO/livingdocs-server/pull/3791) :beetle:
   * add `comment.resolve` action to notifications [livingdocs-server #3806](https://github.com/livingdocsIO/livingdocs-server/pull/3806) :beetle:
+  * Get a list of all slack users to send notifications [livingdocs-server #3831](https://github.com/livingdocsIO/livingdocs-server/pull/3831) :beetle:
 * Comments
   * Allow user selection and deleting for mentions again (for the UI) [livingdocs-editor #4471](https://github.com/livingdocsIO/livingdocs-editor/pull/4471) :beetle:
   * Disable multiselect mode while editing a comment [livingdocs-editor #4478](https://github.com/livingdocsIO/livingdocs-editor/pull/4478) :beetle:
