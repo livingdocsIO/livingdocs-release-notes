@@ -142,6 +142,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-03
 
 ### Livingdocs Editor Patches
+- [v63.8.59](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.59): fix(hugo): add over media library
 - [v63.8.58](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.58): fix: rename Ignore to Off
 - [v63.8.57](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.57): fix(properties panel): Handle initial undefined value in li-form-color
 
