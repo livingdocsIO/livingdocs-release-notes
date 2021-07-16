@@ -71,6 +71,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-03
 
 ### Livingdocs Server Patches
+- [v124.5.68](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.68): fix: Trigger release as the last npm publish doesn't show up on npm despite success
 - [v124.5.67](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.67): chore(hugo): add tests for drop image
 - [v124.5.66](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.66): fix(hugo): handle via media library
 - [v124.5.65](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.65): fix(design): add new cli command design-set-active
