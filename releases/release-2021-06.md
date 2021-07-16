@@ -71,6 +71,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-06
 
 ### Livingdocs Server Patches
+- [v135.1.51](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.51): fix: unsubscribe url in notifications mail template
 - [v135.1.50](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.50): chore(hugo): add tests for drop image
 - [v135.1.48](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.48): fix(design): add new cli command design-set-active
 - [v135.1.47](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.47): chore(revision): add test for metadata
