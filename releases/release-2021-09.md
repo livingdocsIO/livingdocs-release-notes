@@ -1,5 +1,10 @@
-last editor version: 70.6.1
-last server version: 138.0.1
+last editor version: 70.10.0
+last server version: 145.0.0
+
+
+
+
+
 
 **Attention:** If you skipped one or more releases, please also check the release-notes of the skipped ones.
 
@@ -99,6 +104,14 @@ With the introduction of more an more actions in the Document Editing Toolbar, s
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4245)
 
 
+## Restricted Users :tada:
+
+It's now possible to define a user group with "Restricted Users". Restricted users can only see their own stuff (documents, assets). This can be useful if you have external editors (freelancer).
+
+* References
+  * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4465)
+  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3756)
+  * [Documentation](TODO)
 
 
 # Breaking Changes :fire:
@@ -121,6 +134,14 @@ livingdocs-server migrate up
 We removed Callback support in several server API's. In the next releases we will continue with the removal of callbacks in server API's. All server API's already support Promises, therefore you can prepare the downstream migration from Callbacks to Promises.
 
 - 🔥 remove callback support for designLoaderApi (`server.features.api('li-design-loader')`) functions. Only promise based calls are supported
+- 🔥 remove callback support for registrationApi (`server.features.api('li-registration')`) functions. Only promise based calls are supported
+- 🔥 remove callback support for documentRelationApi (`server.features.api('li-document-relations')`) functions. Only promise based calls are supported
+- 🔥 remove callback support for desknetIntegrationApi (`server.features.api('li-desknet-integration')`) functions. Only promise based calls are supported
+- 🔥 remove callback support for documentCopyApi (`server.features.api('li-document-copy')`) functions. Only promise based calls are supported
+- 🔥 remove callback support for designStatsApi (`server.features.api('li-design-stats')`) functions. Only promise based calls are supported
+- 🔥 remove callback support for tasksApi (`server.features.api('li-tasks')`) functions. Only promise based calls are supported
+- 🔥 remove callback support for designsApi (`server.features.api('li-designs')`) functions. Only promise based calls are supported
+- 🔥 remove callback support for cacheApi (`server.features.api('li-cache')`) functions. Only promise based calls are supported
 
 
 ##### Example how to migrate
@@ -150,6 +171,14 @@ const designConfig = await designLoaderApi.loadConfig({
 
 References:
 - [designLoaderApi PR](https://github.com/livingdocsIO/livingdocs-server/pull/3845)
+- [registrationApi PR](https://github.com/livingdocsIO/livingdocs-server/pull/3854)
+- [documentRelationApi PR](https://github.com/livingdocsIO/livingdocs-server/pull/3862)
+- [desknetIntegrationApi PR](https://github.com/livingdocsIO/livingdocs-server/pull/3866)
+- [documentCopyApi PR](https://github.com/livingdocsIO/livingdocs-server/pull/3853)
+- [designStatsApi PR](https://github.com/livingdocsIO/livingdocs-server/pull/3848)
+- [tasksApi PR](https://github.com/livingdocsIO/livingdocs-server/pull/3852)
+- [designsApi PR](https://github.com/livingdocsIO/livingdocs-server/pull/3849)
+- [cacheApi PR](https://github.com/livingdocsIO/livingdocs-server/pull/3847)
 
 
 #### Dashboard Card Configuration :fire:
@@ -308,6 +337,7 @@ References:
 * History
   * Allow to restore metadata [livingdocs-editor #4538](https://github.com/livingdocsIO/livingdocs-editor/pull/4538) :gift:
 bugs
+* Auto replace image when media library has changed [livingdocs-editor #4554](https://github.com/livingdocsIO/livingdocs-editor/pull/4554) :gift:
 
 ### Design
 
@@ -369,6 +399,7 @@ bugs
   * Drag + Drop: Correctly replace images & videos on DnD [livingdocs-editor #4462](https://github.com/livingdocsIO/livingdocs-editor/pull/4462) :beetle:
   * Livingdocs-server: fix `project-truncate` (also delete events table) [livingdocs-server #3802](https://github.com/livingdocsIO/livingdocs-server/pull/3802) :beetle:
   * Images: Show bigger crop preview if no more than 2 crops/ratios [livingdocs-editor #4519](https://github.com/livingdocsIO/livingdocs-editor/pull/4519) :beetle:
+  * Fix mobile scroll [livingdocs-editor #4525](https://github.com/livingdocsIO/livingdocs-editor/pull/4525) :beetle:
 
 
   ---
