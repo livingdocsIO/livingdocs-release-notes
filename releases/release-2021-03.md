@@ -145,6 +145,15 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-03
 
 ### Livingdocs Editor Patches
+- [v63.8.60](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.60): fix(cropper): Increase rounding tolerance
+
+This (mostly) fixes the following issue:
+1. Crop an image starting at "original" ratio and zoom in many times
+2. At some point due to low tolerance, the ratio is not detected as "original"
+3. Zoom in some more, ratio is detected as "original" again and the
+  selectedRatio watch in li-imagge-crop.vue resets crop to whole image
+
+With the increased tolerance, (2) is less likely to happen.
 - [v63.8.59](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.59): fix(hugo): add over media library
 - [v63.8.58](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.58): fix: rename Ignore to Off
 - [v63.8.57](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.57): fix(properties panel): Handle initial undefined value in li-form-color
