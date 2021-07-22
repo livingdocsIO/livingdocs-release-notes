@@ -133,6 +133,13 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.52](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.52): fix(select form): Always show clear button
+
+- Always show clear button even if the field is required
+  Rationale: It is possible to save a document when required metadata is still
+  missing, it will just block publication.
+  Old behavior: If a user accidentally selects a value, they cannot clear it anymore.
+  New behavior: User can clear required field, but publication will be blocked.
 - [v67.6.51](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.51): fix(hugo): add over media library
 - [v67.6.50](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.50): fix(filters): Hide filters with one option
 - [v67.6.49](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.49): fix(history): implement feedback
