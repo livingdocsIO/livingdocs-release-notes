@@ -71,6 +71,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-06
 
 ### Livingdocs Server Patches
+- [v135.1.54](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.54): fix(openid-connect): Properly resolve the project handle during the group syncing
 - [v135.1.53](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.53): fix: create new patch version for release management
 - [v135.1.52](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.52): fix(indexing): Improve the indexing to handle deleted projects or content types
 - [v135.1.51](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.51): fix: unsubscribe url in notifications mail template
