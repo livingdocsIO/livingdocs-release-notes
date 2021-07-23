@@ -145,6 +145,9 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-03
 
 ### Livingdocs Editor Patches
+- [v63.8.61](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.61): chore: fix test to have correct order
+
+(cherry picked from commit 480dca90363b182731f8dc8f8f6210c25e8f2df4)
 - [v63.8.60](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.60): fix(cropper): Increase rounding tolerance
 
 This (mostly) fixes the following issue:
