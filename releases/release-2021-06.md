@@ -71,6 +71,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-06
 
 ### Livingdocs Server Patches
+- [v135.1.55](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.55): fix(image-upload): Use the filetype support detection of the image processing instead of duplicating it during the upload
 - [v135.1.54](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.54): fix(openid-connect): Properly resolve the project handle during the group syncing
 - [v135.1.53](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.53): fix: create new patch version for release management
 - [v135.1.52](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.52): fix(indexing): Improve the indexing to handle deleted projects or content types
