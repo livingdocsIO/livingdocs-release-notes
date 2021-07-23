@@ -134,6 +134,10 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.53](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.53): chore: fix test to have correct order
+
+(cherry picked from commit 480dca90363b182731f8dc8f8f6210c25e8f2df4)
+(cherry picked from commit 541f36ebc9c1fb14fc1c5020db0b675ce539c8da)
 - [v67.6.52](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.52): fix(select form): Always show clear button
 
 - Always show clear button even if the field is required
