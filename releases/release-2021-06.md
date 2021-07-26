@@ -135,6 +135,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.55](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.55): fix(image metadata plugin): show correct order not reversed
 - [v67.6.54](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.54): fix(media library): ensure video and image are rerendered after replace
 - [v67.6.53](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.53): chore: fix test to have correct order
 
