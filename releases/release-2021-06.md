@@ -71,6 +71,9 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-06
 
 ### Livingdocs Server Patches
+- [v135.1.57](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.57): fix: use image proxy for import-api
+
+(cherry picked from commit 0b242f7009313cbf477de9688ff7153611d0c5a2)
 - [v135.1.56](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.56): fix(slack_api): use mail always case insensitive
 - [v135.1.55](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.55): fix(image-upload): Use the filetype support detection of the image processing instead of duplicating it during the upload
 - [v135.1.54](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.54): fix(openid-connect): Properly resolve the project handle during the group syncing
