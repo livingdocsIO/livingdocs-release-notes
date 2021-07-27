@@ -142,6 +142,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.58](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.58): fix: set width of named crops to 200
 - [v67.6.57](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.57): fix(icons): Upgrade to the newest version of material-design-icons-svg
 - [v67.6.56](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.56): fix: use width instead of size and set it to 100
 - [v67.6.55](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.55): fix(image metadata plugin): show correct order not reversed
