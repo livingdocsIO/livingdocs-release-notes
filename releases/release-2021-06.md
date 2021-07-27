@@ -71,6 +71,10 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-06
 
 ### Livingdocs Server Patches
+- [v135.1.59](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.59): fix(indexing): `null` values in a filter declaration should behave exactly like `undefined` values
+
+We had an issue where we've passed a filter query like `{"from": "abc", "to": null}` in the media library indexing, which generated the sql query `"id" > 'abc' AND "id" < null`.
+This resulted an empty return value, which is not the expected behavior for filters.
 - [v135.1.58](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.58): fix: create new version because of npm
 - [v135.1.57](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.57): fix: use image proxy for import-api
 - [v135.1.56](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.56): fix(slack_api): use mail always case insensitive
