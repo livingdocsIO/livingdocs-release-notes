@@ -71,6 +71,20 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-06
 
 ### Livingdocs Server Patches
+- [v135.1.61](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.61): fix(release): npm only pushed the version to the registry, looks like the tarball is not there
+
+npm install @livingdocs/server@135.1.60
+npm ERR! code E404
+npm ERR! 404 Not Found - GET https://registry.npmjs.org/@livingdocs/server/-/server-135.1.60.tgz - Not found
+npm ERR! 404
+npm ERR! 404  '@livingdocs/server@https://registry.npmjs.org/@livingdocs/server/-/server-135.1.60.tgz' is not in the npm registry.
+npm ERR! 404 You should bug the author to publish it (or use the name yourself!)
+npm ERR! 404
+npm ERR! 404 Note that you can also install from a
+npm ERR! 404 tarball, folder, http url, or git url.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     .npm/_logs/2021-07-29T11_08_30_618Z-debug.log
 - [v135.1.60](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.60): fix(sso): Fix legacy github, facebook and google login
 - [v135.1.59](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.59): fix(indexing): `null` values in a filter declaration should behave exactly like `undefined` values
 
