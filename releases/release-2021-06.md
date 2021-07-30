@@ -157,6 +157,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.61](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.61): fix(editable text count): ensure editable text count works when loading a document editor directly and when opening from the dashboard
 - [v67.6.60](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.60): fix(text count): fix config property typo
 - [v67.6.59](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.59): fix(text count): show the selected editable directive count next to the document text count
 - [v67.6.58](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.58): fix: set width of named crops to 200
