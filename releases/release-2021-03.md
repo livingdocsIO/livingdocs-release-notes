@@ -71,6 +71,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-03
 
 ### Livingdocs Server Patches
+- [v124.5.71](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.71): fix(tokens): Fix jwt and cookie expiration timestamps
 - [v124.5.70](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.70): fix(slack_api): use mail always case insensitive
 
 (cherry picked from commit 2481b180f7904faccde0359b4bf54b648ac979f2)
