@@ -157,6 +157,13 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.62](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.62): fix(li-image-crop): Fix aspect ratio update behavior
+
+- Add a flag 'autoSelected' to distinguish aspect ratio that has been
+  calculated from current crop vs aspect ratio that was selected
+  by the user => only update ratio in srcissors when it has been
+  user-selected. This avoids weird feedback loops.
+- Remove ignoreNextCropUpdate hack in li-image-crop which is no longer required
 - [v67.6.61](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.61): fix(editable text count): ensure editable text count works when loading a document editor directly and when opening from the dashboard
 - [v67.6.60](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.60): fix(text count): fix config property typo
 - [v67.6.59](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.59): fix(text count): show the selected editable directive count next to the document text count
