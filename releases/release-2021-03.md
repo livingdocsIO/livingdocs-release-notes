@@ -150,6 +150,13 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-03
 
 ### Livingdocs Editor Patches
+- [v63.8.65](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.65): fix(li-image-crop): Fix aspect ratio update behavior
+
+- Add a flag 'autoSelected' to distinguish aspect ratio that has been
+  calculated from current crop vs aspect ratio that was selected
+  by the user => only update ratio in srcissors when it has been
+  user-selected. This avoids weird feedback loops.
+- Remove ignoreNextCropUpdate hack in li-image-crop which is no longer required
 - [v63.8.64](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.64): fix: set width of named crops to 200
 - [v63.8.63](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.63): fix: use width instead of size and set it to 100
 - [v63.8.62](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.62): fix(image metadata plugin): show correct order not reversed
