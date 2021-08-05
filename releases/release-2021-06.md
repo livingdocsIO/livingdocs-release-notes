@@ -71,6 +71,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-06
 
 ### Livingdocs Server Patches
+- [v135.1.62](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.62): fix: Skip bulk index jobs coming in with a wrong context
 - [v135.1.61](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.61): fix(release): npm only pushed the version to the registry, looks like the tarball is not there
 
 npm install @livingdocs/server@135.1.60
