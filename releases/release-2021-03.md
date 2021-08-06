@@ -71,6 +71,13 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-03
 
 ### Livingdocs Server Patches
+- [v124.5.75](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.75): fix: Trigger another release as npm publish failed again
+
+Maybe it's an npm or semantic release bug that already got fixed.
+https://drone.livingdocs.io/livingdocsIO/livingdocs-server/14000/5/3
+```
+npm ERR! 400 Bad Request - PUT https://registry.npmjs.org/@livingdocs%2fserver - Must associate a single dist tag with new publishes.
+```
 - [v124.5.74](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.74): fix(indexing): Fix context filter/normalization during bulk index
 - [v124.5.73](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.73): fix: Upgrade to @livingdocs/framework@18.6.7
 - [v124.5.72](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.72): fix: Skip bulk index jobs coming in with a wrong context
