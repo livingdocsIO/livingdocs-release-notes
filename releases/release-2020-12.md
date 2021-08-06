@@ -162,6 +162,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-12
 
 ### Livingdocs Editor Patches
+- [v57.33.63](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.63): chore: rerun checks
 - [v57.33.62](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.62): fix(modals): allow printing articles with ctrl+p / cmd+p
 - [v57.33.61](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.61): chore(ci): remove cypress from CI for dez release
 - [v57.33.60](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.60): fix: update integration test because of an outdated github API
