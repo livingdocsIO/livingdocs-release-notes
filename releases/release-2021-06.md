@@ -160,6 +160,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.63](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.63): fix(collaboration): remove special treatment of li-image metadata property crops
 - [v67.6.62](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.62): fix(li-image-crop): Fix aspect ratio update behavior
 
 - Add a flag 'autoSelected' to distinguish aspect ratio that has been
