@@ -161,6 +161,9 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.65](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.65): fix(tags): Dashboard
+
+- Fixed Tags dashboard display across all devices
 - [v67.6.64](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.64): fix(metadata): ensure li-numeric-list and li-string-list metadata changes trigger updates
 - [v67.6.63](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.63): fix(collaboration): remove special treatment of li-image metadata property crops
 - [v67.6.62](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.62): fix(li-image-crop): Fix aspect ratio update behavior
