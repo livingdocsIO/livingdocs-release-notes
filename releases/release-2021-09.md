@@ -1,6 +1,5 @@
-last editor version: 70.10.0
-last server version: 145.0.0
-
+last editor version: 72.8.7
+last server version: 147.2.8
 
 
 
@@ -36,6 +35,32 @@ last server version: 145.0.0
 
 * Recording: **TODO**
 * Slides: **TODO**
+
+# System Requirements
+
+#### Minimal
+
+* Node 14
+* NPM 7
+* Postgres 9.6 (Deprecate Postgres 9 and 10)
+* Elasticsearch 6.x
+* Redis 5
+* Base Docker Images
+  * livingdocs-server: `livingdocs/server-base:14.3`
+  * livingdocs-editor: `livingdocs/editor-base:14.3`
+* Browser Support: Edge >= 80, Firefox >= 74, Chrome >= 80, Safari >= 13.1, iOS Safari >= 13.4, Opera >= 67
+
+#### Suggested
+
+* Node 16
+* NPM 7
+* Postgres 13
+* Elasticsearch 7
+* Redis 6
+* Base Docker Images
+  * livingdocs-server: `livingdocs/server-base:16`
+  * livingdocs-editor: `livingdocs/editor-base:16`
+* Browser Support: Edge >= 80, Firefox >= 74, Chrome >= 80, Safari >= 13.1, iOS Safari >= 13.4, Opera >= 67
 
 # Repositories
 
@@ -91,6 +116,27 @@ This feature allows you to register your own dashboard card in the Media Library
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3779)
   * [Documentation](https://github.com/livingdocsIO/documentation/pull/407)
 
+## Dashboard Cards Configuration for the Document List :tada:
+
+This feature allows you to register your own dashboard card in the Document List.
+
+* References
+  * [Editor Preparation PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4553)
+  * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4591)
+  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3876)
+  * [Documentation](https://github.com/livingdocsIO/documentation/pull/414)
+
+
+## List Teasers
+
+We now support list teasers as includes without registering your own plugin.
+
+* References
+  * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4556)
+  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3846)
+  * [Documentation](https://github.com/livingdocsIO/documentation/pull/415)
+
+
 ## Responsive Editing Toolbar :tada:
 
 With the introduction of more an more actions in the Document Editing Toolbar, space was getting rare, especially on smaller screens. Therefore a responsive editing toolbar has been introduced which collapse actions to groups when there is not enough space.
@@ -128,6 +174,8 @@ It's now possible to define a user group with "Restricted Users". Restricted use
 #   create comments table + add events to the stream_events_types table
 livingdocs-server migrate up
 ```
+
+TODO@Ralph - update database migration notes
 
 #### Remove support for callbacks in a few server API's :fire:
 
@@ -180,6 +228,73 @@ References:
 - [designsApi PR](https://github.com/livingdocsIO/livingdocs-server/pull/3849)
 - [cacheApi PR](https://github.com/livingdocsIO/livingdocs-server/pull/3847)
 
+
+
+#### Do not support callbacks in includes anymore (removed rendering.function) :fire:
+
+🔥 removed `rendering.function` (callback) support in includes. Use `rendering.render` (promise) instead. (Tip: search for `rendering: {` to find potentially affected functions)
+
+References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3872)
+
+
+#### Remove support for worker-farm and worker-nodes strategies :fire:
+
+There is no worker strategy available and settable anymore for the migration and render pipeline feature. All migrations are computed in the same process (formerly known as `in-process` strategy)
+
+🔥 You can't set a worker strategy anymore. Remove all server config settings at `migration.worker_strategy` and `render_pipeline.worker_strategy`
+
+References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3821)
+
+
+#### Upgrade from Webpack 4 to Webpack 5 :fire:
+
+
+In case you have a [karma test setup](https://karma-runner.github.io/) (if `karma.js` file is present in your project root), you'll need to update the configurations.
+`istanbul-instrumenter-loader` got replaced by `babel-plugin-istanbul` and `karma-coverage`.
+
+Please remove all webpack dependencies and install the new versions for it:
+```bash
+npm uninstall webpack karma-webpack karma-coverage-istanbul-reporter
+npm install --save-dev webpack@latest karma-webpack@latest karma-coverage@latest
+```
+
+Then change the coverage reporter in the `karma.js` configuration:
+```diff
+- const webpackRules = webpackConfig.module.rules
+-
+- webpackRules.unshift({
+-   test: /\.(js)$/,
+-   exclude: /(\/(node_modules|test|vendor|dist|bundle|coverage|config)\/|\.spec\.js$)/,
+-   use: {
+-    loader: 'istanbul-instrumenter-loader',
+-     options: {
+-       esModules: true
+-     }
+-   }
+- })
+
+ ...
+     plugins: [
+-       'karma-coverage-istanbul-reporter',
++       'karma-coverage',
+         ....
+    ],
+
+-     coverageIstanbulReporter: {
+-        dir: './coverage',
+-        reports: ['lcov']
++     coverageReporter: {
++       dir: 'coverage',
++       reporters: [
++         {type: 'lcov', subdir: 'lcov'},
++         {type: 'text-summary', subdir: '.'}
++       ]
+
+-     reporters: ['super-dots', 'mocha', 'coverage-istanbul']
++     reporters: ['super-dots', 'mocha', 'coverage']
+```
+
+References: [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4577)
 
 #### Dashboard Card Configuration :fire:
 
@@ -255,7 +370,7 @@ References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3
 
 We had some invalid data structures when an asset in the media library got replaced.
 
-### Required action for downstreams :fire:
+##### Required action for downstreams :fire:
 
 In case you had the replaceAsset functionality enabled, you might want to fix invalid data structures. To check whether there are existing archived assets, please execute that query:
 
@@ -294,8 +409,44 @@ WHERE data->'archivedAssets' IS NOT NULL;
 References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3815)
 
 
+#### Typography Cleanup :fire:
+
+If you have any custom UI in your downstream that makes use of any of the following you want to read this:
+
+classes:
+- `.alpha`, `.beta`, `.gamma`, `.delta`, `.epsilon`, `.zeta`
+- `.smallprint`, `.milli`, `.micro`, `.dense`
+- `.text--milli`, `.text--micro`
+- `.text--black`
+
+SCSS variabales / mixins:
+- `$base-font-size`, `$base-line-height`, `$h1-size`, `$h2-size`, `$h3-size`, `$h4-size`, `$h5-size`, `$h6-size`, `$milli-size`, `$micro-size`, `$line-height-ratio`
+- `font-size($font-size, $line-height: true)`
+- `headings($from: 1, $to: 6)`
+
+You are highly encouraged to refactor your markup / custom stylesheets to not use these things anymore. In order to ease that process, there is a file you can `@import` in your custom SCSS to get support for the mentioned classes and variables:
+In the SCSS file you have configured as `CUSTOM_STYLE_PATH_BEFORE` or `CUSTOM_STYLE_PATH_AFTER` add this line at the top:
+```sass
+@import "~styles/backwards-compatibiliy/release-2021-09.scss";
+```
+This will define the removed classes, variables and mixins within your SCSS file tree. Your Sass files will compile again and your custom UI will most probably look just fine. From there on you can refactor your code and remove the `@import "~styles/backwards-compatibiliy/release-2021-09.scss";` after you are done. We will keep this file around for some time, but it will eventually get removed.
+
+If you have any questions about this, don't hesitate to contact us.
+You can also consult the styleguide to read more about newly introduced styles and how they look.
+
+References: [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4612)
+
 
 # Deprecations
+
+## Document List Card Extension
+
+editor config  are deprecated in favor of project config editorSettings.documentList.dashboard:
+
+🔧  Deprecate editor config `app.filters.documentListList` and projectConfig `settings.lists`. Move config to server config `editorSettings.documentList.dashboard`
+
+References:
+* [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4591)
 
 
 
@@ -329,6 +480,8 @@ References:
 
 ### Features
 
+* Administration: Support a "Connect" button for OpenID Connect Providers on the user profile [livingdocs-editor #4571](https://github.com/livingdocsIO/livingdocs-editor/pull/4571) :gift:
+* Show the selected editable directive count next to the document text count [livingdocs-editor #4617](https://github.com/livingdocsIO/livingdocs-editor/pull/4617) :gift:
 * Indexing
   * Delay media indexing and notifications [livingdocs-server #3709](https://github.com/livingdocsIO/livingdocs-server/pull/3709) :gift:
   * Support a `maxCpuFunction` to retrieve the maximum cpu threshold during indexing [livingdocs-server #3701](https://github.com/livingdocsIO/livingdocs-server/pull/3701) :gift:
@@ -336,7 +489,6 @@ References:
   * Prevent implicit index creation in elasticsearch [livingdocs-server #3772](https://github.com/livingdocsIO/livingdocs-server/pull/3772) :gift:
 * History
   * Allow to restore metadata [livingdocs-editor #4538](https://github.com/livingdocsIO/livingdocs-editor/pull/4538) :gift:
-bugs
 * Auto replace image when media library has changed [livingdocs-editor #4554](https://github.com/livingdocsIO/livingdocs-editor/pull/4554) :gift:
 
 ### Design
@@ -363,6 +515,8 @@ bugs
 * Collaboration: Do not rely on a hardcoded metadata property handle [livingdocs-editor #4501](https://github.com/livingdocsIO/livingdocs-editor/pull/4501) :gift:
 * Indexing: Allow to id's instead of range for `addPublicationBackgroundIndexingJobsByIds` [livingdocs-server #3812](https://github.com/livingdocsIO/livingdocs-server/pull/3812) :gift:
 * Migrations: Allow `--design-version-to=latest` param and do not allow to migrate to non existend design-version  [livingdocs-server #3814](https://github.com/livingdocsIO/livingdocs-server/pull/3814) :gift:
+* Add support for auto completion for livingdocs-server CLI [livingdocs-server #3869](https://github.com/livingdocsIO/livingdocs-server/pull/3869) :gift:
+* Improve session cookie expiration [livingdocs-server #3898](https://github.com/livingdocsIO/livingdocs-server/pull/3898) :gift:
 
 
 ### Bugfixes
@@ -378,12 +532,20 @@ bugs
   * Consider readOnly config for metadata [livingdocs-editor #4517](https://github.com/livingdocsIO/livingdocs-editor/pull/4517) :beetle:
   * Use correct language for a link text when inserting a file into a document [livingdocs-editor #4526](https://github.com/livingdocsIO/livingdocs-editor/pull/4526) :beetle:
   * `li-meta-transcoding-state-form` UI updates after Video replacement [livingdocs-editor #4511](https://github.com/livingdocsIO/livingdocs-editor/pull/4511) :beetle:
+  * Support PDF uploads in image feature as imagemagick/sharp converts them to images [livingdocs-server #3877](https://github.com/livingdocsIO/livingdocs-server/pull/3877) :gift:
+  * Fix zoom in image cropper [livingdocs-editor #4583](https://github.com/livingdocsIO/livingdocs-editor/pull/4583) :gift:
+  * Show the named crops in order from the config [livingdocs-editor #4589](https://github.com/livingdocsIO/livingdocs-editor/pull/4589) :gift:
+  * Show new video asset after replace [livingdocs-editor #4595](https://github.com/livingdocsIO/livingdocs-editor/pull/4595) :gift:
+  * Replace existing doc-image when dropping a mediaSource [livingdocs-editor #4602](https://github.com/livingdocsIO/livingdocs-editor/pull/4602) :gift:
+  * The upload button is enabled when all required metadata fields are set in all cases now [livingdocs-editor #4646](https://github.com/livingdocsIO/livingdocs-editor/pull/4646) :gift:
 * Project
   * Fix project config state navigation [livingdocs-editor #4412](https://github.com/livingdocsIO/livingdocs-editor/pull/4412) :beetle:
   * Project: Respect last opened project after login / open base url [livingdocs-editor #4489](https://github.com/livingdocsIO/livingdocs-editor/pull/4489) :beetle:
 * Indexing / Search
   * Retry Elasticsearch bulk requests when it reports "Too Many Requests" [livingdocs-server #3749](https://github.com/livingdocsIO/livingdocs-server/pull/3749) :beetle:
   * Fix Elasticsearch publication searches [livingdocs-server #3733](https://github.com/livingdocsIO/livingdocs-server/pull/3733) :beetle:
+  * Handle deleted projects or content types in the live indexing [livingdocs-server #3870](https://github.com/livingdocsIO/livingdocs-server/pull/3870) :gift:
+  * Filter bulk index jobs context [livingdocs-server #3899](https://github.com/livingdocsIO/livingdocs-server/pull/3899) :gift:
 * Batching / Queueing
   * Batch revisions with batchSize 100 in the revision migrations [livingdocs-server #3780](https://github.com/livingdocsIO/livingdocs-server/pull/3780) :beetle:
   * Fix issue in xcleanup logic that transfers pending jobs to a new worker [livingdocs-server #3783](https://github.com/livingdocsIO/livingdocs-server/pull/3783) :beetle:
@@ -400,6 +562,12 @@ bugs
   * Livingdocs-server: fix `project-truncate` (also delete events table) [livingdocs-server #3802](https://github.com/livingdocsIO/livingdocs-server/pull/3802) :beetle:
   * Images: Show bigger crop preview if no more than 2 crops/ratios [livingdocs-editor #4519](https://github.com/livingdocsIO/livingdocs-editor/pull/4519) :beetle:
   * Fix mobile scroll [livingdocs-editor #4525](https://github.com/livingdocsIO/livingdocs-editor/pull/4525) :beetle:
+  * Fix maxLength and maxItems validation on li-string-list and li-numeric-list [livingdocs-server #3909](https://github.com/livingdocsIO/livingdocs-server/pull/3909) :gift:
+  * Pass blockEditorInteraction for html rendering [livingdocs-editor #4610](https://github.com/livingdocsIO/livingdocs-editor/pull/4610) :gift:
+  * Tag dashboard cards are now visible when clicked [livingdocs-editor #4664](https://github.com/livingdocsIO/livingdocs-editor/pull/4664) :gift:
+  * Escape slack control characters [livingdocs-server #3836](https://github.com/livingdocsIO/livingdocs-server/pull/3836) :gift:
+  * Authentication: Fix legacy github, facebook and google login [livingdocs-server #3890](https://github.com/livingdocsIO/livingdocs-server/pull/3890) :gift:
+  * Import: handle the image proxy correctly in import / export [livingdocs-server #3882](https://github.com/livingdocsIO/livingdocs-server/pull/3882) :gift:
 
 
   ---
