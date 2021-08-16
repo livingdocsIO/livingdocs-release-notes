@@ -161,6 +161,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.66](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.66): fix(drop-handler): Use queue for huGO and WoodWing uploads
 - [v67.6.65](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.65): fix(tags): Dashboard
 
 - Fixed Tags dashboard display across all devices
