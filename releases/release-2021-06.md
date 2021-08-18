@@ -71,6 +71,10 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-06
 
 ### Livingdocs Server Patches
+- [v135.1.67](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.67): fix(elasticsearch): Do not push the `_type` in elasticsearch 7 bulk payloads
+
+The _type parameter got deprecated and logs warnings in elasticsearch 7 when it is present.
+With the changes here we only push it with the elasticsearch 6 bulk requests.
 - [v135.1.66](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.66): fix(github-sso): Migrate to another github passport module that's more up to date
 - [v135.1.65](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.65): fix(media library): correctly validate maxItems on li-string-list and li-numeric-list
 - [v135.1.64](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.64): fix(indexing): Fix context filter/normalization during bulk index
