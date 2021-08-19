@@ -71,6 +71,10 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-03
 
 ### Livingdocs Server Patches
+- [v124.5.76](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.76): fix(elasticsearch): Do not push the `_type` in elasticsearch 7 bulk payloads
+
+The _type parameter got deprecated and logs warnings in elasticsearch 7 when it is present.
+With the changes here we only push it with the elasticsearch 6 bulk requests.
 - [v124.5.75](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.75): fix: Trigger another release as npm publish failed again
 
 Maybe it's an npm or semantic release bug that already got fixed.
