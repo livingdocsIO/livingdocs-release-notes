@@ -71,6 +71,7 @@ How to require the server in your package.json:
   https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-03
 
 ### Livingdocs Server Patches
+- [v124.5.77](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.77): fix(server): Replace broken http-terminator with lil-http-terminator that doesn't have any dependencies
 - [v124.5.76](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.76): fix(elasticsearch): Do not push the `_type` in elasticsearch 7 bulk payloads
 
 The _type parameter got deprecated and logs warnings in elasticsearch 7 when it is present.
