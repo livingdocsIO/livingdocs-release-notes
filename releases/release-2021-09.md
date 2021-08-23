@@ -1,8 +1,5 @@
-last editor version: 72.8.7
-last server version: 147.2.8
-
-
-
+last editor version: 72.11.1
+last server version: 151.1.0
 
 
 **Attention:** If you skipped one or more releases, please also check the release-notes of the skipped ones.
@@ -106,6 +103,16 @@ How to require the editor in your package.json:
 
 
 # Highlights
+
+## Revoke Media
+
+With the new "revoke media" functionality in the media library, all media files get revoked from all documents and storage. Because customers have other requirements what should happen after revoking an image (e.g. clearing caches, sending an email notification), we also provide a server event and a webhook, both named `mediaLibraryEntry.revoke`, which the downstream server can subscribe to.
+
+* References
+  * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4516)
+  * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3809)
+  * [Documentation](https://github.com/livingdocsIO/documentation/pull/412)
+
 
 ## Dashboard Cards Configuration for the Media Library :tada:
 
@@ -227,6 +234,10 @@ References:
 - [tasksApi PR](https://github.com/livingdocsIO/livingdocs-server/pull/3852)
 - [designsApi PR](https://github.com/livingdocsIO/livingdocs-server/pull/3849)
 - [cacheApi PR](https://github.com/livingdocsIO/livingdocs-server/pull/3847)
+- [includesApi PR](https://github.com/livingdocsIO/livingdocs-server/pull/3917)
+- [publicApi PR](https://github.com/livingdocsIO/livingdocs-server/pull/3919)
+- [importApi PR](https://github.com/livingdocsIO/livingdocs-server/pull/3916)
+- [documentListApi PR](https://github.com/livingdocsIO/livingdocs-server/pull/3914)
 
 
 
@@ -480,6 +491,7 @@ References:
 
 ### Features
 
+* Add listUpdateHookAsync hook in the lists feature [livingdocs-server #3925](https://github.com/livingdocsIO/livingdocs-server/pull/3925) :gift:
 * Administration: Support a "Connect" button for OpenID Connect Providers on the user profile [livingdocs-editor #4571](https://github.com/livingdocsIO/livingdocs-editor/pull/4571) :gift:
 * Show the selected editable directive count next to the document text count [livingdocs-editor #4617](https://github.com/livingdocsIO/livingdocs-editor/pull/4617) :gift:
 * Indexing
@@ -510,6 +522,7 @@ References:
   * Streaming of file uploads [livingdocs-server #3738](https://github.com/livingdocsIO/livingdocs-server/pull/3738) :gift:
   * Only load the document content from postgres when requested [livingdocs-server #3721](https://github.com/livingdocsIO/livingdocs-server/pull/3721) :gift:
   * Fix AJV memory leak [livingdocs-server #3803](https://github.com/livingdocsIO/livingdocs-server/pull/3803) :gift:
+  * Remove jQuery from the framework [livingdocs-server #3913](https://github.com/livingdocsIO/livingdocs-server/pull/3913) :gift:
 * AWS: Upgrade AWS SES to use signature V4 [livingdocs-server #3730](https://github.com/livingdocsIO/livingdocs-server/pull/3730) :gift:
 * Fix pool allocation timeouts in imports [livingdocs-server #3788](https://github.com/livingdocsIO/livingdocs-server/pull/3788) :gift:
 * Collaboration: Do not rely on a hardcoded metadata property handle [livingdocs-editor #4501](https://github.com/livingdocsIO/livingdocs-editor/pull/4501) :gift:
