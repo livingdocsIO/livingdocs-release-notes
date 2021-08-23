@@ -167,6 +167,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-06
 
 ### Livingdocs Editor Patches
+- [v67.6.69](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.69): fix(li-image): allow download of crops in fullres when customBuilt.allowDownloadOfLiImageCrops is true
 - [v67.6.68](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.68): fix(kanban boards): ensure kanban board columns don't outgrow the screen
 - [v67.6.67](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.67): fix(image cropping): properly handle original with recommendedRatios
 - [v67.6.66](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.66): fix(drop-handler): Use queue for huGO and WoodWing uploads
