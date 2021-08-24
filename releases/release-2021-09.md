@@ -96,6 +96,7 @@ How to require the editor in your package.json:
   https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-09
 
 ### Livingdocs Editor Patches
+- [v72.13.2](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.2): fix: update framework to release-2021-09 (21.0.1)
 - [v??.?.?](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v??.?.?): text
 
 
