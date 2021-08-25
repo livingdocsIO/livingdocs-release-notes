@@ -4,13 +4,13 @@
 - [Newsletter](#newsletter)
 - [Webinar](#webinar)
 - [System Requirements](#system-requirements)
-- [Patches](#repositories)
 - [Highlights](#highlights)
 - [Experimental](#experimental)
 - [Breaking Changes](#breaking-changes-fire)
 - [APIs](#apis-gift)
 - [Internal Changes](#internal-changes)
 - [Other Changes](#other-changes)
+- [Patches](#patches)
 
 # Newsletter
 
@@ -39,160 +39,6 @@
 * Base Docker Images
   * livingdocs-server: `livingdocs/server-base:14.3`
   * livingdocs-editor: `livingdocs/editor-base:14.3`
-
-# Repositories
-
-This release consists of the following new versions of the `livingdocs-server` and the `livingdocs-editor`:
-
-Package | Version
---- | ---
-`@livingdocs/server` | `release-2020-12`
-`@livingdocs/editor` | `release-2020-12`
-
-## Livingdocs Server
-How to require the server in your package.json:
-```json
-"dependencies": {
-  "@livingdocs/server": "release-2020-12",
-}
-```
-
-- Link to the release branch:
-  https://github.com/livingdocsIO/livingdocs-server/tree/release-2020-12
-
-### Livingdocs Server Patches
-- [v114.0.59](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.59): chore: rerun checks
-- [v114.0.58](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.58): fix(design): add new cli command design-set-active
-- [v114.0.57](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.57): fix: update integration test because of an outdated github API
-- [v114.0.56](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.56): fix(hugo): require auth on all print routes
-- [v114.0.55](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.55): fix(print-api): Force `no-cache` for print API requests
-
-If the Livingdocs Editor is cached via CDN print API requests like `getLayouts` will return a cached/outdated version. This will fix the issue.
-- [v114.0.54](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.54): chore(import-public-api): correctly validate publicationDate
-- [v114.0.53](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.53): fix(login): Users will be able to log in even if new device emails can not be sent
-- [v114.0.52](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.52): fix(print): fix crash on certificate errors
-- [v114.0.51](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.51): fix(queue): Fix a typo and apply the same pending check to the xcleanup script
-- [v114.0.50](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.50): fix(queue): Do not delete the consumer if we can't transfer the pending messages
-- [v114.0.49](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.49): fix: Do not send out too many 'new device login' emails
-- [v114.0.48](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.48): fix(openid-connect): fix various coercion issues
-- [v114.0.47](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.47): fix(open-id-connect-sso): correctly resolve projectIds as strings
-- [v114.0.46](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.46): fix(print): fix `filterText()` type-check
-
-Fixes 
-```
-uncaughtException: content.replace is not a function
-```
-that could occur under certain circumstances.
-- [v114.0.45](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.45): fix(print): fix print host
-- [v114.0.44](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.44): fix(render-pipeline): log documentId for failed renderings
-- [v114.0.43](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.43): fix(list-update): finish trx if not passed in
-- [v114.0.42](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.42): fix(migrations): Enable error logs for document migrations
-
-Customers need more informations when a migration fails.
-- [v114.0.41](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.41): fix(indexing): the custom indexer passes ids instead of documentIds
-- [v114.0.40](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.40): fix(comments): Add maxThreadCount config property
-- [v114.0.39](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.39): fix(policies): Introduce a more strict schema and allow additional properties
-- [v114.0.38](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.38): fix(publish): Fix the indexing for document publish calls that are nested in a transaction
-- [v114.0.37](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.37): fix(indexing): Change how we create the redis instance in the indexing controller as it didn't respect the sentinel config
-- [v114.0.36](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.36): fix(airship): enable push notifications for web channel as well
-- [v114.0.35](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.35): fix(includes): Add interaction blocker config
-- [v114.0.34](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.34): fix(websocket): Rewrite the url for websockets as we do it for requests if /proxy/api is present
-- [v114.0.33](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.33): fix: add data field 'classifications' for hugo_article
-- [v114.0.32](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.32): fix(print): Handle image components
-
-Data from `image` components (such as the origin) can now be extracted and exposed in the export XML.
-
-An `image` component:
-```
-{
-  "identifier": "nzz-standard.image",
-  "id": "doc-1eph26b470",
-  "content": {
-    "image": {
-      "originalUrl": "https://nzz-img-dev.s3.amazonaws.com/2020/12/14/8db79a6c-0958-4236-9f57-2c36de0945cf.jpeg",
-      "url": "https://img-test.nzz.ch/O=75/https://nzz-img-dev.s3.amazonaws.com/2020/12/14/8db79a6c-0958-4236-9f57-2c36de0945cf.jpeg",
-      "width": 2667,
-      "height": 4000,
-      "mimeType": "image/jpeg",
-      "imageService": "resrc.it",
-      "origins": [
-        {
-          "name": "hugo",
-          "identifier": "picture-18029184"
-        }
-      ]
-    },
-    "caption": "Logs in pallets at a warehouse used by LogsNearMe.co.uk, in Shepton Mallet, U.K., on Wednesday, Dec. 9, 2020. Jonathan Baylis, founder of LogsNearMe.co.uk, had a hunch that firewood was a Covid-proof business. Photographer: Luke MacGregor/Bloomberg",
-    "author": "Luke Macgregor / Bloomberg"
-  }
-}
-```
-will be exported as:
-```
-        <article>
-            <content type="title">Kopie von foobar</content>
-            <content type="author">Mister Developer</content>
-            <content type="image-data”>
-                <content type="originalUrl">https://nzz-img-dev.s3.amazonaws.com/2020/12/14/8db79a6c-0958-4236-9f57-2c36de0945cf.jpeg</content>
-                <content type="url">https://img-test.nzz.ch/O=75/https://nzz-img-dev.s3.amazonaws.com/2020/12/14/8db79a6c-0958-4236-9f57-2c36de0945cf.jpeg</content>
-                <content type="width">2667</content>
-                <content type="height">4000</content>
-                <content type="mimeType">image/jpeg</content>
-                <content type="imageService">resrc.it</content>
-                <content type="origins">hugo:picture-18029184</content>
-            </content>
-            <content type=“image-caption">Logs in pallets at a warehouse used by LogsNearMe.co.uk, in Shepton Mallet, U.K., on Wednesday, Dec. 9, 2020. Jonathan Baylis, founder of LogsNearMe.co.uk, had a hunch that firewood was a Covid-proof business. Photographer: Luke MacGregor/Bloomberg</content>
-            <content type=“image-author">Luke Macgregor / Bloomberg</content>
-            <content type="text">text</content>
-        </article>
-```
-- [v114.0.31](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.31): fix(open-id-connect): correctly create users
-- [v114.0.30](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.30): fix: add new npm read token
-- [v114.0.29](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.29): fix: correct expiration date for cookies and accessTokens
-
-
-## Livingdocs Editor
-How to require the editor in your package.json:
-```json
-"dependencies": {
-  "@livingdocs/editor": "release-2020-12",
-}
-```
-
-- Link to the release branch:
-  https://github.com/livingdocsIO/livingdocs-editor/tree/release-2020-12
-
-### Livingdocs Editor Patches
-- [v57.33.63](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.63): chore: rerun checks
-- [v57.33.62](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.62): fix(modals): allow printing articles with ctrl+p / cmd+p
-- [v57.33.61](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.61): chore(ci): remove cypress from CI for dez release
-- [v57.33.60](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.60): fix: update integration test because of an outdated github API
-- [v57.33.59](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.59): fix(imatrics): fix styling issues leading to invisible suggestions
-- [v57.33.58](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.58): fix(clipboard): render includes when dropping a component from the clipboard
-- [v57.33.57](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.57): fix(viewport-viewport-units-buggyfill): improve regex to match only vh units
-- [v57.33.56](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.56): fix: show an indicator incase the ES limit defaults to 10000 total documents
-- [v57.33.55](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.55): fix(BW service changer): Markup updated to new standard
-
-- Updated BW service changer's markup on par with recently set standard
-- [v57.33.54](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.54): fix(lists): cancel spinner after error
-- [v57.33.53](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.53): fix(teaser-preview): render includes in teaser preview
-- [v57.33.52](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.52): fix(clipboard): fix clipboard paste for a container
-- [v57.33.51](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.51): fix: alignment of component title when no description is available
-- [v57.33.50](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.50): fix(comments): Show max thread count limit error
-- [v57.33.49](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.49): chore(policies): Add additionalProperties: false to the policy schema to keep it in sync with the one on the server
-- [v57.33.48](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.48): fix(conflict): Hide comments in conflict mode
-- [v57.33.47](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.47): fix(split-pane): Minimize sidebar on conflict
-- [v57.33.46](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.46): chore: Fix the livingdocs-integration.json for the release-2020-12 in bluewin
-- [v57.33.45](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.45): fix(ci): Use our docker images instead of the official docker image
-- [v57.33.44](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.44): fix(includes): Add interaction blocker config
-- [v57.33.43](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.43): chore: adapt cypress tests
-- [v57.33.42](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.42): fix: correctly navigate back from a custom dashboard
-- [v57.33.41](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.41): fix(server): Fix support for redirecting based on x-forwarded-proto header
-- [v57.33.40](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.40): fix(link tool): show linked URL when valid but not accessible via iframely link checker
-- [v57.33.39](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.39): fix(media library): fix download when storage bucket is private
-- [v57.33.38](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.38): fix(media library): make the context menu edit button work again
-- [v57.33.37](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.37): fix: add new npm read token
-- [v57.33.36](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.36): fix: make integration settings changes in the UI properly change the channelConfigDraft
 
 
 # Highlights
@@ -417,7 +263,7 @@ module.exports= {
   https: require('../cert'),
   api: {
     // disabling the proxiedHost config (CORS-mode)
-    // will only work in production 
+    // will only work in production
     // or a server with a valid SSL setup
     proxiedHost: 'http://localhost:9090'
   }
@@ -719,6 +565,87 @@ References:
 * Desknet: Fix Desk-Net Plugin for embedded designs [livingdocs-server #3183](https://github.com/livingdocsIO/livingdocs-server/pull/3183) :beetle:
 * Imatrics: Fix tag slugging [livingdocs-server #3188](https://github.com/livingdocsIO/livingdocs-server/pull/3188) :beetle:
 * Includes: Allow `ui.label` for paramsSchema entries [livingdocs-server #3239](https://github.com/livingdocsIO/livingdocs-server/pull/3239) :beetle:
+
+
+
+# Patches
+
+### Livingdocs Server Patches
+- [v114.0.59](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.59): chore: rerun checks
+- [v114.0.58](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.58): fix(design): add new cli command design-set-active
+- [v114.0.57](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.57): fix: update integration test because of an outdated github API
+- [v114.0.56](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.56): fix(hugo): require auth on all print routes
+- [v114.0.55](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.55): fix(print-api): Force `no-cache` for print API requests
+
+If the Livingdocs Editor is cached via CDN print API requests like `getLayouts` will return a cached/outdated version. This will fix the issue.
+- [v114.0.54](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.54): chore(import-public-api): correctly validate publicationDate
+- [v114.0.53](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.53): fix(login): Users will be able to log in even if new device emails can not be sent
+- [v114.0.52](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.52): fix(print): fix crash on certificate errors
+- [v114.0.51](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.51): fix(queue): Fix a typo and apply the same pending check to the xcleanup script
+- [v114.0.50](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.50): fix(queue): Do not delete the consumer if we can't transfer the pending messages
+- [v114.0.49](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.49): fix: Do not send out too many 'new device login' emails
+- [v114.0.48](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.48): fix(openid-connect): fix various coercion issues
+- [v114.0.47](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.47): fix(open-id-connect-sso): correctly resolve projectIds as strings
+- [v114.0.46](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.46): fix(print): fix `filterText()` type-check
+
+Fixes
+```
+uncaughtException: content.replace is not a function
+```
+that could occur under certain circumstances.
+- [v114.0.45](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.45): fix(print): fix print host
+- [v114.0.44](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.44): fix(render-pipeline): log documentId for failed renderings
+- [v114.0.43](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.43): fix(list-update): finish trx if not passed in
+- [v114.0.42](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.42): fix(migrations): Enable error logs for document migrations
+
+Customers need more informations when a migration fails.
+- [v114.0.41](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.41): fix(indexing): the custom indexer passes ids instead of documentIds
+- [v114.0.40](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.40): fix(comments): Add maxThreadCount config property
+- [v114.0.39](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.39): fix(policies): Introduce a more strict schema and allow additional properties
+- [v114.0.38](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.38): fix(publish): Fix the indexing for document publish calls that are nested in a transaction
+- [v114.0.37](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.37): fix(indexing): Change how we create the redis instance in the indexing controller as it didn't respect the sentinel config
+- [v114.0.36](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.36): fix(airship): enable push notifications for web channel as well
+- [v114.0.35](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.35): fix(includes): Add interaction blocker config
+- [v114.0.34](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.34): fix(websocket): Rewrite the url for websockets as we do it for requests if /proxy/api is present
+- [v114.0.33](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.33): fix: add data field 'classifications' for hugo_article
+- [v114.0.32](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.32): fix(print): Handle image components
+- [v114.0.31](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.31): fix(open-id-connect): correctly create users
+- [v114.0.30](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.30): fix: add new npm read token
+- [v114.0.29](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v114.0.29): fix: correct expiration date for cookies and accessTokens
+
+
+### Livingdocs Editor Patches
+- [v57.33.63](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.63): chore: rerun checks
+- [v57.33.62](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.62): fix(modals): allow printing articles with ctrl+p / cmd+p
+- [v57.33.61](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.61): chore(ci): remove cypress from CI for dez release
+- [v57.33.60](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.60): fix: update integration test because of an outdated github API
+- [v57.33.59](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.59): fix(imatrics): fix styling issues leading to invisible suggestions
+- [v57.33.58](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.58): fix(clipboard): render includes when dropping a component from the clipboard
+- [v57.33.57](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.57): fix(viewport-viewport-units-buggyfill): improve regex to match only vh units
+- [v57.33.56](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.56): fix: show an indicator incase the ES limit defaults to 10000 total documents
+- [v57.33.55](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.55): fix(BW service changer): Markup updated to new standard
+
+- Updated BW service changer's markup on par with recently set standard
+- [v57.33.54](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.54): fix(lists): cancel spinner after error
+- [v57.33.53](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.53): fix(teaser-preview): render includes in teaser preview
+- [v57.33.52](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.52): fix(clipboard): fix clipboard paste for a container
+- [v57.33.51](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.51): fix: alignment of component title when no description is available
+- [v57.33.50](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.50): fix(comments): Show max thread count limit error
+- [v57.33.49](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.49): chore(policies): Add additionalProperties: false to the policy schema to keep it in sync with the one on the server
+- [v57.33.48](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.48): fix(conflict): Hide comments in conflict mode
+- [v57.33.47](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.47): fix(split-pane): Minimize sidebar on conflict
+- [v57.33.46](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.46): chore: Fix the livingdocs-integration.json for the release-2020-12 in bluewin
+- [v57.33.45](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.45): fix(ci): Use our docker images instead of the official docker image
+- [v57.33.44](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.44): fix(includes): Add interaction blocker config
+- [v57.33.43](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.43): chore: adapt cypress tests
+- [v57.33.42](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.42): fix: correctly navigate back from a custom dashboard
+- [v57.33.41](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.41): fix(server): Fix support for redirecting based on x-forwarded-proto header
+- [v57.33.40](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.40): fix(link tool): show linked URL when valid but not accessible via iframely link checker
+- [v57.33.39](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.39): fix(media library): fix download when storage bucket is private
+- [v57.33.38](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.38): fix(media library): make the context menu edit button work again
+- [v57.33.37](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.37): fix: add new npm read token
+- [v57.33.36](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v57.33.36): fix: make integration settings changes in the UI properly change the channelConfigDraft
+
 
 ---
 

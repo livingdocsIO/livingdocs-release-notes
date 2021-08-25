@@ -4,13 +4,13 @@
 - [Newsletter](#newsletter)
 - [Webinar](#webinar)
 - [System Requirements](#system-requirements)
-- [Patches](#repositories)
 - [Highlights](#highlights)
 - [Breaking Changes](#breaking-changes-fire)
 - [Deprecations](#deprecations)
 - [APIs](#apis-gift)
 - [Internal Changes](#internal-changes)
 - [Other Changes](#other-changes)
+- [Patches](#patches)
 
 # Newsletter
 
@@ -49,191 +49,6 @@
 * Base Docker Images
   * livingdocs-server: `livingdocs/server-base:14.3`
   * livingdocs-editor: `livingdocs/editor-base:14.3`
-
-# Repositories
-
-This release consists of the following new versions of the `livingdocs-server` and the `livingdocs-editor`:
-
-Package | Version
---- | ---
-`@livingdocs/server` | `release-2021-03`
-`@livingdocs/editor` | `release-2021-03`
-
-## Livingdocs Server
-How to require the server in your package.json:
-```json
-"dependencies": {
-  "@livingdocs/server": "release-2021-03",
-}
-```
-
-- Link to the release branch:
-  https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-03
-
-### Livingdocs Server Patches
-- [v124.5.77](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.77): fix(server): Replace broken http-terminator with lil-http-terminator that doesn't have any dependencies
-- [v124.5.76](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.76): fix(elasticsearch): Do not push the `_type` in elasticsearch 7 bulk payloads
-
-The _type parameter got deprecated and logs warnings in elasticsearch 7 when it is present.
-With the changes here we only push it with the elasticsearch 6 bulk requests.
-- [v124.5.75](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.75): fix: Trigger another release as npm publish failed again
-
-Maybe it's an npm or semantic release bug that already got fixed.
-https://drone.livingdocs.io/livingdocsIO/livingdocs-server/14000/5/3
-```
-npm ERR! 400 Bad Request - PUT https://registry.npmjs.org/@livingdocs%2fserver - Must associate a single dist tag with new publishes.
-```
-- [v124.5.74](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.74): fix(indexing): Fix context filter/normalization during bulk index
-- [v124.5.73](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.73): fix: Upgrade to @livingdocs/framework@18.6.7
-- [v124.5.72](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.72): fix: Skip bulk index jobs coming in with a wrong context
-- [v124.5.71](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.71): fix(tokens): Fix jwt and cookie expiration timestamps
-- [v124.5.70](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.70): fix(slack_api): use mail always case insensitive
-
-(cherry picked from commit 2481b180f7904faccde0359b4bf54b648ac979f2)
-- [v124.5.69](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.69): fix(image-upload): Support pdf uploads as imagemagick converts them to images
-- [v124.5.68](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.68): fix: Trigger release as the last npm publish doesn't show up on npm despite success
-- [v124.5.67](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.67): chore(hugo): add tests for drop image
-- [v124.5.66](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.66): fix(hugo): handle via media library
-- [v124.5.65](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.65): fix(design): add new cli command design-set-active
-- [v124.5.64](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.64): fix: unsubscribe url in notifications mail template
-- [v124.5.63](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.63): chore: fix test message
-- [v124.5.62](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.62): fix(references): Do not crash the reference extraction when no directive value is present
-
-In the json schema of the Livingdocs Document we allow null values and our code should be able to handle that.
-- [v124.5.61](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.61): fix: read channelId from documentVersion
-
-(cherry picked from commit 3a775757b56e0d4a97a034d6825623fcf8637224)
-- [v124.5.60](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.60): fix: allow to add only ids instead of range for processBatch
-- [v124.5.59](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.59): fix(import): Process jobs in series to not run into pool allocation timeouts
-- [v124.5.58](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.58): fix: add comment.resolve action to notifications
-- [v124.5.57](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.57): chore: adapt tests for release-2021-03
-- [v124.5.56](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.56): fix(emails): Fix schema.org annotations in email templates
-
-The examples at google are wrong on that page: https://developers.google.com/gmail/markup/reference/go-to-action#view_action
-There are correct examples here: https://developers.google.com/gmail/markup/actions/declaring-actions
-- [v124.5.55](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.55): chore(document-migrations): Lower the concurrency to 2 as we're running multiple processes most times
-- [v124.5.54](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.54): chore: Update todo script on drone
-- [v124.5.53](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.53): test(image-upload-proxy): Write a test that the filename gets passed to the multipart request
-- [v124.5.52](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.52): fix(elasticsearch): Fix elasticsearch bulk retries by matching failed entries in reverse order
-
-🤦‍♂️
-- [v124.5.51](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.51): fix(indexing): Retry bulk requests that respond with a 429 error when elasticsearch is overloaded
-- [v124.5.50](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.50): chore(file-upload): Support node 12 with its broken Readable.from support for Buffers
-- [v124.5.49](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.49): fix(search): Invoke search requests against elasticsearch with the correct publication index
-- [v124.5.48](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.48): fix(emails): Upgrade the SES configuration to the newest aws sdk v2 to get rid of deprecation messages
-
-Upgrading to v3 of the client (`@aws-sdk/client-ses`) would result
-in breaking changes in the configuration and therefore we should tackle that in a separate PR.
-- [v124.5.47](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.47): fix(indexing): Fix channelId comparison in live indexing
-- [v124.5.46](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.46): fix(group_projection): add archived to return object
-- [v124.5.45](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.45): fix(yargs): Upgrade to the most recent version of yargs
-- [v124.5.44](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.44): fix(indexing): Support a elasticIndex.maxCpuFunction config option to define a cpu threshold getter function
-- [v124.5.43](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.43): chore: Upgrade sharp to get the setup working with node 16
-- [v124.5.42](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.42): fix(notifications): use Authorization Header for slack api
-- [v124.5.41](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.41): fix: update integration test because of an outdated github API
-- [v124.5.40](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.40): fix(langauge-metadata): test for object
-- [v124.5.39](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.39): test(import): check response format of input in more detail
-- [v124.5.38](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.38): fix(indexing): Resume indexing after a process and queue got paused
-- [v124.5.37](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.37): fix(document-copy): Rewrite the document-copy config loader to promises to ensure that the promises always resolve
-- [v124.5.36](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.36): fix(queue): Automatically delete consumers where the consumer group in redis got deleted manually
-- [v124.5.35](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.35): chore: simplify code
-- [v124.5.34](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.34): fix(public-api): allow to set 'publicationDate' flag on import
-- [v124.5.33](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.33): fix: correctly log in users that create their accounts with SSO
-- [v124.5.32](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.32): fix(publication): Keep first_publication_id on unpublish
-
-This property is used to check if a document has ever been published,
-so once it has been set it should always exist
-- [v124.5.31](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.31): fix(print): fix crash on certificate errors
-- [v124.5.30](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.30): fix(queue): Fix a typo and apply the same pending check to the xcleanup script
-- [v124.5.29](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.29): fix(queue): Do not delete the consumer if we can't transfer the pending messages
-- [v124.5.28](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.28): chore(openid): Move getOrCreateProject to support file
-- [v124.5.27](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.27): chore(ww-assets): add tests for search
-- [v124.5.26](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.26): chore: correctly pass trx to authIdentityModel.deleteIdentity
-
-
-
-
-## Livingdocs Editor
-How to require the editor in your package.json:
-```json
-"dependencies": {
-  "@livingdocs/editor": "release-2021-03",
-}
-```
-
-- Link to the release branch:
-  https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-03
-
-### Livingdocs Editor Patches
-- [v63.8.68](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.68): fix(li-image): allow download of crops in fullres when customBuilt.allowDownloadOfLiImageCrops is true
-- [v63.8.67](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.67): fix(drop-handler): Use queue for huGO and WoodWing uploads
-- [v63.8.66](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.66): fix(collaboration): remove special treatment of li-image metadata property crops
-- [v63.8.65](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.65): fix(li-image-crop): Fix aspect ratio update behavior
-
-- Add a flag 'autoSelected' to distinguish aspect ratio that has been
-  calculated from current crop vs aspect ratio that was selected
-  by the user => only update ratio in srcissors when it has been
-  user-selected. This avoids weird feedback loops.
-- Remove ignoreNextCropUpdate hack in li-image-crop which is no longer required
-- [v63.8.64](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.64): fix: set width of named crops to 200
-- [v63.8.63](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.63): fix: use width instead of size and set it to 100
-- [v63.8.62](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.62): fix(image metadata plugin): show correct order not reversed
-- [v63.8.61](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.61): chore: fix test to have correct order
-
-(cherry picked from commit 480dca90363b182731f8dc8f8f6210c25e8f2df4)
-- [v63.8.60](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.60): fix(cropper): Increase rounding tolerance
-
-This (mostly) fixes the following issue:
-1. Crop an image starting at "original" ratio and zoom in many times
-2. At some point due to low tolerance, the ratio is not detected as "original"
-3. Zoom in some more, ratio is detected as "original" again and the
-  selectedRatio watch in li-imagge-crop.vue resets crop to whole image
-
-With the increased tolerance, (2) is less likely to happen.
-- [v63.8.59](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.59): fix(hugo): add over media library
-- [v63.8.58](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.58): fix: rename Ignore to Off
-- [v63.8.57](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.57): fix(properties panel): Handle initial undefined value in li-form-color
-
-This fixes a bug where the color preview was not showing up and errors
-were logged to the console in the case that the initial value was undefined.
-- [v63.8.56](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.56): fix: select print layout use arrow function
-- [v63.8.55](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.55): fix(task-assign): only show users with name and not archived
-
-(cherry picked from commit 9d2bfa0a454ba4f71712d1d636fa6a86928f4e84)
-- [v63.8.54](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.54): fix(print-preview): only set editMode from contentType when it is defined
-- [v63.8.53](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.53): fix(li-image): show crop previews larger for li-image metadata if there are no more than 2 namedCrop options
-- [v63.8.52](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.52): fix(image manager): Handle missing/archived images
-
-Show an overlay in the editor for images that are missing
-from the media library (no entry found for mediaId) or
-have been archived.
-The existing overlay for expired images is reused/adapted for this purpose.
-- [v63.8.51](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.51): fix: fix icon link in styleguide
-- [v63.8.50](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.50): fix(embed): Extract html from directive content
-- [v63.8.49](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.49): chore(CI): run nzz tests with node 16
-- [v63.8.48](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.48): fix: imatrics performance improvements & fix styling issues
-- [v63.8.47](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.47): fix: init comments only when they are enabled
-- [v63.8.46](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.46): fix(dropActions): consider image drop cases with insertsBlocked
-- [v63.8.45](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.45): fix: update integration test because of an outdated github API
-- [v63.8.44](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.44): fix(crop): prevent mousedown and mouseup events from zoom-control buttons to srcissors crop-view
-- [v63.8.43](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.43): fix(framework): update framework to 18.6.4
-- [v63.8.42](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.42): fix(clipboard): do not insert default content on clipboard drop
-- [v63.8.41](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.41): fix: correctly redirect users
-- [v63.8.40](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.40): fix(crops): simplify metadata crop calculations
-- [v63.8.39](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.39): test(metadata updater): add tests for crop url recalculation on crop coordinates change on an li-image
-- [v63.8.38](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.38): fix(test): pin vue-test-utils version to 1.1.3
-- [v63.8.37](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.37): fix: to create a new tag
-- [v63.8.36](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.36): fix(clipboard): render includes when dropping a component from the clipboard
-- [v63.8.35](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.35): fix(multiselect): only allow to transform available components in a content-type
-- [v63.8.34](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.34): fix(viewport-viewport-units-buggyfill): improve regex to match only vh units
-- [v63.8.33](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.33): fix(link tool): allow to link to URLs matching the delivery path pattern but the extracted ID points to inexisting documents
-- [v63.8.32](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.32): fix(link tool): make removing an existing link possible again
-- [v63.8.31](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.31): fix(docked content): Visibility
-
-- Fixed z visibility of project-setup's docked content (was in front of top right user menu on mobile)
-- [v63.8.30](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.30): fix: add data-tour property for format-panel
-
-
 
 
 
@@ -1124,6 +939,160 @@ colt().createConfigProject('project', {...})
 
 * Public Api: downgrade contentFormat when required [livingdocs-server](https://github.com/livingdocsIO/livingdocs-server/pull/3468) :gift:
 
+
+
+
+# Patches
+
+### Livingdocs Server Patches
+- [v124.5.77](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.77): fix(server): Replace broken http-terminator with lil-http-terminator that doesn't have any dependencies
+- [v124.5.76](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.76): fix(elasticsearch): Do not push the `_type` in elasticsearch 7 bulk payloads
+
+The _type parameter got deprecated and logs warnings in elasticsearch 7 when it is present.
+With the changes here we only push it with the elasticsearch 6 bulk requests.
+- [v124.5.75](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.75): fix: Trigger another release as npm publish failed again
+
+Maybe it's an npm or semantic release bug that already got fixed.
+https://drone.livingdocs.io/livingdocsIO/livingdocs-server/14000/5/3
+```
+npm ERR! 400 Bad Request - PUT https://registry.npmjs.org/@livingdocs%2fserver - Must associate a single dist tag with new publishes.
+```
+- [v124.5.74](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.74): fix(indexing): Fix context filter/normalization during bulk index
+- [v124.5.73](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.73): fix: Upgrade to @livingdocs/framework@18.6.7
+- [v124.5.72](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.72): fix: Skip bulk index jobs coming in with a wrong context
+- [v124.5.71](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.71): fix(tokens): Fix jwt and cookie expiration timestamps
+- [v124.5.70](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.70): fix(slack_api): use mail always case insensitive
+
+(cherry picked from commit 2481b180f7904faccde0359b4bf54b648ac979f2)
+- [v124.5.69](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.69): fix(image-upload): Support pdf uploads as imagemagick converts them to images
+- [v124.5.68](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.68): fix: Trigger release as the last npm publish doesn't show up on npm despite success
+- [v124.5.67](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.67): chore(hugo): add tests for drop image
+- [v124.5.66](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.66): fix(hugo): handle via media library
+- [v124.5.65](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.65): fix(design): add new cli command design-set-active
+- [v124.5.64](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.64): fix: unsubscribe url in notifications mail template
+- [v124.5.63](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.63): chore: fix test message
+- [v124.5.62](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.62): fix(references): Do not crash the reference extraction when no directive value is present
+
+In the json schema of the Livingdocs Document we allow null values and our code should be able to handle that.
+- [v124.5.61](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.61): fix: read channelId from documentVersion
+
+(cherry picked from commit 3a775757b56e0d4a97a034d6825623fcf8637224)
+- [v124.5.60](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.60): fix: allow to add only ids instead of range for processBatch
+- [v124.5.59](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.59): fix(import): Process jobs in series to not run into pool allocation timeouts
+- [v124.5.58](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.58): fix: add comment.resolve action to notifications
+- [v124.5.57](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.57): chore: adapt tests for release-2021-03
+- [v124.5.56](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.56): fix(emails): Fix schema.org annotations in email templates
+
+The examples at google are wrong on that page: https://developers.google.com/gmail/markup/reference/go-to-action#view_action
+There are correct examples here: https://developers.google.com/gmail/markup/actions/declaring-actions
+- [v124.5.55](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.55): chore(document-migrations): Lower the concurrency to 2 as we're running multiple processes most times
+- [v124.5.54](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.54): chore: Update todo script on drone
+- [v124.5.53](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.53): test(image-upload-proxy): Write a test that the filename gets passed to the multipart request
+- [v124.5.52](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.52): fix(elasticsearch): Fix elasticsearch bulk retries by matching failed entries in reverse order
+
+🤦‍♂️
+- [v124.5.51](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.51): fix(indexing): Retry bulk requests that respond with a 429 error when elasticsearch is overloaded
+- [v124.5.50](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.50): chore(file-upload): Support node 12 with its broken Readable.from support for Buffers
+- [v124.5.49](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.49): fix(search): Invoke search requests against elasticsearch with the correct publication index
+- [v124.5.48](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.48): fix(emails): Upgrade the SES configuration to the newest aws sdk v2 to get rid of deprecation messages
+
+Upgrading to v3 of the client (`@aws-sdk/client-ses`) would result
+in breaking changes in the configuration and therefore we should tackle that in a separate PR.
+- [v124.5.47](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.47): fix(indexing): Fix channelId comparison in live indexing
+- [v124.5.46](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.46): fix(group_projection): add archived to return object
+- [v124.5.45](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.45): fix(yargs): Upgrade to the most recent version of yargs
+- [v124.5.44](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.44): fix(indexing): Support a elasticIndex.maxCpuFunction config option to define a cpu threshold getter function
+- [v124.5.43](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.43): chore: Upgrade sharp to get the setup working with node 16
+- [v124.5.42](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.42): fix(notifications): use Authorization Header for slack api
+- [v124.5.41](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.41): fix: update integration test because of an outdated github API
+- [v124.5.40](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.40): fix(langauge-metadata): test for object
+- [v124.5.39](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.39): test(import): check response format of input in more detail
+- [v124.5.38](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.38): fix(indexing): Resume indexing after a process and queue got paused
+- [v124.5.37](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.37): fix(document-copy): Rewrite the document-copy config loader to promises to ensure that the promises always resolve
+- [v124.5.36](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.36): fix(queue): Automatically delete consumers where the consumer group in redis got deleted manually
+- [v124.5.35](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.35): chore: simplify code
+- [v124.5.34](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.34): fix(public-api): allow to set 'publicationDate' flag on import
+- [v124.5.33](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.33): fix: correctly log in users that create their accounts with SSO
+- [v124.5.32](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.32): fix(publication): Keep first_publication_id on unpublish
+
+This property is used to check if a document has ever been published,
+so once it has been set it should always exist
+- [v124.5.31](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.31): fix(print): fix crash on certificate errors
+- [v124.5.30](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.30): fix(queue): Fix a typo and apply the same pending check to the xcleanup script
+- [v124.5.29](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.29): fix(queue): Do not delete the consumer if we can't transfer the pending messages
+- [v124.5.28](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.28): chore(openid): Move getOrCreateProject to support file
+- [v124.5.27](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.27): chore(ww-assets): add tests for search
+- [v124.5.26](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.26): chore: correctly pass trx to authIdentityModel.deleteIdentity
+
+
+### Livingdocs Editor Patches
+- [v63.8.68](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.68): fix(li-image): allow download of crops in fullres when customBuilt.allowDownloadOfLiImageCrops is true
+- [v63.8.67](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.67): fix(drop-handler): Use queue for huGO and WoodWing uploads
+- [v63.8.66](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.66): fix(collaboration): remove special treatment of li-image metadata property crops
+- [v63.8.65](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.65): fix(li-image-crop): Fix aspect ratio update behavior
+
+- Add a flag 'autoSelected' to distinguish aspect ratio that has been
+  calculated from current crop vs aspect ratio that was selected
+  by the user => only update ratio in srcissors when it has been
+  user-selected. This avoids weird feedback loops.
+- Remove ignoreNextCropUpdate hack in li-image-crop which is no longer required
+- [v63.8.64](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.64): fix: set width of named crops to 200
+- [v63.8.63](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.63): fix: use width instead of size and set it to 100
+- [v63.8.62](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.62): fix(image metadata plugin): show correct order not reversed
+- [v63.8.61](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.61): chore: fix test to have correct order
+
+(cherry picked from commit 480dca90363b182731f8dc8f8f6210c25e8f2df4)
+- [v63.8.60](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.60): fix(cropper): Increase rounding tolerance
+
+This (mostly) fixes the following issue:
+1. Crop an image starting at "original" ratio and zoom in many times
+2. At some point due to low tolerance, the ratio is not detected as "original"
+3. Zoom in some more, ratio is detected as "original" again and the
+  selectedRatio watch in li-imagge-crop.vue resets crop to whole image
+
+With the increased tolerance, (2) is less likely to happen.
+- [v63.8.59](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.59): fix(hugo): add over media library
+- [v63.8.58](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.58): fix: rename Ignore to Off
+- [v63.8.57](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.57): fix(properties panel): Handle initial undefined value in li-form-color
+
+This fixes a bug where the color preview was not showing up and errors
+were logged to the console in the case that the initial value was undefined.
+- [v63.8.56](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.56): fix: select print layout use arrow function
+- [v63.8.55](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.55): fix(task-assign): only show users with name and not archived
+
+(cherry picked from commit 9d2bfa0a454ba4f71712d1d636fa6a86928f4e84)
+- [v63.8.54](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.54): fix(print-preview): only set editMode from contentType when it is defined
+- [v63.8.53](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.53): fix(li-image): show crop previews larger for li-image metadata if there are no more than 2 namedCrop options
+- [v63.8.52](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.52): fix(image manager): Handle missing/archived images
+
+Show an overlay in the editor for images that are missing
+from the media library (no entry found for mediaId) or
+have been archived.
+The existing overlay for expired images is reused/adapted for this purpose.
+- [v63.8.51](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.51): fix: fix icon link in styleguide
+- [v63.8.50](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.50): fix(embed): Extract html from directive content
+- [v63.8.49](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.49): chore(CI): run nzz tests with node 16
+- [v63.8.48](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.48): fix: imatrics performance improvements & fix styling issues
+- [v63.8.47](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.47): fix: init comments only when they are enabled
+- [v63.8.46](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.46): fix(dropActions): consider image drop cases with insertsBlocked
+- [v63.8.45](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.45): fix: update integration test because of an outdated github API
+- [v63.8.44](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.44): fix(crop): prevent mousedown and mouseup events from zoom-control buttons to srcissors crop-view
+- [v63.8.43](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.43): fix(framework): update framework to 18.6.4
+- [v63.8.42](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.42): fix(clipboard): do not insert default content on clipboard drop
+- [v63.8.41](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.41): fix: correctly redirect users
+- [v63.8.40](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.40): fix(crops): simplify metadata crop calculations
+- [v63.8.39](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.39): test(metadata updater): add tests for crop url recalculation on crop coordinates change on an li-image
+- [v63.8.38](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.38): fix(test): pin vue-test-utils version to 1.1.3
+- [v63.8.37](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.37): fix: to create a new tag
+- [v63.8.36](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.36): fix(clipboard): render includes when dropping a component from the clipboard
+- [v63.8.35](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.35): fix(multiselect): only allow to transform available components in a content-type
+- [v63.8.34](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.34): fix(viewport-viewport-units-buggyfill): improve regex to match only vh units
+- [v63.8.33](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.33): fix(link tool): allow to link to URLs matching the delivery path pattern but the extracted ID points to inexisting documents
+- [v63.8.32](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.32): fix(link tool): make removing an existing link possible again
+- [v63.8.31](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.31): fix(docked content): Visibility
+
+- Fixed z visibility of project-setup's docked content (was in front of top right user menu on mobile)
+- [v63.8.30](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.30): fix: add data-tour property for format-panel
 
   ---
   **Icon Legend**
