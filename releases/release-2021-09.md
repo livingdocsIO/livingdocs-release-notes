@@ -1,19 +1,16 @@
-last editor version: 72.11.1
-last server version: 151.1.0
-
-
 **Attention:** If you skipped one or more releases, please also check the release-notes of the skipped ones.
 
 # Table of content
 - [Newsletter](#newsletter)
 - [Webinar](#webinar)
-- [Patches](#repositories)
+- [System Requirements](#system-requirements)
 - [Highlights](#highlights)
 - [Breaking Changes](#breaking-changes-fire)
 - [Deprecations](#deprecations)
 - [APIs](#apis-gift)
 - [Internal Changes](#internal-changes)
 - [Other Changes](#other-changes)
+- [Patches](#patches)
 
 # Newsletter
 
@@ -58,50 +55,6 @@ last server version: 151.1.0
   * livingdocs-server: `livingdocs/server-base:16`
   * livingdocs-editor: `livingdocs/editor-base:16`
 * Browser Support: Edge >= 80, Firefox >= 74, Chrome >= 80, Safari >= 13.1, iOS Safari >= 13.4, Opera >= 67
-
-# Repositories
-
-This release consists of the following new versions of the `livingdocs-server` and the `livingdocs-editor`:
-
-Package | Version
---- | ---
-`@livingdocs/server` | `release-2021-09`
-`@livingdocs/editor` | `release-2021-09`
-
-## Livingdocs Server
-How to require the server in your package.json:
-```json
-"dependencies": {
-  "@livingdocs/server": "release-2021-09",
-}
-```
-
-- Link to the release branch:
-  https://github.com/livingdocsIO/livingdocs-server/tree/release-2021-09
-
-### Livingdocs Server Patches
-- [v154.0.1](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.1): fix: update framework to release-2021-09 (21.0.1)
-- [v??.?.?](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v??.?.?): text
-
-
-
-## Livingdocs Editor
-How to require the editor in your package.json:
-```json
-"dependencies": {
-  "@livingdocs/editor": "release-2021-09",
-}
-```
-
-- Link to the release branch:
-  https://github.com/livingdocsIO/livingdocs-editor/tree/release-2021-09
-
-### Livingdocs Editor Patches
-- [v72.13.2](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.2): fix: update framework to release-2021-09 (21.0.1)
-- [v??.?.?](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v??.?.?): text
-
-
-
 
 
 # Highlights
@@ -173,18 +126,14 @@ It's now possible to define a user group with "Restricted Users". Restricted use
 
 ## Migrate the database
 
-- Expected duration?
-- Possible data losses?
-- Is it a simple migration? (fast/easy downgradable)
+It's a simple/fast migration with no expected data losses.
 
 ```sh
 # run grunt migrate to update to the newest database scheme
-# migration - 111-add-comments-table.js
-#   create comments table + add events to the stream_events_types table
+# migration - 166-add-media-library-state.js
+#   add row state to the table media_library_entries
 livingdocs-server migrate up
 ```
-
-TODO@Ralph - update database migration notes
 
 #### Remove support for callbacks in a few server API's :fire:
 
@@ -199,6 +148,9 @@ We removed Callback support in several server API's. In the next releases we wil
 - 🔥 remove callback support for tasksApi (`server.features.api('li-tasks')`) functions. Only promise based calls are supported
 - 🔥 remove callback support for designsApi (`server.features.api('li-designs')`) functions. Only promise based calls are supported
 - 🔥 remove callback support for cacheApi (`server.features.api('li-cache')`) functions. Only promise based calls are supported
+- 🔥 remove callback support for migrationApi (`server.features.api('li-migrations')`) functions. Only promise based calls are supported
+- 🔥 remove callback support for emailApi (`server.features.api('li-emails')`) functions. Only promise based calls are supported
+- 🔥 remove callback support for routingApi (`server.features.api('li-routing')`) functions. Only promise based calls are supported
 
 
 ##### Example how to migrate
@@ -226,6 +178,47 @@ const designConfig = await designLoaderApi.loadConfig({
 })
 ```
 
+If you have a lot of code with callbacks and it's difficult to migrate everything in one step, you can use Livingdocs `callbackify` function to migrate the functions step by step. If you have transformed one function e.g. `fetchTargetChannel` into a promise based function and have a lot of callback functions which are calling `fetchTargetChannel`, you can use `callbackify`. `callbackify` transforms a promise into a callback.
+
+```js
+// original function with callback
+function fetchTargetChannel (projectId, callback) {
+  const projectApi = liServer.features.api('li-projects').project
+  projectApi.getProject(projectId, (err, project) => {
+    if (err) return callback(err)
+    const targetChannel = project.channels.find(
+      (channel) => channel.channelHandle === AUTHORS_CHANNEL_HANDLE)
+    callback(null, targetChannel)
+  })
+}
+
+// step 1 - transform the function into a promise, but callbackify the function as long as it's called by other callback functions
+const callbackify = require('@livingdocs/server/lib/callbackify')
+
+async function fetchTargetChannel (projectId, callback) {
+  // add this line to callbackify the promise
+  if (callback) return callbackify.method(fetchTargetChannel, callback, [projectId])
+
+  const projectApi = liServer.features.api('li-projects').project
+  const project = await projectApi.getProject(projectId)
+  const targetChannel = project.channels.find(
+    (channel) => channel.channelHandle === AUTHORS_CHANNEL_HANDLE)
+  return targetChannel
+}
+
+// step 2 - remove callbackify when everything is transformed into promises properly
+async function fetchTargetChannel (projectId) {
+  const projectApi = liServer.features.api('li-projects').project
+  const project = await projectApi.getProject(projectId)
+  const targetChannel = project.channels.find(
+    (channel) => channel.channelHandle === AUTHORS_CHANNEL_HANDLE)
+  return targetChannel
+}
+```
+
+
+
+
 References:
 - [designLoaderApi PR](https://github.com/livingdocsIO/livingdocs-server/pull/3845)
 - [registrationApi PR](https://github.com/livingdocsIO/livingdocs-server/pull/3854)
@@ -240,6 +233,9 @@ References:
 - [publicApi PR](https://github.com/livingdocsIO/livingdocs-server/pull/3919)
 - [importApi PR](https://github.com/livingdocsIO/livingdocs-server/pull/3916)
 - [documentListApi PR](https://github.com/livingdocsIO/livingdocs-server/pull/3914)
+- [migrationApi PR](https://github.com/livingdocsIO/livingdocs-server/pull/3928)
+- [emailApi PR](https://github.com/livingdocsIO/livingdocs-server/pull/3927)
+- [routingApi PR](https://github.com/livingdocsIO/livingdocs-server/pull/3923)
 
 
 
@@ -493,7 +489,7 @@ References:
 
 ### Features
 
-* Add listUpdateHookAsync hook in the lists feature [livingdocs-server #3925](https://github.com/livingdocsIO/livingdocs-server/pull/3925) :gift:
+* Add `listUpdateHookAsync` hook in the lists feature [livingdocs-server #3925](https://github.com/livingdocsIO/livingdocs-server/pull/3925) :gift:
 * Administration: Support a "Connect" button for OpenID Connect Providers on the user profile [livingdocs-editor #4571](https://github.com/livingdocsIO/livingdocs-editor/pull/4571) :gift:
 * Show the selected editable directive count next to the document text count [livingdocs-editor #4617](https://github.com/livingdocsIO/livingdocs-editor/pull/4617) :gift:
 * Indexing
@@ -518,6 +514,8 @@ References:
   * User Profile: Show active sessions [livingdocs-editor #4494](https://github.com/livingdocsIO/livingdocs-editor/pull/4494) :gift:
   * Lists: show error message when publishing a list fails [livingdocs-editor #4514](https://github.com/livingdocsIO/livingdocs-editor/pull/4514) :gift:
   * Dashboards: show a loading indicator [livingdocs-editor #4551](https://github.com/livingdocsIO/livingdocs-editor/pull/4551) :gift:
+  * Use queue for huGO and WoodWing uploads [livingdocs-editor #4667](https://github.com/livingdocsIO/livingdocs-editor/pull/4667) :gift:
+  * Improve date picker [livingdocs-editor #4660](https://github.com/livingdocsIO/livingdocs-editor/pull/4660) :gift:
 * Includes: Improve error handling [livingdocs-editor #4432](https://github.com/livingdocsIO/livingdocs-editor/pull/4432) :gift:
 * Performance:
   * Streaming of image uploads [livingdocs-server #3758](https://github.com/livingdocsIO/livingdocs-server/pull/3758) :gift:
@@ -532,6 +530,9 @@ References:
 * Migrations: Allow `--design-version-to=latest` param and do not allow to migrate to non existend design-version  [livingdocs-server #3814](https://github.com/livingdocsIO/livingdocs-server/pull/3814) :gift:
 * Add support for auto completion for livingdocs-server CLI [livingdocs-server #3869](https://github.com/livingdocsIO/livingdocs-server/pull/3869) :gift:
 * Improve session cookie expiration [livingdocs-server #3898](https://github.com/livingdocsIO/livingdocs-server/pull/3898) :gift:
+* Imatrics improvements for creation and in metadata plugin [livingdocs-editor #4675](https://github.com/livingdocsIO/livingdocs-editor/pull/4675) :gift:
+* Improve Overlay Loader [livingdocs-editor #4682](https://github.com/livingdocsIO/livingdocs-editor/pull/4682) :gift:
+* Fix Application Menu height [livingdocs-editor #4680](https://github.com/livingdocsIO/livingdocs-editor/pull/4680) :gift:
 
 
 ### Bugfixes
@@ -584,6 +585,15 @@ References:
   * Authentication: Fix legacy github, facebook and google login [livingdocs-server #3890](https://github.com/livingdocsIO/livingdocs-server/pull/3890) :gift:
   * Import: handle the image proxy correctly in import / export [livingdocs-server #3882](https://github.com/livingdocsIO/livingdocs-server/pull/3882) :gift:
 
+
+
+# Patches
+
+### Livingdocs Server Patches
+- [v??.?.?](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v??.?.?): text
+
+### Livingdocs Editor Patches
+- [v??.?.?](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v??.?.?): text
 
   ---
   **Icon Legend**
