@@ -122,6 +122,16 @@ It's now possible to define a user group with "Restricted Users". Restricted use
   * [Documentation](TODO)
 
 
+## Improve Keyboard Navigation and Viewport Focus in Editor (more Word like behavior) :tada:
+
+You can now use the arrow keys on your keyboard to navigate between different text components. The cursor position is maintained, so that the editor can always get back to where she started after navigating around. The viewport scrolls automatically if the cursor hits positions outside of the viewport. The same applies to navigation between comments in a document. The behavior is now much more in line with common text processors such as Microsoft Word.
+
+
+* References
+  * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4496)
+  * [Framework PR](https://github.com/livingdocsIO/livingdocs-framework/pull/573)
+
+
 # Breaking Changes :fire:
 
 ## Migrate the database
@@ -510,7 +520,6 @@ References:
 ### Improvements
 
 * Editor
-  * Focus Editor when out of viewport [livingdocs-editor #4496](https://github.com/livingdocsIO/livingdocs-editor/pull/4496) :gift:
   * User Profile: Show active sessions [livingdocs-editor #4494](https://github.com/livingdocsIO/livingdocs-editor/pull/4494) :gift:
   * Lists: show error message when publishing a list fails [livingdocs-editor #4514](https://github.com/livingdocsIO/livingdocs-editor/pull/4514) :gift:
   * Dashboards: show a loading indicator [livingdocs-editor #4551](https://github.com/livingdocsIO/livingdocs-editor/pull/4551) :gift:
