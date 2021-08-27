@@ -602,6 +602,9 @@ References:
 - [v??.?.?](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v??.?.?): text
 
 ### Livingdocs Editor Patches
+- [v72.13.4](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.4): doc: improve description
+
+Co-authored-by: Marc Bachmann <marc.brookman@gmail.com>
 - [v72.13.3](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.3): fix(dashboards): Fix page and data record links
 - [v??.?.?](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v??.?.?): text
 
