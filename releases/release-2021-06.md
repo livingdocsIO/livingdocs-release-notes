@@ -643,6 +643,7 @@ References:
 # Patches
 
 ### Livingdocs Server Patches
+- [v135.1.69](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.69): fix(log): Improve handling of circular references and functions in pino: https://github.com/davidmarkclements/fast-safe-stringify/pull/52
 - [v135.1.68](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.68): fix(server): Replace broken http-terminator with lil-http-terminator that doesn't have any dependencies
 - [v135.1.67](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.67): fix(elasticsearch): Do not push the `_type` in elasticsearch 7 bulk payloads
 
