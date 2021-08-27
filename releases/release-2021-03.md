@@ -1026,6 +1026,7 @@ so once it has been set it should always exist
 
 
 ### Livingdocs Editor Patches
+- [v63.8.69](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.69): fix: update framework (fix css loader)
 - [v63.8.68](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.68): fix(li-image): allow download of crops in fullres when customBuilt.allowDownloadOfLiImageCrops is true
 - [v63.8.67](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.67): fix(drop-handler): Use queue for huGO and WoodWing uploads
 - [v63.8.66](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.66): fix(collaboration): remove special treatment of li-image metadata property crops
