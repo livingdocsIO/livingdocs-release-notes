@@ -714,6 +714,7 @@ We're also introducing the `mediaLibrary` config, so we can remove the old keys 
 
 
 ### Livingdocs Editor Patches
+- [v67.6.70](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.70): fix: update framework (incorporate css loader fix)
 - [v67.6.69](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.69): fix(li-image): allow download of crops in fullres when customBuilt.allowDownloadOfLiImageCrops is true
 - [v67.6.68](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.68): fix(kanban boards): ensure kanban board columns don't outgrow the screen
 - [v67.6.67](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.67): fix(image cropping): properly handle original with recommendedRatios
