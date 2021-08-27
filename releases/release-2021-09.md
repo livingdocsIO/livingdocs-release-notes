@@ -599,6 +599,7 @@ References:
 # Patches
 
 ### Livingdocs Server Patches
+- [v154.0.2](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.2): fix(log): Improve handling of circular references and functions in pino: https://github.com/davidmarkclements/fast-safe-stringify/pull/52
 - [v??.?.?](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v??.?.?): text
 
 ### Livingdocs Editor Patches
