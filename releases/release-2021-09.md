@@ -605,6 +605,7 @@ References:
 - [v??.?.?](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v??.?.?): text
 
 ### Livingdocs Editor Patches
+- [v72.13.6](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.6): chore(menu): move event extraction to the right place
 - [v72.13.5](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.5): fix(metadata): when an empty string is set to a required metadata property, correctly set it to undefined
 - [v72.13.4](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.4): doc: improve description
 
