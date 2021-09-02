@@ -61,12 +61,17 @@
 
 ## Revoke Media
 
-With the new "revoke media" functionality in the media library, all media files get revoked from all documents and storage. Because customers have other requirements what should happen after revoking an image (e.g. clearing caches, sending an email notification), we also provide a server event and a webhook, both named `mediaLibraryEntry.revoke`, which the downstream server can subscribe to.
+The new "revoke media" functionality in the media library allows users to delete media files from storage instead of archiving them. This can be useful in situations such as handling requests to completely removing media for legal reasons.
+Customers have different requirements for what should happen after revoking an image, like
+- remove revoked images from documents
+- clearing caches
+- sending an email notification
+Therefore we provide a server event and a webhook, both named `mediaLibraryEntry.revoke`, which the downstream server can subscribe to.
 
 * References
+  * [Guide: Revoke Media](https://docs.livingdocs.io/guides/media-library/revoke-media/)
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4516)
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3809)
-  * [Documentation](https://github.com/livingdocsIO/documentation/pull/412)
 
 
 ## Dashboard Cards Configuration for the Media Library :tada:
@@ -74,19 +79,19 @@ With the new "revoke media" functionality in the media library, all media files 
 This feature allows you to register your own dashboard card in the Media Library. The default card `liMediaLibraryCard`, allows to be extended with additional metadata fields.
 
 * References
+  * [Documentation: Search for 'dashboardCardConfigurations'](https://docs.livingdocs.io/reference-docs/project-config/editor-settings)
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4500)
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3779)
-  * [Documentation](https://github.com/livingdocsIO/documentation/pull/407)
 
 ## Dashboard Cards Configuration for the Document List :tada:
 
 This feature allows you to register your own dashboard card in the Document List.
 
 * References
+  * [Documentation](https://docs.livingdocs.io/reference-docs/project-config/editor-settings/#document-lists)
   * [Editor Preparation PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4553)
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4591)
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3876)
-  * [Documentation](https://github.com/livingdocsIO/documentation/pull/414)
 
 
 ## List Teasers
@@ -94,9 +99,9 @@ This feature allows you to register your own dashboard card in the Document List
 We now support list teasers as includes without registering your own plugin.
 
 * References
+  * [Guide: List Teasers](https://docs.livingdocs.io/guides/documents/includes/list-teasers/)
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4556)
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3846)
-  * [Documentation](https://github.com/livingdocsIO/documentation/pull/415)
 
 
 ## Responsive Editing Toolbar :tada:
@@ -114,7 +119,7 @@ With the introduction of more an more actions in the Document Editing Toolbar, s
 
 ## Restricted Users :tada:
 
-It's now possible to define a user group with "Restricted Users". Restricted users can only see their own stuff (documents, assets). This can be useful if you have external editors (freelancer).
+It's now possible to define a user group with "Restricted Users". Restricted users can only see their own documents and assets. This can be useful if you have external editors (freelancer).
 
 * References
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4465)
@@ -145,9 +150,9 @@ It's a simple/fast migration with no expected data losses.
 livingdocs-server migrate up
 ```
 
-#### Remove support for callbacks in a few server API's :fire:
+#### Remove support for callbacks in multiple server API's :fire:
 
-We removed Callback support in several server API's. In the next releases we will continue with the removal of callbacks in server API's. All server API's already support Promises, therefore you can prepare the downstream migration from Callbacks to Promises.
+We removed Callback support in several server API's as we noticed many bugs originating from mixing callbacks and promises. So we continue to phase out callbacks in all APIs. In the next releases we will continue with the removal of callbacks in server API's. All server API's already support Promises, therefore you can prepare the downstream migration from Callbacks to Promises.
 
 - 🔥 remove callback support for designLoaderApi (`server.features.api('li-design-loader')`) functions. Only promise based calls are supported
 - 🔥 remove callback support for registrationApi (`server.features.api('li-registration')`) functions. Only promise based calls are supported
@@ -203,7 +208,7 @@ function fetchTargetChannel (projectId, callback) {
 }
 
 // step 1 - transform the function into a promise, but callbackify the function as long as it's called by other callback functions
-const callbackify = require('@livingdocs/server/lib/callbackify')
+const callbackify = require('@livingdocs/server/exports/callbackify')
 
 async function fetchTargetChannel (projectId, callback) {
   // add this line to callbackify the promise
@@ -317,7 +322,7 @@ References: [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4
 
 #### Dashboard Card Configuration :fire:
 
-:fire: Removed project config `mediaLibrary.dashboard.displayFilters`. Move `mediaLibrary.dashboard.displayFilters` config to `mediaType.editor.dashboard.displayFilters` on the relevant mediaType configs.
+:fire: Removed project config `editorSettings.mediaLibrary.dashboard.displayFilters`. Move `editorSettings.mediaLibrary.dashboard.displayFilters` config to `mediaType.editor.dashboard.displayFilters` on the relevant mediaType configs.
 
 :fire: Media Type Dashboard configuration
 
@@ -600,18 +605,10 @@ References:
 
 ### Livingdocs Server Patches
 - [v154.0.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.4): fix: update Kanban board in example server with realtimeNotification: true
-- [v154.0.3](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.3): fix(google-vision): never crash server
-- [v154.0.2](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.2): fix(log): Improve handling of circular references and functions in pino: https://github.com/davidmarkclements/fast-safe-stringify/pull/52
-- [v??.?.?](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v??.?.?): text
 
 ### Livingdocs Editor Patches
 - [v72.13.6](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.6): chore(menu): move event extraction to the right place
 - [v72.13.5](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.5): fix(metadata): when an empty string is set to a required metadata property, correctly set it to undefined
-- [v72.13.4](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.4): doc: improve description
-
-Co-authored-by: Marc Bachmann <marc.brookman@gmail.com>
-- [v72.13.3](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.3): fix(dashboards): Fix page and data record links
-- [v??.?.?](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v??.?.?): text
 
   ---
   **Icon Legend**
