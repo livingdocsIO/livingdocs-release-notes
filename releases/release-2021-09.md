@@ -607,6 +607,7 @@ References:
 - [v154.0.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.4): fix: update Kanban board in example server with realtimeNotification: true
 
 ### Livingdocs Editor Patches
+- [v72.13.7](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.7): fix: Upgrade @livingdocs/framework to fix editable plainText behavior
 - [v72.13.6](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.6): chore(menu): move event extraction to the right place
 - [v72.13.5](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.5): fix(metadata): when an empty string is set to a required metadata property, correctly set it to undefined
 
