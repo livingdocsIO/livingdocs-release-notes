@@ -608,6 +608,9 @@ References:
 - [v154.0.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.4): fix: update Kanban board in example server with realtimeNotification: true
 
 ### Livingdocs Editor Patches
+- [v72.13.9](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.9): fix(signin): Spacing
+
+- Fixed 3rd party signin spacing.
 - [v72.13.8](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.8): chore: directly use setCrop method
 - [v72.13.7](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.7): fix: Upgrade @livingdocs/framework to fix editable plainText behavior
 - [v72.13.6](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.6): chore(menu): move event extraction to the right place
