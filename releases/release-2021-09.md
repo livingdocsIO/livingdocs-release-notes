@@ -608,6 +608,7 @@ References:
 - [v154.0.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.4): fix: update Kanban board in example server with realtimeNotification: true
 
 ### Livingdocs Editor Patches
+- [v72.13.10](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.10): fix(video upload): Correctly set video on component after upload from properties panel
 - [v72.13.9](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.9): fix(signin): Spacing
 
 - Fixed 3rd party signin spacing.
