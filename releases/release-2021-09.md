@@ -604,6 +604,7 @@ References:
 # Patches
 
 ### Livingdocs Server Patches
+- [v154.0.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.6): fix(user-admin): show login connections
 - [v154.0.5](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.5): fix: Upgrade @livingdocs/framework to fix editable plainText behavior
 - [v154.0.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.4): fix: update Kanban board in example server with realtimeNotification: true
 
