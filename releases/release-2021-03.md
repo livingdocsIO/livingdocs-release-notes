@@ -1026,6 +1026,7 @@ so once it has been set it should always exist
 
 
 ### Livingdocs Editor Patches
+- [v63.8.71](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.71): fix(menu): do not allow to move a menu item before first save
 - [v63.8.70](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.70): chore(menu): move event extraction to the right place
 - [v63.8.69](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.69): fix: update framework (fix css loader)
 - [v63.8.68](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v63.8.68): fix(li-image): allow download of crops in fullres when customBuilt.allowDownloadOfLiImageCrops is true
