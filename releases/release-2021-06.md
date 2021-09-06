@@ -643,6 +643,10 @@ References:
 # Patches
 
 ### Livingdocs Server Patches
+- [v135.1.70](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.70): fix(indexing): Do not trigger a catchup job with the publication indexing to not trigger an 'Invalid Index Job' message
+
+Introducing the catchup job means supporting all the parameter options in custom indexes and is therefore a breaking change.
+We might reintroduce it in another release if necessary.
 - [v135.1.69](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.69): fix(log): Improve handling of circular references and functions in pino: https://github.com/davidmarkclements/fast-safe-stringify/pull/52
 - [v135.1.68](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.68): fix(server): Replace broken http-terminator with lil-http-terminator that doesn't have any dependencies
 - [v135.1.67](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.67): fix(elasticsearch): Do not push the `_type` in elasticsearch 7 bulk payloads
