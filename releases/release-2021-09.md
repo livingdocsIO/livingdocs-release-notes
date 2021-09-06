@@ -604,6 +604,7 @@ References:
 # Patches
 
 ### Livingdocs Server Patches
+- [v154.0.9](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.9): fix: Support the user creation without authentication strategy config object
 - [v154.0.8](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.8): fix(migrationApi): migrated migrationApi.runMigration from callbacks to promises
 - [v154.0.7](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.7): test(registration): add smoke tests for registrationApi.getOrCreateUserWithMembership()
 - [v154.0.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.6): fix(user-admin): show login connections
