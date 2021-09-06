@@ -604,6 +604,10 @@ References:
 # Patches
 
 ### Livingdocs Server Patches
+- [v154.0.10](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.10): fix(indexing): Do not trigger a catchup job with the publication indexing to not trigger an 'Invalid Index Job' message
+
+Introducing the catchup job means supporting all the parameter options in custom indexes and is therefore a breaking change.
+We might reintroduce it in another release if necessary.
 - [v154.0.9](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.9): fix: Support the user creation without authentication strategy config object
 - [v154.0.8](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.8): fix(migrationApi): migrated migrationApi.runMigration from callbacks to promises
 - [v154.0.7](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.7): test(registration): add smoke tests for registrationApi.getOrCreateUserWithMembership()
