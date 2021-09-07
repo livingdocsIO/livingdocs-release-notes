@@ -616,6 +616,7 @@ We might reintroduce it in another release if necessary.
 - [v154.0.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.4): fix: update Kanban board in example server with realtimeNotification: true
 
 ### Livingdocs Editor Patches
+- [v72.13.14](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.14): fix(filters): ensure the filter UI flyout is correcty positioned in dialogs
 - [v72.13.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.13): fix(webpack): Fix the broken live reload in webpack
 
 Webpack 5 is not su much compatible with the webpack-hot-reload module.
