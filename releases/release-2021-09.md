@@ -604,6 +604,7 @@ References:
 # Patches
 
 ### Livingdocs Server Patches
+- [v154.0.11](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.11): fix: respect the date range coming from the API call
 - [v154.0.10](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.10): fix(indexing): Do not trigger a catchup job with the publication indexing to not trigger an 'Invalid Index Job' message
 
 Introducing the catchup job means supporting all the parameter options in custom indexes and is therefore a breaking change.
