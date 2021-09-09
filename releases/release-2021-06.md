@@ -719,6 +719,7 @@ We're also introducing the `mediaLibrary` config, so we can remove the old keys 
 
 
 ### Livingdocs Editor Patches
+- [v67.6.73](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.73): fix: request the whole month (inclusive current)
 - [v67.6.72](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.72): fix(menu): do not allow to move a menu item before first save
 - [v67.6.71](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.71): chore(menu): move event extraction to the right place
 - [v67.6.70](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.70): fix: update framework (incorporate css loader fix)
