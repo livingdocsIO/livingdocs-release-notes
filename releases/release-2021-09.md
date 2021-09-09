@@ -208,7 +208,7 @@ function fetchTargetChannel (projectId, callback) {
 }
 
 // step 1 - transform the function into a promise, but callbackify the function as long as it's called by other callback functions
-const callbackify = require('@livingdocs/server/exports/callbackify')
+const callbackify = require('@livingdocs/server/exports').callbackify
 
 async function fetchTargetChannel (projectId, callback) {
   // add this line to callbackify the promise
@@ -477,6 +477,17 @@ References:
 
 # APIs :gift:
 
+## Server API
+
+Because we want to get rid of callbacks on the server, we provide helper functions for downstreams.
+
+🎁 Provide `promisify` helper for downstreams -> `require('@livingdocs/server/exports').promisify`
+🎁 Provide `callbackify` helper for downstreams -> `require('@livingdocs/server/exports').callbackify`
+
+References:
+* [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3954)
+
+
 ## Server CLI
 
 ### livingdocs-server add-design
@@ -605,35 +616,9 @@ References:
 
 ### Livingdocs Server Patches
 - [v154.0.11](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.11): fix: respect the date range coming from the API call
-- [v154.0.10](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.10): fix(indexing): Do not trigger a catchup job with the publication indexing to not trigger an 'Invalid Index Job' message
-
-Introducing the catchup job means supporting all the parameter options in custom indexes and is therefore a breaking change.
-We might reintroduce it in another release if necessary.
-- [v154.0.9](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.9): fix: Support the user creation without authentication strategy config object
-- [v154.0.8](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.8): fix(migrationApi): migrated migrationApi.runMigration from callbacks to promises
-- [v154.0.7](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.7): test(registration): add smoke tests for registrationApi.getOrCreateUserWithMembership()
-- [v154.0.6](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.6): fix(user-admin): show login connections
-- [v154.0.5](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.5): fix: Upgrade @livingdocs/framework to fix editable plainText behavior
-- [v154.0.4](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.4): fix: update Kanban board in example server with realtimeNotification: true
 
 ### Livingdocs Editor Patches
 - [v72.13.15](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.15): fix: request the whole month (inclusive current)
-- [v72.13.14](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.14): fix(filters): ensure the filter UI flyout is correcty positioned in dialogs
-- [v72.13.13](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.13): fix(webpack): Fix the broken live reload in webpack
-
-Webpack 5 is not su much compatible with the webpack-hot-reload module.
-Downstreams need to apply the same code to get live reloads working.
-Hot reloading with vue will still work without this workaround
-- [v72.13.12](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.12): fix(menu): do not allow to move a menu item before first save
-- [v72.13.11](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.11): fix(admin): show auth connections
-- [v72.13.10](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.10): fix(video upload): Correctly set video on component after upload from properties panel
-- [v72.13.9](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.9): fix(signin): Spacing
-
-- Fixed 3rd party signin spacing.
-- [v72.13.8](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.8): chore: directly use setCrop method
-- [v72.13.7](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.7): fix: Upgrade @livingdocs/framework to fix editable plainText behavior
-- [v72.13.6](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.6): chore(menu): move event extraction to the right place
-- [v72.13.5](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.5): fix(metadata): when an empty string is set to a required metadata property, correctly set it to undefined
 
   ---
   **Icon Legend**
