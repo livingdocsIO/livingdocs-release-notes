@@ -622,6 +622,7 @@ We might reintroduce it in another release if necessary.
 - [v154.0.11](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.11): fix: respect the date range coming from the API call
 
 ### Livingdocs Editor Patches
+- [v72.13.17](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.17): fix(document-lists): Compute data when adding documents
 - [v72.13.16](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.16): fix: invoke PR feedback
 - [v72.13.15](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.15): fix: request the whole month (inclusive current)
 
