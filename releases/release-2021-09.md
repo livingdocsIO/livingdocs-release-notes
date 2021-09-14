@@ -617,6 +617,7 @@ References:
 - [v154.0.15](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.15): openid-connect: Support HTTP_PROXY environment variable in Issuer.discover call
 
 ### Livingdocs Editor Patches
+- [v72.13.18](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.18): fix(framework): update to 21.0.5
 - [v72.13.17](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.17): document lists: Compute data when adding documents
 
   ---
