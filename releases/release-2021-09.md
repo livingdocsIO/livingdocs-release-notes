@@ -614,6 +614,7 @@ References:
 # Patches
 
 ### Livingdocs Server Patches
+- [v154.0.17](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.17): fix(tracing): Properly retrieve the traceId from a span of http requests
 - [v154.0.16](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.16): fix(framework): update to 21.0.5
 - [v154.0.15](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.15): openid-connect: Support HTTP_PROXY environment variable in Issuer.discover call
 
