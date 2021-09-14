@@ -124,7 +124,6 @@ It's now possible to define a user group with "Restricted Users". Restricted use
 * References
   * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4465)
   * [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3756)
-  * [Documentation](TODO)
 
 
 ## Improve Keyboard Navigation and Viewport Focus in Editor (more Word like behavior) :tada:
@@ -615,19 +614,10 @@ References:
 # Patches
 
 ### Livingdocs Server Patches
-- [v154.0.15](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.15): fix(openid-connect): Support HTTP_PROXY environment variable in Issuer.discover call
-- [v154.0.14](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.14): fix(openid-connect): Support HTTP_PROXY environment variable for openid connect
-- [v154.0.13](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.13): chore(telemetry): Use async/await instead of .then and .catch
-- [v154.0.12](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.12): fix(indexing): Do not trigger a catchup job with the publication indexing to not trigger an 'Invalid Index Job' message
-
-Introducing the catchup job means supporting all the parameter options in custom indexes and is therefore a breaking change.
-We might reintroduce it in another release if necessary.
-- [v154.0.11](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.11): fix: respect the date range coming from the API call
+- [v154.0.15](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.15): openid-connect: Support HTTP_PROXY environment variable in Issuer.discover call
 
 ### Livingdocs Editor Patches
-- [v72.13.17](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.17): fix(document-lists): Compute data when adding documents
-- [v72.13.16](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.16): fix: invoke PR feedback
-- [v72.13.15](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.15): fix: request the whole month (inclusive current)
+- [v72.13.17](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.17): document lists: Compute data when adding documents
 
   ---
   **Icon Legend**
