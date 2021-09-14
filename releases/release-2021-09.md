@@ -615,6 +615,7 @@ References:
 # Patches
 
 ### Livingdocs Server Patches
+- [v154.0.15](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.15): fix(openid-connect): Support HTTP_PROXY environment variable in Issuer.discover call
 - [v154.0.14](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.14): fix(openid-connect): Support HTTP_PROXY environment variable for openid connect
 - [v154.0.13](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.13): chore(telemetry): Use async/await instead of .then and .catch
 - [v154.0.12](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.12): fix(indexing): Do not trigger a catchup job with the publication indexing to not trigger an 'Invalid Index Job' message
