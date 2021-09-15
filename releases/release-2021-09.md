@@ -619,6 +619,7 @@ References:
 - [v154.0.15](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.15): openid-connect: Support HTTP_PROXY environment variable in Issuer.discover call
 
 ### Livingdocs Editor Patches
+- [v72.13.21](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.21): fix: Handle properties with default values in li-form-select
 - [v72.13.20](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.20): fix(clipboard): Cancel drag event when clipboard is emptied
 - [v72.13.19](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.19): fix: change toolbar max offset to fix overlapping action bar issue
 - [v72.13.18](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.18): fix(framework): update to 21.0.5
