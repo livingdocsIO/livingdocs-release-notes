@@ -614,6 +614,9 @@ References:
 # Patches
 
 ### Livingdocs Server Patches
+- [v154.0.20](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.20): fix(pusher): Enforce pusher to use tls
+
+We never want to send data unencrypted
 - [v154.0.19](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.19): fix(blob-store): Fix Cloudinary storage
 
 - Make createReadStream synchronous
