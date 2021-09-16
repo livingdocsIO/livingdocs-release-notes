@@ -628,6 +628,7 @@ We never want to send data unencrypted
 - [v154.0.15](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.15): openid-connect: Support HTTP_PROXY environment variable in Issuer.discover call
 
 ### Livingdocs Editor Patches
+- [v72.13.23](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.23): fix: Trigger another release as the npm publish failed
 - [v72.13.22](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.22): fix(feature-detection): Cancel script execution once we detect that a browser is not supported
 - [v72.13.21](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.21): fix: Handle properties with default values in li-form-select
 - [v72.13.20](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.20): fix(clipboard): Cancel drag event when clipboard is emptied
