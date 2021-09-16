@@ -23,12 +23,12 @@
 #### Features
 
 * Recording: **TODO**
-* Documentation: **TODO**
+* [Documentation](https://docs.google.com/document/d/17zmlYWhxSsWViZ2cYRBrRnuJ0qOglPwmbf_Gy6vxfTg/edit)
 
 #### Developers
 
 * Recording: **TODO**
-* Slides: **TODO**
+* [Slides](https://docs.google.com/presentation/d/1WgRxVPsseYXD_NQ2syKBi24UmmgtD8ti7H1JEeRGUUM/edit#slide=id.g5d9a6eb16f_1_0)
 
 # System Requirements
 
