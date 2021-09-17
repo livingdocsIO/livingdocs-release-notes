@@ -614,6 +614,9 @@ References:
 # Patches
 
 ### Livingdocs Server Patches
+- [v154.0.21](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.21): fix(project-config): Lower the minimum metadata handle length to two characters
+
+The policy to require 3 characters in a metadata property name is too restrictive for some use cases
 - [v154.0.20](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.20): fix(pusher): Enforce pusher to use tls
 
 We never want to send data unencrypted
