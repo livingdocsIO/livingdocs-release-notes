@@ -14,7 +14,6 @@
 
 # Newsletter
 
-* Newsletter: **TODO**
 * Subscribe here: https://confirmsubscription.com/h/j/61B064416E79453D
 
 
@@ -22,7 +21,7 @@
 
 #### Features
 
-* Recording: **TODO**
+* [Recording](https://us02web.zoom.us/rec/share/ys3C8auCq6NX-kAA8fs9s002XozU26Q2UKv4hKeWFQQ_JZFcSaAUxuHlgnVdEvsE.7jDTiAZkBFtS_bfC) | PW: %W6wRuIU
 * [Documentation](https://docs.google.com/document/d/17zmlYWhxSsWViZ2cYRBrRnuJ0qOglPwmbf_Gy6vxfTg/edit)
 
 #### Developers
