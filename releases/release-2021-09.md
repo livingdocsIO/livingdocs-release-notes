@@ -613,6 +613,7 @@ References:
 # Patches
 
 ### Livingdocs Server Patches
+- [v154.0.22](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.22): chore(blob-store): Isolate the computeKey tests more
 - [v154.0.21](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.21): fix(project-config): Lower the minimum metadata handle length to two characters
 
 The policy to require 3 characters in a metadata property name is too restrictive for some use cases
