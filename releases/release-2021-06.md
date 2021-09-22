@@ -643,6 +643,7 @@ References:
 # Patches
 
 ### Livingdocs Server Patches
+- [v135.1.73](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.73): chore(blob-store): Isolate the computeKey tests more
 - [v135.1.72](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.72): fix(indexing): Do not trigger a catchup job with the publication indexing to not trigger an 'Invalid Index Job' message
 
 Introducing the catchup job means supporting all the parameter options in custom indexes and is therefore a breaking change.
