@@ -26,7 +26,7 @@
 
 #### Developers
 
-* Recording: **TODO**
+* [Recording](https://us02web.zoom.us/rec/play/H7HD6Cetet6wHKHUL6rWVdKuOL_HkgAOI_6Ovy179zhsamEY2Z2Ph8ZLw-iF7cOnejGv0gVQYIoJaCZI.zGVqtMK5THPYJHP9?continueMode=true) | PW: P+iCE8!?
 * [Slides](https://docs.google.com/presentation/d/1WgRxVPsseYXD_NQ2syKBi24UmmgtD8ti7H1JEeRGUUM/edit#slide=id.g5d9a6eb16f_1_0)
 
 # System Requirements
