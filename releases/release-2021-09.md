@@ -613,6 +613,9 @@ References:
 # Patches
 
 ### Livingdocs Server Patches
+- [v154.0.24](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.24): fix(elasticsearch): Get rid `"./*": "./*"` deprecation message coming from a package.json require of elasticsearch
+
+https://github.com/elastic/elasticsearch-js/issues/1465#issuecomment-928236270
 - [v154.0.23](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.23): test: adapt tests
 - [v154.0.22](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.22): chore(blob-store): Isolate the computeKey tests more
 - [v154.0.21](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.21): fix(project-config): Lower the minimum metadata handle length to two characters
