@@ -613,6 +613,7 @@ References:
 # Patches
 
 ### Livingdocs Server Patches
+- [v154.0.25](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.25): test(push notifications): Add tests for airship
 - [v154.0.24](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.24): fix(elasticsearch): Get rid `"./*": "./*"` deprecation message coming from a package.json require of elasticsearch
 
 https://github.com/elastic/elasticsearch-js/issues/1465#issuecomment-928236270
