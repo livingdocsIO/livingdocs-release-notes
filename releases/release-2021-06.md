@@ -643,6 +643,7 @@ References:
 # Patches
 
 ### Livingdocs Server Patches
+- [v135.1.76](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.76): fix: add module ~lib/extract-header
 - [v135.1.75](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.75): test(push notifications): Add tests for airship
 - [v135.1.74](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.74): test: adapt tests
 - [v135.1.73](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.73): chore(blob-store): Isolate the computeKey tests more
