@@ -613,6 +613,7 @@ References:
 # Patches
 
 ### Livingdocs Server Patches
+- [v154.0.26](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.26): chore: remove content-disposition and let the editor decide how to get the file
 - [v154.0.25](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.25): test(push notifications): Add tests for airship
 - [v154.0.24](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.24): fix(elasticsearch): Get rid `"./*": "./*"` deprecation message coming from a package.json require of elasticsearch
 
