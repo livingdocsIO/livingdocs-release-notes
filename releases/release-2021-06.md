@@ -643,6 +643,7 @@ References:
 # Patches
 
 ### Livingdocs Server Patches
+- [v135.1.78](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.78): fix(group-projection): do nothing on an insert conflict
 - [v135.1.77](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.77): chore: Update npm read token
 - [v135.1.76](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.76): fix: add module ~lib/extract-header
 - [v135.1.75](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.75): test(push notifications): Add tests for airship
