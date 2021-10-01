@@ -643,6 +643,7 @@ References:
 # Patches
 
 ### Livingdocs Server Patches
+- [v135.1.79](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.79): fix(publication-hooks): Pass the correct documentType, add the contentType additionally to the documentType
 - [v135.1.78](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.78): fix(group-projection): do nothing on an insert conflict
 - [v135.1.77](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.77): chore: Update npm read token
 - [v135.1.76](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.76): fix: add module ~lib/extract-header
