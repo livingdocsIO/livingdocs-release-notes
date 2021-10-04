@@ -734,6 +734,7 @@ We're also introducing the `mediaLibrary` config, so we can remove the old keys 
 
 
 ### Livingdocs Editor Patches
+- [v67.6.79](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.79): fix: rename Ignore to Off
 - [v67.6.78](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.78): fix(user): Escape user initials that would break the avatar svg
 - [v67.6.77](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.77): fix: move file downloader to it's own helper and improve logic
 - [v67.6.76](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.76): fix(media-library): Hide "set" button for non-translatable assets
