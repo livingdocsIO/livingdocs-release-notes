@@ -643,6 +643,9 @@ References:
 # Patches
 
 ### Livingdocs Server Patches
+- [v135.1.80](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.80): fix(project-config): Lower the minimum metadata handle length to two characters
+
+The policy to require 3 characters in a metadata property name is too restrictive for some use cases
 - [v135.1.79](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.79): fix(publication-hooks): Pass the correct documentType, add the contentType additionally to the documentType
 - [v135.1.78](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.78): fix(group-projection): do nothing on an insert conflict
 - [v135.1.77](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v135.1.77): chore: Update npm read token
