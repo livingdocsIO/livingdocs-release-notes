@@ -1,31 +1,19 @@
-Server until: 154.2.8
-Editor until: 74.1.1
+Server until: 155.0.10
+Editor until: 74.1.10
 
 
 **Attention:** If you skipped one or more releases, please also check the release-notes of the skipped ones.
 
-# Table of content
-- [Table of content](#table-of-content)
+# Table of content <!-- omit in toc -->
 - [Newsletter](#newsletter)
 - [Webinar](#webinar)
-      - [Features](#features)
-      - [Developers](#developers)
 - [Highlights](#highlights)
-  - [Document Inbox](#document-inbox)
-  - [EXAMPLE :tada:](#example-tada)
 - [Breaking Changes :fire:](#breaking-changes-fire)
-  - [Migrate the database](#migrate-the-database)
 - [Deprecations](#deprecations)
 - [APIs :gift:](#apis-gift)
 - [Internal Changes](#internal-changes)
 - [Other Changes](#other-changes)
-    - [Features](#features-1)
-    - [Design](#design)
-    - [Improvements](#improvements)
-    - [Bugfixes](#bugfixes)
 - [Patches](#patches)
-    - [Livingdocs Server Patches](#livingdocs-server-patches)
-    - [Livingdocs Editor Patches](#livingdocs-editor-patches)
 
 # Newsletter
 
@@ -49,11 +37,11 @@ Editor until: 74.1.1
 
 # Highlights
 
-## Document Inbox
+### Document Inbox
 * v73.1.0 Document inbox [livingdocs-editor #4661](https://github.com/livingdocsIO/livingdocs-editor/pull/4661) :gift:
 * v154.2.0 Document inbox [livingdocs-server #3911](https://github.com/livingdocsIO/livingdocs-server/pull/3911) :gift:
 
-## EXAMPLE :tada:
+### EXAMPLE :tada:
 
 ...Description...
 
@@ -66,7 +54,7 @@ Editor until: 74.1.1
 
 # Breaking Changes :fire:
 
-## Migrate the database
+#### Migrate the database
 
 - Expected duration?
 - Possible data losses?
@@ -79,10 +67,22 @@ Editor until: 74.1.1
 livingdocs-server migrate up
 ```
 
+#### Remove Deprecated Editor Config :fire:
 
-* v73.0.0 Remove deprecated editor configs [livingdocs-editor #4691](https://github.com/livingdocsIO/livingdocs-editor/pull/4691) :gift:
+- 🔥 remove deprecated editor config `hugo.assetHost` - use server config `hugo.assetHost` instead
+- 🔥 remove deprecated editor config `app.imageService` - use server config `documents.selectedImageService` instead
 
+References: [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4691)
 
+#### Remove DocumentModel Getters :fire:
+
+Some internal methods got removed. If you use any of the following methods, please rather use `documentWriteModel.metadata` directly.
+
+- `documentWriteModel.metadata.setProperties(obj)` got removed. Please use `.setProperty` for now.
+- `documentWriteModel.metadata.serialize()` got removed. Please use `.splittedSerialize()`
+- `documentWriteModel.metadata.getEntity()` got removed. Please use `documentWriteModel.metadata.entity`
+
+References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/4024)
 
 
 # Deprecations
@@ -115,9 +115,18 @@ livingdocs-server migrate up
 
 * Indexing: Get rid of `Invalid index job` logs with custom indexes [livingdocs-server #3965](https://github.com/livingdocsIO/livingdocs-server/pull/3965) :gift:
 * Allow task cards to open via middle-click in new tab [livingdocs-editor #4733](https://github.com/livingdocsIO/livingdocs-editor/pull/4733) :gift:
+* Import: Within a reimport the design version can be updated [livingdocs-server #3957](https://github.com/livingdocsIO/livingdocs-server/pull/3957) :gift:
+* Media Library: Support boolean flag=false / exists filters in metadata search [livingdocs-server #4012](https://github.com/livingdocsIO/livingdocs-server/pull/4012) :gift:
+* Push Notifications: Add suport for segments in airship [livingdocs-server #3953](https://github.com/livingdocsIO/livingdocs-server/pull/3953) :gift:
 
 ### Bugfixes
 
+* Editor
+  * Fix line wrap behavior [livingdocs-editor #4705](https://github.com/livingdocsIO/livingdocs-editor/pull/4705) :beetle:
+  * Fix newline behavior [livingdocs-editor #4726](https://github.com/livingdocsIO/livingdocs-editor/pull/4726) :beetle:
+  * Change Toolbar max Offset to fix Overlapping Action Bar Issue [livingdocs-editor #4737](https://github.com/livingdocsIO/livingdocs-editor/pull/4737) :beetle:
+  * The Vue metadata plugin `li-form-select` handles undefined values the same way as the Angular plugins [livingdocs-editor #4742](https://github.com/livingdocsIO/livingdocs-editor/pull/4742) :beetle:
+  * Clipboard: Stop the clipboard drag event when deleting the last item from the clipboard [livingdocs-editor #4743](https://github.com/livingdocsIO/livingdocs-editor/pull/4743) :beetle:
 * Billing: Request the correct time range + get the current month [livingdocs-editor #4728](https://github.com/livingdocsIO/livingdocs-editor/pull/4728) :beetle:
 * Dashboards: Fix page and data record links [livingdocs-editor #4687](https://github.com/livingdocsIO/livingdocs-editor/pull/4687) :beetle:
 * Media
@@ -131,10 +140,8 @@ livingdocs-server migrate up
 * Document Lists
   * Add default lister to only show published documents [livingdocs-editor #4693](https://github.com/livingdocsIO/livingdocs-editor/pull/4693)
   * Fixes multiple documents disappearing when removing a single document from a list [livingdocs-editor #4696](https://github.com/livingdocsIO/livingdocs-editor/pull/4696) :beetle:
-* Editor
-  * Fix line wrap behavior [livingdocs-editor #4705](https://github.com/livingdocsIO/livingdocs-editor/pull/4705) :beetle:
-  * Fix newline behavior [livingdocs-editor #4726](https://github.com/livingdocsIO/livingdocs-editor/pull/4726) :beetle:
-  * Change Toolbar max Offset to fix Overlapping Action Bar Issue [livingdocs-editor #4737](https://github.com/livingdocsIO/livingdocs-editor/pull/4737) :beetle:
+* Document Inbox: Prevent duplicate references from being added to an inbox [livingdocs-server #3956](https://github.com/livingdocsIO/livingdocs-server/pull/3956) :beetle:
+* Storage: Use correct day of the month for storage keys [livingdocs-server #3997](https://github.com/livingdocsIO/livingdocs-server/pull/3997) :beetle:
 
 
 
