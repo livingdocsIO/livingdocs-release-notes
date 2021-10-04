@@ -945,6 +945,7 @@ colt().createConfigProject('project', {...})
 # Patches
 
 ### Livingdocs Server Patches
+- [v124.5.79](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.79): chore: update npm read token
 - [v124.5.78](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.78): fix: add proxy for image crop downloads
 - [v124.5.77](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.77): fix(server): Replace broken http-terminator with lil-http-terminator that doesn't have any dependencies
 - [v124.5.76](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v124.5.76): fix(elasticsearch): Do not push the `_type` in elasticsearch 7 bulk payloads
