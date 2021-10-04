@@ -613,7 +613,6 @@ References:
 # Patches
 
 ### Livingdocs Server Patches
-- [v154.0.30](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.30): fix: add document range arguments for 008-move-metadata_id
 - [v154.0.29](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.29): fix(publication-hooks): Pass the correct documentType, add the contentType additionally to the documentType
 - [v154.0.28](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.28): fix(group-projection): do nothing on an insert conflict
 - [v154.0.27](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.27): fix(telemetry): Fix opentelemetry span creation in the job queue
