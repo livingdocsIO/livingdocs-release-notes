@@ -734,6 +734,7 @@ We're also introducing the `mediaLibrary` config, so we can remove the old keys 
 
 
 ### Livingdocs Editor Patches
+- [v67.6.80](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.80): fix(search filter bar): Update show/hide when items are added asynchronously
 - [v67.6.79](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.79): fix: rename Ignore to Off
 - [v67.6.78](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.78): fix(user): Escape user initials that would break the avatar svg
 - [v67.6.77](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v67.6.77): fix: move file downloader to it's own helper and improve logic
