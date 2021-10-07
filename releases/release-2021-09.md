@@ -647,6 +647,7 @@ We never want to send data unencrypted
 - [v154.0.15](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.15): openid-connect: Support HTTP_PROXY environment variable in Issuer.discover call
 
 ### Livingdocs Editor Patches
+- [v72.13.30](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.30): fix: send context to server
 - [v72.13.29](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.29): fix(search filter bar): Update show/hide when items are added asynchronously
 - [v72.13.28](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.28): fix: rename Ignore to Off
 - [v72.13.26](https://github.com/livingdocsIO/livingdocs-editor/releases/tag/v72.13.26): fix(user): Escape user initials that would break the avatar svg
