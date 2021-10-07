@@ -613,6 +613,7 @@ References:
 # Patches
 
 ### Livingdocs Server Patches
+- [v154.0.32](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.32): test: update tests for comments mentioning
 - [v154.0.31](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.31): fix(imagemagick): Support imagemagick uploads again
 - [v154.0.29](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.29): fix(publication-hooks): Pass the correct documentType, add the contentType additionally to the documentType
 - [v154.0.28](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.28): fix(group-projection): do nothing on an insert conflict
