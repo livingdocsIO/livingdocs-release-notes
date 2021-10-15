@@ -387,10 +387,6 @@ References: [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4
 
 References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3819)
 
-#### Tasks API - replaced inviteUser function :fire:
-
-🔥 removed `registrationApi.tasks.inviteUser` use `registrationApi.inviteUserToMembership` instead
-
 
 #### Fix JSON patch operation of MediaLibraryEntries :fire:
 
@@ -469,7 +465,7 @@ References: [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4
 
 editor config  are deprecated in favor of project config editorSettings.documentList.dashboard:
 
-🔧  Deprecate editor config `app.filters.documentListList` and projectConfig `settings.lists`. Move config to server config `editorSettings.documentList.dashboard`
+🔧  Deprecate editor config `app.filters.documentListList` and projectConfig `settings.lists`. Move config to server config `editorSettings.documentLists.dashboard`
 
 References:
 * [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4591)
