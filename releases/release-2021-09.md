@@ -387,6 +387,10 @@ References: [Editor PR](https://github.com/livingdocsIO/livingdocs-editor/pull/4
 
 References: [Server PR](https://github.com/livingdocsIO/livingdocs-server/pull/3819)
 
+#### Tasks API - replaced inviteUser function :fire:
+
+🔥 removed `registrationApi.tasks.inviteUser` use `registrationApi.inviteUserToMembership` instead
+
 
 #### Fix JSON patch operation of MediaLibraryEntries :fire:
 
