@@ -613,6 +613,10 @@ References:
 # Patches
 
 ### Livingdocs Server Patches
+- [v154.0.34](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.34): fix(postgres): Fix support for postgres 14 that has some query logic change (maybe accidental)
+
+https://twitter.com/mrbrookman/status/1444462747287228416?s=20
+https://www.postgresql.org/message-id/3735893.1633232886%40sss.pgh.pa.us
 - [v154.0.33](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.33): chore(build): Upgrade to @livingdocs/secure-password
 - [v154.0.32](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.32): test: update tests for comments mentioning
 - [v154.0.31](https://github.com/livingdocsIO/livingdocs-server/releases/tag/v154.0.31): fix(imagemagick): Support imagemagick uploads again
